@@ -1,0 +1,38 @@
+# 2026-2 자기주도프로젝트 1단계 표준 설정 파일
+project:
+  name: "Weight_Training_Posture_Analysis"
+  version: "1.0.0"
+  author: "Park Hyun Jun (202220722)"
+
+paths:
+  raw_data_dir: "d:/Data/01_raw_data"
+  processed_keypoints_dir: "d:/Data/02_processed_keypoints"
+  features_dir: "d:/Data/03_features"
+  splits_dir: "d:/Data/04_dataset_splits"
+  metadata_dir: "d:/Data/05_metadata"
+  external_benchmarks_dir: "d:/Data/06_external_benchmarks"
+  experiments_dir: "d:/experiments"
+
+preprocessing:
+  target_frames: 64
+  interpolation_method: "cubic_spline"
+  normalize_scale: true
+  center_origin: true
+  align_rotation: true
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  random_seed: 42
+
+features:
+  use_joint_angles: true
+  use_alignment_metrics: true
+  use_asymmetry_index: true
+  use_temporal_statistics: true
+
+models:
+  imbalance_ratio: 21.5
+  focal_loss:
+    alpha: 0.25
+    gamma: 2.0
