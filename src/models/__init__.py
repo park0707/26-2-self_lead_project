@@ -1,1 +1,1 @@
-# Auto-generated package initialization
+"""Models Package for Exercise Quality & Classification"""
