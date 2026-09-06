@@ -15,6 +15,7 @@ if sys.platform == 'win32':
         pass
 
 from src.models.third_models.dataset import Stage3DatasetLoader
+from src.models.third_models.metrics_helper import Stage3MetricsHelper
 from src.models.third_models.rf_multilabel import MultiOutputRandomForestClassifier
 from src.models.third_models.xgb_multilabel import MultiOutputXGBoostClassifier
 from src.models.third_models.lgbm_multilabel import MultiOutputLightGBMClassifier
@@ -23,9 +24,9 @@ from src.models.third_models.gru_multilabel import TemporalGRUMultiLabelClassifi
 OUTPUT_DIR = 'd:/Data/피처_데이터'
 
 def run_all_stage3_benchmarks(target_exercise: str = '01_바벨_스쿼트'):
-    print("=" * 105)
-    print(f"       [3단계: {target_exercise} 세부 결함(Conditions) 다중 라벨 진단 벤치마크 평가]")
-    print("=" * 105)
+    print("=" * 115)
+    print(f"       [3단계: {target_exercise} 세부 결함(Conditions) 다중 라벨 진단 초정밀 벤치마크 평가]")
+    print("=" * 115)
 
     # 1. 데이터 로드
     print(f"[1/3] {target_exercise} 다중 라벨 결함 데이터셋 로드 중...")
@@ -56,7 +57,7 @@ def run_all_stage3_benchmarks(target_exercise: str = '01_바벨_스쿼트'):
     results = {}
     test_splits = ['valid', 'test_strict', 'test_unseen_subj', 'test_unseen_view']
 
-    print(f"\n[2/3] 3단계 모델 학습 및 다각도 평가 시작...")
+    print(f"\n[2/3] 3단계 모델 학습 및 다각도 다중 라벨 정밀 평가 시작...")
     for model_name, clf, feat_fmt in models:
         print(f"\n[*] Training {model_name} (Input: {feat_fmt})...")
         t0 = time.time()
@@ -71,37 +72,71 @@ def run_all_stage3_benchmarks(target_exercise: str = '01_바벨_스쿼트'):
             X_ev = splits[s_key]['X_Format_A'] if feat_fmt == 'Format_A' else splits[s_key]['X_Format_B']
             Y_ev = splits[s_key]['Y_multi']
             
-            eval_res = clf.evaluate(X_ev, Y_ev, split_name=s_key)
-            model_results['splits'][s_key] = {
-                'subset_accuracy': round(float(eval_res['subset_accuracy']), 4),
-                'hamming_loss': round(float(eval_res['hamming_loss']), 4),
-                'micro_f1': round(float(eval_res['micro_f1']), 4),
-                'macro_f1': round(float(eval_res['macro_f1']), 4),
-                'fps': round(float(eval_res['fps']), 1)
-            }
-            print(f"    [{s_key:18s}] Subset-Acc: {eval_res['subset_accuracy']*100:5.2f}% | Hamming-Loss: {eval_res['hamming_loss']:.4f} | Micro-F1: {eval_res['micro_f1']*100:5.2f}% | FPS: {eval_res['fps']:5.1f}")
+            t_eval_0 = time.time()
+            preds_ev = clf.predict(X_ev)
+            inf_time_ms = ((time.time() - t_eval_0) / max(1, len(X_ev))) * 1000.0
+            
+            # Predict proba if available
+            proba_ev = None
+            if hasattr(clf, 'predict_proba'):
+                try:
+                    raw_p = clf.predict_proba(X_ev)
+                    if isinstance(raw_p, list): # MultiOutputClassifier produces list of (N, 2)
+                        proba_ev = np.column_stack([p[:, 1] if p.ndim > 1 else p for p in raw_p])
+                    elif isinstance(raw_p, np.ndarray):
+                        proba_ev = raw_p
+                except Exception:
+                    proba_ev = None
+
+            eval_res = Stage3MetricsHelper.evaluate_predictions(
+                Y_ev,
+                preds_ev,
+                Y_proba=proba_ev,
+                cond_names=cond_names,
+                inference_time_ms=inf_time_ms
+            )
+            model_results['splits'][s_key] = eval_res
+            
+            print(f"    [{s_key:18s}] ExactMatch: {eval_res['subset_accuracy']*100:5.2f}% | Hamming-Loss: {eval_res['hamming_loss']:.4f} | Jaccard-IoU: {eval_res['jaccard_samples_iou']*100:5.2f}% | Micro-F1: {eval_res['micro_f1']*100:5.2f}% | FPS: {eval_res['fps']:5.1f}")
 
         results[model_name] = model_results
 
     # 4. 결과 요약 테이블 출력
-    print("\n" + "=" * 115)
-    print(f"              [3단계: {target_exercise} 세부 결함 진단 모델 최종 벤치마크 비교표]")
-    print("=" * 115)
-    header = f"{'모델명':<28} | {'입력':^8} | {'Valid Micro-F1':^14} | {'Strict Test F1':^14} | {'Subj Test F1':^12} | {'Hamming Loss':^12} | {'FPS':^8}"
+    print("\n" + "=" * 125)
+    print(f"              [3단계: {target_exercise} 세부 결함 진단 모델 최종 벤치마크 고도화 종합 비교표]")
+    print("=" * 125)
+    header = f"{'모델명':<28} | {'입력':^8} | {'Strict Exact':^13} | {'Strict H-Loss':^14} | {'Strict Jaccard':^14} | {'Strict Micro-F1':^15} | {'FPS':^8}"
     print(header)
-    print("-" * 115)
+    print("-" * 125)
 
     for m_name, m_res in results.items():
         fmt = m_res['input_format']
-        v_f1 = m_res['splits']['valid']['micro_f1'] * 100
-        st_f1 = m_res['splits']['test_strict']['micro_f1'] * 100
-        sub_f1 = m_res['splits']['test_unseen_subj']['micro_f1'] * 100
-        st_hloss = m_res['splits']['test_strict']['hamming_loss']
-        fps = m_res['splits']['test_strict']['fps']
-        print(f"{m_name:<28} | {fmt:^8} | {v_f1:>13.2f}% | {st_f1:>13.2f}% | {sub_f1:>11.2f}% | {st_hloss:>12.4f} | {fps:>7.1f}")
-    print("=" * 115)
+        st_res = m_res['splits']['test_strict']
+        st_exact = st_res['subset_accuracy'] * 100
+        st_hloss = st_res['hamming_loss']
+        st_iou = st_res['jaccard_samples_iou'] * 100
+        st_f1 = st_res['micro_f1'] * 100
+        fps = st_res['fps']
+        print(f"{m_name:<28} | {fmt:^8} | {st_exact:>12.2f}% | {st_hloss:>13.4f} | {st_iou:>13.2f}% | {st_f1:>14.2f}% | {fps:>7.1f}")
+    print("=" * 125)
 
-    # 5. JSON 저장
+    # 5. 베스트 모델의 결함별 세부 성적표 출력
+    best_model_name = list(results.keys())[0]
+    best_st = results[best_model_name]['splits']['test_strict']
+    print(f"\n[★ 베스트 모델 ({best_model_name}) 결함 조건별 세부 성적표 - Strict Test]")
+    print("-" * 105)
+    print(f"{'결함 항목명':<45} | {'발생수':^6} | {'비율':^7} | {'정밀도':^9} | {'재현율':^9} | {'F1-Score':^9}")
+    print("-" * 105)
+    for c_name, c_m in best_st['per_condition_metrics'].items():
+        cnt = c_m['support_defects']
+        ratio = c_m['defect_ratio'] * 100
+        prec = c_m['precision'] * 100
+        rec = c_m['recall'] * 100
+        f1 = c_m['f1'] * 100
+        print(f"{c_name:<45} | {cnt:>6d} | {ratio:>6.1f}% | {prec:>8.2f}% | {rec:>8.2f}% | {f1:>8.2f}%")
+    print("-" * 105)
+
+    # 6. JSON 저장
     out_json_path = os.path.join(OUTPUT_DIR, 'third_model_benchmark_results.json')
     with open(out_json_path, 'w', encoding='utf-8') as f:
         json.dump({
@@ -109,7 +144,7 @@ def run_all_stage3_benchmarks(target_exercise: str = '01_바벨_스쿼트'):
             'conditions': cond_names,
             'results': results
         }, f, indent=2, ensure_ascii=False)
-    print(f"\n[+] 3단계 벤치마크 결과 JSON 저장 완료: {out_json_path}")
+    print(f"\n[+] 3단계 고도화 벤치마크 결과 JSON 저장 완료: {out_json_path}")
 
 if __name__ == '__main__':
     run_all_stage3_benchmarks('01_바벨_스쿼트')

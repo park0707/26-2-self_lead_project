@@ -15,6 +15,16 @@ class Stage3DatasetLoader:
     @classmethod
     def _build_conditions_cache(cls):
         if cls._seq_info_map is None:
+            cache_pkl = os.path.join(DUAL_SPLITS_DIR, 'conditions_cache.pkl')
+            if os.path.exists(cache_pkl):
+                import pickle
+                try:
+                    with open(cache_pkl, 'rb') as f:
+                        cls._seq_info_map = pickle.load(f)
+                    return
+                except Exception:
+                    pass
+
             cls._seq_info_map = {}
             if os.path.exists(RAW_LABELS_BASE):
                 folders = sorted(os.listdir(RAW_LABELS_BASE))
@@ -53,6 +63,15 @@ class Stage3DatasetLoader:
                             }
                         except Exception:
                             pass
+
+            if cls._seq_info_map:
+                import pickle
+                try:
+                    os.makedirs(DUAL_SPLITS_DIR, exist_ok=True)
+                    with open(cache_pkl, 'wb') as f:
+                        pickle.dump(cls._seq_info_map, f)
+                except Exception:
+                    pass
 
     @classmethod
     def load_exercise_split(cls, exercise_folder: str = '01_바벨_스쿼트', split_filename: str = 'Dual_Train.npz') -> Dict[str, Any]:

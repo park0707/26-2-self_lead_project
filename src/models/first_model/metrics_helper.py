@@ -1,8 +1,15 @@
+# [실행 유틸리티]: 1단계 9종 운동 분류 전용 초정밀 다차원 평가 모듈
+
+import os
+import sys
+import json
 import time
-from typing import Dict, List, Any, Optional
+import random
+from typing import Dict, List, Any, Optional, Tuple
 import numpy as np
 from sklearn.metrics import (
     accuracy_score, f1_score, precision_score, recall_score,
+    balanced_accuracy_score, cohen_kappa_score, top_k_accuracy_score,
     classification_report, confusion_matrix
 )
 
@@ -18,86 +25,149 @@ EXERCISE_NAMES_SHORT = [
     '09.굿모닝'
 ]
 
+TUNING_RESULTS_DIR = 'd:/Data/피처_데이터/tuning_results'
+
 class Stage1MetricsHelper:
-    """1단계 9종 운동 분류 모델을 위한 전문 학술 평가 및 터미널 리포팅 유틸리티"""
+    """1단계 9종 운동 분류 모델을 위한 전문 학술 평가, 그리드서치 비교 및 터미널 리포팅 유틸리티"""
 
     @staticmethod
-    def evaluate_predictions(y_true: np.ndarray, y_pred: np.ndarray, inference_time_ms: float = 0.0) -> Dict[str, Any]:
-        """정량적 핵심 지표 계산"""
+    def evaluate_predictions(
+        y_true: np.ndarray,
+        y_pred: np.ndarray,
+        y_proba: Optional[np.ndarray] = None,
+        inference_time_ms: float = 0.0
+    ) -> Dict[str, Any]:
+        """기본 지표 + 전문 지표(Top-2 Acc, Balanced Acc, Cohen's Kappa) 전수 정밀 계산"""
         acc = accuracy_score(y_true, y_pred)
+        balanced_acc = balanced_accuracy_score(y_true, y_pred)
+        kappa = cohen_kappa_score(y_true, y_pred)
+        
+        # Top-2 Accuracy (차선책 정확도: 근접 오답 판별)
+        top2_acc = 0.0
+        if y_proba is not None:
+            try:
+                top2_acc = top_k_accuracy_score(y_true, y_proba, k=2, labels=list(range(len(EXERCISE_NAMES_SHORT))))
+            except Exception:
+                top2_acc = float(acc)
+        else:
+            top2_acc = float(acc)
+
         macro_f1 = f1_score(y_true, y_pred, average='macro', zero_division=0)
         weighted_f1 = f1_score(y_true, y_pred, average='weighted', zero_division=0)
         macro_prec = precision_score(y_true, y_pred, average='macro', zero_division=0)
         macro_rec = recall_score(y_true, y_pred, average='macro', zero_division=0)
         fps = 1000.0 / max(1e-4, inference_time_ms) if inference_time_ms > 0 else 0.0
 
-        # 클래스별 개별 지표
+        # 9개 클래스별 개별 지표
         class_f1s = f1_score(y_true, y_pred, average=None, zero_division=0)
         class_precs = precision_score(y_true, y_pred, average=None, zero_division=0)
         class_recs = recall_score(y_true, y_pred, average=None, zero_division=0)
 
-        # 혼동 행렬
+        # 9x9 혼동 행렬
         cm = confusion_matrix(y_true, y_pred, labels=list(range(len(EXERCISE_NAMES_SHORT))))
 
         return {
-            'accuracy': acc,
-            'macro_f1': macro_f1,
-            'weighted_f1': weighted_f1,
-            'macro_precision': macro_prec,
-            'macro_recall': macro_rec,
-            'inference_time_ms': inference_time_ms,
-            'fps': fps,
-            'class_f1s': class_f1s,
-            'class_precs': class_precs,
-            'class_recs': class_recs,
+            'accuracy': float(acc),
+            'balanced_accuracy': float(balanced_acc),
+            'cohen_kappa': float(kappa),
+            'top2_accuracy': float(top2_acc),
+            'macro_f1': float(macro_f1),
+            'weighted_f1': float(weighted_f1),
+            'macro_precision': float(macro_prec),
+            'macro_recall': float(macro_rec),
+            'inference_time_ms': float(inference_time_ms),
+            'fps': float(fps),
+            'class_f1s': [float(v) for v in class_f1s],
+            'class_precs': [float(v) for v in class_precs],
+            'class_recs': [float(v) for v in class_recs],
             'confusion_matrix': cm
+        }
+
+    @staticmethod
+    def calculate_advanced_metrics(
+        res_train: Optional[Dict[str, Any]],
+        res_valid: Dict[str, Any],
+        res_strict: Dict[str, Any],
+        res_subj: Dict[str, Any],
+        res_view: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """스포츠 AI 도메인 특화 고급 지표 (PDR, SGG, VIS) 계산"""
+        f1_train = res_train['macro_f1'] if res_train else 1.0
+        f1_strict = res_strict['macro_f1']
+        f1_subj = res_subj['macro_f1']
+        f1_view = res_view['macro_f1']
+        f1_valid = res_valid['macro_f1']
+
+        # 1. 시점 저하율 (Perspective Degradation Ratio, PDR)
+        pdr = max(0.0, (1.0 - (f1_strict / max(1e-4, f1_subj)))) * 100.0
+
+        # 2. 피험자 일반화 갭 (Subject Generalization Gap, SGG)
+        sgg = max(0.0, (f1_train - f1_subj)) * 100.0 if res_train else 0.0
+
+        # 3. 시점 불변성 지수 (View Invariance Score, VIS)
+        all_test_f1s = [f1_strict, f1_subj, f1_view, f1_valid]
+        vis = (min(all_test_f1s) / max(1e-4, max(all_test_f1s))) * 100.0
+
+        return {
+            'PDR_percent': float(pdr),
+            'SGG_percent': float(sgg),
+            'VIS_percent': float(vis)
         }
 
     @staticmethod
     def print_model_header(model_name: str, hyperparams: Dict[str, Any], train_samples: int, feat_dim: str):
         """모델 정보 및 하이퍼파라미터 헤더 출력"""
-        print("=" * 85)
-        print(f"  [1단계 모델 평가] {model_name}")
-        print("=" * 85)
-        print(f"[*] 입력 피처 규격: {feat_dim}")
-        print(f"[*] 학습 데이터 규모: {train_samples:,}개 시퀀스 (피험자 1~6 x 시점 A, B, E)")
-        print("[*] 모델 하이퍼파라미터 설정:")
+        print("=" * 96)
+        print(f"  [1단계 모델 평가 & 튜닝] {model_name}")
+        print("=" * 96)
+        print(f"[*] 입력 피처 규격   : {feat_dim}")
+        print(f"[*] 학습 데이터 규모 : {train_samples:,}개 시퀀스 (피험자 1~6 x 시점 A, B, E)")
+        print("[*] 핵심 파라미터    :")
         for k, v in hyperparams.items():
-            print(f"    - {k:<20s}: {v}")
-        print("-" * 85)
+            print(f"    - {k:<22s}: {v}")
+        print("-" * 96)
 
     @staticmethod
-    def print_multi_split_summary(split_results: Dict[str, Dict[str, Any]]):
-        """4대 분할 세트별 성능 요약 테이블 출력"""
-        print("\n[1. 분할 세트별 종합 성능 요약표]")
-        print("-" * 85)
-        header = f"{'평가 데이터 분할':<38} | {'정확도(Acc)':^11} | {'Macro-F1':^11} | {'처리속도(FPS)':^12}"
+    def print_multi_split_summary(split_results: Dict[str, Dict[str, Any]], adv_metrics: Optional[Dict[str, Any]] = None):
+        """4대 분할 세트별 정밀 성능(Acc, Balanced Acc, Top-2 Acc, Kappa, Macro-F1, FPS) 요약 출력"""
+        print("\n[1. 분할 세트별 초정밀 성능 지표 요약표]")
+        print("-" * 96)
+        header = f"{'평가 데이터 분할':<36} | {'정확도':^7} | {'Top-2 Acc':^9} | {'균형정확도':^8} | {'Kappa':^7} | {'Macro-F1':^8} | {'FPS':^8}"
         print(header)
-        print("-" * 85)
+        print("-" * 96)
         
         for split_name, res in split_results.items():
-            acc = res['accuracy'] * 100
-            f1 = res['macro_f1'] * 100
+            acc = res['accuracy'] * 100.0
+            top2 = res.get('top2_accuracy', acc / 100.0) * 100.0
+            bacc = res.get('balanced_accuracy', acc / 100.0) * 100.0
+            kap = res.get('cohen_kappa', 0.0)
+            f1 = res['macro_f1'] * 100.0
             fps = res['fps']
-            print(f"{split_name:<38} | {acc:>10.2f}% | {f1:>10.2f}% | {fps:>10.1f} FPS")
-        print("-" * 85)
+            print(f"{split_name:<36} | {acc:>6.2f}% | {top2:>8.2f}% | {bacc:>7.2f}% | {kap:>6.3f} | {f1:>7.2f}% | {fps:>7.1f}")
+        print("-" * 96)
+
+        if adv_metrics:
+            print(f"  ★ [도메인 지표] 시점 저하율(PDR): {adv_metrics['PDR_percent']:5.2f}% (낮을수록 측면 90도에 강건)")
+            print(f"  ★ [도메인 지표] 인물 일반화 갭(SGG): {adv_metrics['SGG_percent']:5.2f}% (낮을수록 체형 과적합 없음)")
+            print(f"  ★ [도메인 지표] 시점 불변성 지수(VIS): {adv_metrics['VIS_percent']:5.2f}% (높을수록 시점 독립적)")
+            print("-" * 96)
 
     @staticmethod
     def print_class_breakdown_report(res: Dict[str, Any], y_true: np.ndarray, split_title: str = "Strict Test (복합 홀드아웃)"):
         """9개 운동별 개별 세부 성적표 출력"""
         print(f"\n[2. 9개 운동별 세부 성적표 - {split_title}]")
-        print("-" * 85)
+        print("-" * 96)
         header = f"{'운동 종목 명칭':<20} | {'샘플수':^7} | {'정밀도(Prec)':^12} | {'재현율(Rec)':^12} | {'F1-Score':^12}"
         print(header)
-        print("-" * 85)
+        print("-" * 96)
 
         for i, ex_name in enumerate(EXERCISE_NAMES_SHORT):
             cnt = int(np.sum(y_true == i))
-            prec = res['class_precs'][i] * 100 if i < len(res['class_precs']) else 0.0
-            rec = res['class_recs'][i] * 100 if i < len(res['class_recs']) else 0.0
-            f1 = res['class_f1s'][i] * 100 if i < len(res['class_f1s']) else 0.0
+            prec = res['class_precs'][i] * 100.0 if i < len(res['class_precs']) else 0.0
+            rec = res['class_recs'][i] * 100.0 if i < len(res['class_recs']) else 0.0
+            f1 = res['class_f1s'][i] * 100.0 if i < len(res['class_f1s']) else 0.0
             print(f"{ex_name:<20} | {cnt:>7d} | {prec:>11.2f}% | {rec:>11.2f}% | {f1:>11.2f}%")
-        print("-" * 85)
+        print("-" * 96)
 
     @staticmethod
     def print_top_confusion_analysis(res: Dict[str, Any], top_k: int = 3):
@@ -121,4 +191,137 @@ class Stage1MetricsHelper:
                 t_name = EXERCISE_NAMES_SHORT[true_idx]
                 p_name = EXERCISE_NAMES_SHORT[pred_idx]
                 print(f"  {rank}위: 정답 [{t_name}] ──> 예측 [{p_name}] 오분류 ({cnt}건 발생)")
-        print("=" * 85 + "\n")
+        print("-" * 96)
+
+    @staticmethod
+    def print_top_vs_random_comparison_table(
+        best_trial: Dict[str, Any],
+        other_trials: List[Dict[str, Any]],
+        param_keys: List[str]
+    ):
+        """요구사항 5번: 최고 파라미터 조합 1개와 다른 후보 파라미터 조합 5개 비교 대조표 출력"""
+        print("\n[4. 하이퍼파라미터 탐색 비교: 최고 파라미터 (Best) vs 후보 파라미터 5종 비교]")
+        print("=" * 96)
+        
+        all_trials = [best_trial] + other_trials[:5]
+        header = f"{'조합 구분 (Rank)':<18} | {'Valid F1':^10} | {'Strict F1':^10} | {'Subj F1':^10} | {'주요 파라미터 설정'}"
+        print(header)
+        print("-" * 96)
+
+        for idx, t in enumerate(all_trials):
+            label = "★ [1위 BEST]" if idx == 0 else f"후보 #{idx} (대조군)"
+            v_f1 = t['valid_f1'] * 100.0
+            st_f1 = t['strict_f1'] * 100.0
+            sb_f1 = t['subj_f1'] * 100.0
+            
+            p_str = ", ".join([f"{k}={t['params'].get(k)}" for k in param_keys[:3]])
+            print(f"{label:<18} | {v_f1:>8.2f}% | {st_f1:>8.2f}% | {sb_f1:>8.2f}% | {p_str}")
+
+        print("=" * 96 + "\n")
+
+    @staticmethod
+    def evaluate_subject_breakdown(
+        y_true: np.ndarray,
+        y_pred: np.ndarray,
+        subjects: np.ndarray
+    ) -> Dict[str, Any]:
+        """피험자별 개별 성능 및 피험자 간 분산(Standard Deviation) 정밀 산출"""
+        unique_subjs = np.unique(subjects)
+        subj_metrics = {}
+        f1_list = []
+
+        for subj in unique_subjs:
+            mask = (subjects == subj)
+            if np.sum(mask) == 0:
+                continue
+            y_t_sub = y_true[mask]
+            y_p_sub = y_pred[mask]
+            acc_s = float(accuracy_score(y_t_sub, y_p_sub))
+            f1_s = float(f1_score(y_t_sub, y_p_sub, average='macro', zero_division=0))
+            subj_metrics[str(subj)] = {
+                'samples': int(np.sum(mask)),
+                'accuracy': acc_s,
+                'macro_f1': f1_s
+            }
+            f1_list.append(f1_s)
+
+        f1_std = float(np.std(f1_list)) if f1_list else 0.0
+        f1_mean = float(np.mean(f1_list)) if f1_list else 0.0
+
+        return {
+            'subject_metrics': subj_metrics,
+            'mean_subject_f1': f1_mean,
+            'std_subject_f1': f1_std
+        }
+
+    @staticmethod
+    def evaluate_group_confusion(
+        y_true: np.ndarray,
+        y_pred: np.ndarray
+    ) -> Dict[str, Any]:
+        """4대 운동 대분류(스쿼트, 데드리프트류, 런지류, 굿모닝) 그룹화 정확도 분석"""
+        # 그룹 매핑: 0: 스쿼트, 1,2: 데드리프트, 3,4,5,6,7: 런지, 8: 굿모닝
+        group_map = {0: 0, 1: 1, 2: 1, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 3}
+        y_true_grp = np.array([group_map.get(y, 0) for y in y_true])
+        y_pred_grp = np.array([group_map.get(y, 0) for y in y_pred])
+
+        grp_acc = float(accuracy_score(y_true_grp, y_pred_grp))
+        grp_f1 = float(f1_score(y_true_grp, y_pred_grp, average='macro', zero_division=0))
+
+        return {
+            'group_accuracy': grp_acc,
+            'group_macro_f1': grp_f1,
+            'group_names': ['스쿼트류', '데드리프트류', '런지류', '굿모닝류']
+        }
+
+    @staticmethod
+    def evaluate_label_shuffling_test(
+        clf_class,
+        X_train: np.ndarray,
+        y_train: np.ndarray,
+        X_test: np.ndarray,
+        y_test: np.ndarray,
+        seed: int = 42
+    ) -> Dict[str, Any]:
+        """라벨 셔플링(Label Shuffling) 널 가설 대조 실험: 데이터 누수 및 피처 유효성 검증"""
+        np.random.seed(seed)
+        shuffled_y_train = np.random.permutation(y_train)
+        
+        # 모델 복제 및 학습
+        shuffled_clf = clf_class()
+        shuffled_clf.fit(X_train, shuffled_y_train)
+        
+        preds = shuffled_clf.predict(X_test)
+        shuffled_acc = float(accuracy_score(y_test, preds))
+        shuffled_f1 = float(f1_score(y_test, preds, average='macro', zero_division=0))
+
+        # 9개 클래스 무작위 추측 확률: 1/9 = 11.11%
+        expected_random = 1.0 / len(EXERCISE_NAMES_SHORT)
+        has_leakage = (shuffled_acc > (expected_random + 0.15)) # 26% 초과 시 누수 의심
+
+        return {
+            'shuffled_accuracy': shuffled_acc,
+            'shuffled_macro_f1': shuffled_f1,
+            'expected_random_accuracy': expected_random,
+            'leakage_detected': bool(has_leakage)
+        }
+
+    @staticmethod
+    def save_best_params_json(model_name: str, best_params: Dict[str, Any], summary_metrics: Dict[str, Any]) -> str:
+        """요구사항 4번: Grid Search 최고 파라미터 조합을 JSON으로 영구 저장"""
+        os.makedirs(TUNING_RESULTS_DIR, exist_ok=True)
+        safe_name = model_name.lower().replace(' ', '_').replace('+', '').replace('-', '_').replace('(', '').replace(')', '')
+        filepath = os.path.join(TUNING_RESULTS_DIR, f"best_stage1_{safe_name}.json")
+        
+        save_dict = {
+            'model_name': model_name,
+            'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+            'best_hyperparameters': best_params,
+            'performance_metrics': summary_metrics
+        }
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(save_dict, f, indent=2, ensure_ascii=False)
+        
+        print(f"[+] 최고 파라미터 조합 JSON 저장 완료: {filepath}")
+        return filepath

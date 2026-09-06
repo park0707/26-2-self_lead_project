@@ -112,7 +112,24 @@ def run_all_stage1_benchmarks():
         print(f"{m_name:<27} | {fmt:^8} | {v_f1:>9.2f}% | {st_f1:>13.2f}% | {sub_f1:>11.2f}% | {vw_f1:>11.2f}% | {fps:>7.1f}")
     print("=" * 105)
 
-    # 5. JSON 저장
+    # 5. 과적합 및 데이터 누수 진단 (라벨 셔플링 대조 실험 - LightGBM 기준)
+    print("\n[★ 연구 계획서 검증] 라벨 셔플링(Label Shuffling) 널 가설 대조 실험 (데이터 누수 진단)")
+    print("-" * 95)
+    from src.models.first_model.metrics_helper import Stage1MetricsHelper
+    null_test_res = Stage1MetricsHelper.evaluate_label_shuffling_test(
+        LightGBMActionClassifier,
+        X_train_a,
+        y_train,
+        splits['test_strict']['X_Format_A'],
+        splits['test_strict']['y_action']
+    )
+    print(f"  - 무작위 추측 기댓값 (1/9) : {null_test_res['expected_random_accuracy']*100:5.2f}%")
+    print(f"  - 라벨 셔플 학습 후 정확도 : {null_test_res['shuffled_accuracy']*100:5.2f}% (Macro-F1: {null_test_res['shuffled_macro_f1']*100:5.2f}%)")
+    leak_msg = "경고: 데이터 누수 의심!" if null_test_res['leakage_detected'] else "통과: 우연 수준으로 성능 붕괴 확인 (데이터 누수 없음 정상)"
+    print(f"  - 검증 판정 결과           : [ {leak_msg} ]")
+    print("-" * 95)
+
+    # 6. JSON 저장
     out_json_path = os.path.join(OUTPUT_DIR, 'first_model_benchmark_results.json')
     with open(out_json_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
