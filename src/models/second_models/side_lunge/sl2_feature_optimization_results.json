@@ -1,0 +1,370 @@
+{
+  "Baseline_84D": {
+    "config": "Baseline_84D",
+    "dim": 84,
+    "train_auc": 99.22,
+    "val_auc": 85.88,
+    "overfit_gap": 13.34,
+    "auc_v2": 88.54,
+    "auc_v4": 82.92,
+    "v2_breakthrough": {
+      "tau_clean": 0.35,
+      "tau_defect": 0.7,
+      "f1": 72.34,
+      "prec": 70.83,
+      "rec": 73.91,
+      "acc": 90.43,
+      "retake": 17.8
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.35,
+      "tau_defect": 0.62,
+      "f1": 64.78,
+      "prec": 62.99,
+      "rec": 66.67,
+      "acc": 87.21,
+      "retake": 17.68
+    },
+    "v2_strict": {
+      "tau_clean": 0.45,
+      "tau_defect": 0.66,
+      "f1": 68.15,
+      "prec": 67.15,
+      "rec": 69.17,
+      "acc": 88.46,
+      "retake": 9.81
+    },
+    "v4_strict": {
+      "tau_clean": 0.43,
+      "tau_defect": 0.61,
+      "f1": 60.0,
+      "prec": 62.31,
+      "rec": 57.86,
+      "acc": 85.5,
+      "retake": 9.81
+    },
+    "temperature": 0.7412
+  },
+  "Top60D": {
+    "config": "Top60D",
+    "dim": 60,
+    "train_auc": 99.05,
+    "val_auc": 86.17,
+    "overfit_gap": 12.88,
+    "auc_v2": 88.2,
+    "auc_v4": 83.9,
+    "v2_breakthrough": {
+      "tau_clean": 0.34,
+      "tau_defect": 0.72,
+      "f1": 72.65,
+      "prec": 71.77,
+      "rec": 73.55,
+      "acc": 90.13,
+      "retake": 17.8
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.36,
+      "tau_defect": 0.65,
+      "f1": 65.25,
+      "prec": 63.64,
+      "rec": 66.96,
+      "acc": 87.96,
+      "retake": 17.55
+    },
+    "v2_strict": {
+      "tau_clean": 0.5,
+      "tau_defect": 0.72,
+      "f1": 69.8,
+      "prec": 71.77,
+      "rec": 67.94,
+      "acc": 89.68,
+      "retake": 9.69
+    },
+    "v4_strict": {
+      "tau_clean": 0.44,
+      "tau_defect": 0.61,
+      "f1": 60.29,
+      "prec": 60.74,
+      "rec": 59.85,
+      "acc": 85.52,
+      "retake": 9.69
+    },
+    "temperature": 0.6757
+  },
+  "Top45D": {
+    "config": "Top45D",
+    "dim": 45,
+    "train_auc": 99.11,
+    "val_auc": 86.18,
+    "overfit_gap": 12.94,
+    "auc_v2": 88.68,
+    "auc_v4": 83.35,
+    "v2_breakthrough": {
+      "tau_clean": 0.35,
+      "tau_defect": 0.73,
+      "f1": 71.86,
+      "prec": 71.55,
+      "rec": 72.17,
+      "acc": 90.41,
+      "retake": 17.92
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.4,
+      "tau_defect": 0.73,
+      "f1": 64.76,
+      "prec": 69.39,
+      "rec": 60.71,
+      "acc": 89.09,
+      "retake": 17.92
+    },
+    "v2_strict": {
+      "tau_clean": 0.5,
+      "tau_defect": 0.72,
+      "f1": 69.14,
+      "prec": 71.19,
+      "rec": 67.2,
+      "acc": 89.93,
+      "retake": 9.81
+    },
+    "v4_strict": {
+      "tau_clean": 0.46,
+      "tau_defect": 0.6,
+      "f1": 60.29,
+      "prec": 59.85,
+      "rec": 60.74,
+      "acc": 85.5,
+      "retake": 9.81
+    },
+    "temperature": 0.6839
+  },
+  "Top30D": {
+    "config": "Top30D",
+    "dim": 30,
+    "train_auc": 98.74,
+    "val_auc": 86.19,
+    "overfit_gap": 12.55,
+    "auc_v2": 88.75,
+    "auc_v4": 83.25,
+    "v2_breakthrough": {
+      "tau_clean": 0.35,
+      "tau_defect": 0.72,
+      "f1": 72.73,
+      "prec": 69.29,
+      "rec": 76.52,
+      "acc": 90.31,
+      "retake": 17.55
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.34,
+      "tau_defect": 0.6,
+      "f1": 65.12,
+      "prec": 60.43,
+      "rec": 70.59,
+      "acc": 86.76,
+      "retake": 17.68
+    },
+    "v2_strict": {
+      "tau_clean": 0.49,
+      "tau_defect": 0.71,
+      "f1": 70.04,
+      "prec": 68.18,
+      "rec": 72.0,
+      "acc": 89.68,
+      "retake": 9.69
+    },
+    "v4_strict": {
+      "tau_clean": 0.45,
+      "tau_defect": 0.6,
+      "f1": 61.09,
+      "prec": 60.43,
+      "rec": 61.76,
+      "acc": 85.68,
+      "retake": 9.56
+    },
+    "temperature": 0.7101
+  },
+  "Top20D": {
+    "config": "Top20D",
+    "dim": 20,
+    "train_auc": 97.3,
+    "val_auc": 85.85,
+    "overfit_gap": 11.45,
+    "auc_v2": 87.88,
+    "auc_v4": 83.47,
+    "v2_breakthrough": {
+      "tau_clean": 0.34,
+      "tau_defect": 0.73,
+      "f1": 69.2,
+      "prec": 62.12,
+      "rec": 78.1,
+      "acc": 89.23,
+      "retake": 17.92
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.36,
+      "tau_defect": 0.63,
+      "f1": 64.26,
+      "prec": 61.07,
+      "rec": 67.8,
+      "acc": 86.91,
+      "retake": 17.68
+    },
+    "v2_strict": {
+      "tau_clean": 0.43,
+      "tau_defect": 0.65,
+      "f1": 66.44,
+      "prec": 58.58,
+      "rec": 76.74,
+      "acc": 86.56,
+      "retake": 9.93
+    },
+    "v4_strict": {
+      "tau_clean": 0.47,
+      "tau_defect": 0.65,
+      "f1": 59.4,
+      "prec": 62.2,
+      "rec": 56.83,
+      "acc": 85.5,
+      "retake": 9.81
+    },
+    "temperature": 0.6957
+  },
+  "CollinearPruned_73D": {
+    "config": "CollinearPruned_73D",
+    "dim": 73,
+    "train_auc": 99.32,
+    "val_auc": 85.97,
+    "overfit_gap": 13.35,
+    "auc_v2": 88.49,
+    "auc_v4": 83.12,
+    "v2_breakthrough": {
+      "tau_clean": 0.29,
+      "tau_defect": 0.64,
+      "f1": 70.45,
+      "prec": 64.58,
+      "rec": 77.5,
+      "acc": 88.6,
+      "retake": 17.19
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.33,
+      "tau_defect": 0.6,
+      "f1": 64.26,
+      "prec": 61.07,
+      "rec": 67.8,
+      "acc": 86.87,
+      "retake": 17.92
+    },
+    "v2_strict": {
+      "tau_clean": 0.43,
+      "tau_defect": 0.64,
+      "f1": 67.39,
+      "prec": 64.58,
+      "rec": 70.45,
+      "acc": 88.0,
+      "retake": 9.2
+    },
+    "v4_strict": {
+      "tau_clean": 0.43,
+      "tau_defect": 0.6,
+      "f1": 60.61,
+      "prec": 61.07,
+      "rec": 60.15,
+      "acc": 86.02,
+      "retake": 9.93
+    },
+    "temperature": 0.7264
+  },
+  "MediaPipe_Only_54D": {
+    "config": "MediaPipe_Only_54D",
+    "dim": 54,
+    "train_auc": 97.92,
+    "val_auc": 85.45,
+    "overfit_gap": 12.47,
+    "auc_v2": 87.43,
+    "auc_v4": 83.17,
+    "v2_breakthrough": {
+      "tau_clean": 0.38,
+      "tau_defect": 0.74,
+      "f1": 69.48,
+      "prec": 69.16,
+      "rec": 69.81,
+      "acc": 90.48,
+      "retake": 17.31
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.42,
+      "tau_defect": 0.68,
+      "f1": 62.67,
+      "prec": 67.33,
+      "rec": 58.62,
+      "acc": 88.07,
+      "retake": 17.8
+    },
+    "v2_strict": {
+      "tau_clean": 0.44,
+      "tau_defect": 0.64,
+      "f1": 64.26,
+      "prec": 59.73,
+      "rec": 69.53,
+      "acc": 86.69,
+      "retake": 9.93
+    },
+    "v4_strict": {
+      "tau_clean": 0.45,
+      "tau_defect": 0.59,
+      "f1": 57.95,
+      "prec": 56.16,
+      "rec": 59.85,
+      "acc": 84.01,
+      "retake": 9.93
+    },
+    "temperature": 0.7042
+  },
+  "RTMPose_Only_30D": {
+    "config": "RTMPose_Only_30D",
+    "dim": 30,
+    "train_auc": 97.89,
+    "val_auc": 77.8,
+    "overfit_gap": 20.09,
+    "auc_v2": 79.51,
+    "auc_v4": 76.35,
+    "v2_breakthrough": {
+      "tau_clean": 0.27,
+      "tau_defect": 0.48,
+      "f1": 55.56,
+      "prec": 45.92,
+      "rec": 70.31,
+      "acc": 78.79,
+      "retake": 17.8
+    },
+    "v4_breakthrough": {
+      "tau_clean": 0.24,
+      "tau_defect": 0.4,
+      "f1": 52.25,
+      "prec": 41.83,
+      "rec": 69.6,
+      "acc": 76.69,
+      "retake": 17.43
+    },
+    "v2_strict": {
+      "tau_clean": 0.35,
+      "tau_defect": 0.48,
+      "f1": 53.41,
+      "prec": 45.92,
+      "rec": 63.83,
+      "acc": 79.09,
+      "retake": 9.08
+    },
+    "v4_strict": {
+      "tau_clean": 0.3,
+      "tau_defect": 0.4,
+      "f1": 50.29,
+      "prec": 41.83,
+      "rec": 63.04,
+      "acc": 76.94,
+      "retake": 9.69
+    },
+    "temperature": 0.5377
+  }
+}

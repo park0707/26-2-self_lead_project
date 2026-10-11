@@ -1,0 +1,132 @@
+{
+  "model_name": "BabelDeadliftD3ModelV1",
+  "exercise": "02_바벨_데드리프트",
+  "defect": "d3_발바닥_지면_고정",
+  "feature_dim": 25,
+  "feature_names": [
+    "d3_foot_pitch_max_deg",
+    "d3_toe_lift_max_norm",
+    "d3_foot_pitch_nadir_deg",
+    "d3_delta_wobble_active",
+    "d3_roll_max_active",
+    "d3_delta_max_active",
+    "d3_heel_toe_ydelta_nadir_cm",
+    "d3_coupling_ratio_shank_pitch",
+    "d3_bilateral_foot_pitch_asym_deg",
+    "d3_pitch_max_active_deg",
+    "d3_shank_ankle_coupling_ratio_legacy",
+    "d3_foot_pitch_drop_deg",
+    "d3_foot_roll_inversion_deg",
+    "d3_asym_pitch_active",
+    "d3_roll_nadir_deg",
+    "d3_delta_jerk_active",
+    "d3_ank_min_angle",
+    "d3_ascent_ankle_destabilization",
+    "d3_toe_lift_max_cm",
+    "d3_asym_delta_active",
+    "d3_norm_delta_nadir",
+    "d3_pitch_drop_active_deg",
+    "d3_f0_heel_view_visibility",
+    "d3_f0_shank_lift_corr",
+    "d3_f0_ascent_transition_rate"
+  ],
+  "binary_metrics_th50": {
+    "accuracy": 0.7584415584415585,
+    "precision": 0.4854368932038835,
+    "recall": 0.5555555555555556,
+    "f1_score": 0.5181347150259067,
+    "roc_auc": 0.7825988700564971,
+    "confusion_matrix": {
+      "TN": 242,
+      "FP": 53,
+      "FN": 40,
+      "TP": 50
+    }
+  },
+  "binary_metrics_optimal": {
+    "threshold": 0.26,
+    "accuracy": 0.6571428571428571,
+    "precision": 0.395,
+    "recall": 0.8777777777777778,
+    "f1_score": 0.5448275862068965,
+    "confusion_matrix": {
+      "TN": 174,
+      "FP": 121,
+      "FN": 11,
+      "TP": 79
+    }
+  },
+  "transfer_comparison": {
+    "squat_c4_zero_shot_f1": 45.45,
+    "squat_c4_zero_shot_acc": 66.23,
+    "d3_v1_f1": 51.813471502590666,
+    "d3_v1_acc": 75.84415584415585,
+    "delta_f1": 6.363471502590663,
+    "delta_acc": 9.614155844155846
+  },
+  "official_3state_setting": {
+    "tau_normal": 0.42,
+    "tau_defect": 0.54,
+    "coverage": 0.9064935064935065,
+    "decline_rate": 0.09350649350649351,
+    "total_decided": 349,
+    "total_undetermined": 36,
+    "f1_score": 0.5402298850574713,
+    "accuracy": 0.7707736389684814,
+    "precision": 0.5053763440860215,
+    "recall": 0.5802469135802469,
+    "confusion_matrix": {
+      "TN": 222,
+      "FP": 46,
+      "FN": 34,
+      "TP": 47
+    }
+  },
+  "view_audit": {
+    "시점 A (우측 후방 45°)": {
+      "view_code": "view5",
+      "sample_count": 77,
+      "f1": 0.5490196078431373,
+      "accuracy": 0.7012987012987013,
+      "precision": 0.42424242424242425,
+      "recall": 0.7777777777777778,
+      "auc": 0.707156308851224
+    },
+    "시점 B (우측 전방 45°)": {
+      "view_code": "view2",
+      "sample_count": 77,
+      "f1": 0.5517241379310345,
+      "accuracy": 0.6623376623376623,
+      "precision": 0.4,
+      "recall": 0.8888888888888888,
+      "auc": 0.8126177024482109
+    },
+    "시점 C (정면 0°)": {
+      "view_code": "view3",
+      "sample_count": 77,
+      "f1": 0.5517241379310345,
+      "accuracy": 0.6623376623376623,
+      "precision": 0.4,
+      "recall": 0.8888888888888888,
+      "auc": 0.8182674199623352
+    },
+    "시점 D (좌측 전방 45°)": {
+      "view_code": "view4",
+      "sample_count": 77,
+      "f1": 0.5573770491803278,
+      "accuracy": 0.6493506493506493,
+      "precision": 0.3953488372093023,
+      "recall": 0.9444444444444444,
+      "auc": 0.8163841807909604
+    },
+    "시점 E (좌측 후방 45°)": {
+      "view_code": "view1",
+      "sample_count": 77,
+      "f1": 0.5161290322580645,
+      "accuracy": 0.6103896103896104,
+      "precision": 0.36363636363636365,
+      "recall": 0.8888888888888888,
+      "auc": 0.7862523540489642
+    }
+  }
+}

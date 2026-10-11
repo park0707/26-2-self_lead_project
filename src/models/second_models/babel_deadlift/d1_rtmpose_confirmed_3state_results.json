@@ -1,0 +1,27 @@
+{
+  "model": "vidio-health-trainer - Barbell Deadlift d1 (Spine Neutrality)",
+  "pose_engine": "RTMPose-m (Halpe26) + SpinePose 3D (9 Segments)",
+  "status": "CONFIRMED_AND_DEPLOYED",
+  "window": [
+    0.22,
+    0.38
+  ],
+  "metrics_3state": {
+    "selective_f1": 73.98,
+    "selective_accuracy": 81.12,
+    "selective_precision": 72.8,
+    "selective_recall": 75.21,
+    "coverage": 88.05,
+    "abstention_rate": 11.95
+  },
+  "metrics_binary": {
+    "roc_auc": 83.69,
+    "forced_f1": 69.17,
+    "threshold": 0.35
+  },
+  "weights": {
+    "gbdt": "D:\\src\\models\\second_models\\babel_deadlift\\weights_d1_rtmpose\\d1_rtmpose_clean_gbdt_models.pkl",
+    "tcn": "D:\\src\\models\\second_models\\babel_deadlift\\weights_d1_rtmpose\\d1_rtmpose_clean_tcn.pth"
+  },
+  "timestamp": "2026-10-09"
+}

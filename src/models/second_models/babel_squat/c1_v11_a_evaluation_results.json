@@ -1,0 +1,137 @@
+{
+  "model_name": "c1_v11_a",
+  "experiment_code": "E0",
+  "description": "Nadir-focused local window feature engineering (38D)",
+  "overall_metrics": {
+    "f1": 79.56,
+    "prec": 81.35,
+    "rec": 77.85,
+    "acc": 80.73,
+    "auc": 87.83
+  },
+  "baseline_v10_metrics": {
+    "f1": 79.73,
+    "auc": 88.33,
+    "prec": 80.0,
+    "rec": 79.46,
+    "acc": 80.38
+  },
+  "fold_metrics": [
+    {
+      "f1": 74.5,
+      "prec": 90.32,
+      "rec": 63.4,
+      "acc": 79.28,
+      "auc": 89.25
+    },
+    {
+      "f1": 88.59,
+      "prec": 89.07,
+      "rec": 88.11,
+      "acc": 89.23,
+      "auc": 94.76
+    },
+    {
+      "f1": 81.93,
+      "prec": 77.69,
+      "rec": 86.67,
+      "acc": 81.89,
+      "auc": 87.24
+    },
+    {
+      "f1": 78.75,
+      "prec": 75.59,
+      "rec": 82.18,
+      "acc": 78.02,
+      "auc": 88.42
+    },
+    {
+      "f1": 76.66,
+      "prec": 79.79,
+      "rec": 73.77,
+      "acc": 78.25,
+      "auc": 85.65
+    }
+  ],
+  "view_metrics": {
+    "view1": {
+      "view_name": "view1 (후방 180°)",
+      "count": 521,
+      "v10_f1": 76.12,
+      "v11_a_f1": 75.2,
+      "delta_f1": -0.92,
+      "v11_a_auc": 84.89,
+      "v11_a_acc": 76.58
+    },
+    "view2": {
+      "view_name": "view2 (우측 45°)",
+      "count": 521,
+      "v10_f1": 83.21,
+      "v11_a_f1": 80.99,
+      "delta_f1": -2.22,
+      "v11_a_auc": 89.6,
+      "v11_a_acc": 82.34
+    },
+    "view3": {
+      "view_name": "view3 (정면 0°)",
+      "count": 521,
+      "v10_f1": 74.3,
+      "v11_a_f1": 81.74,
+      "delta_f1": 7.44,
+      "v11_a_auc": 89.4,
+      "v11_a_acc": 83.11
+    },
+    "view4": {
+      "view_name": "view4 (좌측 45°)",
+      "count": 521,
+      "v10_f1": 81.85,
+      "v11_a_f1": 81.18,
+      "delta_f1": -0.67,
+      "v11_a_auc": 88.21,
+      "v11_a_acc": 81.57
+    },
+    "view5": {
+      "view_name": "view5 (우측 후방 45°)",
+      "count": 521,
+      "v10_f1": 83.18,
+      "v11_a_f1": 78.69,
+      "delta_f1": -4.49,
+      "v11_a_auc": 87.45,
+      "v11_a_acc": 80.04
+    }
+  },
+  "selective_metrics": {
+    "0.5_0.5": {
+      "desc": "Full Decision (강제 이진)",
+      "coverage": 99.3,
+      "abstention": 0.7,
+      "selective_f1": 93.36,
+      "selective_acc": 93.66,
+      "risk": 6.34
+    },
+    "0.4_0.6": {
+      "desc": "Balanced Abstention (표준 추천)",
+      "coverage": 91.1,
+      "abstention": 8.9,
+      "selective_f1": 96.69,
+      "selective_acc": 96.88,
+      "risk": 3.12
+    },
+    "0.35_0.65": {
+      "desc": "Standard Selective",
+      "coverage": 86.3,
+      "abstention": 13.7,
+      "selective_f1": 98.2,
+      "selective_acc": 98.31,
+      "risk": 1.69
+    },
+    "0.3_0.7": {
+      "desc": "High Confidence",
+      "coverage": 81.0,
+      "abstention": 19.0,
+      "selective_f1": 99.13,
+      "selective_acc": 99.19,
+      "risk": 0.81
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "model_name": "bl4_v4",
+  "exercise": "바벨 런지 (04_바벨_런지)",
+  "defect": "c4 (척추의 중립 위반 / Spine Neutrality Defect)",
+  "version": "v4.0 Production Release",
+  "n_features": 27,
+  "feature_names": [
+    "cervical_yaw_max",
+    "cervical_yaw_mean",
+    "cervical_pitch_max",
+    "cervical_pitch_min",
+    "cervical_roll_max",
+    "ear_shoulder_asymmetry",
+    "head_trunk_yaw_diff",
+    "cervical_bottom_pitch",
+    "trunk_roll_max",
+    "shoulder_roll_max",
+    "pelvic_obliquity_roll",
+    "shoulder_pelvis_coupling",
+    "split_base_stability_ratio",
+    "pelvis_lateral_sway",
+    "spine_knee_alignment",
+    "asym_hip_drop_bottom",
+    "kinetic_lateral_drift",
+    "counter_tilt_compensation",
+    "ascent_recovery_sway",
+    "golden_bottom_phase_error",
+    "local_trunk_roll_inv",
+    "local_cervical_yaw_inv",
+    "local_torso_torsion_max",
+    "local_spine_lateral_c_curve",
+    "delta_trunk_roll_dyn",
+    "delta_shoulder_roll_dyn",
+    "bottom_torso_twist_velocity"
+  ],
+  "weights": {
+    "w_tcn": 0.25,
+    "w_lgb": 0.25,
+    "w_xgb": 0.25,
+    "w_cat": 0.25
+  },
+  "thresholds": {
+    "tau_clean": 0.385,
+    "tau_def": 0.52,
+    "tau_binary": 0.5
+  },
+  "metrics_3state_overall": {
+    "score": 0.7471116057652878,
+    "tau_clean": 0.385,
+    "tau_def": 0.52,
+    "coverage": 0.9072426937738246,
+    "abstain_rate": 0.0927573062261754,
+    "f1": 0.784375,
+    "precision": 0.7537537537537538,
+    "recall": 0.8175895765472313,
+    "accuracy": 0.8067226890756303,
+    "n_determined": 714,
+    "n_abstained": 73
+  },
+  "metrics_2state_overall": {
+    "f1": 0.7585185185185185,
+    "precision": 0.7441860465116279,
+    "recall": 0.7734138972809668,
+    "accuracy": 0.7928843710292249,
+    "roc_auc": 0.8311999787989611
+  },
+  "view_metrics": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "count": 161,
+      "f1_2state": 0.7105263157894737,
+      "f1_3state": 0.7428571428571429,
+      "accuracy_3state": 0.7372262773722628,
+      "roc_auc": 0.7861225785963798
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "count": 161,
+      "f1_2state": 0.8,
+      "f1_3state": 0.8346456692913385,
+      "accuracy_3state": 0.8541666666666666,
+      "roc_auc": 0.8580501746586218
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "count": 160,
+      "f1_2state": 0.8,
+      "f1_3state": 0.8130081300813008,
+      "accuracy_3state": 0.8496732026143791,
+      "roc_auc": 0.8496131528046423
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "count": 154,
+      "f1_2state": 0.7391304347826086,
+      "f1_3state": 0.7575757575757576,
+      "accuracy_3state": 0.7697841726618705,
+      "roc_auc": 0.824724517906336
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "count": 151,
+      "f1_2state": 0.752,
+      "f1_3state": 0.7796610169491526,
+      "accuracy_3state": 0.8156028368794326,
+      "roc_auc": 0.827906976744186
+    }
+  }
+}

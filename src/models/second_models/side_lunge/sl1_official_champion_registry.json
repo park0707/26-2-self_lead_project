@@ -1,0 +1,17 @@
+{
+  "exercise": "07_사이드_런지",
+  "defect": "c1 (앞다리 무릎 각도 90도 오류)",
+  "champion_model": "sl1_final (sl1_hybrid_1 기반 110D)",
+  "selection_date": "2026-10-11",
+  "policy": "MediaPipe Pseudo-3D + RTMPose 2D 상호보완 융합 & 3-GBDT 앙상블 & NLL 온도 스케일링 & 5대 시점별 적응형 3-State 게이팅",
+  "effective_f1": 0.7346,
+  "roc_auc": 0.8683,
+  "accuracy": 0.8811,
+  "precision": 0.7614,
+  "recall": 0.7097,
+  "uncertainty_rate": 0.0939,
+  "coverage": 0.9061,
+  "features_dimension": 110,
+  "bundle_path": "d:\\src\\models\\second_models\\side_lunge\\sl1_final_bundle.pkl",
+  "official_report_docx": "D:\\자주프 문서\\7주차\\vidio-health-trainer_사이드런지_c1_MediaPipe_RTMPose_하이브리드융합_sl1_hybrid_1_공식감사보고서.docx"
+}

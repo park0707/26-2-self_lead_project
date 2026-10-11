@@ -18,17 +18,16 @@ EXERCISE_NAMES_SHORT = [
     '02.데드리프트',
     '03.스티프데드',
     '04.바벨런지',
-    '05.포워드런지',
-    '06.백워드런지',
-    '07.사이드런지',
-    '08.크로스런지',
-    '09.굿모닝'
+    '05.다이나믹런지',
+    '06.사이드런지',
+    '07.크로스런지',
+    '08.굿모닝'
 ]
 
 TUNING_RESULTS_DIR = 'd:/Data/피처_데이터/tuning_results'
 
 class Stage1MetricsHelper:
-    """1단계 9종 운동 분류 모델을 위한 전문 학술 평가, 그리드서치 비교 및 터미널 리포팅 유틸리티"""
+    """1단계 8종 운동 분류 모델을 위한 전문 학술 평가, 그리드서치 비교 및 터미널 리포팅 유틸리티"""
 
     @staticmethod
     def evaluate_predictions(
@@ -130,6 +129,14 @@ class Stage1MetricsHelper:
     @staticmethod
     def print_multi_split_summary(split_results: Dict[str, Dict[str, Any]], adv_metrics: Optional[Dict[str, Any]] = None):
         """4대 분할 세트별 정밀 성능(Acc, Balanced Acc, Top-2 Acc, Kappa, Macro-F1, FPS) 요약 출력"""
+        print("\n[★ 6대 핵심 성능 평가 지표 가이드]")
+        print("  - 정확도 (Accuracy)       : 전체 시퀀스 중 정답을 맞힌 비율로 모델의 전반적인 기본 분류 성공률을 보여준다.")
+        print("  - Top-2 Acc (차선책 정확도): 모델이 예측한 상위 2개 후보 내에 실제 정답이 포함될 확률로 경계성 오분류 발생 시의 안전성을 보여준다.")
+        print("  - 균형정확도 (Balanced Acc): 클래스별 데이터 불균형을 보정하여 소수 운동 클래스까지 왜곡 없이 공정하게 분류했는지를 보여준다.")
+        print("  - Kappa (코헨 카파 계수)  : 우연히 맞힐 확률(Chance Agreement)을 완전히 배제한 순수 예측 일치도로 1.0에 가까울수록 신뢰도가 높음을 보여준다.")
+        print("  - Macro-F1               : 9개 운동별 F1 점수의 산술 평균으로 다수/소수 클래스에 편향되지 않고 고르게 잘 맞히는지를 보여주는 핵심 지표이다.")
+        print("  - FPS (초당 추론 속도)   : 1초 동안 실시간으로 처리할 수 있는 프레임 수로 모바일 환경(30 FPS 기준) 배포 가능 여부를 보여준다.")
+
         print("\n[1. 분할 세트별 초정밀 성능 지표 요약표]")
         print("-" * 96)
         header = f"{'평가 데이터 분할':<36} | {'정확도':^7} | {'Top-2 Acc':^9} | {'균형정확도':^8} | {'Kappa':^7} | {'Macro-F1':^8} | {'FPS':^8}"
@@ -138,8 +145,9 @@ class Stage1MetricsHelper:
         
         for split_name, res in split_results.items():
             acc = res['accuracy'] * 100.0
-            top2 = res.get('top2_accuracy', acc / 100.0) * 100.0
-            bacc = res.get('balanced_accuracy', acc / 100.0) * 100.0
+            raw_top2 = res.get('top2_accuracy', res['accuracy'])
+            top2 = raw_top2 * 100.0 if raw_top2 <= 1.0 else raw_top2
+            bacc = res.get('balanced_accuracy', res['accuracy']) * 100.0 if res.get('balanced_accuracy', 1.0) <= 1.0 else res.get('balanced_accuracy', 100.0)
             kap = res.get('cohen_kappa', 0.0)
             f1 = res['macro_f1'] * 100.0
             fps = res['fps']
@@ -154,8 +162,8 @@ class Stage1MetricsHelper:
 
     @staticmethod
     def print_class_breakdown_report(res: Dict[str, Any], y_true: np.ndarray, split_title: str = "Strict Test (복합 홀드아웃)"):
-        """9개 운동별 개별 세부 성적표 출력"""
-        print(f"\n[2. 9개 운동별 세부 성적표 - {split_title}]")
+        """8개 운동별 개별 세부 성적표 출력"""
+        print(f"\n[2. 8개 운동별 세부 성적표 - {split_title}]")
         print("-" * 96)
         header = f"{'운동 종목 명칭':<20} | {'샘플수':^7} | {'정밀도(Prec)':^12} | {'재현율(Rec)':^12} | {'F1-Score':^12}"
         print(header)

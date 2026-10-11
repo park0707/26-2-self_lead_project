@@ -1,0 +1,769 @@
+{
+  "high_corr_pairs": [
+    {
+      "feat1": "lead_knee_angle_min",
+      "feat2": "jerk_metric_lead_leg",
+      "idx1": 0,
+      "idx2": 29,
+      "pearson": -0.96505487038771,
+      "spearman": -0.9610048727457429,
+      "abs_pearson": 0.96505487038771
+    },
+    {
+      "feat1": "lead_knee_angle_mean",
+      "feat2": "sagittal_knee_90_error",
+      "idx1": 1,
+      "idx2": 5,
+      "pearson": 0.8748710022917312,
+      "spearman": 0.8927054196751975,
+      "abs_pearson": 0.8748710022917312
+    },
+    {
+      "feat1": "lead_knee_angle_min",
+      "feat2": "lead_knee_90_error_abs",
+      "idx1": 0,
+      "idx2": 2,
+      "pearson": 0.8605601068157288,
+      "spearman": 0.8842871294521457,
+      "abs_pearson": 0.8605601068157288
+    },
+    {
+      "feat1": "lead_knee_90_error_abs",
+      "feat2": "jerk_metric_lead_leg",
+      "idx1": 2,
+      "idx2": 29,
+      "pearson": -0.8088440691539072,
+      "spearman": -0.842416565110552,
+      "abs_pearson": 0.8088440691539072
+    },
+    {
+      "feat1": "lead_tibia_vertical_tilt",
+      "feat2": "lead_knee_toe_overhang",
+      "idx1": 6,
+      "idx2": 8,
+      "pearson": 0.7871328948380679,
+      "spearman": 0.7283033706989926,
+      "abs_pearson": 0.7871328948380679
+    },
+    {
+      "feat1": "lead_knee_angle_min",
+      "feat2": "lead_knee_angle_mean",
+      "idx1": 0,
+      "idx2": 1,
+      "pearson": 0.7802012677377588,
+      "spearman": 0.8033967468488459,
+      "abs_pearson": 0.7802012677377588
+    },
+    {
+      "feat1": "lead_knee_dtw_distance",
+      "feat2": "lead_knee_visibility_mean",
+      "idx1": 26,
+      "idx2": 27,
+      "pearson": 0.7702397134264497,
+      "spearman": 0.7389542935169716,
+      "abs_pearson": 0.7702397134264497
+    },
+    {
+      "feat1": "lead_femur_horizontal_tilt",
+      "feat2": "rear_knee_ground_clearance",
+      "idx1": 7,
+      "idx2": 14,
+      "pearson": -0.7485526637456367,
+      "spearman": -0.6263528973442776,
+      "abs_pearson": 0.7485526637456367
+    },
+    {
+      "feat1": "lead_knee_rom_ratio",
+      "feat2": "lead_rear_knee_ratio",
+      "idx1": 18,
+      "idx2": 19,
+      "pearson": 0.7392144956326978,
+      "spearman": 0.7210423550301907,
+      "abs_pearson": 0.7392144956326978
+    },
+    {
+      "feat1": "lead_knee_angle_mean",
+      "feat2": "jerk_metric_lead_leg",
+      "idx1": 1,
+      "idx2": 29,
+      "pearson": -0.7293939663005976,
+      "spearman": -0.735380619670359,
+      "abs_pearson": 0.7293939663005976
+    },
+    {
+      "feat1": "lead_knee_angle_mean",
+      "feat2": "lead_knee_90_error_abs",
+      "idx1": 1,
+      "idx2": 2,
+      "pearson": 0.7151094344900095,
+      "spearman": 0.7586177935926833,
+      "abs_pearson": 0.7151094344900095
+    },
+    {
+      "feat1": "lead_knee_angle_min",
+      "feat2": "front_view_femur_drop_gated",
+      "idx1": 0,
+      "idx2": 16,
+      "pearson": 0.7066376518656919,
+      "spearman": 0.710569796380241,
+      "abs_pearson": 0.7066376518656919
+    },
+    {
+      "feat1": "lead_knee_flex_velocity_max",
+      "feat2": "jerk_metric_lead_leg",
+      "idx1": 4,
+      "idx2": 29,
+      "pearson": 0.699940596476599,
+      "spearman": 0.7000268131673575,
+      "abs_pearson": 0.699940596476599
+    },
+    {
+      "feat1": "lead_knee_angle_min",
+      "feat2": "lead_knee_under_90_ratio",
+      "idx1": 0,
+      "idx2": 3,
+      "pearson": -0.6716095612811512,
+      "spearman": -0.7222661751103903,
+      "abs_pearson": 0.6716095612811512
+    },
+    {
+      "feat1": "lead_knee_under_90_ratio",
+      "feat2": "lead_knee_flex_velocity_max",
+      "idx1": 3,
+      "idx2": 4,
+      "pearson": 0.6183197681700023,
+      "spearman": 0.708905195620677,
+      "abs_pearson": 0.6183197681700023
+    },
+    {
+      "feat1": "bottom_phase_dwell_ratio",
+      "feat2": "jerk_metric_lead_leg",
+      "idx1": 25,
+      "idx2": 29,
+      "pearson": 0.6025785216840354,
+      "spearman": 0.7844295374821,
+      "abs_pearson": 0.6025785216840354
+    },
+    {
+      "feat1": "lead_knee_angle_min",
+      "feat2": "bottom_phase_dwell_ratio",
+      "idx1": 0,
+      "idx2": 25,
+      "pearson": -0.568051286084954,
+      "spearman": -0.7442795981828438,
+      "abs_pearson": 0.568051286084954
+    },
+    {
+      "feat1": "lead_knee_flex_velocity_max",
+      "feat2": "bottom_phase_dwell_ratio",
+      "idx1": 4,
+      "idx2": 25,
+      "pearson": 0.5564479877186661,
+      "spearman": 0.7278949931308516,
+      "abs_pearson": 0.5564479877186661
+    }
+  ],
+  "vif_rank": [
+    {
+      "feature": "lead_knee_angle_min",
+      "index": 0,
+      "vif": 72.0827241934091
+    },
+    {
+      "feature": "front_view_femur_drop_gated",
+      "index": 16,
+      "vif": 31.667781487426566
+    },
+    {
+      "feature": "jerk_metric_lead_leg",
+      "index": 29,
+      "vif": 22.222569150117
+    },
+    {
+      "feature": "lead_femur_vertical_drop_ratio",
+      "index": 15,
+      "vif": 21.306821743154703
+    },
+    {
+      "feature": "sagittal_knee_90_error",
+      "index": 5,
+      "vif": 9.609645282142438
+    },
+    {
+      "feature": "lead_knee_angle_mean",
+      "index": 1,
+      "vif": 8.884761041560735
+    },
+    {
+      "feature": "lead_tibia_vertical_tilt",
+      "index": 6,
+      "vif": 6.458014515378569
+    },
+    {
+      "feature": "lead_knee_90_error_abs",
+      "index": 2,
+      "vif": 6.35528403154953
+    },
+    {
+      "feature": "lead_femur_horizontal_tilt",
+      "index": 7,
+      "vif": 6.302992125201907
+    },
+    {
+      "feature": "rear_knee_ground_clearance",
+      "index": 14,
+      "vif": 5.639965037344691
+    },
+    {
+      "feature": "lead_knee_toe_overhang",
+      "index": 8,
+      "vif": 5.265487041294133
+    },
+    {
+      "feature": "lead_knee_under_90_ratio",
+      "index": 3,
+      "vif": 4.839223795424732
+    },
+    {
+      "feature": "lead_knee_rom_ratio",
+      "index": 18,
+      "vif": 4.772951929747848
+    },
+    {
+      "feature": "rear_knee_angle_min",
+      "index": 20,
+      "vif": 4.2217604229040395
+    },
+    {
+      "feature": "lead_knee_flex_velocity_max",
+      "index": 4,
+      "vif": 3.680162289568379
+    }
+  ],
+  "importance_ranks": [
+    {
+      "feature": "lead_knee_dtw_distance",
+      "index": 26,
+      "ens_importance_pct": 14.115639906728733,
+      "lgb_pct": 15.978952501682134,
+      "cat_pct": 14.507690159489083,
+      "xgb_pct": 7.957195509240855
+    },
+    {
+      "feature": "lead_knee_flex_velocity_max",
+      "index": 4,
+      "ens_importance_pct": 13.755059570442338,
+      "lgb_pct": 22.059437439783828,
+      "cat_pct": 11.196539203872282,
+      "xgb_pct": 13.017021321881714
+    },
+    {
+      "feature": "rigid_bone_length_consistency",
+      "index": 13,
+      "ens_importance_pct": 8.636189403161481,
+      "lgb_pct": 7.732033553724178,
+      "cat_pct": 8.959920575971488,
+      "xgb_pct": 8.436374097801819
+    },
+    {
+      "feature": "lead_knee_visibility_mean",
+      "index": 27,
+      "ens_importance_pct": 7.223952059567072,
+      "lgb_pct": 6.39884692868323,
+      "cat_pct": 7.822417689784586,
+      "xgb_pct": 5.161865759956028
+    },
+    {
+      "feature": "front_view_femur_drop_gated",
+      "index": 16,
+      "ens_importance_pct": 6.821962643976915,
+      "lgb_pct": 7.610074915623759,
+      "cat_pct": 6.5207319958691405,
+      "xgb_pct": 7.114291060655738
+    },
+    {
+      "feature": "lead_knee_under_90_ratio",
+      "index": 3,
+      "ens_importance_pct": 3.4455100957929177,
+      "lgb_pct": 1.5429002871849886,
+      "cat_pct": 3.7130250687999355,
+      "xgb_pct": 5.5912782895827196
+    },
+    {
+      "feature": "jerk_metric_lead_leg",
+      "index": 29,
+      "ens_importance_pct": 3.411408631473171,
+      "lgb_pct": 1.808134689818568,
+      "cat_pct": 3.517743787294292,
+      "xgb_pct": 5.958309834617039
+    },
+    {
+      "feature": "stride_length_normalized",
+      "index": 22,
+      "ens_importance_pct": 3.3304857355811626,
+      "lgb_pct": 3.7487755664682774,
+      "cat_pct": 3.2634961054955336,
+      "xgb_pct": 2.909454900650309
+    },
+    {
+      "feature": "lead_femur_vertical_drop_ratio",
+      "index": 15,
+      "ens_importance_pct": 3.2080630829276457,
+      "lgb_pct": 1.8204777280861597,
+      "cat_pct": 3.858880645437395,
+      "xgb_pct": 1.9461810692134949
+    },
+    {
+      "feature": "lead_femur_horizontal_tilt",
+      "index": 7,
+      "ens_importance_pct": 3.1065913774472174,
+      "lgb_pct": 3.2842999455127004,
+      "cat_pct": 3.120020190483728,
+      "xgb_pct": 2.667881348972941
+    },
+    {
+      "feature": "lead_tibia_length_ratio",
+      "index": 12,
+      "ens_importance_pct": 2.704116726361135,
+      "lgb_pct": 2.2353769457634693,
+      "cat_pct": 2.9711756194541743,
+      "xgb_pct": 1.9850203553603192
+    },
+    {
+      "feature": "lead_tibia_sagittal_sway",
+      "index": 10,
+      "ens_importance_pct": 2.379063282849296,
+      "lgb_pct": 2.183480062130898,
+      "cat_pct": 2.4986089853909887,
+      "xgb_pct": 2.0286838871406054
+    },
+    {
+      "feature": "lead_femur_length_ratio",
+      "index": 11,
+      "ens_importance_pct": 2.195626008118376,
+      "lgb_pct": 1.5098128944612366,
+      "cat_pct": 2.4422007900407317,
+      "xgb_pct": 2.0377317881025587
+    },
+    {
+      "feature": "lead_knee_accel_inflection",
+      "index": 24,
+      "ens_importance_pct": 2.045725927353627,
+      "lgb_pct": 1.9527003050210272,
+      "cat_pct": 2.077023970743742,
+      "xgb_pct": 2.037633048021317
+    },
+    {
+      "feature": "bottom_phase_dwell_ratio",
+      "index": 25,
+      "ens_importance_pct": 1.9788603690975841,
+      "lgb_pct": 1.6658701079983547,
+      "cat_pct": 1.9755159858981477,
+      "xgb_pct": 2.6255758941881755
+    },
+    {
+      "feature": "step_width_normalized",
+      "index": 23,
+      "ens_importance_pct": 1.9118668069229607,
+      "lgb_pct": 1.7614284735327395,
+      "cat_pct": 1.945794642848974,
+      "xgb_pct": 2.0022849420213777
+    },
+    {
+      "feature": "lead_rear_knee_ratio",
+      "index": 19,
+      "ens_importance_pct": 1.8639252766994936,
+      "lgb_pct": 2.1981454334131008,
+      "cat_pct": 1.6729573970447817,
+      "xgb_pct": 2.3800655673714792
+    },
+    {
+      "feature": "rear_knee_angle_min",
+      "index": 20,
+      "ens_importance_pct": 1.842956781995031,
+      "lgb_pct": 1.5922421789637229,
+      "cat_pct": 1.9541536931268901,
+      "xgb_pct": 1.654625744669137
+    },
+    {
+      "feature": "lead_knee_90_error_abs",
+      "index": 2,
+      "ens_importance_pct": 1.8199961765161594,
+      "lgb_pct": 1.1865361046344658,
+      "cat_pct": 1.9571357879356734,
+      "xgb_pct": 2.2362216518117335
+    },
+    {
+      "feature": "lead_leg_coplanarity",
+      "index": 17,
+      "ens_importance_pct": 1.7174069349487615,
+      "lgb_pct": 1.556571897555752,
+      "cat_pct": 1.77614890573064,
+      "xgb_pct": 1.6746965796528575
+    },
+    {
+      "feature": "lead_tibia_vertical_tilt",
+      "index": 6,
+      "ens_importance_pct": 1.464406005195203,
+      "lgb_pct": 1.4736064449643822,
+      "cat_pct": 1.3682116917869531,
+      "xgb_pct": 2.0426967462040486
+    },
+    {
+      "feature": "rear_knee_ground_clearance",
+      "index": 14,
+      "ens_importance_pct": 1.4083069346527235,
+      "lgb_pct": 0.8300569274153636,
+      "cat_pct": 1.54602935349205,
+      "xgb_pct": 1.7104989263948625
+    },
+    {
+      "feature": "lead_shank_ankle_coupling",
+      "index": 9,
+      "ens_importance_pct": 1.380813266075075,
+      "lgb_pct": 1.222949864478282,
+      "cat_pct": 1.39580806673574,
+      "xgb_pct": 1.6035225205429215
+    },
+    {
+      "feature": "kinetic_energy_inflection",
+      "index": 28,
+      "ens_importance_pct": 1.3788254557066661,
+      "lgb_pct": 0.9305997812998729,
+      "cat_pct": 1.526948642099348,
+      "xgb_pct": 1.3564572482178117
+    },
+    {
+      "feature": "lead_knee_rom_ratio",
+      "index": 18,
+      "ens_importance_pct": 1.2844562374589394,
+      "lgb_pct": 0.976005608676637,
+      "cat_pct": 1.2774515927754728,
+      "xgb_pct": 1.9447971706866
+    },
+    {
+      "feature": "sagittal_knee_90_error",
+      "index": 5,
+      "ens_importance_pct": 1.2460465395520406,
+      "lgb_pct": 1.015943950938066,
+      "cat_pct": 1.2583929220760708,
+      "xgb_pct": 1.6296599110722603
+    },
+    {
+      "feature": "lead_knee_angle_min",
+      "index": 0,
+      "ens_importance_pct": 1.1912124263498995,
+      "lgb_pct": 0.8658542052797006,
+      "cat_pct": 1.0585504068291092,
+      "xgb_pct": 2.664818075573577
+    },
+    {
+      "feature": "pelvic_drop_angle",
+      "index": 21,
+      "ens_importance_pct": 1.1401625102422412,
+      "lgb_pct": 1.087137843352362,
+      "cat_pct": 0.9862533299644698,
+      "xgb_pct": 2.200905566494427
+    },
+    {
+      "feature": "lead_knee_angle_mean",
+      "index": 1,
+      "ens_importance_pct": 1.0742988026764821,
+      "lgb_pct": 0.8468449541491898,
+      "cat_pct": 1.0455919591960077,
+      "xgb_pct": 1.7072670856744834
+    },
+    {
+      "feature": "lead_knee_toe_overhang",
+      "index": 8,
+      "ens_importance_pct": 0.9170650241295032,
+      "lgb_pct": 0.9249024594035546,
+      "cat_pct": 0.78558083433238,
+      "xgb_pct": 1.7169840982266489
+    }
+  ],
+  "pfi_results": [
+    {
+      "feature": "pelvic_drop_angle",
+      "index": 21,
+      "delta_auc": -7.119534529742566e-05,
+      "delta_f1": -0.0018795811991562327,
+      "delta_loss": -0.0005708050112553265,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_knee_angle_mean",
+      "index": 1,
+      "delta_auc": 0.00015957577394247745,
+      "delta_f1": -0.0018058021046373663,
+      "delta_loss": 0.00033351297501947873,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "kinetic_energy_inflection",
+      "index": 28,
+      "delta_auc": 0.00015712076203566738,
+      "delta_f1": -0.001776178656236227,
+      "delta_loss": 6.426769931122678e-05,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "rear_knee_angle_min",
+      "index": 20,
+      "delta_auc": 0.0012054108462425718,
+      "delta_f1": -0.001343167623015762,
+      "delta_loss": 0.0020449828306704832,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "sagittal_knee_90_error",
+      "index": 5,
+      "delta_auc": -9.083544055188408e-05,
+      "delta_f1": -0.0011024861420457777,
+      "delta_loss": -0.00014291917735511638,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_knee_toe_overhang",
+      "index": 8,
+      "delta_auc": 0.00025695791291255874,
+      "delta_f1": -0.0008356215777890697,
+      "delta_loss": 0.0006264240768093065,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_femur_length_ratio",
+      "index": 11,
+      "delta_auc": 0.0016587697116997812,
+      "delta_f1": -0.0007442267972207484,
+      "delta_loss": 0.0014854787689370652,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "step_width_normalized",
+      "index": 23,
+      "delta_auc": 0.0009116277547279283,
+      "delta_f1": -0.0006671142144233589,
+      "delta_loss": 0.0020274352864513958,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_knee_rom_ratio",
+      "index": 18,
+      "delta_auc": -0.00028232636928291475,
+      "delta_f1": -0.0005705469285653963,
+      "delta_loss": -2.0127564475647118e-05,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_tibia_vertical_tilt",
+      "index": 6,
+      "delta_auc": 7.856038101783369e-05,
+      "delta_f1": -0.000316189992096283,
+      "delta_loss": 0.00045690844492287665,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_knee_angle_min",
+      "index": 0,
+      "delta_auc": 0.00042062537336637893,
+      "delta_f1": -0.0002674054681072846,
+      "delta_loss": 0.0010260579325243157,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_knee_accel_inflection",
+      "index": 24,
+      "delta_auc": -0.0002741429962602071,
+      "delta_f1": -0.0002364615282290261,
+      "delta_loss": -0.0013220422896861317,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_knee_90_error_abs",
+      "index": 2,
+      "delta_auc": -0.00017839753189468065,
+      "delta_f1": 0.0007776749294959862,
+      "delta_loss": -9.105345527904429e-05,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_leg_coplanarity",
+      "index": 17,
+      "delta_auc": 0.0005049141155000659,
+      "delta_f1": 0.00081263229130637,
+      "delta_loss": 0.0004325417908703222,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_shank_ankle_coupling",
+      "index": 9,
+      "delta_auc": 0.0009296311753778542,
+      "delta_f1": 0.0008740537132662762,
+      "delta_loss": 0.0014786168130710097,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "rear_knee_ground_clearance",
+      "index": 14,
+      "delta_auc": 0.00037152513523017736,
+      "delta_f1": 0.0012266762100673566,
+      "delta_loss": 0.0006324528450192601,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "jerk_metric_lead_leg",
+      "index": 29,
+      "delta_auc": 0.0011784057152677053,
+      "delta_f1": 0.0013929022454125084,
+      "delta_loss": 0.0027150062829921274,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "bottom_phase_dwell_ratio",
+      "index": 25,
+      "delta_auc": 0.00015712076203566738,
+      "delta_f1": 0.0017520539458631967,
+      "delta_loss": 0.00010504193736368128,
+      "status": "노이즈/무영향"
+    },
+    {
+      "feature": "lead_tibia_length_ratio",
+      "index": 12,
+      "delta_auc": 0.0022250591248700546,
+      "delta_f1": 0.001884665088961679,
+      "delta_loss": 0.0026703071885462613,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "stride_length_normalized",
+      "index": 22,
+      "delta_auc": 0.004771724809532007,
+      "delta_f1": 0.002035303884515094,
+      "delta_loss": 0.00627596168884389,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_femur_vertical_drop_ratio",
+      "index": 15,
+      "delta_auc": 0.0030969975204379495,
+      "delta_f1": 0.003005790930349317,
+      "delta_loss": 0.00537744740724756,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_rear_knee_ratio",
+      "index": 19,
+      "delta_auc": 0.0019484611167030596,
+      "delta_f1": 0.003826789711189904,
+      "delta_loss": 0.0032056653761741495,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_knee_under_90_ratio",
+      "index": 3,
+      "delta_auc": 0.004201343709850325,
+      "delta_f1": 0.004405948444182628,
+      "delta_loss": 0.0068981988307446505,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "front_view_femur_drop_gated",
+      "index": 16,
+      "delta_auc": 0.005415756266417837,
+      "delta_f1": 0.006674051176156626,
+      "delta_loss": 0.012295607466980451,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_femur_horizontal_tilt",
+      "index": 7,
+      "delta_auc": 0.0022389708590086375,
+      "delta_f1": 0.006777819131264051,
+      "delta_loss": 0.005603899320308703,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_tibia_sagittal_sway",
+      "index": 10,
+      "delta_auc": 0.0032537091138225673,
+      "delta_f1": 0.007115992614440047,
+      "delta_loss": 0.004785035349860123,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_knee_visibility_mean",
+      "index": 27,
+      "delta_auc": 0.014070491575217536,
+      "delta_f1": 0.014664870455374613,
+      "delta_loss": 0.018707343220559912,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "rigid_bone_length_consistency",
+      "index": 13,
+      "delta_auc": 0.009651470142963591,
+      "delta_f1": 0.021115592526567584,
+      "delta_loss": 0.014817961974551607,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_knee_flex_velocity_max",
+      "index": 4,
+      "delta_auc": 0.03323595119436329,
+      "delta_f1": 0.05775442333525447,
+      "delta_loss": 0.04666136122721557,
+      "status": "기여 피처"
+    },
+    {
+      "feature": "lead_knee_dtw_distance",
+      "index": 26,
+      "delta_auc": 0.04830808762755832,
+      "delta_f1": 0.08929310700734086,
+      "delta_loss": 0.060408720255574574,
+      "status": "기여 피처"
+    }
+  ],
+  "ablation_results": [
+    {
+      "dropped_feature": "pelvic_drop_angle",
+      "dim_remaining": 29,
+      "auc": 0.9053633826790728,
+      "f1_3state": 0.7945205479452054,
+      "acc_3state": 0.8767967145790554,
+      "prec_3state": 0.7759197324414716,
+      "rec_3state": 0.8140350877192982,
+      "uncertainty_rate": 0.09898242368177614
+    },
+    {
+      "dropped_feature": "lead_knee_angle_mean",
+      "dim_remaining": 29,
+      "auc": 0.9070614325812815,
+      "f1_3state": 0.7979966611018364,
+      "acc_3state": 0.8758974358974358,
+      "prec_3state": 0.7635782747603834,
+      "rec_3state": 0.8356643356643356,
+      "uncertainty_rate": 0.09805735430157261
+    },
+    {
+      "dropped_feature": "kinetic_energy_inflection",
+      "dim_remaining": 29,
+      "auc": 0.9050728729367671,
+      "f1_3state": 0.7904599659284497,
+      "acc_3state": 0.8739754098360656,
+      "prec_3state": 0.7631578947368421,
+      "rec_3state": 0.8197879858657244,
+      "uncertainty_rate": 0.0971322849213691
+    },
+    {
+      "dropped_feature": "rear_knee_angle_min",
+      "dim_remaining": 29,
+      "auc": 0.9058093765088093,
+      "f1_3state": 0.7959527824620574,
+      "acc_3state": 0.8758974358974358,
+      "prec_3state": 0.7637540453074434,
+      "rec_3state": 0.8309859154929577,
+      "uncertainty_rate": 0.09805735430157261
+    }
+  ]
+}

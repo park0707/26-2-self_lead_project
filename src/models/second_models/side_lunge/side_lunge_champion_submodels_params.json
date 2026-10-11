@@ -1,0 +1,67 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "07_사이드_런지",
+  "last_updated": "2026-10-11",
+  "c1": {
+    "model_name": "sl1_hybrid_1",
+    "architecture": "MediaPipe Pseudo-3D + RTMPose 2D Full Complementary Concat (110D)",
+    "status": "OFFICIAL_CHAMPION",
+    "f1_3state": 0.7346,
+    "f1_2state": 0.6737,
+    "roc_auc": 0.8683,
+    "uncertainty_rate": 0.0939,
+    "coverage": 0.9061,
+    "temperature": 1.0206,
+    "bundle_path": "D:\\src\\models\\second_models\\side_lunge\\sl1_hybrid_1_bundle.pkl",
+    "view_thresholds": {
+      "view5": {
+        "alias": "시점 A: 우측 후방 (45도)",
+        "tau_clean": 0.333,
+        "tau_defect": 0.520
+      },
+      "view2": {
+        "alias": "시점 B: 우측 전방 (45도)",
+        "tau_clean": 0.362,
+        "tau_defect": 0.579
+      },
+      "view3": {
+        "alias": "시점 C: 정면 (0도)",
+        "tau_clean": 0.333,
+        "tau_defect": 0.520
+      },
+      "view4": {
+        "alias": "시점 D: 좌측 전방 (45도)",
+        "tau_clean": 0.347,
+        "tau_defect": 0.594
+      },
+      "view1": {
+        "alias": "시점 E: 좌측 후방 (45도)",
+        "tau_clean": 0.347,
+        "tau_defect": 0.520
+      }
+    }
+  },
+  "c2": {
+    "model_name": "sl2_rtmp_1",
+    "temperature": 1.0474,
+    "status": "RTMP_ACTIVE"
+  },
+  "c3": {
+    "model_name": "sl3_rtmp_1",
+    "temperature": 1.1851,
+    "f1_3state": 0.7513,
+    "status": "OFFICIAL_CHAMPION"
+  },
+  "c4": {
+    "model_name": "sl4_rtmp_1",
+    "temperature": 1.0514,
+    "f1_3state": 0.8350,
+    "status": "OFFICIAL_CHAMPION"
+  },
+  "c5": {
+    "model_name": "sl5_rtmp_1",
+    "temperature": 0.8925,
+    "f1_3state": 0.6682,
+    "status": "OFFICIAL_CHAMPION"
+  }
+}

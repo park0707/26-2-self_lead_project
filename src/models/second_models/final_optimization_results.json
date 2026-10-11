@@ -1,0 +1,16 @@
+{
+  "best_decision_threshold_lgb": 0.43999999999999995,
+  "f1_at_best_threshold_lgb": 85.5324074074074,
+  "best_decision_threshold_cb": 0.38,
+  "f1_at_best_threshold_cb": 85.60135516657256,
+  "best_routing_band": [
+    0.2,
+    0.6
+  ],
+  "best_cascade_f1": 82.46153846153847,
+  "tier1_coverage_pct": 83.93623543838136,
+  "best_blend_weight_w": 0.4,
+  "f1_at_best_blend": 81.6919191919192,
+  "f1_sigmoid_calib": 84.67933491686462,
+  "f1_isotonic_calib": 84.63356973995272
+}

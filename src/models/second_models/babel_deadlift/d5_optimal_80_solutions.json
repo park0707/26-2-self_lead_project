@@ -1,0 +1,222 @@
+[
+  {
+    "tau_norm": 0.405,
+    "tau_def": 0.525,
+    "coverage": 0.8974,
+    "retained_count": 691,
+    "retake_count": 79,
+    "accuracy": 0.8017,
+    "f1_score": 0.8023,
+    "precision": 0.8081,
+    "recall": 0.7966
+  },
+  {
+    "tau_norm": 0.4,
+    "tau_def": 0.52,
+    "coverage": 0.8961,
+    "retained_count": 690,
+    "retake_count": 80,
+    "accuracy": 0.8,
+    "f1_score": 0.8012,
+    "precision": 0.8035,
+    "recall": 0.7989
+  },
+  {
+    "tau_norm": 0.4,
+    "tau_def": 0.525,
+    "coverage": 0.8935,
+    "retained_count": 688,
+    "retake_count": 82,
+    "accuracy": 0.8023,
+    "f1_score": 0.8035,
+    "precision": 0.8081,
+    "recall": 0.7989
+  },
+  {
+    "tau_norm": 0.395,
+    "tau_def": 0.525,
+    "coverage": 0.8922,
+    "retained_count": 687,
+    "retake_count": 83,
+    "accuracy": 0.802,
+    "f1_score": 0.8035,
+    "precision": 0.8081,
+    "recall": 0.7989
+  },
+  {
+    "tau_norm": 0.405,
+    "tau_def": 0.53,
+    "coverage": 0.8922,
+    "retained_count": 687,
+    "retake_count": 83,
+    "accuracy": 0.802,
+    "f1_score": 0.8017,
+    "precision": 0.8088,
+    "recall": 0.7948
+  },
+  {
+    "tau_norm": 0.405,
+    "tau_def": 0.535,
+    "coverage": 0.8922,
+    "retained_count": 687,
+    "retake_count": 83,
+    "accuracy": 0.802,
+    "f1_score": 0.8017,
+    "precision": 0.8088,
+    "recall": 0.7948
+  },
+  {
+    "tau_norm": 0.405,
+    "tau_def": 0.54,
+    "coverage": 0.8909,
+    "retained_count": 686,
+    "retake_count": 84,
+    "accuracy": 0.8017,
+    "f1_score": 0.8012,
+    "precision": 0.8083,
+    "recall": 0.7942
+  },
+  {
+    "tau_norm": 0.4,
+    "tau_def": 0.53,
+    "coverage": 0.8883,
+    "retained_count": 684,
+    "retake_count": 86,
+    "accuracy": 0.8026,
+    "f1_score": 0.8029,
+    "precision": 0.8088,
+    "recall": 0.7971
+  },
+  {
+    "tau_norm": 0.4,
+    "tau_def": 0.535,
+    "coverage": 0.8883,
+    "retained_count": 684,
+    "retake_count": 86,
+    "accuracy": 0.8026,
+    "f1_score": 0.8029,
+    "precision": 0.8088,
+    "recall": 0.7971
+  },
+  {
+    "tau_norm": 0.395,
+    "tau_def": 0.53,
+    "coverage": 0.887,
+    "retained_count": 683,
+    "retake_count": 87,
+    "accuracy": 0.8023,
+    "f1_score": 0.8029,
+    "precision": 0.8088,
+    "recall": 0.7971
+  },
+  {
+    "tau_norm": 0.395,
+    "tau_def": 0.535,
+    "coverage": 0.887,
+    "retained_count": 683,
+    "retake_count": 87,
+    "accuracy": 0.8023,
+    "f1_score": 0.8029,
+    "precision": 0.8088,
+    "recall": 0.7971
+  },
+  {
+    "tau_norm": 0.4,
+    "tau_def": 0.54,
+    "coverage": 0.887,
+    "retained_count": 683,
+    "retake_count": 87,
+    "accuracy": 0.8023,
+    "f1_score": 0.8023,
+    "precision": 0.8083,
+    "recall": 0.7965
+  },
+  {
+    "tau_norm": 0.39,
+    "tau_def": 0.52,
+    "coverage": 0.8857,
+    "retained_count": 682,
+    "retake_count": 88,
+    "accuracy": 0.8006,
+    "f1_score": 0.8035,
+    "precision": 0.8035,
+    "recall": 0.8035
+  },
+  {
+    "tau_norm": 0.395,
+    "tau_def": 0.54,
+    "coverage": 0.8857,
+    "retained_count": 682,
+    "retake_count": 88,
+    "accuracy": 0.8021,
+    "f1_score": 0.8023,
+    "precision": 0.8083,
+    "recall": 0.7965
+  },
+  {
+    "tau_norm": 0.405,
+    "tau_def": 0.545,
+    "coverage": 0.8857,
+    "retained_count": 682,
+    "retake_count": 88,
+    "accuracy": 0.8021,
+    "f1_score": 0.8006,
+    "precision": 0.809,
+    "recall": 0.7924
+  },
+  {
+    "tau_norm": 0.38,
+    "tau_def": 0.5,
+    "coverage": 0.8844,
+    "retained_count": 681,
+    "retake_count": 89,
+    "accuracy": 0.8003,
+    "f1_score": 0.8052,
+    "precision": 0.796,
+    "recall": 0.8145
+  },
+  {
+    "tau_norm": 0.385,
+    "tau_def": 0.505,
+    "coverage": 0.8844,
+    "retained_count": 681,
+    "retake_count": 89,
+    "accuracy": 0.8003,
+    "f1_score": 0.8046,
+    "precision": 0.7977,
+    "recall": 0.8116
+  },
+  {
+    "tau_norm": 0.415,
+    "tau_def": 0.555,
+    "coverage": 0.8844,
+    "retained_count": 681,
+    "retake_count": 89,
+    "accuracy": 0.8032,
+    "f1_score": 0.8006,
+    "precision": 0.8226,
+    "recall": 0.7797
+  },
+  {
+    "tau_norm": 0.385,
+    "tau_def": 0.51,
+    "coverage": 0.8831,
+    "retained_count": 680,
+    "retake_count": 90,
+    "accuracy": 0.8015,
+    "f1_score": 0.8058,
+    "precision": 0.8,
+    "recall": 0.8116
+  },
+  {
+    "tau_norm": 0.39,
+    "tau_def": 0.525,
+    "coverage": 0.8831,
+    "retained_count": 680,
+    "retake_count": 90,
+    "accuracy": 0.8029,
+    "f1_score": 0.8058,
+    "precision": 0.8081,
+    "recall": 0.8035
+  }
+]

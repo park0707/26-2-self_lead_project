@@ -1,0 +1,83 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "model_name": "sl2_hybrid_2",
+  "defect_code": "c2",
+  "defect_name": "몸통·발·무릎 방향 불일치",
+  "features_dimension": 84,
+  "total_front_samples": 1652,
+  "overall_front_auc": 85.87565708101421,
+  "temperature": 0.7412109374999998,
+  "ece": 9.077997565541342,
+  "profiles": {
+    "f1_breakthrough": {
+      "profile_name": "F1 Breakthrough Profile (F1 >= 70% 돌파 모드)",
+      "description": "전방 시점에서 F1 70% 이상을 극대화하기 위해 재촬영률 허용 한도를 18%까지 유연하게 확장한 프로파일",
+      "thresholds": {
+        "view2": {
+          "tau_clean": 0.35,
+          "tau_defect": 0.7
+        },
+        "view4": {
+          "tau_clean": 0.35,
+          "tau_defect": 0.62
+        }
+      },
+      "views": {
+        "view2": {
+          "tau_clean": 0.35,
+          "tau_defect": 0.7,
+          "f1": 72.34,
+          "prec": 70.83,
+          "rec": 73.91,
+          "acc": 90.43,
+          "retake": 17.8
+        },
+        "view4": {
+          "tau_clean": 0.35,
+          "tau_defect": 0.62,
+          "f1": 64.78,
+          "prec": 62.99,
+          "rec": 66.67,
+          "acc": 87.21,
+          "retake": 17.68
+        }
+      }
+    },
+    "clinical_strict": {
+      "profile_name": "Clinical Strict Profile (표준 임상 규정 모드)",
+      "description": "d:\\AGENTS.md 규칙에 따라 재촬영률을 10.0% 이하로 엄격히 통제하는 프로파일",
+      "thresholds": {
+        "view2": {
+          "tau_clean": 0.45,
+          "tau_defect": 0.66
+        },
+        "view4": {
+          "tau_clean": 0.43,
+          "tau_defect": 0.61
+        }
+      },
+      "views": {
+        "view2": {
+          "tau_clean": 0.45,
+          "tau_defect": 0.66,
+          "f1": 68.15,
+          "prec": 67.15,
+          "rec": 69.17,
+          "acc": 88.46,
+          "retake": 9.81
+        },
+        "view4": {
+          "tau_clean": 0.43,
+          "tau_defect": 0.61,
+          "f1": 60.0,
+          "prec": 62.31,
+          "rec": 57.86,
+          "acc": 85.5,
+          "retake": 9.81
+        }
+      }
+    }
+  },
+  "timestamp": "2026-10-11 14:16:17"
+}

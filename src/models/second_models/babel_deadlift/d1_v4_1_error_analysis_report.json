@@ -1,0 +1,1157 @@
+{
+  "total_samples": 385,
+  "confusion_matrix": {
+    "TN": 199,
+    "FP": 51,
+    "FN": 45,
+    "TP": 90
+  },
+  "subject_breakdown": {
+    "피험자_1": {
+      "total": 50,
+      "normal": 35,
+      "defect": 15,
+      "TN": 26,
+      "FP": 9,
+      "FN": 0,
+      "TP": 15,
+      "fp_rate": 25.71,
+      "fn_rate": 0.0,
+      "mean_prob_ens_norm": 0.2103,
+      "mean_prob_ens_def": 0.737
+    },
+    "피험자_2": {
+      "total": 45,
+      "normal": 30,
+      "defect": 15,
+      "TN": 27,
+      "FP": 3,
+      "FN": 1,
+      "TP": 14,
+      "fp_rate": 10.0,
+      "fn_rate": 6.67,
+      "mean_prob_ens_norm": 0.1293,
+      "mean_prob_ens_def": 0.6225
+    },
+    "피험자_3": {
+      "total": 40,
+      "normal": 25,
+      "defect": 15,
+      "TN": 17,
+      "FP": 8,
+      "FN": 3,
+      "TP": 12,
+      "fp_rate": 32.0,
+      "fn_rate": 20.0,
+      "mean_prob_ens_norm": 0.2391,
+      "mean_prob_ens_def": 0.5268
+    },
+    "피험자_4": {
+      "total": 40,
+      "normal": 25,
+      "defect": 15,
+      "TN": 24,
+      "FP": 1,
+      "FN": 15,
+      "TP": 0,
+      "fp_rate": 4.0,
+      "fn_rate": 100.0,
+      "mean_prob_ens_norm": 0.0527,
+      "mean_prob_ens_def": 0.1028
+    },
+    "피험자_5": {
+      "total": 40,
+      "normal": 25,
+      "defect": 15,
+      "TN": 25,
+      "FP": 0,
+      "FN": 15,
+      "TP": 0,
+      "fp_rate": 0.0,
+      "fn_rate": 100.0,
+      "mean_prob_ens_norm": 0.0134,
+      "mean_prob_ens_def": 0.0515
+    },
+    "피험자_6": {
+      "total": 45,
+      "normal": 30,
+      "defect": 15,
+      "TN": 21,
+      "FP": 9,
+      "FN": 0,
+      "TP": 15,
+      "fp_rate": 30.0,
+      "fn_rate": 0.0,
+      "mean_prob_ens_norm": 0.2284,
+      "mean_prob_ens_def": 0.6634
+    },
+    "피험자_7": {
+      "total": 45,
+      "normal": 30,
+      "defect": 15,
+      "TN": 23,
+      "FP": 7,
+      "FN": 2,
+      "TP": 13,
+      "fp_rate": 23.33,
+      "fn_rate": 13.33,
+      "mean_prob_ens_norm": 0.2106,
+      "mean_prob_ens_def": 0.6552
+    },
+    "피험자_8": {
+      "total": 45,
+      "normal": 30,
+      "defect": 15,
+      "TN": 25,
+      "FP": 5,
+      "FN": 9,
+      "TP": 6,
+      "fp_rate": 16.67,
+      "fn_rate": 60.0,
+      "mean_prob_ens_norm": 0.1584,
+      "mean_prob_ens_def": 0.3088
+    },
+    "피험자_9": {
+      "total": 35,
+      "normal": 20,
+      "defect": 15,
+      "TN": 11,
+      "FP": 9,
+      "FN": 0,
+      "TP": 15,
+      "fp_rate": 45.0,
+      "fn_rate": 0.0,
+      "mean_prob_ens_norm": 0.2818,
+      "mean_prob_ens_def": 0.5908
+    }
+  },
+  "view_breakdown": {
+    "시점 A (우측 후방 45°)": {
+      "view_code": "view5",
+      "total": 77,
+      "normal": 50,
+      "defect": 27,
+      "TN": 35,
+      "FP": 15,
+      "FN": 8,
+      "TP": 19,
+      "fp_rate": 30.0,
+      "fn_rate": 29.63,
+      "accuracy": 70.13
+    },
+    "시점 B (우측 전방 45°)": {
+      "view_code": "view2",
+      "total": 77,
+      "normal": 50,
+      "defect": 27,
+      "TN": 38,
+      "FP": 12,
+      "FN": 8,
+      "TP": 19,
+      "fp_rate": 24.0,
+      "fn_rate": 29.63,
+      "accuracy": 74.03
+    },
+    "시점 C (정면 0°)": {
+      "view_code": "view3",
+      "total": 77,
+      "normal": 50,
+      "defect": 27,
+      "TN": 39,
+      "FP": 11,
+      "FN": 9,
+      "TP": 18,
+      "fp_rate": 22.0,
+      "fn_rate": 33.33,
+      "accuracy": 74.03
+    },
+    "시점 D (좌측 전방 45°)": {
+      "view_code": "view4",
+      "total": 77,
+      "normal": 50,
+      "defect": 27,
+      "TN": 43,
+      "FP": 7,
+      "FN": 9,
+      "TP": 18,
+      "fp_rate": 14.0,
+      "fn_rate": 33.33,
+      "accuracy": 79.22
+    },
+    "시점 E (좌측 후방 45°)": {
+      "view_code": "view1",
+      "total": 77,
+      "normal": 50,
+      "defect": 27,
+      "TN": 44,
+      "FP": 6,
+      "FN": 11,
+      "TP": 16,
+      "fp_rate": 12.0,
+      "fn_rate": 40.74,
+      "accuracy": 77.92
+    }
+  },
+  "crosstalk_analysis": {
+    "TN": {
+      "d2_gaze": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d3_barbell_distance": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d4_knee_valgus": {
+        "defect_count": 31,
+        "rate": 15.58
+      },
+      "d5_setup_finish": {
+        "defect_count": 0,
+        "rate": 0.0
+      }
+    },
+    "FP": {
+      "d2_gaze": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d3_barbell_distance": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d4_knee_valgus": {
+        "defect_count": 14,
+        "rate": 27.45
+      },
+      "d5_setup_finish": {
+        "defect_count": 0,
+        "rate": 0.0
+      }
+    },
+    "FN": {
+      "d2_gaze": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d3_barbell_distance": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d4_knee_valgus": {
+        "defect_count": 19,
+        "rate": 42.22
+      },
+      "d5_setup_finish": {
+        "defect_count": 0,
+        "rate": 0.0
+      }
+    },
+    "TP": {
+      "d2_gaze": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d3_barbell_distance": {
+        "defect_count": 0,
+        "rate": 0.0
+      },
+      "d4_knee_valgus": {
+        "defect_count": 26,
+        "rate": 28.89
+      },
+      "d5_setup_finish": {
+        "defect_count": 0,
+        "rate": 0.0
+      }
+    }
+  },
+  "feature_stats": {
+    "d1_lumbar_curvature_poly_a": {
+      "feature_id": 0,
+      "TN_mean": 0.08707975596189499,
+      "TN_std": 0.09422770142555237,
+      "FP_mean": 0.13361337780952454,
+      "FP_std": 0.07325323671102524,
+      "FN_mean": 0.1429125815629959,
+      "FN_std": 0.07671203464269638,
+      "TP_mean": 0.10667558014392853,
+      "TP_std": 0.05836465582251549,
+      "FP_vs_TN_pval": 0.0006713115726597607,
+      "FN_vs_TP_pval": 0.005213158205151558
+    },
+    "d1_lumbar_stiffness_sd": {
+      "feature_id": 1,
+      "TN_mean": 0.029579436406493187,
+      "TN_std": 0.027118602767586708,
+      "FP_mean": 0.06579616665840149,
+      "FP_std": 0.022222157567739487,
+      "FN_mean": 0.0548185296356678,
+      "FN_std": 0.015658339485526085,
+      "TP_mean": 0.08029760420322418,
+      "TP_std": 0.020976673811674118,
+      "FP_vs_TN_pval": 1.1466279585970601e-13,
+      "FN_vs_TP_pval": 7.566865883879004e-11
+    },
+    "d1_spine_lateral_deviation_max": {
+      "feature_id": 2,
+      "TN_mean": 1.4580265283584595,
+      "TN_std": 1.4604521989822388,
+      "FP_mean": 2.742464780807495,
+      "FP_std": 1.1331071853637695,
+      "FN_mean": 2.4204399585723877,
+      "FN_std": 0.9601336717605591,
+      "TP_mean": 2.990156650543213,
+      "TP_std": 0.9251506924629211,
+      "FP_vs_TN_pval": 4.2763219632036e-09,
+      "FN_vs_TP_pval": 7.05386555637233e-05
+    },
+    "d1_trunk_flex_speed_max": {
+      "feature_id": 3,
+      "TN_mean": 433.06304931640625,
+      "TN_std": 194.5489959716797,
+      "FP_mean": 864.5498657226562,
+      "FP_std": 455.67572021484375,
+      "FN_mean": 476.0387878417969,
+      "FN_std": 216.28277587890625,
+      "TP_mean": 1075.9342041015625,
+      "TP_std": 529.1550903320312,
+      "FP_vs_TN_pval": 2.450716929738861e-12,
+      "FN_vs_TP_pval": 3.6419387742115533e-14
+    },
+    "d1_cervical_min": {
+      "feature_id": 4,
+      "TN_mean": 39.452945709228516,
+      "TN_std": 43.24103927612305,
+      "FP_mean": 4.725615501403809,
+      "FP_std": 12.354835510253906,
+      "FN_mean": 2.412271022796631,
+      "FN_std": 2.0653278827667236,
+      "TP_mean": 3.1026804447174072,
+      "TP_std": 2.6254594326019287,
+      "FP_vs_TN_pval": 0.0002117049734806642,
+      "FN_vs_TP_pval": 0.11735286563634872
+    },
+    "d1_signed_thoracolumbar_delta": {
+      "feature_id": 5,
+      "TN_mean": 0.11442194133996964,
+      "TN_std": 0.10855714976787567,
+      "FP_mean": 0.28697505593299866,
+      "FP_std": 0.11564576625823975,
+      "FN_mean": 0.21824413537979126,
+      "FN_std": 0.07481534779071808,
+      "TP_mean": 0.3414970934391022,
+      "TP_std": 0.10155905038118362,
+      "FP_vs_TN_pval": 1.894730752570223e-15,
+      "FN_vs_TP_pval": 3.046023502872863e-11
+    },
+    "d1_active_rom": {
+      "feature_id": 6,
+      "TN_mean": 0.41047629714012146,
+      "TN_std": 0.11771637946367264,
+      "FP_mean": 0.6025546789169312,
+      "FP_std": 0.22790125012397766,
+      "FN_mean": 0.426864892244339,
+      "FN_std": 0.0952010527253151,
+      "TP_mean": 0.6856555938720703,
+      "TP_std": 0.2072254717350006,
+      "FP_vs_TN_pval": 3.603080889202914e-10,
+      "FN_vs_TP_pval": 9.699215460331383e-16
+    },
+    "d1_phase_speed_ratio": {
+      "feature_id": 7,
+      "TN_mean": 1.0,
+      "TN_std": 0.0,
+      "FP_mean": 1.0,
+      "FP_std": 0.0,
+      "FN_mean": 1.0,
+      "FN_std": 0.0,
+      "TP_mean": 1.0,
+      "TP_std": 0.0,
+      "FP_vs_TN_pval": NaN,
+      "FN_vs_TP_pval": NaN
+    },
+    "d1_hip_to_knee_dist_ratio": {
+      "feature_id": 8,
+      "TN_mean": 0.06519071757793427,
+      "TN_std": 0.027325516566634178,
+      "FP_mean": 0.05298462510108948,
+      "FP_std": 0.022691398859024048,
+      "FN_mean": 0.07257893681526184,
+      "FN_std": 0.03288384526968002,
+      "TP_mean": 0.054294783622026443,
+      "TP_std": 0.024175545200705528,
+      "FP_vs_TN_pval": 0.0028827148489654064,
+      "FN_vs_TP_pval": 0.0009120807517319918
+    },
+    "d1_cobb_mean_active": {
+      "feature_id": 9,
+      "TN_mean": 87.33556365966797,
+      "TN_std": 75.53419494628906,
+      "FP_mean": 147.09695434570312,
+      "FP_std": 24.62596321105957,
+      "FN_mean": 149.54490661621094,
+      "FN_std": 14.932062149047852,
+      "TP_mean": 151.04530334472656,
+      "TP_std": 13.161083221435547,
+      "FP_vs_TN_pval": 1.740201514621731e-05,
+      "FN_vs_TP_pval": 0.5486484169960022
+    },
+    "d1_cobb_max_flexion": {
+      "feature_id": 10,
+      "TN_mean": 97.3659896850586,
+      "TN_std": 83.66197967529297,
+      "FP_mean": 167.75270080566406,
+      "FP_std": 25.523025512695312,
+      "FN_mean": 168.47286987304688,
+      "FN_std": 10.695865631103516,
+      "TP_mean": 172.4960479736328,
+      "TP_std": 7.3035430908203125,
+      "FP_vs_TN_pval": 5.228344548413588e-07,
+      "FN_vs_TP_pval": 0.11411084234714508
+    },
+    "d1_cobb_range_active": {
+      "feature_id": 11,
+      "TN_mean": 22.110631942749023,
+      "TN_std": 24.37689971923828,
+      "FP_mean": 44.51113510131836,
+      "FP_std": 22.094905853271484,
+      "FN_mean": 40.45223617553711,
+      "FN_std": 18.16219711303711,
+      "TP_mean": 51.17655563354492,
+      "TP_std": 30.171289443969727,
+      "FP_vs_TN_pval": 1.5337907610657453e-09,
+      "FN_vs_TP_pval": 0.04967803508043289
+    },
+    "d1_shoulder_hip_twist_max": {
+      "feature_id": 12,
+      "TN_mean": 28.725433349609375,
+      "TN_std": 12.370047569274902,
+      "FP_mean": 53.98491668701172,
+      "FP_std": 37.361289978027344,
+      "FN_mean": 27.932619094848633,
+      "FN_std": 9.754487991333008,
+      "TP_mean": 61.094093322753906,
+      "TP_std": 39.01713943481445,
+      "FP_vs_TN_pval": 9.334942205896368e-07,
+      "FN_vs_TP_pval": 3.108341584123764e-09
+    },
+    "d1_lateral_asymmetry_integral": {
+      "feature_id": 13,
+      "TN_mean": 20.25104331970215,
+      "TN_std": 3.5322396755218506,
+      "FP_mean": 22.245134353637695,
+      "FP_std": 4.592312335968018,
+      "FN_mean": 19.707094192504883,
+      "FN_std": 3.252574920654297,
+      "TP_mean": 23.479145050048828,
+      "TP_std": 6.598036766052246,
+      "FP_vs_TN_pval": 0.005615181289613247,
+      "FN_vs_TP_pval": 0.0006845859461463988
+    },
+    "d1_pelvis_tilt_range": {
+      "feature_id": 14,
+      "TN_mean": 0.0017447053687646985,
+      "TN_std": 0.0015238411724567413,
+      "FP_mean": 0.00373366242274642,
+      "FP_std": 0.002514308551326394,
+      "FN_mean": 0.0018435268430039287,
+      "FN_std": 0.0011484146816655993,
+      "TP_mean": 0.005754315759986639,
+      "TP_std": 0.0032989236060529947,
+      "FP_vs_TN_pval": 3.5582623514329725e-09,
+      "FN_vs_TP_pval": 3.0078948873464833e-15
+    },
+    "d1_lumbar_flex_acceleration_peak": {
+      "feature_id": 15,
+      "TN_mean": 3847.803466796875,
+      "TN_std": 2020.77587890625,
+      "FP_mean": 8300.7333984375,
+      "FP_std": 4548.93505859375,
+      "FN_mean": 4347.54052734375,
+      "FN_std": 2144.718994140625,
+      "TP_mean": 10538.08203125,
+      "TP_std": 5810.7841796875,
+      "FP_vs_TN_pval": 4.615917565710392e-13,
+      "FN_vs_TP_pval": 1.6748942185430826e-13
+    },
+    "d1_torso_pitch_standing": {
+      "feature_id": 16,
+      "TN_mean": 108.90692901611328,
+      "TN_std": 19.324966430664062,
+      "FP_mean": 70.4649887084961,
+      "FP_std": 32.74755859375,
+      "FN_mean": 103.00404357910156,
+      "FN_std": 19.413593292236328,
+      "TP_mean": 49.54975509643555,
+      "TP_std": 31.706819534301758,
+      "FP_vs_TN_pval": 1.6758205930665062e-15,
+      "FN_vs_TP_pval": 8.129953253155803e-17
+    },
+    "d1_torso_pitch_deepest": {
+      "feature_id": 17,
+      "TN_mean": 177.70033264160156,
+      "TN_std": 2.0981287956237793,
+      "FP_mean": 178.03582763671875,
+      "FP_std": 1.478758692741394,
+      "FN_mean": 178.23512268066406,
+      "FN_std": 1.4340934753417969,
+      "TP_mean": 177.05755615234375,
+      "TP_std": 2.9287526607513428,
+      "FP_vs_TN_pval": 0.642312228679657,
+      "FN_vs_TP_pval": 0.004813839215785265
+    },
+    "d1_view_score_normal_z": {
+      "feature_id": 18,
+      "TN_mean": 0.1373293101787567,
+      "TN_std": 0.6643311381340027,
+      "FP_mean": 0.11863107979297638,
+      "FP_std": 0.6222197413444519,
+      "FN_mean": 0.10123558342456818,
+      "FN_std": 0.6496005058288574,
+      "TP_mean": 0.09974908083677292,
+      "TP_std": 0.5168704390525818,
+      "FP_vs_TN_pval": 0.7579312920570374,
+      "FN_vs_TP_pval": 0.45941248536109924
+    },
+    "d1_keypoint_confidence_mean": {
+      "feature_id": 19,
+      "TN_mean": 1.0,
+      "TN_std": 0.0,
+      "FP_mean": 1.0,
+      "FP_std": 0.0,
+      "FN_mean": 1.0,
+      "FN_std": 0.0,
+      "TP_mean": 1.0,
+      "TP_std": 0.0,
+      "FP_vs_TN_pval": NaN,
+      "FN_vs_TP_pval": NaN
+    },
+    "d1_lumbar_energy_ratio": {
+      "feature_id": 20,
+      "TN_mean": 0.5,
+      "TN_std": 0.0,
+      "FP_mean": 0.5,
+      "FP_std": 0.0,
+      "FN_mean": 0.5,
+      "FN_std": 0.0,
+      "TP_mean": 0.5,
+      "TP_std": 0.0,
+      "FP_vs_TN_pval": NaN,
+      "FN_vs_TP_pval": NaN
+    },
+    "d1_standing_symmetry_score": {
+      "feature_id": 21,
+      "TN_mean": 1.0,
+      "TN_std": 0.0,
+      "FP_mean": 1.0,
+      "FP_std": 0.0,
+      "FN_mean": 1.0,
+      "FN_std": 0.0,
+      "TP_mean": 1.0,
+      "TP_std": 0.0,
+      "FP_vs_TN_pval": NaN,
+      "FN_vs_TP_pval": NaN
+    },
+    "d1_lumbar_shear_stress_proxy": {
+      "feature_id": 22,
+      "TN_mean": 0.4435589611530304,
+      "TN_std": 0.09652115404605865,
+      "FP_mean": 0.4936189353466034,
+      "FP_std": 0.0797714814543724,
+      "FN_mean": 0.4510774314403534,
+      "FN_std": 0.09060626477003098,
+      "TP_mean": 0.5322609543800354,
+      "TP_std": 0.10283002257347107,
+      "FP_vs_TN_pval": 0.00075584149453789,
+      "FN_vs_TP_pval": 2.9171966161811724e-05
+    },
+    "d1_setup_lumbar_poly_a": {
+      "feature_id": 23,
+      "TN_mean": 0.09693443775177002,
+      "TN_std": 0.10250432789325714,
+      "FP_mean": 0.14774321019649506,
+      "FP_std": 0.07260170578956604,
+      "FN_mean": 0.1534462571144104,
+      "FN_std": 0.09047432243824005,
+      "TP_mean": 0.12008737027645111,
+      "TP_std": 0.08673445880413055,
+      "FP_vs_TN_pval": 0.0011576816905289888,
+      "FN_vs_TP_pval": 0.0486026406288147
+    },
+    "d1_floor_break_cobb_delta": {
+      "feature_id": 24,
+      "TN_mean": -4.086867809295654,
+      "TN_std": 12.988672256469727,
+      "FP_mean": -7.465089321136475,
+      "FP_std": 18.54718589782715,
+      "FN_mean": -8.691585540771484,
+      "FN_std": 17.470426559448242,
+      "TP_mean": 0.43863609433174133,
+      "TP_std": 22.602737426757812,
+      "FP_vs_TN_pval": 0.010340564884245396,
+      "FN_vs_TP_pval": 0.024611320346593857
+    },
+    "d1_knee_pass_lumbar_flexion": {
+      "feature_id": 25,
+      "TN_mean": 90.06848907470703,
+      "TN_std": 78.21112823486328,
+      "FP_mean": 154.4742431640625,
+      "FP_std": 27.938350677490234,
+      "FN_mean": 155.44891357421875,
+      "FN_std": 18.71520233154297,
+      "TP_mean": 153.30357360839844,
+      "TP_std": 24.85205078125,
+      "FP_vs_TN_pval": 9.783296945897746e-07,
+      "FN_vs_TP_pval": 0.85738605260849
+    },
+    "d1_lockout_hyperextension": {
+      "feature_id": 26,
+      "TN_mean": 0.03773902356624603,
+      "TN_std": 0.05579278990626335,
+      "FP_mean": 0.07939699292182922,
+      "FP_std": 0.06158885359764099,
+      "FN_mean": 0.06418027728796005,
+      "FN_std": 0.062313538044691086,
+      "TP_mean": 0.06416404247283936,
+      "TP_std": 0.06272638589143753,
+      "FP_vs_TN_pval": 1.61906484663632e-06,
+      "FN_vs_TP_pval": 0.9716749787330627
+    },
+    "d1_spine_femur_sync_ratio": {
+      "feature_id": 27,
+      "TN_mean": 267975.0,
+      "TN_std": 1192035.125,
+      "FP_mean": 205754.515625,
+      "FP_std": 873631.5625,
+      "FN_mean": 1.5438181161880493,
+      "FN_std": 2.212024688720703,
+      "TP_mean": 24528.5703125,
+      "TP_std": 163582.609375,
+      "FP_vs_TN_pval": 0.14026132225990295,
+      "FN_vs_TP_pval": 0.00023278377193491906
+    },
+    "d1_res_torso_pitch_deepest": {
+      "feature_id": 28,
+      "TN_mean": -0.017224183306097984,
+      "TN_std": 2.0921077728271484,
+      "FP_mean": 0.4577074348926544,
+      "FP_std": 2.171522378921509,
+      "FN_mean": 0.7330712080001831,
+      "FN_std": 1.5268981456756592,
+      "TP_mean": -0.4326511025428772,
+      "TP_std": 3.122993230819702,
+      "FP_vs_TN_pval": 0.7447559237480164,
+      "FN_vs_TP_pval": 0.00889170728623867
+    },
+    "d1_res_setup_lumbar_poly_a": {
+      "feature_id": 29,
+      "TN_mean": -0.00948471762239933,
+      "TN_std": 0.10307052731513977,
+      "FP_mean": 0.04196084290742874,
+      "FP_std": 0.08248840272426605,
+      "FN_mean": 0.04622137174010277,
+      "FN_std": 0.09329333901405334,
+      "TP_mean": 0.014831253327429295,
+      "TP_std": 0.08915829658508301,
+      "FP_vs_TN_pval": 0.0008908674935810268,
+      "FN_vs_TP_pval": 0.07965628802776337
+    },
+    "d1_ratio_arm_to_torso": {
+      "feature_id": 30,
+      "TN_mean": 1.0443753004074097,
+      "TN_std": 0.1254292130470276,
+      "FP_mean": 1.077271580696106,
+      "FP_std": 0.23044325411319733,
+      "FN_mean": 1.1086719036102295,
+      "FN_std": 0.19408881664276123,
+      "TP_mean": 1.081965684890747,
+      "TP_std": 0.23467841744422913,
+      "FP_vs_TN_pval": 0.9774903655052185,
+      "FN_vs_TP_pval": 0.48238372802734375
+    },
+    "d1_ratio_femur_to_tibia": {
+      "feature_id": 31,
+      "TN_mean": 0.9388639330863953,
+      "TN_std": 0.06027407571673393,
+      "FP_mean": 0.9612924456596375,
+      "FP_std": 0.13899460434913635,
+      "FN_mean": 0.9280509948730469,
+      "FN_std": 0.05893487483263016,
+      "TP_mean": 0.9622880816459656,
+      "TP_std": 0.10703061521053314,
+      "FP_vs_TN_pval": 0.4307788908481598,
+      "FN_vs_TP_pval": 0.013107705861330032
+    },
+    "d1_ratio_leg_to_torso": {
+      "feature_id": 32,
+      "TN_mean": 1.621137261390686,
+      "TN_std": 0.16881051659584045,
+      "FP_mean": 1.6769872903823853,
+      "FP_std": 0.4839470386505127,
+      "FN_mean": 1.666709542274475,
+      "FN_std": 0.1894073188304901,
+      "TP_mean": 1.6813044548034668,
+      "TP_std": 0.3479771614074707,
+      "FP_vs_TN_pval": 0.04176579788327217,
+      "FN_vs_TP_pval": 0.6659209132194519
+    },
+    "d1_ratio_arm_to_leg": {
+      "feature_id": 33,
+      "TN_mean": 0.6444593071937561,
+      "TN_std": 0.044413626194000244,
+      "FP_mean": 0.657694399356842,
+      "FP_std": 0.1150653138756752,
+      "FN_mean": 0.6624341607093811,
+      "FN_std": 0.05986262485384941,
+      "TP_mean": 0.6470503211021423,
+      "TP_std": 0.0891261026263237,
+      "FP_vs_TN_pval": 0.867274284362793,
+      "FN_vs_TP_pval": 0.0609247125685215
+    }
+  },
+  "top_fp_samples": [
+    {
+      "seq_idx": 114,
+      "seq_id": "[오류]_D03_피험자7_Key286_view5",
+      "subject": 7,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.9835880994796753,
+      "prob_lgb": 0.9805185794830322,
+      "prob_cat": 0.9556951522827148,
+      "prob_tcn": 0.9990692734718323,
+      "margin_from_th": 0.6335880756378174,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": false
+      }
+    },
+    {
+      "seq_idx": 249,
+      "seq_id": "[정상]_D03_피험자7_Key281_view5",
+      "subject": 7,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.9735448360443115,
+      "prob_lgb": 0.9683630466461182,
+      "prob_cat": 0.9358139634132385,
+      "prob_tcn": 0.9950011372566223,
+      "margin_from_th": 0.6235448122024536,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 9,
+      "seq_id": "[오류]_D03_피험자1_Key283_view5",
+      "subject": 1,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.849696159362793,
+      "prob_lgb": 0.8895631432533264,
+      "prob_cat": 0.7306504249572754,
+      "prob_tcn": 0.8892855048179626,
+      "margin_from_th": 0.49969616532325745,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 229,
+      "seq_id": "[정상]_D03_피험자1_Key281_view5",
+      "subject": 1,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.7919648289680481,
+      "prob_lgb": 0.8176258206367493,
+      "prob_cat": 0.8768677115440369,
+      "prob_tcn": 0.7366828918457031,
+      "margin_from_th": 0.4419648349285126,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 247,
+      "seq_id": "[정상]_D03_피험자7_Key281_view3",
+      "subject": 7,
+      "view_code": "view3",
+      "view_name": "시점 C (정면 0°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.7866394519805908,
+      "prob_lgb": 0.854232132434845,
+      "prob_cat": 0.8193881511688232,
+      "prob_tcn": 0.7364687323570251,
+      "margin_from_th": 0.4366394579410553,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 139,
+      "seq_id": "[오류]_D03_피험자8_Key286_view5",
+      "subject": 8,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.6763363480567932,
+      "prob_lgb": 0.48381444811820984,
+      "prob_cat": 0.4662662446498871,
+      "prob_tcn": 0.8776323199272156,
+      "margin_from_th": 0.3263363540172577,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": false
+      }
+    },
+    {
+      "seq_idx": 158,
+      "seq_id": "[오류]_D07_피험자3_Key283_view4",
+      "subject": 3,
+      "view_code": "view4",
+      "view_name": "시점 D (좌측 전방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.6532027721405029,
+      "prob_lgb": 0.4813481569290161,
+      "prob_cat": 0.46393653750419617,
+      "prob_tcn": 0.8337632417678833,
+      "margin_from_th": 0.3032027781009674,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 6,
+      "seq_id": "[오류]_D03_피험자1_Key283_view2",
+      "subject": 1,
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.6361323595046997,
+      "prob_lgb": 0.6848136186599731,
+      "prob_cat": 0.7109917402267456,
+      "prob_tcn": 0.5743620991706848,
+      "margin_from_th": 0.2861323654651642,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 86,
+      "seq_id": "[오류]_D03_피험자6_Key286_view2",
+      "subject": 6,
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.635996401309967,
+      "prob_lgb": 0.7730605006217957,
+      "prob_cat": 0.6897251009941101,
+      "prob_tcn": 0.5406000018119812,
+      "margin_from_th": 0.2859964072704315,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": false
+      }
+    },
+    {
+      "seq_idx": 156,
+      "seq_id": "[오류]_D07_피험자3_Key283_view2",
+      "subject": 3,
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "ground_truth": 0,
+      "prediction": 1,
+      "group": "FP",
+      "prob_ens": 0.6286991238594055,
+      "prob_lgb": 0.5552055239677429,
+      "prob_cat": 0.5162488222122192,
+      "prob_tcn": 0.7216711044311523,
+      "margin_from_th": 0.27869912981987,
+      "other_conditions": {
+        "척추의 중립": true,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    }
+  ],
+  "top_fn_samples": [
+    {
+      "seq_idx": 69,
+      "seq_id": "[오류]_D03_피험자5_Key287_view5",
+      "subject": 5,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.011271310970187187,
+      "prob_lgb": 0.010053117759525776,
+      "prob_cat": 0.021586528047919273,
+      "prob_tcn": 0.006722798105329275,
+      "margin_from_th": -0.3387286961078644,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 65,
+      "seq_id": "[오류]_D03_피험자5_Key287_view1",
+      "subject": 5,
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.013472502119839191,
+      "prob_lgb": 0.01881938986480236,
+      "prob_cat": 0.018177064135670662,
+      "prob_tcn": 0.008446777239441872,
+      "margin_from_th": -0.3365274965763092,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 54,
+      "seq_id": "[오류]_D03_피험자5_Key282_view5",
+      "subject": 5,
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.014946374110877514,
+      "prob_lgb": 0.019645189866423607,
+      "prob_cat": 0.02723935805261135,
+      "prob_tcn": 0.0064504737965762615,
+      "margin_from_th": -0.33505362272262573,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 67,
+      "seq_id": "[오류]_D03_피험자5_Key287_view3",
+      "subject": 5,
+      "view_code": "view3",
+      "view_name": "시점 C (정면 0°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.015015607699751854,
+      "prob_lgb": 0.02545316331088543,
+      "prob_cat": 0.027478426694869995,
+      "prob_tcn": 0.0035654199309647083,
+      "margin_from_th": -0.3349843919277191,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 66,
+      "seq_id": "[오류]_D03_피험자5_Key287_view2",
+      "subject": 5,
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.016712578013539314,
+      "prob_lgb": 0.03165654093027115,
+      "prob_cat": 0.028658689931035042,
+      "prob_tcn": 0.0032675410620868206,
+      "margin_from_th": -0.33328741788864136,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 72,
+      "seq_id": "[오류]_D03_피험자5_Key290_view3",
+      "subject": 5,
+      "view_code": "view3",
+      "view_name": "시점 C (정면 0°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.0220684465020895,
+      "prob_lgb": 0.030978072434663773,
+      "prob_cat": 0.04737459868192673,
+      "prob_tcn": 0.004960555117577314,
+      "margin_from_th": -0.32793155312538147,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": false
+      }
+    },
+    {
+      "seq_idx": 190,
+      "seq_id": "[오류]_D07_피험자4_Key287_view1",
+      "subject": 4,
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.02428748831152916,
+      "prob_lgb": 0.015393082983791828,
+      "prob_cat": 0.042092449963092804,
+      "prob_tcn": 0.01983221061527729,
+      "margin_from_th": -0.32571250200271606,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 50,
+      "seq_id": "[오류]_D03_피험자5_Key282_view1",
+      "subject": 5,
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.02453499659895897,
+      "prob_lgb": 0.02837434783577919,
+      "prob_cat": 0.04161287471652031,
+      "prob_tcn": 0.01407638005912304,
+      "margin_from_th": -0.32546499371528625,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    },
+    {
+      "seq_idx": 195,
+      "seq_id": "[오류]_D07_피험자4_Key290_view1",
+      "subject": 4,
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.024836819618940353,
+      "prob_lgb": 0.01610567979514599,
+      "prob_cat": 0.03796885162591934,
+      "prob_tcn": 0.022636372596025467,
+      "margin_from_th": -0.32516318559646606,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": true,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": false
+      }
+    },
+    {
+      "seq_idx": 68,
+      "seq_id": "[오류]_D03_피험자5_Key287_view4",
+      "subject": 5,
+      "view_code": "view4",
+      "view_name": "시점 D (좌측 전방 45°)",
+      "ground_truth": 1,
+      "prediction": 0,
+      "group": "FN",
+      "prob_ens": 0.026967130601406097,
+      "prob_lgb": 0.05377518758177757,
+      "prob_cat": 0.04774295911192894,
+      "prob_tcn": 0.003175186924636364,
+      "margin_from_th": -0.32303285598754883,
+      "other_conditions": {
+        "척추의 중립": false,
+        "발과 무릎의 방향 일치": false,
+        "바벨 궤적과 몸 밀착": true,
+        "무릎과 골반이 동시에 펴짐": true,
+        "발바닥 지면 고정": true
+      }
+    }
+  ]
+}

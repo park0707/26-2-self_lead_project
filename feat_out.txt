@@ -1,0 +1,50 @@
+Loading data...
+Extracting features...
+Found 1035/1035 npz files.
+
+[1] Correlation Check
+Correlated features to drop: 17
+  knee_rom_deg (correlates with ['knee_angle_bottom_deg'])
+  knee_delta_address_bottom (correlates with ['knee_angle_bottom_deg', 'knee_rom_deg'])
+  excess_flexion_max (correlates with ['knee_rom_deg', 'knee_delta_address_bottom'])
+  kadr_mean (correlates with ['kadr_max'])
+  femur_rom (correlates with ['knee_rom_deg'])
+  coronal_knee_wobble (correlates with ['norm_knee_disp_x'])
+  sagittal_proj_knee_rom (correlates with ['knee_angle_bottom_deg', 'knee_rom_deg', 'knee_delta_address_bottom', 'excess_flexion_max', 'femur_rom'])
+  sagittal_proj_knee_bottom (correlates with ['knee_angle_bottom_deg', 'knee_rom_deg', 'knee_delta_address_bottom', 'sagittal_proj_knee_rom'])
+  near_knee_rom (correlates with ['knee_angle_bottom_deg', 'knee_rom_deg', 'excess_flexion_max', 'sagittal_proj_knee_rom', 'sagittal_proj_knee_bottom'])
+  near_knee_bottom_angle (correlates with ['knee_angle_bottom_deg', 'knee_rom_deg', 'knee_delta_address_bottom', 'sagittal_proj_knee_rom', 'sagittal_proj_knee_bottom', 'near_knee_rom'])
+  nadir_knee_drop_window (correlates with ['knee_angle_bottom_deg', 'knee_delta_address_bottom', 'sagittal_proj_knee_bottom', 'near_knee_bottom_angle'])
+  shank_pitch_nadir (correlates with ['kadr_max', 'kadr_mean'])
+  shank_pitch_rom (correlates with ['shank_svii'])
+  knee_past_toe_encroachment_max (correlates with ['kadr_max'])
+  near_knee_hip_coupling (correlates with ['knee_hip_rom_ratio'])
+  eccentric_knee_vel_peak (correlates with ['knee_angle_bottom_deg', 'knee_rom_deg', 'knee_delta_address_bottom', 'sagittal_proj_knee_rom', 'sagittal_proj_knee_bottom', 'near_knee_bottom_angle', 'nadir_knee_drop_window'])
+  knee_hip_horizontal_rom (correlates with ['norm_knee_disp_x', 'coronal_knee_wobble'])
+
+[2] Feature Importance
+
+Top 10:
+  kadr_rom: 68.2
+  barbell_knee_clearance_nadir: 53.8
+  hip_knee_velocity_corr: 52.6
+  ankle_dorsiflexion_rom: 48.0
+  vcrp: 45.2
+  hyperextension_ratio: 43.6
+  barbell_to_pelvis_drop_ratio: 43.0
+  kawr_nadir: 43.0
+  knee_hip_rom_ratio: 42.8
+  knee_past_toe_encroachment_max: 42.0
+
+Zero Importance: 6
+  - sagittal_proj_knee_rom
+  - sagittal_proj_knee_bottom
+  - pelvis_drop_to_shift_ratio
+  - v_oh_1
+  - v_oh_3
+  - v_oh_5
+
+Low Importance: ['sagittal_proj_knee_rom', 'sagittal_proj_knee_bottom', 'pelvis_drop_to_shift_ratio']
+
+Optimized count: 26
+Optimized list: ['knee_angle_bottom_deg', 'knee_hip_rom_ratio', 'hip_knee_velocity_corr', 'mcrp', 'vcrp', 'knee_angular_accel_max', 'knee_accel_sign_changes', 'excess_flexion_integral', 'kadr_max', 'kadr_rom', 'shank_svii', 'norm_knee_disp_y', 'norm_knee_disp_x', 'pli', 'hyperextension_ratio', 'bilateral_knee_asym', 'barbell_knee_clearance_nadir', 'kawr_nadir', 'kawr_rom', 'ankle_dorsiflexion_bottom', 'ankle_dorsiflexion_rom', 'barbell_to_pelvis_drop_ratio', 'torso_pitch_bottom', 'view_code', 'v_oh_2', 'v_oh_4']

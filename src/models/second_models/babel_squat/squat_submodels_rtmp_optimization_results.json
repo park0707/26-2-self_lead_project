@@ -1,0 +1,940 @@
+{
+    "metadata": {
+        "project": "vidio-health-trainer",
+        "exercise": "바벨 스쿼트 (Barbell Squat)",
+        "total_sequences": 2605,
+        "subjects": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "views": [
+            "view1",
+            "view2",
+            "view3",
+            "view4",
+            "view5"
+        ],
+        "timestamp": "2026-10-09 12:10:43"
+    },
+    "submodels": {
+        "c1": {
+            "name": "척추의 중립 위반 (Spine Neutrality)",
+            "pre_optimization": {
+                "forced_f1": 76.3,
+                "forced_prec": 79.93,
+                "forced_rec": 72.99,
+                "forced_acc": 78.16,
+                "roc_auc": 85.47,
+                "coverage": 85.76,
+                "retake": 14.24,
+                "sel_f1": 80.16,
+                "sel_prec": 84.39,
+                "sel_rec": 76.32,
+                "sel_acc": 81.78,
+                "ece": 2.06,
+                "brier": 0.1532
+            },
+            "post_optimization": {
+                "forced_f1": 76.3,
+                "forced_prec": 79.93,
+                "forced_rec": 72.99,
+                "forced_acc": 78.16,
+                "roc_auc": 85.47,
+                "coverage": 82.73,
+                "retake": 17.27,
+                "sel_f1": 81.33,
+                "sel_prec": 85.1,
+                "sel_rec": 77.88,
+                "sel_acc": 82.6,
+                "ece": 1.62,
+                "brier": 0.153
+            },
+            "pre_views": {
+                "view1": {
+                    "forced_f1": 75.0,
+                    "forced_prec": 80.09,
+                    "forced_rec": 70.52,
+                    "forced_acc": 77.35,
+                    "roc_auc": 86.18,
+                    "coverage": 86.76,
+                    "retake": 13.24,
+                    "sel_f1": 79.7,
+                    "sel_prec": 85.64,
+                    "sel_rec": 74.54,
+                    "sel_acc": 81.86,
+                    "ece": 5.4,
+                    "brier": 0.151
+                },
+                "view2": {
+                    "forced_f1": 77.59,
+                    "forced_prec": 80.95,
+                    "forced_rec": 74.5,
+                    "forced_acc": 79.27,
+                    "roc_auc": 86.16,
+                    "coverage": 86.76,
+                    "retake": 13.24,
+                    "sel_f1": 80.95,
+                    "sel_prec": 85.86,
+                    "sel_rec": 76.58,
+                    "sel_acc": 82.3,
+                    "ece": 4.19,
+                    "brier": 0.1493
+                },
+                "view3": {
+                    "forced_f1": 75.41,
+                    "forced_prec": 77.64,
+                    "forced_rec": 73.31,
+                    "forced_acc": 76.97,
+                    "roc_auc": 83.68,
+                    "coverage": 83.3,
+                    "retake": 16.7,
+                    "sel_f1": 78.28,
+                    "sel_prec": 81.15,
+                    "sel_rec": 75.61,
+                    "sel_acc": 80.18,
+                    "ece": 4.36,
+                    "brier": 0.1633
+                },
+                "view4": {
+                    "forced_f1": 76.13,
+                    "forced_prec": 78.72,
+                    "forced_rec": 73.71,
+                    "forced_acc": 77.74,
+                    "roc_auc": 86.09,
+                    "coverage": 86.95,
+                    "retake": 13.05,
+                    "sel_f1": 80.0,
+                    "sel_prec": 83.33,
+                    "sel_rec": 76.92,
+                    "sel_acc": 81.24,
+                    "ece": 2.75,
+                    "brier": 0.1498
+                },
+                "view5": {
+                    "forced_f1": 77.38,
+                    "forced_prec": 82.43,
+                    "forced_rec": 72.91,
+                    "forced_acc": 79.46,
+                    "roc_auc": 85.17,
+                    "coverage": 85.03,
+                    "retake": 14.97,
+                    "sel_f1": 81.77,
+                    "sel_prec": 86.01,
+                    "sel_rec": 77.93,
+                    "sel_acc": 83.3,
+                    "ece": 4.23,
+                    "brier": 0.1525
+                }
+            },
+            "post_views": {
+                "view1": {
+                    "forced_f1": 75.0,
+                    "forced_prec": 80.09,
+                    "forced_rec": 70.52,
+                    "forced_acc": 77.35,
+                    "roc_auc": 86.18,
+                    "coverage": 82.15,
+                    "retake": 17.85,
+                    "sel_f1": 81.2,
+                    "sel_prec": 85.71,
+                    "sel_rec": 77.14,
+                    "sel_acc": 82.48,
+                    "ece": 5.28,
+                    "brier": 0.151
+                },
+                "view2": {
+                    "forced_f1": 77.59,
+                    "forced_prec": 80.95,
+                    "forced_rec": 74.5,
+                    "forced_acc": 79.27,
+                    "roc_auc": 86.16,
+                    "coverage": 86.76,
+                    "retake": 13.24,
+                    "sel_f1": 81.16,
+                    "sel_prec": 86.6,
+                    "sel_rec": 76.36,
+                    "sel_acc": 82.74,
+                    "ece": 3.95,
+                    "brier": 0.149
+                },
+                "view3": {
+                    "forced_f1": 75.41,
+                    "forced_prec": 77.64,
+                    "forced_rec": 73.31,
+                    "forced_acc": 76.97,
+                    "roc_auc": 83.68,
+                    "coverage": 80.23,
+                    "retake": 19.77,
+                    "sel_f1": 80.21,
+                    "sel_prec": 81.25,
+                    "sel_rec": 79.19,
+                    "sel_acc": 81.58,
+                    "ece": 4.35,
+                    "brier": 0.1633
+                },
+                "view4": {
+                    "forced_f1": 76.13,
+                    "forced_prec": 78.72,
+                    "forced_rec": 73.71,
+                    "forced_acc": 77.74,
+                    "roc_auc": 86.09,
+                    "coverage": 80.42,
+                    "retake": 19.58,
+                    "sel_f1": 81.91,
+                    "sel_prec": 85.79,
+                    "sel_rec": 78.37,
+                    "sel_acc": 82.82,
+                    "ece": 2.45,
+                    "brier": 0.1498
+                },
+                "view5": {
+                    "forced_f1": 77.38,
+                    "forced_prec": 82.43,
+                    "forced_rec": 72.91,
+                    "forced_acc": 79.46,
+                    "roc_auc": 85.17,
+                    "coverage": 84.07,
+                    "retake": 15.93,
+                    "sel_f1": 82.15,
+                    "sel_prec": 86.15,
+                    "sel_rec": 78.5,
+                    "sel_acc": 83.33,
+                    "ece": 3.66,
+                    "brier": 0.1519
+                }
+            },
+            "params": {
+                "global_temperature": 0.924,
+                "view_temperatures": {
+                    "view1": 0.929,
+                    "view2": 0.875,
+                    "view3": 0.975,
+                    "view4": 0.926,
+                    "view5": 0.918
+                },
+                "global_thresholds": {
+                    "forced_tau": 0.5,
+                    "tau_norm": 0.4,
+                    "tau_def": 0.6
+                },
+                "view_thresholds": {
+                    "view1": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.6
+                    },
+                    "view2": {
+                        "tau_norm": 0.4,
+                        "tau_def": 0.62
+                    },
+                    "view3": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.6
+                    },
+                    "view4": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    },
+                    "view5": {
+                        "tau_norm": 0.38,
+                        "tau_def": 0.6
+                    }
+                }
+            }
+        },
+        "c2": {
+            "name": "고개 정면 및 시선 (Head/Gaze Orientation)",
+            "pre_optimization": {
+                "forced_f1": 72.47,
+                "forced_prec": 70.59,
+                "forced_rec": 74.45,
+                "forced_acc": 70.25,
+                "roc_auc": 77.96,
+                "coverage": 73.9,
+                "retake": 26.1,
+                "sel_f1": 78.33,
+                "sel_prec": 76.06,
+                "sel_rec": 80.73,
+                "sel_acc": 75.79,
+                "ece": 1.5,
+                "brier": 0.19
+            },
+            "post_optimization": {
+                "forced_f1": 72.47,
+                "forced_prec": 70.59,
+                "forced_rec": 74.45,
+                "forced_acc": 70.25,
+                "roc_auc": 77.96,
+                "coverage": 69.56,
+                "retake": 30.44,
+                "sel_f1": 80.0,
+                "sel_prec": 76.99,
+                "sel_rec": 83.25,
+                "sel_acc": 77.1,
+                "ece": 2.16,
+                "brier": 0.1898
+            },
+            "pre_views": {
+                "view1": {
+                    "forced_f1": 68.16,
+                    "forced_prec": 60.68,
+                    "forced_rec": 77.74,
+                    "forced_acc": 61.8,
+                    "roc_auc": 64.65,
+                    "coverage": 59.31,
+                    "retake": 40.69,
+                    "sel_f1": 74.07,
+                    "sel_prec": 63.03,
+                    "sel_rec": 89.82,
+                    "sel_acc": 66.02,
+                    "ece": 1.38,
+                    "brier": 0.2285
+                },
+                "view2": {
+                    "forced_f1": 77.93,
+                    "forced_prec": 82.19,
+                    "forced_rec": 74.09,
+                    "forced_acc": 77.93,
+                    "roc_auc": 85.04,
+                    "coverage": 85.03,
+                    "retake": 14.97,
+                    "sel_f1": 81.42,
+                    "sel_prec": 85.19,
+                    "sel_rec": 77.97,
+                    "sel_acc": 81.04,
+                    "ece": 4.32,
+                    "brier": 0.1567
+                },
+                "view3": {
+                    "forced_f1": 74.35,
+                    "forced_prec": 75.76,
+                    "forced_rec": 72.99,
+                    "forced_acc": 73.51,
+                    "roc_auc": 80.22,
+                    "coverage": 87.14,
+                    "retake": 12.86,
+                    "sel_f1": 78.53,
+                    "sel_prec": 81.36,
+                    "sel_rec": 75.89,
+                    "sel_acc": 76.87,
+                    "ece": 5.42,
+                    "brier": 0.1793
+                },
+                "view4": {
+                    "forced_f1": 78.8,
+                    "forced_prec": 81.08,
+                    "forced_rec": 76.64,
+                    "forced_acc": 78.31,
+                    "roc_auc": 84.99,
+                    "coverage": 86.18,
+                    "retake": 13.82,
+                    "sel_f1": 81.88,
+                    "sel_prec": 84.21,
+                    "sel_rec": 79.67,
+                    "sel_acc": 81.07,
+                    "ece": 3.95,
+                    "brier": 0.1553
+                },
+                "view5": {
+                    "forced_f1": 64.88,
+                    "forced_prec": 59.88,
+                    "forced_rec": 70.8,
+                    "forced_acc": 59.69,
+                    "roc_auc": 63.1,
+                    "coverage": 51.82,
+                    "retake": 48.18,
+                    "sel_f1": 74.03,
+                    "sel_prec": 65.61,
+                    "sel_rec": 84.93,
+                    "sel_acc": 67.78,
+                    "ece": 3.21,
+                    "brier": 0.2304
+                }
+            },
+            "post_views": {
+                "view1": {
+                    "forced_f1": 68.16,
+                    "forced_prec": 60.68,
+                    "forced_rec": 77.74,
+                    "forced_acc": 61.8,
+                    "roc_auc": 64.65,
+                    "coverage": 56.43,
+                    "retake": 43.57,
+                    "sel_f1": 74.94,
+                    "sel_prec": 64.16,
+                    "sel_rec": 90.06,
+                    "sel_acc": 67.01,
+                    "ece": 2.15,
+                    "brier": 0.2284
+                },
+                "view2": {
+                    "forced_f1": 77.93,
+                    "forced_prec": 82.19,
+                    "forced_rec": 74.09,
+                    "forced_acc": 77.93,
+                    "roc_auc": 85.04,
+                    "coverage": 80.23,
+                    "retake": 19.77,
+                    "sel_f1": 83.41,
+                    "sel_prec": 84.93,
+                    "sel_rec": 81.94,
+                    "sel_acc": 82.3,
+                    "ece": 2.02,
+                    "brier": 0.1563
+                },
+                "view3": {
+                    "forced_f1": 74.35,
+                    "forced_prec": 75.76,
+                    "forced_rec": 72.99,
+                    "forced_acc": 73.51,
+                    "roc_auc": 80.22,
+                    "coverage": 80.42,
+                    "retake": 19.58,
+                    "sel_f1": 81.28,
+                    "sel_prec": 81.97,
+                    "sel_rec": 80.59,
+                    "sel_acc": 79.0,
+                    "ece": 5.52,
+                    "brier": 0.179
+                },
+                "view4": {
+                    "forced_f1": 78.8,
+                    "forced_prec": 81.08,
+                    "forced_rec": 76.64,
+                    "forced_acc": 78.31,
+                    "roc_auc": 84.99,
+                    "coverage": 80.04,
+                    "retake": 19.96,
+                    "sel_f1": 83.71,
+                    "sel_prec": 86.45,
+                    "sel_rec": 81.14,
+                    "sel_acc": 82.73,
+                    "ece": 4.2,
+                    "brier": 0.1551
+                },
+                "view5": {
+                    "forced_f1": 64.88,
+                    "forced_prec": 59.88,
+                    "forced_rec": 70.8,
+                    "forced_acc": 59.69,
+                    "roc_auc": 63.1,
+                    "coverage": 50.67,
+                    "retake": 49.33,
+                    "sel_f1": 74.55,
+                    "sel_prec": 66.13,
+                    "sel_rec": 85.42,
+                    "sel_acc": 68.18,
+                    "ece": 3.9,
+                    "brier": 0.2303
+                }
+            },
+            "params": {
+                "global_temperature": 0.99,
+                "view_temperatures": {
+                    "view1": 1.067,
+                    "view2": 0.894,
+                    "view3": 1.101,
+                    "view4": 0.943,
+                    "view5": 1.05
+                },
+                "global_thresholds": {
+                    "forced_tau": 0.5,
+                    "tau_norm": 0.35,
+                    "tau_def": 0.58
+                },
+                "view_thresholds": {
+                    "view1": {
+                        "tau_norm": 0.4,
+                        "tau_def": 0.6
+                    },
+                    "view2": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.6
+                    },
+                    "view3": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.6
+                    },
+                    "view4": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    },
+                    "view5": {
+                        "tau_norm": 0.4,
+                        "tau_def": 0.6
+                    }
+                }
+            }
+        },
+        "c3": {
+            "name": "발-무릎 방향 일치 (Knee Valgus)",
+            "pre_optimization": {
+                "forced_f1": 93.34,
+                "forced_prec": 95.96,
+                "forced_rec": 90.86,
+                "forced_acc": 93.63,
+                "roc_auc": 97.15,
+                "coverage": 97.16,
+                "retake": 2.84,
+                "sel_f1": 94.26,
+                "sel_prec": 96.69,
+                "sel_rec": 91.94,
+                "sel_acc": 94.51,
+                "ece": 1.79,
+                "brier": 0.0525
+            },
+            "post_optimization": {
+                "forced_f1": 93.34,
+                "forced_prec": 95.96,
+                "forced_rec": 90.86,
+                "forced_acc": 93.63,
+                "roc_auc": 97.15,
+                "coverage": 95.89,
+                "retake": 4.11,
+                "sel_f1": 94.82,
+                "sel_prec": 97.17,
+                "sel_rec": 92.57,
+                "sel_acc": 95.04,
+                "ece": 1.79,
+                "brier": 0.0526
+            },
+            "pre_views": {
+                "view1": {
+                    "forced_f1": 92.59,
+                    "forced_prec": 97.83,
+                    "forced_rec": 87.89,
+                    "forced_acc": 93.09,
+                    "roc_auc": 96.62,
+                    "coverage": 95.97,
+                    "retake": 4.03,
+                    "sel_f1": 93.74,
+                    "sel_prec": 98.64,
+                    "sel_rec": 89.3,
+                    "sel_acc": 94.2,
+                    "ece": 4.01,
+                    "brier": 0.0596
+                },
+                "view2": {
+                    "forced_f1": 93.47,
+                    "forced_prec": 94.78,
+                    "forced_rec": 92.19,
+                    "forced_acc": 93.67,
+                    "roc_auc": 97.64,
+                    "coverage": 97.31,
+                    "retake": 2.69,
+                    "sel_f1": 94.69,
+                    "sel_prec": 95.47,
+                    "sel_rec": 93.93,
+                    "sel_acc": 94.87,
+                    "ece": 2.22,
+                    "brier": 0.0473
+                },
+                "view3": {
+                    "forced_f1": 94.52,
+                    "forced_prec": 98.31,
+                    "forced_rec": 91.02,
+                    "forced_acc": 94.82,
+                    "roc_auc": 97.43,
+                    "coverage": 99.04,
+                    "retake": 0.96,
+                    "sel_f1": 94.87,
+                    "sel_prec": 98.3,
+                    "sel_rec": 91.67,
+                    "sel_acc": 95.16,
+                    "ece": 3.23,
+                    "brier": 0.0448
+                },
+                "view4": {
+                    "forced_f1": 93.31,
+                    "forced_prec": 94.05,
+                    "forced_rec": 92.58,
+                    "forced_acc": 93.47,
+                    "roc_auc": 97.23,
+                    "coverage": 96.55,
+                    "retake": 3.45,
+                    "sel_f1": 94.33,
+                    "sel_prec": 95.88,
+                    "sel_rec": 92.83,
+                    "sel_acc": 94.43,
+                    "ece": 3.58,
+                    "brier": 0.0553
+                },
+                "view5": {
+                    "forced_f1": 92.8,
+                    "forced_prec": 95.08,
+                    "forced_rec": 90.62,
+                    "forced_acc": 93.09,
+                    "roc_auc": 97.1,
+                    "coverage": 96.93,
+                    "retake": 3.07,
+                    "sel_f1": 93.63,
+                    "sel_prec": 95.4,
+                    "sel_rec": 91.94,
+                    "sel_acc": 93.86,
+                    "ece": 2.95,
+                    "brier": 0.0555
+                }
+            },
+            "post_views": {
+                "view1": {
+                    "forced_f1": 92.59,
+                    "forced_prec": 97.83,
+                    "forced_rec": 87.89,
+                    "forced_acc": 93.09,
+                    "roc_auc": 96.62,
+                    "coverage": 95.01,
+                    "retake": 4.99,
+                    "sel_f1": 94.14,
+                    "sel_prec": 98.64,
+                    "sel_rec": 90.04,
+                    "sel_acc": 94.55,
+                    "ece": 4.12,
+                    "brier": 0.0598
+                },
+                "view2": {
+                    "forced_f1": 93.47,
+                    "forced_prec": 94.78,
+                    "forced_rec": 92.19,
+                    "forced_acc": 93.67,
+                    "roc_auc": 97.64,
+                    "coverage": 96.16,
+                    "retake": 3.84,
+                    "sel_f1": 95.26,
+                    "sel_prec": 96.25,
+                    "sel_rec": 94.29,
+                    "sel_acc": 95.41,
+                    "ece": 2.06,
+                    "brier": 0.0472
+                },
+                "view3": {
+                    "forced_f1": 94.52,
+                    "forced_prec": 98.31,
+                    "forced_rec": 91.02,
+                    "forced_acc": 94.82,
+                    "roc_auc": 97.43,
+                    "coverage": 97.12,
+                    "retake": 2.88,
+                    "sel_f1": 95.82,
+                    "sel_prec": 99.13,
+                    "sel_rec": 92.71,
+                    "sel_acc": 96.05,
+                    "ece": 3.04,
+                    "brier": 0.045
+                },
+                "view4": {
+                    "forced_f1": 93.31,
+                    "forced_prec": 94.05,
+                    "forced_rec": 92.58,
+                    "forced_acc": 93.47,
+                    "roc_auc": 97.23,
+                    "coverage": 95.97,
+                    "retake": 4.03,
+                    "sel_f1": 94.52,
+                    "sel_prec": 95.88,
+                    "sel_rec": 93.2,
+                    "sel_acc": 94.6,
+                    "ece": 3.87,
+                    "brier": 0.0553
+                },
+                "view5": {
+                    "forced_f1": 92.8,
+                    "forced_prec": 95.08,
+                    "forced_rec": 90.62,
+                    "forced_acc": 93.09,
+                    "roc_auc": 97.1,
+                    "coverage": 95.2,
+                    "retake": 4.8,
+                    "sel_f1": 94.32,
+                    "sel_prec": 96.14,
+                    "sel_rec": 92.56,
+                    "sel_acc": 94.56,
+                    "ece": 2.7,
+                    "brier": 0.0554
+                }
+            },
+            "params": {
+                "global_temperature": 1.061,
+                "view_temperatures": {
+                    "view1": 1.037,
+                    "view2": 1.056,
+                    "view3": 1.18,
+                    "view4": 1.08,
+                    "view5": 0.963
+                },
+                "global_thresholds": {
+                    "forced_tau": 0.5,
+                    "tau_norm": 0.35,
+                    "tau_def": 0.65
+                },
+                "view_thresholds": {
+                    "view1": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.6
+                    },
+                    "view2": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    },
+                    "view3": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    },
+                    "view4": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.6
+                    },
+                    "view5": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    }
+                }
+            }
+        },
+        "c4": {
+            "name": "발바닥 지면 고정 (Foot Grounding)",
+            "pre_optimization": {
+                "forced_f1": 83.4,
+                "forced_prec": 84.93,
+                "forced_rec": 81.92,
+                "forced_acc": 83.72,
+                "roc_auc": 91.75,
+                "coverage": 91.32,
+                "retake": 8.68,
+                "sel_f1": 86.68,
+                "sel_prec": 88.06,
+                "sel_rec": 85.33,
+                "sel_acc": 86.84,
+                "ece": 2.14,
+                "brier": 0.1144
+            },
+            "post_optimization": {
+                "forced_f1": 83.4,
+                "forced_prec": 84.93,
+                "forced_rec": 81.92,
+                "forced_acc": 83.72,
+                "roc_auc": 91.75,
+                "coverage": 88.02,
+                "retake": 11.98,
+                "sel_f1": 88.12,
+                "sel_prec": 89.75,
+                "sel_rec": 86.56,
+                "sel_acc": 88.27,
+                "ece": 1.95,
+                "brier": 0.1141
+            },
+            "pre_views": {
+                "view1": {
+                    "forced_f1": 85.43,
+                    "forced_prec": 88.8,
+                    "forced_rec": 82.31,
+                    "forced_acc": 85.99,
+                    "roc_auc": 93.17,
+                    "coverage": 92.13,
+                    "retake": 7.87,
+                    "sel_f1": 88.74,
+                    "sel_prec": 91.11,
+                    "sel_rec": 86.5,
+                    "sel_acc": 89.17,
+                    "ece": 2.71,
+                    "brier": 0.0986
+                },
+                "view2": {
+                    "forced_f1": 86.37,
+                    "forced_prec": 86.21,
+                    "forced_rec": 86.54,
+                    "forced_acc": 86.37,
+                    "roc_auc": 93.98,
+                    "coverage": 93.28,
+                    "retake": 6.72,
+                    "sel_f1": 89.02,
+                    "sel_prec": 90.12,
+                    "sel_rec": 87.95,
+                    "sel_acc": 88.89,
+                    "ece": 3.98,
+                    "brier": 0.0975
+                },
+                "view3": {
+                    "forced_f1": 77.04,
+                    "forced_prec": 74.29,
+                    "forced_rec": 80.0,
+                    "forced_acc": 76.2,
+                    "roc_auc": 84.51,
+                    "coverage": 85.99,
+                    "retake": 14.01,
+                    "sel_f1": 81.76,
+                    "sel_prec": 78.0,
+                    "sel_rec": 85.9,
+                    "sel_acc": 80.58,
+                    "ece": 6.57,
+                    "brier": 0.1617
+                },
+                "view4": {
+                    "forced_f1": 85.96,
+                    "forced_prec": 96.19,
+                    "forced_rec": 77.69,
+                    "forced_acc": 87.33,
+                    "roc_auc": 93.7,
+                    "coverage": 94.24,
+                    "retake": 5.76,
+                    "sel_f1": 87.56,
+                    "sel_prec": 97.94,
+                    "sel_rec": 79.17,
+                    "sel_acc": 89.0,
+                    "ece": 6.84,
+                    "brier": 0.0991
+                },
+                "view5": {
+                    "forced_f1": 82.76,
+                    "forced_prec": 82.44,
+                    "forced_rec": 83.08,
+                    "forced_acc": 82.73,
+                    "roc_auc": 92.21,
+                    "coverage": 90.98,
+                    "retake": 9.02,
+                    "sel_f1": 86.36,
+                    "sel_prec": 85.66,
+                    "sel_rec": 87.08,
+                    "sel_acc": 86.08,
+                    "ece": 3.76,
+                    "brier": 0.115
+                }
+            },
+            "post_views": {
+                "view1": {
+                    "forced_f1": 85.43,
+                    "forced_prec": 88.8,
+                    "forced_rec": 82.31,
+                    "forced_acc": 85.99,
+                    "roc_auc": 93.17,
+                    "coverage": 89.06,
+                    "retake": 10.94,
+                    "sel_f1": 89.89,
+                    "sel_prec": 92.59,
+                    "sel_rec": 87.34,
+                    "sel_acc": 90.3,
+                    "ece": 3.15,
+                    "brier": 0.0983
+                },
+                "view2": {
+                    "forced_f1": 86.37,
+                    "forced_prec": 86.21,
+                    "forced_rec": 86.54,
+                    "forced_acc": 86.37,
+                    "roc_auc": 93.98,
+                    "coverage": 90.6,
+                    "retake": 9.4,
+                    "sel_f1": 90.61,
+                    "sel_prec": 91.56,
+                    "sel_rec": 89.67,
+                    "sel_acc": 90.47,
+                    "ece": 3.9,
+                    "brier": 0.0975
+                },
+                "view3": {
+                    "forced_f1": 77.04,
+                    "forced_prec": 74.29,
+                    "forced_rec": 80.0,
+                    "forced_acc": 76.2,
+                    "roc_auc": 84.51,
+                    "coverage": 80.81,
+                    "retake": 19.19,
+                    "sel_f1": 83.07,
+                    "sel_prec": 80.35,
+                    "sel_rec": 85.98,
+                    "sel_acc": 82.19,
+                    "ece": 4.14,
+                    "brier": 0.1606
+                },
+                "view4": {
+                    "forced_f1": 85.96,
+                    "forced_prec": 96.19,
+                    "forced_rec": 77.69,
+                    "forced_acc": 87.33,
+                    "roc_auc": 93.7,
+                    "coverage": 92.9,
+                    "retake": 7.1,
+                    "sel_f1": 88.48,
+                    "sel_prec": 97.96,
+                    "sel_rec": 80.67,
+                    "sel_acc": 89.67,
+                    "ece": 6.87,
+                    "brier": 0.0991
+                },
+                "view5": {
+                    "forced_f1": 82.76,
+                    "forced_prec": 82.44,
+                    "forced_rec": 83.08,
+                    "forced_acc": 82.73,
+                    "roc_auc": 92.21,
+                    "coverage": 86.76,
+                    "retake": 13.24,
+                    "sel_f1": 88.36,
+                    "sel_prec": 87.61,
+                    "sel_rec": 89.13,
+                    "sel_acc": 88.05,
+                    "ece": 3.68,
+                    "brier": 0.1149
+                }
+            },
+            "params": {
+                "global_temperature": 0.996,
+                "view_temperatures": {
+                    "view1": 0.906,
+                    "view2": 0.896,
+                    "view3": 1.204,
+                    "view4": 0.994,
+                    "view5": 1.01
+                },
+                "global_thresholds": {
+                    "forced_tau": 0.5,
+                    "tau_norm": 0.35,
+                    "tau_def": 0.65
+                },
+                "view_thresholds": {
+                    "view1": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    },
+                    "view2": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    },
+                    "view3": {
+                        "tau_norm": 0.4,
+                        "tau_def": 0.65
+                    },
+                    "view4": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.58
+                    },
+                    "view5": {
+                        "tau_norm": 0.35,
+                        "tau_def": 0.65
+                    }
+                }
+            }
+        }
+    },
+    "integrated": {
+        "pre_optimization": {
+            "emr": 43.61,
+            "clean_f1": 46.51,
+            "clean_precision": 48.78,
+            "clean_recall": 44.44,
+            "tau_clean": 0.5
+        },
+        "post_optimization": {
+            "emr": 43.61,
+            "clean_f1": 50.19,
+            "clean_precision": 52.42,
+            "clean_recall": 48.15,
+            "tau_clean": 0.3
+        }
+    }
+}

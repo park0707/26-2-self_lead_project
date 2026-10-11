@@ -1,0 +1,225 @@
+{
+  "model_name": "d5_model_v4_gated.py",
+  "feature_dim": 40,
+  "total_samples": 770,
+  "oof_metrics": {
+    "accuracy": 0.7909090909090909,
+    "precision": 0.8093922651933702,
+    "recall": 0.7610389610389611,
+    "f1_score": 0.784471218206158,
+    "f1_macro": 0.7907223682455758,
+    "roc_auc": 0.8788328554562321,
+    "confusion_matrix": [
+      [
+        316,
+        69
+      ],
+      [
+        92,
+        293
+      ]
+    ]
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_subjects": [
+        1
+      ],
+      "sample_count": 100,
+      "accuracy": 0.79,
+      "precision": 0.8918918918918919,
+      "recall": 0.66,
+      "f1_score": 0.7586206896551724,
+      "roc_auc": 0.858
+    },
+    {
+      "fold": 2,
+      "val_subjects": [
+        3,
+        6
+      ],
+      "sample_count": 170,
+      "accuracy": 0.7588235294117647,
+      "precision": 0.7340425531914894,
+      "recall": 0.8117647058823529,
+      "f1_score": 0.770949720670391,
+      "roc_auc": 0.8592387543252595
+    },
+    {
+      "fold": 3,
+      "val_subjects": [
+        2,
+        9
+      ],
+      "sample_count": 160,
+      "accuracy": 0.79375,
+      "precision": 0.8507462686567164,
+      "recall": 0.7125,
+      "f1_score": 0.7755102040816326,
+      "roc_auc": 0.886875
+    },
+    {
+      "fold": 4,
+      "val_subjects": [
+        4,
+        7
+      ],
+      "sample_count": 170,
+      "accuracy": 0.7764705882352941,
+      "precision": 0.7831325301204819,
+      "recall": 0.7647058823529411,
+      "f1_score": 0.7738095238095238,
+      "roc_auc": 0.8801384083044983
+    },
+    {
+      "fold": 5,
+      "val_subjects": [
+        5,
+        8
+      ],
+      "sample_count": 170,
+      "accuracy": 0.8352941176470589,
+      "precision": 0.8518518518518519,
+      "recall": 0.8117647058823529,
+      "f1_score": 0.8313253012048193,
+      "roc_auc": 0.9180622837370241
+    }
+  ],
+  "view_audit": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.7922077922077922,
+      "precision": 0.8169014084507042,
+      "recall": 0.7532467532467533,
+      "f1_score": 0.7837837837837838,
+      "f1_macro": 0.7918918918918919,
+      "roc_auc": 0.8755270703322651
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.8701298701298701,
+      "precision": 0.9014084507042254,
+      "recall": 0.8311688311688312,
+      "f1_score": 0.8648648648648649,
+      "f1_macro": 0.8699324324324325,
+      "roc_auc": 0.9252825096980942
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "sample_count": 154,
+      "accuracy": 0.5714285714285714,
+      "precision": 0.5901639344262295,
+      "recall": 0.4675324675324675,
+      "f1_score": 0.5217391304347826,
+      "f1_macro": 0.5667519181585678,
+      "roc_auc": 0.6323157362118401
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.961038961038961,
+      "precision": 0.9863013698630136,
+      "recall": 0.935064935064935,
+      "f1_score": 0.96,
+      "f1_macro": 0.9610126582278481,
+      "roc_auc": 0.9927475122280317
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.7597402597402597,
+      "precision": 0.7325581395348837,
+      "recall": 0.8181818181818182,
+      "f1_score": 0.7730061349693251,
+      "f1_macro": 0.7589168605881109,
+      "roc_auc": 0.8431438691178951
+    }
+  },
+  "pareto_results": [
+    {
+      "target_coverage": 0.9,
+      "actual_coverage": 0.8896103896103896,
+      "tau_norm": 0.42000000000000004,
+      "tau_def": 0.58,
+      "retained_count": 685,
+      "retake_count": 85,
+      "accuracy": 0.8175182481751825,
+      "precision": 0.8404907975460123,
+      "recall": 0.7896253602305475,
+      "f1_score": 0.8174622293377902
+    },
+    {
+      "target_coverage": 0.88,
+      "actual_coverage": 0.8675324675324676,
+      "tau_norm": 0.405,
+      "tau_def": 0.595,
+      "retained_count": 668,
+      "retake_count": 102,
+      "accuracy": 0.8323353293413174,
+      "precision": 0.8603174603174604,
+      "recall": 0.799410029498525,
+      "f1_score": 0.8322616517348687
+    },
+    {
+      "target_coverage": 0.85,
+      "actual_coverage": 0.8428571428571429,
+      "tau_norm": 0.385,
+      "tau_def": 0.615,
+      "retained_count": 649,
+      "retake_count": 121,
+      "accuracy": 0.8382126348228043,
+      "precision": 0.8754098360655738,
+      "recall": 0.7994011976047904,
+      "f1_score": 0.8381742147370821
+    },
+    {
+      "target_coverage": 0.8,
+      "actual_coverage": 0.7883116883116883,
+      "tau_norm": 0.35,
+      "tau_def": 0.65,
+      "retained_count": 607,
+      "retake_count": 163,
+      "accuracy": 0.8533772652388797,
+      "precision": 0.8881118881118881,
+      "recall": 0.8167202572347267,
+      "f1_score": 0.8533374598546487
+    },
+    {
+      "target_coverage": 0.75,
+      "actual_coverage": 0.7376623376623377,
+      "tau_norm": 0.31000000000000005,
+      "tau_def": 0.69,
+      "retained_count": 568,
+      "retake_count": 202,
+      "accuracy": 0.8661971830985915,
+      "precision": 0.8921933085501859,
+      "recall": 0.8362369337979094,
+      "f1_score": 0.8661374348796824
+    }
+  ],
+  "feature_importance_top20": {
+    "d5_coronal_overlap_deficit": 0.07101958990097046,
+    "d5_frontal_bar_knee_clearance_y": 0.06290864199399948,
+    "d5_bar_lateral_wobble_std": 0.061185065656900406,
+    "d5_bar_path_curvature": 0.042173322290182114,
+    "d5_bar_thigh_dist_mean": 0.042011700570583344,
+    "d5_bar_ascent_velocity_smoothness": 0.041203007102012634,
+    "d5_p2_thigh_drag_contact_rate": 0.038237519562244415,
+    "d5_bar_leg_contact_deficit_ratio": 0.03779054060578346,
+    "d5_gated_ke_width_ratio_nadir": 0.03339546546339989,
+    "d5_eccentric_bar_drift_max": 0.033238865435123444,
+    "d5_knee_pass_timing_norm": 0.03011813759803772,
+    "d5_gated_ke_dist_nadir": 0.027342190966010094,
+    "d5_gated_ke_signed_x_nadir": 0.025382252410054207,
+    "d5_gated_ke_dist_pull_mean": 0.025337815284729004,
+    "d5_hip_bar_moment_arm_at_knee": 0.024937186390161514,
+    "d5_gated_ke_z_diff_nadir": 0.024626603350043297,
+    "d5_bar_thigh_dist_max": 0.02392057329416275,
+    "d5_torso_arm_coupling_deficit": 0.023122962564229965,
+    "d5_sagittal_proj_drift": 0.02281593345105648,
+    "d5_bar_midfoot_init_offset": 0.02213508076965809
+  }
+}

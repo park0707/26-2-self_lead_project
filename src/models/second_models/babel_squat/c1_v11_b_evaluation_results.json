@@ -1,0 +1,103 @@
+{
+  "model_name": "c1_v11_b",
+  "experiment_code": "E1",
+  "description": "Pure 5-Fold OOF Dilated TCN (55%) + GBDT (45%) Fusion",
+  "gbdt_metrics": {
+    "f1": 80.52,
+    "prec": 81.88,
+    "rec": 79.2,
+    "acc": 81.54,
+    "auc": 88.13
+  },
+  "tcn_metrics": {
+    "f1": 82.04,
+    "prec": 79.13,
+    "rec": 85.18,
+    "acc": 82.03,
+    "auc": 89.97
+  },
+  "fusion_metrics": {
+    "f1": 84.24,
+    "prec": 84.81,
+    "rec": 83.67,
+    "acc": 84.91,
+    "auc": 91.59
+  },
+  "view_metrics": {
+    "view1": {
+      "view_name": "view1 (후방 180°)",
+      "count": 521,
+      "gbdt_f1": 76.11,
+      "tcn_f1": 82.51,
+      "fusion_f1": 83.27,
+      "fusion_auc": 90.7,
+      "fusion_acc": 84.26
+    },
+    "view2": {
+      "view_name": "view2 (우측 45°)",
+      "count": 521,
+      "gbdt_f1": 82.89,
+      "tcn_f1": 80.52,
+      "fusion_f1": 83.69,
+      "fusion_auc": 91.66,
+      "fusion_acc": 84.07
+    },
+    "view3": {
+      "view_name": "view3 (정면 0°)",
+      "count": 521,
+      "gbdt_f1": 82.57,
+      "tcn_f1": 81.19,
+      "fusion_f1": 83.4,
+      "fusion_auc": 92.02,
+      "fusion_acc": 84.64
+    },
+    "view4": {
+      "view_name": "view4 (좌측 45°)",
+      "count": 521,
+      "gbdt_f1": 81.4,
+      "tcn_f1": 81.13,
+      "fusion_f1": 83.37,
+      "fusion_auc": 91.16,
+      "fusion_acc": 83.69
+    },
+    "view5": {
+      "view_name": "view5 (우측 후방 45°)",
+      "count": 521,
+      "gbdt_f1": 79.67,
+      "tcn_f1": 84.85,
+      "fusion_f1": 87.43,
+      "fusion_auc": 92.81,
+      "fusion_acc": 87.91
+    }
+  },
+  "selective_metrics": {
+    "0.5_0.5": {
+      "desc": "Full Decision",
+      "coverage": 100.0,
+      "selective_f1": 84.24,
+      "selective_acc": 84.91,
+      "risk": 15.09
+    },
+    "0.4_0.6": {
+      "desc": "Balanced Abstention",
+      "coverage": 88.4,
+      "selective_f1": 88.07,
+      "selective_acc": 88.49,
+      "risk": 11.51
+    },
+    "0.35_0.65": {
+      "desc": "Standard Selective",
+      "coverage": 82.4,
+      "selective_f1": 89.24,
+      "selective_acc": 89.56,
+      "risk": 10.44
+    },
+    "0.3_0.7": {
+      "desc": "High Confidence",
+      "coverage": 76.2,
+      "selective_f1": 90.69,
+      "selective_acc": 90.88,
+      "risk": 9.12
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "exercise": "09_굿모닝",
+  "defect": "c1 (무릎 구부린 채 고정 위반 - D02)",
+  "dataset_type": "MediaPipe_Full33_64F 전수 100% 무수정 원천 데이터",
+  "total_sequences": 1020,
+  "two_state_metrics": {
+    "roc_auc": 0.9242829680891964,
+    "defect_f1": 0.846079380445305,
+    "clean_f1": 0.8421052631578947,
+    "macro_f1": 0.8440923218015999,
+    "accuracy": 0.8441176470588235,
+    "specificity": 0.8313725490196079
+  },
+  "three_state_metrics": {
+    "tau_lower": 0.37875375375375375,
+    "tau_upper": 0.6212462462462462,
+    "abstention_rate": 10.0,
+    "coverage_rate": 90.0,
+    "selective_defect_f1": 0.8781014023732471,
+    "selective_clean_f1": 0.8756875687568757,
+    "selective_macro_f1": 0.8768944855650613,
+    "selective_accuracy": 0.8769063180827886,
+    "selective_specificity": 0.8633405639913232
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "total_samples": 204,
+      "coverage": 90.19607843137256,
+      "defect_f1": 91.57894736842105,
+      "macro_f1": 91.29509166173861,
+      "accuracy": 91.30434782608695
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "total_samples": 204,
+      "coverage": 89.2156862745098,
+      "defect_f1": 91.11111111111111,
+      "macro_f1": 91.20772946859903,
+      "accuracy": 91.20879120879121
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "total_samples": 204,
+      "coverage": 86.27450980392157,
+      "defect_f1": 80.92485549132948,
+      "macro_f1": 81.24455065069267,
+      "accuracy": 81.25
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "total_samples": 204,
+      "coverage": 96.07843137254902,
+      "defect_f1": 90.0523560209424,
+      "macro_f1": 90.29980985126723,
+      "accuracy": 90.3061224489796
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "total_samples": 204,
+      "coverage": 88.23529411764706,
+      "defect_f1": 84.97409326424871,
+      "macro_f1": 83.80441190158542,
+      "accuracy": 83.88888888888889
+    }
+  }
+}

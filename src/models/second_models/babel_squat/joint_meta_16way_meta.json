@@ -1,0 +1,15 @@
+{
+    "version": "v8.1",
+    "in_features": 18,
+    "hidden_dim": 64,
+    "eta": 0.2,
+    "tau_clean": 0.4,
+    "oof_metrics": {
+        "clean_f1": 54.18326693227091,
+        "clean_precision": 58.620689655172406,
+        "clean_recall": 50.37037037037037,
+        "emr": 48.63723608445297,
+        "tp": 68,
+        "fp": 48
+    }
+}

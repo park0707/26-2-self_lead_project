@@ -69,6 +69,9 @@ class TemporalGRUMultiLabelClassifier:
     def __init__(self, num_labels: int = 4, conv_filters: int = 128, hidden_dim: int = 128, num_layers: int = 2, epochs: int = 15, batch_size: int = 32, lr: float = 0.001):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.num_labels = num_labels
+        self.conv_filters = conv_filters
+        self.hidden_dim = hidden_dim
+        self.num_layers = num_layers
         self.model = ConvBiGRUMultiHeadNet(input_dim=69, num_labels=num_labels, conv_filters=conv_filters, hidden_dim=hidden_dim, num_layers=num_layers).to(self.device)
         self.epochs = epochs
         self.batch_size = batch_size
@@ -76,6 +79,17 @@ class TemporalGRUMultiLabelClassifier:
         self.is_fitted = False
 
     def fit(self, X_train: np.ndarray, Y_train: np.ndarray) -> "TemporalGRUMultiLabelClassifier":
+        actual_num_labels = Y_train.shape[1] if Y_train.ndim > 1 else 1
+        if actual_num_labels != self.num_labels:
+            self.num_labels = actual_num_labels
+            self.model = ConvBiGRUMultiHeadNet(
+                input_dim=X_train.shape[2] if X_train.ndim > 2 else 69,
+                num_labels=actual_num_labels,
+                conv_filters=self.conv_filters,
+                hidden_dim=self.hidden_dim,
+                num_layers=self.num_layers
+            ).to(self.device)
+
         X_t = torch.tensor(X_train, dtype=torch.float32)
         Y_t = torch.tensor(Y_train, dtype=torch.float32)
         train_loader = DataLoader(TensorDataset(X_t, Y_t), batch_size=self.batch_size, shuffle=True)

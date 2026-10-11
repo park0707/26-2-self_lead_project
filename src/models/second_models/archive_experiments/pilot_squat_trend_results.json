@@ -1,0 +1,68 @@
+{
+  "res_orig_strict": {
+    "name": "기존 엄격 모드 (169D, th=0.225)",
+    "recall": 42.64,
+    "precision": 55.56,
+    "specificity": 97.62,
+    "balanced_acc": 70.13,
+    "f1_normal": 48.25,
+    "f1_macro": 72.54,
+    "tn": 1801,
+    "fp": 44,
+    "fn": 74,
+    "tp": 55
+  },
+  "res_trend_strict": {
+    "name": "신규 경향성 엄격 모드 (185D, th=0.225)",
+    "recall": 35.66,
+    "precision": 51.69,
+    "specificity": 97.67,
+    "balanced_acc": 66.66,
+    "f1_normal": 42.2,
+    "f1_macro": 69.41,
+    "tn": 1802,
+    "fp": 43,
+    "fn": 83,
+    "tp": 46
+  },
+  "res_trend_opt": {
+    "name": "신규 경향성 최적 모드 (185D, th=0.18)",
+    "recall": 44.19,
+    "precision": 48.31,
+    "specificity": 96.69,
+    "balanced_acc": 70.44,
+    "f1_normal": 46.15,
+    "f1_macro": 71.28,
+    "tn": 1784,
+    "fp": 61,
+    "fn": 72,
+    "tp": 57
+  },
+  "defect_accs_169": [
+    76.6,
+    55.93,
+    87.79,
+    71.94
+  ],
+  "defect_accs_185": [
+    76.04,
+    55.98,
+    85.92,
+    71.68
+  ],
+  "defect_f1s_169": [
+    75.16,
+    55.66,
+    87.69,
+    71.38
+  ],
+  "defect_f1s_185": [
+    74.53,
+    55.55,
+    86.0,
+    71.49
+  ],
+  "hamming_loss_169": 26.94,
+  "hamming_loss_185": 27.6,
+  "elapsed_seconds": 27.58
+}

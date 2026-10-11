@@ -1,0 +1,290 @@
+Total files: 1404, Total Keys: 32
+
+Key 145 (Count: 44, Error: False):
+  Description: '1앞다리 90도, 2무릎발방향일치, 3한쪽다리바르게 펴기, 4척추 중립, 5상체 중립'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 146 (Count: 44, Error: True):
+  Description: '정자세에서 앞다리 조금접고'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 147 (Count: 44, Error: True):
+  Description: '정자세에서 발방향 바깥쪽'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 148 (Count: 43, Error: True):
+  Description: '정자세에서 안굽히는 다리 구부정'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 149 (Count: 44, Error: True):
+  Description: '정자세에서 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 150 (Count: 44, Error: True):
+  Description: '정자세에서 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 151 (Count: 44, Error: True):
+  Description: '정자세에서 앞다리 조금접고 발방향 바깥쪽'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 152 (Count: 44, Error: True):
+  Description: '정자세에서 앞다리 조금접고 안굽히는 다리 구부정'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 153 (Count: 43, Error: True):
+  Description: '정자세에서 앞다리 조금접고 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 154 (Count: 43, Error: True):
+  Description: '정자세에서 앞다리 조금접고 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 155 (Count: 44, Error: True):
+  Description: '정자세에서 발방향 바깥쪽 안굽히는 다리 구부정'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 156 (Count: 44, Error: True):
+  Description: '정자세에서 발방향 바깥쪽 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 157 (Count: 44, Error: True):
+  Description: '정자세에서 발방향 바깥쪽 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 158 (Count: 44, Error: True):
+  Description: '정자세에서 안굽히는 다리 구부정 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 159 (Count: 44, Error: True):
+  Description: '정자세에서 안굽히는 다리 구부정 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 160 (Count: 44, Error: True):
+  Description: '정자세에서 몸통 옆으로 갸우뚱 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 161 (Count: 44, Error: True):
+  Description: '정자세에서 안굽히는 다리 구부정 몸통 옆으로 갸우뚱 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 162 (Count: 43, Error: True):
+  Description: '정자세에서 발방향 바깥쪽 몸통 옆으로 갸우뚱 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 163 (Count: 44, Error: True):
+  Description: '정자세에서 왼쪽보고 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 164 (Count: 44, Error: True):
+  Description: '정자세에서 오른쪽보고 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 165 (Count: 44, Error: True):
+  Description: '정자세에서 하늘보고 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 166 (Count: 44, Error: True):
+  Description: '정자세에서 바닥보고 몸통 상체 뒤로 젖힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Key 167 (Count: 44, Error: True):
+  Description: '정자세에서 왼쪽보고 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 168 (Count: 44, Error: True):
+  Description: '정자세에서 오른쪽보고 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 169 (Count: 44, Error: True):
+  Description: '정자세에서 하늘보고 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 170 (Count: 44, Error: True):
+  Description: '정자세에서 바닥보고 몸통 옆으로 갸우뚱'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 171 (Count: 44, Error: True):
+  Description: '정자세에서 왼쪽보고 앞다리 조금접힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 172 (Count: 44, Error: True):
+  Description: '정자세에서 왼쪽보고 안굽히는 다리 구부정'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 173 (Count: 44, Error: True):
+  Description: '정자세에서 바닥보고 앞다리 조금접힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 174 (Count: 44, Error: True):
+  Description: '정자세에서 바닥보고 안굽히는 다리 구부정'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 175 (Count: 44, Error: True):
+  Description: '정자세에서 하늘보고 앞다리 조금접힘'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Key 176 (Count: 44, Error: True):
+  Description: '정자세에서 하늘보고 안굽히는 다리 구부정'
+  Conditions in JSON:
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+

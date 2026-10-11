@@ -1,0 +1,37 @@
+{
+  "Model A": {
+    "accuracy": 87.27,
+    "macro_f1": 76.2,
+    "precision": 81.13,
+    "recall": 74.1,
+    "dim": 55
+  },
+  "Model B": {
+    "accuracy": 87.44,
+    "macro_f1": 76.36,
+    "precision": 81.77,
+    "recall": 74.22,
+    "dim": 55
+  },
+  "Model C": {
+    "accuracy": 87.09,
+    "macro_f1": 77.49,
+    "precision": 82.01,
+    "recall": 75.06,
+    "dim": 55
+  },
+  "Model D": {
+    "accuracy": 83.59,
+    "macro_f1": 69.13,
+    "precision": 75.2,
+    "recall": 67.38,
+    "dim": 55
+  },
+  "Model E": {
+    "accuracy": 88.14,
+    "macro_f1": 77.61,
+    "precision": 83.04,
+    "recall": 75.32,
+    "dim": 59
+  }
+}

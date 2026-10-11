@@ -1,0 +1,224 @@
+{
+  "version": "bl5_v3_final_10pct_rejection",
+  "created_at": "2026-10-03 16:48:21",
+  "feature_names": [
+    "lunge_vspa_torso_pitch_bottom",
+    "lunge_vspa_torso_pitch_peak",
+    "lunge_vspa_torso_pitch_min",
+    "lunge_farrokhi_flexion_excess",
+    "lunge_farrokhi_hyperext_excess",
+    "lunge_vspa_pitch_velocity_peak",
+    "lunge_ldc_phase_weighted_pitch",
+    "lunge_tibia_torso_parallelism",
+    "lunge_hip_knee_flexion_ratio",
+    "lunge_trunk_thigh_angle_min",
+    "lunge_hip_extension_deficit",
+    "lunge_pelvic_tilt_sagittal",
+    "lunge_trunk_knee_moment_arm",
+    "lunge_torso_foreshortening_ratio",
+    "lunge_calibrated_delta_z",
+    "lunge_virtual_sagittal_pitch_3d",
+    "lunge_coronal_tilt_rejection",
+    "lunge_frontal_compression_integral",
+    "lunge_cervico_thoracic_angle",
+    "lunge_head_torso_hyperext_sync",
+    "lunge_lockout_rebound_pitch",
+    "lunge_ascent_trunk_jerk",
+    "lunge_bottom_pitch_stability_std",
+    "lunge_descent_pitch_smoothness",
+    "lunge_delta_pitch_from_setup",
+    "lunge_setup_torso_zero_drift",
+    "lunge_relative_extension_ratio",
+    "lunge_baseline_subtracted_peak"
+  ],
+  "lgb_models": [
+    "LGBMClassifier(colsample_bytree=0.75, learning_rate=0.035, max_depth=5,\n               n_estimators=180, n_jobs=1, num_leaves=22, random_state=43,\n               reg_alpha=0.1, reg_lambda=1.0,\n               scale_pos_weight=1.7789203084832905, subsample=0.85, verbose=-1)",
+    "LGBMClassifier(colsample_bytree=0.75, learning_rate=0.035, max_depth=5,\n               n_estimators=180, n_jobs=1, num_leaves=22, random_state=44,\n               reg_alpha=0.1, reg_lambda=1.0,\n               scale_pos_weight=1.7789203084832905, subsample=0.85, verbose=-1)",
+    "LGBMClassifier(colsample_bytree=0.75, learning_rate=0.035, max_depth=5,\n               n_estimators=180, n_jobs=1, num_leaves=22, random_state=45,\n               reg_alpha=0.1, reg_lambda=1.0,\n               scale_pos_weight=1.7789203084832905, subsample=0.85, verbose=-1)",
+    "LGBMClassifier(colsample_bytree=0.75, learning_rate=0.035, max_depth=5,\n               n_estimators=180, n_jobs=1, num_leaves=22, random_state=46,\n               reg_alpha=0.1, reg_lambda=1.0,\n               scale_pos_weight=1.7789203084832905, subsample=0.85, verbose=-1)",
+    "LGBMClassifier(colsample_bytree=0.75, learning_rate=0.035, max_depth=5,\n               n_estimators=180, n_jobs=1, num_leaves=22, random_state=47,\n               reg_alpha=0.1, reg_lambda=1.0,\n               scale_pos_weight=1.7789203084832905, subsample=0.85, verbose=-1)"
+  ],
+  "cb_models": [
+    "CatBoostClassifier(depth=5, iterations=200, l2_leaf_reg=4.0, learning_rate=0.04, random_seed=43, scale_pos_weight=1.7789203084832905, thread_count=1, verbose=0)",
+    "CatBoostClassifier(depth=5, iterations=200, l2_leaf_reg=4.0, learning_rate=0.04, random_seed=44, scale_pos_weight=1.7789203084832905, thread_count=1, verbose=0)",
+    "CatBoostClassifier(depth=5, iterations=200, l2_leaf_reg=4.0, learning_rate=0.04, random_seed=45, scale_pos_weight=1.7789203084832905, thread_count=1, verbose=0)",
+    "CatBoostClassifier(depth=5, iterations=200, l2_leaf_reg=4.0, learning_rate=0.04, random_seed=46, scale_pos_weight=1.7789203084832905, thread_count=1, verbose=0)",
+    "CatBoostClassifier(depth=5, iterations=200, l2_leaf_reg=4.0, learning_rate=0.04, random_seed=47, scale_pos_weight=1.7789203084832905, thread_count=1, verbose=0)"
+  ],
+  "rf_models": [
+    "RandomForestClassifier(class_weight='balanced', max_depth=7,\n                       min_samples_split=4, n_estimators=180, n_jobs=1,\n                       random_state=43)",
+    "RandomForestClassifier(class_weight='balanced', max_depth=7,\n                       min_samples_split=4, n_estimators=180, n_jobs=1,\n                       random_state=44)",
+    "RandomForestClassifier(class_weight='balanced', max_depth=7,\n                       min_samples_split=4, n_estimators=180, n_jobs=1,\n                       random_state=45)",
+    "RandomForestClassifier(class_weight='balanced', max_depth=7,\n                       min_samples_split=4, n_estimators=180, n_jobs=1,\n                       random_state=46)",
+    "RandomForestClassifier(class_weight='balanced', max_depth=7,\n                       min_samples_split=4, n_estimators=180, n_jobs=1,\n                       random_state=47)"
+  ],
+  "et_models": [
+    "ExtraTreesClassifier(class_weight='balanced', max_depth=7, min_samples_split=4,\n                     n_estimators=180, n_jobs=1, random_state=43)",
+    "ExtraTreesClassifier(class_weight='balanced', max_depth=7, min_samples_split=4,\n                     n_estimators=180, n_jobs=1, random_state=44)",
+    "ExtraTreesClassifier(class_weight='balanced', max_depth=7, min_samples_split=4,\n                     n_estimators=180, n_jobs=1, random_state=45)",
+    "ExtraTreesClassifier(class_weight='balanced', max_depth=7, min_samples_split=4,\n                     n_estimators=180, n_jobs=1, random_state=46)",
+    "ExtraTreesClassifier(class_weight='balanced', max_depth=7, min_samples_split=4,\n                     n_estimators=180, n_jobs=1, random_state=47)"
+  ],
+  "ensemble_weights": {
+    "lgb": 0.35,
+    "cb": 0.35,
+    "rf": 0.15,
+    "et": 0.15
+  },
+  "best_3state": {
+    "f1": 0.7158469945355191,
+    "th_low": 0.382,
+    "th_high": 0.528,
+    "coverage": 0.9010175763182239,
+    "rejection_rate": 0.09898242368177612,
+    "precision": 0.6735218508997429,
+    "recall": 0.7638483965014577,
+    "accuracy": 0.7864476386036962,
+    "cm": [
+      [
+        504,
+        127
+      ],
+      [
+        81,
+        262
+      ]
+    ]
+  },
+  "full_metrics": {
+    "f1": 0.6817610062893081,
+    "precision": 0.6674876847290641,
+    "recall": 0.6966580976863753,
+    "accuracy": 0.7659574468085106,
+    "auc": 0.8242826574735873
+  },
+  "view_audit": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "total_samples": 221,
+      "defects": 82,
+      "full_coverage_f1": 0.6829268292682927,
+      "full_coverage_recall": 0.6829268292682927,
+      "full_coverage_precision": 0.6829268292682927,
+      "full_coverage_accuracy": 0.7647058823529411,
+      "three_state_f1": 0.7114093959731543,
+      "three_state_recall": 0.7361111111111112,
+      "three_state_precision": 0.6883116883116883,
+      "three_state_accuracy": 0.7828282828282829,
+      "coverage": 0.8959276018099548,
+      "rejection_rate": 0.10407239819004521
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "total_samples": 221,
+      "defects": 82,
+      "full_coverage_f1": 0.7636363636363637,
+      "full_coverage_recall": 0.7682926829268293,
+      "full_coverage_precision": 0.7590361445783133,
+      "full_coverage_accuracy": 0.8235294117647058,
+      "three_state_f1": 0.775,
+      "three_state_recall": 0.7848101265822784,
+      "three_state_precision": 0.7654320987654321,
+      "three_state_accuracy": 0.8269230769230769,
+      "coverage": 0.9411764705882353,
+      "rejection_rate": 0.05882352941176472
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "total_samples": 216,
+      "defects": 78,
+      "full_coverage_f1": 0.5379310344827586,
+      "full_coverage_recall": 0.5,
+      "full_coverage_precision": 0.582089552238806,
+      "full_coverage_accuracy": 0.6898148148148148,
+      "three_state_f1": 0.6031746031746031,
+      "three_state_recall": 0.6229508196721312,
+      "three_state_precision": 0.5846153846153846,
+      "three_state_accuracy": 0.7395833333333334,
+      "coverage": 0.8888888888888888,
+      "rejection_rate": 0.11111111111111116
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "total_samples": 212,
+      "defects": 74,
+      "full_coverage_f1": 0.7123287671232876,
+      "full_coverage_recall": 0.7027027027027027,
+      "full_coverage_precision": 0.7222222222222222,
+      "full_coverage_accuracy": 0.8018867924528302,
+      "three_state_f1": 0.7692307692307693,
+      "three_state_recall": 0.8064516129032258,
+      "three_state_precision": 0.7352941176470589,
+      "three_state_accuracy": 0.839572192513369,
+      "coverage": 0.8820754716981132,
+      "rejection_rate": 0.11792452830188682
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "total_samples": 211,
+      "defects": 73,
+      "full_coverage_f1": 0.6971428571428572,
+      "full_coverage_recall": 0.8356164383561644,
+      "full_coverage_precision": 0.5980392156862745,
+      "full_coverage_accuracy": 0.7488151658767772,
+      "three_state_f1": 0.7065868263473054,
+      "three_state_recall": 0.855072463768116,
+      "three_state_precision": 0.6020408163265306,
+      "three_state_accuracy": 0.7407407407407407,
+      "coverage": 0.8957345971563981,
+      "rejection_rate": 0.10426540284360186
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "feature": "lunge_vspa_torso_pitch_peak",
+      "importance": 184.0
+    },
+    {
+      "rank": 2,
+      "feature": "lunge_cervico_thoracic_angle",
+      "importance": 149.2
+    },
+    {
+      "rank": 3,
+      "feature": "lunge_coronal_tilt_rejection",
+      "importance": 144.2
+    },
+    {
+      "rank": 4,
+      "feature": "lunge_trunk_thigh_angle_min",
+      "importance": 140.8
+    },
+    {
+      "rank": 5,
+      "feature": "lunge_relative_extension_ratio",
+      "importance": 138.2
+    },
+    {
+      "rank": 6,
+      "feature": "lunge_vspa_pitch_velocity_peak",
+      "importance": 128.4
+    },
+    {
+      "rank": 7,
+      "feature": "lunge_ascent_trunk_jerk",
+      "importance": 124.2
+    },
+    {
+      "rank": 8,
+      "feature": "lunge_head_torso_hyperext_sync",
+      "importance": 122.0
+    },
+    {
+      "rank": 9,
+      "feature": "lunge_lockout_rebound_pitch",
+      "importance": 111.2
+    },
+    {
+      "rank": 10,
+      "feature": "lunge_baseline_subtracted_peak",
+      "importance": 102.4
+    }
+  ]
+}

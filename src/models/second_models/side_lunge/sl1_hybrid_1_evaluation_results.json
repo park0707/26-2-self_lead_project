@@ -1,0 +1,302 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "07_사이드_런지",
+  "model_name": "sl1_hybrid_1",
+  "defect_name": "앞다리 무릎 각도 90도 오류",
+  "champion_architecture": "Hybrid-110D (Full Complementary Concat)",
+  "total_sequences": 4130,
+  "subjects_count": 9,
+  "views_count": 5,
+  "baselines": {
+    "mediapipe_sl1_v11": {
+      "auc": 85.47,
+      "f1_2s": 65.78,
+      "f1_3s": 71.93,
+      "retake": 17.89
+    },
+    "rtmp_sl1_rtmp_1": {
+      "auc": 84.5,
+      "f1_2s": 63.82,
+      "f1_3s": 69.58,
+      "retake": 9.49
+    }
+  },
+  "experiments": {
+    "Hybrid-55D (RTMP 2D + MP 3D Replaced)": {
+      "auc": 85.61,
+      "f1_2s": 64.63,
+      "prec_2s": 69.26,
+      "rec_2s": 60.58,
+      "acc_2s": 83.46,
+      "f1_3s": 70.25,
+      "prec_3s": 70.41,
+      "rec_3s": 70.08,
+      "acc_3s": 86.33,
+      "retake_rate": 9.69,
+      "coverage": 90.31,
+      "opt_temperature": 1.0616,
+      "ece_pre": 1.7,
+      "ece_post": 1.99,
+      "brier_pre": 0.1186,
+      "brier_post": 0.1188,
+      "view_thresholds": {
+        "view5": {
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view2": {
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view3": {
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view4": {
+          "tau_clean": 0.318,
+          "tau_defect": 0.52
+        },
+        "view1": {
+          "tau_clean": 0.377,
+          "tau_defect": 0.549
+        }
+      },
+      "view_metrics": {
+        "view5": {
+          "alias": "시점 A: 우측 후방 (45도)",
+          "auc": 85.3,
+          "f1_2s": 62.47,
+          "f1_3s": 66.86,
+          "retake": 9.44,
+          "coverage": 90.56,
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view2": {
+          "alias": "시점 B: 우측 전방 (45도)",
+          "auc": 85.26,
+          "f1_2s": 64.12,
+          "f1_3s": 69.69,
+          "retake": 9.56,
+          "coverage": 90.44,
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view3": {
+          "alias": "시점 C: 정면 (0도)",
+          "auc": 85.96,
+          "f1_2s": 64.82,
+          "f1_3s": 71.47,
+          "retake": 9.93,
+          "coverage": 90.07,
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view4": {
+          "alias": "시점 D: 좌측 전방 (45도)",
+          "auc": 86.2,
+          "f1_2s": 69.02,
+          "f1_3s": 74.37,
+          "retake": 9.81,
+          "coverage": 90.19,
+          "tau_clean": 0.318,
+          "tau_defect": 0.52
+        },
+        "view1": {
+          "alias": "시점 E: 좌측 후방 (45도)",
+          "auc": 85.54,
+          "f1_2s": 62.43,
+          "f1_3s": 68.4,
+          "retake": 9.69,
+          "coverage": 90.31,
+          "tau_clean": 0.377,
+          "tau_defect": 0.549
+        }
+      }
+    },
+    "Hybrid-110D (Full Complementary Concat)": {
+      "auc": 86.83,
+      "f1_2s": 67.37,
+      "prec_2s": 73.15,
+      "rec_2s": 62.43,
+      "acc_2s": 84.92,
+      "f1_3s": 73.46,
+      "prec_3s": 76.14,
+      "rec_3s": 70.97,
+      "acc_3s": 88.11,
+      "retake_rate": 9.39,
+      "coverage": 90.61,
+      "opt_temperature": 1.0206,
+      "ece_pre": 1.56,
+      "ece_post": 1.5,
+      "brier_pre": 0.111,
+      "brier_post": 0.1111,
+      "view_thresholds": {
+        "view5": {
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view2": {
+          "tau_clean": 0.362,
+          "tau_defect": 0.579
+        },
+        "view3": {
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view4": {
+          "tau_clean": 0.347,
+          "tau_defect": 0.594
+        },
+        "view1": {
+          "tau_clean": 0.347,
+          "tau_defect": 0.52
+        }
+      },
+      "view_metrics": {
+        "view5": {
+          "alias": "시점 A: 우측 후방 (45도)",
+          "auc": 86.51,
+          "f1_2s": 65.46,
+          "f1_3s": 71.47,
+          "retake": 8.84,
+          "coverage": 91.16,
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view2": {
+          "alias": "시점 B: 우측 전방 (45도)",
+          "auc": 86.64,
+          "f1_2s": 67.2,
+          "f1_3s": 73.17,
+          "retake": 9.56,
+          "coverage": 90.44,
+          "tau_clean": 0.362,
+          "tau_defect": 0.579
+        },
+        "view3": {
+          "alias": "시점 C: 정면 (0도)",
+          "auc": 87.07,
+          "f1_2s": 67.19,
+          "f1_3s": 73.84,
+          "retake": 9.08,
+          "coverage": 90.92,
+          "tau_clean": 0.333,
+          "tau_defect": 0.52
+        },
+        "view4": {
+          "alias": "시점 D: 좌측 전방 (45도)",
+          "auc": 87.26,
+          "f1_2s": 71.1,
+          "f1_3s": 77.48,
+          "retake": 9.81,
+          "coverage": 90.19,
+          "tau_clean": 0.347,
+          "tau_defect": 0.594
+        },
+        "view1": {
+          "alias": "시점 E: 좌측 후방 (45도)",
+          "auc": 86.52,
+          "f1_2s": 65.76,
+          "f1_3s": 71.38,
+          "retake": 9.69,
+          "coverage": 90.31,
+          "tau_clean": 0.347,
+          "tau_defect": 0.52
+        }
+      }
+    }
+  },
+  "champion_metrics": {
+    "auc": 86.83,
+    "f1_2s": 67.37,
+    "prec_2s": 73.15,
+    "rec_2s": 62.43,
+    "acc_2s": 84.92,
+    "f1_3s": 73.46,
+    "prec_3s": 76.14,
+    "rec_3s": 70.97,
+    "acc_3s": 88.11,
+    "retake_rate": 9.39,
+    "coverage": 90.61,
+    "opt_temperature": 1.0206,
+    "ece_pre": 1.56,
+    "ece_post": 1.5,
+    "brier_pre": 0.111,
+    "brier_post": 0.1111,
+    "view_thresholds": {
+      "view5": {
+        "tau_clean": 0.333,
+        "tau_defect": 0.52
+      },
+      "view2": {
+        "tau_clean": 0.362,
+        "tau_defect": 0.579
+      },
+      "view3": {
+        "tau_clean": 0.333,
+        "tau_defect": 0.52
+      },
+      "view4": {
+        "tau_clean": 0.347,
+        "tau_defect": 0.594
+      },
+      "view1": {
+        "tau_clean": 0.347,
+        "tau_defect": 0.52
+      }
+    },
+    "view_metrics": {
+      "view5": {
+        "alias": "시점 A: 우측 후방 (45도)",
+        "auc": 86.51,
+        "f1_2s": 65.46,
+        "f1_3s": 71.47,
+        "retake": 8.84,
+        "coverage": 91.16,
+        "tau_clean": 0.333,
+        "tau_defect": 0.52
+      },
+      "view2": {
+        "alias": "시점 B: 우측 전방 (45도)",
+        "auc": 86.64,
+        "f1_2s": 67.2,
+        "f1_3s": 73.17,
+        "retake": 9.56,
+        "coverage": 90.44,
+        "tau_clean": 0.362,
+        "tau_defect": 0.579
+      },
+      "view3": {
+        "alias": "시점 C: 정면 (0도)",
+        "auc": 87.07,
+        "f1_2s": 67.19,
+        "f1_3s": 73.84,
+        "retake": 9.08,
+        "coverage": 90.92,
+        "tau_clean": 0.333,
+        "tau_defect": 0.52
+      },
+      "view4": {
+        "alias": "시점 D: 좌측 전방 (45도)",
+        "auc": 87.26,
+        "f1_2s": 71.1,
+        "f1_3s": 77.48,
+        "retake": 9.81,
+        "coverage": 90.19,
+        "tau_clean": 0.347,
+        "tau_defect": 0.594
+      },
+      "view1": {
+        "alias": "시점 E: 좌측 후방 (45도)",
+        "auc": 86.52,
+        "f1_2s": 65.76,
+        "f1_3s": 71.38,
+        "retake": 9.69,
+        "coverage": 90.31,
+        "tau_clean": 0.347,
+        "tau_defect": 0.52
+      }
+    }
+  }
+}

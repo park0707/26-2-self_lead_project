@@ -1,0 +1,243 @@
+{
+  "model_name": "sl2_v2",
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "condition": "c2 (몸통 발 무릎 방향 일치 여부 오류)",
+  "total_samples": 4130,
+  "total_defects": 770,
+  "total_clean": 3360,
+  "gbdt_2state_metrics": {
+    "lgb": {
+      "roc_auc": 0.6791728509585653,
+      "f1": 0.0,
+      "accuracy": 0.8135593220338984,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "cat": {
+      "roc_auc": 0.7179966759431046,
+      "f1": 0.4187533297815663,
+      "accuracy": 0.7358353510895884,
+      "precision": 0.35501355013550134,
+      "recall": 0.5103896103896104
+    },
+    "xgb": {
+      "roc_auc": 0.7309786641929499,
+      "f1": 0.4119743406985032,
+      "accuracy": 0.8002421307506054,
+      "precision": 0.4565560821484992,
+      "recall": 0.37532467532467534
+    },
+    "ens": {
+      "roc_auc": 0.7335080395794681,
+      "f1": 0.4119359534206696,
+      "accuracy": 0.8043583535108959,
+      "precision": 0.4685430463576159,
+      "recall": 0.36753246753246754
+    }
+  },
+  "ensemble_weights": {
+    "lgb": 0.08838945966324799,
+    "cat": 0.23909327761687652,
+    "xgb": 0.6725172627198754
+  },
+  "adaptive_3state_metrics": {
+    "uncertainty_rate": 0.09878934624697337,
+    "coverage": 0.9012106537530267,
+    "effective_f1": 0.46443514644351463,
+    "accuracy": 0.7936593229446535,
+    "precision": 0.4434087882822903,
+    "recall": 0.48755490483162517,
+    "confusion_matrix": [
+      [
+        2621,
+        418
+      ],
+      [
+        350,
+        333
+      ]
+    ],
+    "view_thresholds": {
+      "view1": {
+        "tau_clean": 0.365,
+        "tau_defect": 0.43000000000000005
+      },
+      "view2": {
+        "tau_clean": 0.335,
+        "tau_defect": 0.47500000000000003
+      },
+      "view3": {
+        "tau_clean": 0.385,
+        "tau_defect": 0.47000000000000003
+      },
+      "view4": {
+        "tau_clean": 0.4,
+        "tau_defect": 0.615
+      },
+      "view5": {
+        "tau_clean": 0.34,
+        "tau_defect": 0.405
+      }
+    },
+    "view_audits": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 826,
+        "tau_clean": 0.365,
+        "tau_defect": 0.43000000000000005,
+        "uncertainty_rate": 0.09927360774818401,
+        "effective_f1": 0.40924092409240925,
+        "accuracy": 0.7594086021505376,
+        "precision": 0.3875,
+        "recall": 0.43356643356643354,
+        "confusion_matrix": [
+          [
+            503,
+            98
+          ],
+          [
+            81,
+            62
+          ]
+        ]
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 826,
+        "tau_clean": 0.335,
+        "tau_defect": 0.47500000000000003,
+        "uncertainty_rate": 0.09927360774818401,
+        "effective_f1": 0.6013986013986014,
+        "accuracy": 0.8467741935483871,
+        "precision": 0.5620915032679739,
+        "recall": 0.6466165413533834,
+        "confusion_matrix": [
+          [
+            544,
+            67
+          ],
+          [
+            47,
+            86
+          ]
+        ]
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 826,
+        "tau_clean": 0.385,
+        "tau_defect": 0.47000000000000003,
+        "uncertainty_rate": 0.09806295399515738,
+        "effective_f1": 0.47318611987381703,
+        "accuracy": 0.7758389261744967,
+        "precision": 0.4076086956521739,
+        "recall": 0.5639097744360902,
+        "confusion_matrix": [
+          [
+            503,
+            109
+          ],
+          [
+            58,
+            75
+          ]
+        ]
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 826,
+        "tau_clean": 0.4,
+        "tau_defect": 0.615,
+        "uncertainty_rate": 0.09927360774818401,
+        "effective_f1": 0.5671641791044776,
+        "accuracy": 0.8830645161290323,
+        "precision": 0.7916666666666666,
+        "recall": 0.4418604651162791,
+        "confusion_matrix": [
+          [
+            600,
+            15
+          ],
+          [
+            72,
+            57
+          ]
+        ]
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 826,
+        "tau_clean": 0.34,
+        "tau_defect": 0.405,
+        "uncertainty_rate": 0.09806295399515738,
+        "effective_f1": 0.3241590214067278,
+        "accuracy": 0.7033557046979866,
+        "precision": 0.29120879120879123,
+        "recall": 0.36551724137931035,
+        "confusion_matrix": [
+          [
+            471,
+            129
+          ],
+          [
+            92,
+            53
+          ]
+        ]
+      }
+    }
+  },
+  "feature_importance_top10": [
+    {
+      "rank": 1,
+      "feature": "lead_foot_axis_stability",
+      "importance": 10.912931309605701
+    },
+    {
+      "rank": 2,
+      "feature": "lead_heel_toe_skew",
+      "importance": 9.477762766044506
+    },
+    {
+      "rank": 3,
+      "feature": "dkcd_medial_deviation_bottom",
+      "importance": 8.547452216613697
+    },
+    {
+      "rank": 4,
+      "feature": "lead_foot_inward_ratio",
+      "importance": 6.7757156754408925
+    },
+    {
+      "rank": 5,
+      "feature": "fppa_eccentric_to_bottom_delta",
+      "importance": 5.901093083303331
+    },
+    {
+      "rank": 6,
+      "feature": "lead_knee_ankle_alignment",
+      "importance": 5.778786349708455
+    },
+    {
+      "rank": 7,
+      "feature": "lead_knee_lateral_ratio",
+      "importance": 5.633244819235349
+    },
+    {
+      "rank": 8,
+      "feature": "pelvic_rotation_bottom",
+      "importance": 5.150078743774784
+    },
+    {
+      "rank": 9,
+      "feature": "knee_displacement_foot_heading_angle",
+      "importance": 4.932922448939317
+    },
+    {
+      "rank": 10,
+      "feature": "lead_knee_velocity_ml",
+      "importance": 4.915451654696643
+    }
+  ],
+  "elapsed_time_sec": 127.48791098594666
+}

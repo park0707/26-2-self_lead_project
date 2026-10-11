@@ -1,0 +1,283 @@
+D:\자주프 문서\3주차\스티프 데드 & 크로스 런지 성능 향상 시도 보고서.md:55: 1. **캘리브레이션 불일치(Train-Test Mismatch)**: 모델 학습 및 최적 임계값($\tau^*$) 튜닝 단계에서는 고정 가중치로 모의고사를 치렀는데, 실전 추론(`predict_proba`)에서만 가중치 비율을 흔들어버려 모델이 혼란에 빠짐. 스티프 
+D:\자주프 문서\4주차\ai 허브 문서에서 추출한 적용할 만한 기술들.md:60: - 98개 채널 중 관절 각속도 및 가속도 채널의 일부를 전후 프레임으로 시프팅하여, 파라미터 증가 없이 템포 불일치와 위상 지연을 포착.
+D:\자주프 문서\4주차\generate_aihub_tech_report.py:334: "별도의 파라미터 추가 없이도 '무릎이 발끝보다 먼저 나가는 위상 차이', '골반 상승 속도와 상체 기립 속도의 템포 불일치' 등 고난도 타이밍 결함을 획기적으로 잡아낼 수 있습니다."
+D:\자주프 문서\4주차\보고서\4주차 보고서.md:56: 단안 RGB 3D 모델의 도메인 전이력을 객관적으로 평가하기 위해 학술 공개 데이터셋 및 웹 비디오 데이터셋을 전수 조사하였다. 조사 대상은 UI-PRMD(미국 아이다호 주립대, Kinect v2), REHAB24-6(체코 마사리크대, OptiTrack 100Hz 모션
+D:\자주프 문서\4주차\보고서\4주차 보고서.md:65: | ALEX-GYM-1 | 알렉산드리아대 (2025) | 정면/측면 멀티뷰 | Squats, Deadlifts, Lunges | Deadlift가 외다리(Single-Leg) RDL로 구조적 불일치 | 탈락 (불일치) |
+D:\자주프 문서\4주차\보고서\4주차 보고서.md:394: • **3) 자립형 YouTube 무인 수집·정제 파이프라인 가동 및 데이터 엔진 구축**: 외부 데이터셋의 신청 지연과 라벨 불일치 문제를 종식시키기 위해, 4주차에 기획된 'YouTube Automated Harvester' 파이프라인을 5주차에 즉각 구현한다. y
+D:\자주프 문서\4주차\보고서\generate_week4_report.py:342: add_body_p("단안 RGB 3D 모델의 도메인 전이력을 객관적으로 평가하기 위해 학술 공개 데이터셋 및 웹 비디오 데이터셋을 전수 조사하였다. 조사 대상은 UI-PRMD(미국 아이다호 주립대, Kinect v2), REHAB24-6(체코 마사리크대, OptiTr
+D:\자주프 문서\4주차\보고서\generate_week4_report.py:350: ["ALEX-GYM-1", "알렉산드리아대 (2025)", "정면/측면 멀티뷰", "Squats, Deadlifts, Lunges", "Deadlift가 외다리(Single-Leg) RDL로 구조적 불일치", "탈락 (불일치)"],
+D:\자주프 문서\4주차\보고서\generate_week4_report.py:673: add_body_p("외부 데이터셋의 신청 지연과 라벨 불일치 문제를 종식시키기 위해, 4주차에 기획된 'YouTube Automated Harvester' 파이프라인을 5주차에 즉각 구현한다. yt-dlp 라이브러리를 활용하여 8대 전 종목에 대한 헬스장 바벨 운동 
+D:\자주프 문서\5주차\바벨_스쿼트_솔루션1_물리역학_척추모델_검증보고서.md:6: > * **신규 16D 척추 피처 개발**: (1) 척추 시상면 만곡 돌출도(Sagittal Deflection), (2) 흉요추 분절 불일치각, (3) 요추-골반 연동비(Lumbopelvic Rhythm), (4) 중력 모멘트 암, (5) 정면 뷰 시야각 극복 수직 
+D:\자주프 문서\5주차\바벨_스쿼트_솔루션1_물리역학_척추모델_검증보고서.md:20: 2. **흉요추 분절 불일치각 (Thoracolumbar Segment Discrepancy, 4D)**:
+D:\자주프 문서\5주차\바벨스쿼트_c2_v6_생체역학_체간로컬좌표계_및_NaN결측앙상블_구축보고서.md:39: | **[f7] c2_neck_ear_shoulder_roll_mismatch** | 좌우 귀선과 어깨선의 롤(Roll) 불일치 사잇각 (deg) | 전 시점 공통 (후방 100% 관측) |
+D:\자주프 문서\5주차\바벨스쿼트_c3_발무릎일치_v1_vs_v2_발관절피처_성능비교_보고서.md:32: | `c3_true_knee_toe_angle_max` | #18 | 스쿼트 전 구간에서 관측된 최대 무릎-발 불일치 사잇각 |
+D:\자주프 문서\5주차\바벨스쿼트_정상오류분류_통합모델_v1_vs_v2_성능비교보고서.md:34: | **c3** | 발과 무릎 방향 불일치 (Knee Valgus) | v3 (20D) 유지 | 90.92% | 90.92% | ― | 96.81% | 96.81% |
+D:\자주프 문서\5주차\바벨스쿼트_통합모델_v2_vs_v3_계층적투트랙_성능비교보고서.md:37: | **c3 발-무릎 불일치** | 90.92% | **91.14%** | 91.62% | 90.66% |
+D:\자주프 문서\5주차\바벨 스쿼트 오류 분류 모델\바벨스쿼트_c3_발무릎일치_v1_vs_v2_발관절피처_성능비교_보고서.md:32: | `c3_true_knee_toe_angle_max` | #18 | 스쿼트 전 구간에서 관측된 최대 무릎-발 불일치 사잇각 |
+D:\자주프 문서\5주차\바벨 스쿼트 오류 분류 모델\척추_중립_피처_정제_및_선행연구_기반_성능개선_보고서.md:37: | 12 | `c1_rmse_hysteresis_trunk` | 87 | ✅ 히스테리시스 편차: 하강-상승 체간각 궤적 불일치 |
+D:\자주프 문서\6주차\generate_deadlift_comprehensive_report.py:35: ("d2 (무릎과 발의 방향 불일치)", "10D FPPA(경골-대퇴골 투영 각도) 및 무릎 간 거리 정규화 피처 활용. 고관절 대비 무릎 너비 비율과 궤적을 추적하여 발끝 대비 무릎이 모이는(Knee Valgus) 현상을 감지."),
+D:\자주프 문서\6주차\generate_deadlift_comprehensive_report.py:106: * **d2 (무릎과 발의 방향 불일치)**: 10D FPPA(경골-대퇴골 투영 각도) 및 무릎 간 거리 정규화 피처 활용. 고관절 대비 무릎 너비 비율과 궤적을 추적하여 발끝 대비 무릎이 모이는(Knee Valgus) 현상을 감지.
+D:\자주프 문서\6주차\바벨_데드리프트_d2_무릎외반_v2.0_성능보고서.md:32: 1. **[동작 위상 불일치]**:
+D:\자주프 문서\6주차\바벨_데드리프트_d2_병목원인분석_및_피처검증_보고서.md:19: - 상위 7개 피처(골반 대비 무릎 비율, 외반 지속비, 결손 적분 등)는 $p < 0.01$로 극히 유의미하나, 스쿼트에서 계승된 발끝 정렬 오차($p=0.966$), 발끝 각도 불일치($p=0.908$) 등 16개 피처가 트리의 결정 경계면을 교란하고 있습니다.
+D:\자주프 문서\6주차\바벨_데드리프트_d2_병목원인분석_및_피처검증_보고서.md:75: | **20~30** | 발끝 정렬 오차, 발끝 각도 불일치 등 11개 | - | - | < 0.05 | 0.65~0.96 | 0.50~0.52 | **★ 완전한 노이즈 (ns)** |
+D:\자주프 문서\6주차\바벨_데드리프트_d2_피처_다이어트_및_v2.0_성능비교_보고서.md:38: | **제거 대상 1 (스쿼트 발끝 노이즈)** | 4개 | 발끝 정렬 오차 2개($p=0.966$), 발끝 진행각 불일치($p=0.908$), 수평 떨림<br>$\rightarrow$ 데드리프트는 바닥 지지 후 수직 리프팅이 핵심이므로 발끝 회전 각도는 교란만 유발 
+D:\자주프 문서\6주차\바벨_데드리프트_d3_외부AI_응답_종합비교_및_고도화_분석보고서.md:19: 2. **바닥 셋업 시작(56.9%) vs 기립 시작(43.1%)의 극단적인 위상(Phase) 불일치**로 인한 시계열 학습 혼동
+D:\자주프 문서\6주차\바벨_데드리프트_d3_외부AI_응답_종합비교_및_고도화_분석보고서.md:50: 2. **[Q2 위상 불일치] Upper-Body Nadir KAPW + Dual-Stream**:
+D:\자주프 문서\6주차\바벨_데드리프트_d4_외부AI_응답_종합비교_및_고도화_분석보고서.md:67: 모델 정보 엔트로피 + GBDT-TCN 스트림 불일치도 + 관절 품질(Visibility)을 결합한 통합 위험도(Risk Score) 상위 10% 샘플만 선별 보류.
+D:\자주프 문서\6주차\바벨_데드리프트_d4_피처최적화_경량화_보고서.md:68: 초기 토너먼트 탐색 시 결함 기준선이 과거 기준($\tau_{defect}=0.66$)에 고정되어 있어 재현율이 35.78%로 급락하는 '임계값 불일치'가 있었습니다.
+D:\자주프 문서\6주차\바벨_데드리프트_실서비스_배포_장애요소_전수조사_보고서.md:26: | **Risk-6** | **3-State 보류율(RETAKE) 폭증 및<br/>통합 vs 세부 진단 결과 불일치** | $v7.1$ 및 전 모델 | **HIGH<br/>(UX 붕괴)** | 실환경 노이즈로 보류율이 20~30%로 치솟아 유저 이탈, 세부 모델과 통합
+D:\자주프 문서\6주차\바벨_데드리프트_실서비스_배포_장애요소_전수조사_보고서.md:72: - **정형 45도 뷰와의 불일치**: AI-Hub는 정밀하게 세팅된 삼각대에서 정확히 0도, 45도, 후방 45도로 고정되어 촬영되었습니다. 그러나 실제 헬스장이나 집에서는 폰을 바닥에 비스듬히 세워두거나(극단적 로우 앵글), 20도나 70도처럼 애매한 각도에서 촬영
+D:\자주프 문서\6주차\바벨_데드리프트_실서비스_배포_장애요소_전수조사_보고서.md:90: ### 5.2 시퀀스 레벨(통합 엔진)과 결함 레벨(세부 모델) 간의 판정 불일치 충돌
+D:\자주프 문서\6주차\바벨_데드리프트_실서비스_배포_장애요소_전수조사_보고서.md:111: ### 7.1 분할기(`rep_segmenter.py`)와 모델 간 관절 규격(15 vs 33) 불일치 및 템포 왜곡
+D:\자주프 문서\6주차\바벨_데드리프트_실서비스_배포_장애요소_전수조사_보고서.md:112: - **관절 규격 불일치**: `rep_segmenter.py`는 과거 2D 15관절(`Joint15`) 기준으로 에너지를 산출하여 분할합니다. 반면 최신 모델들은 MediaPipe 33개 관절 3D를 요구합니다. 이로 인해 연속 영상 입력 시 분할기에서 프레임 인덱스
+D:\자주프 문서\6주차\바벨_데드리프트_최신_모델_완결_및_통합진단엔진_종합보고서.md:24: | **d2** | 무릎-발 방향 불일치 (동적 무릎 외반) | `v6.0 Two-Tier 3-State` | 10D 관상면 피처 | **60.81%** (+12.81%p 상승) | **시점 C (정면) ★ 88.89%** |
+D:\자주프 문서\6주차\바벨_데드리프트_확신성기반_상위메타신경망_구축기획서.md:56: | **G3. 스트림 충돌도** | 5D | $d_k = \|p_{s1, k} - p_{s2, k}\|$ | 정적 통계와 시계열 동역학 간의 의견 불일치도 |
+D:\자주프 문서\6주차\바벨_데드리프트_확신성기반_상위메타신경망_구축기획서.md:153: | **$d_4$** | 무릎-골반 동시 신전 불일치 | *"동작 템포가 불규칙하여 리듬 측정이 모호합니다. 일정한 속도(하강 2초, 상승 1초)로 1회 다시 수행해 주세요."* | 일정한 템포 유지 |
+D:\자주프 문서\6주차\바벨_런지_bl1_v3_vs_v4_오분류분석_고도화_비교보고서.md:14: 1. **오분류 전수 감사 완료**: v3 확정 판정 중 139건(14.3%) 오분류 전수 분석 -> 키포인트 가림/요동(68.3%), 대퇴골-무릎 불일치(52.5%), 정면 깊이 왜곡(38.8%) 및 피험자2 오분류 집중(33.1%) 규명.
+D:\자주프 문서\6주차\바벨_런지_bl1_v3_vs_v4_오분류분석_고도화_비교보고서.md:27: | **대퇴골 수평도와 무릎 각도 간 불일치** | 73건 (52.5%) | 대퇴골은 수평(사잇각 < 15도)인데 무릎 각도는 결함으로 찍히거나 그 반대인 불일치 |
+D:\자주프 문서\6주차\보고서\26-2학기_자기주도프로젝트_6주차_보고서_박현준.md:87: | 바벨 데드리프트 | d2 | 무릎-발 방향 불일치 | d2_v7.0 | 10D GBDT | 385건 | 47.27%* | 75.35% | 8.31% |
+D:\자주프 문서\6주차\보고서\generate_week6_report.py:386: "d2 (무릎과 발의 방향 불일치): 대퇴골과 경골의 관상면 투영 각도(FPPA) 및 고관절-무릎-발목 기계축 대비 무릎 중심점의 내측 편위량을 추적하여 "
+D:\자주프 문서\6주차\보고서\generate_week6_report.py:530: ("바벨 데드리프트", "d2", "무릎-발 방향 불일치", "d2_v7.0", "10D GBDT", "385건", "47.27%*", "75.35%", "8.31%"),
+D:\자주프 문서\6주차\보고서\바벨_데드리프트_d1_d5_종합_성능평가보고서.md:5: * **d2 (무릎과 발의 방향 불일치)**: 10D FPPA(경골-대퇴골 투영 각도) 및 무릎 간 거리 정규화 피처 활용. 고관절 대비 무릎 너비 비율과 궤적을 추적하여 발끝 대비 무릎이 모이는(Knee Valgus) 현상을 감지.
+D:\자주프 문서\7주차\바벨_스티프_데드리프트_정상오류분류_통합모델_구축기획서.md:131: | I-3 | 서브모델별 샘플/폴드 불일치(sd1=684, sd2·sd3=1,035) | 공통 폴드 정의 후 3모델 OOF 재생성(5장) |
+D:\자주프 문서\7주차\바벨런지_bl2_v5_vs_v6_SOTA_공식_성능보고서.md:20: - 수직 낙하 성분을 제거하고 바닥 수평면 상으로 정사영하여 순수 무릎 굽힘 전진축과 발끝 지향축의 불일치 각도(`knee_displacement_foot_heading_angle`)를 산출.
+D:\src\make_lunge_comprehensive_report.py:304: "이로 인해 방향 불일치라는 핵심 결함의 기하학적 신호 대 잡음비(SNR)가 극도로 저하되는 물리적 한계가 존재합니다.")
+D:\src\make_lunge_comprehensive_report.py:324: "이로 인해 5도~10도 안팎의 경미한 외반에 대해 피험자별·촬영 세션별로 정답 라벨이 정상과 결함으로 불일치하게 매겨진 샘플이 다수 존재합니다. "
+D:\src\features\test_lunge_c1_features.py:56: assert len(feats) == 32, f"피처 개수 불일치: {len(feats)} != 32"
+D:\src\features\test_lunge_c1_features.py:65: assert vec.shape == (32,), f"벡터 shape 불일치: {vec.shape}"
+D:\src\features\test_lunge_c1_features_v3.py:37: assert len(feat_dict) == 26, f"추출 딕셔너리 크기 불일치: {len(feat_dict)}"
+D:\src\features\test_lunge_c1_features_v3.py:38: assert feat_vec.shape == (26,), f"추출 벡터 차원 불일치: {feat_vec.shape}"
+D:\src\features\test_lunge_c1_features_v4.py:37: assert len(feat_dict) == 32, f"추출 딕셔너리 크기 불일치: {len(feat_dict)}"
+D:\src\features\test_lunge_c1_features_v4.py:38: assert feat_vec.shape == (32,), f"추출 벡터 차원 불일치: {feat_vec.shape}"
+D:\src\features\test_lunge_c4_features_v3.py:22: assert len(LUNGE_C4_FEATURE_NAMES_V3) == 24, f"피처 명칭 수 불일치: {len(LUNGE_C4_FEATURE_NAMES_V3)}"
+D:\src\features\test_lunge_c4_features_v4.py:27: assert len(LUNGE_C4_FEATURE_NAMES_V4) == 30, f"피처 명칭 수 불일치: {len(LUNGE_C4_FEATURE_NAMES_V4)}"
+D:\src\features\test_lunge_c5_features.py:56: assert len(feats) == 32, f"피처 개수 불일치: {len(feats)} != 32"
+D:\src\features\test_lunge_c5_features.py:65: assert vec.shape == (32,), f"벡터 shape 불일치: {vec.shape}"
+D:\src\models\second_models\archive_experiments\tsm_1d_features.py:6: - 하강-상승 전환기(최하사점)에서의 템포 불일치 및 체간-무릎 위상차 특화 16D 피처 생성
+D:\src\models\second_models\babel_deadlift\build_and_eval_d2_v4_phase_fppa.py:141: # 발끝 벡터(Toe - Ankle) 대비 정강이 횡방향 기울기의 불일치
+D:\src\models\second_models\babel_deadlift\copy_d2_images_to_temp.py:44: "label": "결함 (1, 발과 무릎의 방향 불일치 / 무릎 외반)",
+D:\src\models\second_models\babel_deadlift\copy_d2_images_to_temp.py:52: "label": "결함 (1, 발과 무릎의 방향 불일치 / 무릎 외반)",
+D:\src\models\second_models\babel_deadlift\d2_model_v1.py:66: "d2_foot_progression_mismatch",       # [19] 발끝 진행각과 무릎 진행각 간의 불일치각 (deg)
+D:\src\models\second_models\babel_deadlift\d2_model_v1.py:377: # 모델 간 불일치도
+D:\src\models\second_models\babel_deadlift\d2_model_v2.py:382: state_str = "무릎 외반/방향 불일치 결함"
+D:\src\models\second_models\babel_deadlift\d2_model_v5_2_pruned.py:212: - State 1: DEFECT (결함 확정 - 무릎 외반 / 발-무릎 방향 불일치)
+D:\src\models\second_models\babel_deadlift\d2_model_v5_final.py:233: - State 1: DEFECT (결함 확정 - 무릎 외반 / 발-무릎 방향 불일치)
+D:\src\models\second_models\babel_deadlift\d2_model_v6_twotier.py:140: - State 1: DEFECT (결함 확정 - 무릎 외반 / 발-무릎 방향 불일치)
+D:\src\models\second_models\babel_deadlift\d3_model_v5_3.py:9: - [Q2] 시작 위상 불일치 해결: Kinematic Anchor Phase Warping (KAPW) 손목 Nadir 32프레임 정합
+D:\src\models\second_models\babel_deadlift\d4_velocity_timing_extractor.py:36: 'd4_phase_plane_mismatch',          # [3] 위상평면 동시신전 궤적 불일치도
+D:\src\models\second_models\babel_deadlift\d4_velocity_timing_extractor.py:139: # [Feature 4] 위상평면 동시신전 대각선 궤적 불일치도 (Phase Mismatch)
+D:\src\models\second_models\babel_deadlift\diagnose_d1_v3_errors.py:205: print(f"    - d2(발과 무릎 방향 불일치): {fp_defect_counts['d2_knee_foot']}건 동시 발생")
+D:\src\models\second_models\babel_deadlift\eval_deadlift_clean_classification_benchmark.py:57: "d4 (무릎-골반 동시 신전 불일치)",
+D:\src\models\second_models\babel_deadlift\fulfill_user_request.py:259: "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+D:\src\models\second_models\babel_deadlift\generate_d1_misclass_analysis_docx.py:296: h2_3 = doc.add_heading("원인 3. 정상 리프팅의 자연 만곡(Thoracic Kyphosis)과 주관적 라벨 불일치 (FP의 40.4%)", level=2)
+D:\src\models\second_models\babel_deadlift\generate_d1_misclass_analysis_docx.py:306: "미세한 굴곡(poly_a_rom > 0.24)까지 엄격하게 포착하여 결함으로 판정함으로써 불일치가 발생했습니다."
+D:\src\models\second_models\babel_deadlift\generate_d2_bottleneck_report.py:128: "3. [근본 원인 2: 30개 피처 중 16개(53%)가 무의미한 노이즈]: 상위 7개 피처(골반 대비 무릎 비율, 외반 지속비 등)는 p<0.01로 극히 유의미하나, 스쿼트에서 계승된 발끝 정렬 오차(p=0.966), 발끝 각도 불일치(p=0.908) 등 16개 피
+D:\src\models\second_models\babel_deadlift\generate_d2_bottleneck_report.py:186: ["20~30", "발끝 정렬 오차, 발끝 각도 불일치 등 11개", "-", "-", "< 0.05", "0.65~0.96", "0.50~0.52", "★ 완전한 노이즈 (ns)"]
+D:\src\models\second_models\babel_deadlift\generate_d2_bottleneck_report.py:195: "1. [연쇄 결함에 따른 라벨 불일치]: 척추 결함(Key282, Key290) 시 연기자가 무릎까지 함께 모으는 연쇄 동작을 수행하여 모델의 정상적인 결함 탐지가 FP로 오판 집계됨.\n"
+D:\src\models\second_models\babel_deadlift\generate_d2_v2_diet_report.py:147: ["제거 대상 1 (스쿼트 발끝 노이즈)", "4개", "발끝 정렬 오차 2개(p=0.966), 발끝 진행각 불일치(p=0.908), 수평 떨림\n-> 데드리프트는 바닥 지지 후 수직 리프팅이 핵심이므로 발끝 회전 각도는 교란만 유발", "노이즈 원천 차단"],
+D:\src\models\second_models\babel_deadlift\generate_d2_v2_report.py:137: "[동작 위상 불일치]: 스쿼트는 최하사점(Nadir)에서 외반이 주로 발생하지만, 데드리프트는 바닥에서 바벨을 뽑아 올리는 리프팅 가속 구간(Floor Break -> Knee Pass)에서 무릎 모임이 집중 발생함.",
+D:\src\models\second_models\babel_deadlift\generate_d3_background_pdf.py:285: "2. <b>시작 위상 불일치 (Phase Asynchrony)</b>: 바닥 셋업 시작(56.9%)과 기립 시작(43.1%)으로 인해 시간 축 합성 시 미세 위상 왜곡 잔존.<br/>"
+D:\src\models\second_models\babel_deadlift\generate_d3_background_pdf.py:326: "2. 시작 위상(바닥 셋업 56.9% vs 기립 43.1%)의 시간 불일치를 완벽히 정합하는 딥러닝/신호처리 기법\n"
+D:\src\models\second_models\babel_deadlift\generate_d3_background_pdf.py:370: f.write("2. 시작 위상(바닥 셋업 56.9% vs 기립 43.1%) 시간 불일치 완벽 정합 기법\n")
+D:\src\models\second_models\babel_deadlift\generate_d3_external_ai_comparison_report_docx.py:279: add_body_p(doc, "3대 외부 AI에 동일한 기술 명세서(d3 배경지식.pdf)를 제공하고 4대 핵심 질문(원판 가림, 위상 불일치, 체형 불변 피처, 물리 제약 손실)에 대한 자문을 수렴하였습니다. 각 모델의 접근 철학과 핵심 제안은 뚜렷한 특징과 강력한 
+D:\src\models\second_models\babel_deadlift\generate_d3_external_ai_comparison_report_docx.py:306: add_heading_3(doc, "[Q2. 시작 위상 불일치] Kinematic Anchor Warping vs 다중 헤드 분할")
+D:\src\models\second_models\babel_deadlift\generate_d3_external_ai_comparison_report_docx.py:338: add_bullet_p(doc, "3. Physics Penalty Soft-F1 Loss 적용: ", "손목 수직 속도와 뒤꿈치 들림 간 생체역학적 불일치 샘플에 패널티를 부여하여 오탐(FP) 대폭 억제.")
+D:\src\models\second_models\babel_deadlift\generate_d3_external_ai_comparison_report_docx.py:394: 2. **바닥 셋업 시작(56.9%) vs 기립 시작(43.1%)의 극단적인 위상(Phase) 불일치**로 인한 시계열 학습 혼동
+D:\src\models\second_models\babel_deadlift\generate_d3_external_ai_comparison_report_docx.py:425: 2. **[Q2 위상 불일치] Upper-Body Nadir KAPW + Dual-Stream**:
+D:\src\models\second_models\babel_deadlift\generate_d3_hierarchical_two_tier_report_docx.py:181: "바닥 셋업 시작과 기립 시작 간의 위상 불일치, 그리고 라벨링 시 타 결함 간섭(후광효과)으로 인해 "
+D:\src\models\second_models\babel_deadlift\generate_d3_sota_research_report_docx.py:215: "이 물리적 역학 불일치도를 정량화하여 '물리적 접촉 위반 지수(Physics Contact Violation Index)'를 추출합니다."
+D:\src\models\second_models\babel_deadlift\generate_d3_v5_2_report_docx.py:125: "3. 최종 결론: 4대 해결책의 유기적 결합을 통해 바벨 원판 가림과 시작 위상 불일치라는 데드리프트 고유의 2대 난제를 완벽히 정복함."
+D:\src\models\second_models\babel_deadlift\generate_d4_external_ai_comparison_report_docx.py:357: "단순 확률 구간을 넘어선 '불확실도-불일치도 기반 위험도(Risk-based) 3-State 정책'을 제안했습니다:")
+D:\src\models\second_models\babel_deadlift\generate_d4_external_ai_comparison_report_docx.py:368: "대신 ① 모델 예측의 정보 엔트로피(Binary Entropy)와 ② GBDT 스트림과 TCN 스트림 간의 예측 불일치도(|P_gbdt - P_tcn|), "
+D:\src\models\second_models\babel_deadlift\generate_d4_external_ai_comparison_report_docx.py:370: bold_prefix="• 불확실도-불일치도 결합 위험도 기반 보류 (Risk-based Abstention): "
+D:\src\models\second_models\babel_deadlift\generate_d4_external_ai_comparison_report_docx.py:588: 모델 정보 엔트로피 + GBDT-TCN 스트림 불일치도 + 관절 품질(Visibility)을 결합한 통합 위험도(Risk Score) 상위 10% 샘플만 선별 보류.
+D:\src\models\second_models\babel_deadlift\generate_d4_sota_research_report.py:198: "주요 원인은 대퇴사두근 근력 부족, 셋업 시 골반 위치 오류, 뇌신경 운동 제어(Motor Control)의 무릎-골반 위상 불일치에 기인합니다.",
+D:\src\models\second_models\babel_deadlift\generate_d5_background_knowledge_doc.py:314: ["24", "d5_ascent_descent_path_diff", "G5", "Frechet_Distance(Path_up, Path_down)", "상승 궤적과 하강 궤적 간의 불일치도"],
+D:\src\models\second_models\babel_deadlift\generate_d5_background_knowledge_doc.py:525: "• Group 5 (13D): 이완기(하강) 바벨 이탈 최대폭, 하강 허벅지 이격, 하강 속도 변동성, 셋업 초기 간격, 락아웃 밀착도, 시상면 드리프트, 관상면 오버랩 결손율, 정점 가속도, 승강 궤적 불일치도(Frechet Distance), 무릎 통과 마진, 접
+D:\src\models\second_models\babel_deadlift\generate_d5_background_knowledge_doc.py:659: | 24 | `d5_ascent_descent_path_diff` | G5 | $\\text{Frechet\\_Distance}(\\text{Path}_{\\text{up}}, \\text{Path}_{\\text{down}})$ | 상승 궤적과 하강 궤적 간의 불일치
+D:\src\models\second_models\babel_deadlift\generate_deadlift_final_comprehensive_report.py:237: "미세한 궤적 이탈이나 관절 타이밍 불일치로도 심각한 근골격계 손상을 유발할 수 있습니다. "
+D:\src\models\second_models\babel_deadlift\generate_deadlift_final_comprehensive_report.py:269: ["d2", "무릎-발 방향 불일치\n(동적 무릎 외반)", "v6.0 Two-Tier 3-State", "10D 관상면 피처", "60.81%\n(+12.81%p 상승)", "시점 C (정면)\n★ F1 88.89%"],
+D:\src\models\second_models\babel_deadlift\generate_deadlift_final_comprehensive_report.py:295: add_heading_2("2.2. d2 서브모델: 무릎-발 방향 불일치 및 동적 외반 (v6.0 Two-Tier)")
+D:\src\models\second_models\babel_deadlift\generate_deadlift_final_comprehensive_report.py:524: | **d2** | 무릎-발 방향 불일치 (동적 무릎 외반) | `v6.0 Two-Tier 3-State` | 10D 관상면 피처 | **60.81%** (+12.81%p 상승) | **시점 C (정면) ★ 88.89%** |
+D:\src\models\second_models\babel_deadlift\generate_diet_report_docx.py:337: "초기 토너먼트 탐색 시 3-State의 결함 판정선이 과거 v5.0 기준(tau_defect=0.66)에 묶여 있어, 2-State 최적선(tau=0.40) 대비 결함 기준선이 너무 엄격해지면서 재현율이 35.78%로 급락하여 F1이 47.27%로 낮아지는 '임계값 
+D:\src\models\second_models\babel_deadlift\generate_external_ai_doc.py:216: story.append(Paragraph("• <b>$d_2$ (발-무릎 방향 불일치)</b>: 무릎이 안쪽으로 모이는 외반(Valgus). 전방십자인대 및 반월상연골 손상 결함", style_bullet))
+D:\src\models\second_models\babel_deadlift\generate_external_ai_doc.py:489: add_body(" 무릎이 안쪽으로 모이는 외반(Valgus). 전방십자인대 및 반월상연골 손상 결함", "• d2 (발-무릎 방향 불일치):")
+D:\src\models\second_models\babel_deadlift\generate_external_ai_doc.py:597: * **$d_2$ (발-무릎 방향 불일치)**: 무릎이 안쪽으로 모이는 외반(Valgus). 전방십자인대 및 반월상연골 손상 결함
+D:\src\models\second_models\babel_deadlift\generate_v7_1_final_spec_docx.py:233: ["d4 (무릎-골반 동시 신전 불일치)", "135건", "64.44%", "64.79% ★", "+0.35%p", "무릎 각속도 - 고관절 각속도 동시성 (d4_sync)"],
+D:\src\models\second_models\babel_deadlift\generate_v7_final_spec_docx.py:258: ["d4 (무릎-골반 동시 신전 불일치)", "17.5% (135건)", "49.43%", "58.78%", "64.44% ★", "+15.01%p 폭증 (Co-Attention 효과)"],
+D:\src\models\second_models\babel_deadlift\run_deadlift_integrated_v7_1_pipeline.py:73: "d4 (무릎-골반 동시 신전 불일치)",
+D:\src\models\second_models\babel_deadlift\run_deadlift_integrated_v7_pipeline.py:71: "d4 (무릎-골반 동시 신전 불일치)",
+D:\src\models\second_models\babel_deadlift\run_deadlift_integrated_v8_0_pipeline.py:77: "d4 (무릎-골반 동시 신전 불일치)",
+D:\src\models\second_models\babel_deadlift\test_d3_model_v7_0_inference.py:52: assert seq_57.shape == (1, 64, 57), f"시퀀스 형상 불일치: {seq_57.shape}"
+D:\src\models\second_models\babel_deadlift\test_d3_model_v7_0_inference.py:53: assert feats_36.shape == (1, 36), f"피처 형상 불일치: {feats_36.shape}"
+D:\src\models\second_models\babel_deadlift\test_d4_v4_unit.py:50: assert feats_43.shape == (43,), f"피처 차원 불일치: expected (43,), got {feats_43.shape}"
+D:\src\models\second_models\babel_deadlift\test_d4_v4_unit.py:58: assert tcn_in.shape == (12, 64), f"TCN 입력 차원 불일치: expected (12, 64), got {tcn_in.shape}"
+D:\src\models\second_models\babel_deadlift\test_d4_v4_unit.py:66: assert logits.shape == (2, 1), f"TCN 로짓 Shape 불일치: expected (2, 1), got {logits.shape}"
+D:\src\models\second_models\babel_deadlift\test_d4_v4_unit.py:83: assert len(probs) == 10, "GBDT 확률 길이 불일치"
+D:\src\models\second_models\babel_deadlift\test_d4_v4_unit.py:92: assert len(state_res) == 10, "3-State 결과 길이 불일치"
+D:\src\models\second_models\babel_deadlift\tune_advanced_3state_d4_v5.py:106: - 추가로 불일치/엔트로피 기반 고위험 샘플 필터링
+D:\src\models\second_models\babel_deadlift\user_request_cov90_results.json:111: "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+D:\src\models\second_models\babel_deadlift\user_request_cov90_results.json:122: "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+D:\src\models\second_models\babel_deadlift\user_request_cov90_results.json:133: "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+D:\src\models\second_models\babel_deadlift\user_request_cov90_results.json:144: "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+D:\src\models\second_models\babel_deadlift\user_request_cov90_results.json:155: "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+D:\src\models\second_models\babel_lunge\align_lunge_c4_dataset_cache_v4.py:58: assert X_30d.shape == (787, 30), f"형상 불일치: {X_30d.shape}"
+D:\src\models\second_models\babel_lunge\align_lunge_c4_dataset_cache_v4.py:59: assert X_temp_16d.shape == (787, 64, 16), f"시계열 형상 불일치: {X_temp_16d.shape}"
+D:\src\models\second_models\babel_lunge\audit_bl1_v3_errors.py:243: # D) 대퇴 수평도-무릎 각도 불일치: 대퇴골은 수평(사잇각 < 15도)인데 무릎 각도는 결함으로 찍히거나 그 반대
+D:\src\models\second_models\babel_lunge\audit_bl1_v3_errors.py:254: print(f"  4) 대퇴골 수평도와 무릎 각도 간 도메인 불일치: {n_femur_mismatch}건 ({n_femur_mismatch/n_misclassified*100:.1f}%)")
+D:\src\models\second_models\babel_lunge\audit_bl5_v3_misclassifications.py:8: - FN (결함인데 정상 판정) 원인 분석: 미세 결함, 라벨 불일치, 최하사점 지연 등
+D:\src\models\second_models\babel_lunge\build_lunge_c4_dataset_cache.py:86: Level 4: 극단 모호군 (Ambiguous / 라벨 불일치 경계)
+D:\src\models\second_models\babel_lunge\build_lunge_c4_dataset_cache_v3.py:53: assert X_24d.shape == (787, 24), f"예상 형상 (787, 24) 불일치: {X_24d.shape}"
+D:\src\models\second_models\babel_lunge\diagnose_bl2_ceiling.py:23: print(f"  시점 간 라벨 불일치 동작 수={mixed}")
+D:\src\models\second_models\babel_lunge\generate_bl1_v3_vs_v4_comparison_report_docx.py:166: f"1. 오분류 전수 감사 완료: v3 확정 판정 중 139건(14.3%) 오분류 전수 분석 -> 키포인트 가림/요동(68.3%), 대퇴골-무릎 불일치(52.5%), 정면 깊이 왜곡(38.8%) 및 피험자2 오분류 집중(33.1%) 규명.\n"
+D:\src\models\second_models\babel_lunge\generate_bl1_v3_vs_v4_comparison_report_docx.py:185: ("대퇴골 수평도와 무릎 각도 간 불일치", "73건 (52.5%)", "대퇴골은 수평(사잇각 < 15도)인데 무릎 각도는 결함으로 찍히거나 그 반대인 불일치"),
+D:\src\models\second_models\babel_lunge\generate_bl1_v3_vs_v4_comparison_report_docx.py:379: 1. **오분류 전수 감사 완료**: v3 확정 판정 중 139건(14.3%) 오분류 전수 분석 -> 키포인트 가림/요동(68.3%), 대퇴골-무릎 불일치(52.5%), 정면 깊이 왜곡(38.8%) 및 피험자2 오분류 집중(33.1%) 규명.
+D:\src\models\second_models\babel_lunge\generate_bl1_v3_vs_v4_comparison_report_docx.py:392: | **대퇴골 수평도와 무릎 각도 간 불일치** | 73건 (52.5%) | 대퇴골은 수평(사잇각 < 15도)인데 무릎 각도는 결함으로 찍히거나 그 반대인 불일치 |
+D:\src\models\second_models\babel_lunge\generate_bl4_v2_vs_v3_comparison_report_docx.py:190: ("spine_lateral_inflexion", "완전 불활성 피처 (Zero)", "중요도 0.00%, Corr=0.000", "수학적 정의상 평면 투영 불일치로 분별력 전무")
+D:\src\models\second_models\babel_lunge\generate_lunge_c2_planning_doc.py:467: "[Step 6: 3-State 안전 선택적 판정 (Selective Gate)] -> Safe(정상) / Defect(방향 불일치 결함) / Retake(가림/모호 안전 재촬영)"
+D:\src\models\second_models\babel_lunge\generate_lunge_c2_planning_doc.py:663: - **결론**: 본 결함의 물리적 실체는 **"선행 발의 내회전(In-toeing) 및 이에 따른 무릎 굴곡면과 체간 전방 지향축의 비틀림 불일치"**이다.
+D:\src\models\second_models\babel_lunge\lunge_c2_features_v6.py:15: 3D 공간의 수직 낙하(-Y) 노이즈를 완벽 배제하고 바닥 수평면(XZ) 상에서 순수 무릎 굽힘 진행축과 발끝 지향축의 불일치 포착.
+D:\src\models\second_models\babel_lunge\make_bl2_v1_vs_v2_comparison_report.py:165: "바벨 런지 운동에서 발생하는 '몸통 발 무릎 방향 불일치(Condition 2 / 발방향 안쪽, 무릎 외반, 체간 기울기)' 결함을 "
+D:\src\models\second_models\babel_lunge\make_bl2_v3_vs_v4_comparison_report.py:234: "■ 효과: 선행 발의 발끝이 가려져 보이지 않더라도(Occlusion), 하지 상위 기계축(Mechanical Axis) 대비 무릎 중심의 내측 이탈량을 통해 발-무릎 방향 불일치 결함을 100% 포착하여 FN을 방지함."
+D:\src\models\second_models\babel_lunge\test_bl5_v1.py:45: assert len(feats) == 32, f"피처 수 불일치: {len(feats)} != 32"
+D:\src\models\second_models\babel_lunge\train_and_eval_bl4_v5.py:126: assert list(sp['clip_ids']) == [str(c) for c in d['clip_ids']], "SpinePose 캐시 순서 불일치"
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v1.py:58: 'c3': '발과 무릎 방향 불일치 (Knee Valgus)',
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v2.py:50: 'c3': '발과 무릎 방향 불일치 (Knee Valgus)',
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v3.py:59: 'c3': '발과 무릎 방향 불일치 (Knee Valgus)',
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v4.py:60: 'c3': '발과 무릎 방향 불일치 (Knee Valgus)',
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v5.py:67: 'c3': '발과 무릎 방향 불일치 (Knee Valgus)',
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v6.py:16: - c3: 발과 무릎 방향 불일치 (v6.0 20D 관상면 무릎-발목 투영비율, [0.40, 0.60])
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v7.py:14: * c3: 발과 무릎 방향 불일치 (v6.0 20D 관상면 무릎-발목 투영비율)
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v7_1.py:14: * c3: 발과 무릎 방향 불일치 (v6.0 20D 관상면 무릎-발목 투영비율)
+D:\src\models\second_models\babel_squat\babel_squat_integrated_v7_2.py:19: - 'PREDICTION_VARIANCE': 앙상블/폴드 모델 간 예측 불일치
+D:\src\models\second_models\babel_squat\build_c1_v2_report_docx.py:223: "또한 (1) 1,906건 전체 원천 데이터셋과 (2) AI-Hub 주석 불일치 라벨 역전 노이즈가 배제된 Level 1~3 실무군(1,577건)의 2단계 환경에서 실측을 수행하였다."
+D:\src\models\second_models\babel_squat\build_c1_v2_report_docx.py:345: "   - 원천 데이터 1,906건 전체(Phase 1)에는 AI-Hub 주석 불일치 라벨 역전 노이즈(Level 4, 329건)가 포함되어 있어 F1이 72.68% ~ 74.04%로 낮게 측정됩니다.\n"
+D:\src\models\second_models\babel_squat\build_c3_foot_features.py:8: 1) c3_true_knee_toe_angle_nadir: 최하사점 3D 무릎-발 정렬 불일치각 평균 (deg)
+D:\src\models\second_models\babel_squat\build_c3_foot_features.py:112: # [피처 1] 최하사점 무릎-발 정렬 불일치각
+D:\src\models\second_models\babel_squat\build_c3_v2_report_docx.py:144: ("c3_true_knee_toe_angle_max", "#18", "스쿼트 전 구간에서 관측된 최대 무릎-발 불일치 사잇각"),
+D:\src\models\second_models\babel_squat\build_c3_v2_report_docx.py:274: | `c3_true_knee_toe_angle_max` | #18 | 스쿼트 전 구간에서 관측된 최대 무릎-발 불일치 사잇각 |
+D:\src\models\second_models\babel_squat\build_integrated_v1_vs_v2_report_docx.py:207: "  3) c3: 발과 무릎 방향 불일치 (Knee Valgus - 전방십자인대 ACL 파열 고위험)\n"
+D:\src\models\second_models\babel_squat\build_integrated_v1_vs_v2_report_docx.py:244: ("c3", "발과 무릎 방향 불일치", v1_all['defect_metrics']['c3'], v2_all['defect_metrics']['c3'], False),
+D:\src\models\second_models\babel_squat\build_integrated_v1_vs_v2_report_docx.py:471: | **c3** | 발과 무릎 방향 불일치 (Knee Valgus) | v3 (20D) 유지 | {v1_all['defect_metrics']['c3']['f1']:.2f}% | {v2_all['defect_metrics']['c3']['f1']:.2f}% | ― | 
+D:\src\models\second_models\babel_squat\build_integrated_v2_vs_v3_report_docx.py:299: ("c3 발과 무릎 방향 불일치 (Knee Valgus)", f"{v2['defects']['c3']['f1']:.2f}%", f"{v3['defects']['c3']['f1']:.2f}%", f"{v3['defects']['c3']['precision']:.2f}%"
+D:\src\models\second_models\babel_squat\build_integrated_v2_vs_v3_report_docx.py:356: for code, name in [('c1', '척추 중립 위반'), ('c2', '고개 정면 미유지'), ('c3', '발-무릎 불일치'), ('c4', '발바닥 미고정')]:
+D:\src\models\second_models\babel_squat\c1_model_v1.py:371: reasons.append("체간-고관절 동적 협응 불일치 및 척추 기립각 이탈")
+D:\src\models\second_models\babel_squat\c1_model_v10.py:12: * Tier 2: 앙상블 모델 불일치(Disagreement) 및 Fold 분산 과다 검사 (Uncertainty Gate)
+D:\src\models\second_models\babel_squat\c1_model_v10.py:146: - "UNDETERMINED" : 판정 불가 (품질 미달, 모델 불일치, 또는 신뢰도 모호 구간)
+D:\src\models\second_models\babel_squat\c1_model_v10.py:183: # [Tier 2] 개별 5-Fold 모델 추론 및 불일치/분산 검사
+D:\src\models\second_models\babel_squat\c1_model_v10.py:197: # 2.1 앙상블 모델 간 극심한 불일치 검사
+D:\src\models\second_models\babel_squat\c1_model_v11.py:14: * Tier 2: 브랜치 간 극심한 모델 불일치(Disagreement) 및 Fold 분산 과다 검사 (Uncertainty Gate)
+D:\src\models\second_models\babel_squat\c1_model_v11.py:186: - "UNDETERMINED" : 판정 불가 (품질 미달, 모델 불일치, 또는 신뢰도 모호 구간)
+D:\src\models\second_models\babel_squat\c1_model_v11.py:222: # [Tier 2] 브랜치별 예측 및 모델 불일치 / 분산 검사
+D:\src\models\second_models\babel_squat\c1_model_v11.py:241: # 2.1 앙상블 브랜치 간 극심한 불일치 검사
+D:\src\models\second_models\babel_squat\c1_model_v11_1.py:247: # 경계 또는 의심 구간에서만 엄격한 분산 및 불일치 검사 수행
+D:\src\models\second_models\babel_squat\c1_model_v11_a.py:518: # [Tier 2] 개별 5-Fold 모델 추론 및 불일치/분산 검사
+D:\src\models\second_models\babel_squat\c1_model_v11_a_diet.py:69: "c1_asymmetry_score",                 # [18] 좌우 어깨선과 골반선의 롤 불일치각 90th percentile
+D:\src\models\second_models\babel_squat\c1_model_v9.py:64: "c1_asymmetry_score",                 # [19] 좌우 어깨선과 골반선의 롤(Roll) 불일치각 90th percentile (deg)
+D:\src\models\second_models\babel_squat\c1_model_v9.py:302: # f19: 좌우 어깨선과 골반선의 롤(Roll) 불일치각 90th percentile
+D:\src\models\second_models\babel_squat\c2_model_v1.py:384: reasons.append("체간 숙임과 고개 움직임의 위상 동기화 지연(VOR 불일치)")
+D:\src\models\second_models\babel_squat\c2_model_v6.py:47: "c2_neck_ear_shoulder_roll_mismatch",  # [7] 좌우 귀선과 어깨선의 롤(Roll) 불일치 사잇각 (deg)
+D:\src\models\second_models\babel_squat\c2_model_v6.py:347: # [Tier 2] 개별 모델 추론 및 불일치/분산 검사
+D:\src\models\second_models\babel_squat\c2_model_v6.py:361: # 2.1 앙상블 모델 간 극심한 불일치 검사
+D:\src\models\second_models\babel_squat\c2_model_v7.py:50: "c2_neck_ear_shoulder_roll_mismatch",  # [7] 좌우 귀선과 어깨선의 롤(Roll) 불일치 사잇각 (deg)
+D:\src\models\second_models\babel_squat\c2_model_v7_1.py:164: # 안면 피치가 정상 범위인데 경추 롤 불일치로 인해 확률이 튄 경우 보정
+D:\src\models\second_models\babel_squat\c3_model_v2.py:16: 17) c3_true_knee_toe_angle_nadir: 최하사점 3D 무릎-발 정렬 불일치각 평균 (deg)
+D:\src\models\second_models\babel_squat\c3_model_v4.py:111: 바벨 스쿼트 c3 결함(무릎 외반/정렬 불일치) 확정 프로덕션 모델 v4.0
+D:\src\models\second_models\babel_squat\c3_model_v5.py:58: 바벨 스쿼트 c3 결함(무릎 외반/정렬 불일치) 확정 모델 v5.0 (53D)
+D:\src\models\second_models\babel_squat\c3_model_v6.py:67: "c3_foot_progression_mismatch",       # [19] 발끝 진행각과 무릎 진행각 간의 불일치각 (deg)
+D:\src\models\second_models\babel_squat\c3_model_v6.py:238: # 발끝 벌림각 vs 무릎 벌림각 불일치
+D:\src\models\second_models\babel_squat\c3_model_v6.py:391: # [Tier 2] 개별 5-Fold 모델 추론 및 불일치/분산 검사
+D:\src\models\second_models\babel_squat\c3_model_v6.py:405: # 2.1 앙상블 모델 간 극심한 불일치 검사
+D:\src\models\second_models\babel_squat\eval_squat_clean_classification_a_vs_b.py:142: assert len(test_m.tcn_models) == 5, f"TCN 폴드 개수 불일치: {len(test_m.tcn_models)}"
+D:\src\models\second_models\babel_squat\export_c3_missed_to_temp.py:132: f.write(f"3. AI-Hub 원천 라벨   : [c3 결함 (무릎-발 방향 불일치 / 무릎 외반 발생)]\n")
+D:\src\models\second_models\babel_squat\export_deduplicated_audit_dataset_57.py:63: # 3. 고확신 불일치 (P >= 0.85 & Y_true == 0) 식별
+D:\src\models\second_models\babel_squat\export_deduplicated_audit_dataset_57.py:71: print(f"[*] 총 고확신 불일치 샘플 수: {len(all_union_indices)}건")
+D:\src\models\second_models\babel_squat\export_level4_to_temp.py:6: Purpose: 물리 법칙 위반 및 앙상블 불일치로 식별된 Level 4 라벨 역전 노이즈 샘플을
+D:\src\models\second_models\babel_squat\export_level4_to_temp.py:213: f.write("6. Level 4 판정 근거 (물리 법칙 위반 및 앙상블 불일치 사유):\n")
+D:\src\models\second_models\babel_squat\export_level4_to_temp.py:230: f.write("   ▶ 원천 라벨은 'c3 무릎-발 방향 불일치(외반)'로 체크되어 있으나:\n")
+D:\src\models\second_models\babel_squat\export_phase2_full_audit_dataset.py:230: f.write("   ▶ 원천 라벨은 'c3 무릎-발 불일치(외반)'로 체크되어 있으나:\n")
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:243: Paragraph("tau_norm: 0.40<br/>tau_defect: 0.60<br/>(Fold 분산/불일치 게이트)", td_style),
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:257: Paragraph("tau_norm: 0.40<br/>tau_defect: 0.60<br/>(모델 불일치 게이트)", td_style),
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:264: Paragraph("tau_norm: 0.40<br/>tau_defect: 0.60<br/>(모델 불일치 게이트)", td_style),
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:385: "  - c1 v11: 정상 84건, 결함 1건, <b>판단 불가 50건 (37.0% 누락)</b> (TCN Fold 분산 및 브랜치 불일치 게이트 때문)<br/>"
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:587: ["c1. 척추 중립 위반", "v11.0 3-Way Tri-Ensemble\n(GBDT 10% + Diet 40% + TCN 50%)", "38D+27D+24D 시계열\n(Nadir+생체역학+TCN)", "tau: [0.40, 0.60]\n(Fold분산/불일치 게이트
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:589: ["c3. 무릎-발 방향 일치", "v6.0 순수 비전 앙상블\n(CatBoost + LightGBM)", "20D 관상면 비율 피처\n(골반투영 KaRatio)", "tau: [0.40, 0.60]\n(불일치 게이트)", "87.4% / 87.6%\n(Cov 92.2
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:590: ["c4. 발바닥 지면 고정", "v5.0 접촉머신 앙상블\n(CB 60% + LGB 30% + RF 10%)", "25D 접촉 상태 머신\n(F0 가시성+정강이상관)", "tau: [0.40, 0.60]\n(불일치 게이트)", "82.8% / 82.8%\n(Cov 8
+D:\src\models\second_models\babel_squat\generate_external_ai_advisory_guide.py:670: "  - c1 v11: 정상 84건, 결함 1건, 판단 불가 50건 (37.0% 누락) (TCN Fold 분산 및 브랜치 불일치 게이트 때문)\n"
+D:\src\models\second_models\babel_squat\generate_external_ai_briefing_doc.py:149: ("c3", "발과 무릎 방향 불일치 (Knee Valgus)\n- 무릎 모임(외반) 및 벌어짐(내반)", "17D Deep-Temporal Attention Net\n(무릎-발 정렬 64프레임 동역학)", "93.88%", "91.82%", "92.84%"),
+D:\src\models\second_models\babel_squat\generate_external_ai_briefing_doc.py:476: Paragraph("<b>발과 무릎 불일치</b> (Knee Valgus)<br/>- 무릎 모임(외반) 및 벌어짐(내반)", table_cell_style),
+D:\src\models\second_models\babel_squat\generate_external_ai_briefing_v2.py:244: Paragraph("<b>발-무릎 방향 불일치</b><br/>(무릎 모임/외반 Valgus,<br/>좌우 비대칭 붕괴)", table_cell_style),
+D:\src\models\second_models\babel_squat\generate_external_ai_briefing_v2.py:524: ("c3", "발-무릎 방향 불일치\n(무릎 모임 Valgus, 좌우 비대칭 붕괴)", "MediaPipe 33관절 64F\n(양 무릎, 양 발목, 양 골반)\n※ Format B 슬라이싱 제거", "22D 생체역학 피처셋\n(골반 관상면 투영 K/A 비율 6D, 외반
+D:\src\models\second_models\babel_squat\generate_spine_refinement_report.py:181: ("12", "c1_rmse_hysteresis_trunk", "87", "✅ 히스테리시스 편차: 하강-상승 체간각 궤적 불일치"),
+D:\src\models\second_models\babel_squat\generate_spine_refinement_report.py:471: | 12 | `c1_rmse_hysteresis_trunk` | 87 | ✅ 히스테리시스 편차: 하강-상승 체간각 궤적 불일치 |
+D:\src\models\second_models\babel_squat\generate_week5_v6_mediapipe64f_report_docx.py:208: ("횟수 분할 데이터 폐기", "MediaPipe_횟수분할 폴더 내 22,000여 개 파편 파일 보존", "운동 1회의 시작/끝 강제 절단으로 시계열 왜곡 및 실영상 추론 불일치", "MediaPipe_횟수분할 디렉터리 100% 완전 영구 삭제 완료"),
+D:\src\models\second_models\babel_squat\make_aihub_audit_report_docx.py:260: ("3.3 c3 (발과 무릎의 방향 불일치 - Knee Valgus)",
+D:\src\models\second_models\babel_squat\make_aihub_audit_report_docx.py:342: ("c2 v7 19D\n(c2_model_v7.py)", "19D", "체간 로컬 시상면 경추 굴곡각, 롤 불일치각, 단일 귀-코 적응형 피치 낙하폭, 법선 Z성분", "100% 무결 (누수 0%)\n순수 비전 기하 지표"),
+D:\src\models\second_models\babel_squat\make_c1_c2_c4_briefings.py:625: "2. 시선(Eye Gaze)과 두부 자세(Head Pose)의 불일치:\n"
+D:\src\models\second_models\babel_squat\make_c1_c2_c4_briefings.py:626: "   전문 리프터는 경추를 중립으로 유지하면서도 안구(Pupil)만 위나 아래로 굴릴 수 있고, 반대로 고개는 숙이면서 시선은 정면을 볼 수 있습니다. MediaPipe Pose는 안구의 동공 위치나 시선 벡터를 추정하지 못하고 얼굴 평면의 외곽선만 추정하므로, 실제
+D:\src\models\second_models\babel_squat\make_c1_c2_c4_briefings.py:701: "<b>2) 시선(Gaze)과 두부 자세(Head Pose)의 불일치:</b> 전문 리프터는 경추를 중립으로 유지하며 안구만 굴릴 수 있으나, MediaPipe는 동공 벡터를 추정하지 못해 실제 라벨과 뼈대 각도 간 도메인 불일치가 발생합니다.<br/>"
+D:\src\models\second_models\babel_squat\make_c1_to_c4_comprehensive_report_docx.py:156: ("c3", "발무릎 방향 불일치", "v6.0", "20D 관상면 앙상블\n(CatBoost+LGBM)", "• 관상면 무릎-발목 투영 비율(Valgus Ratio)\n• 정강이-대퇴골 회전 각도 결합\n• 스쿼트 가동범위 능동 마스킹"),
+D:\src\models\second_models\babel_squat\make_c1_to_c4_comprehensive_report_docx.py:191: ("c3. 발무릎 방향 불일치", "v6.0", "20D", "84.74%", "84.88%", "92.69%"),
+D:\src\models\second_models\babel_squat\make_c1_to_c4_comprehensive_report_docx.py:234: ("c3. 발무릎 방향 불일치", "[0.40, 0.60] 균형", "92.2%", "7.8%", "87.42%", "87.59%", "12.41%"),
+D:\src\models\second_models\babel_squat\make_c1_v10_report_docx.py:85: ("Tier 2: 앙상블 모델 불일치 및 Fold 분산 과다 검사 (Uncertainty Gate): ", "CatBoost와 LightGBM 간 예측 확률 차이가 크거나(|p_cb - p_lgb| >= 0.35), 피험자 분할 5-Fold 모델 간 표준편차가 과다한 
+D:\src\models\second_models\babel_squat\make_c1_v11_confirmed_report.py:195: ["view1 (완전 후방 180°)", "521건", "421건", "80.8%", "97.23%", "앙상블 불일치 (42건)"],
+D:\src\models\second_models\babel_squat\make_c2_selective_docx_report.py:115: "2) [Tier 2: 앙상블 불일치 및 이중 임계치 (Soft Abstention)]:\n"
+D:\src\models\second_models\babel_squat\make_c2_v6_docx_report.py:163: ("[f7] c2_neck_ear_shoulder_roll_mismatch", "좌우 귀선과 어깨선의 롤(Roll) 불일치 사잇각 (deg)", "전 시점 공통 (후방 100% 관측)"),
+D:\src\models\second_models\babel_squat\make_c2_v6_docx_report.py:364: | **[f7] c2_neck_ear_shoulder_roll_mismatch** | 좌우 귀선과 어깨선의 롤(Roll) 불일치 사잇각 (deg) | 전 시점 공통 (후방 100% 관측) |
+D:\src\models\second_models\babel_squat\make_c2_v7_docx_report.py:166: ("f7", "c2_neck_ear_shoulder_roll_mismatch", "좌우 귀선과 어깨선의 롤(Roll) 불일치 사잇각 (deg) [v6 계승]"),
+D:\src\models\second_models\babel_squat\make_integrated_v8_5_final_report_docx.py:125: ("키네마틱 위상차", "phase_lag", "고관절 최저점과 슬관절 최저점 프레임차", "상체와 하체의 협응 타이밍 불일치 감지")
+D:\src\models\second_models\babel_squat\make_integrated_v9_0_final_report_docx.py:301: "3) Expert 3 (운동사슬/동역학 전문가): 35.49% 부하 점유 - 발바닥-무릎-체간 연계 운동역학 및 위상 불일치 판정 집중\n"
+D:\src\models\second_models\babel_squat\run_babel_squat_integrated_v2_vs_v3_benchmark.py:263: print(f"{'c3 (발-무릎 불일치) F1-Score':<32} | {defects_v2['c3']['f1']:6.2f}%                  | {defects_v3['c3']['f1']:6.2f}%                  | {defects_
+D:\src\models\second_models\babel_squat\run_babel_squat_integrated_v3_vs_v4_benchmark.py:303: ('c3', 'c3 (발과 무릎 방향 불일치)'),
+D:\src\models\second_models\babel_squat\run_babel_squat_integrated_v3_vs_v4_benchmark.py:333: print(f"{'c3 (발-무릎 방향 불일치) F1':<34} | F1-Score   | {m_clean_v3['defects']['c3']['f1']:6.2f}%            | {m_clean_v4['defects']['c3']['f1']:6.2f}%   
+D:\src\models\second_models\babel_squat\run_babel_squat_integrated_v4_vs_v4_1_benchmark.py:246: ('c3', '무릎 방향 불일치 (Knee Valgus)'),
+D:\src\models\second_models\babel_stiff_deadlift\generate_sd1_v7_ceiling_report_docx.py:28: ["E1 라벨-물리 불일치", "결함 중 무릎이 실제 고정 52.6% (N=78) / 정상 중 52.8% (N=125)",
+D:\src\models\second_models\babel_stiff_deadlift\generate_sd1_v7_ceiling_report_docx.py:96: ["정답 무릎 굴곡 라벨 검증셋 직접 구축 (100~200건)", "수행 불가 (사용자 판단)", "라벨-물리 불일치와 순환 평가를 해소할 유일한 방법이 막힘"],
+D:\src\models\second_models\babel_stiff_deadlift\generate_stiff_d1_sota_research_report.py:203: "- 2단계: 임베딩 거리 기반 k-NN 신뢰 점수를 계산하여, 라벨과 임베딩 군집이 불일치하는 오라벨 샘플의 가중치를 0으로 축소(Uniform Selection)합니다."
+D:\src\models\second_models\babel_stiff_deadlift\test_stiff_d1_inference.py:209: msg=f"{view_code} view_code 불일치 (기대값: {spec['code']}, 실제값: {features[23]})")
+D:\src\models\second_models\babel_stiff_deadlift\test_stiff_d1_inference.py:211: msg=f"{view_code} is_frontal 불일치 (기대값: {spec['frontal']}, 실제값: {features[24]})")
+D:\src\models\second_models\babel_stiff_deadlift\test_stiff_d1_inference.py:213: msg=f"{view_code} is_rear 불일치 (기대값: {spec['rear']}, 실제값: {features[25]})")
+D:\src\models\second_models\babel_stiff_deadlift\test_stiff_d1_inference.py:215: msg=f"{view_code} gate_is_oblique 불일치 (기대값: {spec['oblique']}, 실제값: {features[26]})")
+D:\src\models\second_models\babel_stiff_deadlift\test_stiff_d1_inference.py:272: # 관절 수 불일치 (64, 25, 3)
+D:\src\models\second_models\babel_stiff_deadlift\v7_cond3_eval2.py:1: # 분석 전용: Condition3(진짜 시점별 3D)에서 시점 앙상블/원본라벨 학습/물리 불일치 재확인. 파일 수정 없음.
+D:\src\models\second_models\babel_stiff_deadlift\v7_stage4_ceiling.py:3: E1 라벨-물리 불일치 상한 / E2 비무릎 피처만으로 라벨 예측 / E3 Key별 예측력 /
+D:\src\models\second_models\babel_stiff_deadlift\v7_stage4_ceiling.py:45: print("=" * 90 + "\n[E1] 라벨-물리 불일치 상한 (고유 텐서 기준)\n" + "=" * 90, flush=True)
+D:\src\models\second_models\babel_stiff_deadlift\external_ai_parsed\ai_response_2.txt:31: 불일치하여 지도학습 평가 지표상 False Negative로 간주되어 F1이 38.71%로 폭락했습니다.
+D:\src\models\second_models\babel_stiff_deadlift\external_ai_parsed\ai_response_3.txt:44: 권고: 피험자·원본 라벨·시점·다른 결함 유무를 층화하여 재검수하고, 전문가 간 불일치와 불확실 사례도 함께
+D:\src\models\second_models\babel_stiff_deadlift\external_ai_parsed\ai_response_3.txt:967: 전문가 간 불일치
+D:\src\models\second_models\babel_stiff_deadlift\external_ai_parsed\ai_response_3.txt:993: 성능이 얼마나 되는지, 그리고 기존 F1 손실 중 얼마가 라벨 불일치·임계값·깊이 왜곡 때문인지 분해해야 합니다.
+D:\src\models\second_models\dynamic_lunge\build_dynamic_lunge_c4_dataset_cache.py:106: Level 4: 극단 모호군 (Ambiguous / 라벨 불일치 경계)
+D:\src\models\second_models\dynamic_lunge\diagnose_dl2_ceiling.py:66: print(f"  - 시점 간 라벨 불일치 동작 수: {mixed}건 (동작 단위 정답 완벽 일치)")
+D:\Data\temp\사이드런지_라벨_설명_불일치_전수대조표.md:1: # 사이드 런지 라벨(JSON Conditions) vs 동작 설명(Description) 불일치 전수 대조표
+D:\Data\temp\사이드런지_라벨_설명_불일치_전수대조표.md:3: > **분석 배경**: 사이드 런지 32개 Key 중 **13개 Key**에서 텍스트 설명(Description)과 AI-Hub JSON 라벨(Conditions boolean)이 불일치하는 심각한 라벨 노이즈가 발견되었습니다. 사용자가 육안으로 직접 영상을 보고 무엇
+D:\Data\temp\사이드런지_라벨_설명_불일치_전수대조표.md:5: ## 1. 13대 불일치 Key 종합 비교표
+D:\Data\temp\사이드런지_라벨_설명_불일치_전수대조표.md:7: | Key | 동작 설명 (Description) | 텍스트상 의도된 결함 | JSON에 기록된 결함 | 불일치 핵심 요약 및 왜곡 내용 |
+D:\Data\temp\사이드런지_라벨_설명_불일치_전수대조표.md:29: 3. **`00_불일치_상세분석_및_체크리스트.txt`**를 열어 피험자의 실제 동작이 [텍스트 설명]과 [JSON 조건] 중 어느 쪽에 일치하는지 확인해 주시면 됩니다.
+D:\Data\temp\Key145_[기준]_정상자세\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 145 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key145_[기준]_정상자세\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key153_앞다리조금접고_몸통옆으로갸우뚱\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 153 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key153_앞다리조금접고_몸통옆으로갸우뚱\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key154_앞다리조금접고_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 154 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key154_앞다리조금접고_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key155_발방향바깥쪽_안굽히는다리구부정\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 155 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key155_발방향바깥쪽_안굽히는다리구부정\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key156_발방향바깥쪽_몸통옆으로갸우뚱\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 156 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key156_발방향바깥쪽_몸통옆으로갸우뚱\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key157_발방향바깥쪽_몸통상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 157 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key157_발방향바깥쪽_몸통상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key158_안굽히는다리구부정_몸통옆으로갸우뚱\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 158 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key158_안굽히는다리구부정_몸통옆으로갸우뚱\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key159_안굽히는다리구부정_몸통상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 159 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key159_안굽히는다리구부정_몸통상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key160_몸통옆으로갸우뚱_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 160 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key160_몸통옆으로갸우뚱_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key161_안굽히는다리구부정_몸통갸우뚱_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 161 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key161_안굽히는다리구부정_몸통갸우뚱_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key162_발방향바깥쪽_몸통갸우뚱_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 162 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key162_발방향바깥쪽_몸통갸우뚱_상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key163_왼쪽보고_몸통상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 163 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key163_왼쪽보고_몸통상체뒤로젖힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key171_왼쪽보고_앞다리조금접힘\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 171 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key171_왼쪽보고_앞다리조금접힘\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:
+D:\Data\temp\Key176_하늘보고_안굽히는다리구부정\00_불일치_상세분석_및_체크리스트.txt:2: [사이드 런지] Key 176 라벨-설명 불일치 분석 보고서
+D:\Data\temp\Key176_하늘보고_안굽히는다리구부정\00_불일치_상세분석_및_체크리스트.txt:7: 3. 불일치 핵심 요약:

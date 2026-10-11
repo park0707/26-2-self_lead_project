@@ -1,0 +1,225 @@
+[
+  {
+    "label": "[v2.0 기준 모델] 20D 전체 세트",
+    "dim": 20,
+    "selected_features": [
+      "c2_gaze_pitch_mean",
+      "c2_gaze_pitch_min",
+      "c2_gaze_pitch_bottom",
+      "c2_gaze_pitch_drop",
+      "c2_cervical_spine_angle_mean",
+      "c2_cervical_spine_angle_min",
+      "c2_cervical_spine_angle_drop",
+      "c2_head_yaw_asymmetry_mean",
+      "c2_head_yaw_asymmetry_max",
+      "c2_head_roll_tilt_max",
+      "c2_head_to_torso_relative_pitch",
+      "c2_head_acceleration_jerk",
+      "c2_head_forward_protrusion_max",
+      "c2_gaze_relative_to_trunk_mean",
+      "c2_subject_calibrated_gaze_drop",
+      "c2_cervical_velocity_peak_at_nadir",
+      "c2_gaze_coupling_lag",
+      "c2_cervical_hyperextension_ratio",
+      "c2_gated_true_gaze_pitch_drop",
+      "c2_gated_true_gaze_pitch_bot"
+    ],
+    "dropped_features": [],
+    "cat": {
+      "f1": 86.26,
+      "precision": 87.99,
+      "recall": 84.6,
+      "bacc": 86.58,
+      "roc_auc": 94.84,
+      "opt_f1": 86.89,
+      "opt_th": 0.43
+    },
+    "lgb": {
+      "f1": 87.0,
+      "precision": 88.8,
+      "recall": 85.28,
+      "bacc": 87.31,
+      "roc_auc": 95.21,
+      "opt_f1": 87.37,
+      "opt_th": 0.43
+    },
+    "cascade": {
+      "f1": 90.11,
+      "precision": 89.95,
+      "recall": 90.26,
+      "bacc": 90.14,
+      "roc_auc": 96.98,
+      "opt_f1": 90.23,
+      "opt_th": 0.57
+    },
+    "elapsed_sec": 5.05
+  },
+  {
+    "label": "[v3-A 16D 모델] 4대 핵심 방해 피처(#10, #09, #05, #00) 소거",
+    "dim": 16,
+    "selected_features": [
+      "c2_gaze_pitch_min",
+      "c2_gaze_pitch_bottom",
+      "c2_gaze_pitch_drop",
+      "c2_cervical_spine_angle_mean",
+      "c2_cervical_spine_angle_drop",
+      "c2_head_yaw_asymmetry_mean",
+      "c2_head_yaw_asymmetry_max",
+      "c2_head_acceleration_jerk",
+      "c2_head_forward_protrusion_max",
+      "c2_gaze_relative_to_trunk_mean",
+      "c2_subject_calibrated_gaze_drop",
+      "c2_cervical_velocity_peak_at_nadir",
+      "c2_gaze_coupling_lag",
+      "c2_cervical_hyperextension_ratio",
+      "c2_gated_true_gaze_pitch_drop",
+      "c2_gated_true_gaze_pitch_bot"
+    ],
+    "dropped_features": [
+      "c2_head_to_torso_relative_pitch",
+      "c2_head_roll_tilt_max",
+      "c2_cervical_spine_angle_min",
+      "c2_gaze_pitch_mean"
+    ],
+    "cat": {
+      "f1": 87.33,
+      "precision": 89.24,
+      "recall": 85.5,
+      "bacc": 87.65,
+      "roc_auc": 94.92,
+      "opt_f1": 87.53,
+      "opt_th": 0.48
+    },
+    "lgb": {
+      "f1": 86.93,
+      "precision": 88.41,
+      "recall": 85.5,
+      "bacc": 87.2,
+      "roc_auc": 95.06,
+      "opt_f1": 87.43,
+      "opt_th": 0.44
+    },
+    "cascade": {
+      "f1": 90.05,
+      "precision": 89.94,
+      "recall": 90.15,
+      "bacc": 90.08,
+      "roc_auc": 96.97,
+      "opt_f1": 90.78,
+      "opt_th": 0.64
+    },
+    "elapsed_sec": 4.47
+  },
+  {
+    "label": "[v3-B 14D 모델] 6대 방해 피처(#10, #09, #05, #00, #11, #02) 소거",
+    "dim": 14,
+    "selected_features": [
+      "c2_gaze_pitch_min",
+      "c2_gaze_pitch_drop",
+      "c2_cervical_spine_angle_mean",
+      "c2_cervical_spine_angle_drop",
+      "c2_head_yaw_asymmetry_mean",
+      "c2_head_yaw_asymmetry_max",
+      "c2_head_forward_protrusion_max",
+      "c2_gaze_relative_to_trunk_mean",
+      "c2_subject_calibrated_gaze_drop",
+      "c2_cervical_velocity_peak_at_nadir",
+      "c2_gaze_coupling_lag",
+      "c2_cervical_hyperextension_ratio",
+      "c2_gated_true_gaze_pitch_drop",
+      "c2_gated_true_gaze_pitch_bot"
+    ],
+    "dropped_features": [
+      "c2_head_to_torso_relative_pitch",
+      "c2_head_roll_tilt_max",
+      "c2_cervical_spine_angle_min",
+      "c2_gaze_pitch_mean",
+      "c2_head_acceleration_jerk",
+      "c2_gaze_pitch_bottom"
+    ],
+    "cat": {
+      "f1": 86.91,
+      "precision": 88.97,
+      "recall": 84.94,
+      "bacc": 87.26,
+      "roc_auc": 94.88,
+      "opt_f1": 87.37,
+      "opt_th": 0.43
+    },
+    "lgb": {
+      "f1": 87.56,
+      "precision": 89.1,
+      "recall": 86.07,
+      "bacc": 87.82,
+      "roc_auc": 95.13,
+      "opt_f1": 87.79,
+      "opt_th": 0.41
+    },
+    "cascade": {
+      "f1": 90.27,
+      "precision": 90.17,
+      "recall": 90.37,
+      "bacc": 90.31,
+      "roc_auc": 96.96,
+      "opt_f1": 90.73,
+      "opt_th": 0.63
+    },
+    "elapsed_sec": 4.18
+  },
+  {
+    "label": "[v3-C 13D 모델] 7대 전체 방해 피처(#10, #09, #05, #00, #11, #02, #14) 소거",
+    "dim": 13,
+    "selected_features": [
+      "c2_gaze_pitch_min",
+      "c2_gaze_pitch_drop",
+      "c2_cervical_spine_angle_mean",
+      "c2_cervical_spine_angle_drop",
+      "c2_head_yaw_asymmetry_mean",
+      "c2_head_yaw_asymmetry_max",
+      "c2_head_forward_protrusion_max",
+      "c2_gaze_relative_to_trunk_mean",
+      "c2_cervical_velocity_peak_at_nadir",
+      "c2_gaze_coupling_lag",
+      "c2_cervical_hyperextension_ratio",
+      "c2_gated_true_gaze_pitch_drop",
+      "c2_gated_true_gaze_pitch_bot"
+    ],
+    "dropped_features": [
+      "c2_head_to_torso_relative_pitch",
+      "c2_head_roll_tilt_max",
+      "c2_cervical_spine_angle_min",
+      "c2_gaze_pitch_mean",
+      "c2_head_acceleration_jerk",
+      "c2_gaze_pitch_bottom",
+      "c2_subject_calibrated_gaze_drop"
+    ],
+    "cat": {
+      "f1": 87.37,
+      "precision": 89.44,
+      "recall": 85.39,
+      "bacc": 87.71,
+      "roc_auc": 94.77,
+      "opt_f1": 87.54,
+      "opt_th": 0.48
+    },
+    "lgb": {
+      "f1": 87.62,
+      "precision": 89.11,
+      "recall": 86.18,
+      "bacc": 87.88,
+      "roc_auc": 95.1,
+      "opt_f1": 87.89,
+      "opt_th": 0.46
+    },
+    "cascade": {
+      "f1": 90.37,
+      "precision": 90.37,
+      "recall": 90.37,
+      "bacc": 90.42,
+      "roc_auc": 96.95,
+      "opt_f1": 90.62,
+      "opt_th": 0.52
+    },
+    "elapsed_sec": 4.34
+  }
+]

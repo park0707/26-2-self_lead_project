@@ -1,0 +1,331 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "바벨 굿모닝 (09_굿모닝)",
+  "total_sequences": 1020,
+  "subjects_count": 9,
+  "views_count": 5,
+  "evaluation_protocol": "5-Fold StratifiedGroupKFold (Subject-Isolated, Ceteris Paribus)",
+  "timestamp": "2026-10-11 09:53:19",
+  "mediapipe_metrics": {
+    "c1": {
+      "forced_f1": 84.61,
+      "forced_acc": 84.41,
+      "forced_spec": 83.14,
+      "roc_auc": 92.43,
+      "coverage": 90.0,
+      "retake": 10.0,
+      "sel_f1": 87.81,
+      "sel_acc": 87.69,
+      "views": {
+        "view5": {
+          "alias": "시점 A (우측 후방 45°)",
+          "sel_f1": 91.58,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "accuracy": 91.3
+        },
+        "view2": {
+          "alias": "시점 B (우측 전방 45°)",
+          "sel_f1": 91.11,
+          "coverage": 89.22,
+          "retake": 10.78,
+          "accuracy": 91.21
+        },
+        "view3": {
+          "alias": "시점 C (정면 0°)",
+          "sel_f1": 80.92,
+          "coverage": 86.27,
+          "retake": 13.73,
+          "accuracy": 81.25
+        },
+        "view4": {
+          "alias": "시점 D (좌측 전방 45°)",
+          "sel_f1": 90.05,
+          "coverage": 96.08,
+          "retake": 3.92,
+          "accuracy": 90.31
+        },
+        "view1": {
+          "alias": "시점 E (좌측 후방 45°)",
+          "sel_f1": 84.97,
+          "coverage": 88.24,
+          "retake": 11.76,
+          "accuracy": 83.89
+        }
+      }
+    },
+    "c2": {
+      "forced_f1": 72.49,
+      "forced_acc": 72.84,
+      "forced_prec": 72.71,
+      "forced_rec": 72.28,
+      "roc_auc": 82.39,
+      "coverage": 90.29,
+      "retake": 9.71,
+      "sel_f1": 77.33,
+      "sel_acc": 76.0,
+      "views": {
+        "view5": {
+          "alias": "시점 A (우측 후방 45°)",
+          "sel_f1": 71.43,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "accuracy": 69.57
+        },
+        "view2": {
+          "alias": "시점 B (우측 전방 45°)",
+          "sel_f1": 82.35,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "accuracy": 80.43
+        },
+        "view3": {
+          "alias": "시점 C (정면 0°)",
+          "sel_f1": 85.87,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "accuracy": 85.87
+        },
+        "view4": {
+          "alias": "시점 D (좌측 전방 45°)",
+          "sel_f1": 79.78,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "accuracy": 79.89
+        },
+        "view1": {
+          "alias": "시점 E (좌측 후방 45°)",
+          "sel_f1": 68.27,
+          "coverage": 90.69,
+          "retake": 9.31,
+          "accuracy": 64.32
+        }
+      }
+    },
+    "c3": {
+      "forced_f1": 84.8,
+      "forced_acc": 84.61,
+      "roc_auc": 93.07,
+      "coverage": 90.78,
+      "retake": 9.22,
+      "sel_f1": 88.41,
+      "sel_acc": 87.9,
+      "views": {
+        "view5": {
+          "alias": "시점 A (우측 후방 45°)",
+          "sel_f1": 81.91,
+          "coverage": 92.16,
+          "retake": 7.84,
+          "accuracy": 80.32
+        },
+        "view2": {
+          "alias": "시점 B (우측 전방 45°)",
+          "sel_f1": 94.9,
+          "coverage": 96.08,
+          "retake": 3.92,
+          "accuracy": 94.9
+        },
+        "view3": {
+          "alias": "시점 C (정면 0°)",
+          "sel_f1": 94.3,
+          "coverage": 94.61,
+          "retake": 5.39,
+          "accuracy": 94.3
+        },
+        "view4": {
+          "alias": "시점 D (좌측 전방 45°)",
+          "sel_f1": 92.23,
+          "coverage": 94.12,
+          "retake": 5.88,
+          "accuracy": 92.19
+        },
+        "view1": {
+          "alias": "시점 E (좌측 후방 45°)",
+          "sel_f1": 78.57,
+          "coverage": 82.84,
+          "retake": 17.16,
+          "accuracy": 76.92
+        }
+      }
+    }
+  },
+  "rtmpose_metrics": {
+    "c1": {
+      "forced_f1": 86.18,
+      "forced_prec": 84.4,
+      "forced_rec": 88.04,
+      "forced_acc": 85.88,
+      "forced_spec": 83.73,
+      "roc_auc": 93.81,
+      "coverage": 90.78,
+      "retake": 9.22,
+      "tau_norm": 0.3497,
+      "tau_def": 0.6503,
+      "sel_f1": 89.89,
+      "sel_prec": 88.41,
+      "sel_rec": 91.43,
+      "sel_acc": 89.63,
+      "sel_spec": 87.8,
+      "views": {
+        "view5": {
+          "alias": "시점 A: 우측 후방 (45도)",
+          "sel_f1": 92.46,
+          "coverage": 93.14,
+          "retake": 6.86,
+          "accuracy": 92.11,
+          "roc_auc": 95.74
+        },
+        "view2": {
+          "alias": "시점 B: 우측 전방 (45도)",
+          "sel_f1": 90.61,
+          "coverage": 89.71,
+          "retake": 10.29,
+          "accuracy": 90.71,
+          "roc_auc": 93.19
+        },
+        "view3": {
+          "alias": "시점 C: 정면 (0도)",
+          "sel_f1": 78.61,
+          "coverage": 81.86,
+          "retake": 18.14,
+          "accuracy": 77.84,
+          "roc_auc": 78.68
+        },
+        "view4": {
+          "alias": "시점 D: 좌측 전방 (45도)",
+          "sel_f1": 93.88,
+          "coverage": 92.16,
+          "retake": 7.84,
+          "accuracy": 93.62,
+          "roc_auc": 97.67
+        },
+        "view1": {
+          "alias": "시점 E: 좌측 후방 (45도)",
+          "sel_f1": 92.54,
+          "coverage": 97.06,
+          "retake": 2.94,
+          "accuracy": 92.42,
+          "roc_auc": 97.89
+        }
+      }
+    },
+    "c2": {
+      "forced_f1": 71.34,
+      "forced_prec": 72.21,
+      "forced_rec": 70.5,
+      "forced_acc": 71.96,
+      "forced_spec": 73.4,
+      "roc_auc": 79.89,
+      "coverage": 90.59,
+      "retake": 9.41,
+      "tau_norm": 0.4519,
+      "tau_def": 0.5481,
+      "sel_f1": 73.15,
+      "sel_prec": 74.38,
+      "sel_rec": 71.96,
+      "sel_acc": 73.7,
+      "sel_spec": 75.43,
+      "views": {
+        "view5": {
+          "alias": "시점 A: 우측 후방 (45도)",
+          "sel_f1": 74.16,
+          "coverage": 89.22,
+          "retake": 10.78,
+          "accuracy": 74.73,
+          "roc_auc": 78.31
+        },
+        "view2": {
+          "alias": "시점 B: 우측 전방 (45도)",
+          "sel_f1": 76.09,
+          "coverage": 93.63,
+          "retake": 6.37,
+          "accuracy": 76.96,
+          "roc_auc": 83.5
+        },
+        "view3": {
+          "alias": "시점 C: 정면 (0도)",
+          "sel_f1": 77.11,
+          "coverage": 91.18,
+          "retake": 8.82,
+          "accuracy": 79.57,
+          "roc_auc": 84.42
+        },
+        "view4": {
+          "alias": "시점 D: 좌측 전방 (45도)",
+          "sel_f1": 70.1,
+          "coverage": 92.16,
+          "retake": 7.84,
+          "accuracy": 69.15,
+          "roc_auc": 78.92
+        },
+        "view1": {
+          "alias": "시점 E: 좌측 후방 (45도)",
+          "sel_f1": 68.85,
+          "coverage": 86.76,
+          "retake": 13.24,
+          "accuracy": 67.8,
+          "roc_auc": 74.02
+        }
+      }
+    },
+    "c3": {
+      "forced_f1": 92.94,
+      "forced_prec": 93.86,
+      "forced_rec": 92.04,
+      "forced_acc": 92.94,
+      "forced_spec": 93.86,
+      "roc_auc": 97.34,
+      "coverage": 91.57,
+      "retake": 8.43,
+      "tau_norm": 0.2623,
+      "tau_def": 0.7377,
+      "sel_f1": 95.16,
+      "sel_prec": 95.88,
+      "sel_rec": 94.44,
+      "sel_acc": 95.18,
+      "sel_spec": 95.92,
+      "views": {
+        "view5": {
+          "alias": "시점 A: 우측 후방 (45도)",
+          "sel_f1": 94.57,
+          "coverage": 89.71,
+          "retake": 10.29,
+          "accuracy": 94.54,
+          "roc_auc": 96.92
+        },
+        "view2": {
+          "alias": "시점 B: 우측 전방 (45도)",
+          "sel_f1": 97.89,
+          "coverage": 93.63,
+          "retake": 6.37,
+          "accuracy": 97.91,
+          "roc_auc": 98.88
+        },
+        "view3": {
+          "alias": "시점 C: 정면 (0도)",
+          "sel_f1": 96.13,
+          "coverage": 94.61,
+          "retake": 5.39,
+          "accuracy": 96.37,
+          "roc_auc": 99.2
+        },
+        "view4": {
+          "alias": "시점 D: 좌측 전방 (45도)",
+          "sel_f1": 95.74,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "accuracy": 95.65,
+          "roc_auc": 97.08
+        },
+        "view1": {
+          "alias": "시점 E: 좌측 후방 (45도)",
+          "sel_f1": 91.4,
+          "coverage": 89.71,
+          "retake": 10.29,
+          "accuracy": 91.26,
+          "roc_auc": 95.08
+        }
+      }
+    }
+  }
+}

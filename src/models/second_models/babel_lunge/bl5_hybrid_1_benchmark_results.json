@@ -1,0 +1,273 @@
+{
+  "model_name": "bl5_hybrid_1",
+  "description": "MediaPipe (36D 3D) + RTMPose (37D 2D) + Cross-Modal (6D) Feature-level Fusion",
+  "benchmark_comparison": {
+    "bl5_v5_mediapipe": {
+      "2state_f1": 0.698,
+      "3state_f1": 0.7311,
+      "rejection": 0.099,
+      "auc": 0.8335
+    },
+    "bl5_rtmp_3": {
+      "2state_f1": 0.5958,
+      "3state_f1": 0.6786,
+      "rejection": 0.1171,
+      "auc": 0.8004
+    },
+    "bl5_hybrid_1": {
+      "2state_f1": 0.6836461126005362,
+      "3state_f1": 0.7586206896551724,
+      "rejection": 0.09620721554116562,
+      "auc": 0.8554987592314666
+    }
+  },
+  "overall_performance": {
+    "2state_f1": 0.6836461126005362,
+    "2state_precision": 0.7142857142857143,
+    "2state_recall": 0.6555269922879178,
+    "2state_accuracy": 0.7816836262719704,
+    "roc_auc": 0.8554987592314666,
+    "3state_f1_global": 0.7437185929648241,
+    "3state_rejection_global": 0.09990749306197966,
+    "3state_tau_global": [
+      0.23,
+      0.34
+    ],
+    "3state_f1_adaptive": 0.7586206896551724,
+    "3state_rejection_adaptive": 0.09620721554116562,
+    "precision": 0.7021276595744681,
+    "recall": 0.825,
+    "accuracy": 0.8065506653019447,
+    "cm": [
+      [
+        491,
+        126
+      ],
+      [
+        63,
+        297
+      ]
+    ],
+    "total_samples": 1081,
+    "confirmed_samples": 977,
+    "caution_samples": 104
+  },
+  "view_audit": {
+    "view5": {
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "angle": "Right Back 45°",
+      "total_samples": 221,
+      "confirmed_samples": 199,
+      "caution_samples": 22,
+      "rejection_rate": 0.09954751131221717,
+      "coverage": 0.9004524886877828,
+      "f1": 0.7469879518072289,
+      "precision": 0.6888888888888889,
+      "recall": 0.8157894736842105,
+      "accuracy": 0.7889447236180904,
+      "auc": 0.8567292507457449,
+      "tau_norm": 0.2,
+      "tau_def": 0.29,
+      "cm": [
+        [
+          95,
+          28
+        ],
+        [
+          14,
+          62
+        ]
+      ]
+    },
+    "view2": {
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "angle": "Right Front 45°",
+      "total_samples": 221,
+      "confirmed_samples": 200,
+      "caution_samples": 21,
+      "rejection_rate": 0.09502262443438914,
+      "coverage": 0.9049773755656109,
+      "f1": 0.8205128205128205,
+      "precision": 0.810126582278481,
+      "recall": 0.8311688311688312,
+      "accuracy": 0.86,
+      "auc": 0.8993683102298649,
+      "tau_norm": 0.27,
+      "tau_def": 0.49,
+      "cm": [
+        [
+          108,
+          15
+        ],
+        [
+          13,
+          64
+        ]
+      ]
+    },
+    "view3": {
+      "view_code": "view3",
+      "view_name": "시점 C (정면 0°)",
+      "angle": "Front View 0°",
+      "total_samples": 216,
+      "confirmed_samples": 197,
+      "caution_samples": 19,
+      "rejection_rate": 0.08796296296296291,
+      "coverage": 0.9120370370370371,
+      "f1": 0.6994535519125683,
+      "precision": 0.5765765765765766,
+      "recall": 0.8888888888888888,
+      "accuracy": 0.7208121827411168,
+      "auc": 0.7913415087328131,
+      "tau_norm": 0.18,
+      "tau_def": 0.225,
+      "cm": [
+        [
+          78,
+          47
+        ],
+        [
+          8,
+          64
+        ]
+      ]
+    },
+    "view4": {
+      "view_code": "view4",
+      "view_name": "시점 D (좌측 전방 45°)",
+      "angle": "Left Front 45°",
+      "total_samples": 212,
+      "confirmed_samples": 191,
+      "caution_samples": 21,
+      "rejection_rate": 0.09905660377358494,
+      "coverage": 0.9009433962264151,
+      "f1": 0.7919463087248322,
+      "precision": 0.7375,
+      "recall": 0.855072463768116,
+      "accuracy": 0.837696335078534,
+      "auc": 0.8801410105757932,
+      "tau_norm": 0.245,
+      "tau_def": 0.37,
+      "cm": [
+        [
+          101,
+          21
+        ],
+        [
+          10,
+          59
+        ]
+      ]
+    },
+    "view1": {
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "angle": "Left Back 45°",
+      "total_samples": 211,
+      "confirmed_samples": 190,
+      "caution_samples": 21,
+      "rejection_rate": 0.09952606635071093,
+      "coverage": 0.9004739336492891,
+      "f1": 0.7441860465116279,
+      "precision": 0.7619047619047619,
+      "recall": 0.7272727272727273,
+      "accuracy": 0.8263157894736842,
+      "auc": 0.8605320627357553,
+      "tau_norm": 0.475,
+      "tau_def": 0.67,
+      "cm": [
+        [
+          109,
+          15
+        ],
+        [
+          18,
+          48
+        ]
+      ]
+    }
+  },
+  "feature_names": [
+    "MP_lunge_vspa_torso_pitch_bottom",
+    "MP_lunge_vspa_torso_pitch_peak",
+    "MP_lunge_vspa_torso_pitch_min",
+    "MP_lunge_farrokhi_flexion_excess",
+    "MP_lunge_farrokhi_hyperext_excess",
+    "MP_lunge_vspa_pitch_velocity_peak",
+    "MP_lunge_ldc_phase_weighted_pitch",
+    "MP_lunge_tibia_torso_parallelism",
+    "MP_lunge_hip_knee_flexion_ratio",
+    "MP_lunge_trunk_thigh_angle_min",
+    "MP_lunge_hip_extension_deficit",
+    "MP_lunge_pelvic_tilt_sagittal",
+    "MP_lunge_trunk_knee_moment_arm",
+    "MP_lunge_torso_foreshortening_ratio",
+    "MP_lunge_calibrated_delta_z",
+    "MP_lunge_virtual_sagittal_pitch_3d",
+    "MP_lunge_coronal_tilt_rejection",
+    "MP_lunge_frontal_compression_integral",
+    "MP_lunge_cervico_thoracic_angle",
+    "MP_lunge_head_torso_hyperext_sync",
+    "MP_lunge_lockout_rebound_pitch",
+    "MP_lunge_ascent_trunk_jerk",
+    "MP_lunge_bottom_pitch_stability_std",
+    "MP_lunge_descent_pitch_smoothness",
+    "MP_lunge_delta_pitch_from_setup",
+    "MP_lunge_setup_torso_zero_drift",
+    "MP_lunge_relative_extension_ratio",
+    "MP_lunge_baseline_subtracted_peak",
+    "MP_lunge_femur_to_torso_ratio",
+    "MP_lunge_pelvis_spine_decoupling_angle",
+    "MP_lunge_bidirectional_hyperext_asym",
+    "MP_lunge_early_ascent_burst_jerk",
+    "MP_lunge_trunk_thigh_crp_variability",
+    "MP_lunge_torso_spectral_energy_ratio",
+    "MP_lunge_thoracic_curvature_deviation",
+    "MP_lunge_bottom_energy_flux_ratio",
+    "RTMP_v_trunk_x",
+    "RTMP_v_trunk_y",
+    "RTMP_v_thigh_lead_x",
+    "RTMP_v_thigh_lead_y",
+    "RTMP_cp_trunk_thigh",
+    "RTMP_dp_trunk_thigh",
+    "RTMP_v_disp_shoulder_y",
+    "RTMP_v_disp_hip_y",
+    "RTMP_trunk_compression",
+    "RTMP_thigh_compression",
+    "RTMP_shoulder_y_jerk",
+    "RTMP_crp_2d_variability",
+    "RTMP_knee_toe_x_dist_ratio",
+    "RTMP_knee_hip_x_dist_ratio",
+    "RTMP_torso_angle_2d_bottom",
+    "RTMP_torso_angle_2d_change",
+    "RTMP_spectral_energy_ratio",
+    "RTMP_bottom_energy_flux_ratio_y",
+    "RTMP_cervico_thoracic_2d_angle",
+    "RTMP_hip_extension_deficit_2d",
+    "RTMP_trunk_knee_moment_arm_2d",
+    "RTMP_lockout_rebound_y",
+    "RTMP_setup_torso_zero_drift",
+    "RTMP_baseline_subtracted_peak_y",
+    "RTMP_femur_to_torso_ratio",
+    "RTMP_bidirectional_hyperext_asym_y",
+    "RTMP_tibia_torso_parallelism_2d",
+    "RTMP_v_neck_pelvis_x",
+    "RTMP_v_thigh_rear_x",
+    "RTMP_v_thigh_rear_y",
+    "RTMP_cp_trunk_rear",
+    "RTMP_dp_trunk_rear",
+    "RTMP_v_disp_shoulder_x",
+    "RTMP_v_disp_hip_x",
+    "RTMP_shoulder_velocity_y_max",
+    "RTMP_hip_velocity_y_max",
+    "RTMP_rtmp_trunk_extra_ratio",
+    "cross_mp_pitch_rtmp_angle_diff",
+    "cross_mp_foreshortening_rtmp_comp_ratio",
+    "cross_mp_peak_pitch_rtmp_comp_mult",
+    "cross_mp_pitch_vel_rtmp_sh_vel_diff",
+    "cross_rtmp_trunk_thigh_comp_ratio",
+    "cross_rtmp_sh_hip_vel_ratio"
+  ]
+}

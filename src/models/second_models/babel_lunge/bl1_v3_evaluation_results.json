@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "project_name": "vidio-health-trainer",
+    "exercise": "04_바벨_런지",
+    "target_defect": "c1 (앞다리 무릎 각도 90도)",
+    "model_name": "bl1_v3",
+    "total_samples": 1081,
+    "n_features": 26,
+    "feature_names": [
+      "lead_knee_angle_min",
+      "lead_knee_angle_mean",
+      "lead_knee_90_error_abs",
+      "lead_knee_under_90_ratio",
+      "lead_knee_flex_velocity_max",
+      "sagittal_knee_90_error",
+      "lead_tibia_vertical_tilt",
+      "lead_femur_horizontal_tilt",
+      "lead_knee_toe_overhang",
+      "lead_shank_ankle_coupling",
+      "lead_tibia_sagittal_sway",
+      "lead_femur_length_ratio",
+      "lead_tibia_length_ratio",
+      "rigid_bone_length_consistency",
+      "rear_knee_ground_clearance",
+      "lead_rear_knee_ratio",
+      "rear_knee_angle_min",
+      "pelvic_drop_angle",
+      "stride_length_normalized",
+      "step_width_normalized",
+      "lead_knee_accel_inflection",
+      "bottom_phase_dwell_ratio",
+      "lead_knee_dtw_distance",
+      "lead_knee_visibility_mean",
+      "kinetic_energy_inflection",
+      "jerk_metric_lead_leg"
+    ],
+    "subjects": [
+      "피험자1",
+      "피험자2",
+      "피험자3",
+      "피험자4",
+      "피험자5",
+      "피험자6",
+      "피험자7",
+      "피험자8",
+      "피험자9"
+    ],
+    "elapsed_sec": 7.088010549545288
+  },
+  "baseline_binary": {
+    "binary_f1": 0.7164634146341463,
+    "binary_acc": 0.8279370952821462,
+    "binary_prec": 0.7035928143712575,
+    "binary_recall": 0.7298136645962733,
+    "roc_auc": 0.885170909745579
+  },
+  "best_3state": {
+    "tau_clean": 0.435,
+    "tau_defect": 0.575,
+    "3state_f1": 0.7565674255691769,
+    "3state_acc": 0.8572895277207392,
+    "3state_prec": 0.7552447552447552,
+    "3state_recall": 0.7578947368421053,
+    "uncertainty_rate": 0.09898242368177614,
+    "coverage": 0.9010175763182239,
+    "decided_samples": 974,
+    "uncertain_samples": 107,
+    "clean_count": 688,
+    "defect_count": 286
+  },
+  "view_audit": {
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "samples": 211,
+      "3state_f1": 0.7350427350427351,
+      "accuracy": 0.8368421052631579,
+      "precision": 0.6935483870967742,
+      "recall": 0.7818181818181819,
+      "roc_auc": 0.8899872448979591,
+      "uncertainty_rate": 0.0995260663507109,
+      "coverage": 0.9004739336492891
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "samples": 221,
+      "3state_f1": 0.8264462809917356,
+      "accuracy": 0.8975609756097561,
+      "precision": 0.819672131147541,
+      "recall": 0.8333333333333334,
+      "roc_auc": 0.9191321499013807,
+      "uncertainty_rate": 0.07239819004524888,
+      "coverage": 0.9276018099547512
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "samples": 216,
+      "3state_f1": 0.7027027027027027,
+      "accuracy": 0.8307692307692308,
+      "precision": 0.7222222222222222,
+      "recall": 0.6842105263157895,
+      "roc_auc": 0.8536184210526316,
+      "uncertainty_rate": 0.09722222222222222,
+      "coverage": 0.9027777777777778
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "samples": 212,
+      "3state_f1": 0.7184466019417476,
+      "accuracy": 0.8449197860962567,
+      "precision": 0.7708333333333334,
+      "recall": 0.6727272727272727,
+      "roc_auc": 0.8812288851351351,
+      "uncertainty_rate": 0.1179245283018868,
+      "coverage": 0.8820754716981132
+    },
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "samples": 221,
+      "3state_f1": 0.7899159663865546,
+      "accuracy": 0.8730964467005076,
+      "precision": 0.7704918032786885,
+      "recall": 0.8103448275862069,
+      "roc_auc": 0.8872781065088758,
+      "uncertainty_rate": 0.1085972850678733,
+      "coverage": 0.8914027149321266
+    }
+  }
+}

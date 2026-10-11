@@ -1,0 +1,1031 @@
+{
+  "baseline_30d": {
+    "CatBoost": {
+      "f1_50": 83.98,
+      "opt_f1": 85.08,
+      "opt_th": 0.39,
+      "prec_50": 85.9,
+      "rec_50": 82.14,
+      "auc": 92.38,
+      "clean_fps": 21,
+      "clean_fpr": 24.42
+    },
+    "LightGBM": {
+      "f1_50": 84.85,
+      "opt_f1": 85.97,
+      "opt_th": 0.42,
+      "prec_50": 86.02,
+      "rec_50": 83.72,
+      "auc": 92.73,
+      "clean_fps": 22,
+      "clean_fpr": 25.58
+    },
+    "Cascade": {
+      "f1_50": 84.33,
+      "opt_f1": 85.5,
+      "opt_th": 0.37,
+      "prec_50": 85.98,
+      "rec_50": 82.75,
+      "auc": 92.79,
+      "clean_fps": 23,
+      "clean_fpr": 26.74
+    }
+  },
+  "lofo_results": [
+    {
+      "index": 0,
+      "feature_name": "trunk_flex_max",
+      "cb_f1": 83.81,
+      "delta_f1": -0.17,
+      "cb_opt": 84.93,
+      "delta_opt": -0.15,
+      "auc": 92.35,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 1,
+      "feature_name": "cervical_angle_min",
+      "cb_f1": 84.0,
+      "delta_f1": 0.02,
+      "cb_opt": 85.09,
+      "delta_opt": 0.01,
+      "auc": 92.42,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 2,
+      "feature_name": "lumbar_hyperext_max",
+      "cb_f1": 84.12,
+      "delta_f1": 0.14,
+      "cb_opt": 85.19,
+      "delta_opt": 0.11,
+      "auc": 92.45,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 3,
+      "feature_name": "trunk_flex_speed_max",
+      "cb_f1": 83.96,
+      "delta_f1": -0.02,
+      "cb_opt": 84.88,
+      "delta_opt": -0.2,
+      "auc": 92.26,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 4,
+      "feature_name": "lumbar_stiffness_sd",
+      "cb_f1": 83.98,
+      "delta_f1": 0.0,
+      "cb_opt": 85.08,
+      "delta_opt": 0.0,
+      "auc": 92.38,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 5,
+      "feature_name": "asymmetry_score",
+      "cb_f1": 83.41,
+      "delta_f1": -0.57,
+      "cb_opt": 84.12,
+      "delta_opt": -0.96,
+      "auc": 91.83,
+      "status": "■ 핵심필수 (소거 시 하락)"
+    },
+    {
+      "index": 6,
+      "feature_name": "pelvis_trunk_sync_err",
+      "cb_f1": 83.89,
+      "delta_f1": -0.09,
+      "cb_opt": 84.97,
+      "delta_opt": -0.11,
+      "auc": 92.45,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 7,
+      "feature_name": "phase_speed_ratio",
+      "cb_f1": 84.19,
+      "delta_f1": 0.21,
+      "cb_opt": 85.0,
+      "delta_opt": -0.08,
+      "auc": 92.39,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 8,
+      "feature_name": "bottom_dwell_frames",
+      "cb_f1": 83.94,
+      "delta_f1": -0.04,
+      "cb_opt": 85.07,
+      "delta_opt": -0.01,
+      "auc": 92.41,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 9,
+      "feature_name": "torso_shank_err",
+      "cb_f1": 84.3,
+      "delta_f1": 0.32,
+      "cb_opt": 85.01,
+      "delta_opt": -0.07,
+      "auc": 92.42,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 10,
+      "feature_name": "cervical_min",
+      "cb_f1": 83.15,
+      "delta_f1": -0.83,
+      "cb_opt": 84.12,
+      "delta_opt": -0.96,
+      "auc": 91.36,
+      "status": "■ 핵심필수 (소거 시 하락)"
+    },
+    {
+      "index": 11,
+      "feature_name": "gaze_pitch_mean",
+      "cb_f1": 84.46,
+      "delta_f1": 0.48,
+      "cb_opt": 84.83,
+      "delta_opt": -0.25,
+      "auc": 92.32,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 12,
+      "feature_name": "gaze_pitch_min",
+      "cb_f1": 82.64,
+      "delta_f1": -1.34,
+      "cb_opt": 83.37,
+      "delta_opt": -1.71,
+      "auc": 91.15,
+      "status": "■ 핵심필수 (소거 시 하락)"
+    },
+    {
+      "index": 13,
+      "feature_name": "ear_sh_hip_min",
+      "cb_f1": 84.03,
+      "delta_f1": 0.05,
+      "cb_opt": 84.7,
+      "delta_opt": -0.38,
+      "auc": 92.18,
+      "status": "■ 핵심필수 (소거 시 하락)"
+    },
+    {
+      "index": 14,
+      "feature_name": "ear_sh_hip_mean",
+      "cb_f1": 84.33,
+      "delta_f1": 0.35,
+      "cb_opt": 84.79,
+      "delta_opt": -0.29,
+      "auc": 92.15,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 15,
+      "feature_name": "ear_sh_hip_drop",
+      "cb_f1": 84.66,
+      "delta_f1": 0.68,
+      "cb_opt": 85.06,
+      "delta_opt": -0.02,
+      "auc": 92.43,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 16,
+      "feature_name": "neck_waist_dev",
+      "cb_f1": 83.98,
+      "delta_f1": 0.0,
+      "cb_opt": 84.55,
+      "delta_opt": -0.53,
+      "auc": 92.05,
+      "status": "■ 핵심필수 (소거 시 하락)"
+    },
+    {
+      "index": 17,
+      "feature_name": "spine_cervical_ratio",
+      "cb_f1": 84.6,
+      "delta_f1": 0.62,
+      "cb_opt": 85.19,
+      "delta_opt": 0.11,
+      "auc": 92.49,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 18,
+      "feature_name": "lit_trunk_lean_max",
+      "cb_f1": 84.76,
+      "delta_f1": 0.78,
+      "cb_opt": 85.17,
+      "delta_opt": 0.09,
+      "auc": 92.28,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 19,
+      "feature_name": "lit_cervical_hyperext_flag",
+      "cb_f1": 84.31,
+      "delta_f1": 0.33,
+      "cb_opt": 85.06,
+      "delta_opt": -0.02,
+      "auc": 92.4,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 20,
+      "feature_name": "lit_lumbar_shear_proxy",
+      "cb_f1": 83.88,
+      "delta_f1": -0.1,
+      "cb_opt": 85.09,
+      "delta_opt": 0.01,
+      "auc": 92.36,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 21,
+      "feature_name": "lit_spinal_stiffness",
+      "cb_f1": 84.09,
+      "delta_f1": 0.11,
+      "cb_opt": 84.95,
+      "delta_opt": -0.13,
+      "auc": 92.25,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 22,
+      "feature_name": "c1_true_thoracolumbar_angle_nadir",
+      "cb_f1": 84.46,
+      "delta_f1": 0.48,
+      "cb_opt": 85.07,
+      "delta_opt": -0.01,
+      "auc": 92.25,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 23,
+      "feature_name": "c1_true_thoracolumbar_drop",
+      "cb_f1": 83.93,
+      "delta_f1": -0.05,
+      "cb_opt": 85.0,
+      "delta_opt": -0.08,
+      "auc": 92.39,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 24,
+      "feature_name": "c1_true_thoracolumbar_max_flex",
+      "cb_f1": 84.43,
+      "delta_f1": 0.45,
+      "cb_opt": 84.84,
+      "delta_opt": -0.24,
+      "auc": 92.45,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 25,
+      "feature_name": "c1_true_lumbopelvic_buttwink_deg",
+      "cb_f1": 83.82,
+      "delta_f1": -0.16,
+      "cb_opt": 85.1,
+      "delta_opt": 0.02,
+      "auc": 92.26,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 26,
+      "feature_name": "c1_hip_hinge_spine_decoupling",
+      "cb_f1": 84.05,
+      "delta_f1": 0.07,
+      "cb_opt": 84.87,
+      "delta_opt": -0.21,
+      "auc": 92.32,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 27,
+      "feature_name": "c1_thoracolumbar_hyperextension",
+      "cb_f1": 83.93,
+      "delta_f1": -0.05,
+      "cb_opt": 84.84,
+      "delta_opt": -0.24,
+      "auc": 92.44,
+      "status": "─ 중립/미미"
+    },
+    {
+      "index": 28,
+      "feature_name": "c1_spine_lateral_deviation_max",
+      "cb_f1": 84.03,
+      "delta_f1": 0.05,
+      "cb_opt": 85.22,
+      "delta_opt": 0.14,
+      "auc": 92.52,
+      "status": "★ 성능저해 (소거 시 향상)"
+    },
+    {
+      "index": 29,
+      "feature_name": "c1_lumbar_shear_moment_arm",
+      "cb_f1": 83.78,
+      "delta_f1": -0.2,
+      "cb_opt": 84.91,
+      "delta_opt": -0.17,
+      "auc": 92.35,
+      "status": "─ 중립/미미"
+    }
+  ],
+  "detrimental_features": [
+    {
+      "index": 2,
+      "name": "lumbar_hyperext_max",
+      "delta_f1": 0.14000000000000057,
+      "delta_opt": 0.10999999999999943
+    },
+    {
+      "index": 7,
+      "name": "phase_speed_ratio",
+      "delta_f1": 0.20999999999999375,
+      "delta_opt": -0.0799999999999983
+    },
+    {
+      "index": 9,
+      "name": "torso_shank_err",
+      "delta_f1": 0.3199999999999932,
+      "delta_opt": -0.06999999999999318
+    },
+    {
+      "index": 11,
+      "name": "gaze_pitch_mean",
+      "delta_f1": 0.47999999999998977,
+      "delta_opt": -0.25
+    },
+    {
+      "index": 14,
+      "name": "ear_sh_hip_mean",
+      "delta_f1": 0.3499999999999943,
+      "delta_opt": -0.28999999999999204
+    },
+    {
+      "index": 15,
+      "name": "ear_sh_hip_drop",
+      "delta_f1": 0.6799999999999926,
+      "delta_opt": -0.01999999999999602
+    },
+    {
+      "index": 17,
+      "name": "spine_cervical_ratio",
+      "delta_f1": 0.6199999999999903,
+      "delta_opt": 0.10999999999999943
+    },
+    {
+      "index": 18,
+      "name": "lit_trunk_lean_max",
+      "delta_f1": 0.7800000000000011,
+      "delta_opt": 0.09000000000000341
+    },
+    {
+      "index": 19,
+      "name": "lit_cervical_hyperext_flag",
+      "delta_f1": 0.3299999999999983,
+      "delta_opt": -0.01999999999999602
+    },
+    {
+      "index": 21,
+      "name": "lit_spinal_stiffness",
+      "delta_f1": 0.10999999999999943,
+      "delta_opt": -0.12999999999999545
+    },
+    {
+      "index": 22,
+      "name": "c1_true_thoracolumbar_angle_nadir",
+      "delta_f1": 0.47999999999998977,
+      "delta_opt": -0.010000000000005116
+    },
+    {
+      "index": 24,
+      "name": "c1_true_thoracolumbar_max_flex",
+      "delta_f1": 0.45000000000000284,
+      "delta_opt": -0.23999999999999488
+    },
+    {
+      "index": 28,
+      "name": "c1_spine_lateral_deviation_max",
+      "delta_f1": 0.04999999999999716,
+      "delta_opt": 0.14000000000000057
+    }
+  ],
+  "high_corr_pairs": [
+    {
+      "idx1": 11,
+      "idx2": 12,
+      "name1": "gaze_pitch_mean",
+      "name2": "gaze_pitch_min",
+      "corr": 0.8902284943694062
+    },
+    {
+      "idx1": 13,
+      "idx2": 14,
+      "name1": "ear_sh_hip_min",
+      "name2": "ear_sh_hip_mean",
+      "corr": 0.8531152817703912
+    },
+    {
+      "idx1": 13,
+      "idx2": 16,
+      "name1": "ear_sh_hip_min",
+      "name2": "neck_waist_dev",
+      "corr": -0.974251241937822
+    },
+    {
+      "idx1": 22,
+      "idx2": 24,
+      "name1": "c1_true_thoracolumbar_angle_nadir",
+      "name2": "c1_true_thoracolumbar_max_flex",
+      "corr": 0.9591961931425511
+    }
+  ],
+  "results_level123": {
+    "v2-A_Baseline_30D": {
+      "feature_dim": 30,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "feature_names": [
+        "trunk_flex_max",
+        "cervical_angle_min",
+        "lumbar_hyperext_max",
+        "trunk_flex_speed_max",
+        "lumbar_stiffness_sd",
+        "asymmetry_score",
+        "pelvis_trunk_sync_err",
+        "phase_speed_ratio",
+        "bottom_dwell_frames",
+        "torso_shank_err",
+        "cervical_min",
+        "gaze_pitch_mean",
+        "gaze_pitch_min",
+        "ear_sh_hip_min",
+        "ear_sh_hip_mean",
+        "ear_sh_hip_drop",
+        "neck_waist_dev",
+        "spine_cervical_ratio",
+        "lit_trunk_lean_max",
+        "lit_cervical_hyperext_flag",
+        "lit_lumbar_shear_proxy",
+        "lit_spinal_stiffness",
+        "c1_true_thoracolumbar_angle_nadir",
+        "c1_true_thoracolumbar_drop",
+        "c1_true_thoracolumbar_max_flex",
+        "c1_true_lumbopelvic_buttwink_deg",
+        "c1_hip_hinge_spine_decoupling",
+        "c1_thoracolumbar_hyperextension",
+        "c1_spine_lateral_deviation_max",
+        "c1_lumbar_shear_moment_arm"
+      ],
+      "desc": "기존 v2-A 30D 전수",
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 83.98,
+          "opt_f1": 85.08,
+          "opt_th": 0.39,
+          "prec_50": 85.9,
+          "rec_50": 82.14,
+          "auc": 92.38,
+          "clean_fps": 21,
+          "clean_fpr": 24.42
+        },
+        "LightGBM": {
+          "f1_50": 84.85,
+          "opt_f1": 85.97,
+          "opt_th": 0.42,
+          "prec_50": 86.02,
+          "rec_50": 83.72,
+          "auc": 92.73,
+          "clean_fps": 22,
+          "clean_fpr": 25.58
+        },
+        "Cascade": {
+          "f1_50": 84.33,
+          "opt_f1": 85.5,
+          "opt_th": 0.37,
+          "prec_50": 85.98,
+          "rec_50": 82.75,
+          "auc": 92.79,
+          "clean_fps": 23,
+          "clean_fpr": 26.74
+        }
+      }
+    },
+    "v3-A_Top1Pruned": {
+      "feature_dim": 29,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "feature_names": [
+        "trunk_flex_max",
+        "cervical_angle_min",
+        "lumbar_hyperext_max",
+        "trunk_flex_speed_max",
+        "lumbar_stiffness_sd",
+        "asymmetry_score",
+        "pelvis_trunk_sync_err",
+        "phase_speed_ratio",
+        "bottom_dwell_frames",
+        "torso_shank_err",
+        "cervical_min",
+        "gaze_pitch_mean",
+        "gaze_pitch_min",
+        "ear_sh_hip_min",
+        "ear_sh_hip_mean",
+        "ear_sh_hip_drop",
+        "neck_waist_dev",
+        "spine_cervical_ratio",
+        "lit_cervical_hyperext_flag",
+        "lit_lumbar_shear_proxy",
+        "lit_spinal_stiffness",
+        "c1_true_thoracolumbar_angle_nadir",
+        "c1_true_thoracolumbar_drop",
+        "c1_true_thoracolumbar_max_flex",
+        "c1_true_lumbopelvic_buttwink_deg",
+        "c1_hip_hinge_spine_decoupling",
+        "c1_thoracolumbar_hyperextension",
+        "c1_spine_lateral_deviation_max",
+        "c1_lumbar_shear_moment_arm"
+      ],
+      "desc": "최대 저해 피처 1개(#18) 소거 (29D)",
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 84.76,
+          "opt_f1": 85.17,
+          "opt_th": 0.44,
+          "prec_50": 86.47,
+          "rec_50": 83.11,
+          "auc": 92.28,
+          "clean_fps": 21,
+          "clean_fpr": 24.42
+        },
+        "LightGBM": {
+          "f1_50": 84.96,
+          "opt_f1": 85.37,
+          "opt_th": 0.33,
+          "prec_50": 85.86,
+          "rec_50": 84.08,
+          "auc": 92.74,
+          "clean_fps": 20,
+          "clean_fpr": 23.26
+        },
+        "Cascade": {
+          "f1_50": 84.62,
+          "opt_f1": 85.31,
+          "opt_th": 0.35,
+          "prec_50": 86.06,
+          "rec_50": 83.23,
+          "auc": 92.74,
+          "clean_fps": 21,
+          "clean_fpr": 24.42
+        }
+      }
+    },
+    "v3-B_AllDetrimentalPruned": {
+      "feature_dim": 17,
+      "indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        16,
+        20,
+        23,
+        25,
+        26,
+        27,
+        29
+      ],
+      "feature_names": [
+        "trunk_flex_max",
+        "cervical_angle_min",
+        "trunk_flex_speed_max",
+        "lumbar_stiffness_sd",
+        "asymmetry_score",
+        "pelvis_trunk_sync_err",
+        "bottom_dwell_frames",
+        "cervical_min",
+        "gaze_pitch_min",
+        "ear_sh_hip_min",
+        "neck_waist_dev",
+        "lit_lumbar_shear_proxy",
+        "c1_true_thoracolumbar_drop",
+        "c1_true_lumbopelvic_buttwink_deg",
+        "c1_hip_hinge_spine_decoupling",
+        "c1_thoracolumbar_hyperextension",
+        "c1_lumbar_shear_moment_arm"
+      ],
+      "desc": "저해 피처 13개 전수 소거 (17D)",
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 83.38,
+          "opt_f1": 84.65,
+          "opt_th": 0.37,
+          "prec_50": 84.8,
+          "rec_50": 82.02,
+          "auc": 91.94,
+          "clean_fps": 23,
+          "clean_fpr": 26.74
+        },
+        "LightGBM": {
+          "f1_50": 83.96,
+          "opt_f1": 84.27,
+          "opt_th": 0.44,
+          "prec_50": 85.61,
+          "rec_50": 82.38,
+          "auc": 92.01,
+          "clean_fps": 19,
+          "clean_fpr": 22.09
+        },
+        "Cascade": {
+          "f1_50": 83.83,
+          "opt_f1": 84.81,
+          "opt_th": 0.37,
+          "prec_50": 85.19,
+          "rec_50": 82.5,
+          "auc": 92.19,
+          "clean_fps": 21,
+          "clean_fpr": 24.42
+        }
+      }
+    },
+    "v3-C_CollinearPruned": {
+      "feature_dim": 16,
+      "indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        20,
+        23,
+        25,
+        26,
+        27,
+        29
+      ],
+      "feature_names": [
+        "trunk_flex_max",
+        "cervical_angle_min",
+        "trunk_flex_speed_max",
+        "lumbar_stiffness_sd",
+        "asymmetry_score",
+        "pelvis_trunk_sync_err",
+        "bottom_dwell_frames",
+        "cervical_min",
+        "gaze_pitch_min",
+        "ear_sh_hip_min",
+        "lit_lumbar_shear_proxy",
+        "c1_true_thoracolumbar_drop",
+        "c1_true_lumbopelvic_buttwink_deg",
+        "c1_hip_hinge_spine_decoupling",
+        "c1_thoracolumbar_hyperextension",
+        "c1_lumbar_shear_moment_arm"
+      ],
+      "desc": "저해 피처 + 고상관 중복 소거 (16D)",
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 83.51,
+          "opt_f1": 84.42,
+          "opt_th": 0.43,
+          "prec_50": 84.92,
+          "rec_50": 82.14,
+          "auc": 91.98,
+          "clean_fps": 23,
+          "clean_fpr": 26.74
+        },
+        "LightGBM": {
+          "f1_50": 82.96,
+          "opt_f1": 83.69,
+          "opt_th": 0.39,
+          "prec_50": 84.32,
+          "rec_50": 81.65,
+          "auc": 91.84,
+          "clean_fps": 21,
+          "clean_fpr": 24.42
+        },
+        "Cascade": {
+          "f1_50": 83.76,
+          "opt_f1": 84.53,
+          "opt_th": 0.37,
+          "prec_50": 84.81,
+          "rec_50": 82.75,
+          "auc": 92.16,
+          "clean_fps": 22,
+          "clean_fpr": 25.58
+        }
+      }
+    },
+    "v3-D_EliteCompact": {
+      "feature_dim": 11,
+      "indices": [
+        0,
+        1,
+        3,
+        4,
+        10,
+        13,
+        20,
+        23,
+        25,
+        26,
+        29
+      ],
+      "feature_names": [
+        "trunk_flex_max",
+        "cervical_angle_min",
+        "trunk_flex_speed_max",
+        "lumbar_stiffness_sd",
+        "cervical_min",
+        "ear_sh_hip_min",
+        "lit_lumbar_shear_proxy",
+        "c1_true_thoracolumbar_drop",
+        "c1_true_lumbopelvic_buttwink_deg",
+        "c1_hip_hinge_spine_decoupling",
+        "c1_lumbar_shear_moment_arm"
+      ],
+      "desc": "생체역학 정예 피처셋 (11D)",
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 76.26,
+          "opt_f1": 76.89,
+          "opt_th": 0.33,
+          "prec_50": 78.26,
+          "rec_50": 74.36,
+          "auc": 84.69,
+          "clean_fps": 25,
+          "clean_fpr": 29.07
+        },
+        "LightGBM": {
+          "f1_50": 74.11,
+          "opt_f1": 76.42,
+          "opt_th": 0.29,
+          "prec_50": 76.55,
+          "rec_50": 71.81,
+          "auc": 83.24,
+          "clean_fps": 32,
+          "clean_fpr": 37.21
+        },
+        "Cascade": {
+          "f1_50": 74.67,
+          "opt_f1": 76.79,
+          "opt_th": 0.34,
+          "prec_50": 76.93,
+          "rec_50": 72.54,
+          "auc": 84.34,
+          "clean_fps": 29,
+          "clean_fpr": 33.72
+        }
+      }
+    }
+  },
+  "results_all_1906": {
+    "v2-A_Baseline_30D": {
+      "feature_dim": 30,
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 77.19,
+          "opt_f1": 78.3,
+          "opt_th": 0.38,
+          "prec_50": 80.61,
+          "rec_50": 74.05,
+          "auc": 86.23,
+          "clean_fps": 44,
+          "clean_fpr": 35.2
+        },
+        "LightGBM": {
+          "f1_50": 77.1,
+          "opt_f1": 78.41,
+          "opt_th": 0.38,
+          "prec_50": 79.79,
+          "rec_50": 74.59,
+          "auc": 85.94,
+          "clean_fps": 40,
+          "clean_fpr": 32.0
+        },
+        "Cascade": {
+          "f1_50": 77.17,
+          "opt_f1": 78.47,
+          "opt_th": 0.41,
+          "prec_50": 80.69,
+          "rec_50": 73.94,
+          "auc": 86.47,
+          "clean_fps": 42,
+          "clean_fpr": 33.6
+        }
+      }
+    },
+    "v3-A_Top1Pruned": {
+      "feature_dim": 29,
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 76.58,
+          "opt_f1": 78.26,
+          "opt_th": 0.36,
+          "prec_50": 79.93,
+          "rec_50": 73.51,
+          "auc": 86.27,
+          "clean_fps": 43,
+          "clean_fpr": 34.4
+        },
+        "LightGBM": {
+          "f1_50": 77.51,
+          "opt_f1": 77.94,
+          "opt_th": 0.37,
+          "prec_50": 80.16,
+          "rec_50": 75.03,
+          "auc": 85.68,
+          "clean_fps": 38,
+          "clean_fpr": 30.4
+        },
+        "Cascade": {
+          "f1_50": 77.79,
+          "opt_f1": 78.74,
+          "opt_th": 0.41,
+          "prec_50": 80.89,
+          "rec_50": 74.92,
+          "auc": 86.31,
+          "clean_fps": 39,
+          "clean_fpr": 31.2
+        }
+      }
+    },
+    "v3-B_AllDetrimentalPruned": {
+      "feature_dim": 17,
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 76.23,
+          "opt_f1": 77.97,
+          "opt_th": 0.4,
+          "prec_50": 78.79,
+          "rec_50": 73.83,
+          "auc": 85.33,
+          "clean_fps": 40,
+          "clean_fpr": 32.0
+        },
+        "LightGBM": {
+          "f1_50": 76.61,
+          "opt_f1": 77.66,
+          "opt_th": 0.38,
+          "prec_50": 78.63,
+          "rec_50": 74.7,
+          "auc": 85.09,
+          "clean_fps": 38,
+          "clean_fpr": 30.4
+        },
+        "Cascade": {
+          "f1_50": 76.73,
+          "opt_f1": 78.24,
+          "opt_th": 0.4,
+          "prec_50": 79.12,
+          "rec_50": 74.48,
+          "auc": 85.57,
+          "clean_fps": 39,
+          "clean_fpr": 31.2
+        }
+      }
+    },
+    "v3-C_CollinearPruned": {
+      "feature_dim": 16,
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 76.52,
+          "opt_f1": 77.63,
+          "opt_th": 0.43,
+          "prec_50": 78.67,
+          "rec_50": 74.48,
+          "auc": 85.4,
+          "clean_fps": 44,
+          "clean_fpr": 35.2
+        },
+        "LightGBM": {
+          "f1_50": 76.4,
+          "opt_f1": 77.51,
+          "opt_th": 0.37,
+          "prec_50": 77.82,
+          "rec_50": 75.03,
+          "auc": 84.95,
+          "clean_fps": 44,
+          "clean_fpr": 35.2
+        },
+        "Cascade": {
+          "f1_50": 76.44,
+          "opt_f1": 77.88,
+          "opt_th": 0.42,
+          "prec_50": 78.27,
+          "rec_50": 74.7,
+          "auc": 85.5,
+          "clean_fps": 45,
+          "clean_fpr": 36.0
+        }
+      }
+    },
+    "v3-D_EliteCompact": {
+      "feature_dim": 11,
+      "metrics": {
+        "CatBoost": {
+          "f1_50": 65.32,
+          "opt_f1": 69.82,
+          "opt_th": 0.38,
+          "prec_50": 67.72,
+          "rec_50": 63.08,
+          "auc": 74.19,
+          "clean_fps": 43,
+          "clean_fpr": 34.4
+        },
+        "LightGBM": {
+          "f1_50": 63.64,
+          "opt_f1": 68.99,
+          "opt_th": 0.31,
+          "prec_50": 64.9,
+          "rec_50": 62.43,
+          "auc": 72.56,
+          "clean_fps": 49,
+          "clean_fpr": 39.2
+        },
+        "Cascade": {
+          "f1_50": 64.37,
+          "opt_f1": 69.38,
+          "opt_th": 0.35,
+          "prec_50": 66.94,
+          "rec_50": 62.0,
+          "auc": 73.85,
+          "clean_fps": 46,
+          "clean_fpr": 36.8
+        }
+      }
+    }
+  }
+}

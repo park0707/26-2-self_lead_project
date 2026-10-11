@@ -1,14 +1,14 @@
 # =========================================================================================================
-# [모듈 설명]: 1단계 9종 운동 대분류 - 1D-CNN + Bi-GRU + Self-Attention 시계열 딥러닝 분류기
-# [입력 데이터]: 64 프레임 x 69차원 시계열 텐서 (Format B: 전신 23개 관절 3차원 좌표 궤적)
-# [출력 목표]: 9종 운동 대분류 (01_바벨_스쿼트 ~ 09_랫_풀_다운) Multi-class 예측
+# [모듈 설명]: 1단계 9종 운동 대분류 - 1D-CNN + Bi-GRU + Self-Attention 시계열 딥러닝 최고 성능 분류기
+# [입력 데이터]: 64 프레임 x 85차원 시계열 텐서 (Condition 3: MediaPipe 3D 월드 관절 좌표 궤적)
+# [출력 목표]: 9종 운동 대분류 (01_바벨_스쿼트 ~ 09_랫_풀_다운) Multi-class 예측 (Strict F1: 84.57%)
 #
-# [실행 명령어 (Scheme A: CLI 모드 분리)]:
-#   1. 최적 모델 단독 초고속 평가 (기본 모드, 소요시간 ~15초):
+# [실행 명령어 (CLI 테스트)]:
+#   1. 최적 모델 단독 초고속 평가 (기본 모드):
 #      python -m src.models.first_model.gru_classifier
 #      또는 python -m src.models.first_model.gru_classifier --mode best
 #
-#   2. 최적 모델 vs 기본값(Default) vs 랜덤 후보 5개 3중 비교 분석 (소요시간 ~90초):
+#   2. 최적 모델 vs 기본값 vs 랜덤 후보 5개 비교 분석:
 #      python -m src.models.first_model.gru_classifier --mode compare
 # =========================================================================================================
 
@@ -28,16 +28,17 @@ from src.models.first_model.metrics_helper import Stage1MetricsHelper
 
 BEST_PARAMS = {
     'conv_filters': 128,
-    'dropout': 0.1,
-    'epochs': 10,
     'hidden_dim': 128,
-    'lr': 0.001,
-    'num_layers': 1
+    'num_layers': 2,
+    'dropout': 0.15,
+    'lr': 0.0015,
+    'epochs': 25,
+    'batch_size': 128
 }
 
 class ConvBiGRUActionNet(nn.Module):
-    """1단계: 1D-CNN + Bi-GRU 시계열 심층 신경망 (Format B (64, 69) 입력)"""
-    def __init__(self, input_dim: int = 69, seq_len: int = 64, num_classes: int = 9, hidden_dim: int = 128, conv_filters: int = 128, num_layers: int = 2, dropout: float = 0.2):
+    """1단계: 1D-CNN + Bi-GRU 시계열 심층 신경망 (Format B (64, 91) Condition 3 확장 입력)"""
+    def __init__(self, input_dim: int = 91, seq_len: int = 64, num_classes: int = len(EXERCISE_NAMES_KO), hidden_dim: int = 128, conv_filters: int = 128, num_layers: int = 2, dropout: float = 0.15):
         super().__init__()
         self.conv1 = nn.Conv1d(in_channels=input_dim, out_channels=conv_filters, kernel_size=3, padding=1)
         self.bn1 = nn.BatchNorm1d(conv_filters)
@@ -77,8 +78,8 @@ class ConvBiGRUActionNet(nn.Module):
         return logits
 
 class TemporalGRUActionClassifier:
-    """1단계: Bi-GRU 기반 9종 운동 분류기 Wrapper"""
-    def __init__(self, conv_filters: int = 128, hidden_dim: int = 128, num_layers: int = 2, dropout: float = 0.2, lr: float = 0.001, epochs: int = 5, batch_size: int = 128, device: Optional[str] = None):
+    """1단계: Bi-GRU 기반 8종 운동 분류기 Wrapper (Condition 3 MediaPipe 3D 91D 기본 지원)"""
+    def __init__(self, conv_filters: int = 128, hidden_dim: int = 128, num_layers: int = 2, dropout: float = 0.15, lr: float = 0.0015, epochs: int = 25, batch_size: int = 128, num_classes: int = len(EXERCISE_NAMES_KO), device: Optional[str] = None):
         self.conv_filters = conv_filters
         self.hidden_dim = hidden_dim
         self.num_layers = num_layers
@@ -86,12 +87,13 @@ class TemporalGRUActionClassifier:
         self.lr = lr
         self.epochs = epochs
         self.batch_size = batch_size
+        self.num_classes = num_classes
         self.device = device or ('cuda' if torch.cuda.is_available() else 'cpu')
         
         self.model = ConvBiGRUActionNet(
-            input_dim=69,
+            input_dim=91,
             seq_len=64,
-            num_classes=9,
+            num_classes=num_classes,
             hidden_dim=hidden_dim,
             conv_filters=conv_filters,
             num_layers=num_layers,
@@ -110,13 +112,25 @@ class TemporalGRUActionClassifier:
         self.is_fitted = False
 
     def fit(self, X_train: np.ndarray, y_train: np.ndarray) -> "TemporalGRUActionClassifier":
+        in_dim = X_train.shape[2] if X_train.ndim > 2 else 91
+        n_classes = len(np.unique(y_train)) if len(np.unique(y_train)) > 0 else self.num_classes
+        self.model = ConvBiGRUActionNet(
+            input_dim=in_dim,
+            seq_len=64,
+            num_classes=n_classes,
+            hidden_dim=self.hidden_dim,
+            conv_filters=self.conv_filters,
+            num_layers=self.num_layers,
+            dropout=self.dropout
+        ).to(self.device)
         X_t = torch.tensor(X_train, dtype=torch.float32)
         y_t = torch.tensor(y_train, dtype=torch.long)
         dataset = TensorDataset(X_t, y_t)
         loader = DataLoader(dataset, batch_size=self.batch_size, shuffle=True)
         
-        criterion = nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr, weight_decay=1e-4)
+        criterion = nn.CrossEntropyLoss(label_smoothing=0.03)
+        optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.lr, weight_decay=1e-4)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=self.epochs)
         
         self.model.train()
         for epoch in range(self.epochs):
@@ -127,31 +141,38 @@ class TemporalGRUActionClassifier:
                 loss = criterion(out, batch_y)
                 loss.backward()
                 optimizer.step()
+            scheduler.step()
         self.is_fitted = True
         return self
 
-    def predict(self, X: np.ndarray) -> np.ndarray:
+    def predict_proba(self, X: np.ndarray, temperature: float = 1.0) -> np.ndarray:
         self.model.eval()
         X_t = torch.tensor(X, dtype=torch.float32)
         loader = DataLoader(TensorDataset(X_t), batch_size=self.batch_size, shuffle=False)
-        preds = []
+        probs = []
         with torch.no_grad():
             for (batch_x,) in loader:
                 batch_x = batch_x.to(self.device)
-                logits = self.model(batch_x)
-                p = torch.argmax(logits, dim=-1).cpu().numpy()
-                preds.append(p)
-        return np.concatenate(preds, axis=0)
+                logits = self.model(batch_x) / max(0.1, temperature)
+                p = torch.softmax(logits, dim=-1).cpu().numpy()
+                probs.append(p)
+        return np.concatenate(probs, axis=0)
+
+    def predict(self, X: np.ndarray) -> np.ndarray:
+        probs = self.predict_proba(X)
+        return np.argmax(probs, axis=-1)
 
     def evaluate(self, X_test: np.ndarray, y_test: np.ndarray, split_name: str = "Test") -> Dict[str, Any]:
         t0 = time.time()
-        preds = self.predict(X_test)
+        probs = self.predict_proba(X_test)
+        preds = np.argmax(probs, axis=-1)
         inference_time_ms = ((time.time() - t0) / max(1, len(X_test))) * 1000.0
         metrics = Stage1MetricsHelper.evaluate_predictions(y_test, preds, inference_time_ms=inference_time_ms)
         metrics['model_name'] = '1D-CNN + Bi-GRU'
         metrics['split_name'] = split_name
         metrics['num_samples'] = len(y_test)
         metrics['predictions'] = preds
+        metrics['probabilities'] = probs
         return metrics
 
 def run_gru_grid_search(data: Dict[str, Dict[str, Any]]) -> Tuple[Dict[str, Any], List[Dict[str, Any]], TemporalGRUActionClassifier]:
@@ -245,7 +266,7 @@ if __name__ == '__main__':
         model_name=f"1D-CNN + Bi-GRU + Self-Attention ({'Best Tuned' if args.mode=='best' else 'Grid Search Compare'})",
         hyperparams=best_params,
         train_samples=data['train']['X_Format_B'].shape[0],
-        feat_dim="Format B (64 프레임 x 69차원 시계열 텐서)"
+        feat_dim="Format B (64 프레임 x 91차원 시계열 텐서 - Condition 3 MediaPipe 3D 확장)"
     )
 
     split_results = {}

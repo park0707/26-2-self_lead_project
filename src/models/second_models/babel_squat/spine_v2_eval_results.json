@@ -1,0 +1,482 @@
+{
+  "baseline": {
+    "feature_count": 16,
+    "feature_names": [
+      "c1_cyclogram_norm_area",
+      "c1_ascent_velocity_ratio",
+      "c1_onset_phase_lag",
+      "c1_butt_wink_accel",
+      "c1_torso_log_dimensionless_jerk",
+      "c1_frontal_spine_asymmetry",
+      "c1_rmse_hysteresis_trunk",
+      "c1_lumbar_hyperextension_index",
+      "c1_bar_to_midfoot_sagittal_deviation",
+      "torso_shank_err",
+      "cervical_min",
+      "gaze_pitch_mean",
+      "gaze_pitch_min",
+      "ear_sh_hip_min",
+      "ear_sh_hip_mean",
+      "ear_sh_hip_drop"
+    ],
+    "level123": {
+      "champion": "XGBoost_t0",
+      "metrics": {
+        "f1": 84.34,
+        "precision": 86.24,
+        "recall": 82.58,
+        "bacc": 84.03,
+        "roc_auc": 92.66,
+        "score": 86.31,
+        "latency_ms": 0.272
+      },
+      "all_results": {
+        "LightGBM_t0": {
+          "f1": 83.89,
+          "precision": 86.18,
+          "recall": 81.88,
+          "bacc": 83.7,
+          "roc_auc": 92.42,
+          "score": 85.96,
+          "latency_ms": 0.215
+        },
+        "LightGBM_t1": {
+          "f1": 83.65,
+          "precision": 85.32,
+          "recall": 82.12,
+          "bacc": 83.24,
+          "roc_auc": 92.12,
+          "score": 85.62,
+          "latency_ms": 0.41
+        },
+        "LightGBM_t2": {
+          "f1": 84.28,
+          "precision": 85.81,
+          "recall": 82.9,
+          "bacc": 83.89,
+          "roc_auc": 92.36,
+          "score": 86.17,
+          "latency_ms": 0.255
+        },
+        "LightGBM_t3": {
+          "f1": 84.23,
+          "precision": 86.3,
+          "recall": 82.46,
+          "bacc": 84.01,
+          "roc_auc": 92.59,
+          "score": 86.24,
+          "latency_ms": 0.359
+        },
+        "CatBoost_t0": {
+          "f1": 83.46,
+          "precision": 85.92,
+          "recall": 81.25,
+          "bacc": 83.31,
+          "roc_auc": 92.11,
+          "score": 85.57,
+          "latency_ms": 3.218
+        },
+        "CatBoost_t1": {
+          "f1": 82.83,
+          "precision": 85.73,
+          "recall": 80.23,
+          "bacc": 82.77,
+          "roc_auc": 91.91,
+          "score": 85.08,
+          "latency_ms": 1.76
+        },
+        "CatBoost_t2": {
+          "f1": 83.03,
+          "precision": 85.43,
+          "recall": 80.88,
+          "bacc": 82.87,
+          "roc_auc": 92.27,
+          "score": 85.29,
+          "latency_ms": 0.777
+        },
+        "CatBoost_t3": {
+          "f1": 83.64,
+          "precision": 86.14,
+          "recall": 81.35,
+          "bacc": 83.47,
+          "roc_auc": 92.2,
+          "score": 85.72,
+          "latency_ms": 1.793
+        },
+        "XGBoost_t0": {
+          "f1": 84.34,
+          "precision": 86.24,
+          "recall": 82.58,
+          "bacc": 84.03,
+          "roc_auc": 92.66,
+          "score": 86.31,
+          "latency_ms": 0.272
+        },
+        "XGBoost_t1": {
+          "f1": 83.76,
+          "precision": 85.82,
+          "recall": 81.9,
+          "bacc": 83.5,
+          "roc_auc": 92.65,
+          "score": 85.89,
+          "latency_ms": 0.451
+        },
+        "RandomForest_t0": {
+          "f1": 83.15,
+          "precision": 84.51,
+          "recall": 81.93,
+          "bacc": 82.66,
+          "roc_auc": 91.89,
+          "score": 85.17,
+          "latency_ms": 0.875
+        },
+        "RandomForest_t1": {
+          "f1": 83.63,
+          "precision": 85.28,
+          "recall": 82.11,
+          "bacc": 83.27,
+          "roc_auc": 91.98,
+          "score": 85.59,
+          "latency_ms": 1.125
+        },
+        "ExtraTrees_t0": {
+          "f1": 83.26,
+          "precision": 84.83,
+          "recall": 81.83,
+          "bacc": 82.85,
+          "roc_auc": 92.28,
+          "score": 85.37,
+          "latency_ms": 0.615
+        },
+        "ExtraTrees_t1": {
+          "f1": 82.3,
+          "precision": 85.24,
+          "recall": 79.62,
+          "bacc": 82.26,
+          "roc_auc": 91.31,
+          "score": 84.54,
+          "latency_ms": 0.767
+        }
+      }
+    }
+  },
+  "v2_compact": {
+    "feature_count": 13,
+    "feature_names": [
+      "c1_cyclogram_norm_area",
+      "c1_ascent_velocity_ratio",
+      "c1_butt_wink_accel",
+      "c1_frontal_spine_asymmetry",
+      "c1_rmse_hysteresis_trunk",
+      "c1_bar_to_midfoot_sagittal_deviation",
+      "c1_thoraco_lumbar_segment_ratio",
+      "c1_pelvis_tilt_at_bottom",
+      "c1_descent_spine_drift_rate",
+      "c1_trunk_knee_phase_coherence",
+      "ear_sh_hip_min",
+      "ear_sh_hip_mean",
+      "ear_sh_hip_drop"
+    ],
+    "level123": {
+      "champion": "CatBoost_t0",
+      "metrics": {
+        "f1": 79.36,
+        "precision": 81.58,
+        "recall": 77.34,
+        "bacc": 78.92,
+        "roc_auc": 88.23,
+        "score": 81.43,
+        "latency_ms": 0.939
+      },
+      "all_results": {
+        "LightGBM_t0": {
+          "f1": 78.69,
+          "precision": 81.71,
+          "recall": 75.94,
+          "bacc": 78.47,
+          "roc_auc": 87.6,
+          "score": 80.84,
+          "latency_ms": 0.284
+        },
+        "LightGBM_t1": {
+          "f1": 78.55,
+          "precision": 80.32,
+          "recall": 76.98,
+          "bacc": 77.88,
+          "roc_auc": 87.19,
+          "score": 80.47,
+          "latency_ms": 0.562
+        },
+        "LightGBM_t2": {
+          "f1": 77.81,
+          "precision": 80.53,
+          "recall": 75.31,
+          "bacc": 77.46,
+          "roc_auc": 87.53,
+          "score": 80.12,
+          "latency_ms": 0.277
+        },
+        "LightGBM_t3": {
+          "f1": 77.78,
+          "precision": 80.24,
+          "recall": 75.51,
+          "bacc": 77.33,
+          "roc_auc": 87.45,
+          "score": 80.04,
+          "latency_ms": 0.277
+        },
+        "CatBoost_t0": {
+          "f1": 79.36,
+          "precision": 81.58,
+          "recall": 77.34,
+          "bacc": 78.92,
+          "roc_auc": 88.23,
+          "score": 81.43,
+          "latency_ms": 0.939
+        },
+        "CatBoost_t1": {
+          "f1": 78.04,
+          "precision": 80.71,
+          "recall": 75.65,
+          "bacc": 77.7,
+          "roc_auc": 87.96,
+          "score": 80.4,
+          "latency_ms": 1.92
+        },
+        "CatBoost_t2": {
+          "f1": 78.81,
+          "precision": 81.22,
+          "recall": 76.64,
+          "bacc": 78.41,
+          "roc_auc": 88.23,
+          "score": 81.03,
+          "latency_ms": 0.784
+        },
+        "CatBoost_t3": {
+          "f1": 79.18,
+          "precision": 81.58,
+          "recall": 77.0,
+          "bacc": 78.78,
+          "roc_auc": 88.16,
+          "score": 81.28,
+          "latency_ms": 1.833
+        },
+        "XGBoost_t0": {
+          "f1": 78.91,
+          "precision": 81.04,
+          "recall": 76.95,
+          "bacc": 78.4,
+          "roc_auc": 87.89,
+          "score": 80.98,
+          "latency_ms": 0.295
+        },
+        "XGBoost_t1": {
+          "f1": 77.99,
+          "precision": 80.44,
+          "recall": 75.76,
+          "bacc": 77.58,
+          "roc_auc": 87.74,
+          "score": 80.28,
+          "latency_ms": 0.433
+        },
+        "RandomForest_t0": {
+          "f1": 78.79,
+          "precision": 80.55,
+          "recall": 77.18,
+          "bacc": 78.14,
+          "roc_auc": 87.62,
+          "score": 80.77,
+          "latency_ms": 0.873
+        },
+        "RandomForest_t1": {
+          "f1": 79.25,
+          "precision": 80.83,
+          "recall": 77.79,
+          "bacc": 78.58,
+          "roc_auc": 87.9,
+          "score": 81.18,
+          "latency_ms": 1.041
+        },
+        "ExtraTrees_t0": {
+          "f1": 78.28,
+          "precision": 81.15,
+          "recall": 75.67,
+          "bacc": 78.07,
+          "roc_auc": 87.87,
+          "score": 80.6,
+          "latency_ms": 0.63
+        },
+        "ExtraTrees_t1": {
+          "f1": 76.76,
+          "precision": 81.17,
+          "recall": 73.01,
+          "bacc": 76.99,
+          "roc_auc": 87.21,
+          "score": 79.45,
+          "latency_ms": 0.762
+        }
+      }
+    }
+  },
+  "v2_full": {
+    "feature_count": 16,
+    "feature_names": [
+      "c1_cyclogram_norm_area",
+      "c1_ascent_velocity_ratio",
+      "c1_butt_wink_accel",
+      "c1_frontal_spine_asymmetry",
+      "c1_rmse_hysteresis_trunk",
+      "c1_bar_to_midfoot_sagittal_deviation",
+      "c1_thoraco_lumbar_segment_ratio",
+      "c1_pelvis_tilt_at_bottom",
+      "c1_descent_spine_drift_rate",
+      "c1_trunk_knee_phase_coherence",
+      "fine_ear_shoulder_hip_angle_min",
+      "fine_ear_shoulder_hip_angle_mean",
+      "fine_ear_shoulder_hip_angle_drop",
+      "fine_head_forward_protrusion_max",
+      "fine_neck_back_waist_angle_min",
+      "fine_neck_back_waist_angle_drop"
+    ],
+    "level123": {
+      "champion": "XGBoost_t0",
+      "metrics": {
+        "f1": 79.8,
+        "precision": 82.19,
+        "recall": 77.62,
+        "bacc": 79.41,
+        "roc_auc": 88.44,
+        "score": 81.82,
+        "latency_ms": 0.287
+      },
+      "all_results": {
+        "LightGBM_t0": {
+          "f1": 79.16,
+          "precision": 82.03,
+          "recall": 76.63,
+          "bacc": 78.88,
+          "roc_auc": 88.33,
+          "score": 81.35,
+          "latency_ms": 0.225
+        },
+        "LightGBM_t1": {
+          "f1": 79.48,
+          "precision": 82.36,
+          "recall": 76.88,
+          "bacc": 79.21,
+          "roc_auc": 88.29,
+          "score": 81.59,
+          "latency_ms": 0.573
+        },
+        "LightGBM_t2": {
+          "f1": 79.01,
+          "precision": 81.47,
+          "recall": 76.78,
+          "bacc": 78.63,
+          "roc_auc": 87.85,
+          "score": 81.09,
+          "latency_ms": 0.326
+        },
+        "LightGBM_t3": {
+          "f1": 78.57,
+          "precision": 80.64,
+          "recall": 76.66,
+          "bacc": 78.03,
+          "roc_auc": 88.0,
+          "score": 80.74,
+          "latency_ms": 0.367
+        },
+        "CatBoost_t0": {
+          "f1": 78.61,
+          "precision": 81.02,
+          "recall": 76.47,
+          "bacc": 78.22,
+          "roc_auc": 88.26,
+          "score": 80.88,
+          "latency_ms": 1.154
+        },
+        "CatBoost_t1": {
+          "f1": 78.08,
+          "precision": 81.55,
+          "recall": 75.09,
+          "bacc": 78.04,
+          "roc_auc": 88.07,
+          "score": 80.56,
+          "latency_ms": 1.906
+        },
+        "CatBoost_t2": {
+          "f1": 78.93,
+          "precision": 81.75,
+          "recall": 76.48,
+          "bacc": 78.67,
+          "roc_auc": 88.31,
+          "score": 81.19,
+          "latency_ms": 1.032
+        },
+        "CatBoost_t3": {
+          "f1": 79.07,
+          "precision": 81.2,
+          "recall": 77.18,
+          "bacc": 78.58,
+          "roc_auc": 88.5,
+          "score": 81.25,
+          "latency_ms": 2.038
+        },
+        "XGBoost_t0": {
+          "f1": 79.8,
+          "precision": 82.19,
+          "recall": 77.62,
+          "bacc": 79.41,
+          "roc_auc": 88.44,
+          "score": 81.82,
+          "latency_ms": 0.287
+        },
+        "XGBoost_t1": {
+          "f1": 79.29,
+          "precision": 81.89,
+          "recall": 76.95,
+          "bacc": 78.94,
+          "roc_auc": 88.52,
+          "score": 81.47,
+          "latency_ms": 0.479
+        },
+        "RandomForest_t0": {
+          "f1": 79.31,
+          "precision": 80.93,
+          "recall": 77.81,
+          "bacc": 78.65,
+          "roc_auc": 88.04,
+          "score": 81.26,
+          "latency_ms": 0.932
+        },
+        "RandomForest_t1": {
+          "f1": 78.91,
+          "precision": 81.07,
+          "recall": 76.97,
+          "bacc": 78.46,
+          "roc_auc": 88.28,
+          "score": 81.1,
+          "latency_ms": 1.114
+        },
+        "ExtraTrees_t0": {
+          "f1": 79.38,
+          "precision": 81.24,
+          "recall": 77.67,
+          "bacc": 78.86,
+          "roc_auc": 88.03,
+          "score": 81.36,
+          "latency_ms": 0.63
+        },
+        "ExtraTrees_t1": {
+          "f1": 77.57,
+          "precision": 81.86,
+          "recall": 73.98,
+          "bacc": 77.73,
+          "roc_auc": 87.16,
+          "score": 80.02,
+          "latency_ms": 0.775
+        }
+      }
+    }
+  }
+}

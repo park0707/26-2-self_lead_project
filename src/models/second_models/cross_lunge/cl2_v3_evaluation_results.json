@@ -1,0 +1,160 @@
+{
+  "model_name": "cl2_v3",
+  "defect_name": "Condition 2 - 몸통 앞발 앞무릎 방향 일치 여부",
+  "feature_dim": 48,
+  "eliminated_features": [
+    "kinematic_shank_torsion_angle",
+    "user_geom_knee_foot_angle_deg",
+    "user_geom_torso_knee_angle_deg",
+    "user_geom_torso_foot_angle_deg",
+    "kinematic_reconstructed_foot_yaw",
+    "pacs_dkcd_medial_deviation",
+    "view_is_view1",
+    "view_is_view2",
+    "view_is_view3",
+    "view_is_view4",
+    "view_is_view5"
+  ],
+  "n_samples": 1025,
+  "ensemble_weights": {
+    "catboost": 0.4785939612438035,
+    "xgboost": 0.27579990986931063,
+    "lightgbm": 0.24560612888688593
+  },
+  "comparison_summary": {
+    "v1_2state_f1": 0.6472795497185742,
+    "v2_2state_f1": 0.6285714285714286,
+    "v3_2state_f1": 0.6406101048617732,
+    "v1_3state_f1": 0.6928571428571428,
+    "v2_3state_f1": 0.6937269372693727,
+    "v3_3state_f1": 0.6892655367231638,
+    "v1_roc_auc": 0.676957928802589,
+    "v2_roc_auc": 0.6749476489624977,
+    "v3_roc_auc": 0.6820559680182752
+  },
+  "overall_2state": {
+    "f1": 0.6406101048617732,
+    "accuracy": 0.6321951219512195,
+    "precision": 0.6292134831460674,
+    "recall": 0.6524271844660194,
+    "roc_auc": 0.6820559680182752
+  },
+  "overall_3state": {
+    "effective_f1": 0.6892655367231638,
+    "accuracy": 0.647812166488794,
+    "precision": 0.6224489795918368,
+    "recall": 0.7721518987341772,
+    "uncertainty_rate": 0.08585365853658533,
+    "coverage": 0.9141463414634147,
+    "roc_auc": 0.6820559680182752
+  },
+  "view_audits_3state": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "count": 205,
+      "tau_clean": 0.4100000000000002,
+      "tau_defect": 0.46,
+      "effective_f1": 0.7,
+      "accuracy": 0.6432432432432432,
+      "precision": 0.616,
+      "recall": 0.8105263157894737,
+      "uncertainty_rate": 0.09756097560975607,
+      "confirmed_count": 185,
+      "auc": 0.6742813630306492
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "count": 205,
+      "tau_clean": 0.4250000000000002,
+      "tau_defect": 0.47500000000000003,
+      "effective_f1": 0.6915887850467289,
+      "accuracy": 0.6470588235294118,
+      "precision": 0.6218487394957983,
+      "recall": 0.7789473684210526,
+      "uncertainty_rate": 0.08780487804878045,
+      "confirmed_count": 187,
+      "auc": 0.7191128878735962
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "count": 205,
+      "tau_clean": 0.48500000000000026,
+      "tau_defect": 0.5050000000000001,
+      "effective_f1": 0.7064676616915423,
+      "accuracy": 0.6878306878306878,
+      "precision": 0.696078431372549,
+      "recall": 0.7171717171717171,
+      "uncertainty_rate": 0.07804878048780484,
+      "confirmed_count": 189,
+      "auc": 0.7015039025318867
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "count": 205,
+      "tau_clean": 0.4400000000000002,
+      "tau_defect": 0.46,
+      "effective_f1": 0.660377358490566,
+      "accuracy": 0.6230366492146597,
+      "precision": 0.5982905982905983,
+      "recall": 0.7368421052631579,
+      "uncertainty_rate": 0.06829268292682922,
+      "confirmed_count": 191,
+      "auc": 0.6742813630306491
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "count": 205,
+      "tau_clean": 0.4100000000000002,
+      "tau_defect": 0.46,
+      "effective_f1": 0.6883720930232559,
+      "accuracy": 0.6378378378378379,
+      "precision": 0.592,
+      "recall": 0.8222222222222222,
+      "uncertainty_rate": 0.09756097560975607,
+      "confirmed_count": 185,
+      "auc": 0.6529602132114982
+    }
+  },
+  "top_features": [
+    {
+      "name": "lead_foot_heel_contact_stability",
+      "importance": 7.122562408447266
+    },
+    {
+      "name": "pelvic_rotation_dynamic_range",
+      "importance": 5.248147964477539
+    },
+    {
+      "name": "eccentric_knee_inward_velocity_peak",
+      "importance": 5.0044846534729
+    },
+    {
+      "name": "lead_knee_mediolateral_sway_variance",
+      "importance": 4.51252555847168
+    },
+    {
+      "name": "concentric_knee_rebound_jerk",
+      "importance": 4.110964775085449
+    },
+    {
+      "name": "foot_axis_temporal_stability",
+      "importance": 3.023667573928833
+    },
+    {
+      "name": "kinematic_torso_shank_alignment",
+      "importance": 2.892940044403076
+    },
+    {
+      "name": "knee_trajectory_linearity_rmse",
+      "importance": 2.573279857635498
+    },
+    {
+      "name": "user_geom_torso_foot_parallel_dot",
+      "importance": 2.570768356323242
+    },
+    {
+      "name": "pelvic_cross_torque_coupling",
+      "importance": 2.5665946006774902
+    }
+  ]
+}

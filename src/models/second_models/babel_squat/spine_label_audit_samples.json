@@ -1,0 +1,576 @@
+{
+  "true_normal_samples (확실한 정상 데이터)": [
+    {
+      "index": 1693,
+      "sequence_id": "[오류]_D15_피험자7_Key317_rep02",
+      "base_sequence_id": "[오류]_D15_피험자7_Key317",
+      "view": "view1",
+      "rep": 2,
+      "subject": 7,
+      "defect_prob": 0.07959999889135361,
+      "parallel_err": 1.909999966621399,
+      "gaze_min": 30.81999969482422,
+      "hysteresis": 5.070000171661377,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 805,
+      "sequence_id": "[오류]_D07_피험자8_Key321_rep05",
+      "base_sequence_id": "[오류]_D07_피험자8_Key321",
+      "view": "view1",
+      "rep": 5,
+      "subject": 8,
+      "defect_prob": 0.08510000258684158,
+      "parallel_err": 1.5099999904632568,
+      "gaze_min": 37.11000061035156,
+      "hysteresis": 7.960000038146973,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 305,
+      "sequence_id": "[오류]_D03_피험자6_Key324_rep04",
+      "base_sequence_id": "[오류]_D03_피험자6_Key324",
+      "view": "view1",
+      "rep": 4,
+      "subject": 6,
+      "defect_prob": 0.0877000018954277,
+      "parallel_err": 1.649999976158142,
+      "gaze_min": 50.540000915527344,
+      "hysteresis": 10.520000457763672,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 1044,
+      "sequence_id": "[오류]_D11_피험자5_Key321_rep02",
+      "base_sequence_id": "[오류]_D11_피험자5_Key321",
+      "view": "view1",
+      "rep": 2,
+      "subject": 5,
+      "defect_prob": 0.08950000256299973,
+      "parallel_err": 3.369999885559082,
+      "gaze_min": 37.310001373291016,
+      "hysteresis": 8.279999732971191,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1963,
+      "sequence_id": "[정상]_D15_피험자7_Key313_rep03",
+      "base_sequence_id": "[정상]_D15_피험자7_Key313",
+      "view": "view1",
+      "rep": 3,
+      "subject": 7,
+      "defect_prob": 0.09030000120401382,
+      "parallel_err": 1.659999966621399,
+      "gaze_min": 32.79999923706055,
+      "hysteresis": 6.960000038146973,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 1324,
+      "sequence_id": "[오류]_D12_피험자1_Key323_rep03",
+      "base_sequence_id": "[오류]_D12_피험자1_Key323",
+      "view": "view1",
+      "rep": 3,
+      "subject": 1,
+      "defect_prob": 0.09109999984502792,
+      "parallel_err": 2.25,
+      "gaze_min": 23.31999969482422,
+      "hysteresis": 7.539999961853027,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 896,
+      "sequence_id": "[오류]_D11_피험자2_Key322_rep01",
+      "base_sequence_id": "[오류]_D11_피험자2_Key322",
+      "view": "view1",
+      "rep": 1,
+      "subject": 2,
+      "defect_prob": 0.09160000085830688,
+      "parallel_err": 4.989999771118164,
+      "gaze_min": 55.619998931884766,
+      "hysteresis": 11.59000015258789,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1877,
+      "sequence_id": "[정상]_D07_피험자1_Key313_rep02",
+      "base_sequence_id": "[정상]_D07_피험자1_Key313",
+      "view": "view1",
+      "rep": 2,
+      "subject": 1,
+      "defect_prob": 0.0917000025510788,
+      "parallel_err": 2.690000057220459,
+      "gaze_min": 32.40999984741211,
+      "hysteresis": 8.039999961853027,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 894,
+      "sequence_id": "[오류]_D11_피험자2_Key321_rep02",
+      "base_sequence_id": "[오류]_D11_피험자2_Key321",
+      "view": "view1",
+      "rep": 2,
+      "subject": 2,
+      "defect_prob": 0.09179999679327011,
+      "parallel_err": 3.1600000858306885,
+      "gaze_min": 54.779998779296875,
+      "hysteresis": 7.070000171661377,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1351,
+      "sequence_id": "[오류]_D15_피험자1_Key315_rep02",
+      "base_sequence_id": "[오류]_D15_피험자1_Key315",
+      "view": "view1",
+      "rep": 2,
+      "subject": 1,
+      "defect_prob": 0.09309999644756317,
+      "parallel_err": 0.2800000011920929,
+      "gaze_min": 47.63999938964844,
+      "hysteresis": 9.380000114440918,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 811,
+      "sequence_id": "[오류]_D07_피험자8_Key322_rep04",
+      "base_sequence_id": "[오류]_D07_피험자8_Key322",
+      "view": "view1",
+      "rep": 4,
+      "subject": 8,
+      "defect_prob": 0.09309999644756317,
+      "parallel_err": 1.6399999856948853,
+      "gaze_min": 32.040000915527344,
+      "hysteresis": 9.4399995803833,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1302,
+      "sequence_id": "[오류]_D12_피험자1_Key317_rep02",
+      "base_sequence_id": "[오류]_D12_피험자1_Key317",
+      "view": "view1",
+      "rep": 2,
+      "subject": 1,
+      "defect_prob": 0.093299999833107,
+      "parallel_err": 0.4099999964237213,
+      "gaze_min": 32.34000015258789,
+      "hysteresis": 6.25,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 907,
+      "sequence_id": "[오류]_D11_피험자2_Key323_rep02",
+      "base_sequence_id": "[오류]_D11_피험자2_Key323",
+      "view": "view1",
+      "rep": 2,
+      "subject": 2,
+      "defect_prob": 0.09390000253915787,
+      "parallel_err": 0.800000011920929,
+      "gaze_min": 34.63999938964844,
+      "hysteresis": 11.920000076293945,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 299,
+      "sequence_id": "[오류]_D03_피험자6_Key324_rep01",
+      "base_sequence_id": "[오류]_D03_피험자6_Key324",
+      "view": "view1",
+      "rep": 1,
+      "subject": 6,
+      "defect_prob": 0.09399999678134918,
+      "parallel_err": 0.9700000286102295,
+      "gaze_min": 51.75,
+      "hysteresis": 7.849999904632568,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 1236,
+      "sequence_id": "[오류]_D11_피험자9_Key315_rep01",
+      "base_sequence_id": "[오류]_D11_피험자9_Key315",
+      "view": "view1",
+      "rep": 1,
+      "subject": 9,
+      "defect_prob": 0.09430000185966492,
+      "parallel_err": 3.680000066757202,
+      "gaze_min": 46.66999816894531,
+      "hysteresis": 11.619999885559082,
+      "label_c1_spine": 0,
+      "all_defects": [
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "suspected_label_noise_fn (데이터는 정상인데 척추오류 라벨이 붙은 데이터)": [
+    {
+      "index": 1125,
+      "sequence_id": "[오류]_D11_피험자6_Key326_rep01",
+      "base_sequence_id": "[오류]_D11_피험자6_Key326",
+      "view": "view1",
+      "rep": 1,
+      "subject": 6,
+      "defect_prob": 0.0940999984741211,
+      "parallel_err": 4.059999942779541,
+      "gaze_min": 58.970001220703125,
+      "hysteresis": 6.210000038146973,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1069,
+      "sequence_id": "[오류]_D11_피험자5_Key328_rep02",
+      "base_sequence_id": "[오류]_D11_피험자5_Key328",
+      "view": "view1",
+      "rep": 2,
+      "subject": 5,
+      "defect_prob": 0.09600000083446503,
+      "parallel_err": 3.5799999237060547,
+      "gaze_min": 39.43000030517578,
+      "hysteresis": 7.809999942779541,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 830,
+      "sequence_id": "[오류]_D07_피험자8_Key326_rep04",
+      "base_sequence_id": "[오류]_D07_피험자8_Key326",
+      "view": "view1",
+      "rep": 4,
+      "subject": 8,
+      "defect_prob": 0.09889999777078629,
+      "parallel_err": 1.2799999713897705,
+      "gaze_min": 33.08000183105469,
+      "hysteresis": 10.279999732971191,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 823,
+      "sequence_id": "[오류]_D07_피험자8_Key326_rep02",
+      "base_sequence_id": "[오류]_D07_피험자8_Key326",
+      "view": "view1",
+      "rep": 2,
+      "subject": 8,
+      "defect_prob": 0.09950000047683716,
+      "parallel_err": 1.9199999570846558,
+      "gaze_min": 30.40999984741211,
+      "hysteresis": 12.130000114440918,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1094,
+      "sequence_id": "[오류]_D11_피험자6_Key319_rep02",
+      "base_sequence_id": "[오류]_D11_피험자6_Key319",
+      "view": "view1",
+      "rep": 2,
+      "subject": 6,
+      "defect_prob": 0.09950000047683716,
+      "parallel_err": 6.730000019073486,
+      "gaze_min": 29.0,
+      "hysteresis": 4.760000228881836,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 592,
+      "sequence_id": "[오류]_D07_피험자3_Key326_rep01",
+      "base_sequence_id": "[오류]_D07_피험자3_Key326",
+      "view": "view1",
+      "rep": 1,
+      "subject": 3,
+      "defect_prob": 0.10080000013113022,
+      "parallel_err": 12.119999885559082,
+      "gaze_min": 43.58000183105469,
+      "hysteresis": 5.139999866485596,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 595,
+      "sequence_id": "[오류]_D07_피험자3_Key327_rep01",
+      "base_sequence_id": "[오류]_D07_피험자3_Key327",
+      "view": "view1",
+      "rep": 1,
+      "subject": 3,
+      "defect_prob": 0.10660000145435333,
+      "parallel_err": 11.430000305175781,
+      "gaze_min": 39.63999938964844,
+      "hysteresis": 6.420000076293945,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1129,
+      "sequence_id": "[오류]_D11_피험자6_Key327_rep01",
+      "base_sequence_id": "[오류]_D11_피험자6_Key327",
+      "view": "view1",
+      "rep": 1,
+      "subject": 6,
+      "defect_prob": 0.11020000278949738,
+      "parallel_err": 7.119999885559082,
+      "gaze_min": 45.83000183105469,
+      "hysteresis": 4.110000133514404,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1082,
+      "sequence_id": "[오류]_D11_피험자5_Key327_rep02",
+      "base_sequence_id": "[오류]_D11_피험자5_Key327",
+      "view": "view1",
+      "rep": 2,
+      "subject": 5,
+      "defect_prob": 0.11150000244379044,
+      "parallel_err": 5.769999980926514,
+      "gaze_min": 44.75,
+      "hysteresis": 6.159999847412109,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 312,
+      "sequence_id": "[오류]_D03_피험자6_Key327_rep03",
+      "base_sequence_id": "[오류]_D03_피험자6_Key327",
+      "view": "view1",
+      "rep": 3,
+      "subject": 6,
+      "defect_prob": 0.11249999701976776,
+      "parallel_err": 6.269999980926514,
+      "gaze_min": 37.40999984741211,
+      "hysteresis": 9.289999961853027,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1068,
+      "sequence_id": "[오류]_D11_피험자5_Key328_rep03",
+      "base_sequence_id": "[오류]_D11_피험자5_Key328",
+      "view": "view1",
+      "rep": 3,
+      "subject": 5,
+      "defect_prob": 0.11460000276565552,
+      "parallel_err": 4.199999809265137,
+      "gaze_min": 39.43000030517578,
+      "hysteresis": 9.5,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 598,
+      "sequence_id": "[오류]_D07_피험자3_Key327_rep02",
+      "base_sequence_id": "[오류]_D07_피험자3_Key327",
+      "view": "view1",
+      "rep": 2,
+      "subject": 3,
+      "defect_prob": 0.11590000241994858,
+      "parallel_err": 7.380000114440918,
+      "gaze_min": 36.77000045776367,
+      "hysteresis": 7.659999847412109,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1132,
+      "sequence_id": "[오류]_D11_피험자6_Key328_rep01",
+      "base_sequence_id": "[오류]_D11_피험자6_Key328",
+      "view": "view1",
+      "rep": 1,
+      "subject": 6,
+      "defect_prob": 0.11620000004768372,
+      "parallel_err": 7.289999961853027,
+      "gaze_min": 46.400001525878906,
+      "hysteresis": 4.929999828338623,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 562,
+      "sequence_id": "[오류]_D07_피험자3_Key319_rep03",
+      "base_sequence_id": "[오류]_D07_피험자3_Key319",
+      "view": "view1",
+      "rep": 3,
+      "subject": 3,
+      "defect_prob": 0.1200999990105629,
+      "parallel_err": 10.65999984741211,
+      "gaze_min": 32.84000015258789,
+      "hysteresis": 5.119999885559082,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 1733,
+      "sequence_id": "[오류]_D15_피험자7_Key327_rep01",
+      "base_sequence_id": "[오류]_D15_피험자7_Key327",
+      "view": "view1",
+      "rep": 1,
+      "subject": 7,
+      "defect_prob": 0.120899997651577,
+      "parallel_err": 2.5,
+      "gaze_min": 43.20000076293945,
+      "hysteresis": 2.0999999046325684,
+      "label_c1_spine": 1,
+      "all_defects": [
+        1,
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "exercise": "바벨 데드리프트 (02_바벨_데드리프트)",
+  "defect": "d4. 무릎과 골반이 동시에 펴짐 위반",
+  "version": "v6.0_two_tier_confirmed",
+  "2state_baseline": {
+    "f1": 0.5342465753424658,
+    "auc": 0.8230783003103366,
+    "accuracy": 0.8017492711370262,
+    "precision": 0.4482758620689655,
+    "recall": 0.6610169491525424,
+    "tau": 0.39
+  },
+  "3state_cov90": {
+    "coverage": 0.8819241982507289,
+    "abstain_rate": 0.11807580174927113,
+    "f1": 0.5754716981132075,
+    "accuracy": 0.8512396694214877,
+    "precision": 0.5304347826086957,
+    "recall": 0.6288659793814433,
+    "n_decided": 605,
+    "n_total": 686,
+    "tau_normal": 0.37,
+    "tau_defect": 0.45545454545454545,
+    "confusion_matrix": [
+      [
+        454,
+        54
+      ],
+      [
+        36,
+        61
+      ]
+    ]
+  },
+  "3state_cov85": {
+    "coverage": 0.8250728862973761,
+    "abstain_rate": 0.17492711370262393,
+    "f1": 0.5978260869565217,
+    "accuracy": 0.8692579505300353,
+    "precision": 0.5670103092783505,
+    "recall": 0.632183908045977,
+    "n_decided": 566,
+    "n_total": 686,
+    "tau_normal": 0.35,
+    "tau_defect": 0.47363636363636363,
+    "confusion_matrix": [
+      [
+        437,
+        42
+      ],
+      [
+        32,
+        55
+      ]
+    ]
+  },
+  "3state_cov80": {
+    "coverage": 0.7886297376093294,
+    "abstain_rate": 0.21137026239067058,
+    "f1": 0.6137566137566137,
+    "accuracy": 0.8650646950092421,
+    "precision": 0.5471698113207547,
+    "recall": 0.6987951807228916,
+    "n_decided": 541,
+    "n_total": 686,
+    "tau_normal": 0.31999999999999995,
+    "tau_defect": 0.46424242424242423,
+    "confusion_matrix": [
+      [
+        410,
+        48
+      ],
+      [
+        25,
+        58
+      ]
+    ]
+  },
+  "tier1_level1_3state": {
+    "cov95": {
+      "coverage": 0.9306569343065694,
+      "abstain_rate": 0.06934306569343063,
+      "f1": 0.8079470198675497,
+      "accuracy": 0.8862745098039215,
+      "precision": 0.8026315789473685,
+      "recall": 0.8133333333333334,
+      "n_decided": 255,
+      "n_total": 274,
+      "tau_normal": 0.31999999999999995,
+      "tau_defect": 0.37727272727272726,
+      "confusion_matrix": [
+        [
+          165,
+          15
+        ],
+        [
+          14,
+          61
+        ]
+      ]
+    },
+    "cov90": {
+      "coverage": 0.8905109489051095,
+      "abstain_rate": 0.10948905109489049,
+      "f1": 0.8299319727891157,
+      "accuracy": 0.8975409836065574,
+      "precision": 0.8133333333333334,
+      "recall": 0.8472222222222222,
+      "n_decided": 244,
+      "n_total": 274,
+      "tau_normal": 0.29999999999999993,
+      "tau_defect": 0.38515151515151513,
+      "confusion_matrix": [
+        [
+          158,
+          14
+        ],
+        [
+          11,
+          61
+        ]
+      ]
+    }
+  },
+  "views_3state": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "samples": 135,
+      "defects": 25,
+      "standard_3state": {
+        "coverage": 0.8666666666666667,
+        "abstain_rate": 0.1333333333333333,
+        "f1": 0.6341463414634146,
+        "accuracy": 0.8717948717948718,
+        "precision": 0.5909090909090909,
+        "recall": 0.6842105263157895,
+        "n_decided": 117,
+        "n_total": 135,
+        "tau_normal": 0.35,
+        "tau_defect": 0.47363636363636363,
+        "confusion_matrix": [
+          [
+            89,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      "optimal_3state": {
+        "coverage": 0.8296296296296296,
+        "abstain_rate": 0.1703703703703704,
+        "f1": 0.6511627906976745,
+        "accuracy": 0.8660714285714286,
+        "precision": 0.56,
+        "recall": 0.7777777777777778,
+        "n_decided": 112,
+        "n_total": 135,
+        "tau_normal": 0.31999999999999995,
+        "tau_defect": 0.4518181818181818,
+        "confusion_matrix": [
+          [
+            83,
+            11
+          ],
+          [
+            4,
+            14
+          ]
+        ]
+      }
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "samples": 139,
+      "defects": 26,
+      "standard_3state": {
+        "coverage": 0.7841726618705036,
+        "abstain_rate": 0.2158273381294964,
+        "f1": 0.7111111111111111,
+        "accuracy": 0.8807339449541285,
+        "precision": 0.6153846153846154,
+        "recall": 0.8421052631578947,
+        "n_decided": 109,
+        "n_total": 139,
+        "tau_normal": 0.35,
+        "tau_defect": 0.47363636363636363,
+        "confusion_matrix": [
+          [
+            80,
+            10
+          ],
+          [
+            3,
+            16
+          ]
+        ]
+      },
+      "optimal_3state": {
+        "coverage": 0.8273381294964028,
+        "abstain_rate": 0.17266187050359716,
+        "f1": 0.7567567567567568,
+        "accuracy": 0.9217391304347826,
+        "precision": 0.8235294117647058,
+        "recall": 0.7,
+        "n_decided": 115,
+        "n_total": 139,
+        "tau_normal": 0.39999999999999997,
+        "tau_defect": 0.53,
+        "confusion_matrix": [
+          [
+            92,
+            3
+          ],
+          [
+            6,
+            14
+          ]
+        ]
+      }
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "samples": 140,
+      "defects": 21,
+      "standard_3state": {
+        "coverage": 0.8285714285714286,
+        "abstain_rate": 0.17142857142857137,
+        "f1": 0.42424242424242425,
+        "accuracy": 0.8362068965517241,
+        "precision": 0.4375,
+        "recall": 0.4117647058823529,
+        "n_decided": 116,
+        "n_total": 140,
+        "tau_normal": 0.35,
+        "tau_defect": 0.47363636363636363,
+        "confusion_matrix": [
+          [
+            90,
+            9
+          ],
+          [
+            10,
+            7
+          ]
+        ]
+      },
+      "optimal_3state": {
+        "coverage": 0.8571428571428571,
+        "abstain_rate": 0.1428571428571429,
+        "f1": 0.4782608695652174,
+        "accuracy": 0.8,
+        "precision": 0.4230769230769231,
+        "recall": 0.55,
+        "n_decided": 120,
+        "n_total": 140,
+        "tau_normal": 0.30999999999999994,
+        "tau_defect": 0.3936363636363636,
+        "confusion_matrix": [
+          [
+            85,
+            15
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      }
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "samples": 145,
+      "defects": 23,
+      "standard_3state": {
+        "coverage": 0.8551724137931035,
+        "abstain_rate": 0.1448275862068965,
+        "f1": 0.7,
+        "accuracy": 0.9032258064516129,
+        "precision": 0.7368421052631579,
+        "recall": 0.6666666666666666,
+        "n_decided": 124,
+        "n_total": 145,
+        "tau_normal": 0.35,
+        "tau_defect": 0.47363636363636363,
+        "confusion_matrix": [
+          [
+            98,
+            5
+          ],
+          [
+            7,
+            14
+          ]
+        ]
+      },
+      "optimal_3state": {
+        "coverage": 0.8413793103448276,
+        "abstain_rate": 0.1586206896551724,
+        "f1": 0.717948717948718,
+        "accuracy": 0.9098360655737705,
+        "precision": 0.7368421052631579,
+        "recall": 0.7,
+        "n_decided": 122,
+        "n_total": 145,
+        "tau_normal": 0.32999999999999996,
+        "tau_defect": 0.4712121212121212,
+        "confusion_matrix": [
+          [
+            97,
+            5
+          ],
+          [
+            6,
+            14
+          ]
+        ]
+      }
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "samples": 127,
+      "defects": 23,
+      "standard_3state": {
+        "coverage": 0.7874015748031497,
+        "abstain_rate": 0.21259842519685035,
+        "f1": 0.4,
+        "accuracy": 0.85,
+        "precision": 0.35714285714285715,
+        "recall": 0.45454545454545453,
+        "n_decided": 100,
+        "n_total": 127,
+        "tau_normal": 0.35,
+        "tau_defect": 0.47363636363636363,
+        "confusion_matrix": [
+          [
+            80,
+            9
+          ],
+          [
+            6,
+            5
+          ]
+        ]
+      },
+      "optimal_3state": {
+        "coverage": 0.84251968503937,
+        "abstain_rate": 0.15748031496062997,
+        "f1": 0.5666666666666667,
+        "accuracy": 0.7570093457943925,
+        "precision": 0.4146341463414634,
+        "recall": 0.8947368421052632,
+        "n_decided": 107,
+        "n_total": 127,
+        "tau_normal": 0.29,
+        "tau_defect": 0.35,
+        "confusion_matrix": [
+          [
+            64,
+            24
+          ],
+          [
+            2,
+            17
+          ]
+        ]
+      }
+    }
+  }
+}

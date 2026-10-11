@@ -1,0 +1,64 @@
+{
+  "model_name": "c1_v11_c",
+  "experiment_code": "E2",
+  "status": "ABORTED_DUE_TO_DEGRADATION",
+  "champion_model": "c1_v11_b",
+  "gbdt_baseline_metrics": {
+    "f1": 80.52,
+    "prec": 81.88,
+    "rec": 79.2,
+    "acc": 81.54,
+    "auc": 88.13
+  },
+  "e2_metrics": {
+    "f1": 79.2,
+    "prec": 80.0,
+    "rec": 78.41,
+    "acc": 80.15,
+    "auc": 87.45
+  },
+  "champion_e1_metrics": {
+    "f1": 84.24,
+    "prec": 84.81,
+    "rec": 83.67,
+    "acc": 84.91,
+    "auc": 91.59
+  },
+  "view_metrics": {
+    "view1": {
+      "view_name": "view1 (후방 180°)",
+      "gbdt_f1": 76.11,
+      "e2_view_norm_f1": 74.49,
+      "e1_champion_f1": 83.27,
+      "verdict": "E2 열화 (중단 근거)"
+    },
+    "view2": {
+      "view_name": "view2 (우측 45°)",
+      "gbdt_f1": 82.89,
+      "e2_view_norm_f1": 80.32,
+      "e1_champion_f1": 83.69,
+      "verdict": "E2 열화 (중단 근거)"
+    },
+    "view3": {
+      "view_name": "view3 (정면 0°)",
+      "gbdt_f1": 82.57,
+      "e2_view_norm_f1": 82.16,
+      "e1_champion_f1": 83.4,
+      "verdict": "E2 열화 (중단 근거)"
+    },
+    "view4": {
+      "view_name": "view4 (좌측 45°)",
+      "gbdt_f1": 81.4,
+      "e2_view_norm_f1": 81.04,
+      "e1_champion_f1": 83.37,
+      "verdict": "E2 열화 (중단 근거)"
+    },
+    "view5": {
+      "view_name": "view5 (우측 후방 45°)",
+      "gbdt_f1": 79.67,
+      "e2_view_norm_f1": 77.87,
+      "e1_champion_f1": 87.43,
+      "verdict": "E2 열화 (중단 근거)"
+    }
+  }
+}

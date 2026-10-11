@@ -1,0 +1,160 @@
+{
+  "best_window": {
+    "tn": 0.2,
+    "td": 0.25,
+    "f1": 53.98230088495575,
+    "acc": 70.02881844380403,
+    "prec": 42.06896551724138,
+    "rec": 75.30864197530865,
+    "cov": 90.12987012987013,
+    "decline": 9.870129870129873,
+    "tp": 61,
+    "fp": 84,
+    "fn": 20,
+    "tn_cnt": 182
+  },
+  "view_results": {
+    "시점 A (우측 후방 45°)": {
+      "f1": 53.333333333333336,
+      "prec": 38.70967741935484,
+      "rec": 85.71428571428571,
+      "cov": 88.31168831168831
+    },
+    "시점 B (우측 전방 45°)": {
+      "f1": 53.125,
+      "prec": 36.95652173913043,
+      "rec": 94.44444444444444,
+      "cov": 93.5064935064935
+    },
+    "시점 C (정면)": {
+      "f1": 65.45454545454545,
+      "prec": 48.64864864864865,
+      "rec": 100.0,
+      "cov": 90.9090909090909
+    },
+    "시점 D (좌측 전방 45°)": {
+      "f1": 56.25,
+      "prec": 50.0,
+      "rec": 64.28571428571429,
+      "cov": 81.81818181818183
+    },
+    "시점 E (좌측 후방 45°)": {
+      "f1": 33.33333333333333,
+      "prec": 38.46153846153847,
+      "rec": 29.411764705882355,
+      "cov": 96.1038961038961
+    }
+  },
+  "samples_manifest": [
+    {
+      "sample_type": "정상 (Normal)",
+      "sample_folder": "01_정상_데이터_Normal/sample_01_[정상]_D03_피험자1_Key281_view1",
+      "clip_name": "[정상]_D03_피험자1_Key281_view1",
+      "subject": 1,
+      "view": "시점 E (좌측 후방 45°)",
+      "key_scenario": "Key281",
+      "ground_truth_d2": "정상 (0, 무릎-발 방향 일치함)",
+      "model_defect_prob": 0.0728,
+      "three_state_decision": "확정 정상 (Accept Normal)"
+    },
+    {
+      "sample_type": "정상 (Normal)",
+      "sample_folder": "01_정상_데이터_Normal/sample_02_[정상]_D03_피험자5_Key281_view3",
+      "clip_name": "[정상]_D03_피험자5_Key281_view3",
+      "subject": 5,
+      "view": "시점 C (정면)",
+      "key_scenario": "Key281",
+      "ground_truth_d2": "정상 (0, 무릎-발 방향 일치함)",
+      "model_defect_prob": 0.1323,
+      "three_state_decision": "확정 정상 (Accept Normal)"
+    },
+    {
+      "sample_type": "정상 (Normal)",
+      "sample_folder": "01_정상_데이터_Normal/sample_03_[정상]_D07_피험자2_Key281_view4",
+      "clip_name": "[정상]_D07_피험자2_Key281_view4",
+      "subject": 2,
+      "view": "시점 D (좌측 전방 45°)",
+      "key_scenario": "Key281",
+      "ground_truth_d2": "정상 (0, 무릎-발 방향 일치함)",
+      "model_defect_prob": 0.07,
+      "three_state_decision": "확정 정상 (Accept Normal)"
+    },
+    {
+      "sample_type": "정상 (Normal)",
+      "sample_folder": "01_정상_데이터_Normal/sample_04_[정상]_D07_피험자7_Key281_view5",
+      "clip_name": "[정상]_D07_피험자7_Key281_view5",
+      "subject": 7,
+      "view": "시점 A (우측 후방 45°)",
+      "key_scenario": "Key281",
+      "ground_truth_d2": "정상 (0, 무릎-발 방향 일치함)",
+      "model_defect_prob": 0.137,
+      "three_state_decision": "확정 정상 (Accept Normal)"
+    },
+    {
+      "sample_type": "정상 (Normal)",
+      "sample_folder": "01_정상_데이터_Normal/sample_05_[정상]_D11_피험자4_Key281_view4",
+      "clip_name": "[정상]_D11_피험자4_Key281_view4",
+      "subject": 4,
+      "view": "시점 D (좌측 전방 45°)",
+      "key_scenario": "Key281",
+      "ground_truth_d2": "정상 (0, 무릎-발 방향 일치함)",
+      "model_defect_prob": 0.1744,
+      "three_state_decision": "확정 정상 (Accept Normal)"
+    },
+    {
+      "sample_type": "결함 (Defect)",
+      "sample_folder": "02_오류_데이터_Defect/sample_01_[오류]_D03_피험자1_Key283_view3",
+      "clip_name": "[오류]_D03_피험자1_Key283_view3",
+      "subject": 1,
+      "view": "시점 C (정면)",
+      "key_scenario": "Key283",
+      "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+      "model_defect_prob": 0.7558,
+      "three_state_decision": "확정 결함 (Accept Defect)"
+    },
+    {
+      "sample_type": "결함 (Defect)",
+      "sample_folder": "02_오류_데이터_Defect/sample_02_[오류]_D03_피험자2_Key283_view4",
+      "clip_name": "[오류]_D03_피험자2_Key283_view4",
+      "subject": 2,
+      "view": "시점 D (좌측 전방 45°)",
+      "key_scenario": "Key283",
+      "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+      "model_defect_prob": 0.4355,
+      "three_state_decision": "확정 결함 (Accept Defect)"
+    },
+    {
+      "sample_type": "결함 (Defect)",
+      "sample_folder": "02_오류_데이터_Defect/sample_03_[오류]_D03_피험자6_Key283_view3",
+      "clip_name": "[오류]_D03_피험자6_Key283_view3",
+      "subject": 6,
+      "view": "시점 C (정면)",
+      "key_scenario": "Key283",
+      "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+      "model_defect_prob": 0.864,
+      "three_state_decision": "확정 결함 (Accept Defect)"
+    },
+    {
+      "sample_type": "결함 (Defect)",
+      "sample_folder": "02_오류_데이터_Defect/sample_04_[오류]_D03_피험자7_Key283_view4",
+      "clip_name": "[오류]_D03_피험자7_Key283_view4",
+      "subject": 7,
+      "view": "시점 D (좌측 전방 45°)",
+      "key_scenario": "Key283",
+      "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+      "model_defect_prob": 0.5988,
+      "three_state_decision": "확정 결함 (Accept Defect)"
+    },
+    {
+      "sample_type": "결함 (Defect)",
+      "sample_folder": "02_오류_데이터_Defect/sample_05_[오류]_D03_피험자8_Key283_view3",
+      "clip_name": "[오류]_D03_피험자8_Key283_view3",
+      "subject": 8,
+      "view": "시점 C (정면)",
+      "key_scenario": "Key283",
+      "ground_truth_d2": "결함 (1, 무릎 외반 / 방향 불일치 발생)",
+      "model_defect_prob": 0.8218,
+      "three_state_decision": "확정 결함 (Accept Defect)"
+    }
+  ]
+}

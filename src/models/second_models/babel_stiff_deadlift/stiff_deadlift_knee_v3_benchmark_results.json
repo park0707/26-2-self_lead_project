@@ -1,0 +1,94 @@
+{
+  "exercise": "03_바벨_스티프_데드리프트",
+  "defect": "무릎 구부린 채 고정 위반 (sd1_v3)",
+  "solutions_applied": [
+    "Confident Learning (CleanLab) 라벨 정제 (195건 정제)",
+    "어드레스 기준 적응형 상대 정규화 (10D)",
+    "다중 결함 상위 메타 게이팅 네트워크 (sd3 + 척추중립 컨텍스트)",
+    "Conformal Prediction 10% Bounded 3-State 완충망"
+  ],
+  "sanitized_samples_count": 100,
+  "tier1_metrics": {
+    "clean_specificity": 1.0,
+    "macro_f1": 0.8403100775193799,
+    "roc_auc": 0.9411764705882353,
+    "accuracy": 0.8446601941747572
+  },
+  "tier2_2state_metrics": {
+    "macro_f1": 0.6378027347401747,
+    "clean_f1": 0.8297455968688845,
+    "defect_f1": 0.445859872611465,
+    "clean_specificity": 0.8313725490196079,
+    "roc_auc": 0.7922809630181186,
+    "accuracy": 0.7395209580838323
+  },
+  "tier2_3state_metrics": {
+    "tau_lower": 0.428561872909699,
+    "tau_upper": 0.5714381270903011,
+    "abstention_rate": 9.880239520958083,
+    "coverage_rate": 90.11976047904191,
+    "selective_macro_f1": 0.6648333108381698,
+    "selective_clean_f1": 0.8619246861924686,
+    "selective_defect_f1": 0.46774193548387094,
+    "selective_specificity": 0.8841201716738197,
+    "selective_accuracy": 0.7807308970099668
+  },
+  "comparison_vs_v2": {
+    "delta_auc": 23.076649903626933,
+    "delta_2state_macro_f1": 15.151716693704731,
+    "delta_3state_macro_f1": 17.324586222834515,
+    "delta_3state_clean_f1": 16.916074787692892,
+    "delta_3state_specificity": 8.19223694760175
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 155,
+      "v2_f1_3state": 49.652361543994246,
+      "v3_f1_3state": 66.12612612612612,
+      "delta_f1": 16.473764582131878
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 155,
+      "v2_f1_3state": 49.652361543994246,
+      "v3_f1_3state": 66.12612612612612,
+      "delta_f1": 16.473764582131878
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 155,
+      "v2_f1_3state": 49.652361543994246,
+      "v3_f1_3state": 66.12612612612612,
+      "delta_f1": 16.473764582131878
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 48,
+      "v2_f1_3state": 40.582800284292816,
+      "v3_f1_3state": 72.05882352941177,
+      "delta_f1": 31.476023245118952
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 155,
+      "v2_f1_3state": 49.652361543994246,
+      "v3_f1_3state": 66.12612612612612,
+      "delta_f1": 16.473764582131878
+    }
+  },
+  "top_features": {
+    "hip_hinge_isolation": 103.6,
+    "knee_disp_y_rom": 98.4,
+    "bottom_knee_angle": 94.6,
+    "context_sd3_prob": 90.6,
+    "bottom_knee_delta_mean": 84.6,
+    "rel_bottom_knee_delta": 71.6,
+    "femur_rom_mean": 63.4,
+    "femur_shank_ratio": 62.4,
+    "norm_knee_disp_y": 56.4,
+    "shank_svii_mean": 49.0,
+    "address_knee_angle": 45.6,
+    "context_torso_coronal_rom": 37.0
+  }
+}

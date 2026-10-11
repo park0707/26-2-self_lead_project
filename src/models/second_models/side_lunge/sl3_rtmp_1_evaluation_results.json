@@ -1,0 +1,223 @@
+{
+  "model_name": "sl3_rtmp_1",
+  "defect_name": "안 굽히는 다리 구부정 / 신전 결함",
+  "total_samples": 2460,
+  "pre_opt": {
+    "roc_auc": 88.94,
+    "forced_f1": 69.38,
+    "forced_prec": 79.15,
+    "forced_rec": 61.76,
+    "forced_acc": 88.7,
+    "coverage": 95.93,
+    "retake": 4.07,
+    "sel_f1": 70.36,
+    "sel_prec": 81.02,
+    "sel_rec": 62.17,
+    "sel_acc": 89.79,
+    "ece": 2.35,
+    "brier": 0.0892
+  },
+  "pre_views": {
+    "view5": {
+      "roc_auc": 88.35,
+      "forced_f1": 71.58,
+      "forced_prec": 77.27,
+      "forced_rec": 66.67,
+      "forced_acc": 89.02,
+      "coverage": 95.53,
+      "retake": 4.47,
+      "sel_f1": 73.68,
+      "sel_prec": 80.77,
+      "sel_rec": 67.74,
+      "sel_acc": 90.43,
+      "ece": 3.48,
+      "brier": 0.0866
+    },
+    "view2": {
+      "roc_auc": 90.77,
+      "forced_f1": 71.68,
+      "forced_prec": 87.32,
+      "forced_rec": 60.78,
+      "forced_acc": 90.04,
+      "coverage": 96.95,
+      "retake": 3.05,
+      "sel_f1": 71.34,
+      "sel_prec": 88.89,
+      "sel_rec": 59.57,
+      "sel_acc": 90.57,
+      "ece": 3.32,
+      "brier": 0.0809
+    },
+    "view3": {
+      "roc_auc": 89.0,
+      "forced_f1": 66.67,
+      "forced_prec": 82.61,
+      "forced_rec": 55.88,
+      "forced_acc": 88.41,
+      "coverage": 95.93,
+      "retake": 4.07,
+      "sel_f1": 65.31,
+      "sel_prec": 81.36,
+      "sel_rec": 54.55,
+      "sel_acc": 89.19,
+      "ece": 5.92,
+      "brier": 0.0956
+    },
+    "view4": {
+      "roc_auc": 86.76,
+      "forced_f1": 64.44,
+      "forced_prec": 74.36,
+      "forced_rec": 56.86,
+      "forced_acc": 86.99,
+      "coverage": 96.54,
+      "retake": 3.46,
+      "sel_f1": 65.84,
+      "sel_prec": 77.94,
+      "sel_rec": 56.99,
+      "sel_acc": 88.42,
+      "ece": 3.03,
+      "brier": 0.0963
+    },
+    "view1": {
+      "roc_auc": 90.47,
+      "forced_f1": 72.16,
+      "forced_prec": 76.09,
+      "forced_rec": 68.63,
+      "forced_acc": 89.02,
+      "coverage": 94.72,
+      "retake": 5.28,
+      "sel_f1": 74.58,
+      "sel_prec": 77.65,
+      "sel_rec": 71.74,
+      "sel_acc": 90.34,
+      "ece": 2.61,
+      "brier": 0.0865
+    }
+  },
+  "post_opt": {
+    "roc_auc": 88.94,
+    "forced_f1": 69.38,
+    "forced_prec": 79.15,
+    "forced_rec": 61.76,
+    "forced_acc": 88.7,
+    "coverage": 90.81,
+    "retake": 9.19,
+    "sel_f1": 75.82,
+    "sel_prec": 81.35,
+    "sel_rec": 70.99,
+    "sel_acc": 91.41,
+    "ece": 0.86,
+    "brier": 0.089
+  },
+  "post_views": {
+    "view5": {
+      "roc_auc": 88.35,
+      "forced_f1": 71.58,
+      "forced_prec": 77.27,
+      "forced_rec": 66.67,
+      "forced_acc": 89.02,
+      "coverage": 91.26,
+      "retake": 8.74,
+      "sel_f1": 76.62,
+      "sel_prec": 86.76,
+      "sel_rec": 68.6,
+      "sel_acc": 91.98,
+      "ece": 2.57,
+      "brier": 0.0874,
+      "alias": "시점 A: 우측 후방 (45도)"
+    },
+    "view2": {
+      "roc_auc": 90.77,
+      "forced_f1": 71.68,
+      "forced_prec": 87.32,
+      "forced_rec": 60.78,
+      "forced_acc": 90.04,
+      "coverage": 90.85,
+      "retake": 9.15,
+      "sel_f1": 79.47,
+      "sel_prec": 88.24,
+      "sel_rec": 72.29,
+      "sel_acc": 93.06,
+      "ece": 3.37,
+      "brier": 0.0811,
+      "alias": "시점 B: 우측 전방 (45도)"
+    },
+    "view3": {
+      "roc_auc": 89.0,
+      "forced_f1": 66.67,
+      "forced_prec": 82.61,
+      "forced_rec": 55.88,
+      "forced_acc": 88.41,
+      "coverage": 91.26,
+      "retake": 8.74,
+      "sel_f1": 73.33,
+      "sel_prec": 82.09,
+      "sel_rec": 66.27,
+      "sel_acc": 91.09,
+      "ece": 3.22,
+      "brier": 0.0942,
+      "alias": "시점 C: 정면 (0도)"
+    },
+    "view4": {
+      "roc_auc": 86.76,
+      "forced_f1": 64.44,
+      "forced_prec": 74.36,
+      "forced_rec": 56.86,
+      "forced_acc": 86.99,
+      "coverage": 90.04,
+      "retake": 9.96,
+      "sel_f1": 71.7,
+      "sel_prec": 75.0,
+      "sel_rec": 68.67,
+      "sel_acc": 89.84,
+      "ece": 3.16,
+      "brier": 0.0957,
+      "alias": "시점 D: 좌측 전방 (45도)"
+    },
+    "view1": {
+      "roc_auc": 90.47,
+      "forced_f1": 72.16,
+      "forced_prec": 76.09,
+      "forced_rec": 68.63,
+      "forced_acc": 89.02,
+      "coverage": 90.65,
+      "retake": 9.35,
+      "sel_f1": 77.78,
+      "sel_prec": 76.92,
+      "sel_rec": 78.65,
+      "sel_acc": 91.03,
+      "ece": 3.15,
+      "brier": 0.0866,
+      "alias": "시점 E: 좌측 후방 (45도)"
+    }
+  },
+  "opt_temperature": 1.1851,
+  "view_thresholds": {
+    "view5": {
+      "tau_norm": 0.356,
+      "tau_def": 0.623
+    },
+    "view2": {
+      "tau_norm": 0.246,
+      "tau_def": 0.524
+    },
+    "view3": {
+      "tau_norm": 0.205,
+      "tau_def": 0.51
+    },
+    "view4": {
+      "tau_norm": 0.232,
+      "tau_def": 0.524
+    },
+    "view1": {
+      "tau_norm": 0.301,
+      "tau_def": 0.51
+    }
+  },
+  "mediapipe_baseline": {
+    "2s_f1": 65.02,
+    "3s_f1": 71.33,
+    "retake": 9.8,
+    "auc": 92.74
+  }
+}

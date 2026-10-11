@@ -1,0 +1,626 @@
+--- [Page 1] ---
+페이지 7개 읽음, 웹 검색 10회
+PDF를 검토했습니다. 프로젝트의 핵심은 AI-Hub 데드리프트 영상 770개(9명·5시점)를 MediaPipe 33관절
+시계열과 40D 수작업 피처로 분석하여, d5(바벨이 몸에서 전방으로 이탈하는 결함)를 분류하는 것입니다.
+현재 성능은 기본 OOF F1 79.07%, 정면 뷰(C) F1 56.7% 이며, 문제의 본질은 정면 단안 영상에서 시상면 전후
+깊이 정보가 관측되지 않는 구조적 모호성입니다. 따라서 단순히 GBDT 피처를 조금 더 늘리는 것보다, 바벨 관측
+자체를 강화하고, 시점 특화 모델을 분리하며, 3D/물리 제약을 추가하는 방향이 효과적입니다.
+핵심 결론
+1. 정면 뷰만으로 실제 바벨–신체 전후 거리(cm)를 안정적으로 복원하는 것은 원리적으로 어렵습니다.
+관절의 2D 좌표만으로는 서로 다른 3D 자세가 같은 영상 투영을 만들 수 있습니다. 정면 C의 성능을 올리려면
+"깊이를 완전히 복원"한다기보다, 시간적·신체비율·물리 제약을 이용한 확률적 추정으로 접근해야 합니다.
+2. 현재 파이프라인의 가장 큰 기술적 빈틈은 barbell 이 인체 포즈 모델의 표준 랜드마크가 아니라는 점입니다.
+MediaPipe Pose의 z 는 카메라 캘리브레이션 기반의 절대 metric depth가 아닙니다. d5의 정답 정의가 "바벨–
+정강이/대퇴 이격"인 만큼, 바벨 중심선·슬리브·원판을 별도 객체로 검출/추적하는 모듈을 우선 도입하는 것이 피처
+추가보다 기대효과가 큽니다.
+3. 데이터가 피험자 9명으로 작기 때문에, 대형 Transformer를 처음부터 학습하는 방식은 과적합 위험이 큽니다.
+적합한 방향은 사전학습된 motion encoder 동결/부분 미세조정 + 소형 시점 전문가(MoE) + 현재 40D 피처
+앙상블입니다.
+1. 직접적으로 참고할 선행 연구
+A. 단안 3D 자세·시간 문맥: MotionBERT
+MotionBERT — "Learning Human Motion Representations: A Unified Perspective" (ICCV
+2023)
+논문/코드: 
+입력 2D skeleton의 장거리 시간·관절 관계를 Dual-stream Spatial-Temporal Transformer로 인코딩합니다.
+3D pose lifting뿐 아니라 skeleton 기반 action recognition에도 활용 가능하도록 설계되어, 현재 프로젝트처럼 64-frame, 33-joint 시퀀스
+를 다루는 문제에 구조적으로 잘 맞습니다.
+공식 코드에는 Lite 모델도 제공됩니다. 소규모 데이터에서는 전체 모델을 처음부터 학습하기보다 Lite encoder를 기반으로 활용하는 편이 현실적입
+니다.
+적용 방식
+MotionBERT 공식 저장소
+
+
+--- [Page 2] ---
+MediaPipe 입력을 다음과 같이 구성합니다.
+골반 중심으로 translation 제거
+어깨폭 또는 hip–shoulder 거리로 scale 정규화
+좌·우 신체 반전 augmentation
+속도 및 가속도 채널 추가
+visibility는 단순 입력 채널뿐 아니라 attention mask/신뢰도 가중치로도 사용
+그 후 MotionBERT encoder의 pooled embedding 
+을 추출하고, 기존 40D 벡터 
+과 결합합니다.
+권장: 전체 fine-tuning이 아니라 마지막 1~3개 블록 또는 classification head만 먼저 학습하십시오.
+B. 가벼운 기준선: VideoPose3D
+VideoPose3D — "3D Human Pose Estimation in Video with Temporal Convolutions and Semi-
+Supervised Training" (CVPR 2019)
+논문/코드: 
+2D keypoint trajectory를 dilated temporal convolution으로 3D pose로 lift합니다.
+원본 저장소는 archive 상태이지만, 모델 자체는 여전히 유용한 경량 baseline입니다.
+프로젝트에서의 가치
+TCN을 이미 일부 시도했더라도, 이번에는 "최종 이진 분류기"가 아니라 정면 C 뷰의 보조 3D lifting 모듈로 분리하는 것이 좋습니다.
+64 프레임은 짧지만 데드리프트 1회 반복의 주요 이벤트(바닥 이탈–무릎 통과–락아웃)를 포함하므로, 27/81 frame receptive field 계열로 비교실
+험이 가능합니다.
+MotionBERT보다 작고 학습·배포가 단순하므로, 정면 전담 baseline으로 적합합니다.
+C. 골격 시계열 분류: ST-GCN
+X
+​ =
+t
+[x
+​(t), y
+​(t), z
+​(t), v
+​(t), Δx
+​(t), Δy
+​(t), Δz
+​(t)]
+j
+j
+j
+j
+j
+j
+j
+h
+​
+motion
+f
+​
+40
+p(y = 1) = MLP([h
+​, f
+​, f
+​, f
+​])
+motion
+40
+morph
+bar
+VideoPose3D 공식 저장소
+
+
+--- [Page 3] ---
+ST-GCN — "Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action
+Recognition" (AAAI 2018)
+논문/코드: 
+사람 관절을 그래프 노드, 뼈 연결을 edge, 시간을 temporal edge로 정의합니다.
+각 관절마다 동일한 fully-connected Transformer를 쓰는 방식보다, 운동사슬의 국소적 연결 구조를 명시적으로 반영할 수 있습니다.
+d5 맞춤형 그래프 설계
+표준 인체 관절 그래프 외에 다음의 기능적 edge를 추가한 custom graph가 유망합니다.
+wrist ↔ bar center
+bar center ↔ knee midpoint
+bar center ↔ shank midpoint
+bar center ↔ thigh midpoint
+shoulder midpoint ↔ bar center
+hip midpoint ↔ bar center
+여기서 바벨 중심은 별도 검출기로 얻은 pseudo-joint입니다. d5는 일반 자세 분류가 아니라 몸–물체 관계
+(object–body relation) 결함이므로, 바벨을 그래프 노드로 넣어야 합니다.
+또한 edge attribute로 정규화 거리와 상대속도를 넣습니다.
+D. 단안 스마트폰 기반 생체역학: OpenCap Monocular
+OpenCap Monocular — "3D Human Kinematics and Dynamics From a Single Smartphone
+Video" (2026)
+단일 고정 스마트폰 영상에서 3D pose를 추정한 뒤, 생체역학적으로 제약된 골격 모델과 최적화를 통해 운동학·운동역학을 산출하는 접근입니다.
+ST-GCN 공식 구현
+V
+​ =
+t
+{body joints, bar center, left/right sleeve}
+e
+​(t) =
+i,j
+,
+​
+​
+[
+L
+​
+ref
+∥p
+​(t) −p
+​(t)∥
+i
+j
+dt
+d
+L
+​
+ref
+∥p
+​(t) −p
+​(t)∥
+i
+j
+]
+프로젝트·검증 결과
+오픈소스 코드
+
+
+--- [Page 4] ---
+공개 설명상 walking, squat, sit-to-stand에서 모션캡처/force plate와 비교 검증되었으며, deadlift 자체의 검증은 아닙니다.
+프로젝트에서 배울 점
+OpenCap의 핵심 교훈은 "2D → 3D 회귀만"으로 끝내지 않고, 다음의 물리적 사후 보정을 결합하는 데 있습니다.
+: 관절각/루트 자세
+: 생체역학 skeletal model의 관절 위치
+: 카메라 투영
+: landmark visibility 기반 신뢰도
+: 관절 가동범위·뼈 길이·좌우 대칭 등 제약
+권장 활용: OpenCap 전체를 그대로 deadlift에 적용하기보다, 이와 같은 reprojection + bone-length +
+temporal smoothness + 관절제약 최적화 구조를 정면 C 뷰의 3D pose 보정 모듈로 차용하십시오.
+E. 데드리프트 생체역학 근거
+Hanen et al., "Biomechanical analysis of conventional and sumo deadlift" (Frontiers in
+Bioengineering and Biotechnology, 2025)
+연구는 conventional/sumo deadlift의 관절 운동학·관절 모멘트·근활성 차이를 분석합니다.
+특히 문헌 검토에서 바벨을 몸에 더 가깝게 유지할수록 외부 모멘트암과 허리의 기계적 스트레스가 감소한다는 점을 정리합니다.
+또한 2D 기반 분석과 3D 재구성 분석의 값이 유의미하게 다를 수 있음을 지적합니다. 즉, 정면 단일 영상에서 d5를 "정확한 거리 측정 문제"로 과신하
+면 안 된다는 직접적 근거가 됩니다.
+2. 우선순위 높은 오픈소스·도구
+우선순위
+도구
+권장 역할
+주의점
+1
+MediaPipe 대체/병렬 포즈 추정, MotionBERT 계열 3D pose inference
+landmark 체계 변환 및 테스트
+​
+​
+​Π(M(q
+​)) −
+​
+​
+​ +
+q
+​
+1:T
+min
+t
+∑
+t
+k^2D,t
+W
+​t
+2
+λ
+​
+​∥q
+​ −
+s
+t
+∑
+t
+q
+​∥+
+t−1 2
+λ
+​
+​∥q
+​ −
+a
+t
+∑
+t+1
+2q
+​ +
+t
+q
+​∥+
+t−1 2
+λ
+​E
+​
+l
+lim
+q
+​t
+M(q
+​)
+t
+Π(⋅)
+W
+​t
+E
+​
+lim
+원문
+MMPose
+
+
+--- [Page 5] ---
+
+
+우선순위
+도구
+권장 역할
+주의점
+1
+사전학습 시계열 skeleton encoder, 3D lifting/분류 보조
+Human3.6M 중심 사전학습이
+1
+물리·생체역학 제약, 단안 3D 재구성 설계 참고
+deadlift 검증 데이터는 아님
+2
+경량 temporal lifting baseline
+원 저장소 archive 상태
+2
+바벨 노드를 포함한 skeleton-object graph classifier
+기본 구현은 오래되어 modern 
+3
+다중 카메라 수집/정량 생체역학 검증 파이프라인 참고
+기존 core는 2대 이상 영상을 기
+MMPose는 문서상 다양한 pretrained 2D/3D pose estimator와 영상 inference를 제공하며, MotionBERT
+기반 3D pose 모델도 연결할 수 있습니다. 
+3. d5에 특히 유효한 신규 피처 제안
+3-1. 바벨 중심선 검출 기반의 "진짜" 상대 이격 피처
+가장 먼저 바벨을 인체 pose landmark가 아닌 객체로 검출하십시오.
+바벨 샤프트의 선분 
+중앙점 
+좌·우 슬리브 또는 원판 중심 
+선분의 orientation 
+그 후 다리를 point가 아니라 선분/폴리라인으로 모델링합니다.
+현재의 ||Bar - Shank|| 처럼 단일 관절점 사이 거리를 쓰는 방식보다, 바벨선–정강이/대퇴 세그먼트 최소거리가
+생체역학적 정의에 더 가깝습니다.
+파생 피처:
+first pull 평균 거리
+knee-pass 직전·직후 거리 변화율
+MotionBERT
+OpenCap Monocular
+VideoPose3D
+ST-GCN
+OpenCap Core
+MMPose inference guide
+l
+​t
+b
+​t
+s
+​, s
+​
+t
+L
+t
+R
+θ
+​t
+d
+​(t) =
+bar−leg
+​d(p, l
+​)
+p∈S
+​(t)
+shank,thigh
+min
+t
+max
+​d
+​(t)
+t
+bar−leg
+
+
+--- [Page 6] ---
+거리 임계치 초과 프레임 비율
+상승·하강 구간의 이격 면적(AUC)
+3-2. 바벨–중족부(mid-foot) 수직 정렬 오차
+d5의 위험성은 단순히 "다리와 닿지 않는다"가 아니라, 하중선이 신체 지지기저에서 전방으로 벗어나 모멘트암을
+증가시키는 데 있습니다.
+사각 시점에서는 카메라 평면을 기준으로 쓰기보다 pelvis–ankle 방향과 중력 방향으로 정의한 local
+coordinate에서 측정해야 합니다.
+이 피처는 체형과 카메라 거리 변화에 비교적 강합니다.
+3-3. 동적 모멘트암 proxy
+실제 힘판·바벨 하중 정보가 없으면 관절 모멘트를 정확히 계산할 수는 없습니다. 다만 d5 판별에는 기하학적
+모멘트암 proxy가 충분히 유용합니다.
+A
+​ =
+gap
+​ max(0, d
+​(t) −
+∫
+t
+​s
+t
+​e
+bar−leg
+τ) dt
+r
+​(t) =
+midfoot
+​
+L
+​ + ϵ
+tibia
+x
+​(t) −x
+​(t)
+∣
+bar
+midfoot
+∣
+​ =
+e^AP
+​
+∥proj
+​(p
+​ −p
+​)∥
+⊥g
+toe
+heel
+proj
+​(p
+​ −p
+​)
+⊥g
+toe
+heel
+r
+​(t) =
+AP
+​
+L
+​ + ϵ
+tibia
+(p
+​ −p
+​) ⋅
+​
+bar
+midfoot
+e^AP
+m
+​(t) =
+hip
+​
+L
+​ + ϵ
+femur
+(p
+​ −p
+​) ×
+​
+∣
+bar
+hip
+g^∣
+m
+​(t) =
+L5/S1
+​
+L
+​ + ϵ
+torso
+(p
+​ −p
+​) ×
+​
+∣
+bar
+torso−base
+g^∣
+
+
+--- [Page 7] ---
+추천 파생값:
+first pull 구간의 평균/최대값
+knee-pass에서의 값
+peak bar velocity 시점의 값
+정상 참조 궤적 대비 면적 차이
+3-4. 팔–바벨–견갑 연동 지수
+문서의 torso_arm_coupling_deficit 을 더 구체화할 수 있습니다.
+정상 동작은 바벨과 팔이 비교적 강하게 연동되며, 바벨이 전방으로 돌아나가면 팔–바벨의 공간·속도 관계가 흔들릴
+가능성이 있습니다.
+또는 팔꿈치–손목 벡터와 바벨선의 관계:
+knee-pass 전후 변화량
+좌·우 대칭성
+을 후보 피처로 두십시오.
+3-5. 체형 불변 "도달 여유(reach margin)"
+긴 팔의 정상 동작을 결함으로 오인하는 문제는 절대거리 정규화만으로 해결하기 어렵습니다. 팔 길이와 몸통 길이를
+각각 명시해야 합니다.
+C
+​ =
+arm−bar
+corr
+​θ
+​,
+​x
+​
+(dt
+d
+shoulder−wrist dt
+d
+bar)
+ϕ
+​ =
+t
+∠p
+−p
+​, d
+​
+(
+wrist
+elbow
+bar)
+std(ϕ
+​)
+t
+ρ
+​ =
+arm
+​
+L
+​
+torso
+L
+​ + L
+​
+upperarm
+forearm
+
+
+--- [Page 8] ---
+그리고 바벨의 앞뒤 위치를 "해당 신체가 도달 가능한 자연스러운 범위"와 비교합니다.
+실무적으로는 arm-to-torso ratio , femur-to-tibia ratio , shoulder-width-to-hip-width ratio 를 별도
+morphology branch에 넣고, 이 branch가 분류 threshold를 보정하게 하는 방식이 좋습니다.
+4. 시점별 Mixture-of-Experts 권장 설계
+현재의 zero-masking은 "신뢰할 수 없는 피처를 차단"한다는 점에서 타당합니다. 다만, 정면과 사각 영상이 동일한
+의사결정 함수를 공유하는 것이 병목일 수 있습니다.
+권장 구조
+: 시점 정보(A~E)
+: keypoint visibility, barbell detector confidence, 프레임 품질 등
+: gating network
+: expert classifier
+Expert 구성
+1. Expert-O: 사각/후방 시점(A·B·D·E)
+바벨–정강이·대퇴의 직접 거리
+hip/bar moment-arm proxy
+바벨 궤적의 곡률, 수평 drift
+GBDT 또는 작은 MLP
+2. Expert-F: 정면 시점(C)
+ρ
+​ =
+leg
+​
+L
+​
+tibia
+L
+​
+femur
+R
+​(t) =
+reach
+​
+L
+​ + ϵ
+torso
+d
+​(t) −L
+​ + L
+​
+bar,shoulder
+(
+upperarm
+forearm)
+p(y = 1∣x, v) =
+​g
+​(v, q) ⋅
+k=1
+∑
+K
+k
+p
+​(y =
+k
+1∣x)
+v
+q
+g
+​k
+p
+​k
+
+
+--- [Page 9] ---
+arm foreshortening
+팔·어깨·골반의 시간적 상관
+상체 폭/팔꿈치 폭/무릎 폭의 투영 변화
+MotionBERT/TCN/ST-GCN embedding
+시점 C 전용 threshold calibration
+3. Expert-Q: 영상 품질/불확실성 expert
+visibility
+관절 jitter
+바벨 검출 confidence
+사람·바벨 일부 가림 여부
+낮은 품질이면 "재촬영"으로 유도
+중요한 점
+정면 시점은 "사각 시점의 피처를 0으로 만든 같은 모델"이 아니라, 다른 관측량으로 학습된 별도 모델이어야 합니다.
+특히 C는 F1 56.7%인 만큼, 전체 모델의 shared decision boundary가 아니라 전용 false-negative 감소
+전략이 필요합니다.
+5. 정면 C 개선을 위한 현실적 수집 전략
+모델 개선과 별개로, 제품 UX에서 가장 큰 개선 효과를 낼 수 있는 것은 다음입니다.
+권장 촬영 정책
+d5 판정이 목적이면 정면 촬영을 주 촬영 시점으로 허용하지 않기
+기본 촬영 가이드: 전방 30–45° 사각, 전신·원판·발이 모두 보이게
+카메라 높이: 대략 hip 높이 또는 약간 낮게
+운동자와 카메라 거리·초점거리·렌즈 왜곡을 표준화
+프레임 내 바벨 양 끝 또는 최소한 샤프트 중심부가 지속적으로 보여야 함
+OpenCap Monocular도 단안 입력의 best practice로 정면보다 전방 45° 촬영을 권장합니다. 
+즉, 정면 C는 "모든 결함을 판정해야 하는 일반 뷰"가 아니라, 다음과 같이 제품 규칙을 두는 편이 합리적입니다.
+OpenCap
+Monocular 프로젝트
+
+
+--- [Page 10] ---
+C에서 확실한 결함이면 결함 판정
+C에서 애매하면 재촬영 유도
+d5 정밀 판정은 사각 뷰로 전환
+사용자가 정면만 올릴 경우: "깊이 방향 이격 판정의 신뢰도가 제한됨"을 명확히 안내
+6. 80% 기본 F1 돌파를 위한 실험 로드맵
+Phase 1 — 바벨 측정 품질 감사
+1. 각 프레임의 바벨 좌표가 어떻게 생성됐는지 확인
+MediaPipe landmark 파생인지
+수작업/JSON 정답 좌표가 간접 유입됐는지
+별도 detector인지
+2. 100~200개 프레임을 표본으로 추출해 바벨 샤프트·중심·무릎·정강이 상대 위치를 수작업 검증
+3. bar detector confidence를 모델 입력 및 후속 재촬영 규칙에 반영
+이 단계가 통과되지 않으면 이후의 고급 모델 실험은 신뢰하기 어렵습니다.
+Phase 2 — 피처만으로 빠르게 검증
+기존 40D에 다음을 추가한 45~55D baseline을 만드십시오.
+바벨선–대퇴/정강이 최소거리
+bar–midfoot offset
+hip/L5-S1 moment arm proxy
+arm–bar coupling
+arm-to-torso, femur-to-tibia morphology ratio
+각 feature의 up/down phase AUC 및 peak-velocity 시점 값
+평가:
+동일한 StratifiedGroupKFold 의 subject isolation 유지
+전체 OOF F1뿐 아니라 시점별 Precision/Recall/F1, 특히 C의 FN 수를 분리 보고
+
+
+--- [Page 11] ---
+fold별 결과 평균뿐 아니라 표준편차·신뢰구간 보고
+최종 threshold는 fold 내 training data에서만 결정
+Phase 3 — 시점 특화 MoE
+사각 Expert: 현재 40D GBDT를 기반으로 유지
+정면 Expert: 2D pose sequence + morphology + 이미지 품질 피처
+gate: 시점 one-hot + average visibility + bar detector confidence
+성공 기준:
+전체 기본 OOF F1 ≥ 80%
+C의 recall 우선 개선
+A/B/D/E 성능 하락이 없어야 함
+피험자 3의 FP와 피험자 4·9의 FN을 별도 감소시키는지 확인
+Phase 4 — 사전학습 encoder 앙상블
+MotionBERT Lite 또는 VideoPose3D를 frozen feature extractor로 비교
+ST-GCN에는 바벨 pseudo-joint 및 body–bar functional edge를 추가
+GBDT 확률과 neural model 확률을 OOF prediction으로만 stacking
+→ 같은 fold의 validation prediction을 meta model 학습에 재사용하면 누수가 생깁니다.
+7. 데이터와 평가에서 주의할 점
+770개 시퀀스, 9명은 모델 복잡도 대비 데이터가 적습니다. 성능이 1~2%p 올라가도 fold variance인지 실제 개선인지 검증해야 합니다.
+정면/사각 5뷰가 같은 실제 repetition을 다른 카메라에서 찍은 것이라면, subject group split만으로 충분하지 않을 수 있습니다.
+같은 repetition의 다른 view가 train/test에 나뉘지 않는지 확인해야 합니다.
+"시점 C 56.7%"는 알고리즘 문제일 수도 있지만, d5 label이 정면상 관측 불가능한 물리량에 강하게 의존한다면 label observability 문제이기도
+합니다.
+바벨 하중, 키, 팔 길이, 카메라 focal length, 실제 촬영 거리, 운동 숙련도 등의 메타데이터가 있다면 매우 가치가 큽니다. 특히 바벨 하중과 실제 신장
+은 moment-arm proxy의 해석력을 개선합니다.
+
+
+--- [Page 12] ---
+최종 추천 우선순위
+1. 별도 바벨 검출·추적 + 바벨선–다리 세그먼트 거리 피처
+2. 정면 전담 expert와 사각 전담 expert를 갖는 MoE
+3. 체형 비율 기반 normalization/morphology branch
+4. MotionBERT Lite 또는 VideoPose3D의 사전학습 temporal embedding 앙상블
+5. 바벨 pseudo-joint를 포함한 ST-GCN 실험
+6. 제품 측면에서 45° 사각 촬영 유도 및 정면 C 재촬영 정책 도입
+현재 목표인 기본 F1 80% 돌파에는 4번보다 1~3번이 더 높은 우선순위입니다. 특히 d5는 바벨–몸 거리
+문제이므로, 사람 관절만 더 정밀하게 추정하는 것보다 바벨을 신뢰성 있게 관측하는 것이 가장 직접적인 개선
+경로입니다.

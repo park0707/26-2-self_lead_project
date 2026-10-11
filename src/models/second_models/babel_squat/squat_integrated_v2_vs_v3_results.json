@@ -1,0 +1,116 @@
+{
+  "total_samples": 1906,
+  "clean_samples": 125,
+  "v2": {
+    "exact_match_ratio": 58.39454354669464,
+    "exact_match_count": 1113,
+    "clean_specificity": 57.599999999999994,
+    "clean_fps": 53,
+    "hamming_loss": 13.300104931794335,
+    "defects": {
+      "c1": {
+        "precision": 81.42523364485982,
+        "recall": 75.6786102062975,
+        "f1": 78.44682048396173
+      },
+      "c2": {
+        "precision": 88.0482456140351,
+        "recall": 83.73305526590198,
+        "f1": 85.83645109567077
+      },
+      "c3": {
+        "precision": 90.96638655462185,
+        "recall": 90.87093389296957,
+        "f1": 90.91863517060368
+      },
+      "c4": {
+        "precision": 91.26106194690266,
+        "recall": 87.8594249201278,
+        "f1": 89.52794357026586
+      }
+    }
+  },
+  "v3": {
+    "tau_upper": 0.55,
+    "tau_lower": 0.45,
+    "exact_match_ratio": 59.91605456453305,
+    "exact_match_count": 1142,
+    "clean_specificity": 68.0,
+    "clean_fps": 40,
+    "hamming_loss": 13.077124868835257,
+    "upper_skip_count": 467,
+    "upper_skip_rate": 24.501573976915004,
+    "lower_skip_count": 455,
+    "lower_skip_rate": 23.871983210912905,
+    "defects": {
+      "c1": {
+        "precision": 85.27918781725889,
+        "recall": 72.9641693811075,
+        "f1": 78.64248098303102
+      },
+      "c2": {
+        "precision": 89.24122310305775,
+        "recall": 82.1689259645464,
+        "f1": 85.55917480998914
+      },
+      "c3": {
+        "precision": 91.62248144220572,
+        "recall": 90.6610703043022,
+        "f1": 91.13924050632912
+      },
+      "c4": {
+        "precision": 91.77001127395717,
+        "recall": 86.68796592119276,
+        "f1": 89.1566265060241
+      }
+    }
+  },
+  "delta": {
+    "exact_match_ratio_p": 1.5215110178384066,
+    "exact_match_count": 29,
+    "clean_specificity_p": 10.400000000000006,
+    "clean_fps": -13,
+    "hamming_loss_p": -0.22298006295907769
+  },
+  "binary_eval": {
+    "v2": {
+      "clean": {
+        "precision": 63.72,
+        "recall": 57.6,
+        "f1": 60.5,
+        "support": 125
+      },
+      "defect": {
+        "precision": 97.04,
+        "recall": 97.7,
+        "f1": 97.37,
+        "support": 1781
+      },
+      "macro_f1": 78.94,
+      "accuracy": 95.07
+    },
+    "v3": {
+      "clean": {
+        "precision": 62.04,
+        "recall": 68.0,
+        "f1": 64.89,
+        "support": 125
+      },
+      "defect": {
+        "precision": 97.74,
+        "recall": 97.08,
+        "f1": 97.41,
+        "support": 1781
+      },
+      "macro_f1": 81.15,
+      "accuracy": 95.17
+    },
+    "delta": {
+      "clean_recall_p": 10.4,
+      "clean_f1_p": 4.39,
+      "defect_precision_p": 0.7,
+      "defect_f1_p": 0.04,
+      "macro_f1_p": 2.21
+    }
+  }
+}

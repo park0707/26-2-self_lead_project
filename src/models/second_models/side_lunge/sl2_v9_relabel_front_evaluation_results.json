@@ -1,0 +1,48 @@
+{
+  "standard_10pct": {
+    "overall_f1": 0.6111111111111112,
+    "overall_accuracy": 0.8227848101265823,
+    "uncertainty_rate": 0.09140435835351089,
+    "view_audits": {
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "effective_f1": 0.6388059701492538,
+        "accuracy": 0.839095744680851,
+        "precision": 0.601123595505618,
+        "recall": 0.6815286624203821,
+        "uncertainty_rate": 0.08958837772397095
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "effective_f1": 0.5777777777777777,
+        "accuracy": 0.7994722955145118,
+        "precision": 0.538860103626943,
+        "recall": 0.6227544910179641,
+        "uncertainty_rate": 0.08232445520581114
+      }
+    }
+  },
+  "f1_70_breakthrough": {
+    "overall_f1": 0.6387096774193548,
+    "overall_accuracy": 0.8346863468634687,
+    "uncertainty_rate": 0.1797820823244552,
+    "view_audits": {
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "effective_f1": 0.6666666666666666,
+        "accuracy": 0.8588235294117647,
+        "precision": 0.6357615894039735,
+        "recall": 0.7007299270072993,
+        "uncertainty_rate": 0.17675544794188863
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "effective_f1": 0.6066666666666667,
+        "accuracy": 0.8262150220913107,
+        "precision": 0.5833333333333334,
+        "recall": 0.6319444444444444,
+        "uncertainty_rate": 0.17796610169491525
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "version": "v6_rtmp",
+  "exercise": "02_바벨_데드리프트",
+  "defect_code": "d4",
+  "defect_name": "무릎-골반 동시 신전 불일치 (Knee-Hip Extension Timing)",
+  "feature_dim": 27,
+  "feature_names": [
+    "d4_torso_pitch_nadir_deg",
+    "d4_torso_pitch_drop_deg",
+    "d4_torso_pitch_std",
+    "d4_torso_horiz_time_ratio",
+    "d4_torso_pitch_rise_rate",
+    "d4_torso_pitch_peak_norm",
+    "d4_hip_sh_vvr_fp_diff",
+    "d4_hip_wr_vvr_fp_diff",
+    "d4_hip_sh_vvr_peak",
+    "d4_hip_wr_decoupling_std",
+    "d4_accel_lead_fp",
+    "d4_sh_hip_disp_ratio",
+    "d4_knee_hip_corr_ascent",
+    "d4_knee_hip_corr_full",
+    "d4_vel_ratio_first_pull",
+    "d4_vel_ratio_second_pull",
+    "d4_lockout_lag_norm",
+    "d4_knee_rom_deg",
+    "d4_knee_hip_rom_ratio",
+    "d4_mvc_knee_dom_ratio",
+    "d4_mvc_co_ext_ratio",
+    "d4_mvc_hip_dom_ratio",
+    "d4_crp_mean_fp_deg",
+    "d4_crp_std_ascent_deg",
+    "d4_morph_femur_tibia_ratio",
+    "d4_morph_torso_femur_ratio",
+    "d4_is_front_view"
+  ],
+  "calibration": {
+    "method": "Temperature Scaling (Guo et al., ICML 2017)",
+    "global_temperature": 1.049,
+    "view_temperatures": {
+      "view5": 0.893,
+      "view2": 0.954,
+      "view3": 1.229,
+      "view4": 1.092,
+      "view1": 1.085
+    }
+  },
+  "view_thresholds": {
+    "view5": {
+      "tau_norm": 0.2,
+      "tau_def": 0.65
+    },
+    "view2": {
+      "tau_norm": 0.39,
+      "tau_def": 0.75
+    },
+    "view3": {
+      "tau_norm": 0.25,
+      "tau_def": 0.51
+    },
+    "view4": {
+      "tau_norm": 0.24,
+      "tau_def": 0.66
+    },
+    "view1": {
+      "tau_norm": 0.2,
+      "tau_def": 0.68
+    }
+  },
+  "global_thresholds": {
+    "forced_tau": 0.48,
+    "tau_norm": 0.25,
+    "tau_def": 0.58
+  },
+  "metrics": {
+    "roc_auc": 90.43,
+    "pooled_3state_f1": 71.36,
+    "uncalibrated_pooled_3state_f1": 72.54,
+    "view_mean_3state_f1": 72.48,
+    "uncalibrated_view_mean_3state_f1": 72.92,
+    "pooled_precision": 64.96,
+    "pooled_recall": 79.17,
+    "pooled_accuracy": 90.57,
+    "pooled_coverage": 84.03,
+    "forced_f1": 63.51,
+    "ece_raw": 6.62,
+    "ece_calibrated": 6.56,
+    "brier_score_raw": 0.1134,
+    "brier_score_calibrated": 0.1128,
+    "views": {
+      "view1": {
+        "view_name": "시점 E: 좌측 후방 (45도)",
+        "tau_norm": 0.2,
+        "tau_def": 0.68,
+        "f1": 78.05,
+        "precision": 80.0,
+        "recall": 76.2,
+        "coverage": 85.1,
+        "roc_auc": 91.98,
+        "temperature": 1.085
+      },
+      "view2": {
+        "view_name": "시점 B: 우측 전방 (45도)",
+        "tau_norm": 0.39,
+        "tau_def": 0.75,
+        "f1": 70.97,
+        "precision": 78.6,
+        "recall": 64.7,
+        "coverage": 82.5,
+        "roc_auc": 90.11,
+        "temperature": 0.954
+      },
+      "view3": {
+        "view_name": "시점 C: 정면",
+        "tau_norm": 0.25,
+        "tau_def": 0.51,
+        "f1": 58.62,
+        "precision": 44.7,
+        "recall": 85.0,
+        "coverage": 82.5,
+        "roc_auc": 82.65,
+        "temperature": 1.229
+      },
+      "view4": {
+        "view_name": "시점 D: 좌측 전방 (45도)",
+        "tau_norm": 0.24,
+        "tau_def": 0.66,
+        "f1": 72.73,
+        "precision": 61.5,
+        "recall": 88.9,
+        "coverage": 82.5,
+        "roc_auc": 90.08,
+        "temperature": 1.092
+      },
+      "view5": {
+        "view_name": "시점 A: 우측 후방 (45도)",
+        "tau_norm": 0.2,
+        "tau_def": 0.65,
+        "f1": 82.05,
+        "precision": 84.2,
+        "recall": 80.0,
+        "coverage": 87.7,
+        "roc_auc": 95.19,
+        "temperature": 0.893
+      }
+    }
+  }
+}

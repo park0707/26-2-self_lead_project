@@ -1,0 +1,337 @@
+{
+  "total_samples": 1081,
+  "tn": 474,
+  "tp": 289,
+  "fp": 144,
+  "fn": 70,
+  "caution": 104,
+  "rejection_rate": 0.09620721554116558,
+  "accuracy_confirmed": 0.7809621289662231,
+  "f1_confirmed": 0.7297979797979798,
+  "recall_confirmed": 0.8050139275766016,
+  "precision_confirmed": 0.6674364896073903,
+  "subj_audit": [
+    {
+      "subject": 1,
+      "total_samples": 238,
+      "fp": 40,
+      "fn": 17,
+      "total_errors": 57,
+      "error_rate": 0.23949579831932774
+    },
+    {
+      "subject": 2,
+      "total_samples": 178,
+      "fp": 40,
+      "fn": 25,
+      "total_errors": 65,
+      "error_rate": 0.3651685393258427
+    },
+    {
+      "subject": 3,
+      "total_samples": 182,
+      "fp": 19,
+      "fn": 10,
+      "total_errors": 29,
+      "error_rate": 0.15934065934065933
+    },
+    {
+      "subject": 4,
+      "total_samples": 82,
+      "fp": 11,
+      "fn": 3,
+      "total_errors": 14,
+      "error_rate": 0.17073170731707318
+    },
+    {
+      "subject": 5,
+      "total_samples": 82,
+      "fp": 5,
+      "fn": 0,
+      "total_errors": 5,
+      "error_rate": 0.06097560975609756
+    },
+    {
+      "subject": 6,
+      "total_samples": 82,
+      "fp": 13,
+      "fn": 9,
+      "total_errors": 22,
+      "error_rate": 0.2682926829268293
+    },
+    {
+      "subject": 7,
+      "total_samples": 81,
+      "fp": 2,
+      "fn": 2,
+      "total_errors": 4,
+      "error_rate": 0.04938271604938271
+    },
+    {
+      "subject": 8,
+      "total_samples": 78,
+      "fp": 6,
+      "fn": 4,
+      "total_errors": 10,
+      "error_rate": 0.1282051282051282
+    },
+    {
+      "subject": 9,
+      "total_samples": 78,
+      "fp": 8,
+      "fn": 0,
+      "total_errors": 8,
+      "error_rate": 0.10256410256410256
+    }
+  ],
+  "key_audit": [
+    {
+      "key": "330",
+      "total_samples": 60,
+      "fp": 13,
+      "fn": 0,
+      "total_errors": 13,
+      "error_rate": 0.21666666666666667
+    },
+    {
+      "key": "331",
+      "total_samples": 60,
+      "fp": 17,
+      "fn": 0,
+      "total_errors": 17,
+      "error_rate": 0.2833333333333333
+    },
+    {
+      "key": "332",
+      "total_samples": 60,
+      "fp": 15,
+      "fn": 0,
+      "total_errors": 15,
+      "error_rate": 0.25
+    },
+    {
+      "key": "333",
+      "total_samples": 60,
+      "fp": 13,
+      "fn": 0,
+      "total_errors": 13,
+      "error_rate": 0.21666666666666667
+    },
+    {
+      "key": "334",
+      "total_samples": 60,
+      "fp": 0,
+      "fn": 11,
+      "total_errors": 11,
+      "error_rate": 0.18333333333333332
+    },
+    {
+      "key": "335",
+      "total_samples": 57,
+      "fp": 15,
+      "fn": 0,
+      "total_errors": 15,
+      "error_rate": 0.2631578947368421
+    },
+    {
+      "key": "336",
+      "total_samples": 55,
+      "fp": 6,
+      "fn": 0,
+      "total_errors": 6,
+      "error_rate": 0.10909090909090909
+    },
+    {
+      "key": "337",
+      "total_samples": 55,
+      "fp": 9,
+      "fn": 0,
+      "total_errors": 9,
+      "error_rate": 0.16363636363636364
+    },
+    {
+      "key": "338",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 18,
+      "total_errors": 18,
+      "error_rate": 0.32727272727272727
+    },
+    {
+      "key": "339",
+      "total_samples": 55,
+      "fp": 16,
+      "fn": 0,
+      "total_errors": 16,
+      "error_rate": 0.2909090909090909
+    },
+    {
+      "key": "340",
+      "total_samples": 55,
+      "fp": 11,
+      "fn": 0,
+      "total_errors": 11,
+      "error_rate": 0.2
+    },
+    {
+      "key": "341",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 10,
+      "total_errors": 10,
+      "error_rate": 0.18181818181818182
+    },
+    {
+      "key": "342",
+      "total_samples": 55,
+      "fp": 13,
+      "fn": 0,
+      "total_errors": 13,
+      "error_rate": 0.23636363636363636
+    },
+    {
+      "key": "343",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 13,
+      "total_errors": 13,
+      "error_rate": 0.23636363636363636
+    },
+    {
+      "key": "344",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 7,
+      "total_errors": 7,
+      "error_rate": 0.12727272727272726
+    },
+    {
+      "key": "345",
+      "total_samples": 45,
+      "fp": 0,
+      "fn": 5,
+      "total_errors": 5,
+      "error_rate": 0.1111111111111111
+    },
+    {
+      "key": "346",
+      "total_samples": 24,
+      "fp": 0,
+      "fn": 3,
+      "total_errors": 3,
+      "error_rate": 0.125
+    },
+    {
+      "key": "347",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 1,
+      "total_errors": 1,
+      "error_rate": 0.1
+    },
+    {
+      "key": "348",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 1,
+      "total_errors": 1,
+      "error_rate": 0.1
+    },
+    {
+      "key": "349",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0,
+      "error_rate": 0.0
+    },
+    {
+      "key": "350",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 1,
+      "total_errors": 1,
+      "error_rate": 0.1
+    },
+    {
+      "key": "351",
+      "total_samples": 15,
+      "fp": 2,
+      "fn": 0,
+      "total_errors": 2,
+      "error_rate": 0.13333333333333333
+    },
+    {
+      "key": "352",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0,
+      "error_rate": 0.0
+    },
+    {
+      "key": "353",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0,
+      "error_rate": 0.0
+    },
+    {
+      "key": "354",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0,
+      "error_rate": 0.0
+    },
+    {
+      "key": "355",
+      "total_samples": 10,
+      "fp": 2,
+      "fn": 0,
+      "total_errors": 2,
+      "error_rate": 0.2
+    },
+    {
+      "key": "356",
+      "total_samples": 10,
+      "fp": 3,
+      "fn": 0,
+      "total_errors": 3,
+      "error_rate": 0.3
+    },
+    {
+      "key": "357",
+      "total_samples": 15,
+      "fp": 3,
+      "fn": 0,
+      "total_errors": 3,
+      "error_rate": 0.2
+    },
+    {
+      "key": "358",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0,
+      "error_rate": 0.0
+    },
+    {
+      "key": "359",
+      "total_samples": 15,
+      "fp": 3,
+      "fn": 0,
+      "total_errors": 3,
+      "error_rate": 0.2
+    },
+    {
+      "key": "360",
+      "total_samples": 15,
+      "fp": 3,
+      "fn": 0,
+      "total_errors": 3,
+      "error_rate": 0.2
+    }
+  ]
+}

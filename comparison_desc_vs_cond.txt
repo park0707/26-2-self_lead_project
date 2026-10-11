@@ -1,0 +1,160 @@
+Key 145: '1앞다리 90도, 2무릎발방향일치, 3한쪽다리바르게 펴기, 4척추 중립, 5상체 중립'
+  Actual in JSON  : [True, True, True, True, True] (c4=True)
+  Exp (with neck) : [True, True, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+
+Key 146: '정자세에서 앞다리 조금접고'
+  Actual in JSON  : [False, True, True, True, True] (c4=True)
+  Exp (with neck) : [False, True, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [False, True, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+
+Key 147: '정자세에서 발방향 바깥쪽'
+  Actual in JSON  : [True, False, True, True, True] (c4=True)
+  Exp (with neck) : [True, False, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, False, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+
+Key 148: '정자세에서 안굽히는 다리 구부정'
+  Actual in JSON  : [True, True, False, True, True] (c4=True)
+  Exp (with neck) : [True, True, False, True, True] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, False, True, True] (c4=True) -> All Match: True, c4 Match: True
+
+Key 149: '정자세에서 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, True, True, False, True] (c4=False)
+  Exp (with neck) : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+
+Key 150: '정자세에서 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, True, True, False] (c4=True)
+  Exp (with neck) : [True, True, True, True, False] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, True, False] (c4=True) -> All Match: True, c4 Match: True
+
+Key 151: '정자세에서 앞다리 조금접고 발방향 바깥쪽'
+  Actual in JSON  : [False, False, True, True, True] (c4=True)
+  Exp (with neck) : [False, False, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [False, False, True, True, True] (c4=True) -> All Match: True, c4 Match: True
+
+Key 152: '정자세에서 앞다리 조금접고 안굽히는 다리 구부정'
+  Actual in JSON  : [False, True, False, True, True] (c4=True)
+  Exp (with neck) : [False, True, False, True, True] (c4=True) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [False, True, False, True, True] (c4=True) -> All Match: True, c4 Match: True
+
+Key 153: '정자세에서 앞다리 조금접고 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [False, True, False, True, True] (c4=True)
+  Exp (with neck) : [False, True, True, False, True] (c4=False) -> All Match: False, c4 Match: False
+  Exp (no neck)   : [False, True, True, False, True] (c4=False) -> All Match: False, c4 Match: False
+
+Key 154: '정자세에서 앞다리 조금접고 상체 뒤로 젖힘'
+  Actual in JSON  : [False, True, True, False, True] (c4=False)
+  Exp (with neck) : [False, True, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+  Exp (no neck)   : [False, True, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 155: '정자세에서 발방향 바깥쪽 안굽히는 다리 구부정'
+  Actual in JSON  : [False, True, True, True, False] (c4=True)
+  Exp (with neck) : [True, False, False, True, True] (c4=True) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [True, False, False, True, True] (c4=True) -> All Match: False, c4 Match: True
+
+Key 156: '정자세에서 발방향 바깥쪽 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, False, False, True, True] (c4=True)
+  Exp (with neck) : [True, False, True, False, True] (c4=False) -> All Match: False, c4 Match: False
+  Exp (no neck)   : [True, False, True, False, True] (c4=False) -> All Match: False, c4 Match: False
+
+Key 157: '정자세에서 발방향 바깥쪽 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, False, True, False, False] (c4=False)
+  Exp (with neck) : [True, False, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+  Exp (no neck)   : [True, False, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 158: '정자세에서 안굽히는 다리 구부정 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, False, True, True, True] (c4=True)
+  Exp (with neck) : [True, True, False, False, True] (c4=False) -> All Match: False, c4 Match: False
+  Exp (no neck)   : [True, True, False, False, True] (c4=False) -> All Match: False, c4 Match: False
+
+Key 159: '정자세에서 안굽히는 다리 구부정 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, False, False, False] (c4=False)
+  Exp (with neck) : [True, True, False, True, False] (c4=True) -> All Match: False, c4 Match: False
+  Exp (no neck)   : [True, True, False, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 160: '정자세에서 몸통 옆으로 갸우뚱 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, False, False, False] (c4=False)
+  Exp (with neck) : [True, True, True, False, False] (c4=False) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [True, True, True, False, False] (c4=False) -> All Match: False, c4 Match: True
+
+Key 161: '정자세에서 안굽히는 다리 구부정 몸통 옆으로 갸우뚱 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, True, False, False] (c4=False)
+  Exp (with neck) : [True, True, False, False, False] (c4=False) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [True, True, False, False, False] (c4=False) -> All Match: False, c4 Match: True
+
+Key 162: '정자세에서 발방향 바깥쪽 몸통 옆으로 갸우뚱 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, False, False, False] (c4=False)
+  Exp (with neck) : [True, False, True, False, False] (c4=False) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [True, False, True, False, False] (c4=False) -> All Match: False, c4 Match: True
+
+Key 163: '정자세에서 왼쪽보고 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, False, True, False, False] (c4=False)
+  Exp (with neck) : [True, True, True, False, False] (c4=False) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [True, True, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 164: '정자세에서 오른쪽보고 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, True, False, False] (c4=False)
+  Exp (with neck) : [True, True, True, False, False] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 165: '정자세에서 하늘보고 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, True, False, False] (c4=False)
+  Exp (with neck) : [True, True, True, False, False] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 166: '정자세에서 바닥보고 몸통 상체 뒤로 젖힘'
+  Actual in JSON  : [True, True, True, False, False] (c4=False)
+  Exp (with neck) : [True, True, True, False, False] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, True, False] (c4=True) -> All Match: False, c4 Match: False
+
+Key 167: '정자세에서 왼쪽보고 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, True, True, False, True] (c4=False)
+  Exp (with neck) : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+
+Key 168: '정자세에서 오른쪽보고 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, True, True, False, True] (c4=False)
+  Exp (with neck) : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+
+Key 169: '정자세에서 하늘보고 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, True, True, False, True] (c4=False)
+  Exp (with neck) : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+
+Key 170: '정자세에서 바닥보고 몸통 옆으로 갸우뚱'
+  Actual in JSON  : [True, True, True, False, True] (c4=False)
+  Exp (with neck) : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+
+Key 171: '정자세에서 왼쪽보고 앞다리 조금접힘'
+  Actual in JSON  : [False, True, False, False, True] (c4=False)
+  Exp (with neck) : [False, True, True, False, True] (c4=False) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [False, True, True, True, True] (c4=True) -> All Match: False, c4 Match: False
+
+Key 172: '정자세에서 왼쪽보고 안굽히는 다리 구부정'
+  Actual in JSON  : [True, True, False, False, True] (c4=False)
+  Exp (with neck) : [True, True, False, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, False, True, True] (c4=True) -> All Match: False, c4 Match: False
+
+Key 173: '정자세에서 바닥보고 앞다리 조금접힘'
+  Actual in JSON  : [False, True, True, False, True] (c4=False)
+  Exp (with neck) : [False, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [False, True, True, True, True] (c4=True) -> All Match: False, c4 Match: False
+
+Key 174: '정자세에서 바닥보고 안굽히는 다리 구부정'
+  Actual in JSON  : [True, True, False, False, True] (c4=False)
+  Exp (with neck) : [True, True, False, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [True, True, False, True, True] (c4=True) -> All Match: False, c4 Match: False
+
+Key 175: '정자세에서 하늘보고 앞다리 조금접힘'
+  Actual in JSON  : [False, True, True, False, True] (c4=False)
+  Exp (with neck) : [False, True, True, False, True] (c4=False) -> All Match: True, c4 Match: True
+  Exp (no neck)   : [False, True, True, True, True] (c4=True) -> All Match: False, c4 Match: False
+
+Key 176: '정자세에서 하늘보고 안굽히는 다리 구부정'
+  Actual in JSON  : [False, True, False, False, True] (c4=False)
+  Exp (with neck) : [True, True, False, False, True] (c4=False) -> All Match: False, c4 Match: True
+  Exp (no neck)   : [True, True, False, True, True] (c4=True) -> All Match: False, c4 Match: False
+

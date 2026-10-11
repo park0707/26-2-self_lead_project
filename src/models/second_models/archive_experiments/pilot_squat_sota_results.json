@@ -1,0 +1,167 @@
+{
+  "ablation_results": {
+    "Baseline_v2": {
+      "name": "현재 v2 1-Stage (단순 th=0.15)",
+      "recall": 65.12,
+      "precision": 24.71,
+      "specificity": 86.12,
+      "balanced_acc": 75.62,
+      "f1_normal": 35.82,
+      "f1_macro": 63.58,
+      "tn": 1589,
+      "fp": 256,
+      "fn": 45,
+      "tp": 84
+    },
+    "Solution_1": {
+      "name": "솔루션 1 (+역방향 상호 검증 필터)",
+      "recall": 48.84,
+      "precision": 38.18,
+      "specificity": 94.47,
+      "balanced_acc": 71.65,
+      "f1_normal": 42.86,
+      "f1_macro": 69.13,
+      "tn": 1743,
+      "fp": 102,
+      "fn": 66,
+      "tp": 63
+    },
+    "Solution_1_2": {
+      "name": "솔루션 1+2 (+Neyman-Pearson 제약)",
+      "recall": 39.53,
+      "precision": 45.54,
+      "specificity": 96.69,
+      "balanced_acc": 68.11,
+      "f1_normal": 42.32,
+      "f1_macro": 69.29,
+      "tn": 1784,
+      "fp": 61,
+      "fn": 78,
+      "tp": 51,
+      "params": {
+        "theta_gate": 0.3,
+        "veto_knee": 0.55,
+        "veto_spine": 0.6,
+        "veto_foot": 0.7,
+        "veto_neck": 0.85,
+        "maha_thresh": null,
+        "maha_percentile": null
+      }
+    },
+    "Solution_1_2_3": {
+      "name": "솔루션 1+2+3 (+최하사점 169D 생체역학)",
+      "recall": 52.71,
+      "precision": 38.42,
+      "specificity": 94.09,
+      "balanced_acc": 73.4,
+      "f1_normal": 44.44,
+      "f1_macro": 69.89,
+      "tn": 1736,
+      "fp": 109,
+      "fn": 61,
+      "tp": 68,
+      "params": {
+        "theta_gate": 0.2,
+        "veto_knee": 0.55,
+        "veto_spine": 0.6,
+        "veto_foot": 0.7,
+        "veto_neck": 0.85,
+        "maha_thresh": null,
+        "maha_percentile": null
+      }
+    },
+    "Full_SOTA": {
+      "name": "솔루션 1~4 통합 (Full SOTA 이산 듀얼 게이트)",
+      "recall": 52.71,
+      "precision": 38.42,
+      "specificity": 94.09,
+      "balanced_acc": 73.4,
+      "f1_normal": 44.44,
+      "f1_macro": 69.89,
+      "tn": 1736,
+      "fp": 109,
+      "fn": 61,
+      "tp": 68,
+      "params": {
+        "theta_gate": 0.2,
+        "veto_knee": 0.55,
+        "veto_spine": 0.6,
+        "veto_foot": 0.7,
+        "veto_neck": 0.85,
+        "maha_thresh": null,
+        "maha_percentile": null
+      }
+    },
+    "Soft_Fusion_Balanced": {
+      "name": "SOTA 소프트 퓨전 [균형 운영모드]",
+      "recall": 47.29,
+      "precision": 45.52,
+      "specificity": 96.04,
+      "balanced_acc": 71.67,
+      "f1_normal": 46.39,
+      "f1_macro": 71.28,
+      "tn": 1772,
+      "fp": 73,
+      "fn": 68,
+      "tp": 61,
+      "params": {
+        "theta_fused": 0.18,
+        "maha_percentile": 97.5
+      }
+    },
+    "Soft_Fusion_High_Precision": {
+      "name": "SOTA 소프트 퓨전 [고정밀 엄격모드]",
+      "recall": 42.64,
+      "precision": 55.56,
+      "specificity": 97.62,
+      "balanced_acc": 70.13,
+      "f1_normal": 48.25,
+      "f1_macro": 72.54,
+      "tn": 1801,
+      "fp": 44,
+      "fn": 74,
+      "tp": 55,
+      "params": {
+        "theta_fused": 0.225,
+        "maha_percentile": 97.5
+      }
+    },
+    "Soft_Fusion_High_Recall": {
+      "name": "SOTA 소프트 퓨전 [고재현 관용모드]",
+      "recall": 72.09,
+      "precision": 29.15,
+      "specificity": 87.75,
+      "balanced_acc": 79.92,
+      "f1_normal": 41.52,
+      "f1_macro": 67.02,
+      "tn": 1619,
+      "fp": 226,
+      "fn": 36,
+      "tp": 93,
+      "params": {
+        "theta_fused": 0.07,
+        "maha_percentile": 97.5
+      }
+    }
+  },
+  "defect_accuracies": [
+    76.6,
+    55.93,
+    87.79,
+    71.94
+  ],
+  "defect_f1s": [
+    75.16,
+    55.66,
+    87.69,
+    71.38
+  ],
+  "defect_names": [
+    "척추의 중립",
+    "고개 정면",
+    "발과 무릎의 방향 일치",
+    "발바닥 지면 고정"
+  ],
+  "hamming_loss": 26.94,
+  "elapsed_seconds": 0.05
+}

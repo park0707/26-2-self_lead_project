@@ -1,0 +1,210 @@
+{
+  "model_name": "sl1_v7",
+  "exercise": "07_사이드_런지",
+  "defect": "c1 (앞다리 무릎 각도 90도 오류)",
+  "data_selection": "원천 전체 826개 폴더 (설명 기반 라벨 정제본)",
+  "total_samples": 4130,
+  "pos_samples": 1030,
+  "neg_samples": 3100,
+  "features_dimension": 40,
+  "ensemble_weights": {
+    "lightgbm": 0.3431347337406706,
+    "catboost": 0.3373778420176535,
+    "xgboost": 0.319487424241676
+  },
+  "two_state_metrics": {
+    "ensemble": {
+      "roc_auc": 0.8456974632007517,
+      "f1": 0.6363636363636364,
+      "accuracy": 0.8082324455205812,
+      "precision": 0.6036585365853658,
+      "recall": 0.6728155339805825
+    },
+    "lightgbm": {
+      "roc_auc": 0.829381929220169,
+      "f1": 0.630639563708478,
+      "accuracy": 0.8196125907990315,
+      "precision": 0.6443768996960486,
+      "recall": 0.6174757281553398
+    },
+    "catboost": {
+      "roc_auc": 0.8450548073911681,
+      "f1": 0.6363636363636364,
+      "accuracy": 0.7927360774818402,
+      "precision": 0.5657099697885196,
+      "recall": 0.7271844660194174
+    },
+    "xgboost": {
+      "roc_auc": 0.8412461634826182,
+      "f1": 0.6373320981936081,
+      "accuracy": 0.810411622276029,
+      "precision": 0.6093888396811338,
+      "recall": 0.6679611650485436
+    }
+  },
+  "three_state_metrics": {
+    "effective_f1": 0.6902944383860414,
+    "accuracy": 0.8476394849785408,
+    "precision": 0.6828478964401294,
+    "recall": 0.6979051819184123,
+    "uncertainty_rate": 0.0973365617433414,
+    "coverage": 0.9026634382566586,
+    "view_thresholds": {
+      "view1": {
+        "tau_clean": 0.4900000000000003,
+        "tau_defect": 0.6750000000000005
+      },
+      "view2": {
+        "tau_clean": 0.42000000000000026,
+        "tau_defect": 0.5850000000000004
+      },
+      "view3": {
+        "tau_clean": 0.3600000000000002,
+        "tau_defect": 0.5150000000000003
+      },
+      "view4": {
+        "tau_clean": 0.41500000000000026,
+        "tau_defect": 0.5850000000000004
+      },
+      "view5": {
+        "tau_clean": 0.4650000000000003,
+        "tau_defect": 0.6450000000000005
+      }
+    },
+    "view_audits": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 826,
+        "tau_clean": 0.4900000000000003,
+        "tau_defect": 0.6750000000000005,
+        "uncertainty_rate": 0.09806295399515738,
+        "effective_f1": 0.696165191740413,
+        "accuracy": 0.8617449664429531,
+        "precision": 0.7515923566878981,
+        "recall": 0.6483516483516484
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 826,
+        "tau_clean": 0.42000000000000026,
+        "tau_defect": 0.5850000000000004,
+        "uncertainty_rate": 0.09806295399515738,
+        "effective_f1": 0.7277777777777777,
+        "accuracy": 0.8684563758389262,
+        "precision": 0.7485714285714286,
+        "recall": 0.7081081081081081
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 826,
+        "tau_clean": 0.3600000000000002,
+        "tau_defect": 0.5150000000000003,
+        "uncertainty_rate": 0.09685230024213075,
+        "effective_f1": 0.6945169712793734,
+        "accuracy": 0.8431635388739946,
+        "precision": 0.6487804878048781,
+        "recall": 0.7471910112359551
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 826,
+        "tau_clean": 0.41500000000000026,
+        "tau_defect": 0.5850000000000004,
+        "uncertainty_rate": 0.09443099273607748,
+        "effective_f1": 0.6701298701298701,
+        "accuracy": 0.8302139037433155,
+        "precision": 0.6354679802955665,
+        "recall": 0.7087912087912088
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 826,
+        "tau_clean": 0.4650000000000003,
+        "tau_defect": 0.6450000000000005,
+        "uncertainty_rate": 0.09927360774818401,
+        "effective_f1": 0.6648501362397821,
+        "accuracy": 0.8346774193548387,
+        "precision": 0.6524064171122995,
+        "recall": 0.6777777777777778
+      }
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "name": "lead_femur_vertical_drop_ratio",
+      "importance": 12.400624888654557
+    },
+    {
+      "rank": 2,
+      "name": "front_view_femur_drop_gated",
+      "importance": 10.671111250890501
+    },
+    {
+      "rank": 3,
+      "name": "femur_horizontal_level_ratio",
+      "importance": 7.831506997405119
+    },
+    {
+      "rank": 4,
+      "name": "lead_tibia_vertical_tilt",
+      "importance": 6.501649278938508
+    },
+    {
+      "rank": 5,
+      "name": "lead_leg_length_compression_ratio",
+      "importance": 4.756342437171695
+    },
+    {
+      "rank": 6,
+      "name": "lead_tibia_sagittal_sway",
+      "importance": 4.754850860302234
+    },
+    {
+      "rank": 7,
+      "name": "rear_knee_angle_min",
+      "importance": 3.868639801602749
+    },
+    {
+      "rank": 8,
+      "name": "lead_knee_dtw_distance",
+      "importance": 3.4829983688836954
+    },
+    {
+      "rank": 9,
+      "name": "pelvic_drop_to_stride_ratio",
+      "importance": 3.3037676364036233
+    },
+    {
+      "rank": 10,
+      "name": "rigid_bone_length_consistency",
+      "importance": 2.7017087652621044
+    },
+    {
+      "rank": 11,
+      "name": "step_width_normalized",
+      "importance": 2.59325376762173
+    },
+    {
+      "rank": 12,
+      "name": "jerk_metric_lead_leg",
+      "importance": 2.5294363552759944
+    },
+    {
+      "rank": 13,
+      "name": "pelvic_drop_angle",
+      "importance": 2.447488302344315
+    },
+    {
+      "rank": 14,
+      "name": "pelvic_tilt_roll_slope",
+      "importance": 2.122779536748157
+    },
+    {
+      "rank": 15,
+      "name": "lead_tibia_length_ratio",
+      "importance": 2.109214166372602
+    }
+  ],
+  "elapsed_seconds": 109.51556420326233
+}

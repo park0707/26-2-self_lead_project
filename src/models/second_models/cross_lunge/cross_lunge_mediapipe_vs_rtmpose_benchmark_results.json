@@ -1,0 +1,495 @@
+{
+  "metadata": {
+    "project": "vidio-health-trainer",
+    "exercise": "크로스 런지 (Cross Lunge, 08_크로스_런지)",
+    "total_sequences": 1025,
+    "subjects_count": 9,
+    "views_count": 5,
+    "timestamp": "2026-10-11 09:51:56"
+  },
+  "submodels": {
+    "c1": {
+      "description": "앞다리 무릎 각도 90도 오류",
+      "mediapipe": {
+        "sel_f1": 89.97,
+        "retake": 9.73,
+        "coverage": 90.27,
+        "forced_f1": 84.61,
+        "forced_acc": 88.3,
+        "forced_prec": 83.42,
+        "forced_rec": 85.83,
+        "roc_auc": 95.65,
+        "views": {
+          "view5": {
+            "sel_f1": 88.41
+          },
+          "view2": {
+            "sel_f1": 91.18
+          },
+          "view3": {
+            "sel_f1": 90.51
+          },
+          "view4": {
+            "sel_f1": 88.89
+          },
+          "view1": {
+            "sel_f1": 90.91
+          }
+        }
+      },
+      "rtmpose": {
+        "sel_f1": 92.42,
+        "sel_prec": 90.48,
+        "sel_rec": 94.44,
+        "sel_acc": 94.29,
+        "coverage": 90.63,
+        "retake": 9.37,
+        "forced_f1": 87.23,
+        "forced_prec": 84.98,
+        "forced_rec": 89.61,
+        "forced_acc": 90.15,
+        "roc_auc": 96.47,
+        "thresholds": {
+          "view5": {
+            "tau_clean": 0.26000000000000006,
+            "tau_defect": 0.7900000000000003
+          },
+          "view2": {
+            "tau_clean": 0.4400000000000002,
+            "tau_defect": 0.7800000000000002
+          },
+          "view3": {
+            "tau_clean": 0.3300000000000001,
+            "tau_defect": 0.56
+          },
+          "view4": {
+            "tau_clean": 0.2,
+            "tau_defect": 0.6100000000000001
+          },
+          "view1": {
+            "tau_clean": 0.22000000000000003,
+            "tau_defect": 0.7600000000000002
+          }
+        }
+      },
+      "diff_f1": 2.45,
+      "diff_auc": 0.82,
+      "views_mp": {
+        "view5": {
+          "sel_f1": 88.41
+        },
+        "view2": {
+          "sel_f1": 91.18
+        },
+        "view3": {
+          "sel_f1": 90.51
+        },
+        "view4": {
+          "sel_f1": 88.89
+        },
+        "view1": {
+          "sel_f1": 90.91
+        }
+      },
+      "views_rtm": {
+        "view5": {
+          "forced_f1": 86.79,
+          "forced_prec": 84.15,
+          "forced_rec": 89.61,
+          "forced_acc": 89.76,
+          "roc_auc": 96.89,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 94.29,
+          "sel_prec": 90.41,
+          "sel_rec": 98.51,
+          "sel_acc": 95.68,
+          "tau_clean": 0.26,
+          "tau_defect": 0.79
+        },
+        "view2": {
+          "forced_f1": 87.74,
+          "forced_prec": 87.18,
+          "forced_rec": 88.31,
+          "forced_acc": 90.73,
+          "roc_auc": 96.41,
+          "coverage": 90.73,
+          "retake": 9.27,
+          "sel_f1": 92.31,
+          "sel_prec": 96.77,
+          "sel_rec": 88.24,
+          "sel_acc": 94.62,
+          "tau_clean": 0.44,
+          "tau_defect": 0.78
+        },
+        "view3": {
+          "forced_f1": 82.14,
+          "forced_prec": 75.82,
+          "forced_rec": 89.61,
+          "forced_acc": 85.37,
+          "roc_auc": 94.06,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 87.58,
+          "sel_prec": 79.76,
+          "sel_rec": 97.1,
+          "sel_acc": 89.73,
+          "tau_clean": 0.33,
+          "tau_defect": 0.56
+        },
+        "view4": {
+          "forced_f1": 91.14,
+          "forced_prec": 88.89,
+          "forced_rec": 93.51,
+          "forced_acc": 93.17,
+          "roc_auc": 97.64,
+          "coverage": 91.71,
+          "retake": 8.29,
+          "sel_f1": 95.17,
+          "sel_prec": 93.24,
+          "sel_rec": 97.18,
+          "sel_acc": 96.28,
+          "tau_clean": 0.2,
+          "tau_defect": 0.61
+        },
+        "view1": {
+          "forced_f1": 88.74,
+          "forced_prec": 90.54,
+          "forced_rec": 87.01,
+          "forced_acc": 91.71,
+          "roc_auc": 97.01,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 93.13,
+          "sel_prec": 95.31,
+          "sel_rec": 91.04,
+          "sel_acc": 95.14,
+          "tau_clean": 0.22,
+          "tau_defect": 0.76
+        }
+      }
+    },
+    "c2": {
+      "description": "몸통 앞발 앞무릎 방향 일치 여부",
+      "mediapipe": {
+        "sel_f1": 71.5,
+        "retake": 9.27,
+        "coverage": 90.73,
+        "forced_f1": 70.29,
+        "forced_acc": 62.15,
+        "forced_prec": 58.03,
+        "forced_rec": 89.13,
+        "roc_auc": 67.66,
+        "views": {
+          "view5": {
+            "sel_f1": 71.84
+          },
+          "view2": {
+            "sel_f1": 71.54
+          },
+          "view3": {
+            "sel_f1": 71.79
+          },
+          "view4": {
+            "sel_f1": 71.48
+          },
+          "view1": {
+            "sel_f1": 70.83
+          }
+        }
+      },
+      "rtmpose": {
+        "sel_f1": 64.29,
+        "sel_prec": 62.57,
+        "sel_rec": 66.11,
+        "sel_acc": 62.66,
+        "coverage": 91.71,
+        "retake": 8.29,
+        "forced_f1": 61.96,
+        "forced_prec": 62.57,
+        "forced_rec": 61.36,
+        "forced_acc": 62.15,
+        "roc_auc": 65.01,
+        "thresholds": {
+          "view5": {
+            "tau_clean": 0.4400000000000002,
+            "tau_defect": 0.5
+          },
+          "view2": {
+            "tau_clean": 0.45000000000000023,
+            "tau_defect": 0.5
+          },
+          "view3": {
+            "tau_clean": 0.47000000000000025,
+            "tau_defect": 0.5
+          },
+          "view4": {
+            "tau_clean": 0.4200000000000002,
+            "tau_defect": 0.5
+          },
+          "view1": {
+            "tau_clean": 0.46000000000000024,
+            "tau_defect": 0.5
+          }
+        }
+      },
+      "diff_f1": -7.21,
+      "diff_auc": -2.65,
+      "views_mp": {
+        "view5": {
+          "sel_f1": 71.84
+        },
+        "view2": {
+          "sel_f1": 71.54
+        },
+        "view3": {
+          "sel_f1": 71.79
+        },
+        "view4": {
+          "sel_f1": 71.48
+        },
+        "view1": {
+          "sel_f1": 70.83
+        }
+      },
+      "views_rtm": {
+        "view5": {
+          "forced_f1": 60.0,
+          "forced_prec": 58.88,
+          "forced_rec": 61.17,
+          "forced_acc": 59.02,
+          "roc_auc": 61.16,
+          "coverage": 92.68,
+          "retake": 7.32,
+          "sel_f1": 61.76,
+          "sel_prec": 58.88,
+          "sel_rec": 64.95,
+          "sel_acc": 58.95,
+          "tau_clean": 0.44,
+          "tau_defect": 0.5
+        },
+        "view2": {
+          "forced_f1": 62.37,
+          "forced_prec": 69.88,
+          "forced_rec": 56.31,
+          "forced_acc": 65.85,
+          "roc_auc": 67.76,
+          "coverage": 92.2,
+          "retake": 7.8,
+          "sel_f1": 65.54,
+          "sel_prec": 69.88,
+          "sel_rec": 61.7,
+          "sel_acc": 67.72,
+          "tau_clean": 0.45,
+          "tau_defect": 0.5
+        },
+        "view3": {
+          "forced_f1": 56.82,
+          "forced_prec": 68.49,
+          "forced_rec": 48.54,
+          "forced_acc": 62.93,
+          "roc_auc": 64.92,
+          "coverage": 90.73,
+          "retake": 9.27,
+          "sel_f1": 58.48,
+          "sel_prec": 68.49,
+          "sel_rec": 51.02,
+          "sel_acc": 61.83,
+          "tau_clean": 0.47,
+          "tau_defect": 0.5
+        },
+        "view4": {
+          "forced_f1": 68.4,
+          "forced_prec": 61.72,
+          "forced_rec": 76.7,
+          "forced_acc": 64.39,
+          "roc_auc": 70.81,
+          "coverage": 92.2,
+          "retake": 7.8,
+          "sel_f1": 70.85,
+          "sel_prec": 61.72,
+          "sel_rec": 83.16,
+          "sel_acc": 65.61,
+          "tau_clean": 0.42,
+          "tau_defect": 0.5
+        },
+        "view1": {
+          "forced_f1": 60.83,
+          "forced_prec": 57.89,
+          "forced_rec": 64.08,
+          "forced_acc": 58.54,
+          "roc_auc": 58.3,
+          "coverage": 90.73,
+          "retake": 9.27,
+          "sel_f1": 63.46,
+          "sel_prec": 57.89,
+          "sel_rec": 70.21,
+          "sel_acc": 59.14,
+          "tau_clean": 0.46,
+          "tau_defect": 0.5
+        }
+      }
+    },
+    "c3": {
+      "description": "상체 정면 균형잡기",
+      "mediapipe": {
+        "sel_f1": 87.33,
+        "retake": 9.56,
+        "coverage": 90.44,
+        "forced_f1": 83.27,
+        "forced_acc": 79.61,
+        "forced_prec": 85.76,
+        "forced_rec": 88.96,
+        "roc_auc": 88.31,
+        "views": {
+          "view5": {
+            "sel_f1": 87.75
+          },
+          "view2": {
+            "sel_f1": 87.93
+          },
+          "view3": {
+            "sel_f1": 85.46
+          },
+          "view4": {
+            "sel_f1": 90.83
+          },
+          "view1": {
+            "sel_f1": 84.94
+          }
+        }
+      },
+      "rtmpose": {
+        "sel_f1": 87.01,
+        "sel_prec": 85.08,
+        "sel_rec": 89.04,
+        "sel_acc": 82.72,
+        "coverage": 90.34,
+        "retake": 9.66,
+        "forced_f1": 84.11,
+        "forced_prec": 82.65,
+        "forced_rec": 85.62,
+        "forced_acc": 79.8,
+        "roc_auc": 85.89,
+        "thresholds": {
+          "view5": {
+            "tau_clean": 0.4400000000000002,
+            "tau_defect": 0.5900000000000001
+          },
+          "view2": {
+            "tau_clean": 0.35000000000000014,
+            "tau_defect": 0.51
+          },
+          "view3": {
+            "tau_clean": 0.37000000000000016,
+            "tau_defect": 0.51
+          },
+          "view4": {
+            "tau_clean": 0.48000000000000026,
+            "tau_defect": 0.5800000000000001
+          },
+          "view1": {
+            "tau_clean": 0.4100000000000002,
+            "tau_defect": 0.5
+          }
+        }
+      },
+      "diff_f1": -0.32,
+      "diff_auc": -2.42,
+      "views_mp": {
+        "view5": {
+          "sel_f1": 87.75
+        },
+        "view2": {
+          "sel_f1": 87.93
+        },
+        "view3": {
+          "sel_f1": 85.46
+        },
+        "view4": {
+          "sel_f1": 90.83
+        },
+        "view1": {
+          "sel_f1": 84.94
+        }
+      },
+      "views_rtm": {
+        "view5": {
+          "forced_f1": 82.17,
+          "forced_prec": 81.54,
+          "forced_rec": 82.81,
+          "forced_acc": 77.56,
+          "roc_auc": 84.52,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 85.23,
+          "sel_prec": 86.32,
+          "sel_rec": 84.17,
+          "sel_acc": 81.08,
+          "tau_clean": 0.44,
+          "tau_defect": 0.59
+        },
+        "view2": {
+          "forced_f1": 87.16,
+          "forced_prec": 86.82,
+          "forced_rec": 87.5,
+          "forced_acc": 83.9,
+          "roc_auc": 90.58,
+          "coverage": 90.73,
+          "retake": 9.27,
+          "sel_f1": 90.24,
+          "sel_prec": 87.4,
+          "sel_rec": 93.28,
+          "sel_acc": 87.1,
+          "tau_clean": 0.35,
+          "tau_defect": 0.51
+        },
+        "view3": {
+          "forced_f1": 82.13,
+          "forced_prec": 80.0,
+          "forced_rec": 84.38,
+          "forced_acc": 77.07,
+          "roc_auc": 79.03,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 84.58,
+          "sel_prec": 80.45,
+          "sel_rec": 89.17,
+          "sel_acc": 78.92,
+          "tau_clean": 0.37,
+          "tau_defect": 0.51
+        },
+        "view4": {
+          "forced_f1": 84.09,
+          "forced_prec": 81.62,
+          "forced_rec": 86.72,
+          "forced_acc": 79.51,
+          "roc_auc": 88.31,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 87.97,
+          "sel_prec": 88.33,
+          "sel_rec": 87.6,
+          "sel_acc": 84.32,
+          "tau_clean": 0.48,
+          "tau_defect": 0.58
+        },
+        "view1": {
+          "forced_f1": 85.06,
+          "forced_prec": 83.46,
+          "forced_rec": 86.72,
+          "forced_acc": 80.98,
+          "roc_auc": 85.68,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "sel_f1": 87.06,
+          "sel_prec": 83.46,
+          "sel_rec": 90.98,
+          "sel_acc": 82.16,
+          "tau_clean": 0.41,
+          "tau_defect": 0.5
+        }
+      }
+    }
+  }
+}

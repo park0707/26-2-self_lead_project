@@ -1,0 +1,244 @@
+{
+  "version": "sl5_v7",
+  "dataset_summary": {
+    "total_samples": 4130,
+    "normal_samples": 2710,
+    "defect_samples": 1420,
+    "defect_ratio": 0.34382566585956414,
+    "feature_dim": 42,
+    "subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "views": [
+      "view1",
+      "view2",
+      "view3",
+      "view4",
+      "view5"
+    ]
+  },
+  "full_coverage": {
+    "f1": 0.7065063649222065,
+    "precision": 0.7095170454545454,
+    "recall": 0.7035211267605633,
+    "accuracy": 0.7990314769975787,
+    "auc": 0.854989085806351
+  },
+  "three_state": {
+    "f1": 0.7477941176470588,
+    "precision": 0.7121848739495799,
+    "recall": 0.7871517027863777,
+    "accuracy": 0.8164302916778164,
+    "coverage": 0.9048426150121065,
+    "rejection_rate": 0.0951573849878935,
+    "total_confirmed": 3737,
+    "total_caution": 393,
+    "confusion_matrix": [
+      [
+        2034,
+        411
+      ],
+      [
+        275,
+        1017
+      ]
+    ]
+  },
+  "view_thresholds": {
+    "view1": {
+      "tau_clean": 0.39,
+      "tau_defect": 0.52
+    },
+    "view2": {
+      "tau_clean": 0.39,
+      "tau_defect": 0.53
+    },
+    "view3": {
+      "tau_clean": 0.33,
+      "tau_defect": 0.42
+    },
+    "view4": {
+      "tau_clean": 0.31,
+      "tau_defect": 0.44
+    },
+    "view5": {
+      "tau_clean": 0.42,
+      "tau_defect": 0.57
+    }
+  },
+  "view_audits": {
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "total_samples": 826,
+      "confirmed_samples": 744,
+      "caution_samples": 82,
+      "coverage": 0.9007263922518159,
+      "rejection_rate": 0.09927360774818401,
+      "3state_f1": 0.7448275862068966,
+      "precision": 0.6792452830188679,
+      "recall": 0.8244274809160306,
+      "accuracy": 0.8010752688172043,
+      "auc": 0.8393599605010136,
+      "cm": [
+        [
+          380,
+          102
+        ],
+        [
+          46,
+          216
+        ]
+      ]
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "total_samples": 826,
+      "confirmed_samples": 746,
+      "caution_samples": 80,
+      "coverage": 0.9031476997578692,
+      "rejection_rate": 0.09685230024213075,
+      "3state_f1": 0.7606177606177607,
+      "precision": 0.7490494296577946,
+      "recall": 0.7725490196078432,
+      "accuracy": 0.8337801608579088,
+      "auc": 0.8699132061743152,
+      "cm": [
+        [
+          425,
+          66
+        ],
+        [
+          58,
+          197
+        ]
+      ]
+    },
+    "view3": {
+      "view_name": "시점 C (완전 정면 0°)",
+      "total_samples": 826,
+      "confirmed_samples": 753,
+      "caution_samples": 73,
+      "coverage": 0.9116222760290557,
+      "rejection_rate": 0.08837772397094432,
+      "3state_f1": 0.6984667802385008,
+      "precision": 0.625,
+      "recall": 0.7915057915057915,
+      "accuracy": 0.7649402390438247,
+      "auc": 0.830134868250091,
+      "cm": [
+        [
+          371,
+          123
+        ],
+        [
+          54,
+          205
+        ]
+      ]
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "total_samples": 826,
+      "confirmed_samples": 749,
+      "caution_samples": 77,
+      "coverage": 0.9067796610169492,
+      "rejection_rate": 0.09322033898305085,
+      "3state_f1": 0.7992633517495396,
+      "precision": 0.7587412587412588,
+      "recall": 0.8443579766536965,
+      "accuracy": 0.8544726301735648,
+      "auc": 0.8960098227742842,
+      "cm": [
+        [
+          423,
+          69
+        ],
+        [
+          40,
+          217
+        ]
+      ]
+    },
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "total_samples": 826,
+      "confirmed_samples": 745,
+      "caution_samples": 81,
+      "coverage": 0.9019370460048426,
+      "rejection_rate": 0.09806295399515738,
+      "3state_f1": 0.7398373983739838,
+      "precision": 0.7811158798283262,
+      "recall": 0.7027027027027027,
+      "accuracy": 0.8281879194630872,
+      "auc": 0.8386518372225976,
+      "cm": [
+        [
+          435,
+          51
+        ],
+        [
+          77,
+          182
+        ]
+      ]
+    }
+  },
+  "top_features": [
+    {
+      "feature_name": "sl_gaze_to_horizon_pitch",
+      "importance": 0.11215452411108513
+    },
+    {
+      "feature_name": "sl_tibia_torso_parallelism",
+      "importance": 0.05299495120316973
+    },
+    {
+      "feature_name": "sl_cervical_strain_index",
+      "importance": 0.04813885929886436
+    },
+    {
+      "feature_name": "sl_pure_thoracic_curvature",
+      "importance": 0.043330322615377864
+    },
+    {
+      "feature_name": "sl_head_torso_hyperext_sync",
+      "importance": 0.03618955361490371
+    },
+    {
+      "feature_name": "sl_trail_hip_abduction_angle",
+      "importance": 0.03534385836582964
+    },
+    {
+      "feature_name": "sl_femur_to_torso_ratio",
+      "importance": 0.02911665830123164
+    },
+    {
+      "feature_name": "sl_coronal_sagittal_coupling_index",
+      "importance": 0.02837742571623879
+    },
+    {
+      "feature_name": "sl_head_pitch_vs_torso_pitch_diff",
+      "importance": 0.02731925712247232
+    },
+    {
+      "feature_name": "sl_pelvic_tilt_sagittal",
+      "importance": 0.024466255252708177
+    }
+  ],
+  "baseline_comparison": {
+    "v5_f1": 0.6372,
+    "v6_f1": 0.6329,
+    "v7_f1": 0.7477941176470588,
+    "diff_vs_v5": 0.11059411764705884,
+    "diff_vs_v6": 0.11489411764705881,
+    "goal_70_achieved": true
+  }
+}

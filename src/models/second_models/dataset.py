@@ -2,20 +2,20 @@ import os
 from typing import Dict, Any, Optional
 import numpy as np
 
-DUAL_SPLITS_DIR = 'd:/Data/피처_데이터/Dual_Splits'
+DUAL_SPLITS_DIR = 'd:/Data/피처_데이터/Condition4_NovelFlow_3D' if os.path.exists('d:/Data/피처_데이터/Condition4_NovelFlow_3D/Dual_Train.npz') else ('d:/Data/피처_데이터/Condition3_MediaPipe_3D' if os.path.exists('d:/Data/피처_데이터/Condition3_MediaPipe_3D/Dual_Train.npz') else 'd:/Data/피처_데이터/Dual_Splits')
 
 class Stage2DatasetLoader:
     """2단계: 정상(1) vs 오류(0) 판별용 2차원 복합 분할(Dual_Splits) 데이터 로더"""
 
     @classmethod
-    def load_split_data(cls, split_filename: str) -> Dict[str, Any]:
-        npz_path = os.path.join(DUAL_SPLITS_DIR, split_filename)
+    def load_split_data(cls, split_filename: str, splits_dir: str = DUAL_SPLITS_DIR) -> Dict[str, Any]:
+        npz_path = os.path.join(splits_dir, split_filename)
         if not os.path.exists(npz_path):
             raise FileNotFoundError(f"분할 파일을 찾을 수 없습니다: {npz_path}")
 
         d = np.load(npz_path, allow_pickle=True)
-        X_a = d['X_Format_A']       # (N, 97)
-        X_b = d['X_Format_B']       # (N, 64, 69)
+        X_a = d['X_Format_A']       # (N, Feature_Dim)
+        X_b = d['X_Format_B']       # (N, 64, Seq_Dim)
         y = d['y'].astype(np.int64) # (N,) - 0 (오류), 1 (정상)
         sequence_ids = d['sequence_ids']
         subjects = d['subjects']
@@ -41,11 +41,11 @@ class Stage2DatasetLoader:
         }
 
     @classmethod
-    def load_all_dual_splits(cls) -> Dict[str, Dict[str, Any]]:
+    def load_all_dual_splits(cls, splits_dir: str = DUAL_SPLITS_DIR) -> Dict[str, Dict[str, Any]]:
         return {
-            'train': cls.load_split_data('Dual_Train.npz'),
-            'valid': cls.load_split_data('Dual_Valid.npz'),
-            'test_strict': cls.load_split_data('Dual_Test_Strict.npz'),
-            'test_unseen_subj': cls.load_split_data('Dual_Test_Unseen_Subj.npz'),
-            'test_unseen_view': cls.load_split_data('Dual_Test_Unseen_View.npz')
+            'train': cls.load_split_data('Dual_Train.npz', splits_dir=splits_dir),
+            'valid': cls.load_split_data('Dual_Valid.npz', splits_dir=splits_dir),
+            'test_strict': cls.load_split_data('Dual_Test_Strict.npz', splits_dir=splits_dir),
+            'test_unseen_subj': cls.load_split_data('Dual_Test_Unseen_Subj.npz', splits_dir=splits_dir),
+            'test_unseen_view': cls.load_split_data('Dual_Test_Unseen_View.npz', splits_dir=splits_dir)
         }

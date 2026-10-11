@@ -1,0 +1,390 @@
+{
+  "level123": {
+    "v3-C_Champion_25D": {
+      "CatBoost": {
+        "f1_50": 85.03,
+        "opt_f1": 85.26,
+        "opt_th": 0.43,
+        "prec_50": 86.25,
+        "rec_50": 83.84,
+        "auc": 92.36,
+        "clean_fps": 21,
+        "clean_fpr": 24.42
+      },
+      "LightGBM": {
+        "f1_50": 84.44,
+        "opt_f1": 85.2,
+        "opt_th": 0.33,
+        "prec_50": 85.82,
+        "rec_50": 83.11,
+        "auc": 92.62,
+        "clean_fps": 19,
+        "clean_fpr": 22.09
+      },
+      "Cascade": {
+        "f1_50": 84.39,
+        "opt_f1": 85.65,
+        "opt_th": 0.42,
+        "prec_50": 85.71,
+        "rec_50": 83.11,
+        "auc": 92.75,
+        "clean_fps": 23,
+        "clean_fpr": 26.74
+      }
+    },
+    "v4-A_Hybrid_28D": {
+      "CatBoost": {
+        "f1_50": 84.09,
+        "opt_f1": 85.09,
+        "opt_th": 0.41,
+        "prec_50": 85.36,
+        "rec_50": 82.87,
+        "auc": 92.84,
+        "clean_fps": 23,
+        "clean_fpr": 26.74
+      },
+      "LightGBM": {
+        "f1_50": 85.84,
+        "opt_f1": 86.23,
+        "opt_th": 0.43,
+        "prec_50": 86.63,
+        "rec_50": 85.05,
+        "auc": 93.28,
+        "clean_fps": 21,
+        "clean_fpr": 24.42
+      },
+      "Cascade": {
+        "f1_50": 85.26,
+        "opt_f1": 85.61,
+        "opt_th": 0.45,
+        "prec_50": 86.21,
+        "rec_50": 84.33,
+        "auc": 93.27,
+        "clean_fps": 20,
+        "clean_fpr": 23.26
+      }
+    },
+    "v4-B_Full_35D": {
+      "CatBoost": {
+        "f1_50": 84.37,
+        "opt_f1": 85.45,
+        "opt_th": 0.34,
+        "prec_50": 85.15,
+        "rec_50": 83.6,
+        "auc": 92.81,
+        "clean_fps": 24,
+        "clean_fpr": 27.91
+      },
+      "LightGBM": {
+        "f1_50": 85.45,
+        "opt_f1": 86.08,
+        "opt_th": 0.47,
+        "prec_50": 86.35,
+        "rec_50": 84.57,
+        "auc": 93.21,
+        "clean_fps": 19,
+        "clean_fpr": 22.09
+      },
+      "Cascade": {
+        "f1_50": 85.24,
+        "opt_f1": 85.7,
+        "opt_th": 0.43,
+        "prec_50": 85.93,
+        "rec_50": 84.57,
+        "auc": 93.22,
+        "clean_fps": 22,
+        "clean_fpr": 25.58
+      }
+    },
+    "v4-C_SpineOnly_10D": {
+      "CatBoost": {
+        "f1_50": 78.66,
+        "opt_f1": 79.96,
+        "opt_th": 0.39,
+        "prec_50": 77.63,
+        "rec_50": 79.71,
+        "auc": 84.1,
+        "clean_fps": 24,
+        "clean_fpr": 27.91
+      },
+      "LightGBM": {
+        "f1_50": 76.42,
+        "opt_f1": 77.52,
+        "opt_th": 0.38,
+        "prec_50": 76.05,
+        "rec_50": 76.79,
+        "auc": 82.45,
+        "clean_fps": 29,
+        "clean_fpr": 33.72
+      },
+      "Cascade": {
+        "f1_50": 78.2,
+        "opt_f1": 79.27,
+        "opt_th": 0.38,
+        "prec_50": 77.1,
+        "rec_50": 79.34,
+        "auc": 83.74,
+        "clean_fps": 26,
+        "clean_fpr": 30.23
+      }
+    },
+    "v4-D_Elite_16D": {
+      "CatBoost": {
+        "f1_50": 78.82,
+        "opt_f1": 79.74,
+        "opt_th": 0.44,
+        "prec_50": 79.41,
+        "rec_50": 78.25,
+        "auc": 85.39,
+        "clean_fps": 21,
+        "clean_fpr": 24.42
+      },
+      "LightGBM": {
+        "f1_50": 78.28,
+        "opt_f1": 79.44,
+        "opt_th": 0.38,
+        "prec_50": 77.95,
+        "rec_50": 78.61,
+        "auc": 84.8,
+        "clean_fps": 23,
+        "clean_fpr": 26.74
+      },
+      "Cascade": {
+        "f1_50": 78.91,
+        "opt_f1": 79.93,
+        "opt_th": 0.39,
+        "prec_50": 78.95,
+        "rec_50": 78.86,
+        "auc": 85.44,
+        "clean_fps": 21,
+        "clean_fpr": 24.42
+      }
+    },
+    "v4-A_Cost_28D": {
+      "CatBoost": {
+        "f1_50": 83.15,
+        "opt_f1": 85.55,
+        "opt_th": 0.29,
+        "prec_50": 87.94,
+        "rec_50": 78.86,
+        "auc": 92.83,
+        "clean_fps": 19,
+        "clean_fpr": 22.09
+      },
+      "LightGBM": {
+        "f1_50": 84.74,
+        "opt_f1": 86.07,
+        "opt_th": 0.37,
+        "prec_50": 88.49,
+        "rec_50": 81.29,
+        "auc": 93.27,
+        "clean_fps": 15,
+        "clean_fpr": 17.44
+      },
+      "Cascade": {
+        "f1_50": 84.55,
+        "opt_f1": 85.58,
+        "opt_th": 0.34,
+        "prec_50": 88.67,
+        "rec_50": 80.8,
+        "auc": 93.26,
+        "clean_fps": 18,
+        "clean_fpr": 20.93
+      }
+    }
+  },
+  "full1906": {
+    "v3-C_Champion_25D": {
+      "CatBoost": {
+        "f1_50": 77.62,
+        "opt_f1": 79.32,
+        "opt_th": 0.37,
+        "prec_50": 80.28,
+        "rec_50": 75.14,
+        "auc": 86.55,
+        "clean_fps": 42,
+        "clean_fpr": 33.6
+      },
+      "LightGBM": {
+        "f1_50": 77.6,
+        "opt_f1": 78.78,
+        "opt_th": 0.42,
+        "prec_50": 79.5,
+        "rec_50": 75.79,
+        "auc": 86.11,
+        "clean_fps": 43,
+        "clean_fpr": 34.4
+      },
+      "Cascade": {
+        "f1_50": 77.5,
+        "opt_f1": 79.28,
+        "opt_th": 0.44,
+        "prec_50": 80.4,
+        "rec_50": 74.81,
+        "auc": 86.66,
+        "clean_fps": 42,
+        "clean_fpr": 33.6
+      }
+    },
+    "v4-A_Hybrid_28D": {
+      "CatBoost": {
+        "f1_50": 78.19,
+        "opt_f1": 79.53,
+        "opt_th": 0.37,
+        "prec_50": 80.39,
+        "rec_50": 76.11,
+        "auc": 87.9,
+        "clean_fps": 35,
+        "clean_fpr": 28.0
+      },
+      "LightGBM": {
+        "f1_50": 77.82,
+        "opt_f1": 79.0,
+        "opt_th": 0.34,
+        "prec_50": 79.73,
+        "rec_50": 76.0,
+        "auc": 87.52,
+        "clean_fps": 33,
+        "clean_fpr": 26.4
+      },
+      "Cascade": {
+        "f1_50": 78.42,
+        "opt_f1": 79.61,
+        "opt_th": 0.37,
+        "prec_50": 80.39,
+        "rec_50": 76.55,
+        "auc": 88.0,
+        "clean_fps": 34,
+        "clean_fpr": 27.2
+      }
+    },
+    "v4-B_Full_35D": {
+      "CatBoost": {
+        "f1_50": 77.6,
+        "opt_f1": 79.32,
+        "opt_th": 0.36,
+        "prec_50": 79.5,
+        "rec_50": 75.79,
+        "auc": 87.69,
+        "clean_fps": 41,
+        "clean_fpr": 32.8
+      },
+      "LightGBM": {
+        "f1_50": 77.35,
+        "opt_f1": 79.35,
+        "opt_th": 0.32,
+        "prec_50": 79.34,
+        "rec_50": 75.46,
+        "auc": 87.24,
+        "clean_fps": 35,
+        "clean_fpr": 28.0
+      },
+      "Cascade": {
+        "f1_50": 77.28,
+        "opt_f1": 79.39,
+        "opt_th": 0.33,
+        "prec_50": 79.54,
+        "rec_50": 75.14,
+        "auc": 87.76,
+        "clean_fps": 35,
+        "clean_fpr": 28.0
+      }
+    },
+    "v4-C_SpineOnly_10D": {
+      "CatBoost": {
+        "f1_50": 73.07,
+        "opt_f1": 75.53,
+        "opt_th": 0.39,
+        "prec_50": 74.3,
+        "rec_50": 71.88,
+        "auc": 82.12,
+        "clean_fps": 41,
+        "clean_fpr": 32.8
+      },
+      "LightGBM": {
+        "f1_50": 72.17,
+        "opt_f1": 74.01,
+        "opt_th": 0.37,
+        "prec_50": 73.13,
+        "rec_50": 71.23,
+        "auc": 80.86,
+        "clean_fps": 45,
+        "clean_fpr": 36.0
+      },
+      "Cascade": {
+        "f1_50": 72.83,
+        "opt_f1": 75.08,
+        "opt_th": 0.34,
+        "prec_50": 73.8,
+        "rec_50": 71.88,
+        "auc": 81.88,
+        "clean_fps": 43,
+        "clean_fpr": 34.4
+      }
+    },
+    "v4-D_Elite_16D": {
+      "CatBoost": {
+        "f1_50": 73.29,
+        "opt_f1": 75.37,
+        "opt_th": 0.3,
+        "prec_50": 75.84,
+        "rec_50": 70.9,
+        "auc": 83.31,
+        "clean_fps": 34,
+        "clean_fpr": 27.2
+      },
+      "LightGBM": {
+        "f1_50": 73.7,
+        "opt_f1": 74.13,
+        "opt_th": 0.35,
+        "prec_50": 75.37,
+        "rec_50": 72.1,
+        "auc": 82.17,
+        "clean_fps": 33,
+        "clean_fpr": 26.4
+      },
+      "Cascade": {
+        "f1_50": 73.98,
+        "opt_f1": 75.68,
+        "opt_th": 0.38,
+        "prec_50": 75.97,
+        "rec_50": 72.1,
+        "auc": 83.11,
+        "clean_fps": 35,
+        "clean_fpr": 28.0
+      }
+    },
+    "v4-A_Cost_28D": {
+      "CatBoost": {
+        "f1_50": 75.37,
+        "opt_f1": 79.94,
+        "opt_th": 0.28,
+        "prec_50": 84.09,
+        "rec_50": 68.3,
+        "auc": 87.8,
+        "clean_fps": 27,
+        "clean_fpr": 21.6
+      },
+      "LightGBM": {
+        "f1_50": 76.94,
+        "opt_f1": 79.05,
+        "opt_th": 0.23,
+        "prec_50": 83.21,
+        "rec_50": 71.55,
+        "auc": 87.68,
+        "clean_fps": 28,
+        "clean_fpr": 22.4
+      },
+      "Cascade": {
+        "f1_50": 76.23,
+        "opt_f1": 79.79,
+        "opt_th": 0.25,
+        "prec_50": 83.94,
+        "rec_50": 69.82,
+        "auc": 88.01,
+        "clean_fps": 28,
+        "clean_fpr": 22.4
+      }
+    }
+  }
+}

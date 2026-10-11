@@ -1,0 +1,197 @@
+{
+  "model_name": "d5_model_v3.py",
+  "feature_dim": 32,
+  "total_samples": 770,
+  "oof_metrics": {
+    "accuracy": 0.7883116883116883,
+    "precision": 0.8100558659217877,
+    "recall": 0.7532467532467533,
+    "f1_score": 0.7806191117092867,
+    "roc_auc": 0.8711991904199695,
+    "confusion_matrix": [
+      [
+        317,
+        68
+      ],
+      [
+        95,
+        290
+      ]
+    ]
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_subjects": [
+        2,
+        4
+      ],
+      "sample_count": 170,
+      "accuracy": 0.7647058823529411,
+      "precision": 0.8260869565217391,
+      "recall": 0.6705882352941176,
+      "f1_score": 0.7402597402597403,
+      "roc_auc": 0.8557785467128028
+    },
+    {
+      "fold": 2,
+      "val_subjects": [
+        6,
+        7
+      ],
+      "sample_count": 180,
+      "accuracy": 0.8055555555555556,
+      "precision": 0.8089887640449438,
+      "recall": 0.8,
+      "f1_score": 0.8044692737430168,
+      "roc_auc": 0.885925925925926
+    },
+    {
+      "fold": 3,
+      "val_subjects": [
+        5,
+        8
+      ],
+      "sample_count": 170,
+      "accuracy": 0.8294117647058824,
+      "precision": 0.8181818181818182,
+      "recall": 0.8470588235294118,
+      "f1_score": 0.8323699421965318,
+      "roc_auc": 0.9165397923875434
+    },
+    {
+      "fold": 4,
+      "val_subjects": [
+        1
+      ],
+      "sample_count": 100,
+      "accuracy": 0.77,
+      "precision": 0.8461538461538461,
+      "recall": 0.66,
+      "f1_score": 0.7415730337078652,
+      "roc_auc": 0.8588
+    },
+    {
+      "fold": 5,
+      "val_subjects": [
+        3,
+        9
+      ],
+      "sample_count": 150,
+      "accuracy": 0.76,
+      "precision": 0.7671232876712328,
+      "recall": 0.7466666666666667,
+      "f1_score": 0.7567567567567568,
+      "roc_auc": 0.8437333333333334
+    }
+  ],
+  "view_audit": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.7597402597402597,
+      "precision": 0.7777777777777778,
+      "recall": 0.7272727272727273,
+      "f1_score": 0.7516778523489933,
+      "roc_auc": 0.8537696070163602
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.8636363636363636,
+      "precision": 0.8888888888888888,
+      "recall": 0.8311688311688312,
+      "f1_score": 0.8590604026845637,
+      "roc_auc": 0.9151627593186036
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "sample_count": 154,
+      "accuracy": 0.6103896103896104,
+      "precision": 0.6440677966101694,
+      "recall": 0.4935064935064935,
+      "f1_score": 0.5588235294117647,
+      "roc_auc": 0.608534322820037
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.961038961038961,
+      "precision": 0.9863013698630136,
+      "recall": 0.935064935064935,
+      "f1_score": 0.96,
+      "roc_auc": 0.9929161747343564
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "sample_count": 154,
+      "accuracy": 0.7467532467532467,
+      "precision": 0.7317073170731707,
+      "recall": 0.7792207792207793,
+      "f1_score": 0.7547169811320755,
+      "roc_auc": 0.8520829819531118
+    }
+  },
+  "pareto_results": [
+    {
+      "target_coverage": 0.9,
+      "actual_coverage": 0.9,
+      "tau_norm": 0.3900000000000002,
+      "tau_def": 0.52,
+      "retained_count": 693,
+      "retake_count": 77,
+      "accuracy": 0.8138528138528138,
+      "precision": 0.8208092485549133,
+      "recall": 0.8091168091168092,
+      "f1_score": 0.8149210903873745
+    },
+    {
+      "target_coverage": 0.88,
+      "actual_coverage": 0.8818181818181818,
+      "tau_norm": 0.36000000000000015,
+      "tau_def": 0.52,
+      "retained_count": 679,
+      "retake_count": 91,
+      "accuracy": 0.8144329896907216,
+      "precision": 0.8208092485549133,
+      "recall": 0.8160919540229885,
+      "f1_score": 0.8184438040345822
+    },
+    {
+      "target_coverage": 0.85,
+      "actual_coverage": 0.8532467532467533,
+      "tau_norm": 0.3200000000000001,
+      "tau_def": 0.5,
+      "retained_count": 657,
+      "retake_count": 113,
+      "accuracy": 0.817351598173516,
+      "precision": 0.8100558659217877,
+      "recall": 0.847953216374269,
+      "f1_score": 0.8285714285714286
+    },
+    {
+      "target_coverage": 0.8,
+      "actual_coverage": 0.8077922077922078,
+      "tau_norm": 0.26000000000000006,
+      "tau_def": 0.5,
+      "retained_count": 622,
+      "retake_count": 148,
+      "accuracy": 0.8311897106109325,
+      "precision": 0.8100558659217877,
+      "recall": 0.8868501529051988,
+      "f1_score": 0.8467153284671532
+    },
+    {
+      "target_coverage": 0.75,
+      "actual_coverage": 0.7545454545454545,
+      "tau_norm": 0.21000000000000002,
+      "tau_def": 0.52,
+      "retained_count": 581,
+      "retake_count": 189,
+      "accuracy": 0.846815834767642,
+      "precision": 0.8208092485549133,
+      "recall": 0.9131832797427653,
+      "f1_score": 0.8645357686453576
+    }
+  ]
+}

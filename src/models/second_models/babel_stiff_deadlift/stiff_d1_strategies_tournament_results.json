@@ -1,0 +1,257 @@
+[
+  {
+    "strategy_name": "Baseline sd3_v2 (32D GBDT)",
+    "f1_2s": 73.88,
+    "acc_2s": 81.35,
+    "auc_2s": 88.09,
+    "f1_3s": 78.0,
+    "acc_3s": 83.51,
+    "prec_3s": 78.22,
+    "rec_3s": 77.78,
+    "coverage": 90.2,
+    "abstain_rate": 9.8,
+    "f1_t1": 78.63,
+    "auc_t1": 89.93,
+    "view_metrics": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 75.71,
+        "acc_3s": 82.11,
+        "auc": 85.59,
+        "coverage": 91.8
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 85.71,
+        "acc_3s": 88.95,
+        "auc": 92.72,
+        "coverage": 91.8
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "f1_3s": 57.94,
+        "acc_3s": 73.05,
+        "auc": 72.24,
+        "coverage": 80.7
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 87.5,
+        "acc_3s": 90.82,
+        "auc": 95.41,
+        "coverage": 94.7
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 77.78,
+        "acc_3s": 81.15,
+        "auc": 88.02,
+        "coverage": 92.3
+      }
+    }
+  },
+  {
+    "strategy_name": "전략 1: 강체 복원 36D GBDT",
+    "f1_2s": 74.53,
+    "acc_2s": 81.84,
+    "auc_2s": 88.17,
+    "f1_3s": 78.01,
+    "acc_3s": 83.42,
+    "prec_3s": 79.02,
+    "rec_3s": 77.03,
+    "coverage": 90.3,
+    "abstain_rate": 9.7,
+    "f1_t1": 79.49,
+    "auc_t1": 90.44,
+    "view_metrics": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 75.71,
+        "acc_3s": 82.11,
+        "auc": 86.13,
+        "coverage": 91.8
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 83.56,
+        "acc_3s": 87.56,
+        "auc": 92.61,
+        "coverage": 93.2
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "f1_3s": 62.5,
+        "acc_3s": 74.07,
+        "auc": 71.9,
+        "coverage": 78.3
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 88.28,
+        "acc_3s": 91.41,
+        "auc": 95.25,
+        "coverage": 95.7
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 76.54,
+        "acc_3s": 80.21,
+        "auc": 88.59,
+        "coverage": 92.8
+      }
+    }
+  },
+  {
+    "strategy_name": "전략 2: 36D + 시점 적응형 Dynamic Gating",
+    "f1_2s": 74.53,
+    "acc_2s": 81.84,
+    "auc_2s": 88.17,
+    "f1_3s": 79.47,
+    "acc_3s": 84.64,
+    "prec_3s": 80.54,
+    "rec_3s": 78.43,
+    "coverage": 87.4,
+    "abstain_rate": 12.6,
+    "f1_t1": 79.49,
+    "auc_t1": 90.44,
+    "view_metrics": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 76.26,
+        "acc_3s": 82.54,
+        "auc": 86.13,
+        "coverage": 91.3
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 82.99,
+        "acc_3s": 87.24,
+        "auc": 92.61,
+        "coverage": 94.7
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "f1_3s": 68.18,
+        "acc_3s": 79.1,
+        "auc": 71.9,
+        "coverage": 64.7
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 88.28,
+        "acc_3s": 91.46,
+        "auc": 95.25,
+        "coverage": 96.1
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 77.22,
+        "acc_3s": 80.75,
+        "auc": 88.59,
+        "coverage": 90.3
+      }
+    }
+  },
+  {
+    "strategy_name": "전략 3: 36D GBDT + Dilated-TCN 2-Stream",
+    "f1_2s": 75.21,
+    "acc_2s": 82.8,
+    "auc_2s": 90.05,
+    "f1_3s": 80.96,
+    "acc_3s": 86.0,
+    "prec_3s": 82.32,
+    "rec_3s": 79.65,
+    "coverage": 87.6,
+    "abstain_rate": 12.4,
+    "f1_t1": 82.25,
+    "auc_t1": 92.65,
+    "view_metrics": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 77.61,
+        "acc_3s": 84.04,
+        "auc": 88.01,
+        "coverage": 90.8
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 86.52,
+        "acc_3s": 90.1,
+        "auc": 94.25,
+        "coverage": 92.8
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "f1_3s": 64.52,
+        "acc_3s": 77.4,
+        "auc": 74.31,
+        "coverage": 70.5
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 92.86,
+        "acc_3s": 94.71,
+        "auc": 96.92,
+        "coverage": 91.3
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 77.99,
+        "acc_3s": 81.77,
+        "auc": 89.58,
+        "coverage": 92.8
+      }
+    }
+  },
+  {
+    "strategy_name": "전략 4: Multi-View Meta Fusion (Full SOTA)",
+    "f1_2s": 74.79,
+    "acc_2s": 82.42,
+    "auc_2s": 89.79,
+    "f1_3s": 81.92,
+    "acc_3s": 86.58,
+    "prec_3s": 82.81,
+    "rec_3s": 81.04,
+    "coverage": 84.3,
+    "abstain_rate": 15.7,
+    "f1_t1": 80.87,
+    "auc_t1": 92.34,
+    "view_metrics": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 77.61,
+        "acc_3s": 83.87,
+        "auc": 88.01,
+        "coverage": 89.9
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 86.11,
+        "acc_3s": 89.64,
+        "auc": 93.72,
+        "coverage": 93.2
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "f1_3s": 69.44,
+        "acc_3s": 80.7,
+        "auc": 75.1,
+        "coverage": 55.1
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 89.8,
+        "acc_3s": 92.39,
+        "auc": 96.43,
+        "coverage": 95.2
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 80.0,
+        "acc_3s": 83.52,
+        "auc": 89.58,
+        "coverage": 87.9
+      }
+    }
+  }
+]

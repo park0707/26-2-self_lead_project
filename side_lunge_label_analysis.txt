@@ -1,0 +1,322 @@
+Total files: 1404
+
+Description: '정자세에서 앞다리 조금접고' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key146.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 발방향 바깥쪽' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key147.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key149.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key150.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 앞다리 조금접고 발방향 바깥쪽' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key151.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 앞다리 조금접고 안굽히는 다리 구부정' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key152.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 발방향 바깥쪽 안굽히는 다리 구부정' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key155.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 발방향 바깥쪽 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key156.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 발방향 바깥쪽 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key157.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 안굽히는 다리 구부정 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([오류]_D02_피험자1_Key158.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 안굽히는 다리 구부정 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key159.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 몸통 옆으로 갸우뚱 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key160.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 안굽히는 다리 구부정 몸통 옆으로 갸우뚱 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key161.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 왼쪽보고 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key163.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: False
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 오른쪽보고 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key164.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 하늘보고 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key165.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 바닥보고 몸통 상체 뒤로 젖힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key166.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+
+Description: '정자세에서 왼쪽보고 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key167.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 오른쪽보고 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key168.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 하늘보고 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key169.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 바닥보고 몸통 옆으로 갸우뚱' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key170.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 왼쪽보고 앞다리 조금접힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key171.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 왼쪽보고 안굽히는 다리 구부정' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key172.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 바닥보고 앞다리 조금접힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key173.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 바닥보고 안굽히는 다리 구부정' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key174.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 하늘보고 앞다리 조금접힘' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key175.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 하늘보고 안굽히는 다리 구부정' | Total: 44
+  Folder error flag: {True: 44}
+  척추의 중립 (True:정상, False:결함): {False: 44}
+  Sample conditions ([오류]_D02_피험자1_Key176.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '1앞다리 90도, 2무릎발방향일치, 3한쪽다리바르게 펴기, 4척추 중립, 5상체 중립' | Total: 44
+  Folder error flag: {False: 44}
+  척추의 중립 (True:정상, False:결함): {True: 44}
+  Sample conditions ([정상]_D02_피험자1_Key145.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 안굽히는 다리 구부정' | Total: 43
+  Folder error flag: {True: 43}
+  척추의 중립 (True:정상, False:결함): {True: 43}
+  Sample conditions ([오류]_D02_피험자1_Key148.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 앞다리 조금접고 몸통 옆으로 갸우뚱' | Total: 43
+  Folder error flag: {True: 43}
+  척추의 중립 (True:정상, False:결함): {True: 43}
+  Sample conditions ([오류]_D02_피험자1_Key153.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: True
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 앞다리 조금접고 상체 뒤로 젖힘' | Total: 43
+  Folder error flag: {True: 43}
+  척추의 중립 (True:정상, False:결함): {False: 43}
+  Sample conditions ([오류]_D02_피험자1_Key154.json):
+    - 앞다리 무릎 각도 90도: False
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: True
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: True
+
+Description: '정자세에서 발방향 바깥쪽 몸통 옆으로 갸우뚱 몸통 상체 뒤로 젖힘' | Total: 43
+  Folder error flag: {True: 43}
+  척추의 중립 (True:정상, False:결함): {False: 43}
+  Sample conditions ([오류]_D02_피험자1_Key162.json):
+    - 앞다리 무릎 각도 90도: True
+    - 몸통 발 무릎 방향 일치여부: True
+    - 뒤다리 무릎 각도 90도: False
+    - 척추의 중립: False
+    - 상체의 과조한 숙임/젖힘 여부: False
+

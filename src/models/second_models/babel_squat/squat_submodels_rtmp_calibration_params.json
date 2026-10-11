@@ -1,0 +1,153 @@
+{
+    "c1": {
+        "global_temperature": 0.924,
+        "view_temperatures": {
+            "view1": 0.929,
+            "view2": 0.875,
+            "view3": 0.975,
+            "view4": 0.926,
+            "view5": 0.918
+        },
+        "global_thresholds": {
+            "forced_tau": 0.5,
+            "tau_norm": 0.4,
+            "tau_def": 0.6
+        },
+        "view_thresholds": {
+            "view1": {
+                "tau_norm": 0.35,
+                "tau_def": 0.6
+            },
+            "view2": {
+                "tau_norm": 0.4,
+                "tau_def": 0.62
+            },
+            "view3": {
+                "tau_norm": 0.35,
+                "tau_def": 0.6
+            },
+            "view4": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            },
+            "view5": {
+                "tau_norm": 0.38,
+                "tau_def": 0.6
+            }
+        }
+    },
+    "c2": {
+        "global_temperature": 0.99,
+        "view_temperatures": {
+            "view1": 1.067,
+            "view2": 0.894,
+            "view3": 1.101,
+            "view4": 0.943,
+            "view5": 1.05
+        },
+        "global_thresholds": {
+            "forced_tau": 0.5,
+            "tau_norm": 0.35,
+            "tau_def": 0.58
+        },
+        "view_thresholds": {
+            "view1": {
+                "tau_norm": 0.4,
+                "tau_def": 0.6
+            },
+            "view2": {
+                "tau_norm": 0.35,
+                "tau_def": 0.6
+            },
+            "view3": {
+                "tau_norm": 0.35,
+                "tau_def": 0.6
+            },
+            "view4": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            },
+            "view5": {
+                "tau_norm": 0.4,
+                "tau_def": 0.6
+            }
+        }
+    },
+    "c3": {
+        "global_temperature": 1.061,
+        "view_temperatures": {
+            "view1": 1.037,
+            "view2": 1.056,
+            "view3": 1.18,
+            "view4": 1.08,
+            "view5": 0.963
+        },
+        "global_thresholds": {
+            "forced_tau": 0.5,
+            "tau_norm": 0.35,
+            "tau_def": 0.65
+        },
+        "view_thresholds": {
+            "view1": {
+                "tau_norm": 0.35,
+                "tau_def": 0.6
+            },
+            "view2": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            },
+            "view3": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            },
+            "view4": {
+                "tau_norm": 0.35,
+                "tau_def": 0.6
+            },
+            "view5": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            }
+        }
+    },
+    "c4": {
+        "global_temperature": 0.996,
+        "view_temperatures": {
+            "view1": 0.906,
+            "view2": 0.896,
+            "view3": 1.204,
+            "view4": 0.994,
+            "view5": 1.01
+        },
+        "global_thresholds": {
+            "forced_tau": 0.5,
+            "tau_norm": 0.35,
+            "tau_def": 0.65
+        },
+        "view_thresholds": {
+            "view1": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            },
+            "view2": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            },
+            "view3": {
+                "tau_norm": 0.4,
+                "tau_def": 0.65
+            },
+            "view4": {
+                "tau_norm": 0.35,
+                "tau_def": 0.58
+            },
+            "view5": {
+                "tau_norm": 0.35,
+                "tau_def": 0.65
+            }
+        }
+    },
+    "integrated": {
+        "tau_clean": 0.3
+    }
+}

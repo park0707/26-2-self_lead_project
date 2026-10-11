@@ -1,0 +1,82 @@
+{
+  "code_name": "c3",
+  "defect_name": "발과 무릎의 방향 일치",
+  "tournament_raw_1974": [
+    {
+      "model": "LightGBM",
+      "f1": 83.68,
+      "precision": 83.89,
+      "recall": 83.47,
+      "bacc": 83.74,
+      "roc_auc": 91.82,
+      "latency_ms": 0.152
+    },
+    {
+      "model": "CatBoost",
+      "f1": 85.0,
+      "precision": 85.22,
+      "recall": 84.79,
+      "bacc": 85.06,
+      "roc_auc": 92.18,
+      "latency_ms": 1.605
+    },
+    {
+      "model": "XGBoost",
+      "f1": 83.53,
+      "precision": 84.0,
+      "recall": 83.06,
+      "bacc": 83.64,
+      "roc_auc": 92.09,
+      "latency_ms": 0.389
+    },
+    {
+      "model": "RandomForest",
+      "f1": 84.18,
+      "precision": 85.01,
+      "recall": 83.37,
+      "bacc": 84.35,
+      "roc_auc": 92.24,
+      "latency_ms": 1.244
+    },
+    {
+      "model": "ExtraTrees",
+      "f1": 83.3,
+      "precision": 81.68,
+      "recall": 84.99,
+      "bacc": 82.98,
+      "roc_auc": 90.28,
+      "latency_ms": 0.524
+    }
+  ],
+  "champion_model": "CatBoost",
+  "ambiguity_distribution": {
+    "Level_1": 55,
+    "Level_2": 881,
+    "Level_3": 73,
+    "Level_4": 965
+  },
+  "tier1_level1": {
+    "sample_count": 55,
+    "f1": 98.15,
+    "precision": 96.36,
+    "recall": 100.0,
+    "roc_auc": 61.32,
+    "bacc": 50.0,
+    "tn": 0,
+    "fp": 2,
+    "fn": 0,
+    "tp": 53
+  },
+  "tier2_level123": {
+    "sample_count": 1009,
+    "f1": 99.24,
+    "precision": 98.99,
+    "recall": 99.49,
+    "roc_auc": 99.37,
+    "bacc": 78.01,
+    "tn": 13,
+    "fp": 10,
+    "fn": 5,
+    "tp": 981
+  }
+}

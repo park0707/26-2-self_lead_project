@@ -1,0 +1,85 @@
+{
+  "model_name": "BabelDeadliftD1ModelV3",
+  "exercise": "02_바벨_데드리프트",
+  "defect": "d1_척추의_중립_위반",
+  "feature_dim": 34,
+  "morphology_residualizer_applied": true,
+  "ensemble_weights": {
+    "w_gbdt": 0.45,
+    "w_tcn": 0.55,
+    "threshold": 0.35
+  },
+  "binary_metrics": {
+    "accuracy": 0.7688311688311689,
+    "precision": 0.6575342465753424,
+    "recall": 0.7111111111111111,
+    "f1_score": 0.6832740213523132,
+    "roc_auc": 0.7739555555555556,
+    "confusion_matrix": {
+      "TN": 200,
+      "FP": 50,
+      "FN": 39,
+      "TP": 96
+    }
+  },
+  "official_3state_production_setting": {
+    "tau_normal": 0.28,
+    "tau_defect": 0.37,
+    "coverage": 0.9298701298701298,
+    "decline_rate": 0.07012987012987015,
+    "total_decided": 358,
+    "total_undetermined": 27,
+    "f1_score": 0.6962962962962963,
+    "accuracy": 0.770949720670391,
+    "precision": 0.6619718309859155,
+    "recall": 0.734375,
+    "confusion_matrix": {
+      "TN": 182,
+      "FP": 48,
+      "FN": 34,
+      "TP": 94
+    }
+  },
+  "fold4_subject_shift_metrics": {
+    "f1_score": 0.5531914893617021,
+    "accuracy": 0.7529411764705882,
+    "status": "Fold 4 F1 46.5% -> 53.3% 성공적 개선 확인"
+  },
+  "view_audit": {
+    "시점 A (우측 후방 45°)": {
+      "view_code": "view5",
+      "f1": 0.6363636363636364,
+      "precision": 0.5384615384615384,
+      "recall": 0.7777777777777778,
+      "auc": 0.7555555555555555
+    },
+    "시점 B (우측 전방 45°)": {
+      "view_code": "view2",
+      "f1": 0.6181818181818182,
+      "precision": 0.6071428571428571,
+      "recall": 0.6296296296296297,
+      "auc": 0.765925925925926
+    },
+    "시점 C (정면 0°)": {
+      "view_code": "view3",
+      "f1": 0.6666666666666666,
+      "precision": 0.6333333333333333,
+      "recall": 0.7037037037037037,
+      "auc": 0.7711111111111111
+    },
+    "시점 D (좌측 전방 45°)": {
+      "view_code": "view4",
+      "f1": 0.7547169811320755,
+      "precision": 0.7692307692307693,
+      "recall": 0.7407407407407407,
+      "auc": 0.8074074074074074
+    },
+    "시점 E (좌측 후방 45°)": {
+      "view_code": "view1",
+      "f1": 0.76,
+      "precision": 0.8260869565217391,
+      "recall": 0.7037037037037037,
+      "auc": 0.8007407407407408
+    }
+  }
+}

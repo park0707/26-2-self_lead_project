@@ -1,0 +1,108 @@
+{
+  "dataset_samples": 770,
+  "clean_samples_true": 160,
+  "baseline_v5": {
+    "name": "v5.0 Structured Energy & Fail-Safe",
+    "emr": 0.2987,
+    "clean_spec": 0.625,
+    "clean_f1": 0.5848,
+    "hamming_loss": 0.2532
+  },
+  "baseline_v6_full": {
+    "name": "v6.0 Two-Stream Hybrid (Full-Coverage)",
+    "emr": 0.3519,
+    "clean_spec": 0.8443,
+    "clean_f1": 0.6327,
+    "hamming_loss": 0.2088
+  },
+  "stage1_conformal_crc_v6": {
+    "name": "Stage 1: Conformal Risk Control on v6.0",
+    "coverage": 0.8961038961038961,
+    "abstain_rate": 0.10389610389610393,
+    "decided_samples": 690,
+    "emr": 0.4028985507246377,
+    "clean_f1": 0.6648936170212766,
+    "clean_spec": 0.8190298507462687,
+    "hamming_loss": 0.18521739130434783,
+    "defect_f1": [
+      0.6180555555555556,
+      0.45454545454545453,
+      0.6977611940298507,
+      0.6260162601626016,
+      0.8
+    ]
+  },
+  "stage2_stage3_coattn_full": {
+    "name": "Stage 2+3: Augmentation + Co-Attention (Full-Coverage)",
+    "emr_05": 0.35974025974025975,
+    "emr_calib": 0.37402597402597404,
+    "clean_f1_05": 0.6358381502890174,
+    "clean_f1_calib": 0.6465753424657534,
+    "clean_spec_calib": 0.8573770491803279,
+    "hamming_loss": 0.19532467532467532,
+    "defect_f1": [
+      0.5842105263157895,
+      0.5423728813559322,
+      0.6963979416809606,
+      0.6206896551724138,
+      0.7941952506596306
+    ]
+  },
+  "stage1_to_stage3_final_integrated": {
+    "name": "Final Integrated: Augmentation + Co-Attention + CRC 10% Selective",
+    "coverage": 0.8948051948051948,
+    "abstain_rate": 0.10519480519480517,
+    "decided_samples": 689,
+    "emr": 0.4020319303338171,
+    "clean_f1": 0.6781609195402298,
+    "clean_spec": 0.8531598513011153,
+    "clean_prec": 0.5989847715736041,
+    "clean_rec": 0.7814569536423841,
+    "hamming_loss": 0.18200290275761974,
+    "defect_f1": [
+      0.5852090032154341,
+      0.5377049180327869,
+      0.7061068702290076,
+      0.6443514644351465,
+      0.8259587020648967
+    ],
+    "exact_matches": 277,
+    "views": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "total_samples": 154,
+        "decided_samples": 136,
+        "emr": 0.33088235294117646,
+        "clean_f1": 0.6216216216216216
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "total_samples": 154,
+        "decided_samples": 143,
+        "emr": 0.4195804195804196,
+        "clean_f1": 0.746268656716418
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "total_samples": 154,
+        "decided_samples": 120,
+        "emr": 0.4083333333333333,
+        "clean_f1": 0.7368421052631579
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "total_samples": 154,
+        "decided_samples": 145,
+        "emr": 0.47586206896551725,
+        "clean_f1": 0.7
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "total_samples": 154,
+        "decided_samples": 145,
+        "emr": 0.3724137931034483,
+        "clean_f1": 0.6
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "project": "vidio-health-trainer",
+    "exercise": "02_바벨_데드리프트",
+    "defect": "d1_spine_neutrality",
+    "total_samples": 385,
+    "defects_count": 135,
+    "normal_count": 250,
+    "mp_train_time_sec": 95.59,
+    "rtm_train_time_sec": 91.1
+  },
+  "mediapipe_spinepose": {
+    "binary": {
+      "threshold": 0.35,
+      "f1": 67.87,
+      "prec": 66.2,
+      "rec": 69.63,
+      "acc": 76.88,
+      "roc_auc": 82.65,
+      "cm": [
+        [
+          202,
+          48
+        ],
+        [
+          41,
+          94
+        ]
+      ]
+    },
+    "selective_balanced_40_60": {
+      "f1": 66.33,
+      "prec": 76.74,
+      "rec": 58.41,
+      "acc": 80.47,
+      "coverage": 89.09,
+      "retake": 10.91
+    },
+    "selective_optimal": {
+      "f1": 71.875,
+      "prec": 67.64705882352942,
+      "rec": 76.66666666666667,
+      "acc": 78.82352941176471,
+      "tau_norm": 0.23,
+      "tau_def": 0.38,
+      "coverage": 88.31,
+      "retake": 11.69
+    },
+    "views": {
+      "view5": {
+        "alias": "시점 A: 우측 후방 (45도)",
+        "f1_bin": 62.07,
+        "auc": 79.78,
+        "coverage": 88.31,
+        "sel_f1": 69.23,
+        "sel_prec": 62.07,
+        "sel_rec": 78.26
+      },
+      "view2": {
+        "alias": "시점 B: 우측 전방 (45도)",
+        "f1_bin": 65.52,
+        "auc": 81.63,
+        "coverage": 88.31,
+        "sel_f1": 69.09,
+        "sel_prec": 63.33,
+        "sel_rec": 76.0
+      },
+      "view3": {
+        "alias": "시점 C: 정면",
+        "f1_bin": 60.71,
+        "auc": 80.44,
+        "coverage": 92.21,
+        "sel_f1": 62.75,
+        "sel_prec": 57.14,
+        "sel_rec": 69.57
+      },
+      "view4": {
+        "alias": "시점 D: 좌측 전방 (45도)",
+        "f1_bin": 77.78,
+        "auc": 89.48,
+        "coverage": 88.31,
+        "sel_f1": 84.0,
+        "sel_prec": 80.77,
+        "sel_rec": 87.5
+      },
+      "view1": {
+        "alias": "시점 E: 좌측 후방 (45도)",
+        "f1_bin": 74.51,
+        "auc": 81.56,
+        "coverage": 84.42,
+        "sel_f1": 75.0,
+        "sel_prec": 78.26,
+        "sel_rec": 72.0
+      }
+    }
+  },
+  "rtmpose_spinepose": {
+    "binary": {
+      "threshold": 0.35,
+      "f1": 69.17,
+      "prec": 70.23,
+      "rec": 68.15,
+      "acc": 78.7,
+      "roc_auc": 83.69,
+      "cm": [
+        [
+          211,
+          39
+        ],
+        [
+          43,
+          92
+        ]
+      ]
+    },
+    "selective_balanced_40_60": {
+      "f1": 70.41,
+      "prec": 86.25,
+      "rec": 59.48,
+      "acc": 83.24,
+      "coverage": 89.87,
+      "retake": 10.13
+    },
+    "selective_optimal": {
+      "f1": 73.98373983739837,
+      "prec": 72.8,
+      "rec": 75.20661157024794,
+      "acc": 81.12094395280236,
+      "tau_norm": 0.22,
+      "tau_def": 0.38,
+      "coverage": 88.05,
+      "retake": 11.95
+    },
+    "views": {
+      "view5": {
+        "alias": "시점 A: 우측 후방 (45도)",
+        "f1_bin": 64.15,
+        "auc": 83.19,
+        "coverage": 84.42,
+        "sel_f1": 75.56,
+        "sel_prec": 70.83,
+        "sel_rec": 80.95
+      },
+      "view2": {
+        "alias": "시점 B: 우측 전방 (45도)",
+        "f1_bin": 68.0,
+        "auc": 81.56,
+        "coverage": 87.01,
+        "sel_f1": 70.83,
+        "sel_prec": 73.91,
+        "sel_rec": 68.0
+      },
+      "view3": {
+        "alias": "시점 C: 정면",
+        "f1_bin": 71.7,
+        "auc": 84.3,
+        "coverage": 89.61,
+        "sel_f1": 73.47,
+        "sel_prec": 72.0,
+        "sel_rec": 75.0
+      },
+      "view4": {
+        "alias": "시점 D: 좌측 전방 (45도)",
+        "f1_bin": 72.73,
+        "auc": 85.41,
+        "coverage": 93.51,
+        "sel_f1": 75.47,
+        "sel_prec": 76.92,
+        "sel_rec": 74.07
+      },
+      "view1": {
+        "alias": "시점 E: 좌측 후방 (45도)",
+        "f1_bin": 69.09,
+        "auc": 85.11,
+        "coverage": 85.71,
+        "sel_f1": 74.51,
+        "sel_prec": 70.37,
+        "sel_rec": 79.17
+      }
+    }
+  }
+}

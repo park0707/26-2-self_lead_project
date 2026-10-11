@@ -1,0 +1,50 @@
+{
+  "version": "v10.4",
+  "status": "OFFICIAL_CONFIRMED",
+  "confirmed_at": "2026-09-28",
+  "description": "vidio-health-trainer 바벨 스쿼트 통합 진단 엔진 v10.4 (View-Conditioned Vector Scaling & Dynamic Risk Gate)",
+  "architecture": "View-Conditioned Mixture-of-Experts (MoE) + Exact 16-State Structured Energy Head + c2 v8 Uncertainty Head + Skeletal Normalization Dual-Stream + View Vector Scaling (Risk-Aware Gate)",
+  "in_features": 39,
+  "num_experts": 3,
+  "T_meta": 1.2,
+  "eta": 0.05,
+  "tau_clean": 0.36,
+  "q_min": 0.05,
+  "risk_threshold": 0.45,
+  "submodels": {
+    "c1": "BabelSquatC1ModelV11_1 (v11.1)",
+    "c2": "BabelSquatC2ModelV8 (v8.0 Uncertainty-Aware)",
+    "c3": "BabelSquatC3ModelV6 (v6.0 + 30% Skeletal Normalized Stream A)",
+    "c4": "BabelSquatC4ModelV5_1 (v5.1)"
+  },
+  "final_metrics": {
+    "selective": {
+      "clean_f1": 76.92,
+      "clean_precision": 71.92,
+      "clean_recall": 82.68,
+      "four_defect_emr": 75.67,
+      "retake_rate": 10.06,
+      "coverage": 89.94
+    },
+    "full_force_100": {
+      "clean_f1": 75.52,
+      "clean_precision": 71.52,
+      "clean_recall": 80.00,
+      "four_defect_emr": 71.67,
+      "false_clean_count": 43
+    },
+    "submodels_selective_f1": {
+      "c1": 96.98,
+      "c2": 87.10,
+      "c3": 96.73,
+      "c4": 91.74
+    },
+    "views_clean_f1_selective": {
+      "view5_A": 72.41,
+      "view2_B": 81.36,
+      "view3_C": 83.33,
+      "view4_D": 77.55,
+      "view1_E": 68.09
+    }
+  }
+}

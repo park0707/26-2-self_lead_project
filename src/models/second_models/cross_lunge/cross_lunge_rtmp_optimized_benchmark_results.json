@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "project": "vidio-health-trainer",
+    "exercise": "크로스 런지 (Cross Lunge, 08_크로스_런지)",
+    "total_sequences": 1025,
+    "subjects_count": 9,
+    "views_count": 5,
+    "timestamp": "2026-10-11 10:29:05"
+  },
+  "cl1": {
+    "description": "앞다리 무릎 각도 90도 오류",
+    "mp_3s_f1": 89.97,
+    "mp_auc": 95.65,
+    "prev_rtm_3s_f1": 92.42,
+    "prev_rtm_auc": 96.47,
+    "opt_3s_f1": 92.92,
+    "opt_auc": 96.85
+  },
+  "cl2": {
+    "description": "몸통 앞발 앞무릎 방향 일치 여부",
+    "mp_3s_f1": 71.5,
+    "mp_auc": 67.66,
+    "prev_rtm_3s_f1": 64.29,
+    "prev_rtm_auc": 65.01,
+    "opt_3s_f1": 67.5,
+    "opt_auc": 71.33
+  },
+  "cl3": {
+    "description": "상체 정면 균형잡기",
+    "mp_3s_f1": 87.33,
+    "mp_auc": 88.31,
+    "prev_rtm_3s_f1": 87.01,
+    "prev_rtm_auc": 85.89,
+    "opt_3s_f1": 89.65,
+    "opt_auc": 89.26
+  },
+  "details": {
+    "cl1": {
+      "metrics_2state": {
+        "f1": 88.69,
+        "prec": 85.89,
+        "rec": 91.69,
+        "acc": 91.22,
+        "roc_auc": 96.85
+      },
+      "metrics_3state": {
+        "sel_f1": 92.92,
+        "sel_prec": 90.36,
+        "sel_rec": 95.63,
+        "sel_acc": 94.6,
+        "coverage": 90.34,
+        "retake": 9.66
+      },
+      "views_metrics": {
+        "view5": {
+          "tau_clean": 0.2,
+          "tau_defect": 0.68,
+          "sel_f1": 92.2,
+          "sel_acc": 94.05,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 96.84
+        },
+        "view2": {
+          "tau_clean": 0.33,
+          "tau_defect": 0.69,
+          "sel_f1": 94.81,
+          "sel_acc": 96.22,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 97.56
+        },
+        "view3": {
+          "tau_clean": 0.39,
+          "tau_defect": 0.63,
+          "sel_f1": 88.31,
+          "sel_acc": 90.32,
+          "coverage": 90.73,
+          "retake": 9.27,
+          "roc_auc": 94.22
+        },
+        "view4": {
+          "tau_clean": 0.2,
+          "tau_defect": 0.62,
+          "sel_f1": 96.45,
+          "sel_acc": 97.3,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 98.27
+        },
+        "view1": {
+          "tau_clean": 0.2,
+          "tau_defect": 0.65,
+          "sel_f1": 93.33,
+          "sel_acc": 95.14,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 97.21
+        }
+      },
+      "calibration": {
+        "ece_pre": 2.92,
+        "ece_post": 2.26,
+        "brier_pre": 0.0678,
+        "brier_post": 0.0671
+      },
+      "weights": [
+        0.8174569218683541,
+        0.12785151357882993,
+        0.05469156455281603
+      ],
+      "temperature": 1.2728515625000008
+    },
+    "cl2": {
+      "metrics_2state": {
+        "f1": 63.63,
+        "prec": 63.57,
+        "rec": 63.69,
+        "acc": 63.41,
+        "roc_auc": 71.33
+      },
+      "metrics_3state": {
+        "sel_f1": 67.5,
+        "sel_prec": 65.39,
+        "sel_rec": 69.74,
+        "sel_acc": 66.42,
+        "coverage": 90.93,
+        "retake": 9.07
+      },
+      "views_metrics": {
+        "view5": {
+          "tau_clean": 0.48,
+          "tau_defect": 0.51,
+          "sel_f1": 62.11,
+          "sel_acc": 61.5,
+          "coverage": 91.22,
+          "retake": 8.78,
+          "roc_auc": 65.29
+        },
+        "view2": {
+          "tau_clean": 0.48,
+          "tau_defect": 0.53,
+          "sel_f1": 69.27,
+          "sel_acc": 70.43,
+          "coverage": 90.73,
+          "retake": 9.27,
+          "roc_auc": 74.38
+        },
+        "view3": {
+          "tau_clean": 0.46,
+          "tau_defect": 0.51,
+          "sel_f1": 68.54,
+          "sel_acc": 70.05,
+          "coverage": 91.22,
+          "retake": 8.78,
+          "roc_auc": 75.09
+        },
+        "view4": {
+          "tau_clean": 0.43,
+          "tau_defect": 0.51,
+          "sel_f1": 73.68,
+          "sel_acc": 70.59,
+          "coverage": 91.22,
+          "retake": 8.78,
+          "roc_auc": 75.62
+        },
+        "view1": {
+          "tau_clean": 0.44,
+          "tau_defect": 0.5,
+          "sel_f1": 63.77,
+          "sel_acc": 59.46,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 64.86
+        }
+      },
+      "calibration": {
+        "ece_pre": 5.54,
+        "ece_post": 4.63,
+        "brier_pre": 0.2174,
+        "brier_post": 0.2159
+      },
+      "weights": [
+        0.7921782128678103,
+        8.39817163221924e-15,
+        0.2078217871321814
+      ],
+      "temperature": 1.319140625000001
+    },
+    "cl3": {
+      "metrics_2state": {
+        "f1": 86.57,
+        "prec": 87.05,
+        "rec": 86.09,
+        "acc": 83.32,
+        "roc_auc": 89.26
+      },
+      "metrics_3state": {
+        "sel_f1": 89.65,
+        "sel_prec": 87.58,
+        "sel_rec": 91.82,
+        "sel_acc": 86.33,
+        "coverage": 90.63,
+        "retake": 9.37
+      },
+      "views_metrics": {
+        "view5": {
+          "tau_clean": 0.38,
+          "tau_defect": 0.5,
+          "sel_f1": 89.17,
+          "sel_acc": 85.95,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 90.39
+        },
+        "view2": {
+          "tau_clean": 0.29,
+          "tau_defect": 0.5,
+          "sel_f1": 90.16,
+          "sel_acc": 87.17,
+          "coverage": 91.22,
+          "retake": 8.78,
+          "roc_auc": 91.53
+        },
+        "view3": {
+          "tau_clean": 0.34,
+          "tau_defect": 0.5,
+          "sel_f1": 85.04,
+          "sel_acc": 79.46,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 79.68
+        },
+        "view4": {
+          "tau_clean": 0.31,
+          "tau_defect": 0.54,
+          "sel_f1": 93.0,
+          "sel_acc": 90.81,
+          "coverage": 90.24,
+          "retake": 9.76,
+          "roc_auc": 93.16
+        },
+        "view1": {
+          "tau_clean": 0.41,
+          "tau_defect": 0.5,
+          "sel_f1": 91.06,
+          "sel_acc": 88.24,
+          "coverage": 91.22,
+          "retake": 8.78,
+          "roc_auc": 90.14
+        }
+      },
+      "calibration": {
+        "ece_pre": 3.59,
+        "ece_post": 3.61,
+        "brier_pre": 0.1247,
+        "brier_post": 0.125
+      },
+      "weights": [
+        0.8806886342273196,
+        2.852784005889878e-06,
+        0.11930851298867455
+      ],
+      "temperature": 1.0778320312500003
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "model_name": "BabelDeadliftD2ModelV2_Refined7D",
+  "exercise": "02_바벨_데드리프트",
+  "defect": "d2_발과_무릎의_방향_일치",
+  "feature_dim": 7,
+  "feature_names": [
+    "d2_kp_ratio_min_abs",
+    "d2_ka_absolute_deficit_integ",
+    "d2_valgus_abs_sum_max",
+    "d2_valgus_norm_hip_max",
+    "d2_shank_inward_tilt_p90",
+    "d2_valgus_inward_accel_peak",
+    "d2_morph_kp_drop_max"
+  ],
+  "binary_metrics_th50": {
+    "accuracy": 0.6831168831168831,
+    "precision": 0.313953488372093,
+    "recall": 0.3,
+    "f1_score": 0.3068181818181818,
+    "roc_auc": 0.6502071563088513
+  },
+  "binary_metrics_optimal": {
+    "threshold": 0.37000000000000016,
+    "accuracy": 0.6103896103896104,
+    "precision": 0.34210526315789475,
+    "recall": 0.7222222222222222,
+    "f1_score": 0.4642857142857143,
+    "confusion_matrix": {
+      "TN": 170,
+      "FP": 125,
+      "FN": 25,
+      "TP": 65
+    }
+  },
+  "delta_vs_v1_and_30d": {
+    "v1_auc": 0.5771,
+    "v2_30d_auc": 0.5928,
+    "v2_7d_auc": 0.6502071563088513,
+    "delta_auc_vs_v1": 0.07310715630885134,
+    "delta_auc_vs_30d": 0.05740715630885129,
+    "v1_f1": 38.49,
+    "v2_30d_f1": 38.73,
+    "v2_7d_f1": 46.42857142857143,
+    "delta_f1_vs_v1": 7.938571428571429,
+    "delta_f1_vs_30d": 7.698571428571434,
+    "v1_acc": 57.66,
+    "v2_30d_acc": 54.8,
+    "v2_7d_acc": 61.038961038961034,
+    "delta_acc_vs_30d": 6.238961038961037
+  },
+  "official_3state_setting": {
+    "tau_normal": 0.38,
+    "tau_defect": 0.4,
+    "coverage": 0.9766233766233766,
+    "decline_rate": 0.023376623376623384,
+    "total_decided": 376,
+    "total_undetermined": 9,
+    "f1_score": 0.4497991967871486,
+    "accuracy": 0.6356382978723404,
+    "precision": 0.345679012345679,
+    "recall": 0.6436781609195402,
+    "confusion_matrix": {
+      "TN": 183,
+      "FP": 106,
+      "FN": 31,
+      "TP": 56
+    }
+  },
+  "view_audit": {
+    "시점 A (우측 후방 45°)": {
+      "view_code": "view5",
+      "auc": 0.655367231638418,
+      "f1": 0.5098039215686274,
+      "accuracy": 0.6753246753246753,
+      "precision": 0.3939393939393939,
+      "recall": 0.7222222222222222
+    },
+    "시점 B (우측 전방 45°)": {
+      "view_code": "view2",
+      "auc": 0.524482109227872,
+      "f1": 0.4,
+      "accuracy": 0.45454545454545453,
+      "precision": 0.2692307692307692,
+      "recall": 0.7777777777777778
+    },
+    "시점 C (정면)": {
+      "view_code": "view3",
+      "auc": 0.8370998116760828,
+      "f1": 0.5625,
+      "accuracy": 0.6363636363636364,
+      "precision": 0.391304347826087,
+      "recall": 1.0
+    },
+    "시점 D (좌측 전방 45°)": {
+      "view_code": "view4",
+      "auc": 0.6054613935969868,
+      "f1": 0.41509433962264153,
+      "accuracy": 0.5974025974025974,
+      "precision": 0.3142857142857143,
+      "recall": 0.6111111111111112
+    },
+    "시점 E (좌측 후방 45°)": {
+      "view_code": "view1",
+      "auc": 0.6177024482109228,
+      "f1": 0.42857142857142855,
+      "accuracy": 0.6883116883116883,
+      "precision": 0.375,
+      "recall": 0.5
+    }
+  }
+}

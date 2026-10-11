@@ -56,7 +56,7 @@ class EndToEndPipelineEvaluator:
         self.stage2_opt_threshold, _ = Stage2MetricsHelper.find_optimal_threshold(y_val_s2, val_probs, beta=1.0)
         print(f"      - 2단계 Valid 최적 임계값(θ*): {self.stage2_opt_threshold:.3f}")
 
-        print("[3/4] 3단계: 9개 운동별 세부 결함 다중 라벨 모델 일괄 학습 중...")
+        print("[3/4] 3단계: 8개 운동별 세부 결함 다중 라벨 모델 일괄 학습 중...")
         for ex_folder in EXERCISE_NAMES_KO:
             ex_split = Stage3DatasetLoader.load_exercise_split(ex_folder, 'Dual_Train.npz')
             if ex_split['num_samples'] > 0 and ex_split['num_conditions'] > 0:

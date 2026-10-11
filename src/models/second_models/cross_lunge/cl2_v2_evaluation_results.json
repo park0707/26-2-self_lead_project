@@ -1,0 +1,148 @@
+{
+  "model_name": "cl2_v2",
+  "baseline_model": "cl2_v1",
+  "defect_name": "Condition 2 - 몸통 앞발 앞무릎 방향 일치 여부",
+  "feature_dim": 59,
+  "n_samples": 1025,
+  "ensemble_weights": {
+    "catboost": 0.394088669950739,
+    "xgboost": 0.2955665024630542,
+    "lightgbm": 0.3103448275862069
+  },
+  "comparison_summary": {
+    "v1_2state_f1": 0.6472795497185742,
+    "v2_2state_f1": 0.6285714285714286,
+    "delta_2state_f1": -0.018708121147145595,
+    "v1_3state_f1": 0.6928571428571428,
+    "v2_3state_f1": 0.6937269372693727,
+    "delta_3state_f1": 0.0008697944122298962,
+    "v1_roc_auc": 0.676957928802589,
+    "v2_roc_auc": 0.6749476489624977,
+    "delta_roc_auc": -0.002010279840091278
+  },
+  "overall_2state": {
+    "f1": 0.6285714285714286,
+    "accuracy": 0.6195121951219512,
+    "precision": 0.616822429906542,
+    "recall": 0.6407766990291263,
+    "roc_auc": 0.6749476489624977
+  },
+  "overall_3state": {
+    "effective_f1": 0.6937269372693727,
+    "accuracy": 0.6422413793103449,
+    "precision": 0.6113821138211382,
+    "recall": 0.8017057569296375,
+    "uncertainty_rate": 0.09463414634146339,
+    "coverage": 0.9053658536585366,
+    "roc_auc": 0.6749476489624977
+  },
+  "view_audits_3state": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "count": 205,
+      "tau_clean": 0.4100000000000002,
+      "tau_defect": 0.46,
+      "effective_f1": 0.7090909090909091,
+      "accuracy": 0.654054054054054,
+      "precision": 0.6141732283464567,
+      "recall": 0.8387096774193549,
+      "uncertainty_rate": 0.09756097560975607,
+      "confirmed_count": 185,
+      "auc": 0.6763754045307443
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "count": 205,
+      "tau_clean": 0.4100000000000002,
+      "tau_defect": 0.46,
+      "effective_f1": 0.6972477064220184,
+      "accuracy": 0.6432432432432432,
+      "precision": 0.6178861788617886,
+      "recall": 0.8,
+      "uncertainty_rate": 0.09756097560975607,
+      "confirmed_count": 185,
+      "auc": 0.7081667618503712
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "count": 205,
+      "tau_clean": 0.4400000000000002,
+      "tau_defect": 0.47500000000000003,
+      "effective_f1": 0.7,
+      "accuracy": 0.6432432432432432,
+      "precision": 0.616,
+      "recall": 0.8105263157894737,
+      "uncertainty_rate": 0.09756097560975607,
+      "confirmed_count": 185,
+      "auc": 0.6981724728726443
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "count": 205,
+      "tau_clean": 0.4250000000000002,
+      "tau_defect": 0.46,
+      "effective_f1": 0.6666666666666666,
+      "accuracy": 0.6276595744680851,
+      "precision": 0.5932203389830508,
+      "recall": 0.7608695652173914,
+      "uncertainty_rate": 0.08292682926829265,
+      "confirmed_count": 188,
+      "auc": 0.6525794783932991
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "count": 205,
+      "tau_clean": 0.4250000000000002,
+      "tau_defect": 0.47500000000000003,
+      "effective_f1": 0.6944444444444444,
+      "accuracy": 0.6432432432432432,
+      "precision": 0.6147540983606558,
+      "recall": 0.7978723404255319,
+      "uncertainty_rate": 0.09756097560975607,
+      "confirmed_count": 185,
+      "auc": 0.6482010279840091
+    }
+  },
+  "top_features": [
+    {
+      "name": "lead_foot_heel_contact_stability",
+      "importance": 6.074153423309326
+    },
+    {
+      "name": "eccentric_knee_inward_velocity_peak",
+      "importance": 5.006324768066406
+    },
+    {
+      "name": "pelvic_rotation_dynamic_range",
+      "importance": 4.541255950927734
+    },
+    {
+      "name": "lead_knee_mediolateral_sway_variance",
+      "importance": 4.154952049255371
+    },
+    {
+      "name": "concentric_knee_rebound_jerk",
+      "importance": 3.746220111846924
+    },
+    {
+      "name": "foot_axis_temporal_stability",
+      "importance": 3.1223561763763428
+    },
+    {
+      "name": "knee_trajectory_linearity_rmse",
+      "importance": 2.8211398124694824
+    },
+    {
+      "name": "pelvic_cross_torque_coupling",
+      "importance": 2.8136239051818848
+    },
+    {
+      "name": "kinematic_torso_shank_alignment",
+      "importance": 2.4442520141601562
+    },
+    {
+      "name": "trunk_pelvis_yaw_torsion_mean",
+      "importance": 2.33896541595459
+    }
+  ]
+}

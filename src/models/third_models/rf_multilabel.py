@@ -31,10 +31,11 @@ BEST_PARAMS = {
 class MultiOutputRandomForestClassifier:
     """3단계: Multi-Output Random Forest 세부 결함 다중 라벨 분류기"""
 
-    def __init__(self, n_estimators: int = 150, max_depth: int = 12, random_state: int = 42):
+    def __init__(self, n_estimators: int = 150, max_depth: Optional[int] = 12, min_samples_split: int = 2, random_state: int = 42):
         base_rf = RandomForestClassifier(
             n_estimators=n_estimators,
             max_depth=max_depth,
+            min_samples_split=min_samples_split,
             n_jobs=-1,
             random_state=random_state,
             class_weight='balanced'

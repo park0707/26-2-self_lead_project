@@ -1,0 +1,82 @@
+{
+  "code_name": "c4",
+  "defect_name": "발바닥 지면 고정",
+  "tournament_raw_1974": [
+    {
+      "model": "LightGBM",
+      "f1": 75.82,
+      "precision": 75.35,
+      "recall": 76.28,
+      "bacc": 75.99,
+      "roc_auc": 84.58,
+      "latency_ms": 0.262
+    },
+    {
+      "model": "CatBoost",
+      "f1": 74.94,
+      "precision": 74.82,
+      "recall": 75.05,
+      "bacc": 75.23,
+      "roc_auc": 84.33,
+      "latency_ms": 1.148
+    },
+    {
+      "model": "XGBoost",
+      "f1": 75.26,
+      "precision": 74.95,
+      "recall": 75.56,
+      "bacc": 75.48,
+      "roc_auc": 84.56,
+      "latency_ms": 0.317
+    },
+    {
+      "model": "RandomForest",
+      "f1": 75.63,
+      "precision": 74.8,
+      "recall": 76.49,
+      "bacc": 75.69,
+      "roc_auc": 84.59,
+      "latency_ms": 1.276
+    },
+    {
+      "model": "ExtraTrees",
+      "f1": 73.18,
+      "precision": 74.55,
+      "recall": 71.87,
+      "bacc": 73.98,
+      "roc_auc": 82.71,
+      "latency_ms": 0.508
+    }
+  ],
+  "champion_model": "LightGBM",
+  "ambiguity_distribution": {
+    "Level_1": 1001,
+    "Level_2": 0,
+    "Level_3": 0,
+    "Level_4": 973
+  },
+  "tier1_level1": {
+    "sample_count": 1001,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "roc_auc": 10.66,
+    "bacc": 50.0,
+    "tn": 999,
+    "fp": 0,
+    "fn": 2,
+    "tp": 0
+  },
+  "tier2_level123": {
+    "sample_count": 1001,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "roc_auc": 10.66,
+    "bacc": 50.0,
+    "tn": 999,
+    "fp": 0,
+    "fn": 2,
+    "tp": 0
+  }
+}

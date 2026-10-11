@@ -1,0 +1,86 @@
+{
+  "exercise": "03_바벨_스티프_데드리프트",
+  "defect": "무릎 구부린 채 고정 위반 (sd1_v6)",
+  "solutions_applied": [
+    "Pelvis-Gravity Canonical Transformation (신체 중심 정규 3D 좌표계)",
+    "KADR (Knee-Ankle Displacement Ratio), PLI, Excess Flexion Integral 등 혁신 생체역학 피처셋",
+    "Asymmetric CleanLab 고정밀 물리 라벨 정제",
+    "Conformal Prediction 10% Bounded 3-State 완충망"
+  ],
+  "sanitized_samples_count": 103,
+  "tier2_2state_metrics": {
+    "macro_f1": 0.6887017156270496,
+    "clean_f1": 0.835030549898167,
+    "defect_f1": 0.5423728813559322,
+    "clean_specificity": 0.7992202729044834,
+    "roc_auc": 0.828849902534113,
+    "accuracy": 0.7574850299401198
+  },
+  "tier2_3state_metrics": {
+    "tau_lower": 0.41762525050100197,
+    "tau_upper": 0.582374749498998,
+    "abstention_rate": 9.73053892215569,
+    "coverage_rate": 90.26946107784431,
+    "selective_macro_f1": 0.7252889448679027,
+    "selective_clean_f1": 0.8710725893824486,
+    "selective_defect_f1": 0.5795053003533569,
+    "selective_specificity": 0.8410041841004184,
+    "selective_accuracy": 0.802653399668325
+  },
+  "comparison_vs_v3": {
+    "delta_defect_f1": 11.176336486948596,
+    "delta_abstention_rate": -0.14970059880239361,
+    "delta_clean_f1": 0.9147903189979933,
+    "delta_macro_f1": 6.045563402973297,
+    "delta_auc": 3.656893951599438,
+    "delta_specificity": -4.311598757340129
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 155,
+      "v6_defect_f1": 59.70149253731343,
+      "v6_macro_f1": 73.51271809964263
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 155,
+      "v6_defect_f1": 59.70149253731343,
+      "v6_macro_f1": 73.51271809964263
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 155,
+      "v6_defect_f1": 59.70149253731343,
+      "v6_macro_f1": 73.51271809964263
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 48,
+      "v6_defect_f1": 26.666666666666668,
+      "v6_macro_f1": 55.586854460093896
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 155,
+      "v6_defect_f1": 59.70149253731343,
+      "v6_macro_f1": 73.51271809964263
+    }
+  },
+  "top_features": {
+    "knee_disp_y_rom": 12.335745272874053,
+    "norm_knee_disp_y": 10.36196503358787,
+    "bottom_knee_angle": 9.436438800050956,
+    "bottom_knee_delta_mean": 7.440123639342984,
+    "excess_flex_integral": 7.3297814018440075,
+    "rel_bottom_knee_delta": 6.822659740574342,
+    "excess_flex_max": 6.789577986033305,
+    "shank_svii_mean": 6.357499630299012,
+    "knee_disp_z_canonical_rom": 5.934135309042739,
+    "kadr_mean": 5.821986524676096,
+    "address_knee_angle": 5.762241444232926,
+    "context_sd3_prob": 5.715078649874371,
+    "context_torso_coronal_rom": 5.452074618674738,
+    "kadr_max": 4.440691948892597
+  }
+}

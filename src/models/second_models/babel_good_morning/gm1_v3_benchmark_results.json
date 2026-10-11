@@ -1,0 +1,59 @@
+{
+  "exercise": "09_굿모닝",
+  "defect": "무릎 구부린 채 고정 위반 (gm1_v3)",
+  "solutions_applied": [
+    "Conformal Prediction 10% Bounded 3-State 완충망",
+    "CatBoost Hyperparameter Tuning"
+  ],
+  "tier2_2state_metrics": {
+    "macro_f1": 0.779506420204163,
+    "clean_f1": 0.7921896792189679,
+    "defect_f1": 0.7668231611893583,
+    "clean_specificity": 0.8377581120943953,
+    "roc_auc": 0.8772374065662498,
+    "accuracy": 0.7802359882005899
+  },
+  "tier2_3state_metrics": {
+    "tau_lower": 0.4078557114228457,
+    "tau_upper": 0.5921442885771543,
+    "abstention_rate": 9.587020648967552,
+    "coverage_rate": 90.41297935103245,
+    "selective_macro_f1": 0.8055747308718446,
+    "selective_clean_f1": 0.8131868131868132,
+    "selective_defect_f1": 0.797962648556876,
+    "selective_specificity": 0.8381877022653722,
+    "selective_accuracy": 0.8058727569331158
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 158,
+      "defect_f1": 79.41176470588235,
+      "macro_f1": 80.37254901960785
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 158,
+      "defect_f1": 79.41176470588235,
+      "macro_f1": 80.37254901960785
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 158,
+      "defect_f1": 79.41176470588235,
+      "macro_f1": 80.37254901960785
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 46,
+      "defect_f1": 84.44444444444444,
+      "macro_f1": 82.76276276276276
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 158,
+      "defect_f1": 79.41176470588235,
+      "macro_f1": 80.37254901960785
+    }
+  }
+}

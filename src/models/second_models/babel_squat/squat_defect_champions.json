@@ -1,0 +1,90 @@
+{
+  "c1_척추의 중립": {
+    "defect_index": 0,
+    "defect_name": "척추의 중립",
+    "champion_model": "DenseSkipMLP",
+    "trial_index": 2,
+    "best_params": {
+      "hidden_dims": [
+        96,
+        48
+      ],
+      "dropout": 0.2,
+      "lr": 0.0015,
+      "weight_decay": 0.0001,
+      "epochs": 15
+    },
+    "is_pytorch": true,
+    "f1_score": 74.46,
+    "precision": 76.78,
+    "recall": 72.28,
+    "balanced_acc": 75.87,
+    "roc_auc": 82.83,
+    "composite_score": 77.05,
+    "latency_ms": 6.68
+  },
+  "c2_고개 정면": {
+    "defect_index": 1,
+    "defect_name": "고개 정면",
+    "champion_model": "CatBoost",
+    "trial_index": 2,
+    "best_params": {
+      "iterations": 150,
+      "depth": 6,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 5.0
+    },
+    "is_pytorch": false,
+    "f1_score": 80.54,
+    "precision": 79.7,
+    "recall": 81.39,
+    "balanced_acc": 80.18,
+    "roc_auc": 86.66,
+    "composite_score": 81.94,
+    "latency_ms": 2.165
+  },
+  "c3_발과 무릎의 방향 일치": {
+    "defect_index": 2,
+    "defect_name": "발과 무릎의 방향 일치",
+    "champion_model": "FTTransformer",
+    "trial_index": 1,
+    "best_params": {
+      "d_token": 32,
+      "n_heads": 4,
+      "n_blocks": 2,
+      "dropout": 0.2,
+      "lr": 0.0015,
+      "epochs": 12
+    },
+    "is_pytorch": true,
+    "f1_score": 84.18,
+    "precision": 83.38,
+    "recall": 84.99,
+    "balanced_acc": 84.04,
+    "roc_auc": 90.09,
+    "composite_score": 85.61,
+    "latency_ms": 32.181
+  },
+  "c4_발바닥 지면 고정": {
+    "defect_index": 3,
+    "defect_name": "발바닥 지면 고정",
+    "champion_model": "FTTransformer",
+    "trial_index": 2,
+    "best_params": {
+      "d_token": 48,
+      "n_heads": 4,
+      "n_blocks": 2,
+      "dropout": 0.25,
+      "lr": 0.001,
+      "epochs": 15
+    },
+    "is_pytorch": true,
+    "f1_score": 67.25,
+    "precision": 71.26,
+    "recall": 63.66,
+    "balanced_acc": 69.33,
+    "roc_auc": 75.96,
+    "composite_score": 70.15,
+    "latency_ms": 48.03
+  }
+}

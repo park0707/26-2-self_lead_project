@@ -1,0 +1,299 @@
+{
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "defect": "Condition 2 - 몸통 발 무릎 방향 일치 여부",
+  "model": "sl2_v2 (원천 826폴더 4,130시퀀스 전수)",
+  "global_tuned": {
+    "opt_defect_f1": {
+      "total_samples": 4130,
+      "tau_normal": 0.34750000000000003,
+      "tau_defect": 0.43000000000000005,
+      "coverage": 0.9019370460048426,
+      "retake_rate": 0.09806295399515738,
+      "retake_count": 405,
+      "decided_count": 3725,
+      "retake_clean_count": 332,
+      "retake_defect_count": 73,
+      "selective_defect_f1": 0.46484375,
+      "selective_clean_f1": 0.861007778153534,
+      "macro_f1": 0.662925764076767,
+      "selective_accuracy": 0.7793288590604027,
+      "selective_precision": 0.42550655542312277,
+      "selective_recall": 0.5121951219512195,
+      "confusion_matrix": [
+        [
+          2546,
+          482
+        ],
+        [
+          340,
+          357
+        ]
+      ],
+      "full_coverage_defect_f1": 0.4119359534206696,
+      "full_coverage_accuracy": 0.8043583535108959,
+      "roc_auc": 0.7335080395794682
+    },
+    "opt_macro_f1": {
+      "total_samples": 4130,
+      "tau_normal": 0.405,
+      "tau_defect": 0.5225,
+      "coverage": 0.901452784503632,
+      "retake_rate": 0.09854721549636804,
+      "retake_count": 407,
+      "decided_count": 3723,
+      "retake_clean_count": 298,
+      "retake_defect_count": 109,
+      "selective_defect_f1": 0.4512396694214876,
+      "selective_clean_f1": 0.8935214881334188,
+      "macro_f1": 0.6723805787774532,
+      "selective_accuracy": 0.8216492076282568,
+      "selective_precision": 0.4972677595628415,
+      "selective_recall": 0.4130105900151286,
+      "confusion_matrix": [
+        [
+          2786,
+          276
+        ],
+        [
+          388,
+          273
+        ]
+      ],
+      "full_coverage_defect_f1": 0.4119359534206696,
+      "full_coverage_accuracy": 0.8043583535108959,
+      "roc_auc": 0.7335080395794682
+    },
+    "opt_balanced": {
+      "total_samples": 4130,
+      "tau_normal": 0.405,
+      "tau_defect": 0.5225,
+      "coverage": 0.901452784503632,
+      "retake_rate": 0.09854721549636804,
+      "retake_count": 407,
+      "decided_count": 3723,
+      "retake_clean_count": 298,
+      "retake_defect_count": 109,
+      "selective_defect_f1": 0.4512396694214876,
+      "selective_clean_f1": 0.8935214881334188,
+      "macro_f1": 0.6723805787774532,
+      "selective_accuracy": 0.8216492076282568,
+      "selective_precision": 0.4972677595628415,
+      "selective_recall": 0.4130105900151286,
+      "confusion_matrix": [
+        [
+          2786,
+          276
+        ],
+        [
+          388,
+          273
+        ]
+      ],
+      "full_coverage_defect_f1": 0.4119359534206696,
+      "full_coverage_accuracy": 0.8043583535108959,
+      "roc_auc": 0.7335080395794682
+    }
+  },
+  "per_view_tuned": {
+    "total_samples": 4130,
+    "coverage": 0.9060532687651331,
+    "retake_rate": 0.09394673123486683,
+    "retake_count": 388,
+    "decided_count": 3742,
+    "selective_defect_f1": 0.46448863636363635,
+    "selective_clean_f1": 0.8759052007899935,
+    "macro_f1": 0.6701969185768148,
+    "selective_accuracy": 0.7985034740780331,
+    "selective_precision": 0.45228215767634855,
+    "selective_recall": 0.47737226277372263,
+    "confusion_matrix": [
+      [
+        2661,
+        396
+      ],
+      [
+        358,
+        327
+      ]
+    ],
+    "view_thresholds": {
+      "view5": {
+        "tau_normal": 0.345,
+        "tau_defect": 0.40499999999999997
+      },
+      "view2": {
+        "tau_normal": 0.34,
+        "tau_defect": 0.475
+      },
+      "view3": {
+        "tau_normal": 0.42000000000000004,
+        "tau_defect": 0.5125
+      },
+      "view4": {
+        "tau_normal": 0.4025,
+        "tau_defect": 0.6125
+      },
+      "view1": {
+        "tau_normal": 0.375,
+        "tau_defect": 0.43
+      }
+    },
+    "view_audits": {
+      "view5": {
+        "total_samples": 826,
+        "tau_normal": 0.345,
+        "tau_defect": 0.40499999999999997,
+        "coverage": 0.9092009685230025,
+        "retake_rate": 0.09079903147699758,
+        "retake_count": 75,
+        "decided_count": 751,
+        "retake_clean_count": 66,
+        "retake_defect_count": 9,
+        "selective_defect_f1": 0.3241590214067278,
+        "selective_clean_f1": 0.8119148936170213,
+        "macro_f1": 0.5680369575118746,
+        "selective_accuracy": 0.7057256990679095,
+        "selective_precision": 0.29120879120879123,
+        "selective_recall": 0.36551724137931035,
+        "confusion_matrix": [
+          [
+            477,
+            129
+          ],
+          [
+            92,
+            53
+          ]
+        ],
+        "full_coverage_defect_f1": 0.21862348178137653,
+        "full_coverage_accuracy": 0.7663438256658596,
+        "roc_auc": 0.5899427952999382,
+        "alias": "시점 A (우측 후방 45°)"
+      },
+      "view2": {
+        "total_samples": 826,
+        "tau_normal": 0.34,
+        "tau_defect": 0.475,
+        "coverage": 0.9031476997578692,
+        "retake_rate": 0.09685230024213075,
+        "retake_count": 80,
+        "decided_count": 746,
+        "retake_clean_count": 59,
+        "retake_defect_count": 21,
+        "selective_defect_f1": 0.6013986013986014,
+        "selective_clean_f1": 0.9054726368159204,
+        "macro_f1": 0.7534356191072609,
+        "selective_accuracy": 0.8471849865951743,
+        "selective_precision": 0.5620915032679739,
+        "selective_recall": 0.6466165413533834,
+        "confusion_matrix": [
+          [
+            546,
+            67
+          ],
+          [
+            47,
+            86
+          ]
+        ],
+        "full_coverage_defect_f1": 0.5310344827586206,
+        "full_coverage_accuracy": 0.8353510895883777,
+        "roc_auc": 0.8232741960420532,
+        "alias": "시점 B (우측 전방 45°)"
+      },
+      "view3": {
+        "total_samples": 826,
+        "tau_normal": 0.42000000000000004,
+        "tau_defect": 0.5125,
+        "coverage": 0.9043583535108959,
+        "retake_rate": 0.09564164648910412,
+        "retake_count": 79,
+        "decided_count": 747,
+        "retake_clean_count": 60,
+        "retake_defect_count": 19,
+        "selective_defect_f1": 0.4742268041237113,
+        "selective_clean_f1": 0.8728179551122195,
+        "macro_f1": 0.6735223796179655,
+        "selective_accuracy": 0.7951807228915663,
+        "selective_precision": 0.4423076923076923,
+        "selective_recall": 0.5111111111111111,
+        "confusion_matrix": [
+          [
+            525,
+            87
+          ],
+          [
+            66,
+            69
+          ]
+        ],
+        "full_coverage_defect_f1": 0.43670886075949367,
+        "full_coverage_accuracy": 0.784503631961259,
+        "roc_auc": 0.7310316171923316,
+        "alias": "시점 C (정면 0°)"
+      },
+      "view4": {
+        "total_samples": 826,
+        "tau_normal": 0.4025,
+        "tau_defect": 0.6125,
+        "coverage": 0.9019370460048426,
+        "retake_rate": 0.09806295399515738,
+        "retake_count": 81,
+        "decided_count": 745,
+        "retake_clean_count": 56,
+        "retake_defect_count": 25,
+        "selective_defect_f1": 0.5671641791044776,
+        "selective_clean_f1": 0.9325058184639256,
+        "macro_f1": 0.7498349987842016,
+        "selective_accuracy": 0.8832214765100671,
+        "selective_precision": 0.7916666666666666,
+        "selective_recall": 0.4418604651162791,
+        "confusion_matrix": [
+          [
+            601,
+            15
+          ],
+          [
+            72,
+            57
+          ]
+        ],
+        "full_coverage_defect_f1": 0.4981132075471698,
+        "full_coverage_accuracy": 0.8389830508474576,
+        "roc_auc": 0.8067022263450835,
+        "alias": "시점 D (좌측 전방 45°)"
+      },
+      "view1": {
+        "total_samples": 826,
+        "tau_normal": 0.375,
+        "tau_defect": 0.43,
+        "coverage": 0.9116222760290557,
+        "retake_rate": 0.08837772397094432,
+        "retake_count": 73,
+        "decided_count": 753,
+        "retake_clean_count": 62,
+        "retake_defect_count": 11,
+        "selective_defect_f1": 0.40924092409240925,
+        "selective_clean_f1": 0.8512053200332502,
+        "macro_f1": 0.6302231220628297,
+        "selective_accuracy": 0.7622841965471447,
+        "selective_precision": 0.3875,
+        "selective_recall": 0.43356643356643354,
+        "confusion_matrix": [
+          [
+            512,
+            98
+          ],
+          [
+            81,
+            62
+          ]
+        ],
+        "full_coverage_defect_f1": 0.34375,
+        "full_coverage_accuracy": 0.7966101694915254,
+        "roc_auc": 0.6716334260977118,
+        "alias": "시점 E (좌측 후방 45°)"
+      }
+    }
+  }
+}

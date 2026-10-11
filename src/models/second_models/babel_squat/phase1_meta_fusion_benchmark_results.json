@@ -1,0 +1,48 @@
+{
+  "N_total": 1906,
+  "N_clean": 125,
+  "N_defect": 1781,
+  "baseline_hard_and": {
+    "clean": {
+      "precision": 64.40677966101694,
+      "recall": 60.8,
+      "f1": 62.55144032921811
+    },
+    "defect": {
+      "precision": 97.25950782997764,
+      "recall": 97.64177428411006,
+      "f1": 97.45026618100309
+    },
+    "exact_match": 61.64742917103882
+  },
+  "phase1_binary_strategy": {
+    "threshold": 0.3,
+    "clean": {
+      "precision": 62.676056338028175,
+      "recall": 71.2,
+      "f1": 66.66666666666666
+    },
+    "defect": {
+      "precision": 97.95918367346938,
+      "recall": 97.02414373947221,
+      "f1": 97.48942172073343
+    }
+  },
+  "phase1_selective_strategy": {
+    "t_defect": 0.15,
+    "t_clean": 0.45,
+    "coverage": 94.49108079748164,
+    "abstain_rate": 5.508919202518363,
+    "abstain_count": 105,
+    "clean": {
+      "precision": 74.75728155339806,
+      "recall": 77.0,
+      "f1": 75.86206896551724
+    },
+    "defect": {
+      "precision": 98.64546525323911,
+      "recall": 98.47148736037626,
+      "f1": 98.55839952927332
+    }
+  }
+}

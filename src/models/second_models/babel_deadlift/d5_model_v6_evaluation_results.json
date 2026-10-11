@@ -1,0 +1,500 @@
+{
+  "model_version": "v6.0 Zero-Calibrated (37D)",
+  "description": "37D Zero-Calibrated and Morphological Ratio Tri-Ensemble Model",
+  "feature_count": 37,
+  "feature_names": [
+    "d5_bar_shank_dist_max",
+    "d5_bar_shank_dist_mean",
+    "d5_bar_knee_dist_pass",
+    "d5_bar_thigh_dist_mean",
+    "d5_bar_thigh_dist_max",
+    "d5_bar_midfoot_init_offset",
+    "d5_bar_midfoot_max_offset",
+    "d5_bar_leg_contact_deficit_ratio",
+    "d5_bar_drift_horizontal_std",
+    "d5_bar_path_curvature",
+    "d5_bar_lateral_wobble_std",
+    "d5_bar_ascent_velocity_smoothness",
+    "d5_shoulder_wrist_angle_max_deg",
+    "d5_shoulder_wrist_angle_mean_deg",
+    "d5_hip_bar_moment_arm_at_knee",
+    "d5_p1_shank_clearance_rate",
+    "d5_p2_thigh_drag_contact_rate",
+    "d5_eccentric_bar_drift_max",
+    "d5_peak_drift_timing_norm",
+    "d5_knee_pass_timing_norm",
+    "d5_sagittal_proj_drift",
+    "d5_coronal_overlap_deficit",
+    "d5_bilateral_wrist_asym",
+    "d5_arm_foreshortening_min_ratio",
+    "d5_virtual_sagittal_angle_mean_deg",
+    "d5_frontal_bar_knee_clearance_y",
+    "d5_gate_is_oblique",
+    "d5_gated_ke_angle_sek_deg",
+    "d5_gated_ke_width_ratio_nadir",
+    "d5_gated_ke_dist_nadir",
+    "d5_gated_ke_z_diff_nadir",
+    "d5_gated_ke_signed_x_nadir",
+    "d5_zero_delta_bar_shank_max",
+    "d5_zero_delta_bar_shank_mean",
+    "d5_zero_delta_shoulder_wrist_angle",
+    "d5_anatomical_arm_to_torso_ratio",
+    "d5_anatomical_torso_to_body_ratio"
+  ],
+  "optimal_thresholds": {
+    "view5": 0.35,
+    "view2": 0.49,
+    "view3": 0.2,
+    "view4": 0.5,
+    "view1": 0.49
+  },
+  "overall_metrics": {
+    "accuracy": 0.7909090909090909,
+    "precision": 0.7477876106194691,
+    "recall": 0.8779220779220779,
+    "f1_score": 0.8076463560334528,
+    "f1_macro": 0.7893139319285329,
+    "roc_auc": 0.8797233934896271,
+    "total_errors": 161,
+    "fp_count": 114,
+    "fn_count": 47,
+    "confusion_matrix": [
+      [
+        271,
+        114
+      ],
+      [
+        47,
+        338
+      ]
+    ]
+  },
+  "view_breakdown": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "optimal_threshold": 0.35,
+      "sample_count": 154,
+      "normal_count": 77,
+      "defect_count": 77,
+      "accuracy": 0.7857142857142857,
+      "precision": 0.7444444444444445,
+      "recall": 0.8701298701298701,
+      "f1_score": 0.8023952095808383,
+      "roc_auc": 0.8708045201551695,
+      "confusion_matrix": [
+        [
+          54,
+          23
+        ],
+        [
+          10,
+          67
+        ]
+      ]
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "optimal_threshold": 0.49,
+      "sample_count": 154,
+      "normal_count": 77,
+      "defect_count": 77,
+      "accuracy": 0.8636363636363636,
+      "precision": 0.9,
+      "recall": 0.8181818181818182,
+      "f1_score": 0.8571428571428571,
+      "roc_auc": 0.9268004722550178,
+      "confusion_matrix": [
+        [
+          70,
+          7
+        ],
+        [
+          14,
+          63
+        ]
+      ]
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "optimal_threshold": 0.2,
+      "sample_count": 154,
+      "normal_count": 77,
+      "defect_count": 77,
+      "accuracy": 0.5584415584415584,
+      "precision": 0.5333333333333333,
+      "recall": 0.935064935064935,
+      "f1_score": 0.6792452830188679,
+      "roc_auc": 0.6351829988193625,
+      "confusion_matrix": [
+        [
+          14,
+          63
+        ],
+        [
+          5,
+          72
+        ]
+      ]
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "optimal_threshold": 0.5,
+      "sample_count": 154,
+      "normal_count": 77,
+      "defect_count": 77,
+      "accuracy": 0.9675324675324676,
+      "precision": 1.0,
+      "recall": 0.935064935064935,
+      "f1_score": 0.9664429530201343,
+      "roc_auc": 0.9929161747343567,
+      "confusion_matrix": [
+        [
+          77,
+          0
+        ],
+        [
+          5,
+          72
+        ]
+      ]
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "optimal_threshold": 0.49,
+      "sample_count": 154,
+      "normal_count": 77,
+      "defect_count": 77,
+      "accuracy": 0.7792207792207793,
+      "precision": 0.7529411764705882,
+      "recall": 0.8311688311688312,
+      "f1_score": 0.7901234567901234,
+      "roc_auc": 0.8490470568392646,
+      "confusion_matrix": [
+        [
+          56,
+          21
+        ],
+        [
+          13,
+          64
+        ]
+      ]
+    }
+  },
+  "subject_breakdown": {
+    "1": {
+      "total_count": 100,
+      "accuracy": 0.77,
+      "f1_score": 0.7766990291262136,
+      "fp_count": 13,
+      "fn_count": 10,
+      "confusion_matrix": [
+        [
+          37,
+          13
+        ],
+        [
+          10,
+          40
+        ]
+      ]
+    },
+    "2": {
+      "total_count": 90,
+      "accuracy": 0.8111111111111111,
+      "f1_score": 0.8282828282828283,
+      "fp_count": 13,
+      "fn_count": 4,
+      "confusion_matrix": [
+        [
+          32,
+          13
+        ],
+        [
+          4,
+          41
+        ]
+      ]
+    },
+    "3": {
+      "total_count": 80,
+      "accuracy": 0.725,
+      "f1_score": 0.78,
+      "fp_count": 21,
+      "fn_count": 1,
+      "confusion_matrix": [
+        [
+          19,
+          21
+        ],
+        [
+          1,
+          39
+        ]
+      ]
+    },
+    "4": {
+      "total_count": 80,
+      "accuracy": 0.7625,
+      "f1_score": 0.7654320987654321,
+      "fp_count": 10,
+      "fn_count": 9,
+      "confusion_matrix": [
+        [
+          30,
+          10
+        ],
+        [
+          9,
+          31
+        ]
+      ]
+    },
+    "5": {
+      "total_count": 80,
+      "accuracy": 0.8125,
+      "f1_score": 0.8148148148148148,
+      "fp_count": 8,
+      "fn_count": 7,
+      "confusion_matrix": [
+        [
+          32,
+          8
+        ],
+        [
+          7,
+          33
+        ]
+      ]
+    },
+    "6": {
+      "total_count": 90,
+      "accuracy": 0.8111111111111111,
+      "f1_score": 0.8247422680412371,
+      "fp_count": 12,
+      "fn_count": 5,
+      "confusion_matrix": [
+        [
+          33,
+          12
+        ],
+        [
+          5,
+          40
+        ]
+      ]
+    },
+    "7": {
+      "total_count": 90,
+      "accuracy": 0.8333333333333334,
+      "f1_score": 0.8543689320388349,
+      "fp_count": 14,
+      "fn_count": 1,
+      "confusion_matrix": [
+        [
+          31,
+          14
+        ],
+        [
+          1,
+          44
+        ]
+      ]
+    },
+    "8": {
+      "total_count": 90,
+      "accuracy": 0.8222222222222222,
+      "f1_score": 0.8490566037735849,
+      "fp_count": 16,
+      "fn_count": 0,
+      "confusion_matrix": [
+        [
+          29,
+          16
+        ],
+        [
+          0,
+          45
+        ]
+      ]
+    },
+    "9": {
+      "total_count": 70,
+      "accuracy": 0.7571428571428571,
+      "f1_score": 0.746268656716418,
+      "fp_count": 7,
+      "fn_count": 10,
+      "confusion_matrix": [
+        [
+          28,
+          7
+        ],
+        [
+          10,
+          25
+        ]
+      ]
+    }
+  },
+  "three_state_results": [
+    {
+      "uncertainty_margin": 0.0,
+      "threshold_band": [
+        0.5,
+        0.5
+      ],
+      "coverage": 1.0,
+      "decided_count": 770,
+      "uncertain_count": 0,
+      "accuracy": 0.7909090909090909,
+      "precision": 0.7477876106194691,
+      "recall": 0.8779220779220779,
+      "f1_score": 0.8076463560334528
+    },
+    {
+      "uncertainty_margin": 0.04,
+      "threshold_band": [
+        0.46,
+        0.54
+      ],
+      "coverage": 0.9402597402597402,
+      "decided_count": 724,
+      "uncertain_count": 46,
+      "accuracy": 0.7997237569060773,
+      "precision": 0.7605633802816901,
+      "recall": 0.8828337874659401,
+      "f1_score": 0.8171500630517023
+    },
+    {
+      "uncertainty_margin": 0.06,
+      "threshold_band": [
+        0.44,
+        0.56
+      ],
+      "coverage": 0.912987012987013,
+      "decided_count": 703,
+      "uncertain_count": 67,
+      "accuracy": 0.8065433854907539,
+      "precision": 0.7712895377128953,
+      "recall": 0.883008356545961,
+      "f1_score": 0.8233766233766234
+    },
+    {
+      "uncertainty_margin": 0.08,
+      "threshold_band": [
+        0.42,
+        0.58
+      ],
+      "coverage": 0.8883116883116883,
+      "decided_count": 684,
+      "uncertain_count": 86,
+      "accuracy": 0.8099415204678363,
+      "precision": 0.7763819095477387,
+      "recall": 0.8828571428571429,
+      "f1_score": 0.8262032085561497
+    },
+    {
+      "uncertainty_margin": 0.1,
+      "threshold_band": [
+        0.4,
+        0.6
+      ],
+      "coverage": 0.8662337662337662,
+      "decided_count": 667,
+      "uncertain_count": 103,
+      "accuracy": 0.8170914542728636,
+      "precision": 0.7849740932642487,
+      "recall": 0.8859649122807017,
+      "f1_score": 0.8324175824175825
+    }
+  ],
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_subjects": [
+        1
+      ],
+      "sample_count": 100,
+      "accuracy": 0.79,
+      "f1_score": 0.7640449438202247,
+      "roc_auc": 0.8728
+    },
+    {
+      "fold": 2,
+      "val_subjects": [
+        3,
+        6
+      ],
+      "sample_count": 170,
+      "accuracy": 0.7764705882352941,
+      "f1_score": 0.7816091954022989,
+      "roc_auc": 0.8613148788927336
+    },
+    {
+      "fold": 3,
+      "val_subjects": [
+        2,
+        9
+      ],
+      "sample_count": 160,
+      "accuracy": 0.8,
+      "f1_score": 0.7777777777777778,
+      "roc_auc": 0.8860937499999999
+    },
+    {
+      "fold": 4,
+      "val_subjects": [
+        4,
+        7
+      ],
+      "sample_count": 170,
+      "accuracy": 0.7705882352941177,
+      "f1_score": 0.7607361963190185,
+      "roc_auc": 0.8764013840830449
+    },
+    {
+      "fold": 5,
+      "val_subjects": [
+        5,
+        8
+      ],
+      "sample_count": 170,
+      "accuracy": 0.8176470588235294,
+      "f1_score": 0.8187134502923976,
+      "roc_auc": 0.9123875432525952
+    }
+  ],
+  "tuned_thresholds": {
+    "view5": 0.35,
+    "view2": 0.49,
+    "view3": 0.48,
+    "view4": 0.5,
+    "view1": 0.49
+  },
+  "tuned_metrics": {
+    "accuracy": 0.8,
+    "precision": 0.8047493403693932,
+    "recall": 0.7922077922077922,
+    "f1_score": 0.7984293193717278,
+    "confusion_matrix": [
+      [
+        311,
+        74
+      ],
+      [
+        80,
+        305
+      ]
+    ],
+    "total_errors": 154
+  },
+  "optimal_3state": {
+    "base_margin": 0.05,
+    "coverage": 0.9064935064935065,
+    "decided_count": 698,
+    "f1_score": 0.8159771754636234,
+    "accuracy": 0.8151862464183381,
+    "precision": 0.8289855072463768,
+    "recall": 0.8033707865168539
+  }
+}

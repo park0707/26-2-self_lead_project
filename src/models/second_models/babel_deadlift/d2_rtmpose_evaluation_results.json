@@ -1,0 +1,107 @@
+{
+  "model": "RTMPose-m (Halpe26) d2",
+  "sample_count": 385,
+  "auc": 0.9836,
+  "f1_default": 86.67,
+  "f1_best": 88.17,
+  "best_threshold": 0.41,
+  "views": {
+    "시점 E (좌측 후방 45°)": {
+      "f1": 86.49,
+      "acc": 93.51,
+      "auc": 0.9727
+    },
+    "시점 B (우측 전방 45°)": {
+      "f1": 87.18,
+      "acc": 93.51,
+      "auc": 0.9708
+    },
+    "시점 C (정면 0°)": {
+      "f1": 94.12,
+      "acc": 97.4,
+      "auc": 0.9981
+    },
+    "시점 D (좌측 전방 45°)": {
+      "f1": 87.18,
+      "acc": 93.51,
+      "auc": 0.9812
+    },
+    "시점 A (우측 후방 45°)": {
+      "f1": 86.49,
+      "acc": 93.51,
+      "auc": 0.9887
+    }
+  },
+  "three_state": [
+    {
+      "tau_normal": 0.4,
+      "tau_defect": 0.6,
+      "coverage": 96.1,
+      "abstention_rate": 3.9,
+      "f1": 88.48,
+      "accuracy": 94.86,
+      "precision": 86.9,
+      "recall": 90.12
+    },
+    {
+      "tau_normal": 0.35,
+      "tau_defect": 0.55,
+      "coverage": 96.36,
+      "abstention_rate": 3.64,
+      "f1": 88.62,
+      "accuracy": 94.88,
+      "precision": 87.06,
+      "recall": 90.24
+    },
+    {
+      "tau_normal": 0.35,
+      "tau_defect": 0.65,
+      "coverage": 95.32,
+      "abstention_rate": 4.68,
+      "f1": 88.75,
+      "accuracy": 95.1,
+      "precision": 87.65,
+      "recall": 89.87
+    },
+    {
+      "tau_normal": 0.3,
+      "tau_defect": 0.6,
+      "coverage": 94.29,
+      "abstention_rate": 5.71,
+      "f1": 89.57,
+      "accuracy": 95.32,
+      "precision": 86.9,
+      "recall": 92.41
+    },
+    {
+      "tau_normal": 0.25,
+      "tau_defect": 0.6,
+      "coverage": 92.99,
+      "abstention_rate": 7.01,
+      "f1": 91.25,
+      "accuracy": 96.09,
+      "precision": 86.9,
+      "recall": 96.05
+    },
+    {
+      "tau_normal": 0.2,
+      "tau_defect": 0.65,
+      "coverage": 91.43,
+      "abstention_rate": 8.57,
+      "f1": 91.61,
+      "accuracy": 96.31,
+      "precision": 87.65,
+      "recall": 95.95
+    },
+    {
+      "tau_normal": 0.15,
+      "tau_defect": 0.7,
+      "coverage": 87.53,
+      "abstention_rate": 12.47,
+      "f1": 94.52,
+      "accuracy": 97.63,
+      "precision": 92.0,
+      "recall": 97.18
+    }
+  ]
+}

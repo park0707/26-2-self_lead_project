@@ -1,0 +1,510 @@
+{
+  "full1906": {
+    "v1": {
+      "defect_metrics": {
+        "c1": {
+          "f1": 72.52,
+          "precision": 75.83,
+          "recall": 69.49,
+          "accuracy": 74.55,
+          "specificity": 79.29,
+          "bacc": 74.39,
+          "roc_auc": 81.59,
+          "tn": 781,
+          "fp": 204,
+          "fn": 281,
+          "tp": 640
+        },
+        "c2": {
+          "f1": 85.84,
+          "precision": 88.05,
+          "recall": 83.73,
+          "accuracy": 86.1,
+          "specificity": 88.49,
+          "bacc": 86.11,
+          "roc_auc": 93.81,
+          "tn": 838,
+          "fp": 109,
+          "fn": 156,
+          "tp": 803
+        },
+        "c3": {
+          "f1": 90.92,
+          "precision": 90.97,
+          "recall": 90.87,
+          "accuracy": 90.92,
+          "specificity": 90.98,
+          "bacc": 90.92,
+          "roc_auc": 96.81,
+          "tn": 867,
+          "fp": 86,
+          "fn": 87,
+          "tp": 866
+        },
+        "c4": {
+          "f1": 89.53,
+          "precision": 91.26,
+          "recall": 87.86,
+          "accuracy": 89.87,
+          "specificity": 91.83,
+          "bacc": 89.84,
+          "roc_auc": 95.92,
+          "tn": 888,
+          "fp": 79,
+          "fn": 114,
+          "tp": 825
+        }
+      },
+      "exact_match_ratio": 54.62,
+      "exact_match_count": 1041,
+      "hamming_loss": 14.64,
+      "slot_accuracy": 85.36,
+      "macro_f1": 84.7,
+      "micro_f1": 84.89,
+      "hard_or": {
+        "f1": 96.86,
+        "precision": 96.7,
+        "recall": 97.02,
+        "accuracy": 94.12,
+        "specificity": 52.8,
+        "clean_fps": 59
+      },
+      "soft_fusion_079": {
+        "f1": 97.26,
+        "precision": 97.95,
+        "recall": 96.57,
+        "accuracy": 94.91,
+        "specificity": 71.2,
+        "clean_fps": 36,
+        "roc_auc": 93.65
+      },
+      "soft_fusion_opt": {
+        "opt_th": 0.6,
+        "f1": 97.53,
+        "precision": 96.33,
+        "recall": 98.76,
+        "accuracy": 95.33,
+        "specificity": 46.4,
+        "clean_fps": 67,
+        "roc_auc": 93.65
+      },
+      "defect_count_breakdown": {
+        "0": {
+          "samples": 125,
+          "overall_acc": 71.2,
+          "exact_match_ratio": 52.8,
+          "exact_match_count": 66,
+          "slot_accuracy": 87.0
+        },
+        "1": {
+          "samples": 485,
+          "overall_acc": 92.99,
+          "exact_match_ratio": 61.86,
+          "exact_match_count": 300,
+          "slot_accuracy": 87.53
+        },
+        "2": {
+          "samples": 717,
+          "overall_acc": 96.51,
+          "exact_match_ratio": 59.97,
+          "exact_match_count": 430,
+          "slot_accuracy": 86.92
+        },
+        "3": {
+          "samples": 463,
+          "overall_acc": 99.57,
+          "exact_match_ratio": 45.14,
+          "exact_match_count": 209,
+          "slot_accuracy": 82.56
+        },
+        "4": {
+          "samples": 116,
+          "overall_acc": 100.0,
+          "exact_match_ratio": 31.03,
+          "exact_match_count": 36,
+          "slot_accuracy": 76.08
+        }
+      }
+    },
+    "v2": {
+      "defect_metrics": {
+        "c1": {
+          "f1": 78.45,
+          "precision": 81.43,
+          "recall": 75.68,
+          "accuracy": 79.91,
+          "specificity": 83.86,
+          "bacc": 79.77,
+          "roc_auc": 88.43,
+          "tn": 826,
+          "fp": 159,
+          "fn": 224,
+          "tp": 697
+        },
+        "c2": {
+          "f1": 85.84,
+          "precision": 88.05,
+          "recall": 83.73,
+          "accuracy": 86.1,
+          "specificity": 88.49,
+          "bacc": 86.11,
+          "roc_auc": 93.81,
+          "tn": 838,
+          "fp": 109,
+          "fn": 156,
+          "tp": 803
+        },
+        "c3": {
+          "f1": 90.92,
+          "precision": 90.97,
+          "recall": 90.87,
+          "accuracy": 90.92,
+          "specificity": 90.98,
+          "bacc": 90.92,
+          "roc_auc": 96.81,
+          "tn": 867,
+          "fp": 86,
+          "fn": 87,
+          "tp": 866
+        },
+        "c4": {
+          "f1": 89.53,
+          "precision": 91.26,
+          "recall": 87.86,
+          "accuracy": 89.87,
+          "specificity": 91.83,
+          "bacc": 89.84,
+          "roc_auc": 95.92,
+          "tn": 888,
+          "fp": 79,
+          "fn": 114,
+          "tp": 825
+        }
+      },
+      "exact_match_ratio": 58.39,
+      "exact_match_count": 1113,
+      "hamming_loss": 13.3,
+      "slot_accuracy": 86.7,
+      "macro_f1": 86.19,
+      "micro_f1": 86.29,
+      "hard_or": {
+        "f1": 97.37,
+        "precision": 97.04,
+        "recall": 97.7,
+        "accuracy": 95.07,
+        "specificity": 57.6,
+        "clean_fps": 53
+      },
+      "soft_fusion_079": {
+        "f1": 96.95,
+        "precision": 97.61,
+        "recall": 96.29,
+        "accuracy": 94.33,
+        "specificity": 66.4,
+        "clean_fps": 42,
+        "roc_auc": 93.63
+      },
+      "soft_fusion_opt": {
+        "opt_th": 0.61,
+        "f1": 98.06,
+        "precision": 96.88,
+        "recall": 99.27,
+        "accuracy": 96.33,
+        "specificity": 54.4,
+        "clean_fps": 57,
+        "roc_auc": 93.63
+      },
+      "defect_count_breakdown": {
+        "0": {
+          "samples": 125,
+          "overall_acc": 66.4,
+          "exact_match_ratio": 57.6,
+          "exact_match_count": 72,
+          "slot_accuracy": 87.6
+        },
+        "1": {
+          "samples": 485,
+          "overall_acc": 91.96,
+          "exact_match_ratio": 64.54,
+          "exact_match_count": 313,
+          "slot_accuracy": 88.61
+        },
+        "2": {
+          "samples": 717,
+          "overall_acc": 96.93,
+          "exact_match_ratio": 63.18,
+          "exact_match_count": 453,
+          "slot_accuracy": 88.39
+        },
+        "3": {
+          "samples": 463,
+          "overall_acc": 98.92,
+          "exact_match_ratio": 50.32,
+          "exact_match_count": 233,
+          "slot_accuracy": 83.8
+        },
+        "4": {
+          "samples": 116,
+          "overall_acc": 100.0,
+          "exact_match_ratio": 36.21,
+          "exact_match_count": 42,
+          "slot_accuracy": 78.88
+        }
+      }
+    }
+  },
+  "level123": {
+    "v1": {
+      "defect_metrics": {
+        "c1": {
+          "f1": 74.71,
+          "precision": 78.73,
+          "recall": 71.08,
+          "accuracy": 74.89,
+          "specificity": 79.05,
+          "bacc": 75.06,
+          "roc_auc": 82.84,
+          "tn": 596,
+          "fp": 158,
+          "fn": 238,
+          "tp": 585
+        },
+        "c2": {
+          "f1": 84.82,
+          "precision": 87.75,
+          "recall": 82.08,
+          "accuracy": 85.86,
+          "specificity": 89.36,
+          "bacc": 85.72,
+          "roc_auc": 93.49,
+          "tn": 731,
+          "fp": 87,
+          "fn": 136,
+          "tp": 623
+        },
+        "c3": {
+          "f1": 91.21,
+          "precision": 90.63,
+          "recall": 91.81,
+          "accuracy": 91.38,
+          "specificity": 90.97,
+          "bacc": 91.39,
+          "roc_auc": 96.82,
+          "tn": 735,
+          "fp": 73,
+          "fn": 63,
+          "tp": 706
+        },
+        "c4": {
+          "f1": 89.93,
+          "precision": 91.8,
+          "recall": 88.13,
+          "accuracy": 90.3,
+          "specificity": 92.39,
+          "bacc": 90.26,
+          "roc_auc": 96.14,
+          "tn": 741,
+          "fp": 61,
+          "fn": 92,
+          "tp": 683
+        }
+      },
+      "exact_match_ratio": 55.8,
+      "exact_match_count": 880,
+      "hamming_loss": 14.39,
+      "slot_accuracy": 85.61,
+      "macro_f1": 85.17,
+      "micro_f1": 85.12,
+      "hard_or": {
+        "f1": 97.08,
+        "precision": 97.24,
+        "recall": 96.91,
+        "accuracy": 94.48,
+        "specificity": 52.33,
+        "clean_fps": 41
+      },
+      "soft_fusion_079": {
+        "f1": 97.39,
+        "precision": 98.56,
+        "recall": 96.24,
+        "accuracy": 95.12,
+        "specificity": 75.58,
+        "clean_fps": 21,
+        "roc_auc": 94.55
+      },
+      "soft_fusion_opt": {
+        "opt_th": 0.41,
+        "f1": 97.76,
+        "precision": 96.23,
+        "recall": 99.33,
+        "accuracy": 95.69,
+        "specificity": 32.56,
+        "clean_fps": 58,
+        "roc_auc": 94.55
+      },
+      "defect_count_breakdown": {
+        "0": {
+          "samples": 86,
+          "overall_acc": 75.58,
+          "exact_match_ratio": 52.33,
+          "exact_match_count": 45,
+          "slot_accuracy": 86.63
+        },
+        "1": {
+          "samples": 410,
+          "overall_acc": 92.44,
+          "exact_match_ratio": 62.68,
+          "exact_match_count": 257,
+          "slot_accuracy": 87.87
+        },
+        "2": {
+          "samples": 613,
+          "overall_acc": 96.08,
+          "exact_match_ratio": 60.85,
+          "exact_match_count": 373,
+          "slot_accuracy": 87.07
+        },
+        "3": {
+          "samples": 382,
+          "overall_acc": 99.74,
+          "exact_match_ratio": 46.86,
+          "exact_match_count": 179,
+          "slot_accuracy": 82.98
+        },
+        "4": {
+          "samples": 86,
+          "overall_acc": 100.0,
+          "exact_match_ratio": 30.23,
+          "exact_match_count": 26,
+          "slot_accuracy": 75.0
+        }
+      }
+    },
+    "v2": {
+      "defect_metrics": {
+        "c1": {
+          "f1": 81.6,
+          "precision": 85.39,
+          "recall": 78.13,
+          "accuracy": 81.61,
+          "specificity": 85.41,
+          "bacc": 81.77,
+          "roc_auc": 90.47,
+          "tn": 644,
+          "fp": 110,
+          "fn": 180,
+          "tp": 643
+        },
+        "c2": {
+          "f1": 84.82,
+          "precision": 87.75,
+          "recall": 82.08,
+          "accuracy": 85.86,
+          "specificity": 89.36,
+          "bacc": 85.72,
+          "roc_auc": 93.49,
+          "tn": 731,
+          "fp": 87,
+          "fn": 136,
+          "tp": 623
+        },
+        "c3": {
+          "f1": 91.21,
+          "precision": 90.63,
+          "recall": 91.81,
+          "accuracy": 91.38,
+          "specificity": 90.97,
+          "bacc": 91.39,
+          "roc_auc": 96.82,
+          "tn": 735,
+          "fp": 73,
+          "fn": 63,
+          "tp": 706
+        },
+        "c4": {
+          "f1": 89.93,
+          "precision": 91.8,
+          "recall": 88.13,
+          "accuracy": 90.3,
+          "specificity": 92.39,
+          "bacc": 90.26,
+          "roc_auc": 96.14,
+          "tn": 741,
+          "fp": 61,
+          "fn": 92,
+          "tp": 683
+        }
+      },
+      "exact_match_ratio": 60.3,
+      "exact_match_count": 951,
+      "hamming_loss": 12.71,
+      "slot_accuracy": 87.29,
+      "macro_f1": 86.89,
+      "micro_f1": 86.88,
+      "hard_or": {
+        "f1": 97.75,
+        "precision": 97.79,
+        "recall": 97.72,
+        "accuracy": 95.75,
+        "specificity": 61.63,
+        "clean_fps": 33
+      },
+      "soft_fusion_079": {
+        "f1": 97.18,
+        "precision": 98.35,
+        "recall": 96.04,
+        "accuracy": 94.74,
+        "specificity": 72.09,
+        "clean_fps": 24,
+        "roc_auc": 96.44
+      },
+      "soft_fusion_opt": {
+        "opt_th": 0.61,
+        "f1": 98.37,
+        "precision": 97.56,
+        "recall": 99.2,
+        "accuracy": 96.89,
+        "specificity": 56.98,
+        "clean_fps": 37,
+        "roc_auc": 96.44
+      },
+      "defect_count_breakdown": {
+        "0": {
+          "samples": 86,
+          "overall_acc": 72.09,
+          "exact_match_ratio": 61.63,
+          "exact_match_count": 53,
+          "slot_accuracy": 89.24
+        },
+        "1": {
+          "samples": 410,
+          "overall_acc": 91.46,
+          "exact_match_ratio": 67.07,
+          "exact_match_count": 275,
+          "slot_accuracy": 89.45
+        },
+        "2": {
+          "samples": 613,
+          "overall_acc": 96.74,
+          "exact_match_ratio": 64.27,
+          "exact_match_count": 394,
+          "slot_accuracy": 88.62
+        },
+        "3": {
+          "samples": 382,
+          "overall_acc": 98.95,
+          "exact_match_ratio": 52.09,
+          "exact_match_count": 199,
+          "slot_accuracy": 84.42
+        },
+        "4": {
+          "samples": 86,
+          "overall_acc": 100.0,
+          "exact_match_ratio": 34.88,
+          "exact_match_count": 30,
+          "slot_accuracy": 78.2
+        }
+      }
+    }
+  }
+}

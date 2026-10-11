@@ -1,0 +1,240 @@
+{
+  "total_samples": 770,
+  "confusion_matrix": {
+    "TP": 290,
+    "TN": 317,
+    "FP": 68,
+    "FN": 95,
+    "total_errors": 163,
+    "overall_error_rate_pct": 21.16883116883117
+  },
+  "view_breakdown": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "total_count": 154,
+      "fp_count": 16,
+      "fn_count": 21,
+      "error_count": 37,
+      "error_rate": 0.24025974025974026,
+      "error_share_pct": 22.699386503067483,
+      "accuracy": 0.7597402597402597,
+      "f1_score": 0.7516778523489933
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "total_count": 154,
+      "fp_count": 8,
+      "fn_count": 13,
+      "error_count": 21,
+      "error_rate": 0.13636363636363635,
+      "error_share_pct": 12.883435582822086,
+      "accuracy": 0.8636363636363636,
+      "f1_score": 0.8590604026845637
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "total_count": 154,
+      "fp_count": 21,
+      "fn_count": 39,
+      "error_count": 60,
+      "error_rate": 0.38961038961038963,
+      "error_share_pct": 36.809815950920246,
+      "accuracy": 0.6103896103896104,
+      "f1_score": 0.5588235294117647
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "total_count": 154,
+      "fp_count": 1,
+      "fn_count": 5,
+      "error_count": 6,
+      "error_rate": 0.03896103896103896,
+      "error_share_pct": 3.6809815950920246,
+      "accuracy": 0.961038961038961,
+      "f1_score": 0.96
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "total_count": 154,
+      "fp_count": 22,
+      "fn_count": 17,
+      "error_count": 39,
+      "error_rate": 0.2532467532467532,
+      "error_share_pct": 23.92638036809816,
+      "accuracy": 0.7467532467532467,
+      "f1_score": 0.7547169811320755
+    }
+  },
+  "subject_breakdown": {
+    "1": {
+      "total_count": 100,
+      "fp_count": 6,
+      "fn_count": 17,
+      "error_count": 23,
+      "error_rate": 0.23,
+      "error_share_pct": 14.11042944785276,
+      "accuracy": 0.77,
+      "f1_score": 0.7415730337078652
+    },
+    "2": {
+      "total_count": 90,
+      "fp_count": 6,
+      "fn_count": 10,
+      "error_count": 16,
+      "error_rate": 0.17777777777777778,
+      "error_share_pct": 9.815950920245399,
+      "accuracy": 0.8222222222222222,
+      "f1_score": 0.813953488372093
+    },
+    "3": {
+      "total_count": 80,
+      "fp_count": 16,
+      "fn_count": 4,
+      "error_count": 20,
+      "error_rate": 0.25,
+      "error_share_pct": 12.269938650306749,
+      "accuracy": 0.75,
+      "f1_score": 0.782608695652174
+    },
+    "4": {
+      "total_count": 80,
+      "fp_count": 6,
+      "fn_count": 18,
+      "error_count": 24,
+      "error_rate": 0.3,
+      "error_share_pct": 14.723926380368098,
+      "accuracy": 0.7,
+      "f1_score": 0.6470588235294118
+    },
+    "5": {
+      "total_count": 80,
+      "fp_count": 5,
+      "fn_count": 11,
+      "error_count": 16,
+      "error_rate": 0.2,
+      "error_share_pct": 9.815950920245399,
+      "accuracy": 0.8,
+      "f1_score": 0.7837837837837838
+    },
+    "6": {
+      "total_count": 90,
+      "fp_count": 8,
+      "fn_count": 11,
+      "error_count": 19,
+      "error_rate": 0.2111111111111111,
+      "error_share_pct": 11.65644171779141,
+      "accuracy": 0.7888888888888889,
+      "f1_score": 0.7816091954022989
+    },
+    "7": {
+      "total_count": 90,
+      "fp_count": 9,
+      "fn_count": 7,
+      "error_count": 16,
+      "error_rate": 0.17777777777777778,
+      "error_share_pct": 9.815950920245399,
+      "accuracy": 0.8222222222222222,
+      "f1_score": 0.8260869565217391
+    },
+    "8": {
+      "total_count": 90,
+      "fp_count": 11,
+      "fn_count": 2,
+      "error_count": 13,
+      "error_rate": 0.14444444444444443,
+      "error_share_pct": 7.975460122699387,
+      "accuracy": 0.8555555555555555,
+      "f1_score": 0.8686868686868687
+    },
+    "9": {
+      "total_count": 70,
+      "fp_count": 1,
+      "fn_count": 15,
+      "error_count": 16,
+      "error_rate": 0.22857142857142856,
+      "error_share_pct": 9.815950920245399,
+      "accuracy": 0.7714285714285715,
+      "f1_score": 0.7142857142857143
+    }
+  },
+  "defect_co_occurrence": {
+    "other_defects_0": {
+      "total_count": 250,
+      "error_count": 53,
+      "error_rate": 0.212
+    },
+    "other_defects_1": {
+      "total_count": 360,
+      "error_count": 75,
+      "error_rate": 0.20833333333333334
+    },
+    "other_defects_2": {
+      "total_count": 160,
+      "error_count": 35,
+      "error_rate": 0.21875
+    }
+  },
+  "feature_comparison": {
+    "d5_bar_shank_dist_max": {
+      "TN_clean_hit": 0.42432835698127747,
+      "FP_overkill_error": 0.6003709435462952,
+      "FN_missed_defect": 0.5530943274497986,
+      "TP_defect_hit": 0.5637878179550171
+    },
+    "d5_bar_shank_dist_mean": {
+      "TN_clean_hit": 0.2711440324783325,
+      "FP_overkill_error": 0.3539617359638214,
+      "FN_missed_defect": 0.32541537284851074,
+      "TP_defect_hit": 0.3868722915649414
+    },
+    "d5_bar_knee_dist_pass": {
+      "TN_clean_hit": 0.18063785135746002,
+      "FP_overkill_error": 0.22905196249485016,
+      "FN_missed_defect": 0.18549209833145142,
+      "TP_defect_hit": 0.29684266448020935
+    },
+    "d5_bar_midfoot_init_offset": {
+      "TN_clean_hit": 0.3331764340400696,
+      "FP_overkill_error": 0.4695861339569092,
+      "FN_missed_defect": 0.460627943277359,
+      "TP_defect_hit": 0.4471374452114105
+    },
+    "d5_bar_drift_horizontal_range": {
+      "TN_clean_hit": 0.27275964617729187,
+      "FP_overkill_error": 0.3899763822555542,
+      "FN_missed_defect": 0.34471073746681213,
+      "TP_defect_hit": 0.3852412700653076
+    },
+    "d5_bar_path_curvature": {
+      "TN_clean_hit": 10.549245834350586,
+      "FP_overkill_error": 10.561178207397461,
+      "FN_missed_defect": 10.280963897705078,
+      "TP_defect_hit": 10.83775806427002
+    },
+    "d5_shoulder_wrist_angle_max_deg": {
+      "TN_clean_hit": 36.83332443237305,
+      "FP_overkill_error": 66.06131744384766,
+      "FN_missed_defect": 58.9339485168457,
+      "TP_defect_hit": 39.379066467285156
+    },
+    "d5_arm_foreshortening_min_ratio": {
+      "TN_clean_hit": 0.6988700032234192,
+      "FP_overkill_error": 0.4751620590686798,
+      "FN_missed_defect": 0.5445839166641235,
+      "TP_defect_hit": 0.6705380082130432
+    },
+    "d5_virtual_sagittal_angle_max_deg": {
+      "TN_clean_hit": 41.72230529785156,
+      "FP_overkill_error": 58.2269287109375,
+      "FN_missed_defect": 53.398685455322266,
+      "TP_defect_hit": 44.186824798583984
+    }
+  },
+  "borderline_stats": {
+    "border_range": "[0.40, 0.60]",
+    "border_sample_count": 118,
+    "border_error_count": 47,
+    "error_in_border_pct": 28.834355828220858,
+    "confident_error_count": 73
+  }
+}

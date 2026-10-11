@@ -1,0 +1,58 @@
+{
+  "version": "v10.0",
+  "architecture": "View-Conditioned Mixture-of-Experts (MoE) + False-Clean Asymmetric Loss",
+  "in_features": 39,
+  "num_experts": 3,
+  "T_meta": 1.2,
+  "eta": 0.1,
+  "tau_clean": 0.38,
+  "tau_clean_v9_baseline": 0.38,
+  "q_min": 0.05,
+  "deadband_low": 0.32,
+  "deadband_high": 0.38,
+  "loss": {
+    "weight_ce": 0.5,
+    "weight_clean": 0.2,
+    "weight_bce": 0.2,
+    "weight_consistency": 0.05,
+    "weight_gate_balance": 0.05,
+    "lambda_fc": 3.0,
+    "gamma_pos": 1.0,
+    "gamma_neg": 2.0
+  },
+  "oof_tau_clean_raw": 0.53,
+  "status": "OFFICIAL_CONFIRMED",
+  "confirmed_at": "2026-09-27",
+  "description": "vidio-health-trainer 바벨 스쿼트 통합 진단 엔진 v10.0 공식 마스터 프로덕션 챔피언 (해결책 1 확정)",
+  "final_metrics": {
+    "selective": {
+      "clean_f1": 74.29,
+      "clean_precision": 75.83,
+      "clean_recall": 72.8,
+      "four_defect_emr": 71.78,
+      "coverage": 90.06,
+      "retake_rate": 9.94
+    },
+    "full_force_100": {
+      "clean_f1": 71.6,
+      "clean_precision": 75.41,
+      "clean_recall": 68.15,
+      "four_defect_emr": 69.6,
+      "false_clean_count": 30,
+      "false_clean_reduction_vs_v9": -30.23
+    },
+    "views_clean_f1_full": {
+      "view5_A": 61.54,
+      "view2_B": 77.78,
+      "view3_C": 84.75,
+      "view4_D": 73.47,
+      "view1_E": 55.81
+    },
+    "submodels_f1_full": {
+      "c1": 95.64,
+      "c2": 84.0,
+      "c3": 93.41,
+      "c4": 87.7
+    }
+  }
+}

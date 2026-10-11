@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-10-02 15:56:20",
+  "exercise": "바벨 데드리프트 (02_바벨_데드리프트)",
+  "architecture": "2-Tier Hierarchical Neural State Classification (Tier 1: 5-Defect Probs + Certainties -> Tier 2: Meta-NN State Decision)",
+  "sample_counts": {
+    "total_samples": 770,
+    "clean_ground_truth": 160,
+    "defect_ground_truth": 610
+  },
+  "baseline_v7_1": {
+    "metrics_2state": {
+      "clean_f1": 63.82,
+      "clean_prec": 53.36,
+      "clean_rec": 79.38,
+      "clean_spec": 81.8,
+      "defect_f1": 87.39,
+      "defect_prec": 93.8,
+      "defect_rec": 81.8,
+      "acc": 81.3,
+      "auc": 87.93,
+      "false_clean_fp": 111,
+      "false_defect_fn": 33,
+      "clean_tp": 127,
+      "defect_tn": 499,
+      "total": 770
+    },
+    "metrics_3state_decided": {
+      "clean_f1": 65.2,
+      "clean_prec": 51.15,
+      "clean_rec": 89.86,
+      "clean_spec": 76.57,
+      "defect_f1": 85.39,
+      "defect_prec": 96.51,
+      "defect_rec": 76.57,
+      "acc": 79.42,
+      "auc": 89.1,
+      "false_clean_fp": 127,
+      "false_defect_fn": 15,
+      "clean_tp": 133,
+      "defect_tn": 415,
+      "total": 690
+    },
+    "coverage": 89.61,
+    "abstain_rate": 10.39,
+    "emr": 29.61,
+    "hamming_loss": 0.2304,
+    "view_breakdown": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "sample_count": 154,
+        "decided_count": 134,
+        "clean_f1_2state": 58.97,
+        "clean_f1_3state": 59.52,
+        "clean_spec": 81.15,
+        "acc": 79.22,
+        "auc": 79.84,
+        "emr": 23.38,
+        "false_clean_fp": 23
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "sample_count": 154,
+        "decided_count": 142,
+        "clean_f1_2state": 69.88,
+        "clean_f1_3state": 72.29,
+        "clean_spec": 81.97,
+        "acc": 83.77,
+        "auc": 92.78,
+        "emr": 33.12,
+        "false_clean_fp": 22
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "sample_count": 154,
+        "decided_count": 132,
+        "clean_f1_2state": 59.46,
+        "clean_f1_3state": 64.0,
+        "clean_spec": 83.61,
+        "acc": 80.52,
+        "auc": 85.73,
+        "emr": 28.57,
+        "false_clean_fp": 20
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "sample_count": 154,
+        "decided_count": 144,
+        "clean_f1_2state": 75.95,
+        "clean_f1_3state": 75.95,
+        "clean_spec": 86.07,
+        "acc": 87.66,
+        "auc": 95.67,
+        "emr": 39.61,
+        "false_clean_fp": 17
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "sample_count": 154,
+        "decided_count": 138,
+        "clean_f1_2state": 54.76,
+        "clean_f1_3state": 55.17,
+        "clean_spec": 76.23,
+        "acc": 75.32,
+        "auc": 81.38,
+        "emr": 23.38,
+        "false_clean_fp": 29
+      }
+    }
+  },
+  "latest_v8_0_ambiguity_pruned": {
+    "metrics_2state": {
+      "clean_f1": 60.25,
+      "clean_prec": 50.64,
+      "clean_rec": 74.38,
+      "clean_spec": 80.98,
+      "defect_f1": 86.29,
+      "defect_prec": 92.34,
+      "defect_rec": 80.98,
+      "acc": 79.61,
+      "auc": 84.38,
+      "false_clean_fp": 116,
+      "false_defect_fn": 41,
+      "clean_tp": 119,
+      "defect_tn": 494,
+      "total": 770
+    },
+    "metrics_3state_decided": {
+      "clean_f1": 61.5,
+      "clean_prec": 48.66,
+      "clean_rec": 83.55,
+      "clean_spec": 75.23,
+      "defect_f1": 83.66,
+      "defect_prec": 94.21,
+      "defect_rec": 75.23,
+      "acc": 77.06,
+      "auc": 85.2,
+      "false_clean_fp": 134,
+      "false_defect_fn": 25,
+      "clean_tp": 127,
+      "defect_tn": 407,
+      "total": 693
+    },
+    "coverage": 90.0,
+    "abstain_rate": 10.0,
+    "emr": 28.7,
+    "hamming_loss": 0.2197,
+    "view_breakdown": {
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "sample_count": 154,
+        "decided_count": 128,
+        "clean_f1_2state": 58.23,
+        "clean_f1_3state": 56.79,
+        "clean_spec": 80.33,
+        "acc": 78.57,
+        "auc": 75.51,
+        "emr": 24.68,
+        "false_clean_fp": 24
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "sample_count": 154,
+        "decided_count": 136,
+        "clean_f1_2state": 67.53,
+        "clean_f1_3state": 67.5,
+        "clean_spec": 84.43,
+        "acc": 83.77,
+        "auc": 89.32,
+        "emr": 31.17,
+        "false_clean_fp": 19
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "sample_count": 154,
+        "decided_count": 144,
+        "clean_f1_2state": 64.0,
+        "clean_f1_3state": 64.2,
+        "clean_spec": 84.43,
+        "acc": 82.47,
+        "auc": 85.89,
+        "emr": 33.12,
+        "false_clean_fp": 19
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "sample_count": 154,
+        "decided_count": 142,
+        "clean_f1_2state": 59.26,
+        "clean_f1_3state": 63.53,
+        "clean_spec": 79.51,
+        "acc": 78.57,
+        "auc": 86.4,
+        "emr": 29.87,
+        "false_clean_fp": 25
+      },
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "sample_count": 154,
+        "decided_count": 143,
+        "clean_f1_2state": 53.01,
+        "clean_f1_3state": 55.81,
+        "clean_spec": 76.23,
+        "acc": 74.68,
+        "auc": 83.38,
+        "emr": 24.68,
+        "false_clean_fp": 29
+      }
+    }
+  }
+}

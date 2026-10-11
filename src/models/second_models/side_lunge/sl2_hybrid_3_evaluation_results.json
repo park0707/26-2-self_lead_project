@@ -1,0 +1,423 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "model_name": "sl2_hybrid_3",
+  "defect_code": "c2",
+  "defect_name": "몸통·발·무릎 방향 불일치",
+  "total_clips": 4130,
+  "champion_tag": "sl2_hybrid_3_pure_30d",
+  "pure_30d": {
+    "model_tag": "sl2_hybrid_3_pure_30d",
+    "dim": 30,
+    "feature_names": [
+      "mp_pacs_knee_ankle_coronal_tilt",
+      "mp_pacs_dkcd_medial_deviation",
+      "mp_pacs_heel_toe_skew_ratio",
+      "mp_inter_knee_to_ankle_span_ratio",
+      "mp_trunk_pelvis_yaw_torsion_mean",
+      "mp_pelvic_rotation_dynamic_range",
+      "mp_foot_axis_temporal_stability",
+      "mp_front_optical_axis_foot_yaw",
+      "mp_front_optical_axis_knee_foot_alignment",
+      "mp_temporal_geom_t30_torso_foot_parallel",
+      "mp_temporal_geom_t30_torso_thigh_ortho",
+      "mp_temporal_geom_descent_stability_std",
+      "mp_ray_proj_heel_toe_collinearity",
+      "mp_ray_proj_transverse_deviation",
+      "mp_kinematic_foot_vs_observed_deviation",
+      "mp_fpa_dynamic_foot_progression_angle",
+      "mp_front_screen_space_2d_torso_foot_cosine",
+      "mp_front_view_relative_ipsi_contra_yaw",
+      "mp_front_tibiofemoral_transverse_torsion",
+      "rtmp_pacs_fppa_3d_collapse",
+      "rtmp_pacs_heel_toe_skew_ratio",
+      "rtmp_knee_trajectory_to_ankle_vector_angle",
+      "rtmp_knee_trajectory_linearity_rmse",
+      "rtmp_rear_heel_ankle_knee_alignment",
+      "rtmp_inter_knee_to_ankle_span_ratio",
+      "rtmp_bottom_phase_alignment_variance",
+      "rtmp_pelvic_rotation_dynamic_range",
+      "rtmp_foot_axis_temporal_stability",
+      "rtmp_front_optical_axis_knee_foot_alignment",
+      "rtmp_ray_proj_heel_toe_collinearity"
+    ],
+    "temperature": 0.5105,
+    "train_auc": 94.12,
+    "val_auc": 78.79,
+    "overfit_gap": 15.33,
+    "front_auc": 86.09,
+    "front_breakthrough": {
+      "tau_clean": 0.33,
+      "tau_defect": 0.6,
+      "f1": 67.18,
+      "prec": 60.76,
+      "rec": 75.11,
+      "acc": 87.41,
+      "retake": 17.8
+    },
+    "front_strict": {
+      "tau_clean": 0.42,
+      "tau_defect": 0.58,
+      "f1": 63.76,
+      "prec": 59.22,
+      "rec": 69.06,
+      "acc": 86.08,
+      "retake": 9.56
+    },
+    "all_breakthrough": {
+      "tau_clean": 0.32,
+      "tau_defect": 0.5,
+      "f1": 54.4,
+      "prec": 45.12,
+      "rec": 68.47,
+      "acc": 78.84,
+      "retake": 17.48
+    },
+    "all_strict": {
+      "tau_clean": 0.39,
+      "tau_defect": 0.5,
+      "f1": 52.57,
+      "prec": 45.12,
+      "rec": 62.96,
+      "acc": 79.18,
+      "retake": 9.73
+    },
+    "view_metrics": {
+      "view5": {
+        "view_code": "view5",
+        "view_name": "시점 A: 우측 후방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 69.2,
+        "f1_breakthrough": {
+          "tau_clean": 0.28,
+          "tau_defect": 0.41,
+          "f1": 43.06,
+          "prec": 33.48,
+          "rec": 60.32,
+          "acc": 70.48,
+          "retake": 17.55
+        },
+        "clinical_strict": {
+          "tau_clean": 0.34,
+          "tau_defect": 0.41,
+          "f1": 41.42,
+          "prec": 33.48,
+          "rec": 54.29,
+          "acc": 71.26,
+          "retake": 9.44
+        }
+      },
+      "view2": {
+        "view_code": "view2",
+        "view_name": "시점 B: 우측 전방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 88.15,
+        "f1_breakthrough": {
+          "tau_clean": 0.42,
+          "tau_defect": 0.74,
+          "f1": 69.9,
+          "prec": 71.29,
+          "rec": 68.57,
+          "acc": 90.88,
+          "retake": 17.68
+        },
+        "clinical_strict": {
+          "tau_clean": 0.37,
+          "tau_defect": 0.55,
+          "f1": 66.67,
+          "prec": 57.61,
+          "rec": 79.1,
+          "acc": 85.79,
+          "retake": 9.69
+        }
+      },
+      "view3": {
+        "view_code": "view3",
+        "view_name": "시점 C: 정면 (0°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 77.22,
+        "f1_breakthrough": {
+          "tau_clean": 0.33,
+          "tau_defect": 0.55,
+          "f1": 51.8,
+          "prec": 43.41,
+          "rec": 64.23,
+          "acc": 78.38,
+          "retake": 17.68
+        },
+        "clinical_strict": {
+          "tau_clean": 0.41,
+          "tau_defect": 0.53,
+          "f1": 50.15,
+          "prec": 42.49,
+          "rec": 61.19,
+          "acc": 78.15,
+          "retake": 9.69
+        }
+      },
+      "view4": {
+        "view_code": "view4",
+        "view_name": "시점 D: 좌측 전방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 83.67,
+        "f1_breakthrough": {
+          "tau_clean": 0.34,
+          "tau_defect": 0.58,
+          "f1": 63.88,
+          "prec": 59.57,
+          "rec": 68.85,
+          "acc": 86.05,
+          "retake": 17.55
+        },
+        "clinical_strict": {
+          "tau_clean": 0.42,
+          "tau_defect": 0.58,
+          "f1": 61.31,
+          "prec": 59.57,
+          "rec": 63.16,
+          "acc": 85.81,
+          "retake": 9.56
+        }
+      },
+      "view1": {
+        "view_code": "view1",
+        "view_name": "시점 E: 좌측 후방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 72.43,
+        "f1_breakthrough": {
+          "tau_clean": 0.37,
+          "tau_defect": 0.5,
+          "f1": 50.0,
+          "prec": 40.89,
+          "rec": 64.34,
+          "acc": 75.59,
+          "retake": 17.68
+        },
+        "clinical_strict": {
+          "tau_clean": 0.42,
+          "tau_defect": 0.5,
+          "f1": 48.97,
+          "prec": 40.89,
+          "rec": 61.03,
+          "acc": 76.81,
+          "retake": 9.69
+        }
+      }
+    }
+  },
+  "view_aware_35d": {
+    "model_tag": "sl2_hybrid_3_view_aware_35d",
+    "dim": 35,
+    "feature_names": [
+      "mp_pacs_knee_ankle_coronal_tilt",
+      "mp_pacs_dkcd_medial_deviation",
+      "mp_pacs_heel_toe_skew_ratio",
+      "mp_inter_knee_to_ankle_span_ratio",
+      "mp_trunk_pelvis_yaw_torsion_mean",
+      "mp_pelvic_rotation_dynamic_range",
+      "mp_foot_axis_temporal_stability",
+      "mp_front_optical_axis_foot_yaw",
+      "mp_front_optical_axis_knee_foot_alignment",
+      "mp_temporal_geom_t30_torso_foot_parallel",
+      "mp_temporal_geom_t30_torso_thigh_ortho",
+      "mp_temporal_geom_descent_stability_std",
+      "mp_ray_proj_heel_toe_collinearity",
+      "mp_ray_proj_transverse_deviation",
+      "mp_kinematic_foot_vs_observed_deviation",
+      "mp_fpa_dynamic_foot_progression_angle",
+      "mp_front_screen_space_2d_torso_foot_cosine",
+      "mp_front_view_relative_ipsi_contra_yaw",
+      "mp_front_tibiofemoral_transverse_torsion",
+      "rtmp_pacs_fppa_3d_collapse",
+      "rtmp_pacs_heel_toe_skew_ratio",
+      "rtmp_knee_trajectory_to_ankle_vector_angle",
+      "rtmp_knee_trajectory_linearity_rmse",
+      "rtmp_rear_heel_ankle_knee_alignment",
+      "rtmp_inter_knee_to_ankle_span_ratio",
+      "rtmp_bottom_phase_alignment_variance",
+      "rtmp_pelvic_rotation_dynamic_range",
+      "rtmp_foot_axis_temporal_stability",
+      "rtmp_front_optical_axis_knee_foot_alignment",
+      "rtmp_ray_proj_heel_toe_collinearity",
+      "view_is_view5_A",
+      "view_is_view2_B",
+      "view_is_view3_C",
+      "view_is_view4_D",
+      "view_is_view1_E"
+    ],
+    "temperature": 0.5464,
+    "train_auc": 94.95,
+    "val_auc": 78.65,
+    "overfit_gap": 16.3,
+    "front_auc": 86.48,
+    "front_breakthrough": {
+      "tau_clean": 0.36,
+      "tau_defect": 0.66,
+      "f1": 67.1,
+      "prec": 64.58,
+      "rec": 69.82,
+      "acc": 88.78,
+      "retake": 17.98
+    },
+    "front_strict": {
+      "tau_clean": 0.37,
+      "tau_defect": 0.53,
+      "f1": 63.72,
+      "prec": 55.49,
+      "rec": 74.81,
+      "acc": 84.61,
+      "retake": 9.56
+    },
+    "all_breakthrough": {
+      "tau_clean": 0.34,
+      "tau_defect": 0.54,
+      "f1": 54.2,
+      "prec": 47.16,
+      "rec": 63.73,
+      "acc": 80.56,
+      "retake": 17.92
+    },
+    "all_strict": {
+      "tau_clean": 0.41,
+      "tau_defect": 0.53,
+      "f1": 52.34,
+      "prec": 46.58,
+      "rec": 59.73,
+      "acc": 80.34,
+      "retake": 9.83
+    },
+    "view_metrics": {
+      "view5": {
+        "view_code": "view5",
+        "view_name": "시점 A: 우측 후방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 68.36,
+        "f1_breakthrough": {
+          "tau_clean": 0.29,
+          "tau_defect": 0.43,
+          "f1": 43.02,
+          "prec": 34.1,
+          "rec": 58.27,
+          "acc": 71.18,
+          "retake": 17.68
+        },
+        "clinical_strict": {
+          "tau_clean": 0.35,
+          "tau_defect": 0.43,
+          "f1": 41.34,
+          "prec": 34.1,
+          "rec": 52.48,
+          "acc": 71.77,
+          "retake": 9.93
+        }
+      },
+      "view2": {
+        "view_code": "view2",
+        "view_name": "시점 B: 우측 전방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 88.69,
+        "f1_breakthrough": {
+          "tau_clean": 0.45,
+          "tau_defect": 0.78,
+          "f1": 71.35,
+          "prec": 78.57,
+          "rec": 65.35,
+          "acc": 92.19,
+          "retake": 17.8
+        },
+        "clinical_strict": {
+          "tau_clean": 0.44,
+          "tau_defect": 0.61,
+          "f1": 67.13,
+          "prec": 61.94,
+          "rec": 73.28,
+          "acc": 87.4,
+          "retake": 9.69
+        }
+      },
+      "view3": {
+        "view_code": "view3",
+        "view_name": "시점 C: 정면 (0°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 77.35,
+        "f1_breakthrough": {
+          "tau_clean": 0.3,
+          "tau_defect": 0.48,
+          "f1": 51.81,
+          "prec": 41.75,
+          "rec": 68.25,
+          "acc": 76.44,
+          "retake": 17.8
+        },
+        "clinical_strict": {
+          "tau_clean": 0.38,
+          "tau_defect": 0.48,
+          "f1": 49.57,
+          "prec": 41.75,
+          "rec": 60.99,
+          "acc": 76.7,
+          "retake": 9.08
+        }
+      },
+      "view4": {
+        "view_code": "view4",
+        "view_name": "시점 D: 좌측 전방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 83.96,
+        "f1_breakthrough": {
+          "tau_clean": 0.37,
+          "tau_defect": 0.63,
+          "f1": 63.79,
+          "prec": 62.18,
+          "rec": 65.49,
+          "acc": 87.74,
+          "retake": 17.07
+        },
+        "clinical_strict": {
+          "tau_clean": 0.37,
+          "tau_defect": 0.51,
+          "f1": 61.39,
+          "prec": 53.89,
+          "rec": 71.32,
+          "acc": 83.65,
+          "retake": 9.69
+        }
+      },
+      "view1": {
+        "view_code": "view1",
+        "view_name": "시점 E: 좌측 후방 (45°)",
+        "samples": 826,
+        "positives": 154,
+        "auc": 70.73,
+        "f1_breakthrough": {
+          "tau_clean": 0.39,
+          "tau_defect": 0.53,
+          "f1": 48.3,
+          "prec": 41.52,
+          "rec": 57.72,
+          "acc": 77.68,
+          "retake": 17.55
+        },
+        "clinical_strict": {
+          "tau_clean": 0.45,
+          "tau_defect": 0.53,
+          "f1": 46.25,
+          "prec": 41.52,
+          "rec": 52.21,
+          "acc": 77.82,
+          "retake": 9.93
+        }
+      }
+    }
+  },
+  "timestamp": "2026-10-11 14:58:39"
+}

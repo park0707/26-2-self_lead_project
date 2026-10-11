@@ -1,0 +1,195 @@
+{
+  "high_corr_pairs": [
+    [
+      "c2_gaze_pitch_min",
+      "c2_head_forward_protrusion_max",
+      -0.7494
+    ],
+    [
+      "c2_gaze_pitch_min",
+      "c2_gated_true_gaze_pitch_bot",
+      0.7097
+    ]
+  ],
+  "baseline_13d": {
+    "f1": 85.84,
+    "precision": 88.05,
+    "recall": 83.73,
+    "roc_auc": 93.81
+  },
+  "lofo_results": [
+    {
+      "removed_feature": "c2_gaze_pitch_min",
+      "metrics": {
+        "f1": 86.02,
+        "precision": 88.44,
+        "recall": 83.73,
+        "roc_auc": 94.05
+      },
+      "delta_f1": 0.18,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_gaze_pitch_drop",
+      "metrics": {
+        "f1": 85.09,
+        "precision": 87.62,
+        "recall": 82.69,
+        "roc_auc": 93.22
+      },
+      "delta_f1": -0.75,
+      "is_harmful": false
+    },
+    {
+      "removed_feature": "c2_cervical_spine_angle_mean",
+      "metrics": {
+        "f1": 85.06,
+        "precision": 88.41,
+        "recall": 81.96,
+        "roc_auc": 93.09
+      },
+      "delta_f1": -0.78,
+      "is_harmful": false
+    },
+    {
+      "removed_feature": "c2_cervical_spine_angle_drop",
+      "metrics": {
+        "f1": 85.85,
+        "precision": 88.31,
+        "recall": 83.52,
+        "roc_auc": 93.98
+      },
+      "delta_f1": 0.01,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_head_yaw_asymmetry_mean",
+      "metrics": {
+        "f1": 85.79,
+        "precision": 87.95,
+        "recall": 83.73,
+        "roc_auc": 93.95
+      },
+      "delta_f1": -0.05,
+      "is_harmful": false
+    },
+    {
+      "removed_feature": "c2_head_yaw_asymmetry_max",
+      "metrics": {
+        "f1": 86.13,
+        "precision": 88.2,
+        "recall": 84.15,
+        "roc_auc": 94.02
+      },
+      "delta_f1": 0.29,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_head_forward_protrusion_max",
+      "metrics": {
+        "f1": 85.99,
+        "precision": 88.61,
+        "recall": 83.52,
+        "roc_auc": 93.98
+      },
+      "delta_f1": 0.15,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_gaze_relative_to_trunk_mean",
+      "metrics": {
+        "f1": 86.62,
+        "precision": 89.36,
+        "recall": 84.05,
+        "roc_auc": 93.61
+      },
+      "delta_f1": 0.78,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_cervical_velocity_peak_at_nadir",
+      "metrics": {
+        "f1": 85.91,
+        "precision": 88.33,
+        "recall": 83.63,
+        "roc_auc": 93.88
+      },
+      "delta_f1": 0.07,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_gaze_coupling_lag",
+      "metrics": {
+        "f1": 85.91,
+        "precision": 88.33,
+        "recall": 83.63,
+        "roc_auc": 93.85
+      },
+      "delta_f1": 0.07,
+      "is_harmful": true
+    },
+    {
+      "removed_feature": "c2_cervical_hyperextension_ratio",
+      "metrics": {
+        "f1": 85.62,
+        "precision": 87.83,
+        "recall": 83.52,
+        "roc_auc": 93.85
+      },
+      "delta_f1": -0.22,
+      "is_harmful": false
+    },
+    {
+      "removed_feature": "c2_gated_true_gaze_pitch_drop",
+      "metrics": {
+        "f1": 83.92,
+        "precision": 85.75,
+        "recall": 82.17,
+        "roc_auc": 92.82
+      },
+      "delta_f1": -1.92,
+      "is_harmful": false
+    },
+    {
+      "removed_feature": "c2_gated_true_gaze_pitch_bot",
+      "metrics": {
+        "f1": 80.56,
+        "precision": 84.03,
+        "recall": 77.37,
+        "roc_auc": 89.18
+      },
+      "delta_f1": -5.28,
+      "is_harmful": false
+    }
+  ],
+  "harmful_candidates": [
+    [
+      "c2_gaze_relative_to_trunk_mean",
+      0.7800000000000011
+    ],
+    [
+      "c2_head_yaw_asymmetry_max",
+      0.28999999999999204
+    ],
+    [
+      "c2_gaze_pitch_min",
+      0.1799999999999926
+    ],
+    [
+      "c2_head_forward_protrusion_max",
+      0.14999999999999147
+    ],
+    [
+      "c2_cervical_velocity_peak_at_nadir",
+      0.06999999999999318
+    ],
+    [
+      "c2_gaze_coupling_lag",
+      0.06999999999999318
+    ],
+    [
+      "c2_cervical_spine_angle_drop",
+      0.009999999999990905
+    ]
+  ]
+}

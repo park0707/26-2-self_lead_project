@@ -1,0 +1,20 @@
+{
+  "recall_normal": 68.99,
+  "specificity_error": 85.58,
+  "balanced_acc": 77.29,
+  "f1_normal": 36.78,
+  "precision_normal": 25.07,
+  "tn": 1579,
+  "fp": 266,
+  "fn": 40,
+  "tp": 89,
+  "defect_accs": [
+    76.14,
+    56.43,
+    84.09,
+    71.63
+  ],
+  "defect_mean_acc": 72.07,
+  "hamming_loss": 27.93,
+  "latency_ms": 12.4417
+}

@@ -1,0 +1,424 @@
+{
+  "baseline_v5_1": {
+    "n_features": 15,
+    "feature_names": [
+      "d4_hip_lock_time_norm",
+      "d4_knee_hip_corr_full",
+      "d4_angular_accel_mismatch",
+      "d4_mvc_co_extension_ratio",
+      "d4_knee_lock_time_norm",
+      "d4_norm_progress_diff_max",
+      "d4_onset_latency_norm",
+      "d4_knee_hip_rom_ratio",
+      "d4_trunk_drop_ascent_max_deg",
+      "d4_lockout_phase_lag_norm",
+      "d4_vel_ratio_second_half",
+      "d4_torso_horizontal_ratio",
+      "d4_extension_rate_diff_max",
+      "d4_knee_hip_corr_ascent",
+      "d4_trunk_angle_nadir_deg"
+    ],
+    "auc": 0.8320326625838437,
+    "2state": {
+      "best_tau": 0.59,
+      "f1": 0.5742574257425742,
+      "accuracy": 0.8324675324675325,
+      "precision": 0.5178571428571429,
+      "recall": 0.6444444444444445,
+      "auc": 0.8320326625838437,
+      "confusion_matrix": [
+        [
+          554,
+          81
+        ],
+        [
+          48,
+          87
+        ]
+      ]
+    },
+    "3state_cov90": {
+      "coverage": 0.9038961038961039,
+      "abstain_rate": 0.09610389610389614,
+      "f1": 0.6141732283464567,
+      "accuracy": 0.8591954022988506,
+      "recall": 0.6782608695652174,
+      "precision": 0.5611510791366906,
+      "n_decided": 696,
+      "n_total": 770,
+      "tau_normal": 0.5088235294117647,
+      "tau_defect": 0.64
+    },
+    "3state_cov85": {
+      "coverage": 0.8519480519480519,
+      "abstain_rate": 0.1480519480519481,
+      "f1": 0.639344262295082,
+      "accuracy": 0.8658536585365854,
+      "recall": 0.7428571428571429,
+      "precision": 0.5611510791366906,
+      "n_decided": 656,
+      "n_total": 770,
+      "tau_normal": 0.45941176470588235,
+      "tau_defect": 0.64
+    },
+    "views": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.6129032258064516,
+        "2state_acc": 0.8441558441558441,
+        "2state_rec": 0.7037037037037037,
+        "2state_prec": 0.5428571428571428,
+        "auc": 0.8463108778069408,
+        "3state_f1": 0.6792452830188679,
+        "3state_cov": 0.9025974025974026,
+        "3state_rec": 0.72
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.6984126984126984,
+        "2state_acc": 0.8766233766233766,
+        "2state_rec": 0.8148148148148148,
+        "2state_prec": 0.6111111111111112,
+        "auc": 0.8906386701662291,
+        "3state_f1": 0.75,
+        "3state_cov": 0.9155844155844156,
+        "3state_rec": 0.84
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.43333333333333335,
+        "2state_acc": 0.7792207792207793,
+        "2state_rec": 0.48148148148148145,
+        "2state_prec": 0.3939393939393939,
+        "auc": 0.7174103237095364,
+        "3state_f1": 0.44,
+        "3state_cov": 0.8831168831168831,
+        "3state_rec": 0.4782608695652174
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.7213114754098361,
+        "2state_acc": 0.8896103896103896,
+        "2state_rec": 0.8148148148148148,
+        "2state_prec": 0.6470588235294118,
+        "auc": 0.9128025663458734,
+        "3state_f1": 0.7407407407407407,
+        "3state_cov": 0.9415584415584416,
+        "3state_rec": 0.8333333333333334
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.38596491228070173,
+        "2state_acc": 0.7727272727272727,
+        "2state_rec": 0.4074074074074074,
+        "2state_prec": 0.36666666666666664,
+        "auc": 0.778361038203558,
+        "3state_f1": 0.3902439024390244,
+        "3state_cov": 0.8766233766233766,
+        "3state_rec": 0.4444444444444444
+      }
+    }
+  },
+  "champion_optimized_raw": {
+    "name": "14D_Pruned_Impulse",
+    "n_features": 14,
+    "feature_names": [
+      "d4_hip_lock_time_norm",
+      "d4_knee_hip_corr_full",
+      "d4_angular_accel_mismatch",
+      "d4_mvc_co_extension_ratio",
+      "d4_knee_lock_time_norm",
+      "d4_norm_progress_diff_max",
+      "d4_onset_latency_norm",
+      "d4_trunk_drop_ascent_max_deg",
+      "d4_vel_ratio_second_half",
+      "d4_torso_horizontal_ratio",
+      "d4_extension_rate_diff_max",
+      "d4_knee_hip_corr_ascent",
+      "d4_trunk_angle_nadir_deg",
+      "d4_first_pull_impulse_ratio"
+    ],
+    "pool_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      19
+    ],
+    "auc": 0.8337357830271217,
+    "2state": {
+      "best_tau": 0.5800000000000001,
+      "f1": 0.5704918032786885,
+      "accuracy": 0.8298701298701299,
+      "precision": 0.5117647058823529,
+      "recall": 0.6444444444444445,
+      "auc": 0.8337357830271217,
+      "confusion_matrix": [
+        [
+          552,
+          83
+        ],
+        [
+          48,
+          87
+        ]
+      ]
+    },
+    "3state_cov90": {
+      "coverage": 0.9038961038961039,
+      "abstain_rate": 0.09610389610389614,
+      "f1": 0.6068376068376068,
+      "accuracy": 0.867816091954023,
+      "recall": 0.6068376068376068,
+      "precision": 0.6068376068376068,
+      "n_decided": 696,
+      "n_total": 770,
+      "tau_normal": 0.5517647058823529,
+      "tau_defect": 0.68
+    },
+    "3state_cov85": {
+      "coverage": 0.8597402597402597,
+      "abstain_rate": 0.1402597402597403,
+      "f1": 0.6339285714285714,
+      "accuracy": 0.8761329305135952,
+      "recall": 0.6635514018691588,
+      "precision": 0.6068376068376068,
+      "n_decided": 662,
+      "n_total": 770,
+      "tau_normal": 0.49764705882352944,
+      "tau_defect": 0.68
+    },
+    "views": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.6129032258064516,
+        "2state_acc": 0.8441558441558441,
+        "2state_rec": 0.7037037037037037,
+        "2state_prec": 0.5428571428571428,
+        "auc": 0.8556430446194225,
+        "3state_f1": 0.7058823529411765,
+        "3state_cov": 0.9025974025974026,
+        "3state_rec": 0.72
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.676923076923077,
+        "2state_acc": 0.8636363636363636,
+        "2state_rec": 0.8148148148148148,
+        "2state_prec": 0.5789473684210527,
+        "auc": 0.8938466025080198,
+        "3state_f1": 0.76,
+        "3state_cov": 0.9090909090909091,
+        "3state_rec": 0.8260869565217391
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.41935483870967744,
+        "2state_acc": 0.7662337662337663,
+        "2state_rec": 0.48148148148148145,
+        "2state_prec": 0.37142857142857144,
+        "auc": 0.7144940215806357,
+        "3state_f1": 0.4,
+        "3state_cov": 0.8766233766233766,
+        "3state_rec": 0.391304347826087
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.7,
+        "2state_acc": 0.8831168831168831,
+        "2state_rec": 0.7777777777777778,
+        "2state_prec": 0.6363636363636364,
+        "auc": 0.9122193059200934,
+        "3state_f1": 0.7058823529411765,
+        "3state_cov": 0.9415584415584416,
+        "3state_rec": 0.75
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.42857142857142855,
+        "2state_acc": 0.7922077922077922,
+        "2state_rec": 0.4444444444444444,
+        "2state_prec": 0.41379310344827586,
+        "auc": 0.7783610382035578,
+        "3state_f1": 0.3783783783783784,
+        "3state_cov": 0.8896103896103896,
+        "3state_rec": 0.3181818181818182
+      }
+    }
+  },
+  "champion_optimized_adaptive": {
+    "name": "14D_Pruned_Impulse_ViewAdaptive",
+    "n_features": 14,
+    "feature_names": [
+      "d4_hip_lock_time_norm",
+      "d4_knee_hip_corr_full",
+      "d4_angular_accel_mismatch",
+      "d4_mvc_co_extension_ratio",
+      "d4_knee_lock_time_norm",
+      "d4_norm_progress_diff_max",
+      "d4_onset_latency_norm",
+      "d4_trunk_drop_ascent_max_deg",
+      "d4_vel_ratio_second_half",
+      "d4_torso_horizontal_ratio",
+      "d4_extension_rate_diff_max",
+      "d4_knee_hip_corr_ascent",
+      "d4_trunk_angle_nadir_deg",
+      "d4_first_pull_impulse_ratio"
+    ],
+    "pool_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      19
+    ],
+    "auc": 0.8344590259550889,
+    "2state": {
+      "best_tau": 0.6,
+      "f1": 0.5830508474576271,
+      "accuracy": 0.8402597402597403,
+      "precision": 0.5375,
+      "recall": 0.6370370370370371,
+      "auc": 0.8344590259550889,
+      "confusion_matrix": [
+        [
+          561,
+          74
+        ],
+        [
+          49,
+          86
+        ]
+      ]
+    },
+    "3state_cov90": {
+      "coverage": 0.9012987012987013,
+      "abstain_rate": 0.09870129870129873,
+      "f1": 0.6115702479338843,
+      "accuracy": 0.8645533141210374,
+      "recall": 0.6271186440677966,
+      "precision": 0.5967741935483871,
+      "n_decided": 694,
+      "n_total": 770,
+      "tau_normal": 0.5308823529411765,
+      "tau_defect": 0.67
+    },
+    "3state_cov85": {
+      "coverage": 0.8506493506493507,
+      "abstain_rate": 0.14935064935064934,
+      "f1": 0.6434782608695652,
+      "accuracy": 0.8748091603053435,
+      "recall": 0.6981132075471698,
+      "precision": 0.5967741935483871,
+      "n_decided": 655,
+      "n_total": 770,
+      "tau_normal": 0.47794117647058826,
+      "tau_defect": 0.67
+    },
+    "views": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.6229508196721312,
+        "2state_acc": 0.8506493506493507,
+        "2state_rec": 0.7037037037037037,
+        "2state_prec": 0.5588235294117647,
+        "auc": 0.8550597841936425,
+        "3state_f1": 0.7307692307692307,
+        "3state_cov": 0.8831168831168831,
+        "3state_rec": 0.76
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.7096774193548387,
+        "2state_acc": 0.8831168831168831,
+        "2state_rec": 0.8148148148148148,
+        "2state_prec": 0.6285714285714286,
+        "auc": 0.8961796442111402,
+        "3state_f1": 0.76,
+        "3state_cov": 0.9025974025974026,
+        "3state_rec": 0.8260869565217391
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.4406779661016949,
+        "2state_acc": 0.7857142857142857,
+        "2state_rec": 0.48148148148148145,
+        "2state_prec": 0.40625,
+        "auc": 0.7136191309419656,
+        "3state_f1": 0.4166666666666667,
+        "3state_cov": 0.8766233766233766,
+        "3state_rec": 0.43478260869565216
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.711864406779661,
+        "2state_acc": 0.8896103896103896,
+        "2state_rec": 0.7777777777777778,
+        "2state_prec": 0.65625,
+        "auc": 0.910761154855643,
+        "3state_f1": 0.7169811320754716,
+        "3state_cov": 0.9415584415584416,
+        "3state_rec": 0.76
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 154,
+        "defects": 27,
+        "2state_f1": 0.4074074074074074,
+        "2state_acc": 0.7922077922077922,
+        "2state_rec": 0.4074074074074074,
+        "2state_prec": 0.4074074074074074,
+        "auc": 0.7786526684164479,
+        "3state_f1": 0.358974358974359,
+        "3state_cov": 0.9025974025974026,
+        "3state_rec": 0.3181818181818182
+      }
+    }
+  }
+}

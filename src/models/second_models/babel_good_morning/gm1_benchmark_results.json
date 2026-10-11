@@ -1,0 +1,57 @@
+{
+  "exercise": "09_굿모닝",
+  "defect": "무릎 구부린 채 고정 위반 (gm1)",
+  "metrics": {
+    "macro_f1": 0.7625363565761623,
+    "clean_f1": 0.7621861152141802,
+    "defect_f1": 0.7628865979381443,
+    "clean_specificity": 0.7610619469026548,
+    "roc_auc": 0.8479129140888089,
+    "accuracy": 0.7625368731563422
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 158,
+      "defect_f1": 75.9493670886076,
+      "macro_f1": 75.9493670886076
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 158,
+      "defect_f1": 75.9493670886076,
+      "macro_f1": 75.9493670886076
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 158,
+      "defect_f1": 75.9493670886076,
+      "macro_f1": 75.9493670886076
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 46,
+      "defect_f1": 80.85106382978722,
+      "macro_f1": 80.42553191489361
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 158,
+      "defect_f1": 75.9493670886076,
+      "macro_f1": 75.9493670886076
+    }
+  },
+  "top_features": {
+    "bottom_knee_angle": 28.02994241207646,
+    "shank_svii_mean": 12.645842974952153,
+    "excess_flex_integral": 9.972012697068049,
+    "knee_disp_y_rom": 7.824817997696208,
+    "knee_disp_z_canonical_rom": 7.662852960062497,
+    "kadr_mean": 7.5352644370820006,
+    "context_torso_coronal_rom": 5.713886825321304,
+    "excess_flex_max": 5.3224679790584535,
+    "kadr_max": 5.139862059799539,
+    "address_knee_angle": 5.1141831996287745,
+    "bottom_knee_delta_mean": 5.03886645725457
+  }
+}

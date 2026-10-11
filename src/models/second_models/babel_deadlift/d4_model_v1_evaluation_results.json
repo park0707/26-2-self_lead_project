@@ -1,0 +1,157 @@
+{
+  "model_version": "d4_v1",
+  "timestamp": "2026-09-29 22:47:13",
+  "total_samples": 770,
+  "defects": 135,
+  "normals": 635,
+  "base_0_50": {
+    "accuracy": 0.8298701298701299,
+    "precision": 0.6428571428571429,
+    "recall": 0.06666666666666667,
+    "f1": 0.12080536912751678,
+    "roc_auc": 0.703400408282298
+  },
+  "opt_binary": {
+    "threshold": 0.15000000000000002,
+    "accuracy": 0.6961038961038961,
+    "precision": 0.3088803088803089,
+    "recall": 0.5925925925925926,
+    "f1": 0.40609137055837563
+  },
+  "best_3state": {
+    "tau_normal": 0.225,
+    "tau_defect": 0.55,
+    "coverage": 0.8155844155844156,
+    "decline_rate": 0.18441558441558437,
+    "accuracy": 0.8694267515923567,
+    "f1": 0.10869565217391304,
+    "precision": 0.625,
+    "recall": 0.05952380952380952,
+    "n_decided": 628,
+    "n_total": 770
+  },
+  "view_metrics": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.13333333333333333,
+      "acc_base": 0.8311688311688312,
+      "auc": 0.748323126275882,
+      "f1_opt": 0.43902439024390244,
+      "acc_opt": 0.7012987012987013,
+      "3state_f1": 0.14285714285714285,
+      "3state_acc": 0.904,
+      "3state_coverage": 0.8116883116883117
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.13333333333333333,
+      "acc_base": 0.8311688311688312,
+      "auc": 0.7416156313794109,
+      "f1_opt": 0.43373493975903615,
+      "acc_opt": 0.6948051948051948,
+      "3state_f1": 0.0,
+      "3state_acc": 0.8760330578512396,
+      "3state_coverage": 0.7857142857142857
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.1935483870967742,
+      "acc_base": 0.8376623376623377,
+      "auc": 0.6698745990084572,
+      "f1_opt": 0.3614457831325301,
+      "acc_opt": 0.6558441558441559,
+      "3state_f1": 0.2608695652173913,
+      "3state_acc": 0.8671875,
+      "3state_coverage": 0.8311688311688312
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.13333333333333333,
+      "acc_base": 0.8311688311688312,
+      "auc": 0.7489063867016622,
+      "f1_opt": 0.47368421052631576,
+      "acc_opt": 0.7402597402597403,
+      "3state_f1": 0.11764705882352941,
+      "3state_acc": 0.8790322580645161,
+      "3state_coverage": 0.8051948051948052
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.0,
+      "acc_base": 0.8181818181818182,
+      "auc": 0.6051326917468649,
+      "f1_opt": 0.3142857142857143,
+      "acc_opt": 0.6883116883116883,
+      "3state_f1": 0.0,
+      "3state_acc": 0.823076923076923,
+      "3state_coverage": 0.8441558441558441
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "feature": "d4_knee_hip_corr_full",
+      "importance": 102.0
+    },
+    {
+      "rank": 2,
+      "feature": "d4_angular_accel_mismatch",
+      "importance": 100.80000305175781
+    },
+    {
+      "rank": 3,
+      "feature": "d4_vel_ratio_second_half",
+      "importance": 97.19999694824219
+    },
+    {
+      "rank": 4,
+      "feature": "d4_pelvis_y_rise_rate",
+      "importance": 79.0
+    },
+    {
+      "rank": 5,
+      "feature": "d4_trunk_angle_nadir_deg",
+      "importance": 78.80000305175781
+    },
+    {
+      "rank": 6,
+      "feature": "d4_hip_lock_time_norm",
+      "importance": 73.19999694824219
+    },
+    {
+      "rank": 7,
+      "feature": "d4_trunk_angle_std_ascent",
+      "importance": 62.0
+    },
+    {
+      "rank": 8,
+      "feature": "d4_bilateral_hip_asym_deg",
+      "importance": 61.20000076293945
+    },
+    {
+      "rank": 9,
+      "feature": "d4_hip_rom_deg",
+      "importance": 59.400001525878906
+    },
+    {
+      "rank": 10,
+      "feature": "d4_hip_shoulder_vert_dist_min",
+      "importance": 57.400001525878906
+    }
+  ]
+}

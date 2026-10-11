@@ -1,0 +1,219 @@
+{
+  "champion": "v4-D (9D: 4대 방해 피처 소거: trunk_mean + yaw_max + pitch_min + fwd_max)",
+  "best_f1": 86.82,
+  "best_features": [
+    "c2_gaze_pitch_drop",
+    "c2_cervical_spine_angle_mean",
+    "c2_cervical_spine_angle_drop",
+    "c2_head_yaw_asymmetry_mean",
+    "c2_cervical_velocity_peak_at_nadir",
+    "c2_gaze_coupling_lag",
+    "c2_cervical_hyperextension_ratio",
+    "c2_gated_true_gaze_pitch_drop",
+    "c2_gated_true_gaze_pitch_bot"
+  ],
+  "candidates": [
+    {
+      "label": "v3.0 기준선 (13D 전체)",
+      "dim": 13,
+      "dropped": [],
+      "keep_features": [
+        "c2_gaze_pitch_min",
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_head_yaw_asymmetry_max",
+        "c2_head_forward_protrusion_max",
+        "c2_gaze_relative_to_trunk_mean",
+        "c2_cervical_velocity_peak_at_nadir",
+        "c2_gaze_coupling_lag",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 85.84,
+        "precision": 88.05,
+        "recall": 83.73,
+        "roc_auc": 93.81,
+        "missed": 156
+      },
+      "elapsed_sec": 3.4
+    },
+    {
+      "label": "v4-A (12D: trunk_mean 소거)",
+      "dim": 12,
+      "dropped": [
+        "c2_gaze_relative_to_trunk_mean"
+      ],
+      "keep_features": [
+        "c2_gaze_pitch_min",
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_head_yaw_asymmetry_max",
+        "c2_head_forward_protrusion_max",
+        "c2_cervical_velocity_peak_at_nadir",
+        "c2_gaze_coupling_lag",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 86.62,
+        "precision": 89.36,
+        "recall": 84.05,
+        "roc_auc": 93.61,
+        "missed": 153
+      },
+      "elapsed_sec": 3.2
+    },
+    {
+      "label": "v4-B (11D: trunk_mean + yaw_max 소거)",
+      "dim": 11,
+      "dropped": [
+        "c2_gaze_relative_to_trunk_mean",
+        "c2_head_yaw_asymmetry_max"
+      ],
+      "keep_features": [
+        "c2_gaze_pitch_min",
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_head_forward_protrusion_max",
+        "c2_cervical_velocity_peak_at_nadir",
+        "c2_gaze_coupling_lag",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 86.67,
+        "precision": 89.46,
+        "recall": 84.05,
+        "roc_auc": 93.59,
+        "missed": 153
+      },
+      "elapsed_sec": 3.2
+    },
+    {
+      "label": "v4-C (10D: trunk_mean + yaw_max + pitch_min 소거)",
+      "dim": 10,
+      "dropped": [
+        "c2_gaze_relative_to_trunk_mean",
+        "c2_head_yaw_asymmetry_max",
+        "c2_gaze_pitch_min"
+      ],
+      "keep_features": [
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_head_forward_protrusion_max",
+        "c2_cervical_velocity_peak_at_nadir",
+        "c2_gaze_coupling_lag",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 86.57,
+        "precision": 89.26,
+        "recall": 84.05,
+        "roc_auc": 93.76,
+        "missed": 153
+      },
+      "elapsed_sec": 3.3
+    },
+    {
+      "label": "v4-D (9D: 4대 방해 피처 소거: trunk_mean + yaw_max + pitch_min + fwd_max)",
+      "dim": 9,
+      "dropped": [
+        "c2_gaze_relative_to_trunk_mean",
+        "c2_head_yaw_asymmetry_max",
+        "c2_gaze_pitch_min",
+        "c2_head_forward_protrusion_max"
+      ],
+      "keep_features": [
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_cervical_velocity_peak_at_nadir",
+        "c2_gaze_coupling_lag",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 86.82,
+        "precision": 89.67,
+        "recall": 84.15,
+        "roc_auc": 93.94,
+        "missed": 152
+      },
+      "elapsed_sec": 3.2
+    },
+    {
+      "label": "v4-E (8D: 5대 방해 피처 소거: 4대 + vel_peak)",
+      "dim": 8,
+      "dropped": [
+        "c2_gaze_relative_to_trunk_mean",
+        "c2_head_yaw_asymmetry_max",
+        "c2_gaze_pitch_min",
+        "c2_head_forward_protrusion_max",
+        "c2_cervical_velocity_peak_at_nadir"
+      ],
+      "keep_features": [
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_gaze_coupling_lag",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 86.44,
+        "precision": 89.32,
+        "recall": 83.73,
+        "roc_auc": 93.82,
+        "missed": 156
+      },
+      "elapsed_sec": 3.1
+    },
+    {
+      "label": "v4-F (7D 정예 다이어트: 6대 전체 방해 피처 소거)",
+      "dim": 7,
+      "dropped": [
+        "c2_gaze_relative_to_trunk_mean",
+        "c2_head_yaw_asymmetry_max",
+        "c2_gaze_pitch_min",
+        "c2_head_forward_protrusion_max",
+        "c2_cervical_velocity_peak_at_nadir",
+        "c2_gaze_coupling_lag"
+      ],
+      "keep_features": [
+        "c2_gaze_pitch_drop",
+        "c2_cervical_spine_angle_mean",
+        "c2_cervical_spine_angle_drop",
+        "c2_head_yaw_asymmetry_mean",
+        "c2_cervical_hyperextension_ratio",
+        "c2_gated_true_gaze_pitch_drop",
+        "c2_gated_true_gaze_pitch_bot"
+      ],
+      "metrics": {
+        "f1": 86.5,
+        "precision": 89.33,
+        "recall": 83.84,
+        "roc_auc": 93.8,
+        "missed": 155
+      },
+      "elapsed_sec": 2.8
+    }
+  ]
+}

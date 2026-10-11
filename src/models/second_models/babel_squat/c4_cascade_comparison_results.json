@@ -1,0 +1,112 @@
+{
+  "code_name": "c4",
+  "defect_name": "발바닥 지면 고정",
+  "total_samples": 1906,
+  "raw_metrics": {
+    "LightGBM": {
+      "f1": 56.49,
+      "precision": 59.74,
+      "recall": 53.57,
+      "bacc": 59.26,
+      "roc_auc": 62.34,
+      "opt_f1": 66.2,
+      "opt_th": 0.2,
+      "tn": 628,
+      "fp": 339,
+      "fn": 436,
+      "tp": 503
+    },
+    "CatBoost": {
+      "f1": 57.39,
+      "precision": 61.79,
+      "recall": 53.57,
+      "bacc": 60.7,
+      "roc_auc": 64.2,
+      "opt_f1": 66.1,
+      "opt_th": 0.24,
+      "tn": 656,
+      "fp": 311,
+      "fn": 436,
+      "tp": 503
+    },
+    "RandomForest": {
+      "f1": 55.6,
+      "precision": 61.88,
+      "recall": 50.48,
+      "bacc": 60.14,
+      "roc_auc": 63.67,
+      "opt_f1": 65.94,
+      "opt_th": 0.21,
+      "tn": 675,
+      "fp": 292,
+      "fn": 465,
+      "tp": 474
+    }
+  },
+  "ambiguity_distribution": {
+    "1": 299,
+    "2": 1376,
+    "3": 149,
+    "4": 82
+  },
+  "valid_samples_count": 1824,
+  "tier2_single_models": {
+    "LightGBM": {
+      "f1": 59.84,
+      "precision": 63.74,
+      "recall": 56.38,
+      "bacc": 62.54,
+      "roc_auc": 67.72,
+      "opt_f1": 67.87,
+      "opt_th": 0.21,
+      "tn": 634,
+      "fp": 289,
+      "fn": 393,
+      "tp": 508
+    },
+    "CatBoost": {
+      "f1": 59.07,
+      "precision": 63.44,
+      "recall": 55.27,
+      "bacc": 62.09,
+      "roc_auc": 67.55,
+      "opt_f1": 67.63,
+      "opt_th": 0.24,
+      "tn": 636,
+      "fp": 287,
+      "fn": 403,
+      "tp": 498
+    }
+  },
+  "cascade_model": {
+    "f1": 63.41,
+    "precision": 67.46,
+    "recall": 59.82,
+    "bacc": 65.83,
+    "roc_auc": 74.11,
+    "opt_f1": 70.33,
+    "opt_th": 0.21,
+    "tn": 663,
+    "fp": 260,
+    "fn": 362,
+    "tp": 539
+  },
+  "features": [
+    "c4_ankle_angle_min",
+    "c4_ankle_angle_drop",
+    "c4_ankle_angle_mean",
+    "c4_ankle_height_lift_max",
+    "c4_ankle_height_lift_at_nadir",
+    "c4_ankle_height_wobble",
+    "c4_stance_width_drift",
+    "c4_stance_width_at_nadir",
+    "c4_ankle_z_drift_max",
+    "c4_bilateral_ankle_angle_asym",
+    "c4_ankle_angular_velocity_peak",
+    "c4_ankle_acceleration_jerk",
+    "c4_shank_ankle_coupling_ratio",
+    "c4_ascent_ankle_destabilization",
+    "c4_ankle_heel_lift_duration_ratio",
+    "c4_knee_ankle_vertical_ratio"
+  ]
+}

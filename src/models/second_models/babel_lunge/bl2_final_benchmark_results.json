@@ -1,0 +1,125 @@
+{
+  "model_name": "bl2_final",
+  "defect_name": "Condition 2 - 몸통 발 무릎 방향 일치 여부",
+  "feature_dim": 20,
+  "n_samples": 1081,
+  "overall_3state": {
+    "selective_defect_f1": 0.5718120805369128,
+    "selective_clean_f1": 0.7352697095435685,
+    "selective_accuracy": 0.6728205128205128,
+    "coverage": 0.9019426456984274,
+    "retake_rate": 0.09805735430157259,
+    "roc_auc": 0.7362681846932322
+  },
+  "per_view_thresholds": {
+    "view3": {
+      "tau_clean": 0.5050000000000003,
+      "tau_defect": 0.5850000000000003
+    },
+    "view2": {
+      "tau_clean": 0.41500000000000037,
+      "tau_defect": 0.47000000000000025
+    },
+    "view4": {
+      "tau_clean": 0.39500000000000035,
+      "tau_defect": 0.47000000000000025
+    },
+    "view1": {
+      "tau_clean": 0.40500000000000036,
+      "tau_defect": 0.4300000000000002
+    },
+    "view5": {
+      "tau_clean": 0.37500000000000033,
+      "tau_defect": 0.4300000000000002
+    }
+  },
+  "view_benchmarks": {
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "tau_clean": 0.5050000000000003,
+      "tau_defect": 0.5850000000000003,
+      "effective_defect_f1": 0.7254901960784313,
+      "effective_clean_f1": 0.9027777777777778,
+      "accuracy": 0.8564102564102564,
+      "precision": 0.7551020408163265,
+      "recall": 0.6981132075471698,
+      "coverage": 0.9027777777777778,
+      "retake_rate": 0.09722222222222221,
+      "auc": 0.8375
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "tau_clean": 0.41500000000000037,
+      "tau_defect": 0.47000000000000025,
+      "effective_defect_f1": 0.6329113924050633,
+      "effective_clean_f1": 0.7603305785123967,
+      "accuracy": 0.71,
+      "precision": 0.5263157894736842,
+      "recall": 0.7936507936507936,
+      "coverage": 0.9049773755656109,
+      "retake_rate": 0.09502262443438914,
+      "auc": 0.7810650887573964
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "tau_clean": 0.39500000000000035,
+      "tau_defect": 0.47000000000000025,
+      "effective_defect_f1": 0.5797101449275363,
+      "effective_clean_f1": 0.7622950819672131,
+      "accuracy": 0.6963350785340314,
+      "precision": 0.4878048780487805,
+      "recall": 0.7142857142857143,
+      "coverage": 0.9009433962264151,
+      "retake_rate": 0.09905660377358494,
+      "auc": 0.7523510971786834
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "tau_clean": 0.40500000000000036,
+      "tau_defect": 0.4300000000000002,
+      "effective_defect_f1": 0.4840764331210191,
+      "effective_clean_f1": 0.6367713004484304,
+      "accuracy": 0.5736842105263158,
+      "precision": 0.37254901960784315,
+      "recall": 0.6909090909090909,
+      "coverage": 0.9004739336492891,
+      "retake_rate": 0.09952606635071093,
+      "auc": 0.6353391931485237
+    },
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "tau_clean": 0.37500000000000033,
+      "tau_defect": 0.4300000000000002,
+      "effective_defect_f1": 0.5052631578947369,
+      "effective_clean_f1": 0.5480769230769231,
+      "accuracy": 0.5276381909547738,
+      "precision": 0.366412213740458,
+      "recall": 0.8135593220338984,
+      "coverage": 0.9004524886877828,
+      "retake_rate": 0.09954751131221717,
+      "auc": 0.6279092702169625
+    }
+  },
+  "selected_features": [
+    "RTMP_lead_foot_axis_stability",
+    "RTMP_fppa_eccentric_to_bottom_delta",
+    "RTMP_lead_hip_adduction_bottom",
+    "MP_lead_foot_axis_stability",
+    "RTMP_knee_displacement_foot_heading_angle",
+    "RTMP_dkcd_medial_deviation_bottom",
+    "MP_knee_displacement_foot_heading_angle",
+    "RTMP_lead_knee_ankle_alignment",
+    "RTMP_ntmd_standing",
+    "MP_pelvic_rotation_bottom",
+    "MP_lead_knee_valgus_peak",
+    "MP_ntmd_standing",
+    "MP_trunk_pelvis_yaw_torsion",
+    "RTMP_lead_foot_inward_angle_bottom",
+    "RTMP_npkd_bottom",
+    "RTMP_ntmd_bottom",
+    "MP_lead_knee_velocity_ml",
+    "MP_mkto_velocity",
+    "RTMP_lead_heel_toe_skew",
+    "RTMP_mkto_bottom"
+  ]
+}

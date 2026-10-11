@@ -1,0 +1,175 @@
+{
+  "model_name": "bl5_rtmp_2",
+  "baseline_comparison": {
+    "bl5_rtmp_1_2state_f1": 0.4128,
+    "bl5_rtmp_1_3state_f1": 0.616,
+    "bl5_rtmp_1_rejection": 0.124,
+    "bl5_rtmp_2_2state_f1": 0.5677749360613811,
+    "bl5_rtmp_2_3state_f1": 0.6769400110071546,
+    "bl5_rtmp_2_rejection": 0.12026266416510323,
+    "f1_improvement": 0.060940011007154626,
+    "rejection_change": -0.003737335834896771
+  },
+  "overall_performance": {
+    "2state_f1": 0.5677749360613811,
+    "2state_accuracy": 0.7463414634146341,
+    "roc_auc": 0.7972957865069992,
+    "3state_f1_global": 0.6765498652291105,
+    "3state_rejection_global": 0.12363977485928701,
+    "3state_f1_adaptive": 0.6769400110071546,
+    "3state_rejection_adaptive": 0.12026266416510323,
+    "precision": 0.6116360019890602,
+    "recall": 0.7578558225508318,
+    "accuracy": 0.7496267860951162,
+    "cm": [
+      [
+        2285,
+        781
+      ],
+      [
+        393,
+        1230
+      ]
+    ],
+    "total_samples": 5330,
+    "confirmed_samples": 4689,
+    "caution_samples": 641
+  },
+  "view_audit": {
+    "view5": {
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "angle": "Right Back 45°",
+      "total_samples": 1066,
+      "confirmed_samples": 936,
+      "caution_samples": 130,
+      "rejection_rate": 0.12195121951219512,
+      "coverage": 0.8780487804878049,
+      "f1": 0.7203791469194313,
+      "precision": 0.7261146496815286,
+      "recall": 0.7147335423197492,
+      "accuracy": 0.8108974358974359,
+      "auc": 0.8371671480862112,
+      "tau_norm": 0.375,
+      "tau_def": 0.46,
+      "cm": [
+        [
+          531,
+          86
+        ],
+        [
+          91,
+          228
+        ]
+      ]
+    },
+    "view2": {
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "angle": "Right Front 45°",
+      "total_samples": 1066,
+      "confirmed_samples": 938,
+      "caution_samples": 128,
+      "rejection_rate": 0.12007504690431525,
+      "coverage": 0.8799249530956847,
+      "f1": 0.6837146702557201,
+      "precision": 0.6091127098321343,
+      "recall": 0.7791411042944786,
+      "accuracy": 0.7494669509594882,
+      "auc": 0.8062666401593557,
+      "tau_norm": 0.325,
+      "tau_def": 0.395,
+      "cm": [
+        [
+          449,
+          163
+        ],
+        [
+          72,
+          254
+        ]
+      ]
+    },
+    "view3": {
+      "view_code": "view3",
+      "view_name": "시점 C (정면 0°)",
+      "angle": "Front View 0°",
+      "total_samples": 1066,
+      "confirmed_samples": 940,
+      "caution_samples": 126,
+      "rejection_rate": 0.11819887429643527,
+      "coverage": 0.8818011257035647,
+      "f1": 0.612942612942613,
+      "precision": 0.5112016293279023,
+      "recall": 0.7652439024390244,
+      "accuracy": 0.6627659574468086,
+      "auc": 0.7187925140235368,
+      "tau_norm": 0.32,
+      "tau_def": 0.365,
+      "cm": [
+        [
+          372,
+          240
+        ],
+        [
+          77,
+          251
+        ]
+      ]
+    },
+    "view4": {
+      "view_code": "view4",
+      "view_name": "시점 D (좌측 전방 45°)",
+      "angle": "Left Front 45°",
+      "total_samples": 1066,
+      "confirmed_samples": 938,
+      "caution_samples": 128,
+      "rejection_rate": 0.12007504690431525,
+      "coverage": 0.8799249530956847,
+      "f1": 0.6658031088082902,
+      "precision": 0.5788288288288288,
+      "recall": 0.7835365853658537,
+      "accuracy": 0.7249466950959488,
+      "auc": 0.7851816335520186,
+      "tau_norm": 0.335,
+      "tau_def": 0.405,
+      "cm": [
+        [
+          423,
+          187
+        ],
+        [
+          71,
+          257
+        ]
+      ]
+    },
+    "view1": {
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "angle": "Left Back 45°",
+      "total_samples": 1066,
+      "confirmed_samples": 937,
+      "caution_samples": 129,
+      "rejection_rate": 0.12101313320825513,
+      "coverage": 0.8789868667917449,
+      "f1": 0.719640179910045,
+      "precision": 0.6956521739130435,
+      "recall": 0.7453416149068323,
+      "accuracy": 0.80042689434365,
+      "auc": 0.8266850658589734,
+      "tau_norm": 0.34,
+      "tau_def": 0.42,
+      "cm": [
+        [
+          510,
+          105
+        ],
+        [
+          82,
+          240
+        ]
+      ]
+    }
+  }
+}

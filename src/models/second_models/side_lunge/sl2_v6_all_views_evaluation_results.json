@@ -1,0 +1,84 @@
+{
+  "model_name": "sl2_v6_all_views_ortho",
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "total_samples": 4130,
+  "total_defects": 770,
+  "total_clean": 3360,
+  "features_dimension": 39,
+  "overall_metrics": {
+    "overall_f1": 0.5,
+    "overall_accuracy": 0.7598078462770216,
+    "overall_precision": 0.40613718411552346,
+    "overall_recall": 0.6502890173410405,
+    "overall_auc": 0.7747263450834879,
+    "uncertainty_rate": 0.0927360774818402,
+    "coverage": 0.9072639225181598
+  },
+  "view_audits": {
+    "view5": {
+      "tau_clean": 0.4100000000000002,
+      "tau_defect": 0.465,
+      "effective_f1": 0.41075794621026895,
+      "accuracy": 0.6786666666666666,
+      "precision": 0.3181818181818182,
+      "recall": 0.5793103448275863,
+      "uncertainty_rate": 0.09200968523002417,
+      "alias": "시점 A (우측 후방 45°)",
+      "n_samples": 826,
+      "n_defects": 154
+    },
+    "view2": {
+      "tau_clean": 0.48500000000000026,
+      "tau_defect": 0.5850000000000002,
+      "effective_f1": 0.6575342465753424,
+      "accuracy": 0.8666666666666667,
+      "precision": 0.6,
+      "recall": 0.7272727272727273,
+      "uncertainty_rate": 0.09200968523002417,
+      "alias": "시점 B (우측 전방 45°)",
+      "n_samples": 826,
+      "n_defects": 154
+    },
+    "view3": {
+      "tau_clean": 0.4250000000000002,
+      "tau_defect": 0.48000000000000004,
+      "effective_f1": 0.4752475247524752,
+      "accuracy": 0.7184594953519257,
+      "precision": 0.366412213740458,
+      "recall": 0.676056338028169,
+      "uncertainty_rate": 0.08837772397094434,
+      "alias": "시점 C (정면 0°)",
+      "n_samples": 826,
+      "n_defects": 154
+    },
+    "view4": {
+      "tau_clean": 0.5300000000000002,
+      "tau_defect": 0.6150000000000002,
+      "effective_f1": 0.5846153846153846,
+      "accuracy": 0.8550335570469799,
+      "precision": 0.6129032258064516,
+      "recall": 0.5588235294117647,
+      "uncertainty_rate": 0.09806295399515741,
+      "alias": "시점 D (좌측 전방 45°)",
+      "n_samples": 826,
+      "n_defects": 154
+    },
+    "view1": {
+      "tau_clean": 0.4400000000000002,
+      "tau_defect": 0.48000000000000004,
+      "effective_f1": 0.45057471264367815,
+      "accuracy": 0.6809078771695594,
+      "precision": 0.3288590604026846,
+      "recall": 0.7153284671532847,
+      "uncertainty_rate": 0.09322033898305082,
+      "alias": "시점 E (좌측 후방 45°)",
+      "n_samples": 826,
+      "n_defects": 154
+    }
+  },
+  "ensemble_weights": {
+    "catboost": 0.48878753325731666,
+    "xgboost": 0.5112124667426835
+  },
+  "elapsed_time_sec": 11.378812074661255
+}

@@ -1,0 +1,696 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "바벨 굿모닝 (09_굿모닝)",
+  "total_sequences": 1020,
+  "subjects_count": 9,
+  "views_count": 5,
+  "submodels": {
+    "c1": {
+      "model_name": "gm1_rtmp_1",
+      "defect_name": "무릎 구부린 채 고정 위반 (D02)",
+      "pre_opt": {
+        "roc_auc": 93.94,
+        "forced_f1": 86.56,
+        "forced_prec": 84.77,
+        "forced_rec": 88.43,
+        "forced_acc": 86.27,
+        "coverage": 94.12,
+        "retake": 5.88,
+        "sel_f1": 88.39,
+        "sel_prec": 86.45,
+        "sel_rec": 90.42,
+        "sel_acc": 88.12,
+        "ece": 3.07,
+        "brier": 0.0984
+      },
+      "post_opt": {
+        "roc_auc": 94.2,
+        "forced_f1": 86.56,
+        "forced_prec": 84.77,
+        "forced_rec": 88.43,
+        "forced_acc": 86.27,
+        "coverage": 90.0,
+        "retake": 10.0,
+        "sel_f1": 90.5,
+        "sel_prec": 89.45,
+        "sel_rec": 91.58,
+        "sel_acc": 90.31,
+        "ece": 2.05,
+        "brier": 0.0965
+      },
+      "pre_views": {
+        "view5": {
+          "roc_auc": 95.43,
+          "forced_f1": 90.41,
+          "forced_prec": 84.62,
+          "forced_rec": 97.06,
+          "forced_acc": 89.71,
+          "coverage": 95.59,
+          "retake": 4.41,
+          "sel_f1": 90.82,
+          "sel_prec": 85.45,
+          "sel_rec": 96.91,
+          "sel_acc": 90.26,
+          "ece": 5.93,
+          "brier": 0.0808
+        },
+        "view2": {
+          "roc_auc": 94.12,
+          "forced_f1": 86.7,
+          "forced_prec": 87.13,
+          "forced_rec": 86.27,
+          "forced_acc": 86.76,
+          "coverage": 94.12,
+          "retake": 5.88,
+          "sel_f1": 88.42,
+          "sel_prec": 88.42,
+          "sel_rec": 88.42,
+          "sel_acc": 88.54,
+          "ece": 4.65,
+          "brier": 0.0948
+        },
+        "view3": {
+          "roc_auc": 78.53,
+          "forced_f1": 72.2,
+          "forced_prec": 71.84,
+          "forced_rec": 72.55,
+          "forced_acc": 72.06,
+          "coverage": 89.71,
+          "retake": 10.29,
+          "sel_f1": 74.59,
+          "sel_prec": 73.4,
+          "sel_rec": 75.82,
+          "sel_acc": 74.32,
+          "ece": 12.23,
+          "brier": 0.1965
+        },
+        "view4": {
+          "roc_auc": 97.66,
+          "forced_f1": 90.91,
+          "forced_prec": 88.79,
+          "forced_rec": 93.14,
+          "forced_acc": 90.69,
+          "coverage": 94.61,
+          "retake": 5.39,
+          "sel_f1": 94.47,
+          "sel_prec": 93.07,
+          "sel_rec": 95.92,
+          "sel_acc": 94.3,
+          "ece": 5.92,
+          "brier": 0.0612
+        },
+        "view1": {
+          "roc_auc": 97.86,
+          "forced_f1": 92.23,
+          "forced_prec": 91.35,
+          "forced_rec": 93.14,
+          "forced_acc": 92.16,
+          "coverage": 96.57,
+          "retake": 3.43,
+          "sel_f1": 92.54,
+          "sel_prec": 91.18,
+          "sel_rec": 93.94,
+          "sel_acc": 92.39,
+          "ece": 5.42,
+          "brier": 0.0589
+        }
+      },
+      "post_views": {
+        "view5": {
+          "roc_auc": 95.43,
+          "forced_f1": 90.41,
+          "forced_prec": 84.62,
+          "forced_rec": 97.06,
+          "forced_acc": 89.71,
+          "coverage": 90.69,
+          "retake": 9.31,
+          "sel_f1": 93.26,
+          "sel_prec": 89.11,
+          "sel_rec": 97.83,
+          "sel_acc": 92.97,
+          "ece": 4.37,
+          "brier": 0.0792
+        },
+        "view2": {
+          "roc_auc": 94.12,
+          "forced_f1": 86.7,
+          "forced_prec": 87.13,
+          "forced_rec": 86.27,
+          "forced_acc": 86.76,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "sel_f1": 91.21,
+          "sel_prec": 92.22,
+          "sel_rec": 90.22,
+          "sel_acc": 91.3,
+          "ece": 4.8,
+          "brier": 0.0942
+        },
+        "view3": {
+          "roc_auc": 78.53,
+          "forced_f1": 72.2,
+          "forced_prec": 71.84,
+          "forced_rec": 72.55,
+          "forced_acc": 72.06,
+          "coverage": 90.69,
+          "retake": 9.31,
+          "sel_f1": 75.65,
+          "sel_prec": 73.0,
+          "sel_rec": 78.49,
+          "sel_acc": 74.59,
+          "ece": 6.71,
+          "brier": 0.1891
+        },
+        "view4": {
+          "roc_auc": 97.66,
+          "forced_f1": 90.91,
+          "forced_prec": 88.79,
+          "forced_rec": 93.14,
+          "forced_acc": 90.69,
+          "coverage": 92.65,
+          "retake": 7.35,
+          "sel_f1": 95.29,
+          "sel_prec": 94.79,
+          "sel_rec": 95.79,
+          "sel_acc": 95.24,
+          "ece": 4.8,
+          "brier": 0.0611
+        },
+        "view1": {
+          "roc_auc": 97.86,
+          "forced_f1": 92.23,
+          "forced_prec": 91.35,
+          "forced_rec": 93.14,
+          "forced_acc": 92.16,
+          "coverage": 92.16,
+          "retake": 7.84,
+          "sel_f1": 94.74,
+          "sel_prec": 93.75,
+          "sel_rec": 95.74,
+          "sel_acc": 94.68,
+          "ece": 5.48,
+          "brier": 0.0589
+        }
+      },
+      "calibration_params": {
+        "model_name": "gm1_rtmp_1",
+        "defect_code": "c1",
+        "defect_name": "무릎 구부린 채 고정 위반 (D02)",
+        "global_temperature": 1.209,
+        "view_temperatures": {
+          "view5": 1.3042,
+          "view2": 1.1691,
+          "view3": 1.759,
+          "view4": 0.9049,
+          "view1": 0.974
+        },
+        "global_thresholds": {
+          "tau_norm": 0.4,
+          "tau_def": 0.635
+        },
+        "view_thresholds": {
+          "view5": {
+            "tau_norm": 0.415,
+            "tau_def": 0.72
+          },
+          "view2": {
+            "tau_norm": 0.37,
+            "tau_def": 0.635
+          },
+          "view3": {
+            "tau_norm": 0.435,
+            "tau_def": 0.51
+          },
+          "view4": {
+            "tau_norm": 0.43,
+            "tau_def": 0.7
+          },
+          "view1": {
+            "tau_norm": 0.295,
+            "tau_def": 0.7
+          }
+        }
+      }
+    },
+    "c2": {
+      "model_name": "gm2_rtmp_1",
+      "defect_name": "시선 방향 유지 오류 (D10)",
+      "pre_opt": {
+        "roc_auc": 81.47,
+        "forced_f1": 72.6,
+        "forced_prec": 72.53,
+        "forced_rec": 72.67,
+        "forced_acc": 72.84,
+        "coverage": 79.71,
+        "retake": 20.29,
+        "sel_f1": 78.19,
+        "sel_prec": 80.15,
+        "sel_rec": 76.32,
+        "sel_acc": 78.11,
+        "ece": 4.46,
+        "brier": 0.1762
+      },
+      "post_opt": {
+        "roc_auc": 81.53,
+        "forced_f1": 72.6,
+        "forced_prec": 72.53,
+        "forced_rec": 72.67,
+        "forced_acc": 72.84,
+        "coverage": 90.0,
+        "retake": 10.0,
+        "sel_f1": 75.38,
+        "sel_prec": 76.04,
+        "sel_rec": 74.73,
+        "sel_acc": 75.38,
+        "ece": 3.31,
+        "brier": 0.1744
+      },
+      "pre_views": {
+        "view5": {
+          "roc_auc": 80.25,
+          "forced_f1": 72.28,
+          "forced_prec": 72.28,
+          "forced_rec": 72.28,
+          "forced_acc": 72.55,
+          "coverage": 75.98,
+          "retake": 24.02,
+          "sel_f1": 78.21,
+          "sel_prec": 82.43,
+          "sel_rec": 74.39,
+          "sel_acc": 78.06,
+          "ece": 9.33,
+          "brier": 0.1822
+        },
+        "view2": {
+          "roc_auc": 84.09,
+          "forced_f1": 75.0,
+          "forced_prec": 75.76,
+          "forced_rec": 74.26,
+          "forced_acc": 75.49,
+          "coverage": 84.8,
+          "retake": 15.2,
+          "sel_f1": 79.76,
+          "sel_prec": 83.75,
+          "sel_rec": 76.14,
+          "sel_acc": 80.35,
+          "ece": 4.38,
+          "brier": 0.1617
+        },
+        "view3": {
+          "roc_auc": 86.15,
+          "forced_f1": 75.41,
+          "forced_prec": 84.15,
+          "forced_rec": 68.32,
+          "forced_acc": 77.94,
+          "coverage": 82.35,
+          "retake": 17.65,
+          "sel_f1": 81.33,
+          "sel_prec": 91.04,
+          "sel_rec": 73.49,
+          "sel_acc": 83.33,
+          "ece": 3.92,
+          "brier": 0.151
+        },
+        "view4": {
+          "roc_auc": 80.43,
+          "forced_f1": 70.42,
+          "forced_prec": 66.96,
+          "forced_rec": 74.26,
+          "forced_acc": 69.12,
+          "coverage": 77.45,
+          "retake": 22.55,
+          "sel_f1": 77.84,
+          "sel_prec": 73.03,
+          "sel_rec": 83.33,
+          "sel_acc": 76.58,
+          "ece": 9.66,
+          "brier": 0.1858
+        },
+        "view1": {
+          "roc_auc": 76.37,
+          "forced_f1": 70.42,
+          "forced_prec": 66.96,
+          "forced_rec": 74.26,
+          "forced_acc": 69.12,
+          "coverage": 77.94,
+          "retake": 22.06,
+          "sel_f1": 74.29,
+          "sel_prec": 73.86,
+          "sel_rec": 74.71,
+          "sel_acc": 71.7,
+          "ece": 9.97,
+          "brier": 0.2004
+        }
+      },
+      "post_views": {
+        "view5": {
+          "roc_auc": 80.25,
+          "forced_f1": 72.28,
+          "forced_prec": 72.28,
+          "forced_rec": 72.28,
+          "forced_acc": 72.55,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "sel_f1": 75.13,
+          "sel_prec": 74.74,
+          "sel_rec": 75.53,
+          "sel_acc": 74.46,
+          "ece": 5.77,
+          "brier": 0.1816
+        },
+        "view2": {
+          "roc_auc": 84.09,
+          "forced_f1": 75.0,
+          "forced_prec": 75.76,
+          "forced_rec": 74.26,
+          "forced_acc": 75.49,
+          "coverage": 91.18,
+          "retake": 8.82,
+          "sel_f1": 78.89,
+          "sel_prec": 81.61,
+          "sel_rec": 76.34,
+          "sel_acc": 79.57,
+          "ece": 3.27,
+          "brier": 0.161
+        },
+        "view3": {
+          "roc_auc": 86.15,
+          "forced_f1": 75.41,
+          "forced_prec": 84.15,
+          "forced_rec": 68.32,
+          "forced_acc": 77.94,
+          "coverage": 90.69,
+          "retake": 9.31,
+          "sel_f1": 78.36,
+          "sel_prec": 83.75,
+          "sel_rec": 73.63,
+          "sel_acc": 80.0,
+          "ece": 3.64,
+          "brier": 0.1508
+        },
+        "view4": {
+          "roc_auc": 80.43,
+          "forced_f1": 70.42,
+          "forced_prec": 66.96,
+          "forced_rec": 74.26,
+          "forced_acc": 69.12,
+          "coverage": 90.69,
+          "retake": 9.31,
+          "sel_f1": 74.61,
+          "sel_prec": 72.0,
+          "sel_rec": 77.42,
+          "sel_acc": 73.51,
+          "ece": 8.69,
+          "brier": 0.1816
+        },
+        "view1": {
+          "roc_auc": 76.37,
+          "forced_f1": 70.42,
+          "forced_prec": 66.96,
+          "forced_rec": 74.26,
+          "forced_acc": 69.12,
+          "coverage": 90.69,
+          "retake": 9.31,
+          "sel_f1": 72.0,
+          "sel_prec": 69.23,
+          "sel_rec": 75.0,
+          "sel_acc": 69.73,
+          "ece": 8.82,
+          "brier": 0.197
+        }
+      },
+      "calibration_params": {
+        "model_name": "gm2_rtmp_1",
+        "defect_code": "c2",
+        "defect_name": "시선 방향 유지 오류 (D10)",
+        "global_temperature": 1.1929,
+        "view_temperatures": {
+          "view5": 1.126,
+          "view2": 1.1289,
+          "view3": 1.0632,
+          "view4": 1.3649,
+          "view1": 1.3254
+        },
+        "global_thresholds": {
+          "tau_norm": 0.455,
+          "tau_def": 0.535
+        },
+        "view_thresholds": {
+          "view5": {
+            "tau_norm": 0.455,
+            "tau_def": 0.515
+          },
+          "view2": {
+            "tau_norm": 0.455,
+            "tau_def": 0.54
+          },
+          "view3": {
+            "tau_norm": 0.43,
+            "tau_def": 0.51
+          },
+          "view4": {
+            "tau_norm": 0.47,
+            "tau_def": 0.535
+          },
+          "view1": {
+            "tau_norm": 0.455,
+            "tau_def": 0.51
+          }
+        }
+      }
+    },
+    "c3": {
+      "model_name": "gm3_rtmp_1",
+      "defect_name": "척추의 중립 오류 / 등 굽힘 (D14)",
+      "pre_opt": {
+        "roc_auc": 97.43,
+        "forced_f1": 92.56,
+        "forced_prec": 93.29,
+        "forced_rec": 91.84,
+        "forced_acc": 92.55,
+        "coverage": 96.67,
+        "retake": 3.33,
+        "sel_f1": 94.53,
+        "sel_prec": 94.73,
+        "sel_rec": 94.34,
+        "sel_acc": 94.52,
+        "ece": 2.21,
+        "brier": 0.0563
+      },
+      "post_opt": {
+        "roc_auc": 97.49,
+        "forced_f1": 92.56,
+        "forced_prec": 93.29,
+        "forced_rec": 91.84,
+        "forced_acc": 92.55,
+        "coverage": 92.06,
+        "retake": 7.94,
+        "sel_f1": 95.4,
+        "sel_prec": 95.71,
+        "sel_rec": 95.1,
+        "sel_acc": 95.42,
+        "ece": 1.98,
+        "brier": 0.0557
+      },
+      "pre_views": {
+        "view5": {
+          "roc_auc": 96.91,
+          "forced_f1": 91.54,
+          "forced_prec": 93.88,
+          "forced_rec": 89.32,
+          "forced_acc": 91.67,
+          "coverage": 95.59,
+          "retake": 4.41,
+          "sel_f1": 93.81,
+          "sel_prec": 93.81,
+          "sel_rec": 93.81,
+          "sel_acc": 93.85,
+          "ece": 3.18,
+          "brier": 0.0597
+        },
+        "view2": {
+          "roc_auc": 98.94,
+          "forced_f1": 96.12,
+          "forced_prec": 96.12,
+          "forced_rec": 96.12,
+          "forced_acc": 96.08,
+          "coverage": 96.08,
+          "retake": 3.92,
+          "sel_f1": 97.98,
+          "sel_prec": 97.98,
+          "sel_rec": 97.98,
+          "sel_acc": 97.96,
+          "ece": 2.79,
+          "brier": 0.0332
+        },
+        "view3": {
+          "roc_auc": 99.38,
+          "forced_f1": 93.94,
+          "forced_prec": 97.89,
+          "forced_rec": 90.29,
+          "forced_acc": 94.12,
+          "coverage": 97.55,
+          "retake": 2.45,
+          "sel_f1": 95.83,
+          "sel_prec": 100.0,
+          "sel_rec": 92.0,
+          "sel_acc": 95.98,
+          "ece": 5.15,
+          "brier": 0.0393
+        },
+        "view4": {
+          "roc_auc": 96.66,
+          "forced_f1": 91.71,
+          "forced_prec": 92.16,
+          "forced_rec": 91.26,
+          "forced_acc": 91.67,
+          "coverage": 96.57,
+          "retake": 3.43,
+          "sel_f1": 93.94,
+          "sel_prec": 93.94,
+          "sel_rec": 93.94,
+          "sel_acc": 93.91,
+          "ece": 4.56,
+          "brier": 0.064
+        },
+        "view1": {
+          "roc_auc": 95.22,
+          "forced_f1": 89.62,
+          "forced_prec": 87.16,
+          "forced_rec": 92.23,
+          "forced_acc": 89.22,
+          "coverage": 97.55,
+          "retake": 2.45,
+          "sel_f1": 91.26,
+          "sel_prec": 88.68,
+          "sel_rec": 94.0,
+          "sel_acc": 90.95,
+          "ece": 5.28,
+          "brier": 0.0851
+        }
+      },
+      "post_views": {
+        "view5": {
+          "roc_auc": 96.91,
+          "forced_f1": 91.54,
+          "forced_prec": 93.88,
+          "forced_rec": 89.32,
+          "forced_acc": 91.67,
+          "coverage": 91.67,
+          "retake": 8.33,
+          "sel_f1": 95.6,
+          "sel_prec": 96.67,
+          "sel_rec": 94.57,
+          "sel_acc": 95.72,
+          "ece": 3.18,
+          "brier": 0.0597
+        },
+        "view2": {
+          "roc_auc": 98.94,
+          "forced_f1": 96.12,
+          "forced_prec": 96.12,
+          "forced_rec": 96.12,
+          "forced_acc": 96.08,
+          "coverage": 96.57,
+          "retake": 3.43,
+          "sel_f1": 97.98,
+          "sel_prec": 97.98,
+          "sel_rec": 97.98,
+          "sel_acc": 97.97,
+          "ece": 2.33,
+          "brier": 0.0314
+        },
+        "view3": {
+          "roc_auc": 99.38,
+          "forced_f1": 93.94,
+          "forced_prec": 97.89,
+          "forced_rec": 90.29,
+          "forced_acc": 94.12,
+          "coverage": 97.06,
+          "retake": 2.94,
+          "sel_f1": 96.88,
+          "sel_prec": 100.0,
+          "sel_rec": 93.94,
+          "sel_acc": 96.97,
+          "ece": 5.14,
+          "brier": 0.0391
+        },
+        "view4": {
+          "roc_auc": 96.66,
+          "forced_f1": 91.71,
+          "forced_prec": 92.16,
+          "forced_rec": 91.26,
+          "forced_acc": 91.67,
+          "coverage": 90.2,
+          "retake": 9.8,
+          "sel_f1": 94.68,
+          "sel_prec": 94.68,
+          "sel_rec": 94.68,
+          "sel_acc": 94.57,
+          "ece": 4.21,
+          "brier": 0.0639
+        },
+        "view1": {
+          "roc_auc": 95.22,
+          "forced_f1": 89.62,
+          "forced_prec": 87.16,
+          "forced_rec": 92.23,
+          "forced_acc": 89.22,
+          "coverage": 92.16,
+          "retake": 7.84,
+          "sel_f1": 92.31,
+          "sel_prec": 90.0,
+          "sel_rec": 94.74,
+          "sel_acc": 92.02,
+          "ece": 5.25,
+          "brier": 0.0843
+        }
+      },
+      "calibration_params": {
+        "model_name": "gm3_rtmp_1",
+        "defect_code": "c3",
+        "defect_name": "척추의 중립 오류 / 등 굽힘 (D14)",
+        "global_temperature": 1.0864,
+        "view_temperatures": {
+          "view5": 1.0041,
+          "view2": 0.7915,
+          "view3": 1.0703,
+          "view4": 1.1875,
+          "view1": 1.289
+        },
+        "global_thresholds": {
+          "tau_norm": 0.28,
+          "tau_def": 0.715
+        },
+        "view_thresholds": {
+          "view5": {
+            "tau_norm": 0.385,
+            "tau_def": 0.715
+          },
+          "view2": {
+            "tau_norm": 0.485,
+            "tau_def": 0.61
+          },
+          "view3": {
+            "tau_norm": 0.33,
+            "tau_def": 0.53
+          },
+          "view4": {
+            "tau_norm": 0.29,
+            "tau_def": 0.685
+          },
+          "view1": {
+            "tau_norm": 0.28,
+            "tau_def": 0.625
+          }
+        }
+      }
+    },
+    "session_emr": {
+      "total_sequences": 1020,
+      "emr_pre_opt": 58.04,
+      "emr_post_opt": 58.04,
+      "emr_delta": 0.0
+    }
+  }
+}

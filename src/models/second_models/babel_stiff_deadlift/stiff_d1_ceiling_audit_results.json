@@ -1,0 +1,218 @@
+{
+  "model_name": "sd3_v4",
+  "total_samples": 1035,
+  "overall_metrics": {
+    "f1_2s": 74.79,
+    "auc_2s": 90.29,
+    "f1_3s": 81.0,
+    "acc_3s": 86.16,
+    "total_errors_2s": 180,
+    "total_errors_3s": 129,
+    "abstain_count": 103,
+    "abstain_rate": 9.95
+  },
+  "key_breakdown": {
+    "Key209": {
+      "total": 130,
+      "true_label": 0,
+      "err_2s": 5,
+      "err_2s_rate": 3.85,
+      "err_3s": 7,
+      "abstain": 11,
+      "abstain_rate": 8.46
+    },
+    "Key210": {
+      "total": 130,
+      "true_label": 1,
+      "err_2s": 37,
+      "err_2s_rate": 28.46,
+      "err_3s": 21,
+      "abstain": 15,
+      "abstain_rate": 11.54
+    },
+    "Key211": {
+      "total": 130,
+      "true_label": 0,
+      "err_2s": 15,
+      "err_2s_rate": 11.54,
+      "err_3s": 15,
+      "abstain": 7,
+      "abstain_rate": 5.38
+    },
+    "Key212": {
+      "total": 130,
+      "true_label": 0,
+      "err_2s": 11,
+      "err_2s_rate": 8.46,
+      "err_3s": 11,
+      "abstain": 16,
+      "abstain_rate": 12.31
+    },
+    "Key213": {
+      "total": 130,
+      "true_label": 1,
+      "err_2s": 38,
+      "err_2s_rate": 29.23,
+      "err_3s": 19,
+      "abstain": 16,
+      "abstain_rate": 12.31
+    },
+    "Key214": {
+      "total": 130,
+      "true_label": 1,
+      "err_2s": 48,
+      "err_2s_rate": 36.92,
+      "err_3s": 29,
+      "abstain": 15,
+      "abstain_rate": 11.54
+    },
+    "Key215": {
+      "total": 130,
+      "true_label": 0,
+      "err_2s": 11,
+      "err_2s_rate": 8.46,
+      "err_3s": 12,
+      "abstain": 12,
+      "abstain_rate": 9.23
+    },
+    "Key216": {
+      "total": 125,
+      "true_label": 0,
+      "err_2s": 15,
+      "err_2s_rate": 12.0,
+      "err_3s": 15,
+      "abstain": 11,
+      "abstain_rate": 8.8
+    }
+  },
+  "view_breakdown": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "total": 207,
+      "err_2s": 40,
+      "err_2s_rate": 19.32,
+      "err_3s": 29,
+      "abstain": 20,
+      "f1_3s": 78.52
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "total": 207,
+      "err_2s": 23,
+      "err_2s_rate": 11.11,
+      "err_3s": 20,
+      "abstain": 9,
+      "f1_3s": 86.11
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "total": 207,
+      "err_2s": 60,
+      "err_2s_rate": 28.99,
+      "err_3s": 37,
+      "abstain": 47,
+      "f1_3s": 63.37
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "total": 207,
+      "err_2s": 19,
+      "err_2s_rate": 9.18,
+      "err_3s": 12,
+      "abstain": 12,
+      "f1_3s": 91.78
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "total": 207,
+      "err_2s": 38,
+      "err_2s_rate": 18.36,
+      "err_3s": 31,
+      "abstain": 15,
+      "f1_3s": 79.74
+    }
+  },
+  "subj_breakdown": {
+    "피험자1": {
+      "total": 120,
+      "err_2s": 12,
+      "err_2s_rate": 10.0,
+      "err_3s": 12,
+      "f1_3s": 85.37
+    },
+    "피험자2": {
+      "total": 120,
+      "err_2s": 28,
+      "err_2s_rate": 23.33,
+      "err_3s": 21,
+      "f1_3s": 76.4
+    },
+    "피험자3": {
+      "total": 115,
+      "err_2s": 17,
+      "err_2s_rate": 14.78,
+      "err_3s": 11,
+      "f1_3s": 86.75
+    },
+    "피험자4": {
+      "total": 120,
+      "err_2s": 14,
+      "err_2s_rate": 11.67,
+      "err_3s": 6,
+      "f1_3s": 91.18
+    },
+    "피험자5": {
+      "total": 120,
+      "err_2s": 21,
+      "err_2s_rate": 17.5,
+      "err_3s": 14,
+      "f1_3s": 81.58
+    },
+    "피험자6": {
+      "total": 120,
+      "err_2s": 28,
+      "err_2s_rate": 23.33,
+      "err_3s": 18,
+      "f1_3s": 73.53
+    },
+    "피험자7": {
+      "total": 120,
+      "err_2s": 28,
+      "err_2s_rate": 23.33,
+      "err_3s": 22,
+      "f1_3s": 77.08
+    },
+    "피험자8": {
+      "total": 120,
+      "err_2s": 22,
+      "err_2s_rate": 18.33,
+      "err_3s": 18,
+      "f1_3s": 73.53
+    },
+    "피험자9": {
+      "total": 80,
+      "err_2s": 10,
+      "err_2s_rate": 12.5,
+      "err_3s": 7,
+      "f1_3s": 85.71
+    }
+  },
+  "margin_breakdown": {
+    "borderline_count": 140,
+    "borderline_err_count": 63,
+    "hard_fp_count": 19,
+    "hard_fn_count": 33
+  },
+  "ceilings": {
+    "oracle_ensemble_f1": 86.74,
+    "oracle_ensemble_acc": 90.34,
+    "oracle_residual_unavoidable_errors": 100,
+    "view_d_upper_bound_f1": 91.78,
+    "view_d_auc": 96.92,
+    "tier1_golden_f1": 87.04,
+    "tier1_golden_auc": 93.08,
+    "multiview_consensus_f1": 96.15,
+    "multiview_consensus_acc": 97.22,
+    "multiview_consensus_auc": 100.0
+  }
+}

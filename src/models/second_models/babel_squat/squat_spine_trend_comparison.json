@@ -1,0 +1,47 @@
+{
+  "track1_pure_9d": {
+    "track_name": "Track 1: 순수 9D 동적 경향성 피처",
+    "champion_model": "CatBoost",
+    "trial_index": 1,
+    "best_params": {
+      "iterations": 150,
+      "depth": 5,
+      "learning_rate": 0.04,
+      "l2_leaf_reg": 3.0
+    },
+    "is_pytorch": false,
+    "f1_score": 69.18,
+    "precision": 73.44,
+    "recall": 65.38,
+    "balanced_acc": 71.59,
+    "roc_auc": 76.0,
+    "composite_score": 71.73,
+    "latency_ms": 0.719
+  },
+  "track2_full_13d": {
+    "track_name": "Track 2: 척추 전담 통합 13D 피처 (경향성9D + 경추/시선/평행도4D)",
+    "champion_model": "CatBoost",
+    "trial_index": 1,
+    "best_params": {
+      "iterations": 150,
+      "depth": 5,
+      "learning_rate": 0.04,
+      "l2_leaf_reg": 3.0
+    },
+    "is_pytorch": false,
+    "f1_score": 74.99,
+    "precision": 78.65,
+    "recall": 71.65,
+    "balanced_acc": 76.69,
+    "roc_auc": 83.73,
+    "composite_score": 77.77,
+    "latency_ms": 2.797
+  },
+  "baseline_15d": {
+    "model": "DenseSkipMLP",
+    "f1_score": 74.46,
+    "precision": 76.78,
+    "recall": 72.28,
+    "roc_auc": 82.83
+  }
+}

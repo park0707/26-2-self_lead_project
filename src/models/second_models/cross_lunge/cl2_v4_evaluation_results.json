@@ -1,0 +1,184 @@
+{
+  "model_name": "cl2_v4",
+  "defect_name": "Condition 2 - 몸통 앞발 앞무릎 방향 일치 여부",
+  "feature_dim": 48,
+  "n_samples": 1025,
+  "ensemble_weights": {
+    "catboost": 0.45,
+    "xgboost": 0.3,
+    "lightgbm": 0.25
+  },
+  "default_2state": {
+    "threshold": 0.5,
+    "f1": 0.6280834914611005,
+    "accuracy": 0.6175609756097561,
+    "precision": 0.614100185528757,
+    "recall": 0.6427184466019418,
+    "roc_auc": 0.6765581572434799
+  },
+  "global_opt_2state": {
+    "optimal_threshold": 0.3941551698285935,
+    "f1": 0.6909372579395817,
+    "accuracy": 0.6107317073170732,
+    "precision": 0.5747422680412371,
+    "recall": 0.8660194174757282,
+    "roc_auc": 0.6765581572434799
+  },
+  "per_view_opt_2state": {
+    "overall_f1": 0.7029096477794793,
+    "overall_accuracy": 0.6214634146341463,
+    "overall_precision": 0.5802781289506953,
+    "overall_recall": 0.8912621359223301,
+    "roc_auc": 0.6765581572434799,
+    "thresholds": {
+      "view5": 0.4100000000000002,
+      "view2": 0.2700000000000001,
+      "view3": 0.44500000000000023,
+      "view4": 0.34000000000000014,
+      "view1": 0.4200000000000002
+    },
+    "views": {
+      "view5": {
+        "view_name": "시점 A (우측 후방 45°)",
+        "opt_threshold": 0.4100000000000002,
+        "f1": 0.7068273092369478,
+        "accuracy": 0.6439024390243903,
+        "precision": 0.6027397260273972,
+        "recall": 0.8543689320388349,
+        "auc": 0.6720921378260042
+      },
+      "view2": {
+        "view_name": "시점 B (우측 전방 45°)",
+        "opt_threshold": 0.2700000000000001,
+        "f1": 0.7017543859649122,
+        "accuracy": 0.5853658536585366,
+        "precision": 0.5494505494505495,
+        "recall": 0.970873786407767,
+        "auc": 0.7130211307824101
+      },
+      "view3": {
+        "view_name": "시점 C (정면 0°)",
+        "opt_threshold": 0.44500000000000023,
+        "f1": 0.7078189300411523,
+        "accuracy": 0.6536585365853659,
+        "precision": 0.6142857142857143,
+        "recall": 0.8349514563106796,
+        "auc": 0.7129259470778604
+      },
+      "view4": {
+        "view_name": "시점 D (좌측 전방 45°)",
+        "opt_threshold": 0.34000000000000014,
+        "f1": 0.7017543859649122,
+        "accuracy": 0.5853658536585366,
+        "precision": 0.5494505494505495,
+        "recall": 0.970873786407767,
+        "auc": 0.6557205406434419
+      },
+      "view1": {
+        "view_name": "시점 E (좌측 후방 45°)",
+        "opt_threshold": 0.4200000000000002,
+        "f1": 0.6967213114754098,
+        "accuracy": 0.6390243902439025,
+        "precision": 0.6028368794326241,
+        "recall": 0.8252427184466019,
+        "auc": 0.6395393108699791
+      }
+    }
+  },
+  "overall_3state": {
+    "effective_f1": 0.6813819577735125,
+    "accuracy": 0.6422413793103449,
+    "coverage": 0.9053658536585366,
+    "uncertainty_rate": 0.09463414634146339,
+    "roc_auc": 0.6765581572434799
+  },
+  "view_audits_3state": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "tau_clean": 0.44000000000000017,
+      "tau_defect": 0.48,
+      "effective_f1": 0.6731707317073171,
+      "coverage": 0.9024390243902439,
+      "uncertainty_rate": 0.09756097560975607,
+      "auc": 0.6720921378260042
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "tau_clean": 0.43000000000000016,
+      "tau_defect": 0.48,
+      "effective_f1": 0.6976744186046512,
+      "coverage": 0.9073170731707317,
+      "uncertainty_rate": 0.09268292682926826,
+      "auc": 0.7130211307824101
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "tau_clean": 0.4600000000000002,
+      "tau_defect": 0.49,
+      "effective_f1": 0.6990291262135923,
+      "coverage": 0.9024390243902439,
+      "uncertainty_rate": 0.09756097560975607,
+      "auc": 0.7129259470778604
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "tau_clean": 0.44000000000000017,
+      "tau_defect": 0.48,
+      "effective_f1": 0.6601941747572816,
+      "coverage": 0.9073170731707317,
+      "uncertainty_rate": 0.09268292682926826,
+      "auc": 0.6557205406434419
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "tau_clean": 0.43000000000000016,
+      "tau_defect": 0.48,
+      "effective_f1": 0.6761904761904762,
+      "coverage": 0.9073170731707317,
+      "uncertainty_rate": 0.09268292682926826,
+      "auc": 0.6395393108699791
+    }
+  },
+  "top_features": [
+    {
+      "name": "lead_foot_heel_contact_stability",
+      "importance": 6.678328639118455
+    },
+    {
+      "name": "eccentric_knee_inward_velocity_peak",
+      "importance": 5.4288647252348525
+    },
+    {
+      "name": "pelvic_rotation_dynamic_range",
+      "importance": 4.982991038251749
+    },
+    {
+      "name": "lead_knee_mediolateral_sway_variance",
+      "importance": 4.601553250573666
+    },
+    {
+      "name": "concentric_knee_rebound_jerk",
+      "importance": 3.9214910742308797
+    },
+    {
+      "name": "knee_trajectory_linearity_rmse",
+      "importance": 3.2159103689399884
+    },
+    {
+      "name": "foot_axis_temporal_stability",
+      "importance": 3.1543358398286343
+    },
+    {
+      "name": "pelvic_cross_torque_coupling",
+      "importance": 3.0988177247599267
+    },
+    {
+      "name": "kinematic_torso_shank_alignment",
+      "importance": 2.666123949519892
+    },
+    {
+      "name": "trunk_pelvis_yaw_torsion_mean",
+      "importance": 2.657042367332579
+    }
+  ]
+}

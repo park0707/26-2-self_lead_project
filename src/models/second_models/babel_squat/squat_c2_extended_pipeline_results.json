@@ -1,0 +1,58 @@
+{
+  "pipeline": "c2_4step_performance_pipeline",
+  "baseline_14d": {
+    "catboost_f1": 80.62
+  },
+  "step2_results": {
+    "CatBoost": {
+      "14d_f1": 80.248833592535,
+      "19d_f1": 80.0,
+      "delta": -0.24883359253499293
+    },
+    "LightGBM": {
+      "14d_f1": 80.31007751937985,
+      "19d_f1": 79.58656330749353,
+      "delta": -0.7235142118863109
+    }
+  },
+  "step3_elite_feats": [
+    "c2_gaze_pitch_min",
+    "c2_gaze_pitch_bottom",
+    "c2_gaze_pitch_drop",
+    "c2_cervical_spine_angle_mean",
+    "c2_cervical_spine_angle_min",
+    "c2_cervical_spine_angle_drop",
+    "c2_head_yaw_asymmetry_mean",
+    "c2_head_yaw_asymmetry_max",
+    "c2_head_roll_tilt_max",
+    "c2_head_to_torso_relative_pitch",
+    "c2_head_acceleration_jerk",
+    "c2_gaze_hysteresis_rmse",
+    "c2_head_forward_protrusion_max",
+    "c2_gaze_relative_to_trunk_mean",
+    "c2_subject_calibrated_gaze_drop",
+    "c2_cervical_velocity_peak_at_nadir",
+    "c2_gaze_coupling_lag",
+    "c2_cervical_hyperextension_ratio"
+  ],
+  "step3_elite_f1": 80.4527,
+  "step3_elite_opt_f1": 81.592,
+  "step3_elite_opt_th": 0.39,
+  "step3_elite_auc": 88.2227,
+  "step4_ambiguity": {
+    "level_counts": {
+      "1": 406,
+      "2": 1381,
+      "3": 52,
+      "4": 135
+    },
+    "level_pcts": {
+      "1": 20.57,
+      "2": 69.96,
+      "3": 2.63,
+      "4": 6.84
+    }
+  },
+  "champion_model": "LightGBM",
+  "champion_feat_dim": 18
+}

@@ -1,0 +1,195 @@
+{
+  "model_name": "sl3_v2",
+  "exercise": "07_사이드_런지",
+  "defect": "c3 (안 굽히는 다리 구부정 / 신전 결함)",
+  "data_selection": "전체 원천 데이터 전수 2,460 시퀀스 (공간 거리 분리 v2)",
+  "total_samples": 2460,
+  "pos_samples": 510,
+  "neg_samples": 1950,
+  "features_dimension": 22,
+  "ensemble_weights": {
+    "lightgbm": 0.1529637467534185,
+    "catboost": 0.648880041844168,
+    "xgboost": 0.19815621140241355
+  },
+  "two_state_metrics": {
+    "ensemble": {
+      "roc_auc": 0.8602001005530416,
+      "f1": 0.6174617461746175,
+      "clean_f1": 0.8884221580467314,
+      "accuracy": 0.8272357723577236,
+      "precision": 0.5707154742096506,
+      "recall": 0.6725490196078432
+    },
+    "lightgbm": {
+      "roc_auc": 0.8454972347913524,
+      "f1": 0.6099009900990099,
+      "clean_f1": 0.89923273657289,
+      "accuracy": 0.8398373983739837,
+      "precision": 0.616,
+      "recall": 0.6039215686274509
+    },
+    "catboost": {
+      "roc_auc": 0.8589089994972348,
+      "f1": 0.6149870801033591,
+      "clean_f1": 0.8810853950518756,
+      "accuracy": 0.8182926829268292,
+      "precision": 0.5483870967741935,
+      "recall": 0.7
+    },
+    "xgboost": {
+      "roc_auc": 0.8525751633986928,
+      "f1": 0.6173752310536045,
+      "clean_f1": 0.8921313183949974,
+      "accuracy": 0.8317073170731707,
+      "precision": 0.583916083916084,
+      "recall": 0.6549019607843137
+    }
+  },
+  "three_state_metrics": {
+    "effective_f1": 0.6853303471444568,
+    "clean_f1": 0.9207334273624823,
+    "accuracy": 0.8733663812528166,
+    "precision": 0.6710526315789473,
+    "recall": 0.700228832951945,
+    "uncertainty_rate": 0.09796747967479674,
+    "coverage": 0.9020325203252033,
+    "view_thresholds": {
+      "view1": {
+        "tau_clean": 0.47,
+        "tau_defect": 0.575
+      },
+      "view2": {
+        "tau_clean": 0.45999999999999996,
+        "tau_defect": 0.655
+      },
+      "view3": {
+        "tau_clean": 0.365,
+        "tau_defect": 0.535
+      },
+      "view4": {
+        "tau_clean": 0.48,
+        "tau_defect": 0.745
+      },
+      "view5": {
+        "tau_clean": 0.44499999999999995,
+        "tau_defect": 0.625
+      }
+    },
+    "view_audits": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 492,
+        "tau_clean": 0.47,
+        "tau_defect": 0.575,
+        "uncertainty_rate": 0.09959349593495935,
+        "effective_f1": 0.6116504854368932,
+        "clean_f1": 0.8823529411764706,
+        "accuracy": 0.8194130925507901,
+        "precision": 0.5431034482758621,
+        "recall": 0.7
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 492,
+        "tau_clean": 0.45999999999999996,
+        "tau_defect": 0.655,
+        "uncertainty_rate": 0.09959349593495935,
+        "effective_f1": 0.7403314917127072,
+        "clean_f1": 0.9333333333333333,
+        "accuracy": 0.8939051918735892,
+        "precision": 0.6907216494845361,
+        "recall": 0.7976190476190477
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 492,
+        "tau_clean": 0.365,
+        "tau_defect": 0.535,
+        "uncertainty_rate": 0.09146341463414634,
+        "effective_f1": 0.723404255319149,
+        "clean_f1": 0.9263456090651558,
+        "accuracy": 0.883668903803132,
+        "precision": 0.6868686868686869,
+        "recall": 0.7640449438202247
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 492,
+        "tau_clean": 0.48,
+        "tau_defect": 0.745,
+        "uncertainty_rate": 0.09959349593495935,
+        "effective_f1": 0.6802721088435374,
+        "clean_f1": 0.9364005412719891,
+        "accuracy": 0.8939051918735892,
+        "precision": 0.847457627118644,
+        "recall": 0.5681818181818182
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 492,
+        "tau_clean": 0.44499999999999995,
+        "tau_defect": 0.625,
+        "uncertainty_rate": 0.09959349593495935,
+        "effective_f1": 0.6783625730994152,
+        "clean_f1": 0.9230769230769231,
+        "accuracy": 0.8758465011286681,
+        "precision": 0.6823529411764706,
+        "recall": 0.6744186046511628
+      }
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "name": "trail_knee_angle_active_mean",
+      "importance": 21.576993838675712
+    },
+    {
+      "rank": 2,
+      "name": "trail_knee_stability_std",
+      "importance": 7.818863837304191
+    },
+    {
+      "rank": 3,
+      "name": "trail_knee_accel_bottom",
+      "importance": 7.7341226172350375
+    },
+    {
+      "rank": 4,
+      "name": "inter_knee_angle_diff_bottom",
+      "importance": 5.372644981964599
+    },
+    {
+      "rank": 5,
+      "name": "inter_knee_angle_diff_min",
+      "importance": 5.039169954428668
+    },
+    {
+      "rank": 6,
+      "name": "trail_hip_knee_ankle_spatial_disp",
+      "importance": 4.827611401950671
+    },
+    {
+      "rank": 7,
+      "name": "lead_knee_angle_bottom",
+      "importance": 4.150278561510253
+    },
+    {
+      "rank": 8,
+      "name": "trail_to_lead_knee_body_dist_ratio",
+      "importance": 4.0109214931684996
+    },
+    {
+      "rank": 9,
+      "name": "coronal_plane_proj_ratio",
+      "importance": 3.8497226086825664
+    },
+    {
+      "rank": 10,
+      "name": "inter_ankle_distance_bottom",
+      "importance": 3.814892912428168
+    }
+  ],
+  "elapsed_seconds": 398.68797540664673
+}

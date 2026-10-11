@@ -1,0 +1,115 @@
+{
+  "model_name": "vidio-health-trainer - Barbell Deadlift d4",
+  "version": "v6_rtmp",
+  "defect_code": "d4",
+  "defect_description": "무릎과 골반이 동시에 펴짐 위반 (Knee-Hip Extension Synchrony, 힙 슈트업)",
+  "status": "FINAL_OFFICIAL_PRODUCTION",
+  "date": "2026-10-09",
+  "weights_bundle_path": "D:\\src\\models\\second_models\\babel_deadlift\\weights_d4_rtmpose\\d4_rtmpose_v6_bundle.pkl",
+  "feature_dim": 27,
+  "features": [
+    "d4_torso_pitch_nadir_deg",
+    "d4_torso_pitch_drop_deg",
+    "d4_torso_pitch_std",
+    "d4_torso_horiz_time_ratio",
+    "d4_torso_pitch_rise_rate",
+    "d4_torso_pitch_peak_norm",
+    "d4_hip_sh_vvr_fp_diff",
+    "d4_hip_wr_vvr_fp_diff",
+    "d4_hip_sh_vvr_peak",
+    "d4_hip_wr_decoupling_std",
+    "d4_accel_lead_fp",
+    "d4_sh_hip_disp_ratio",
+    "d4_knee_hip_corr_ascent",
+    "d4_knee_hip_corr_full",
+    "d4_vel_ratio_first_pull",
+    "d4_vel_ratio_second_pull",
+    "d4_lockout_lag_norm",
+    "d4_knee_rom_deg",
+    "d4_knee_hip_rom_ratio",
+    "d4_mvc_knee_dom_ratio",
+    "d4_mvc_co_ext_ratio",
+    "d4_mvc_hip_dom_ratio",
+    "d4_crp_mean_fp_deg",
+    "d4_crp_std_ascent_deg",
+    "d4_morph_femur_tibia_ratio",
+    "d4_morph_torso_femur_ratio",
+    "d4_is_front_view"
+  ],
+  "performance": {
+    "roc_auc": 90.43,
+    "baseline_fixed_window_3state_f1": 64.84,
+    "calibrated_view_adaptive_3state_f1": 71.64,
+    "coverage": 93.9,
+    "per_view_summary": {
+      "view1_E": {
+        "f1": 78.05,
+        "cov": 85.1,
+        "view_name": "좌측 후방 45도"
+      },
+      "view2_B": {
+        "f1": 70.97,
+        "cov": 82.5,
+        "view_name": "우측 전방 45도"
+      },
+      "view3_C": {
+        "f1": 65.0,
+        "cov": 82.5,
+        "view_name": "정면 0도"
+      },
+      "view4_D": {
+        "f1": 72.73,
+        "cov": 82.5,
+        "view_name": "좌측 전방 45도"
+      },
+      "view5_A": {
+        "f1": 78.26,
+        "cov": 87.7,
+        "view_name": "우측 후방 45도"
+      }
+    }
+  },
+  "optimization": {
+    "level1_temperature_scaling": {
+      "view5": 0.893,
+      "view2": 0.954,
+      "view3": 1.229,
+      "view4": 1.092,
+      "view1": 1.085
+    },
+    "level2_view_thresholds": {
+      "view5": {
+        "tau_norm": 0.2,
+        "tau_def": 0.65
+      },
+      "view2": {
+        "tau_norm": 0.39,
+        "tau_def": 0.75
+      },
+      "view3": {
+        "tau_norm": 0.25,
+        "tau_def": 0.51
+      },
+      "view4": {
+        "tau_norm": 0.24,
+        "tau_def": 0.66
+      },
+      "view1": {
+        "tau_norm": 0.2,
+        "tau_def": 0.68
+      }
+    },
+    "global_thresholds": {
+      "forced_tau": 0.48,
+      "tau_norm": 0.25,
+      "tau_def": 0.58
+    }
+  },
+  "view_taxonomy": {
+    "view5": "시점 A: 우측 후방 (45도)",
+    "view2": "시점 B: 우측 전방 (45도)",
+    "view3": "시점 C: 정면",
+    "view4": "시점 D: 좌측 전방 (45도)",
+    "view1": "시점 E: 좌측 후방 (45도)"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "version": "v11.0",
+  "status": "OFFICIAL_MASTER_PRODUCTION_CHAMPION",
+  "confirmed_at": "2026-09-28",
+  "description": "vidio-health-trainer 바벨 스쿼트 통합 진단 엔진 v11.0 (최종 마스터 챔피언 - 6대 고도화 기술 로드맵 완성형)",
+  "architecture": "View-Conditioned Mixture-of-Experts (MoE) + Exact 16-State Structured Energy Head + c2 v8 Uncertainty Head + Skeletal Normalization Dual-Stream + View Vector Scaling + 14D ST-GCN Temporal Transformer Residual Late Fusion",
+  "engine_module": "babel_squat_integrated_v11.py",
+  "in_channels": 14,
+  "num_joints": 33,
+  "num_frames": 64,
+  "hidden_dim": 64,
+  "num_tf_layers": 2,
+  "nhead": 4,
+  "dropout": 0.20,
+  "total_parameters": 75765,
+  "g_residual_front": 0.08,
+  "g_residual_rear": 0.00,
+  "T_meta": 1.2,
+  "eta": 0.05,
+  "tau_clean": 0.36,
+  "risk_threshold": 0.45,
+  "submodels": {
+    "c1": "BabelSquatC1ModelV11_1 (v11.1 척추 중립)",
+    "c2": "BabelSquatC2ModelV8 (v8.0 불확실성 노이즈 억제)",
+    "c3": "BabelSquatC3ModelV6 (v6.0 + 30% 하지 뼈 정규화 Dual-Stream)",
+    "c4": "BabelSquatC4ModelV5_1 (v5.1 발바닥 고정)"
+  },
+  "final_metrics": {
+    "selective": {
+      "clean_f1": 77.21,
+      "clean_precision": 72.41,
+      "clean_recall": 82.68,
+      "four_defect_emr": 76.42,
+      "retake_rate": 9.98,
+      "coverage": 90.02
+    },
+    "full_force_100": {
+      "clean_f1": 75.09,
+      "clean_precision": 71.33,
+      "clean_recall": 79.26,
+      "four_defect_emr": 72.48,
+      "false_clean_count": 43
+    },
+    "submodels_selective_f1": {
+      "c1": 97.13,
+      "c2": 87.40,
+      "c3": 96.77,
+      "c4": 92.20
+    },
+    "views_clean_f1_selective": {
+      "view5_A": 71.43,
+      "view2_B": 80.70,
+      "view3_C": 85.71,
+      "view4_D": 82.14,
+      "view1_E": 63.83
+    },
+    "views_emr_selective": {
+      "view5_A": 69.63,
+      "view2_B": 76.72,
+      "view3_C": 81.29,
+      "view4_D": 79.96,
+      "view1_E": 73.30
+    }
+  }
+}

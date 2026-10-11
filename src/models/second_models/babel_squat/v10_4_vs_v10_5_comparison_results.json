@@ -1,0 +1,82 @@
+{
+  "version_comparison": "v10.4 vs v10.5",
+  "metrics_selective": {
+    "v10_4": {
+      "clean_f1": 76.92,
+      "clean_precision": 71.92,
+      "clean_recall": 82.68,
+      "four_defect_emr": 76.4,
+      "retake_rate": 10.06,
+      "coverage": 89.94,
+      "c1_f1": 97.08,
+      "c2_f1": 87.39,
+      "c3_f1": 96.77,
+      "c4_f1": 92.2
+    },
+    "v10_5": {
+      "clean_f1": 77.21,
+      "clean_precision": 72.41,
+      "clean_recall": 82.68,
+      "four_defect_emr": 76.42,
+      "retake_rate": 9.98,
+      "coverage": 90.02,
+      "c1_f1": 97.13,
+      "c2_f1": 87.4,
+      "c3_f1": 96.77,
+      "c4_f1": 92.2
+    }
+  },
+  "metrics_full_force": {
+    "v10_4": {
+      "clean_f1": 75.09,
+      "clean_precision": 71.33,
+      "clean_recall": 79.26,
+      "four_defect_emr": 72.51,
+      "false_clean": 43
+    },
+    "v10_5": {
+      "clean_f1": 75.09,
+      "clean_precision": 71.33,
+      "clean_recall": 79.26,
+      "four_defect_emr": 72.48,
+      "false_clean": 43
+    }
+  },
+  "views_detail": {
+    "view5": {
+      "name": "시점 A (우측 후방)",
+      "v10_4_clean_f1": 71.43,
+      "v10_5_clean_f1": 71.43,
+      "v10_4_emr": 69.63,
+      "v10_5_emr": 69.63
+    },
+    "view2": {
+      "name": "시점 B (우측 전방)",
+      "v10_4_clean_f1": 80.7,
+      "v10_5_clean_f1": 80.7,
+      "v10_4_emr": 76.67,
+      "v10_5_emr": 76.72
+    },
+    "view3": {
+      "name": "시점 C (정면)",
+      "v10_4_clean_f1": 84.21,
+      "v10_5_clean_f1": 85.71,
+      "v10_4_emr": 81.12,
+      "v10_5_emr": 81.29
+    },
+    "view4": {
+      "name": "시점 D (좌측 전방)",
+      "v10_4_clean_f1": 82.14,
+      "v10_5_clean_f1": 82.14,
+      "v10_4_emr": 80.08,
+      "v10_5_emr": 79.96
+    },
+    "view1": {
+      "name": "시점 E (좌측 후방)",
+      "v10_4_clean_f1": 63.83,
+      "v10_5_clean_f1": 63.83,
+      "v10_4_emr": 73.3,
+      "v10_5_emr": 73.3
+    }
+  }
+}

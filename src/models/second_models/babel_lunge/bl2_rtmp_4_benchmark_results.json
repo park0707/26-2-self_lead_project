@@ -1,0 +1,83 @@
+{
+  "model_name": "bl2_rtmp_4",
+  "description": "RTMP 2D + Kinematic 3D Reconstruction + v6 SOTA Features",
+  "tau_normal": 0.406,
+  "tau_defect": 0.45,
+  "overall_3state": {
+    "total_samples": 1081,
+    "coverage": 0.902867715078631,
+    "retake_rate": 0.0971322849213691,
+    "selective_defect_f1": 0.5018633540372671,
+    "selective_clean_f1": 0.6503923278116827,
+    "selective_accuracy": 0.5891393442622951,
+    "selective_precision": 0.38476190476190475,
+    "selective_recall": 0.7214285714285714
+  },
+  "view_benchmarks": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9230769230769231,
+        "retake_rate": 0.07692307692307693,
+        "selective_defect_f1": 0.47904191616766467,
+        "selective_clean_f1": 0.6390041493775933,
+        "selective_accuracy": 0.5735294117647058,
+        "selective_precision": 0.37037037037037035,
+        "selective_recall": 0.6779661016949152
+      }
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9230769230769231,
+        "retake_rate": 0.07692307692307693,
+        "selective_defect_f1": 0.5111111111111111,
+        "selective_clean_f1": 0.6140350877192983,
+        "selective_accuracy": 0.5686274509803921,
+        "selective_precision": 0.3865546218487395,
+        "selective_recall": 0.7540983606557377
+      }
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "metrics": {
+        "total_samples": 216,
+        "coverage": 0.9120370370370371,
+        "retake_rate": 0.08796296296296297,
+        "selective_defect_f1": 0.6086956521739131,
+        "selective_clean_f1": 0.7890625,
+        "selective_accuracy": 0.7258883248730964,
+        "selective_precision": 0.5060240963855421,
+        "selective_recall": 0.7636363636363637
+      }
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "metrics": {
+        "total_samples": 212,
+        "coverage": 0.8773584905660378,
+        "retake_rate": 0.12264150943396226,
+        "selective_defect_f1": 0.4931506849315068,
+        "selective_clean_f1": 0.672566371681416,
+        "selective_accuracy": 0.6021505376344086,
+        "selective_precision": 0.3829787234042553,
+        "selective_recall": 0.6923076923076923
+      }
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "metrics": {
+        "total_samples": 211,
+        "coverage": 0.8767772511848341,
+        "retake_rate": 0.12322274881516587,
+        "selective_defect_f1": 0.4367816091954023,
+        "selective_clean_f1": 0.5,
+        "selective_accuracy": 0.4702702702702703,
+        "selective_precision": 0.3140495867768595,
+        "selective_recall": 0.7169811320754716
+      }
+    }
+  }
+}

@@ -1,0 +1,575 @@
+{
+  "timestamp": "2026-10-02 20:20:33",
+  "total_samples": 1035,
+  "base_eval": {
+    "f1_2s": 0.7319727891156462,
+    "acc_2s": 0.8096618357487922,
+    "auc": 0.8799244682965612,
+    "f1_3s": 0.7741007194244605,
+    "acc_3s": 0.8329787234042553,
+    "coverage": 0.9082125603864735,
+    "view_metrics": {
+      "view5": {
+        "view_alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 76.06,
+        "acc_3s": 82.47,
+        "auc": 85.68,
+        "coverage": 93.7
+      },
+      "view2": {
+        "view_alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 86.9,
+        "acc_3s": 90.21,
+        "auc": 93.07,
+        "coverage": 93.7
+      },
+      "view3": {
+        "view_alias": "시점 C (정면 0°)",
+        "f1_3s": 50.49,
+        "acc_3s": 69.28,
+        "auc": 68.53,
+        "coverage": 80.2
+      },
+      "view4": {
+        "view_alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 89.36,
+        "acc_3s": 92.31,
+        "auc": 95.16,
+        "coverage": 94.2
+      },
+      "view1": {
+        "view_alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 76.83,
+        "acc_3s": 80.1,
+        "auc": 88.65,
+        "coverage": 92.3
+      }
+    }
+  },
+  "high_corr_pairs_count": 3,
+  "high_corr_pairs": [
+    {
+      "feature_1": "stiff_d1_is_frontal",
+      "feature_2": "stiff_d1_gate_is_oblique",
+      "idx_1": 24,
+      "idx_2": 26,
+      "abs_correlation": 1.0
+    },
+    {
+      "feature_1": "stiff_d1_bar_midfoot_max_offset",
+      "feature_2": "stiff_d1_sagittal_proj_drift",
+      "idx_1": 6,
+      "idx_2": 20,
+      "abs_correlation": 0.9915
+    },
+    {
+      "feature_1": "stiff_d1_shoulder_wrist_angle_max_deg",
+      "feature_2": "stiff_d1_zero_delta_shoulder_wrist_angle",
+      "idx_1": 12,
+      "idx_2": 34,
+      "abs_correlation": 0.9421
+    }
+  ],
+  "permutation_importance": [
+    {
+      "feature_idx": 21,
+      "feature_name": "stiff_d1_coronal_overlap_deficit",
+      "f1_3s_drop_p": 6.333,
+      "auc_drop_p": 5.406,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 14,
+      "feature_name": "stiff_d1_hip_bar_moment_arm_at_knee",
+      "f1_3s_drop_p": 3.476,
+      "auc_drop_p": 2.491,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 3,
+      "feature_name": "stiff_d1_bar_thigh_dist_mean",
+      "f1_3s_drop_p": 2.7,
+      "auc_drop_p": 2.31,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 37,
+      "feature_name": "stiff_d1_bar_to_midfoot_plumb_drift",
+      "f1_3s_drop_p": 2.502,
+      "auc_drop_p": 1.673,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 10,
+      "feature_name": "stiff_d1_bar_lateral_wobble_std",
+      "f1_3s_drop_p": 0.61,
+      "auc_drop_p": 0.42,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 0,
+      "feature_name": "stiff_d1_bar_shank_dist_max",
+      "f1_3s_drop_p": 0.411,
+      "auc_drop_p": 0.254,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 19,
+      "feature_name": "stiff_d1_knee_pass_timing_norm",
+      "f1_3s_drop_p": 0.41,
+      "auc_drop_p": 0.117,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 22,
+      "feature_name": "stiff_d1_bilateral_wrist_asym",
+      "f1_3s_drop_p": 0.375,
+      "auc_drop_p": 0.065,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 23,
+      "feature_name": "stiff_d1_view_code",
+      "f1_3s_drop_p": 0.354,
+      "auc_drop_p": 0.161,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 16,
+      "feature_name": "stiff_d1_p2_thigh_drag_contact_rate",
+      "f1_3s_drop_p": 0.342,
+      "auc_drop_p": 0.113,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 34,
+      "feature_name": "stiff_d1_zero_delta_shoulder_wrist_angle",
+      "f1_3s_drop_p": 0.321,
+      "auc_drop_p": 0.354,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 11,
+      "feature_name": "stiff_d1_bar_ascent_velocity_smoothness",
+      "f1_3s_drop_p": 0.319,
+      "auc_drop_p": 0.166,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 5,
+      "feature_name": "stiff_d1_bar_midfoot_init_offset",
+      "f1_3s_drop_p": 0.31,
+      "auc_drop_p": 0.239,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 1,
+      "feature_name": "stiff_d1_bar_shank_dist_mean",
+      "f1_3s_drop_p": 0.294,
+      "auc_drop_p": 0.306,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 36,
+      "feature_name": "stiff_d1_anatomical_torso_to_body_ratio",
+      "f1_3s_drop_p": 0.288,
+      "auc_drop_p": 0.063,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 9,
+      "feature_name": "stiff_d1_bar_path_curvature",
+      "f1_3s_drop_p": 0.257,
+      "auc_drop_p": 0.497,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 13,
+      "feature_name": "stiff_d1_shoulder_wrist_angle_mean_deg",
+      "f1_3s_drop_p": 0.255,
+      "auc_drop_p": 0.053,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 8,
+      "feature_name": "stiff_d1_bar_drift_horizontal_std",
+      "f1_3s_drop_p": 0.235,
+      "auc_drop_p": 0.143,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 35,
+      "feature_name": "stiff_d1_anatomical_arm_to_torso_ratio",
+      "f1_3s_drop_p": 0.134,
+      "auc_drop_p": 0.008,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 25,
+      "feature_name": "stiff_d1_is_rear",
+      "f1_3s_drop_p": 0.111,
+      "auc_drop_p": 0.125,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 31,
+      "feature_name": "stiff_d1_gated_ke_signed_x_nadir",
+      "f1_3s_drop_p": 0.073,
+      "auc_drop_p": 0.014,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 24,
+      "feature_name": "stiff_d1_is_frontal",
+      "f1_3s_drop_p": 0.046,
+      "auc_drop_p": 0.034,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 15,
+      "feature_name": "stiff_d1_p1_shank_clearance_rate",
+      "f1_3s_drop_p": 0.023,
+      "auc_drop_p": -0.016,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 2,
+      "feature_name": "stiff_d1_bar_knee_dist_pass",
+      "f1_3s_drop_p": 0.017,
+      "auc_drop_p": 0.129,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 27,
+      "feature_name": "stiff_d1_gated_ke_angle_sek_deg",
+      "f1_3s_drop_p": 0.0,
+      "auc_drop_p": -0.002,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 33,
+      "feature_name": "stiff_d1_zero_delta_bar_shank_mean",
+      "f1_3s_drop_p": -0.024,
+      "auc_drop_p": -0.037,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 17,
+      "feature_name": "stiff_d1_eccentric_bar_drift_max",
+      "f1_3s_drop_p": -0.047,
+      "auc_drop_p": 0.036,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 18,
+      "feature_name": "stiff_d1_peak_drift_timing_norm",
+      "f1_3s_drop_p": -0.062,
+      "auc_drop_p": -0.003,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 32,
+      "feature_name": "stiff_d1_zero_delta_bar_shank_max",
+      "f1_3s_drop_p": -0.065,
+      "auc_drop_p": -0.007,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 12,
+      "feature_name": "stiff_d1_shoulder_wrist_angle_max_deg",
+      "f1_3s_drop_p": -0.089,
+      "auc_drop_p": 0.1,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 26,
+      "feature_name": "stiff_d1_gate_is_oblique",
+      "f1_3s_drop_p": -0.167,
+      "auc_drop_p": 0.014,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 30,
+      "feature_name": "stiff_d1_gated_ke_z_diff_nadir",
+      "f1_3s_drop_p": -0.239,
+      "auc_drop_p": 0.063,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 4,
+      "feature_name": "stiff_d1_bar_thigh_dist_max",
+      "f1_3s_drop_p": -0.249,
+      "auc_drop_p": 0.104,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 7,
+      "feature_name": "stiff_d1_bar_leg_contact_deficit_ratio",
+      "f1_3s_drop_p": -0.255,
+      "auc_drop_p": 0.114,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 20,
+      "feature_name": "stiff_d1_sagittal_proj_drift",
+      "f1_3s_drop_p": -0.255,
+      "auc_drop_p": -0.002,
+      "status": "NEUTRAL (경계/중립)"
+    },
+    {
+      "feature_idx": 28,
+      "feature_name": "stiff_d1_gated_ke_width_ratio_nadir",
+      "f1_3s_drop_p": -0.315,
+      "auc_drop_p": -0.012,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 29,
+      "feature_name": "stiff_d1_gated_ke_dist_nadir",
+      "f1_3s_drop_p": -0.37,
+      "auc_drop_p": -0.006,
+      "status": "BENEFICIAL (유익 기여)"
+    },
+    {
+      "feature_idx": 6,
+      "feature_name": "stiff_d1_bar_midfoot_max_offset",
+      "f1_3s_drop_p": -0.376,
+      "auc_drop_p": -0.007,
+      "status": "BENEFICIAL (유익 기여)"
+    }
+  ],
+  "harmful_candidates_count": 14,
+  "lofo_results": [
+    {
+      "dropped_idx": 27,
+      "dropped_feature": "stiff_d1_gated_ke_angle_sek_deg",
+      "f1_3s_after": 77.59,
+      "auc_after": 87.91,
+      "diff_f1_3s_p": 0.176,
+      "diff_auc_p": -0.087,
+      "coverage": 90.8,
+      "view_regressions": [
+        "시점 D (좌측 전방 45°) (-3.1%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 33,
+      "dropped_feature": "stiff_d1_zero_delta_bar_shank_mean",
+      "f1_3s_after": 77.65,
+      "auc_after": 87.96,
+      "diff_f1_3s_p": 0.24,
+      "diff_auc_p": -0.032,
+      "coverage": 90.6,
+      "view_regressions": [
+        "시점 D (좌측 전방 45°) (-2.0%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 17,
+      "dropped_feature": "stiff_d1_eccentric_bar_drift_max",
+      "f1_3s_after": 78.37,
+      "auc_after": 87.9,
+      "diff_f1_3s_p": 0.964,
+      "diff_auc_p": -0.09,
+      "coverage": 89.7,
+      "view_regressions": [],
+      "decision": "REMOVE_RECOMMENDED"
+    },
+    {
+      "dropped_idx": 18,
+      "dropped_feature": "stiff_d1_peak_drift_timing_norm",
+      "f1_3s_after": 77.91,
+      "auc_after": 87.9,
+      "diff_f1_3s_p": 0.497,
+      "diff_auc_p": -0.095,
+      "coverage": 90.1,
+      "view_regressions": [
+        "시점 B (우측 전방 45°) (-2.3%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 32,
+      "dropped_feature": "stiff_d1_zero_delta_bar_shank_max",
+      "f1_3s_after": 77.37,
+      "auc_after": 87.59,
+      "diff_f1_3s_p": -0.038,
+      "diff_auc_p": -0.398,
+      "coverage": 89.9,
+      "view_regressions": [
+        "시점 D (좌측 전방 45°) (-3.0%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 12,
+      "dropped_feature": "stiff_d1_shoulder_wrist_angle_max_deg",
+      "f1_3s_after": 78.22,
+      "auc_after": 88.06,
+      "diff_f1_3s_p": 0.813,
+      "diff_auc_p": 0.063,
+      "coverage": 91.0,
+      "view_regressions": [],
+      "decision": "REMOVE_RECOMMENDED"
+    },
+    {
+      "dropped_idx": 26,
+      "dropped_feature": "stiff_d1_gate_is_oblique",
+      "f1_3s_after": 77.54,
+      "auc_after": 87.89,
+      "diff_f1_3s_p": 0.129,
+      "diff_auc_p": -0.1,
+      "coverage": 90.4,
+      "view_regressions": [
+        "시점 D (좌측 전방 45°) (-2.0%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 30,
+      "dropped_feature": "stiff_d1_gated_ke_z_diff_nadir",
+      "f1_3s_after": 77.55,
+      "auc_after": 87.91,
+      "diff_f1_3s_p": 0.141,
+      "diff_auc_p": -0.079,
+      "coverage": 90.1,
+      "view_regressions": [
+        "시점 D (좌측 전방 45°) (-2.0%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 4,
+      "dropped_feature": "stiff_d1_bar_thigh_dist_max",
+      "f1_3s_after": 78.1,
+      "auc_after": 88.15,
+      "diff_f1_3s_p": 0.688,
+      "diff_auc_p": 0.156,
+      "coverage": 89.4,
+      "view_regressions": [],
+      "decision": "REMOVE_RECOMMENDED"
+    },
+    {
+      "dropped_idx": 7,
+      "dropped_feature": "stiff_d1_bar_leg_contact_deficit_ratio",
+      "f1_3s_after": 78.55,
+      "auc_after": 88.37,
+      "diff_f1_3s_p": 1.141,
+      "diff_auc_p": 0.377,
+      "coverage": 89.7,
+      "view_regressions": [
+        "시점 B (우측 전방 45°) (-1.6%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 20,
+      "dropped_feature": "stiff_d1_sagittal_proj_drift",
+      "f1_3s_after": 77.99,
+      "auc_after": 87.92,
+      "diff_f1_3s_p": 0.576,
+      "diff_auc_p": -0.076,
+      "coverage": 90.1,
+      "view_regressions": [
+        "시점 B (우측 전방 45°) (-2.1%p)"
+      ],
+      "decision": "RETAIN (유지 필수)"
+    },
+    {
+      "dropped_idx": 28,
+      "dropped_feature": "stiff_d1_gated_ke_width_ratio_nadir",
+      "f1_3s_after": 78.37,
+      "auc_after": 87.99,
+      "diff_f1_3s_p": 0.964,
+      "diff_auc_p": -0.001,
+      "coverage": 89.9,
+      "view_regressions": [],
+      "decision": "REMOVE_RECOMMENDED"
+    },
+    {
+      "dropped_idx": 29,
+      "dropped_feature": "stiff_d1_gated_ke_dist_nadir",
+      "f1_3s_after": 77.76,
+      "auc_after": 88.07,
+      "diff_f1_3s_p": 0.351,
+      "diff_auc_p": 0.075,
+      "coverage": 89.4,
+      "view_regressions": [],
+      "decision": "REMOVE_RECOMMENDED"
+    },
+    {
+      "dropped_idx": 6,
+      "dropped_feature": "stiff_d1_bar_midfoot_max_offset",
+      "f1_3s_after": 78.52,
+      "auc_after": 88.49,
+      "diff_f1_3s_p": 1.111,
+      "diff_auc_p": 0.495,
+      "coverage": 90.6,
+      "view_regressions": [],
+      "decision": "REMOVE_RECOMMENDED"
+    }
+  ],
+  "pruning_eval": {
+    "f1_2s": 0.7391304347826086,
+    "acc_2s": 0.8144927536231884,
+    "auc": 0.8806678592725103,
+    "f1_3s": 0.7782546494992847,
+    "acc_3s": 0.8342245989304813,
+    "coverage": 0.9033816425120773,
+    "view_metrics": {
+      "view5": {
+        "view_alias": "시점 A (우측 후방 45°)",
+        "f1_3s": 76.06,
+        "acc_3s": 82.38,
+        "auc": 85.72,
+        "coverage": 93.2
+      },
+      "view2": {
+        "view_alias": "시점 B (우측 전방 45°)",
+        "f1_3s": 85.71,
+        "acc_3s": 89.06,
+        "auc": 92.74,
+        "coverage": 92.8
+      },
+      "view3": {
+        "view_alias": "시점 C (정면 0°)",
+        "f1_3s": 57.41,
+        "acc_3s": 72.62,
+        "auc": 71.22,
+        "coverage": 81.2
+      },
+      "view4": {
+        "view_alias": "시점 D (좌측 전방 45°)",
+        "f1_3s": 89.21,
+        "acc_3s": 92.23,
+        "auc": 95.45,
+        "coverage": 93.2
+      },
+      "view1": {
+        "view_alias": "시점 E (좌측 후방 45°)",
+        "f1_3s": 76.07,
+        "acc_3s": 79.37,
+        "auc": 88.28,
+        "coverage": 91.3
+      }
+    }
+  },
+  "prune_candidate_indices": [
+    17,
+    12,
+    4,
+    28,
+    29,
+    6
+  ],
+  "prune_candidate_names": [
+    "stiff_d1_eccentric_bar_drift_max",
+    "stiff_d1_shoulder_wrist_angle_max_deg",
+    "stiff_d1_bar_thigh_dist_max",
+    "stiff_d1_gated_ke_width_ratio_nadir",
+    "stiff_d1_gated_ke_dist_nadir",
+    "stiff_d1_bar_midfoot_max_offset"
+  ]
+}

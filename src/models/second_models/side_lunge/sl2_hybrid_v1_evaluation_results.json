@@ -1,0 +1,100 @@
+{
+  "project": "vidio-health-trainer",
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "model_name": "sl2_hybrid_v1",
+  "defect_code": "c2",
+  "defect_name": "몸통·발·무릎 방향 불일치",
+  "features_dimension": 86,
+  "total_samples": 4130,
+  "metrics_2state": {
+    "roc_auc": 79.63,
+    "forced_f1": 51.9,
+    "forced_prec": 46.12,
+    "forced_rec": 59.35,
+    "forced_acc": 79.49,
+    "pre_ece": 15.62
+  },
+  "calibration": {
+    "optimal_temperature": 0.6734,
+    "post_ece": 12.07
+  },
+  "metrics_3state": {
+    "sel_f1": 54.61,
+    "sel_prec": 50.12,
+    "sel_rec": 59.97,
+    "sel_acc": 82.14,
+    "coverage": 90.82,
+    "retake": 9.18
+  },
+  "view_audits": {
+    "view5": {
+      "alias": "시점 A: 우측 후방 (45도)",
+      "tau_clean": 0.445,
+      "tau_defect": 0.529,
+      "sel_f1": 44.59,
+      "sel_prec": 40.72,
+      "sel_rec": 49.28,
+      "sel_acc": 77.73,
+      "coverage": 91.89,
+      "retake": 8.11
+    },
+    "view2": {
+      "alias": "시점 B: 우측 전방 (45도)",
+      "tau_clean": 0.433,
+      "tau_defect": 0.602,
+      "sel_f1": 66.91,
+      "sel_prec": 61.18,
+      "sel_rec": 73.81,
+      "sel_acc": 87.65,
+      "coverage": 90.19,
+      "retake": 9.81
+    },
+    "view3": {
+      "alias": "시점 C: 정면 (0도)",
+      "tau_clean": 0.445,
+      "tau_defect": 0.558,
+      "sel_f1": 48.7,
+      "sel_prec": 44.38,
+      "sel_rec": 53.96,
+      "sel_acc": 78.96,
+      "coverage": 90.92,
+      "retake": 9.08
+    },
+    "view4": {
+      "alias": "시점 D: 좌측 전방 (45도)",
+      "tau_clean": 0.48,
+      "tau_defect": 0.66,
+      "sel_f1": 63.11,
+      "sel_prec": 66.38,
+      "sel_rec": 60.16,
+      "sel_acc": 87.95,
+      "coverage": 90.44,
+      "retake": 9.56
+    },
+    "view1": {
+      "alias": "시점 E: 좌측 후방 (45도)",
+      "tau_clean": 0.41,
+      "tau_defect": 0.5,
+      "sel_f1": 52.79,
+      "sel_prec": 45.0,
+      "sel_rec": 63.83,
+      "sel_acc": 78.5,
+      "coverage": 90.68,
+      "retake": 9.32
+    }
+  },
+  "comparisons": {
+    "rtmp_sl2_rtmp_1": {
+      "3s_f1": 22.54,
+      "retake": 8.86,
+      "roc_auc": 73.86,
+      "delta_f1": 32.07
+    },
+    "mediapipe_sl2_v7": {
+      "3s_f1": 50.93,
+      "retake": 9.15,
+      "roc_auc": 77.94,
+      "delta_f1": 3.68
+    }
+  }
+}

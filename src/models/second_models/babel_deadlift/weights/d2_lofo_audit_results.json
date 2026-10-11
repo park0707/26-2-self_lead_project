@@ -1,0 +1,395 @@
+{
+  "base_auc": 0.644105461393597,
+  "base_f1": 42.72727272727273,
+  "high_corr_pairs": [
+    [
+      "world_kawr_p10",
+      "world_kawr_p25",
+      0.9099511125637388
+    ],
+    [
+      "world_kawr_p25",
+      "can_kawr_p25",
+      0.8769053097842792
+    ],
+    [
+      "world_kawr_p50",
+      "can_kawr_p50",
+      0.9999999999991738
+    ],
+    [
+      "can_kawr_p10",
+      "can_kawr_p25",
+      0.9517426945581723
+    ],
+    [
+      "world_valgus_abs_max",
+      "phase1_first_pull_ka_min",
+      0.8521957938952492
+    ]
+  ],
+  "lofo_results": [
+    {
+      "index": 0,
+      "name": "world_kawr_min",
+      "auc_without": 0.6340112994350282,
+      "f1_without": 41.935483870967744,
+      "delta_auc": -0.010094161958568826,
+      "delta_f1": -0.7917888563049829
+    },
+    {
+      "index": 1,
+      "name": "world_kawr_mean",
+      "auc_without": 0.6436911487758945,
+      "f1_without": 43.946188340807176,
+      "delta_auc": -0.00041431261770252803,
+      "delta_f1": 1.218915613534449
+    },
+    {
+      "index": 2,
+      "name": "world_kawr_p10",
+      "auc_without": 0.6184180790960452,
+      "f1_without": 41.66666666666667,
+      "delta_auc": -0.025687382297551853,
+      "delta_f1": -1.0606060606060552
+    },
+    {
+      "index": 3,
+      "name": "world_kawr_p25",
+      "auc_without": 0.6422975517890772,
+      "f1_without": 42.91497975708502,
+      "delta_auc": -0.0018079096045198195,
+      "delta_f1": 0.18770702981229448
+    },
+    {
+      "index": 4,
+      "name": "world_kawr_p50",
+      "auc_without": 0.6334463276836158,
+      "f1_without": 42.17252396166134,
+      "delta_auc": -0.010659133709981283,
+      "delta_f1": -0.5547487656113859
+    },
+    {
+      "index": 5,
+      "name": "can_kawr_min",
+      "auc_without": 0.6269679849340867,
+      "f1_without": 41.44144144144144,
+      "delta_auc": -0.01713747645951036,
+      "delta_f1": -1.2858312858312857
+    },
+    {
+      "index": 6,
+      "name": "can_kawr_mean",
+      "auc_without": 0.6426741996233521,
+      "f1_without": 42.857142857142854,
+      "delta_auc": -0.0014312617702448849,
+      "delta_f1": 0.12987012987012747
+    },
+    {
+      "index": 7,
+      "name": "can_kawr_p10",
+      "auc_without": 0.6439924670433145,
+      "f1_without": 43.18181818181818,
+      "delta_auc": -0.00011299435028255811,
+      "delta_f1": 0.45454545454545325
+    },
+    {
+      "index": 8,
+      "name": "can_kawr_p25",
+      "auc_without": 0.6433521657250472,
+      "f1_without": 43.866171003717476,
+      "delta_auc": -0.0007532956685498693,
+      "delta_f1": 1.138898276444749
+    },
+    {
+      "index": 9,
+      "name": "can_kawr_p50",
+      "auc_without": 0.6416949152542373,
+      "f1_without": 43.02788844621514,
+      "delta_auc": -0.0024105461393597594,
+      "delta_f1": 0.3006157189424101
+    },
+    {
+      "index": 10,
+      "name": "world_valgus_abs_max",
+      "auc_without": 0.6502448210922785,
+      "f1_without": 43.31797235023041,
+      "delta_auc": 0.0061393596986815124,
+      "delta_f1": 0.5906996229576862
+    },
+    {
+      "index": 11,
+      "name": "can_valgus_abs_max",
+      "auc_without": 0.6390583804143126,
+      "f1_without": 42.857142857142854,
+      "delta_auc": -0.005047080979284413,
+      "delta_f1": 0.12987012987012747
+    },
+    {
+      "index": 12,
+      "name": "phase0_setup_ka_ratio_min",
+      "auc_without": 0.6401129943502826,
+      "f1_without": 42.857142857142854,
+      "delta_auc": -0.003992467043314463,
+      "delta_f1": 0.12987012987012747
+    },
+    {
+      "index": 13,
+      "name": "phase1_first_pull_ka_min",
+      "auc_without": 0.6217702448210922,
+      "f1_without": 42.53393665158371,
+      "delta_auc": -0.022335216572504812,
+      "delta_f1": -0.19333607568901812
+    },
+    {
+      "index": 14,
+      "name": "phase_delta_ka_pull_drop",
+      "auc_without": 0.6515254237288135,
+      "f1_without": 44.28044280442804,
+      "delta_auc": 0.007419962335216468,
+      "delta_f1": 1.5531700771553147
+    },
+    {
+      "index": 15,
+      "name": "fppa_3d_valgus_angle_max",
+      "auc_without": 0.6378154425612053,
+      "f1_without": 43.30708661417323,
+      "delta_auc": -0.006290018832391775,
+      "delta_f1": 0.579813886900503
+    },
+    {
+      "index": 16,
+      "name": "ankle_internal_rotation_mismatch",
+      "auc_without": 0.6383050847457628,
+      "f1_without": 44.65408805031446,
+      "delta_auc": -0.005800376647834282,
+      "delta_f1": 1.9268153230417369
+    },
+    {
+      "index": 17,
+      "name": "arm_knee_min_distance",
+      "auc_without": 0.6515630885122411,
+      "f1_without": 44.303797468354425,
+      "delta_auc": 0.007457627118644061,
+      "delta_f1": 1.5765247410816983
+    },
+    {
+      "index": 18,
+      "name": "collapse_integral",
+      "auc_without": 0.644406779661017,
+      "f1_without": 43.425076452599384,
+      "delta_auc": 0.0003013182674199699,
+      "delta_f1": 0.6978037253266578
+    },
+    {
+      "index": 19,
+      "name": "persistent_fraction",
+      "auc_without": 0.6442937853107344,
+      "f1_without": 44.26229508196721,
+      "delta_auc": 0.0001883239171374118,
+      "delta_f1": 1.5350223546944832
+    },
+    {
+      "index": 20,
+      "name": "bilateral_asymmetry_max",
+      "auc_without": 0.6540112994350282,
+      "f1_without": 44.15584415584416,
+      "delta_auc": 0.009905838041431192,
+      "delta_f1": 1.4285714285714306
+    },
+    {
+      "index": 21,
+      "name": "foot_dev_pull_p90",
+      "auc_without": 0.631638418079096,
+      "f1_without": 42.99065420560748,
+      "delta_auc": -0.012467043314500992,
+      "delta_f1": 0.26338147833475034
+    },
+    {
+      "index": 22,
+      "name": "valgus_accel_snap_peak",
+      "auc_without": 0.6450470809792844,
+      "f1_without": 43.956043956043956,
+      "delta_auc": 0.0009416195856873921,
+      "delta_f1": 1.2287712287712296
+    },
+    {
+      "index": 23,
+      "name": "dev_foot_left_p90",
+      "auc_without": 0.6429378531073446,
+      "f1_without": 43.343653250774,
+      "delta_auc": -0.0011676082862523973,
+      "delta_f1": 0.6163805235012703
+    },
+    {
+      "index": 24,
+      "name": "dev_foot_right_p90",
+      "auc_without": 0.6402636534839925,
+      "f1_without": 43.343653250774,
+      "delta_auc": -0.0038418079096045332,
+      "delta_f1": 0.6163805235012703
+    }
+  ],
+  "harmful_features": [
+    {
+      "index": 16,
+      "name": "ankle_internal_rotation_mismatch",
+      "auc_without": 0.6383050847457628,
+      "f1_without": 44.65408805031446,
+      "delta_auc": -0.005800376647834282,
+      "delta_f1": 1.9268153230417369
+    },
+    {
+      "index": 17,
+      "name": "arm_knee_min_distance",
+      "auc_without": 0.6515630885122411,
+      "f1_without": 44.303797468354425,
+      "delta_auc": 0.007457627118644061,
+      "delta_f1": 1.5765247410816983
+    },
+    {
+      "index": 14,
+      "name": "phase_delta_ka_pull_drop",
+      "auc_without": 0.6515254237288135,
+      "f1_without": 44.28044280442804,
+      "delta_auc": 0.007419962335216468,
+      "delta_f1": 1.5531700771553147
+    },
+    {
+      "index": 19,
+      "name": "persistent_fraction",
+      "auc_without": 0.6442937853107344,
+      "f1_without": 44.26229508196721,
+      "delta_auc": 0.0001883239171374118,
+      "delta_f1": 1.5350223546944832
+    },
+    {
+      "index": 20,
+      "name": "bilateral_asymmetry_max",
+      "auc_without": 0.6540112994350282,
+      "f1_without": 44.15584415584416,
+      "delta_auc": 0.009905838041431192,
+      "delta_f1": 1.4285714285714306
+    },
+    {
+      "index": 22,
+      "name": "valgus_accel_snap_peak",
+      "auc_without": 0.6450470809792844,
+      "f1_without": 43.956043956043956,
+      "delta_auc": 0.0009416195856873921,
+      "delta_f1": 1.2287712287712296
+    },
+    {
+      "index": 1,
+      "name": "world_kawr_mean",
+      "auc_without": 0.6436911487758945,
+      "f1_without": 43.946188340807176,
+      "delta_auc": -0.00041431261770252803,
+      "delta_f1": 1.218915613534449
+    },
+    {
+      "index": 8,
+      "name": "can_kawr_p25",
+      "auc_without": 0.6433521657250472,
+      "f1_without": 43.866171003717476,
+      "delta_auc": -0.0007532956685498693,
+      "delta_f1": 1.138898276444749
+    },
+    {
+      "index": 18,
+      "name": "collapse_integral",
+      "auc_without": 0.644406779661017,
+      "f1_without": 43.425076452599384,
+      "delta_auc": 0.0003013182674199699,
+      "delta_f1": 0.6978037253266578
+    },
+    {
+      "index": 23,
+      "name": "dev_foot_left_p90",
+      "auc_without": 0.6429378531073446,
+      "f1_without": 43.343653250774,
+      "delta_auc": -0.0011676082862523973,
+      "delta_f1": 0.6163805235012703
+    },
+    {
+      "index": 24,
+      "name": "dev_foot_right_p90",
+      "auc_without": 0.6402636534839925,
+      "f1_without": 43.343653250774,
+      "delta_auc": -0.0038418079096045332,
+      "delta_f1": 0.6163805235012703
+    },
+    {
+      "index": 10,
+      "name": "world_valgus_abs_max",
+      "auc_without": 0.6502448210922785,
+      "f1_without": 43.31797235023041,
+      "delta_auc": 0.0061393596986815124,
+      "delta_f1": 0.5906996229576862
+    },
+    {
+      "index": 15,
+      "name": "fppa_3d_valgus_angle_max",
+      "auc_without": 0.6378154425612053,
+      "f1_without": 43.30708661417323,
+      "delta_auc": -0.006290018832391775,
+      "delta_f1": 0.579813886900503
+    },
+    {
+      "index": 7,
+      "name": "can_kawr_p10",
+      "auc_without": 0.6439924670433145,
+      "f1_without": 43.18181818181818,
+      "delta_auc": -0.00011299435028255811,
+      "delta_f1": 0.45454545454545325
+    },
+    {
+      "index": 9,
+      "name": "can_kawr_p50",
+      "auc_without": 0.6416949152542373,
+      "f1_without": 43.02788844621514,
+      "delta_auc": -0.0024105461393597594,
+      "delta_f1": 0.3006157189424101
+    },
+    {
+      "index": 21,
+      "name": "foot_dev_pull_p90",
+      "auc_without": 0.631638418079096,
+      "f1_without": 42.99065420560748,
+      "delta_auc": -0.012467043314500992,
+      "delta_f1": 0.26338147833475034
+    },
+    {
+      "index": 3,
+      "name": "world_kawr_p25",
+      "auc_without": 0.6422975517890772,
+      "f1_without": 42.91497975708502,
+      "delta_auc": -0.0018079096045198195,
+      "delta_f1": 0.18770702981229448
+    },
+    {
+      "index": 6,
+      "name": "can_kawr_mean",
+      "auc_without": 0.6426741996233521,
+      "f1_without": 42.857142857142854,
+      "delta_auc": -0.0014312617702448849,
+      "delta_f1": 0.12987012987012747
+    },
+    {
+      "index": 12,
+      "name": "phase0_setup_ka_ratio_min",
+      "auc_without": 0.6401129943502826,
+      "f1_without": 42.857142857142854,
+      "delta_auc": -0.003992467043314463,
+      "delta_f1": 0.12987012987012747
+    },
+    {
+      "index": 11,
+      "name": "can_valgus_abs_max",
+      "auc_without": 0.6390583804143126,
+      "f1_without": 42.857142857142854,
+      "delta_auc": -0.005047080979284413,
+      "delta_f1": 0.12987012987012747
+    }
+  ]
+}

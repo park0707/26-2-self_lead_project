@@ -1,0 +1,130 @@
+{
+  "total_samples": 1906,
+  "clean_samples": 125,
+  "defect_samples": 1781,
+  "single_model_metrics": {
+    "c1": {
+      "f1": 72.73,
+      "precision": 75.76,
+      "recall": 69.92,
+      "accuracy": 74.66,
+      "specificity": 79.09,
+      "bacc": 74.51,
+      "roc_auc": 81.56,
+      "tn": 779,
+      "fp": 206,
+      "fn": 277,
+      "tp": 644
+    },
+    "c2": {
+      "f1": 85.85,
+      "precision": 87.96,
+      "recall": 83.84,
+      "accuracy": 86.1,
+      "specificity": 88.38,
+      "bacc": 86.11,
+      "roc_auc": 93.91,
+      "tn": 837,
+      "fp": 110,
+      "fn": 155,
+      "tp": 804
+    },
+    "c3": {
+      "f1": 90.57,
+      "precision": 90.91,
+      "recall": 90.24,
+      "accuracy": 90.61,
+      "specificity": 90.98,
+      "bacc": 90.61,
+      "roc_auc": 96.81,
+      "tn": 867,
+      "fp": 86,
+      "fn": 93,
+      "tp": 860
+    },
+    "c4": {
+      "f1": 89.7,
+      "precision": 91.38,
+      "recall": 88.07,
+      "accuracy": 90.03,
+      "specificity": 91.93,
+      "bacc": 90.0,
+      "roc_auc": 95.94,
+      "tn": 889,
+      "fp": 78,
+      "fn": 112,
+      "tp": 827
+    }
+  },
+  "hard_or_comparison": {
+    "f1": 96.81,
+    "precision": 96.49,
+    "recall": 97.14,
+    "accuracy": 94.02,
+    "specificity": 49.6,
+    "tn": 62,
+    "fp": 63,
+    "fn": 51,
+    "tp": 1730
+  },
+  "soft_fusion_metrics": {
+    "f1": 97.12,
+    "precision": 97.78,
+    "recall": 96.46,
+    "accuracy": 94.65,
+    "specificity": 68.8,
+    "bacc": 82.63,
+    "roc_auc": 94.36,
+    "tn": 86,
+    "fp": 39,
+    "fn": 63,
+    "tp": 1718
+  },
+  "best_threshold_clean": 0.79,
+  "multi_label_metrics": {
+    "exact_match_ratio": 53.83,
+    "hamming_loss": 14.65,
+    "macro_f1": 84.71,
+    "micro_f1": 85.35
+  },
+  "counts_analysis": {
+    "0": {
+      "count": 125,
+      "overall_accuracy": 68.8,
+      "exact_match_ratio": 49.6,
+      "slot_accuracy": 86.2
+    },
+    "1": {
+      "count": 485,
+      "overall_accuracy": 92.99,
+      "exact_match_ratio": 61.86,
+      "slot_accuracy": 87.73
+    },
+    "2": {
+      "count": 717,
+      "overall_accuracy": 96.37,
+      "exact_match_ratio": 58.16,
+      "slot_accuracy": 86.68
+    },
+    "3": {
+      "count": 463,
+      "overall_accuracy": 99.35,
+      "exact_match_ratio": 45.14,
+      "slot_accuracy": 82.61
+    },
+    "4": {
+      "count": 116,
+      "overall_accuracy": 100.0,
+      "exact_match_ratio": 32.76,
+      "slot_accuracy": 77.16
+    }
+  },
+  "view_analysis": {
+    "view1": {
+      "samples": 1906,
+      "overall_f1": 97.12,
+      "exact_match": 53.83,
+      "hamming_loss": 14.65
+    }
+  }
+}

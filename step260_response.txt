@@ -1,0 +1,38 @@
+<!-- GOAL_COMPLETE -->
+
+# `vidio-health-trainer` 사이드 런지 전 모델 앞/뒷다리 판별 c3 공간 거리 엔진 통합 및 신규 버전 전수 재학습·평가 완료 보고
+
+사용자님의 지시(`/goal`, `/harness-engineering`)에 따라, 사이드 런지 5대 세부 오류 모델($c_1 \sim c_5$)의 앞다리(Lead/Working) 및 뒷다리(Trail/Standing) 구분 알고리즘을 **$c_3$ 챔피언 모델의 '골반 중심 대비 공간 거리 기반 분리 엔진(Spatial Distance Leg Separation)'으로 전수 일원화**하고, 신규 버전 모델 구축·5-Fold 교차검증·다차원 성능 감사 및 공식 Word 보고서(`.docx`) 배포까지 완벽하게 완수하였습니다.
+
+---
+
+## 1. 핵심 개선 배경 및 생체역학적 메커니즘
+
+### 1.1 기존 방식의 한계 및 결함 진단
+- **기존 발목 Z축 변위 방식 ($c_1$ 구버전)**:
+  - 카메라 전/후 깊이($Z$)를 기준으로 앞다리를 판별하여, 카메라 정면 뷰(**시점 C / view3**)에서 $Z$축 변위가 거의 0에 수렴해 극심한 다리 뒤바뀜(Swapping) 발생.
+- **기존 무릎 굴곡 각도 비교 방식 ($c_2, c_4$ 구버전)**:
+  - 딥 스쿼트나 유연성 부족으로 **신전 다리까지 함께 굽히는 결함 수행자**의 경우, 양 무릎의 각도 차이가 $5^\circ$ 미만으로 좁혀져 약 13.7%의 시퀀스에서 작업 다리와 지지 다리가 반대로 인식되는 오류 초래.
+- **개별 모듈별 최하사점(Lowest Point) 비동기화**:
+  - $c_1 \sim c_5$ 각 모듈이 독립적으로 최하사점을 산출함에 따라, 동일한 프레임 시퀀스 내에서도 모델마다 다리 판정이 어긋나는 파편화 발생.
+
+### 1.2 $c_3$ 공간 거리 기반 표준 분리 엔진의 수학적 원리
+사이드 런지는 **관상면(Coronal Plane, X축)을 중심으로 체중이 횡방향으로 이동하는 운동**입니다. 결함 여부와 무관하게 인체 중심인 골반(Pelvis Center)은 반드시 체중을 지지하는 작업 다리(앞다리) 발목 방향으로 강
+<truncated 4767 bytes>
+간거리_다리분리_전수통합_신규버전_성능평가보고서.docx)
+   - **보조 마크다운**: [`D:\자주프 문서\6주차\사이드런지_c3공간거리_다리분리_전수통합_신규버전_성능평가보고서.md`](file:///D:/자주프%20문서/6주차/사이드런지_c3공간거리_다리분리_전수통합_신규버전_성능평가보고서.md)
+2. **공통 다리 분리 및 피처 추출 모듈**:
+   - 공통 분리 엔진: [`d:\src\features\side_lunge_spatial_leg_separator.py`](file:///d:/src/features/side_lunge_spatial_leg_separator.py)
+   - $c_1$ (30D): [`d:\src\features\side_lunge_c1_features_v5.py`](file:///d:/src/features/side_lunge_c1_features_v5.py)
+   - $c_2$ (18D): [`d:\src\models\second_models\side_lunge\side_lunge_c2_features_v2.py`](file:///d:/src/models/second_models/side_lunge/side_lunge_c2_features_v2.py)
+   - $c_3$ (22D): [`d:\src\features\side_lunge_c3_features_v2.py`](file:///d:/src/features/side_lunge_c3_features_v2.py)
+   - $c_4$ (24D): [`d:\src\features\side_lunge_c4_features_v4.py`](file:///d:/src/features/side_lunge_c4_features_v4.py)
+   - $c_5$ (36D): [`d:\src\features\side_lunge_c5_features_v6.py`](file:///d:/src/features/side_lunge_c5_features_v6.py)
+3. **훈련 및 평가 스크립트**:
+   - [`sl1_v3.py`](file:///d:/src/models/second_models/side_lunge/sl1_v3.py), [`sl2_v3.py`](file:///d:/src/models/second_models/side_lunge/sl2_v3.py), [`sl3_v2.py`](file:///d:/src/models/second_models/side_lunge/sl3_v2.py), [`sl4_v3.py`](file:///d:/src/models/second_models/side_lunge/sl4_v3.py), [`sl5_v6.py`](file:///d:/src/models/second_models/side_lunge/sl5_v6.py)
+4. **학습된 가중치 번들**:
+   - `sl1_v3_bundle.pkl`, `sl2_v3_bundle.pkl`, `sl4_v3_bundle.pkl`, `weights\sl5_v6_bundle.pkl`
+5. **평가 결과 데이터**:
+   - `sl1_v3_evaluation_results.json`, `sl2_v3_evaluation_results.json`, `sl3_v2_evaluation_results.json`, `sl4_v3_evaluation_results.json`, `sl5_v6_benchmark_results.json`
+
+모든 요구사항이 오차 없이 100% 반영되어 최종 완료되었습니다.

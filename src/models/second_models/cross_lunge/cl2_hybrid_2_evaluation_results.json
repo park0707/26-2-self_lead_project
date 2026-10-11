@@ -1,0 +1,91 @@
+{
+  "model_name": "cl2_hybrid_2",
+  "timestamp": "2026-10-11 11:55:46",
+  "feature_dim": 67,
+  "n_samples": 1025,
+  "weights": [
+    0.8862357861062221,
+    0.0,
+    0.11376421389377796
+  ],
+  "temperature": 0.8503906249999998,
+  "ece_pre": 3.5,
+  "ece_post": 3.52,
+  "metrics_2state": {
+    "f1": 66.6,
+    "acc": 66.83,
+    "prec": 67.4,
+    "rec": 65.83,
+    "roc_auc": 73.65
+  },
+  "metrics_3state": {
+    "sel_f1": 73.29,
+    "sel_acc": 66.88,
+    "sel_prec": 63.57,
+    "sel_rec": 86.53,
+    "coverage": 91.02,
+    "retake": 8.98
+  },
+  "views_metrics": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "tau_clean": 0.37,
+      "tau_defect": 0.45,
+      "sel_f1": 70.74,
+      "sel_acc": 63.78,
+      "sel_prec": 61.83,
+      "sel_rec": 82.65,
+      "coverage": 90.24,
+      "retake": 9.76,
+      "roc_auc": 71.12
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "tau_clean": 0.38,
+      "tau_defect": 0.44,
+      "sel_f1": 78.7,
+      "sel_acc": 75.27,
+      "sel_prec": 71.43,
+      "sel_rec": 87.63,
+      "coverage": 90.73,
+      "retake": 9.27,
+      "roc_auc": 80.88
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "tau_clean": 0.35,
+      "tau_defect": 0.39,
+      "sel_f1": 74.89,
+      "sel_acc": 69.68,
+      "sel_prec": 65.38,
+      "sel_rec": 87.63,
+      "coverage": 91.71,
+      "retake": 8.29,
+      "roc_auc": 75.44
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "tau_clean": 0.32,
+      "tau_defect": 0.37,
+      "sel_f1": 69.57,
+      "sel_acc": 59.04,
+      "sel_prec": 57.52,
+      "sel_rec": 88.0,
+      "coverage": 91.71,
+      "retake": 8.29,
+      "roc_auc": 68.47
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "tau_clean": 0.37,
+      "tau_defect": 0.43,
+      "sel_f1": 73.28,
+      "sel_acc": 66.67,
+      "sel_prec": 63.43,
+      "sel_rec": 86.73,
+      "coverage": 90.73,
+      "retake": 9.27,
+      "roc_auc": 72.28
+    }
+  }
+}

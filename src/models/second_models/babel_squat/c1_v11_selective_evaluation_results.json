@@ -1,0 +1,121 @@
+{
+  "model_name": "c1_v11_1_pure_vision",
+  "version": "v11.1_distilled_spinepose",
+  "status": "OFFICIAL_PRODUCTION_CHAMPION",
+  "selected_production_config": "Balanced [0.40, 0.60]",
+  "description": "100% Pure Vision SpinePose 9-Segment + MediaPipe 33 Keypoints with Balanced [0.40, 0.60] 3-State Selective Classification (Zero AI-Hub JSON/Label Dependency)",
+  "binary_f1": 81.51,
+  "binary_prec": 82.41,
+  "binary_rec": 80.64,
+  "binary_acc": 82.38,
+  "binary_auc": 89.68,
+  "production_champion_metrics": {
+    "desc": "★ Balanced Abstention [0.40, 0.60] (공식 최종 챔피언)",
+    "coverage": 88.94,
+    "abstention": 11.06,
+    "selective_f1": 84.64,
+    "selective_prec": 86.44,
+    "selective_rec": 82.92,
+    "selective_acc": 85.33,
+    "risk": 14.67
+  },
+  "selective_summary": {
+    "0.5_0.5": {
+      "desc": "Full Decision (강제 이진)",
+      "coverage": 100.0,
+      "abstention": 0.0,
+      "selective_f1": 81.51,
+      "selective_prec": 82.41,
+      "selective_rec": 80.64,
+      "selective_acc": 82.38,
+      "risk": 17.62
+    },
+    "0.45_0.55": {
+      "desc": "Narrow Abstention (+/- 0.05)",
+      "coverage": 94.17,
+      "abstention": 5.83,
+      "selective_f1": 83.35,
+      "selective_prec": 84.72,
+      "selective_rec": 82.02,
+      "selective_acc": 84.02,
+      "risk": 15.98
+    },
+    "0.4_0.6": {
+      "desc": "★ Balanced Abstention [0.40, 0.60] (공식 최종 챔피언)",
+      "coverage": 88.94,
+      "abstention": 11.06,
+      "selective_f1": 84.64,
+      "selective_prec": 86.44,
+      "selective_rec": 82.92,
+      "selective_acc": 85.33,
+      "risk": 14.67
+    },
+    "0.35_0.65": {
+      "desc": "Standard Selective (+/- 0.15)",
+      "coverage": 83.65,
+      "abstention": 16.35,
+      "selective_f1": 86.47,
+      "selective_prec": 88.68,
+      "selective_rec": 84.36,
+      "selective_acc": 87.06,
+      "risk": 12.94
+    },
+    "0.3_0.7": {
+      "desc": "High Confidence (+/- 0.20)",
+      "coverage": 78.16,
+      "abstention": 21.84,
+      "selective_f1": 87.97,
+      "selective_prec": 90.35,
+      "selective_rec": 85.71,
+      "selective_acc": 88.56,
+      "risk": 11.44
+    },
+    "0.25_0.75": {
+      "desc": "Strict Quality (+/- 0.25)",
+      "coverage": 71.94,
+      "abstention": 28.06,
+      "selective_f1": 89.39,
+      "selective_prec": 91.95,
+      "selective_rec": 86.96,
+      "selective_acc": 89.86,
+      "risk": 10.14
+    }
+  },
+  "view_analysis": {
+    "view5": {
+      "name": "시점 A (우측 후방 45°)",
+      "count": 521,
+      "balanced_coverage": 84.26,
+      "balanced_f1": 86.44,
+      "balanced_acc": 86.56
+    },
+    "view2": {
+      "name": "시점 B (우측 전방 45°)",
+      "count": 521,
+      "balanced_coverage": 91.36,
+      "balanced_f1": 84.49,
+      "balanced_acc": 85.5
+    },
+    "view3": {
+      "name": "시점 C (정면 0°)",
+      "count": 521,
+      "balanced_coverage": 91.94,
+      "balanced_f1": 84.21,
+      "balanced_acc": 84.97
+    },
+    "view4": {
+      "name": "시점 D (좌측 전방 45°)",
+      "count": 521,
+      "balanced_coverage": 91.94,
+      "balanced_f1": 85.4,
+      "balanced_acc": 86.01
+    },
+    "view1": {
+      "name": "시점 E (좌측 후방 45°)",
+      "count": 521,
+      "balanced_coverage": 85.22,
+      "balanced_f1": 82.58,
+      "balanced_acc": 83.56
+    }
+  }
+}

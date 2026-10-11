@@ -1,0 +1,318 @@
+{
+  "baseline": {
+    "macro_f1": 0.47825839984094975,
+    "auc": 0.4682359614293818,
+    "clean_f1": 0.5985401459854015,
+    "defect_f1": 0.35797665369649806,
+    "specificity": 0.6
+  },
+  "feature_stats": [
+    {
+      "feature": "knee_rom_mean",
+      "mean_clean": 19.151901245117188,
+      "sd_clean": 11.501347541809082,
+      "mean_defect": 19.52254867553711,
+      "sd_defect": 14.082797050476074,
+      "cohen_d": 0.028828397393226624,
+      "raw_auc": 0.4950463225562487,
+      "effective_auc": 0.5049536774437513,
+      "verdict": "❌ 무효/노이즈 (변별력 전무)"
+    },
+    {
+      "feature": "knee_rom_max",
+      "mean_clean": 22.86476707458496,
+      "sd_clean": 13.851534843444824,
+      "mean_defect": 23.675153732299805,
+      "sd_defect": 17.859344482421875,
+      "cohen_d": 0.05070757493376732,
+      "raw_auc": 0.5040555870674985,
+      "effective_auc": 0.5040555870674985,
+      "verdict": "❌ 무효/노이즈 (변별력 전무)"
+    },
+    {
+      "feature": "hip_hinge_isolation",
+      "mean_clean": 3.5740842819213867,
+      "sd_clean": 1.4248764514923096,
+      "mean_defect": 3.48685359954834,
+      "sd_defect": 1.1398671865463257,
+      "cohen_d": -0.06760676205158234,
+      "raw_auc": 0.5019096237474002,
+      "effective_auc": 0.5019096237474002,
+      "verdict": "❌ 무효/노이즈 (변별력 전무)"
+    },
+    {
+      "feature": "knee_vel_rms_mean",
+      "mean_clean": 1.1131829023361206,
+      "sd_clean": 0.7872793078422546,
+      "mean_defect": 1.061179280281067,
+      "sd_defect": 0.6767886281013489,
+      "cohen_d": -0.07083844393491745,
+      "raw_auc": 0.5015882019285309,
+      "effective_auc": 0.5015882019285309,
+      "verdict": "❌ 무효/노이즈 (변별력 전무)"
+    },
+    {
+      "feature": "knee_vel_rms_max",
+      "mean_clean": 1.3240782022476196,
+      "sd_clean": 0.9435454607009888,
+      "mean_defect": 1.2594190835952759,
+      "sd_defect": 0.8368202447891235,
+      "cohen_d": -0.07250560820102692,
+      "raw_auc": 0.5039705048213273,
+      "effective_auc": 0.5039705048213273,
+      "verdict": "❌ 무효/노이즈 (변별력 전무)"
+    },
+    {
+      "feature": "shank_svii_mean",
+      "mean_clean": 4.30470085144043,
+      "sd_clean": 3.3085567951202393,
+      "mean_defect": 4.694930553436279,
+      "sd_defect": 5.087275505065918,
+      "cohen_d": 0.09093950688838959,
+      "raw_auc": 0.46700699565135184,
+      "effective_auc": 0.5329930043486482,
+      "verdict": "⚠️ 역상관 피처 (AUC=0.467)"
+    },
+    {
+      "feature": "shank_svii_max",
+      "mean_clean": 5.046717166900635,
+      "sd_clean": 3.8859989643096924,
+      "mean_defect": 5.745681285858154,
+      "sd_defect": 6.5913238525390625,
+      "cohen_d": 0.12918713688850403,
+      "raw_auc": 0.4692096804688977,
+      "effective_auc": 0.5307903195311023,
+      "verdict": "⚠️ 역상관 피처 (AUC=0.469)"
+    },
+    {
+      "feature": "bottom_knee_delta_mean",
+      "mean_clean": 9.727629661560059,
+      "sd_clean": 7.135847568511963,
+      "mean_defect": 11.361873626708984,
+      "sd_defect": 10.569718360900879,
+      "cohen_d": 0.18122544884681702,
+      "raw_auc": 0.5245698619776895,
+      "effective_auc": 0.5245698619776895,
+      "verdict": "▲ 미약 기여 피처"
+    },
+    {
+      "feature": "bottom_knee_angle",
+      "mean_clean": 162.29623413085938,
+      "sd_clean": 8.569676399230957,
+      "mean_defect": 160.94097900390625,
+      "sd_defect": 9.5004301071167,
+      "cohen_d": -0.149801105260849,
+      "raw_auc": 0.457402155416903,
+      "effective_auc": 0.542597844583097,
+      "verdict": "⚠️ 역상관 피처 (AUC=0.457)"
+    },
+    {
+      "feature": "femur_rom_mean",
+      "mean_clean": 20.28997230529785,
+      "sd_clean": 13.91973876953125,
+      "mean_defect": 19.477352142333984,
+      "sd_defect": 10.183111190795898,
+      "cohen_d": -0.06663341075181961,
+      "raw_auc": 0.5284269238041217,
+      "effective_auc": 0.5284269238041217,
+      "verdict": "▲ 미약 기여 피처"
+    },
+    {
+      "feature": "hip_knee_coupling_r",
+      "mean_clean": 0.5489113330841064,
+      "sd_clean": 0.389415442943573,
+      "mean_defect": 0.5845494270324707,
+      "sd_defect": 0.374895304441452,
+      "cohen_d": 0.09323866665363312,
+      "raw_auc": 0.5329362828512005,
+      "effective_auc": 0.5329362828512005,
+      "verdict": "▲ 미약 기여 피처"
+    },
+    {
+      "feature": "knee_disp_z_rms",
+      "mean_clean": 0.2299618273973465,
+      "sd_clean": 0.32331687211990356,
+      "mean_defect": 0.2466217577457428,
+      "sd_defect": 0.49695637822151184,
+      "cohen_d": 0.039739809930324554,
+      "raw_auc": 0.48290792210247685,
+      "effective_auc": 0.5170920778975232,
+      "verdict": "❌ 무효/노이즈 (변별력 전무)"
+    },
+    {
+      "feature": "knee_disp_y_rom",
+      "mean_clean": 0.2728482782840729,
+      "sd_clean": 0.311838299036026,
+      "mean_defect": 0.24525763094425201,
+      "sd_defect": 0.20531636476516724,
+      "cohen_d": -0.10450776666402817,
+      "raw_auc": 0.5291737568538476,
+      "effective_auc": 0.5291737568538476,
+      "verdict": "▲ 미약 기여 피처"
+    },
+    {
+      "feature": "pelvis_knee_dist_rom",
+      "mean_clean": 0.06464417278766632,
+      "sd_clean": 0.09325370192527771,
+      "mean_defect": 0.07775991410017014,
+      "sd_defect": 0.22275638580322266,
+      "cohen_d": 0.07680884748697281,
+      "raw_auc": 0.5278691624125543,
+      "effective_auc": 0.5278691624125543,
+      "verdict": "▲ 미약 기여 피처"
+    }
+  ],
+  "lofo_results": [
+    {
+      "excluded_feature": "knee_rom_mean",
+      "macro_f1": 0.5074305161656267,
+      "delta_f1": 2.9172116324676978,
+      "auc": 0.48222726413310646,
+      "delta_auc": 1.3991302703724673,
+      "clean_f1": 0.6195121951219512,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "knee_rom_max",
+      "macro_f1": 0.48415480520239806,
+      "delta_f1": 0.5896405361448309,
+      "auc": 0.463594252221592,
+      "delta_auc": -0.4641709207789779,
+      "clean_f1": 0.6301050175029171,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "hip_hinge_isolation",
+      "macro_f1": 0.47733785822021113,
+      "delta_f1": -0.09205416207386241,
+      "auc": 0.4417848364530157,
+      "delta_auc": -2.6451124976366094,
+      "clean_f1": 0.5931372549019608,
+      "impact": "✔ 유효 기여 피처 (제외 시 F1 소폭 하락)"
+    },
+    {
+      "excluded_feature": "knee_vel_rms_mean",
+      "macro_f1": 0.5060220674910859,
+      "delta_f1": 2.776366765013616,
+      "auc": 0.483134808092267,
+      "delta_auc": 1.4898846662885212,
+      "clean_f1": 0.6472642607683353,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "knee_vel_rms_max",
+      "macro_f1": 0.4877446107529325,
+      "delta_f1": 0.9486210911982762,
+      "auc": 0.4843070523728493,
+      "delta_auc": 1.6071090943467536,
+      "clean_f1": 0.6058394160583942,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "shank_svii_mean",
+      "macro_f1": 0.47344969838857365,
+      "delta_f1": -0.48087014523761074,
+      "auc": 0.46036112686708264,
+      "delta_auc": -0.7874834562299149,
+      "clean_f1": 0.5916870415647921,
+      "impact": "✔ 유효 기여 피처 (제외 시 F1 소폭 하락)"
+    },
+    {
+      "excluded_feature": "shank_svii_max",
+      "macro_f1": 0.5005894700520459,
+      "delta_f1": 2.233107021109615,
+      "auc": 0.48046889771223295,
+      "delta_auc": 1.223293628285116,
+      "clean_f1": 0.6276849642004774,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "bottom_knee_delta_mean",
+      "macro_f1": 0.4601777857591811,
+      "delta_f1": -1.8080614081768642,
+      "auc": 0.4631972017394593,
+      "delta_auc": -0.5038759689922512,
+      "clean_f1": 0.5482625482625483,
+      "impact": "★ 필수 핵심 피처 (제외 시 F1 급락)"
+    },
+    {
+      "excluded_feature": "bottom_knee_angle",
+      "macro_f1": 0.441562288018191,
+      "delta_f1": -3.669611182275878,
+      "auc": 0.45466061637360555,
+      "delta_auc": -1.3575345055776233,
+      "clean_f1": 0.580335731414868,
+      "impact": "★ 필수 핵심 피처 (제외 시 F1 급락)"
+    },
+    {
+      "excluded_feature": "femur_rom_mean",
+      "macro_f1": 0.4589447071492111,
+      "delta_f1": -1.931369269173866,
+      "auc": 0.46069200226886,
+      "delta_auc": -0.7543959160521807,
+      "clean_f1": 0.5707196029776674,
+      "impact": "★ 필수 핵심 피처 (제외 시 F1 급락)"
+    },
+    {
+      "excluded_feature": "hip_knee_coupling_r",
+      "macro_f1": 0.4937746915853215,
+      "delta_f1": 1.5516291744371746,
+      "auc": 0.4715730761958783,
+      "delta_auc": 0.33371147664965073,
+      "clean_f1": 0.6142684401451027,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "knee_disp_z_rms",
+      "macro_f1": 0.4995196993717339,
+      "delta_f1": 2.126129953078415,
+      "auc": 0.47892796369824164,
+      "delta_auc": 1.0692002268859857,
+      "clean_f1": 0.6066584463625154,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    },
+    {
+      "excluded_feature": "knee_disp_y_rom",
+      "macro_f1": 0.46560649718544456,
+      "delta_f1": -1.2651902655505198,
+      "auc": 0.4689544337303838,
+      "delta_auc": 0.07184723010020266,
+      "clean_f1": 0.6152046783625731,
+      "impact": "★ 필수 핵심 피처 (제외 시 F1 급락)"
+    },
+    {
+      "excluded_feature": "pelvis_knee_dist_rom",
+      "macro_f1": 0.507209867757813,
+      "delta_f1": 2.8951467916863205,
+      "auc": 0.4844961240310077,
+      "delta_auc": 1.6260162601625938,
+      "clean_f1": 0.623030303030303,
+      "impact": "⛔ 성능 방해 피처 (제외 시 F1 대폭 상승!)"
+    }
+  ],
+  "harmful_features": [
+    "knee_rom_mean",
+    "knee_rom_max",
+    "knee_vel_rms_mean",
+    "knee_vel_rms_max",
+    "shank_svii_max",
+    "hip_knee_coupling_r",
+    "knee_disp_z_rms",
+    "pelvis_knee_dist_rom"
+  ],
+  "curated_features": [
+    "hip_hinge_isolation",
+    "shank_svii_mean",
+    "bottom_knee_delta_mean",
+    "bottom_knee_angle",
+    "femur_rom_mean",
+    "knee_disp_y_rom"
+  ],
+  "curated_results": {
+    "macro_f1": 0.5197954359048584,
+    "auc": 0.5680043486481376,
+    "clean_f1": 0.6477541371158393,
+    "defect_f1": 0.39183673469387753,
+    "specificity": 0.6682926829268293
+  }
+}

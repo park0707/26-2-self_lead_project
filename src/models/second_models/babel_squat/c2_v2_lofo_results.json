@@ -1,0 +1,282 @@
+{
+  "timestamp": "2026-09-23 19:12:28",
+  "baseline_20d": {
+    "cat_f1": 86.26,
+    "casc_f1": 90.11,
+    "casc_auc": 96.98
+  },
+  "lofo_ranking": [
+    {
+      "index": 10,
+      "feature_name": "c2_head_to_torso_relative_pitch",
+      "importance": 2.75,
+      "cat_f1": 86.23,
+      "delta_cat_f1": -0.03,
+      "casc_f1": 90.41,
+      "delta_casc_f1": 0.3,
+      "casc_auc": 97.0
+    },
+    {
+      "index": 9,
+      "feature_name": "c2_head_roll_tilt_max",
+      "importance": 2.14,
+      "cat_f1": 86.64,
+      "delta_cat_f1": 0.38,
+      "casc_f1": 90.4,
+      "delta_casc_f1": 0.29,
+      "casc_auc": 97.05
+    },
+    {
+      "index": 5,
+      "feature_name": "c2_cervical_spine_angle_min",
+      "importance": 10.02,
+      "cat_f1": 86.84,
+      "delta_cat_f1": 0.58,
+      "casc_f1": 90.26,
+      "delta_casc_f1": 0.15,
+      "casc_auc": 96.97
+    },
+    {
+      "index": 0,
+      "feature_name": "c2_gaze_pitch_mean",
+      "importance": 3.98,
+      "cat_f1": 87.01,
+      "delta_cat_f1": 0.75,
+      "casc_f1": 90.24,
+      "delta_casc_f1": 0.13,
+      "casc_auc": 97.07
+    },
+    {
+      "index": 11,
+      "feature_name": "c2_head_acceleration_jerk",
+      "importance": 3.14,
+      "cat_f1": 86.49,
+      "delta_cat_f1": 0.23,
+      "casc_f1": 90.19,
+      "delta_casc_f1": 0.08,
+      "casc_auc": 96.98
+    },
+    {
+      "index": 2,
+      "feature_name": "c2_gaze_pitch_bottom",
+      "importance": 1.54,
+      "cat_f1": 86.71,
+      "delta_cat_f1": 0.45,
+      "casc_f1": 90.17,
+      "delta_casc_f1": 0.06,
+      "casc_auc": 97.06
+    },
+    {
+      "index": 14,
+      "feature_name": "c2_subject_calibrated_gaze_drop",
+      "importance": 2.7,
+      "cat_f1": 87.01,
+      "delta_cat_f1": 0.75,
+      "casc_f1": 90.17,
+      "delta_casc_f1": 0.06,
+      "casc_auc": 97.03
+    },
+    {
+      "index": 8,
+      "feature_name": "c2_head_yaw_asymmetry_max",
+      "importance": 2.27,
+      "cat_f1": 87.08,
+      "delta_cat_f1": 0.82,
+      "casc_f1": 90.12,
+      "delta_casc_f1": 0.01,
+      "casc_auc": 97.05
+    },
+    {
+      "index": 12,
+      "feature_name": "c2_head_forward_protrusion_max",
+      "importance": 2.8,
+      "cat_f1": 86.57,
+      "delta_cat_f1": 0.31,
+      "casc_f1": 90.12,
+      "delta_casc_f1": 0.01,
+      "casc_auc": 97.05
+    },
+    {
+      "index": 15,
+      "feature_name": "c2_cervical_velocity_peak_at_nadir",
+      "importance": 1.71,
+      "cat_f1": 86.44,
+      "delta_cat_f1": 0.18,
+      "casc_f1": 90.12,
+      "delta_casc_f1": 0.01,
+      "casc_auc": 96.96
+    },
+    {
+      "index": 4,
+      "feature_name": "c2_cervical_spine_angle_mean",
+      "importance": 4.69,
+      "cat_f1": 86.77,
+      "delta_cat_f1": 0.51,
+      "casc_f1": 90.09,
+      "delta_casc_f1": -0.02,
+      "casc_auc": 97.13
+    },
+    {
+      "index": 6,
+      "feature_name": "c2_cervical_spine_angle_drop",
+      "importance": 2.91,
+      "cat_f1": 86.79,
+      "delta_cat_f1": 0.53,
+      "casc_f1": 90.03,
+      "delta_casc_f1": -0.08,
+      "casc_auc": 97.05
+    },
+    {
+      "index": 16,
+      "feature_name": "c2_gaze_coupling_lag",
+      "importance": 1.74,
+      "cat_f1": 85.91,
+      "delta_cat_f1": -0.35,
+      "casc_f1": 90.01,
+      "delta_casc_f1": -0.1,
+      "casc_auc": 96.97
+    },
+    {
+      "index": 7,
+      "feature_name": "c2_head_yaw_asymmetry_mean",
+      "importance": 3.67,
+      "cat_f1": 86.34,
+      "delta_cat_f1": 0.08,
+      "casc_f1": 89.98,
+      "delta_casc_f1": -0.13,
+      "casc_auc": 97.01
+    },
+    {
+      "index": 1,
+      "feature_name": "c2_gaze_pitch_min",
+      "importance": 2.51,
+      "cat_f1": 86.78,
+      "delta_cat_f1": 0.52,
+      "casc_f1": 89.95,
+      "delta_casc_f1": -0.16,
+      "casc_auc": 97.07
+    },
+    {
+      "index": 17,
+      "feature_name": "c2_cervical_hyperextension_ratio",
+      "importance": 0.03,
+      "cat_f1": 86.32,
+      "delta_cat_f1": 0.06,
+      "casc_f1": 89.92,
+      "delta_casc_f1": -0.19,
+      "casc_auc": 97.04
+    },
+    {
+      "index": 13,
+      "feature_name": "c2_gaze_relative_to_trunk_mean",
+      "importance": 2.98,
+      "cat_f1": 86.57,
+      "delta_cat_f1": 0.31,
+      "casc_f1": 89.86,
+      "delta_casc_f1": -0.25,
+      "casc_auc": 96.98
+    },
+    {
+      "index": 3,
+      "feature_name": "c2_gaze_pitch_drop",
+      "importance": 11.87,
+      "cat_f1": 84.92,
+      "delta_cat_f1": -1.34,
+      "casc_f1": 89.63,
+      "delta_casc_f1": -0.48,
+      "casc_auc": 96.63
+    },
+    {
+      "index": 18,
+      "feature_name": "c2_gated_true_gaze_pitch_drop",
+      "importance": 9.88,
+      "cat_f1": 85.24,
+      "delta_cat_f1": -1.02,
+      "casc_f1": 88.47,
+      "delta_casc_f1": -1.64,
+      "casc_auc": 96.4
+    },
+    {
+      "index": 19,
+      "feature_name": "c2_gated_true_gaze_pitch_bot",
+      "importance": 26.68,
+      "cat_f1": 82.85,
+      "delta_cat_f1": -3.41,
+      "casc_f1": 86.63,
+      "delta_casc_f1": -3.48,
+      "casc_auc": 94.63
+    }
+  ],
+  "harmful_candidates": [
+    {
+      "index": 10,
+      "feature_name": "c2_head_to_torso_relative_pitch",
+      "importance": 2.75,
+      "cat_f1": 86.23,
+      "delta_cat_f1": -0.03,
+      "casc_f1": 90.41,
+      "delta_casc_f1": 0.3,
+      "casc_auc": 97.0
+    },
+    {
+      "index": 9,
+      "feature_name": "c2_head_roll_tilt_max",
+      "importance": 2.14,
+      "cat_f1": 86.64,
+      "delta_cat_f1": 0.38,
+      "casc_f1": 90.4,
+      "delta_casc_f1": 0.29,
+      "casc_auc": 97.05
+    },
+    {
+      "index": 5,
+      "feature_name": "c2_cervical_spine_angle_min",
+      "importance": 10.02,
+      "cat_f1": 86.84,
+      "delta_cat_f1": 0.58,
+      "casc_f1": 90.26,
+      "delta_casc_f1": 0.15,
+      "casc_auc": 96.97
+    },
+    {
+      "index": 0,
+      "feature_name": "c2_gaze_pitch_mean",
+      "importance": 3.98,
+      "cat_f1": 87.01,
+      "delta_cat_f1": 0.75,
+      "casc_f1": 90.24,
+      "delta_casc_f1": 0.13,
+      "casc_auc": 97.07
+    },
+    {
+      "index": 11,
+      "feature_name": "c2_head_acceleration_jerk",
+      "importance": 3.14,
+      "cat_f1": 86.49,
+      "delta_cat_f1": 0.23,
+      "casc_f1": 90.19,
+      "delta_casc_f1": 0.08,
+      "casc_auc": 96.98
+    },
+    {
+      "index": 2,
+      "feature_name": "c2_gaze_pitch_bottom",
+      "importance": 1.54,
+      "cat_f1": 86.71,
+      "delta_cat_f1": 0.45,
+      "casc_f1": 90.17,
+      "delta_casc_f1": 0.06,
+      "casc_auc": 97.06
+    },
+    {
+      "index": 14,
+      "feature_name": "c2_subject_calibrated_gaze_drop",
+      "importance": 2.7,
+      "cat_f1": 87.01,
+      "delta_cat_f1": 0.75,
+      "casc_f1": 90.17,
+      "delta_casc_f1": 0.06,
+      "casc_auc": 97.03
+    }
+  ]
+}

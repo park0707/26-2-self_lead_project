@@ -1,0 +1,138 @@
+{
+  "phase": 1,
+  "model": "43D_GBDT_Tri_Ensemble",
+  "accuracy": 0.7922077922077922,
+  "precision": 0.38738738738738737,
+  "recall": 0.31851851851851853,
+  "f1": 0.34959349593495936,
+  "roc_auc": 0.7001341498979294,
+  "view_metrics": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "f1": 0.43636363636363634,
+      "acc": 0.7987012987012987,
+      "auc": 0.7401574803149606,
+      "n": 154
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "f1": 0.4,
+      "acc": 0.8051948051948052,
+      "auc": 0.7658209390492855,
+      "n": 154
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "f1": 0.2916666666666667,
+      "acc": 0.7792207792207793,
+      "auc": 0.6383785360163313,
+      "n": 154
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "f1": 0.4,
+      "acc": 0.8051948051948052,
+      "auc": 0.7419072615923009,
+      "n": 154
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "f1": 0.18604651162790697,
+      "acc": 0.7727272727272727,
+      "auc": 0.6173811606882472,
+      "n": 154
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "name": "d4_vel_ratio_second_half",
+      "score": 75.6,
+      "tag": ""
+    },
+    {
+      "rank": 2,
+      "name": "d4_knee_hip_corr_full",
+      "score": 71.0,
+      "tag": ""
+    },
+    {
+      "rank": 3,
+      "name": "d4_angular_accel_mismatch",
+      "score": 67.8,
+      "tag": ""
+    },
+    {
+      "rank": 4,
+      "name": "d4_trunk_angle_nadir_deg",
+      "score": 57.0,
+      "tag": ""
+    },
+    {
+      "rank": 5,
+      "name": "d4_hip_lock_time_norm",
+      "score": 53.2,
+      "tag": ""
+    },
+    {
+      "rank": 6,
+      "name": "d4_onset_latency_norm",
+      "score": 46.4,
+      "tag": "★ (신규 6D 동역학)"
+    },
+    {
+      "rank": 7,
+      "name": "d4_morph_torso_thigh_ratio",
+      "score": 45.4,
+      "tag": "★ (v3 CRP/MVC)"
+    },
+    {
+      "rank": 8,
+      "name": "d4_pelvis_y_rise_rate",
+      "score": 42.2,
+      "tag": ""
+    },
+    {
+      "rank": 9,
+      "name": "d4_mvc_co_extension_ratio",
+      "score": 40.4,
+      "tag": "★ (v3 CRP/MVC)"
+    },
+    {
+      "rank": 10,
+      "name": "d4_trunk_angle_std_ascent",
+      "score": 40.0,
+      "tag": ""
+    },
+    {
+      "rank": 11,
+      "name": "d4_bilateral_hip_asym_deg",
+      "score": 37.8,
+      "tag": ""
+    },
+    {
+      "rank": 12,
+      "name": "d4_morph_femur_tibia_ratio",
+      "score": 37.4,
+      "tag": "★ (v3 CRP/MVC)"
+    },
+    {
+      "rank": 13,
+      "name": "d4_trunk_drop_ascent_max_deg",
+      "score": 36.8,
+      "tag": ""
+    },
+    {
+      "rank": 14,
+      "name": "d4_ratio_deriv_max_ascent",
+      "score": 35.8,
+      "tag": ""
+    },
+    {
+      "rank": 15,
+      "name": "d4_hs_vvr_first_pull_max",
+      "score": 35.2,
+      "tag": "★ (신규 6D 동역학)"
+    }
+  ]
+}

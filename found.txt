@@ -1,0 +1,2 @@
+d:\자주프 문서\7주차\vidio-health-trainer_바벨데드리프트_세부오류5종_MediaPipe_vs_RTMPose_성능비교_공식감사보고서.md
+d:\자주프 문서\7주차\전체운동_3State_성능결과_및_미달모델_요약.md

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "project": "vidio-health-trainer",
+    "exercise": "크로스 런지 (Cross Lunge, 08_크로스_런지)",
+    "defect_code": "cl1",
+    "defect_name": "앞다리 무릎 각도 90도 오류",
+    "model_name": "cl1_hybrid_1",
+    "feature_dim": 134,
+    "total_sequences": 1025,
+    "subjects_count": 9,
+    "views_count": 5,
+    "timestamp": "2026-10-11 11:43:46"
+  },
+  "comparison": {
+    "mp_3s_f1": 89.97,
+    "mp_auc": 95.65,
+    "rtm_opt_3s_f1": 92.92,
+    "rtm_opt_auc": 96.85,
+    "hybrid_3s_f1": 93.61702127659575,
+    "hybrid_auc": 97.3116883116883,
+    "diff_f1_vs_rtm": 0.6970212765957484,
+    "diff_auc_vs_rtm": 0.46168831168830593
+  },
+  "bundle_info": {
+    "temperature": 1.3463867187500012,
+    "weights": [
+      1.0,
+      0.0,
+      1.1102230246251565e-16
+    ],
+    "metrics_2state": {
+      "f1": 89.03061224489795,
+      "prec": 87.468671679198,
+      "rec": 90.64935064935065,
+      "acc": 91.60975609756098,
+      "roc_auc": 97.3116883116883
+    },
+    "metrics_3state": {
+      "sel_f1": 93.61702127659575,
+      "sel_prec": 92.43697478991596,
+      "sel_rec": 94.82758620689656,
+      "sel_acc": 95.18201284796574,
+      "coverage": 91.1219512195122,
+      "retake": 8.878048780487802
+    },
+    "views_metrics": {
+      "view5": {
+        "tau_clean": 0.2,
+        "tau_defect": 0.57,
+        "sel_f1": 92.11,
+        "sel_acc": 93.72,
+        "coverage": 93.17,
+        "retake": 6.83,
+        "roc_auc": 96.95
+      },
+      "view2": {
+        "tau_clean": 0.2,
+        "tau_defect": 0.6,
+        "sel_f1": 95.24,
+        "sel_acc": 96.26,
+        "coverage": 91.22,
+        "retake": 8.78,
+        "roc_auc": 97.96
+      },
+      "view3": {
+        "tau_clean": 0.33,
+        "tau_defect": 0.75,
+        "sel_f1": 92.96,
+        "sel_acc": 94.62,
+        "coverage": 90.73,
+        "retake": 9.27,
+        "roc_auc": 96.31
+      },
+      "view4": {
+        "tau_clean": 0.34,
+        "tau_defect": 0.8,
+        "sel_f1": 93.85,
+        "sel_acc": 95.68,
+        "coverage": 90.24,
+        "retake": 9.76,
+        "roc_auc": 98.01
+      },
+      "view1": {
+        "tau_clean": 0.21,
+        "tau_defect": 0.72,
+        "sel_f1": 94.03,
+        "sel_acc": 95.68,
+        "coverage": 90.24,
+        "retake": 9.76,
+        "roc_auc": 97.26
+      }
+    },
+    "calibration": {
+      "ece_pre": 3.5,
+      "ece_post": 2.21,
+      "brier_pre": 0.0645,
+      "brier_post": 0.0626
+    }
+  }
+}

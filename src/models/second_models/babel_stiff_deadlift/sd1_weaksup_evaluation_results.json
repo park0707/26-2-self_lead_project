@@ -1,0 +1,74 @@
+{
+  "model_name": "sd1_weaksup",
+  "exercise": "03_바벨_스티프_데드리프트",
+  "defect": "sd1 (무릎 구부린 채 고정 위반)",
+  "version": "v2.0-RTM",
+  "sample_size": 1035,
+  "overall": {
+    "roc_auc": 99.28,
+    "f1_3state": 95.93,
+    "accuracy_3state": 99.08,
+    "precision": 97.25,
+    "recall": 94.64,
+    "coverage": 94.69,
+    "retake": 5.31
+  },
+  "global_fallback_thresholds": {
+    "tau_clean": 0.2,
+    "tau_defect": 0.6625,
+    "f1": 94.78,
+    "coverage": 95.46
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A: 우측 후방 (45도)",
+      "count": 207,
+      "auc": 99.76,
+      "f1_3s": 98.36,
+      "coverage": 96.14,
+      "retake": 3.86,
+      "tau_clean": 0.18,
+      "tau_defect": 0.6061
+    },
+    "view2": {
+      "alias": "시점 B: 우측 전방 (45도)",
+      "count": 207,
+      "auc": 99.13,
+      "f1_3s": 90.32,
+      "coverage": 96.14,
+      "retake": 3.86,
+      "tau_clean": 0.18,
+      "tau_defect": 0.5982
+    },
+    "view3": {
+      "alias": "시점 C: 정면",
+      "count": 207,
+      "auc": 99.0,
+      "f1_3s": 75.0,
+      "coverage": 98.07,
+      "retake": 1.93,
+      "tau_clean": 0.18,
+      "tau_defect": 0.4638
+    },
+    "view4": {
+      "alias": "시점 D: 좌측 전방 (45도)",
+      "count": 207,
+      "auc": 99.28,
+      "f1_3s": 98.41,
+      "coverage": 90.82,
+      "retake": 9.18,
+      "tau_clean": 0.18,
+      "tau_defect": 0.7484
+    },
+    "view1": {
+      "alias": "시점 E: 좌측 후방 (45도)",
+      "count": 207,
+      "auc": 99.09,
+      "f1_3s": 96.55,
+      "coverage": 92.27,
+      "retake": 7.73,
+      "tau_clean": 0.18,
+      "tau_defect": 0.78
+    }
+  }
+}

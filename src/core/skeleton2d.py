@@ -46,3 +46,49 @@ SYMMETRIC_PAIRS: List[Tuple[int, int]] = [
     (Joint15.LEFT_KNEE, Joint15.RIGHT_KNEE),
     (Joint15.LEFT_ANKLE, Joint15.RIGHT_ANKLE)
 ]
+
+
+class JointHalpe26(IntEnum):
+    """Halpe 26-Keypoint Topology for RTMPose-m BodyWithFeet"""
+    NOSE = 0
+    LEFT_EYE = 1
+    RIGHT_EYE = 2
+    LEFT_EAR = 3
+    RIGHT_EAR = 4
+    LEFT_SHOULDER = 5
+    RIGHT_SHOULDER = 6
+    LEFT_ELBOW = 7
+    RIGHT_ELBOW = 8
+    LEFT_WRIST = 9
+    RIGHT_WRIST = 10
+    LEFT_HIP = 11
+    RIGHT_HIP = 12
+    LEFT_KNEE = 13
+    RIGHT_KNEE = 14
+    LEFT_ANKLE = 15
+    RIGHT_ANKLE = 16
+    HEAD = 17
+    NECK = 18
+    HIP = 19              # Pelvis 중심
+    LEFT_BIG_TOE = 20
+    RIGHT_BIG_TOE = 21
+    LEFT_SMALL_TOE = 22
+    RIGHT_SMALL_TOE = 23
+    LEFT_HEEL = 24
+    RIGHT_HEEL = 25
+
+
+SYMMETRIC_PAIRS_HALPE26: List[Tuple[int, int]] = [
+    (JointHalpe26.LEFT_EYE, JointHalpe26.RIGHT_EYE),
+    (JointHalpe26.LEFT_EAR, JointHalpe26.RIGHT_EAR),
+    (JointHalpe26.LEFT_SHOULDER, JointHalpe26.RIGHT_SHOULDER),
+    (JointHalpe26.LEFT_ELBOW, JointHalpe26.RIGHT_ELBOW),
+    (JointHalpe26.LEFT_WRIST, JointHalpe26.RIGHT_WRIST),
+    (JointHalpe26.LEFT_HIP, JointHalpe26.RIGHT_HIP),
+    (JointHalpe26.LEFT_KNEE, JointHalpe26.RIGHT_KNEE),
+    (JointHalpe26.LEFT_ANKLE, JointHalpe26.RIGHT_ANKLE),
+    (JointHalpe26.LEFT_BIG_TOE, JointHalpe26.RIGHT_BIG_TOE),
+    (JointHalpe26.LEFT_SMALL_TOE, JointHalpe26.RIGHT_SMALL_TOE),
+    (JointHalpe26.LEFT_HEEL, JointHalpe26.RIGHT_HEEL)
+]
+

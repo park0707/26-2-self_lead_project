@@ -1,0 +1,677 @@
+{
+  "baseline_30d": {
+    "f1": 0.8552188552188552,
+    "auc": 0.6541736972704714,
+    "acc": 0.7507246376811594
+  },
+  "diet_v2": {
+    "num_features": 24,
+    "indices": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "names": [
+      "stiff_lumbar_poly_a",
+      "stiff_lumbar_stiffness_sd",
+      "stiff_spine_lateral_dev_max",
+      "stiff_cervical_min",
+      "stiff_active_rom",
+      "stiff_cobb_mean",
+      "stiff_shoulder_hip_twist_max",
+      "stiff_lateral_asym_integral",
+      "stiff_flex_accel_peak",
+      "stiff_pitch_standing",
+      "stiff_shear_stress_proxy",
+      "stiff_lockout_hyperextension",
+      "stiff_view_occlusion",
+      "stiff_view_comp_curv",
+      "stiff_ratio_arm_to_torso",
+      "stiff_ratio_femur_to_tibia",
+      "stiff_ratio_leg_to_torso",
+      "stiff_shoulder_roll_max",
+      "stiff_thoracic_kyphosis_peak",
+      "stiff_lumbopelvic_rhythm_ratio",
+      "stiff_knee_fixation_sd",
+      "stiff_torso_pelvis_lateral_offset",
+      "stiff_lateral_drift_direction",
+      "stiff_sagittal_spine_stiffness"
+    ],
+    "pruned_indices": [
+      3,
+      5,
+      12,
+      15,
+      18,
+      23
+    ],
+    "pruned_names": [
+      "stiff_trunk_flex_speed_max",
+      "stiff_signed_thoracolumbar_delta",
+      "stiff_view_normal_z",
+      "stiff_pitch_rom",
+      "stiff_res_lumbar_curv",
+      "stiff_hip_roll_max"
+    ],
+    "f1": 0.852017937219731,
+    "auc": 0.6651861042183622,
+    "acc": 0.744927536231884,
+    "f1_gain_pct": -0.3200917999124253
+  },
+  "feature_stats": [
+    {
+      "index": 0,
+      "name": "stiff_lumbar_poly_a",
+      "var": 0.010886351577937603,
+      "cohen_d": 0.06693057422911461,
+      "auc": 0.5165707196029776,
+      "effective_auc": 0.5165707196029776,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 1,
+      "name": "stiff_lumbar_stiffness_sd",
+      "var": 0.0010639879619702697,
+      "cohen_d": -0.07080908060856697,
+      "auc": 0.47828287841191064,
+      "effective_auc": 0.5217171215880894,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 2,
+      "name": "stiff_spine_lateral_dev_max",
+      "var": 1.5763378143310547,
+      "cohen_d": 0.08162502354975582,
+      "auc": 0.5215334987593052,
+      "effective_auc": 0.5215334987593052,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 3,
+      "name": "stiff_trunk_flex_speed_max",
+      "var": 124600.3515625,
+      "cohen_d": 0.05790405490042791,
+      "auc": 0.5057468982630273,
+      "effective_auc": 0.5057468982630273,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 4,
+      "name": "stiff_cervical_min",
+      "var": 2.597040891647339,
+      "cohen_d": 0.016378338390532744,
+      "auc": 0.5056724565756824,
+      "effective_auc": 0.5056724565756824,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 5,
+      "name": "stiff_signed_thoracolumbar_delta",
+      "var": 0.014715408906340599,
+      "cohen_d": -0.06665262704204326,
+      "auc": 0.4789429280397022,
+      "effective_auc": 0.5210570719602978,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 6,
+      "name": "stiff_active_rom",
+      "var": 0.03319012001156807,
+      "cohen_d": -0.05839107922024925,
+      "auc": 0.4687096774193548,
+      "effective_auc": 0.5312903225806451,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 7,
+      "name": "stiff_cobb_mean",
+      "var": 299.53411865234375,
+      "cohen_d": 0.09953807414105721,
+      "auc": 0.5278511166253101,
+      "effective_auc": 0.5278511166253101,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 8,
+      "name": "stiff_shoulder_hip_twist_max",
+      "var": 725.0880737304688,
+      "cohen_d": 0.012992558197352644,
+      "auc": 0.5375459057071961,
+      "effective_auc": 0.5375459057071961,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 9,
+      "name": "stiff_lateral_asym_integral",
+      "var": 0.8768680691719055,
+      "cohen_d": -0.006129439473571629,
+      "auc": 0.4987493796526055,
+      "effective_auc": 0.5012506203473945,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 10,
+      "name": "stiff_flex_accel_peak",
+      "var": 14018177.0,
+      "cohen_d": 0.048403942211798966,
+      "auc": 0.5105012406947891,
+      "effective_auc": 0.5105012406947891,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 11,
+      "name": "stiff_pitch_standing",
+      "var": 839.1514282226562,
+      "cohen_d": 0.03613916959673086,
+      "auc": 0.5277196029776675,
+      "effective_auc": 0.5277196029776675,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 12,
+      "name": "stiff_view_normal_z",
+      "var": 0.3912566900253296,
+      "cohen_d": 0.011076590759774147,
+      "auc": 0.5117915632754342,
+      "effective_auc": 0.5117915632754342,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 13,
+      "name": "stiff_shear_stress_proxy",
+      "var": 0.015371294692158699,
+      "cohen_d": -0.1887610401657204,
+      "auc": 0.44167741935483873,
+      "effective_auc": 0.5583225806451613,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 14,
+      "name": "stiff_lockout_hyperextension",
+      "var": 0.003631059778854251,
+      "cohen_d": -0.0791629968923548,
+      "auc": 0.4847940446650124,
+      "effective_auc": 0.5152059553349876,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 15,
+      "name": "stiff_pitch_rom",
+      "var": 832.7100830078125,
+      "cohen_d": -0.036185383030538344,
+      "auc": 0.47492307692307695,
+      "effective_auc": 0.525076923076923,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 16,
+      "name": "stiff_view_occlusion",
+      "var": 0.019275249913334846,
+      "cohen_d": -0.15825823739389422,
+      "auc": 0.457712158808933,
+      "effective_auc": 0.542287841191067,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 17,
+      "name": "stiff_view_comp_curv",
+      "var": 0.00048214528942480683,
+      "cohen_d": -0.0713862351320054,
+      "auc": 0.4923622828784119,
+      "effective_auc": 0.5076377171215881,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 18,
+      "name": "stiff_res_lumbar_curv",
+      "var": 0.0,
+      "cohen_d": 0.0,
+      "auc": 0.5,
+      "effective_auc": 0.5,
+      "verdict": "❌ 분산 0 (상수 피처)"
+    },
+    {
+      "index": 19,
+      "name": "stiff_ratio_arm_to_torso",
+      "var": 0.01636485569179058,
+      "cohen_d": -0.12075056516606407,
+      "auc": 0.44752357320099256,
+      "effective_auc": 0.5524764267990074,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 20,
+      "name": "stiff_ratio_femur_to_tibia",
+      "var": 0.004388832487165928,
+      "cohen_d": 0.10273540301813346,
+      "auc": 0.5119503722084366,
+      "effective_auc": 0.5119503722084366,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 21,
+      "name": "stiff_ratio_leg_to_torso",
+      "var": 0.029520191252231598,
+      "cohen_d": -0.06560218056588125,
+      "auc": 0.46793052109181144,
+      "effective_auc": 0.5320694789081886,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 22,
+      "name": "stiff_shoulder_roll_max",
+      "var": 528.9141235351562,
+      "cohen_d": 0.2046488721938221,
+      "auc": 0.5854888337468982,
+      "effective_auc": 0.5854888337468982,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 23,
+      "name": "stiff_hip_roll_max",
+      "var": 592.8762817382812,
+      "cohen_d": 0.16871097103395277,
+      "auc": 0.5841637717121588,
+      "effective_auc": 0.5841637717121588,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 24,
+      "name": "stiff_thoracic_kyphosis_peak",
+      "var": 4.226712703704834,
+      "cohen_d": -0.0241169836285582,
+      "auc": 0.47909181141439205,
+      "effective_auc": 0.520908188585608,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 25,
+      "name": "stiff_lumbopelvic_rhythm_ratio",
+      "var": 0.00011256332800257951,
+      "cohen_d": -0.012599886183645227,
+      "auc": 0.5231712158808933,
+      "effective_auc": 0.5231712158808933,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 26,
+      "name": "stiff_knee_fixation_sd",
+      "var": 34.36983871459961,
+      "cohen_d": -0.07523836128816026,
+      "auc": 0.4611563275434244,
+      "effective_auc": 0.5388436724565756,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 27,
+      "name": "stiff_torso_pelvis_lateral_offset",
+      "var": 0.00491122342646122,
+      "cohen_d": -0.08391165288643762,
+      "auc": 0.4704267990074442,
+      "effective_auc": 0.5295732009925558,
+      "verdict": "일반 피처"
+    },
+    {
+      "index": 28,
+      "name": "stiff_lateral_drift_direction",
+      "var": 3.646848201751709,
+      "cohen_d": -0.002352904919908405,
+      "auc": 0.5033101736972705,
+      "effective_auc": 0.5033101736972705,
+      "verdict": "⚠️ 무효/노이즈 (변별력 희박)"
+    },
+    {
+      "index": 29,
+      "name": "stiff_sagittal_spine_stiffness",
+      "var": 0.015383787453174591,
+      "cohen_d": -0.07041710889051951,
+      "auc": 0.47683870967741937,
+      "effective_auc": 0.5231612903225806,
+      "verdict": "일반 피처"
+    }
+  ],
+  "high_corr_pairs": [
+    {
+      "feat_a_idx": 1,
+      "feat_a_name": "stiff_lumbar_stiffness_sd",
+      "feat_b_idx": 5,
+      "feat_b_name": "stiff_signed_thoracolumbar_delta",
+      "corr": 0.8877788131893343
+    },
+    {
+      "feat_a_idx": 3,
+      "feat_a_name": "stiff_trunk_flex_speed_max",
+      "feat_b_idx": 10,
+      "feat_b_name": "stiff_flex_accel_peak",
+      "corr": 0.9762714311771785
+    },
+    {
+      "feat_a_idx": 3,
+      "feat_a_name": "stiff_trunk_flex_speed_max",
+      "feat_b_idx": 11,
+      "feat_b_name": "stiff_pitch_standing",
+      "corr": -0.8569261264607705
+    },
+    {
+      "feat_a_idx": 3,
+      "feat_a_name": "stiff_trunk_flex_speed_max",
+      "feat_b_idx": 15,
+      "feat_b_name": "stiff_pitch_rom",
+      "corr": 0.8595129221795114
+    },
+    {
+      "feat_a_idx": 11,
+      "feat_a_name": "stiff_pitch_standing",
+      "feat_b_idx": 15,
+      "feat_b_name": "stiff_pitch_rom",
+      "corr": -0.9860752714462506
+    },
+    {
+      "feat_a_idx": 12,
+      "feat_a_name": "stiff_view_normal_z",
+      "feat_b_idx": 24,
+      "feat_b_name": "stiff_thoracic_kyphosis_peak",
+      "corr": -0.8948168882941702
+    },
+    {
+      "feat_a_idx": 22,
+      "feat_a_name": "stiff_shoulder_roll_max",
+      "feat_b_idx": 23,
+      "feat_b_name": "stiff_hip_roll_max",
+      "corr": 0.8944671170395854
+    }
+  ],
+  "lofo_results": [
+    {
+      "index": 0,
+      "name": "stiff_lumbar_poly_a",
+      "f1_without": 0.852017937219731,
+      "auc_without": 0.6612406947890819,
+      "delta_f1_pct": -0.3200917999124253,
+      "delta_auc_pct": 0.7066997518610507,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 1,
+      "name": "stiff_lumbar_stiffness_sd",
+      "f1_without": 0.8531390134529148,
+      "auc_without": 0.6585459057071961,
+      "delta_f1_pct": -0.2079841765940449,
+      "delta_auc_pct": 0.43722084367247005,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 2,
+      "name": "stiff_spine_lateral_dev_max",
+      "f1_without": 0.8534531162268388,
+      "auc_without": 0.6568635235732009,
+      "delta_f1_pct": -0.17657389920163746,
+      "delta_auc_pct": 0.26898263027295144,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 3,
+      "name": "stiff_trunk_flex_speed_max",
+      "f1_without": 0.8523301516002246,
+      "auc_without": 0.6672059553349876,
+      "delta_f1_pct": -0.28887036186305837,
+      "delta_auc_pct": 1.3032258064516244,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 4,
+      "name": "stiff_cervical_min",
+      "f1_without": 0.8534531162268388,
+      "auc_without": 0.6611612903225805,
+      "delta_f1_pct": -0.17657389920163746,
+      "delta_auc_pct": 0.6987593052109164,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 5,
+      "name": "stiff_signed_thoracolumbar_delta",
+      "f1_without": 0.8531390134529148,
+      "auc_without": 0.6557568238213399,
+      "delta_f1_pct": -0.2079841765940449,
+      "delta_auc_pct": 0.15831265508685632,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 6,
+      "name": "stiff_active_rom",
+      "f1_without": 0.8542600896860987,
+      "auc_without": 0.6617965260545906,
+      "delta_f1_pct": -0.09587655327565336,
+      "delta_auc_pct": 0.762282878411924,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 7,
+      "name": "stiff_cobb_mean",
+      "f1_without": 0.8549019607843137,
+      "auc_without": 0.6552803970223324,
+      "delta_f1_pct": -0.03168944345415259,
+      "delta_auc_pct": 0.11066997518610622,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 8,
+      "name": "stiff_shoulder_hip_twist_max",
+      "f1_without": 0.853781512605042,
+      "auc_without": 0.6512258064516129,
+      "delta_f1_pct": -0.14373426138132306,
+      "delta_auc_pct": -0.29478908188584896,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 9,
+      "name": "stiff_lateral_asym_integral",
+      "f1_without": 0.854739203589456,
+      "auc_without": 0.6567444168734492,
+      "delta_f1_pct": -0.04796516293992248,
+      "delta_auc_pct": 0.25707196029778334,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 10,
+      "name": "stiff_flex_accel_peak",
+      "f1_without": 0.8526434195725534,
+      "auc_without": 0.6601042183622828,
+      "delta_f1_pct": -0.25754356463018047,
+      "delta_auc_pct": 0.5930521091811469,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 11,
+      "name": "stiff_pitch_standing",
+      "f1_without": 0.8563443264393515,
+      "auc_without": 0.6648585607940446,
+      "delta_f1_pct": 0.11254712204963324,
+      "delta_auc_pct": 1.068486352357323,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 12,
+      "name": "stiff_view_normal_z",
+      "f1_without": 0.853781512605042,
+      "auc_without": 0.6563424317617865,
+      "delta_f1_pct": -0.14373426138132306,
+      "delta_auc_pct": 0.21687344913151607,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 13,
+      "name": "stiff_shear_stress_proxy",
+      "f1_without": 0.8507295173961841,
+      "auc_without": 0.6617220843672457,
+      "delta_f1_pct": -0.44893378226711356,
+      "delta_auc_pct": 0.75483870967743,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 14,
+      "name": "stiff_lockout_hyperextension",
+      "f1_without": 0.8556990454800674,
+      "auc_without": 0.6592456575682382,
+      "delta_f1_pct": 0.04801902612121545,
+      "delta_auc_pct": 0.5071960297766798,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 15,
+      "name": "stiff_pitch_rom",
+      "f1_without": 0.8534675615212528,
+      "auc_without": 0.6551861042183623,
+      "delta_f1_pct": -0.17512936976024074,
+      "delta_auc_pct": 0.10124069478909536,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 16,
+      "name": "stiff_view_occlusion",
+      "f1_without": 0.8534531162268388,
+      "auc_without": 0.6540843672456575,
+      "delta_f1_pct": -0.17657389920163746,
+      "delta_auc_pct": -0.008933002481381624,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 17,
+      "name": "stiff_view_comp_curv",
+      "f1_without": 0.852808988764045,
+      "auc_without": 0.6572754342431762,
+      "delta_f1_pct": -0.24098664548102278,
+      "delta_auc_pct": 0.31017369727048827,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 18,
+      "name": "stiff_res_lumbar_curv",
+      "f1_without": 0.8552188552188552,
+      "auc_without": 0.6541736972704714,
+      "delta_f1_pct": 0.0,
+      "delta_auc_pct": 0.0,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 19,
+      "name": "stiff_ratio_arm_to_torso",
+      "f1_without": 0.8518930957683741,
+      "auc_without": 0.646302729528536,
+      "delta_f1_pct": -0.33257594504810806,
+      "delta_auc_pct": -0.7870967741935408,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 20,
+      "name": "stiff_ratio_femur_to_tibia",
+      "f1_without": 0.8532883642495784,
+      "auc_without": 0.6570769230769231,
+      "delta_f1_pct": -0.1930490969276777,
+      "delta_auc_pct": 0.2903225806451748,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 21,
+      "name": "stiff_ratio_leg_to_torso",
+      "f1_without": 0.8544232922732363,
+      "auc_without": 0.6592952853598015,
+      "delta_f1_pct": -0.07955629456188884,
+      "delta_auc_pct": 0.5121588089330165,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 22,
+      "name": "stiff_shoulder_roll_max",
+      "f1_without": 0.8542713567839196,
+      "auc_without": 0.6348089330024814,
+      "delta_f1_pct": -0.09474984349355786,
+      "delta_auc_pct": -1.9364764267989942,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 23,
+      "name": "stiff_hip_roll_max",
+      "f1_without": 0.8497757847533632,
+      "auc_without": 0.6561141439205956,
+      "delta_f1_pct": -0.5443070465491973,
+      "delta_auc_pct": 0.19404466501242723,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 24,
+      "name": "stiff_thoracic_kyphosis_peak",
+      "f1_without": 0.853781512605042,
+      "auc_without": 0.6383722084367246,
+      "delta_f1_pct": -0.14373426138132306,
+      "delta_auc_pct": -1.5801488833746768,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 25,
+      "name": "stiff_lumbopelvic_rhythm_ratio",
+      "f1_without": 0.856341189674523,
+      "auc_without": 0.6549528535980149,
+      "delta_f1_pct": 0.11223344556677839,
+      "delta_auc_pct": 0.07791563275435509,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 26,
+      "name": "stiff_knee_fixation_sd",
+      "f1_without": 0.8534675615212528,
+      "auc_without": 0.6529727047146402,
+      "delta_f1_pct": -0.17512936976024074,
+      "delta_auc_pct": -0.12009925558311707,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 27,
+      "name": "stiff_torso_pelvis_lateral_offset",
+      "f1_without": 0.8529904974846283,
+      "auc_without": 0.6530918114143921,
+      "delta_f1_pct": -0.22283577342269156,
+      "delta_auc_pct": -0.10818858560792677,
+      "impact": "★ 필수 핵심 피처 (제거 시 성능 급락)"
+    },
+    {
+      "index": 28,
+      "name": "stiff_lateral_drift_direction",
+      "f1_without": 0.8532883642495784,
+      "auc_without": 0.6577717121588089,
+      "delta_f1_pct": -0.1930490969276777,
+      "delta_auc_pct": 0.3598014888337553,
+      "impact": "중립/미세 기여"
+    },
+    {
+      "index": 29,
+      "name": "stiff_sagittal_spine_stiffness",
+      "f1_without": 0.8540965207631874,
+      "auc_without": 0.6628238213399503,
+      "delta_f1_pct": -0.11223344556677839,
+      "delta_auc_pct": 0.8650124069478959,
+      "impact": "중립/미세 기여"
+    }
+  ]
+}

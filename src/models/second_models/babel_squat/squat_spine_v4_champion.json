@@ -1,0 +1,55 @@
+{
+  "defect_code": "c1",
+  "defect_name": "척추의 중립",
+  "exercise": "바벨 스쿼트",
+  "feature_dim": 25,
+  "feature_names": [
+    "c1_cyclogram_norm_area",
+    "c1_ascent_velocity_ratio",
+    "c1_onset_phase_lag",
+    "c1_butt_wink_accel",
+    "c1_torso_log_dimensionless_jerk",
+    "c1_frontal_spine_asymmetry",
+    "c1_rmse_hysteresis_trunk",
+    "c1_lumbar_hyperextension_index",
+    "c1_bar_to_midfoot_sagittal_deviation",
+    "torso_shank_err",
+    "cervical_min",
+    "gaze_pitch_mean",
+    "gaze_pitch_min",
+    "ear_sh_hip_min",
+    "ear_sh_hip_mean",
+    "ear_sh_hip_drop",
+    "fine_neck_back_waist_angle_min",
+    "fine_neck_back_waist_angle_drop",
+    "fine_head_forward_protrusion_max",
+    "c1_shoulder_hip_knee_angle_at_nadir",
+    "c1_trunk_thigh_ratio_mean",
+    "c1_max_trunk_lean_phase_offset",
+    "c1_trunk_jerk_peak_at_nadir",
+    "c1_hip_shoulder_knee_descent_ratio",
+    "c1_cross_corr_lag_trunk_thigh"
+  ],
+  "champion_model": "LightGBM",
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 6,
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 2.0
+  },
+  "metrics_5fold_sgk": {
+    "macro_f1": 85.55,
+    "roc_auc": 92.93,
+    "balanced_acc": 85.09,
+    "precision": 85.45,
+    "recall": 85.65,
+    "latency_ms": 0.012
+  },
+  "improvement_vs_baseline": {
+    "f1_gain_percent_point": 2.32,
+    "roc_auc_gain_percent_point": 0.66,
+    "balanced_acc_gain_percent_point": 2.14
+  }
+}

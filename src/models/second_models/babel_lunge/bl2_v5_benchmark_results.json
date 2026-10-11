@@ -1,0 +1,195 @@
+{
+  "model_name": "bl2_v5",
+  "description": "v5 Pure Lower-Body Alignment & Trunk Noise-Free Production Model",
+  "timestamp": "2026-10-03 18:17:17",
+  "max_retake_rate": 0.1,
+  "min_coverage": 0.9,
+  "tau_normal": 0.51,
+  "tau_defect": 0.541,
+  "overall_3state": {
+    "total_samples": 1081,
+    "coverage": 0.9010175763182239,
+    "retake_rate": 0.09898242368177614,
+    "retake_count": 107,
+    "decided_count": 974,
+    "selective_defect_f1": 0.4251207729468599,
+    "selective_clean_f1": 0.7309721175584024,
+    "selective_accuracy": 0.63347022587269,
+    "selective_precision": 0.3905325443786982,
+    "selective_recall": 0.4664310954063604,
+    "confusion_matrix": [
+      [
+        485,
+        206
+      ],
+      [
+        151,
+        132
+      ]
+    ],
+    "full_coverage_defect_f1": 0.41836734693877553,
+    "full_coverage_clean_f1": 0.6690856313497823,
+    "full_coverage_accuracy": 0.5781683626271971,
+    "full_coverage_precision": 0.34309623430962344,
+    "full_coverage_recall": 0.5359477124183006,
+    "roc_auc": 0.6043348091924943
+  },
+  "view_benchmarks": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9049773755656109,
+        "retake_rate": 0.09502262443438914,
+        "retake_count": 21,
+        "decided_count": 200,
+        "selective_defect_f1": 0.42758620689655175,
+        "selective_clean_f1": 0.6745098039215687,
+        "selective_accuracy": 0.585,
+        "selective_precision": 0.36470588235294116,
+        "selective_recall": 0.5166666666666667,
+        "confusion_matrix": [
+          [
+            86,
+            54
+          ],
+          [
+            29,
+            31
+          ]
+        ],
+        "full_coverage_defect_f1": 0.4157303370786517,
+        "full_coverage_clean_f1": 0.6060606060606061,
+        "full_coverage_accuracy": 0.5294117647058824,
+        "full_coverage_precision": 0.3274336283185841,
+        "full_coverage_recall": 0.5692307692307692,
+        "roc_auc": 0.5698224852071005
+      }
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9004524886877828,
+        "retake_rate": 0.09954751131221719,
+        "retake_count": 22,
+        "decided_count": 199,
+        "selective_defect_f1": 0.48120300751879697,
+        "selective_clean_f1": 0.7396226415094339,
+        "selective_accuracy": 0.6532663316582915,
+        "selective_precision": 0.4383561643835616,
+        "selective_recall": 0.5333333333333333,
+        "confusion_matrix": [
+          [
+            98,
+            41
+          ],
+          [
+            28,
+            32
+          ]
+        ],
+        "full_coverage_defect_f1": 0.47904191616766467,
+        "full_coverage_clean_f1": 0.6836363636363636,
+        "full_coverage_accuracy": 0.6063348416289592,
+        "full_coverage_precision": 0.39215686274509803,
+        "full_coverage_recall": 0.6153846153846154,
+        "roc_auc": 0.6458579881656805
+      }
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "metrics": {
+        "total_samples": 216,
+        "coverage": 0.9027777777777778,
+        "retake_rate": 0.09722222222222222,
+        "retake_count": 21,
+        "decided_count": 195,
+        "selective_defect_f1": 0.40707964601769914,
+        "selective_clean_f1": 0.7581227436823105,
+        "selective_accuracy": 0.6564102564102564,
+        "selective_precision": 0.39655172413793105,
+        "selective_recall": 0.41818181818181815,
+        "confusion_matrix": [
+          [
+            105,
+            35
+          ],
+          [
+            32,
+            23
+          ]
+        ],
+        "full_coverage_defect_f1": 0.3945578231292517,
+        "full_coverage_clean_f1": 0.6877192982456141,
+        "full_coverage_accuracy": 0.5879629629629629,
+        "full_coverage_precision": 0.3333333333333333,
+        "full_coverage_recall": 0.48333333333333334,
+        "roc_auc": 0.6082264957264957
+      }
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "metrics": {
+        "total_samples": 212,
+        "coverage": 0.8962264150943396,
+        "retake_rate": 0.10377358490566038,
+        "retake_count": 22,
+        "decided_count": 190,
+        "selective_defect_f1": 0.3486238532110092,
+        "selective_clean_f1": 0.7380073800738007,
+        "selective_accuracy": 0.6263157894736842,
+        "selective_precision": 0.3584905660377358,
+        "selective_recall": 0.3392857142857143,
+        "confusion_matrix": [
+          [
+            100,
+            34
+          ],
+          [
+            37,
+            19
+          ]
+        ],
+        "full_coverage_defect_f1": 0.34532374100719426,
+        "full_coverage_clean_f1": 0.6807017543859649,
+        "full_coverage_accuracy": 0.5707547169811321,
+        "full_coverage_precision": 0.2962962962962963,
+        "full_coverage_recall": 0.41379310344827586,
+        "roc_auc": 0.5370577698163905
+      }
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "metrics": {
+        "total_samples": 211,
+        "coverage": 0.9004739336492891,
+        "retake_rate": 0.0995260663507109,
+        "retake_count": 21,
+        "decided_count": 190,
+        "selective_defect_f1": 0.4462809917355372,
+        "selective_clean_f1": 0.7413127413127413,
+        "selective_accuracy": 0.6473684210526316,
+        "selective_precision": 0.391304347826087,
+        "selective_recall": 0.5192307692307693,
+        "confusion_matrix": [
+          [
+            96,
+            42
+          ],
+          [
+            25,
+            27
+          ]
+        ],
+        "full_coverage_defect_f1": 0.4444444444444444,
+        "full_coverage_clean_f1": 0.6840148698884758,
+        "full_coverage_accuracy": 0.5971563981042654,
+        "full_coverage_precision": 0.35789473684210527,
+        "full_coverage_recall": 0.5862068965517241,
+        "roc_auc": 0.6363533919314853
+      }
+    }
+  },
+  "total_elapsed_sec": 6.55
+}

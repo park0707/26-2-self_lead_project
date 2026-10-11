@@ -1,0 +1,107 @@
+{
+  "statistical_metrics": {
+    "1. 원천 절대 수직거리 |Δy|": {
+      "mean_clean": 0.3089,
+      "std_clean": 0.1077,
+      "mean_defect": 0.338,
+      "std_defect": 0.0736,
+      "t_statistic": -5.134,
+      "p_value": "3.51e-07",
+      "cohens_d": 0.316,
+      "roc_auc": 0.5547
+    },
+    "2. 체간 정규화 수직거리 (|Δy| / L_torso) [추천]": {
+      "mean_clean": 0.6851,
+      "std_clean": 0.2249,
+      "mean_defect": 0.7233,
+      "std_defect": 0.1517,
+      "t_statistic": -3.255,
+      "p_value": "1.18e-03",
+      "cohens_d": 0.2,
+      "roc_auc": 0.5183
+    },
+    "3. 대퇴골 정규화 수직거리 (|Δy| / L_femur)": {
+      "mean_clean": 0.8139,
+      "std_clean": 0.2555,
+      "mean_defect": 0.887,
+      "std_defect": 0.151,
+      "t_statistic": -5.833,
+      "p_value": "7.42e-09",
+      "cohens_d": 0.348,
+      "roc_auc": 0.5432
+    },
+    "4. 부호 있는 수직거리 ((y_k - y_h) / L_torso)": {
+      "mean_clean": 0.6767,
+      "std_clean": 0.2489,
+      "mean_defect": 0.72,
+      "std_defect": 0.167,
+      "t_statistic": -3.331,
+      "p_value": "9.02e-04",
+      "cohens_d": 0.204,
+      "roc_auc": 0.5194
+    }
+  },
+  "viewpoint_aucs": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "mean_clean": 0.5186,
+      "mean_defect": 0.5826,
+      "roc_auc": 0.5223
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "mean_clean": 0.7416,
+      "mean_defect": 0.7098,
+      "roc_auc": 0.5691
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "mean_clean": 0.5805,
+      "mean_defect": 0.7075,
+      "roc_auc": 0.6809
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "mean_clean": 0.76,
+      "mean_defect": 0.8023,
+      "roc_auc": 0.541
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "mean_clean": 0.8343,
+      "mean_defect": 0.817,
+      "roc_auc": 0.5624
+    }
+  },
+  "top_correlations": [
+    {
+      "feature": "rigid_bone_length_consistency",
+      "corr": -0.1863
+    },
+    {
+      "feature": "lead_knee_angle_min",
+      "corr": 0.1652
+    },
+    {
+      "feature": "lead_tibia_length_ratio",
+      "corr": 0.1502
+    },
+    {
+      "feature": "lead_knee_under_90_ratio",
+      "corr": -0.1419
+    },
+    {
+      "feature": "rear_knee_angle_min",
+      "corr": 0.1341
+    }
+  ],
+  "model_impact": {
+    "v3_base_auc": 0.8852,
+    "v3_base_3state_f1": 0.7566,
+    "v3_base_acc": 0.8573,
+    "v3_plus_proposed_auc": 0.8834605847838363,
+    "v3_plus_proposed_3state_f1": 0.7521079258010118,
+    "v3_plus_proposed_acc": 0.8503054989816701,
+    "v3_plus_proposed_unc": 0.09158186864014801
+  }
+}

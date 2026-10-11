@@ -1,0 +1,113 @@
+{
+  "total_samples": 2605,
+  "student_distilled_model_b": {
+    "overall": {
+      "f1": 81.51,
+      "prec": 82.41,
+      "rec": 80.64,
+      "acc": 82.38,
+      "auc": 89.68,
+      "cm": [
+        [
+          1134,
+          216
+        ],
+        [
+          243,
+          1012
+        ]
+      ]
+    },
+    "selective": {
+      "coverage": 88.94,
+      "selective_f1": 84.64,
+      "selective_acc": 85.33
+    }
+  },
+  "teacher_model_a": {
+    "overall": {
+      "f1": 84.47,
+      "prec": 85.54,
+      "rec": 83.43,
+      "acc": 85.22,
+      "auc": 91.58,
+      "cm": [
+        [
+          1173,
+          177
+        ],
+        [
+          208,
+          1047
+        ]
+      ]
+    },
+    "selective": {
+      "coverage": 87.83,
+      "selective_f1": 88.02,
+      "selective_acc": 88.51
+    }
+  },
+  "delta_overall": {
+    "f1": -2.96,
+    "acc": -2.84,
+    "auc": -1.9
+  },
+  "views": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 521,
+      "student_f1": 80.41,
+      "teacher_f1": 84.12,
+      "delta_f1": -3.71,
+      "student_auc": 87.45,
+      "teacher_auc": 90.58,
+      "student_acc": 81.57,
+      "teacher_acc": 85.22
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 521,
+      "student_f1": 81.65,
+      "teacher_f1": 84.02,
+      "delta_f1": -2.37,
+      "student_auc": 91.18,
+      "teacher_auc": 91.7,
+      "student_acc": 82.92,
+      "teacher_acc": 84.45
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 521,
+      "student_f1": 81.05,
+      "teacher_f1": 83.51,
+      "delta_f1": -2.46,
+      "student_auc": 90.59,
+      "teacher_auc": 92.11,
+      "student_acc": 81.96,
+      "teacher_acc": 84.84
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 521,
+      "student_f1": 81.62,
+      "teacher_f1": 83.3,
+      "delta_f1": -1.68,
+      "student_auc": 90.53,
+      "teacher_auc": 91.17,
+      "student_acc": 82.53,
+      "teacher_acc": 83.69
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 521,
+      "student_f1": 82.79,
+      "teacher_f1": 87.37,
+      "delta_f1": -4.58,
+      "student_auc": 89.16,
+      "teacher_auc": 92.65,
+      "student_acc": 82.92,
+      "teacher_acc": 87.91
+    }
+  }
+}

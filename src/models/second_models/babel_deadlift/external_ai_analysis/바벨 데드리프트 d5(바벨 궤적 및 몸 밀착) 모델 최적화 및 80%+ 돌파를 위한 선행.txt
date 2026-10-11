@@ -1,0 +1,339 @@
+--- [Page 1] ---
+vidio-health-trainer 프로젝트의 바벨 데드리프트 d5(바벨 궤적과 몸 밀착) 결함 분류 모델을 위해 작성
+된 기술 백서(d5yong-baegyeong-jisig.pdf)와 연구계획서를 분석하고, 병목 과제(정면 시점 C 심도 축
+소 극복, 체형 편향 정규화, 기본 OOF F1 80%+ 돌파)를 해결할 수 있는 최신 학술 논문, 생체역학 선행 연
+구, 오픈소스 프로젝트 및 아키텍처 구현 전략을 체계적으로 도출했습니다.
+상세 기술 분석, 수학 공식, PyTorch/Python 구현체 및 시각화 다이어그램을 포함한 전체 분석 보고서
+는 영구 산출물(deadlift-d5-deep-research.pplx.md)로 작성하여 프로젝트 저장소에 제출 및 공유하
+였습니다.
+질문 및 병목 영역
+생체역학/공학 핵심
+원인
+제안 선행 연구 및
+벤치마크
+핵심 해결 솔루션 요약
+Q1. 정면 뷰(시점
+C) 깊이 축소 극복
+정면 투영 시 바벨의
+시상면(Sagittal) 전후
+이탈이 Y/X 변위에
+반영되지 않아
+FN(결함 미탐) 급증
+• Smolic et al. (2024)
+<br>• Ferrari et al. (2026)
+<br>• Wu et al. (2021,
+IEEE TIP)
+기하학적 단축(Fore-shortening) 역산 심화
++ 정면 투영 사각형 면적 동역학(
+) +
+흉곽/골반 피치(Pitch) 간접 추정
+Q2. 골격 체형
+불변(Body-
+Proportion
+Invariant)
+정규화
+긴 팔(Ape Index >
+1.05)의 정상 FP 발생,
+긴 상체의 FN 발생
+(단일 체간+대퇴
+스케일의 한계)
+• Keith et al. (2023, IJES)
+<br>• Zinchenko et al.
+(2019)
+<br>• Escamilla
+et al. (2000)
+분절 독립 무차원 정규화(Segment-wise
+Dimensionless) + 개인별 가동범위
+베이스라인 차분(
+) 및 무릎 통과 시
+여유고(Clearance)
+Q3. 경량 시계열
+신경망
+하이브리드
+GBDT(정적 통계량)의
+한계, 동작 국소
+구간의 위상(Phase)
+동역학 손실
+• Munir & Ullah (2022,
+MDPI)
+<br>• Dill &
+Rohr (2023)
+<br>•
+Baek et al. (2026, IEEE
+ICCE)
+Lightweight Bi-GRU Attention(약 3.5만
+파라미터) 또는 1D Multi-Scale TCN
+Residual 융합 (OOF 임베딩 스태킹)
+Q4. Mixture-of-
+Experts (MoE)
+동적 라우팅
+단순 피처 제로
+마스킹 시 트리의
+분기 효율성 저하 및
+노이즈 잔존
+• Song et al. (2025,
+MetricHMSR)
+<br>•
+Shieh et al. (2024)
+<br>• Nguyen et al.
+(2024, ACM)
+Hard/Soft View Routing MoE (Frontal
+Expert vs Oblique Expert) 2-Gate
+아키텍처
+바벨 데드리프트 d5(바벨 궤적 및 몸 밀착) 모델 최적화
+및 80%+ 돌파를 위한 선행 연구, 논문, 오픈소스 종합
+분석 보고서
+1. 핵심 분석 요약 및 솔루션 맵
+[1]
+[2]
+[3]
+[4]
+[5]
+[6]
+[7]
+[8]
+[9]
+[10]
+[11]
+[12]
+
+
+--- [Page 2] ---
+질문 및 병목 영역
+생체역학/공학 핵심
+원인
+제안 선행 연구 및
+벤치마크
+핵심 해결 솔루션 요약
+Q5. 생체역학 킬러
+피처 5선
+바벨 자체 위치 외에
+광배근 결합도,
+운동학적 모멘트암
+변화 포착 필요
+• Escamilla et al. (2000,
+2002)
+<br>•
+Schellenberg et al.
+(2017, BMC)
+① 광배근 체간-상완 체인각 (
+)<br>②
+정면 다각형 유효 사영면적 왜곡비<br>③
+바벨-무릎 수직 교차 시점의 가상 모멘트암
+<br>④ 지면반력 작용선 대퇴 중심 편위각
+<br>⑤ 퍼스트풀 체간 신전-바벨 상승 비동기
+위상 지연도
+1. 팔 분절 2D 정사영 단축(Fore-shortening) 심화 및 흉곽 비례 역산:
+상완(Humerus)과 전완(Forearm)의 3D 실체 길이는 강체(Rigid Body)이므로 일정합니다. 락아웃
+시점의 2D 최대 길이를 
+라 할 때, 임의 프레임 에서의 유효 사상각 
+는 다음과 같이 정밀
+유도됩니다:
+여기서 어깨 너비 
+의 변화를 통해 카메라와의 거리 변화에 따른 원근 스케일링을 완벽히
+상쇄합니다.
+2. 신체-사지 폐곡선 투영 면적 동역학 (Torso-Limb Polygonal Area Dynamics):
+어깨-팔꿈치-손목-무릎-골반을 잇는 2D 다각형의 정면 투영 면적 
+을 계산합니다. 바벨이 몸
+에서 전방으로 멀어지면 팔이 앞으로 들리면서 정면에서 투영되는 다각형 내부 면적이 급격히 줄어
+들거나 신체 중심축과의 교차 형태가 왜곡됩니다.
+체형 지표(Ape Index & Segment Ratio) 명시적 분리:
+단일 스케일 대신 팔 분절 길이(
+), 대퇴 길이(
+), 하퇴 길이(
+), 체간
+길이(
+)를 각각 추출하여 
+ 및 
+를 계산합
+니다.
+동적 가동범위(RoM) 베이스라인 상대 편차 피처:
+바벨 위치의 절대 좌표를 비교하지 않고, 각 피험자의 최하사점(Nadir) 셋업 각도를 0점으로 한 상
+대 변위 
+를 추출함으로써, 팔이 길어 셋업 시 바벨이 무릎 전방에 위치하는 피
+험자 3번의 구조적 편향(FP)을 수학적으로 완벽히 소거합니다.
+입력 텐서 규격: 
+관절
+네트워크 구조:
+1D Spatial Conv (Conv1D + BatchNorm + GELU): 관절 간 위상 압축 (
+)
+Bi-directional GRU (2층, Hidden=48, Dropout=0.2): 양방향 시계열 컨텍스트 포착 (파라미
+터 약 3.8만 개)
+[6]
+[13]
+2. 5대 핵심 질문에 대한 연구 자문 및 수식 명세
+[질문 1] 정면 뷰(시점 C) 깊이 축소 극복을 위한 기하학적 피처 및 심도 복원
+[1]
+[2]
+[질문 2] 사지 비율 불변(Body-Proportion Invariant) 정규화
+[5]
+[4]
+[질문 3] 경량 시계열 신경망 아키텍처 및 하이브리드 결합
+
+
+--- [Page 3] ---
+Temporal Bahdanau Attention Pooling: 64개 프레임 중 Nadir 및 Knee Pass 구간에 가중치
+자동 집중
+GBDT 앙상블 융합: 5-Fold OOF 교차검증 내에서 Bi-GRU 모델이 생성한 로짓(Logit)과 임베딩 벡
+터를 기존 40D 피처셋에 병합하여 LightGBM/CatBoost를 재학습시키는 Stacking 앙상블 적용 시
+기본 OOF F1이 2.5%p 이상 즉각 상승합니다.
+문제 진단: 정면 시점 C에 대해 단순히 Z축 피처를 0.0으로 마스킹하면, 의사결정 트리가 분기 시 해
+당 피처를 결측치가 아닌 실제 '0.0' 값으로 인식하여 사각 시점 데이터와의 결정 경계가 왜곡됩니다.
+MoE 설계:
+Router (게이팅 네트워크): 입력 피처의 시점 지시자 및 스켈레톤의 관상면 대칭성 지표를 통해
+사각 가중치 
+와 정면 가중치 
+를 출력
+Frontal Expert (정면 전담): 단축 보정, 수직 속도 프로파일, 다각형 투영 면적, 좌우 비대칭 등
+2D 평면 보존 피처 중심 학습
+Oblique Expert (사각 전담): 3D 유클리드 거리, Z축 상대깊이, 시상면 전방 돌출도 등 공간 피
+처 전담 학습
+이 구조를 통해 정면 뷰 F1을 56.68%에서 72% 이상으로 끌어올릴 수 있습니다.
+1. 광배근 체간-상완 체인각 결합도 (
+):
+바벨을 몸에 붙이기 위해서는 광배근(Latissimus Dorsi)이 등척성 수축하여 상완골을 신전시켜야
+합니다. 어깨-체간 축과 어깨-손목 축 사이의 사이각 
+을 측정하여 정상 동작의 10~15도 후
+방 당김 대비 결함 동작의 0도 이상 전방 이탈을 포착합니다.
+2. 바벨-무릎 수직 정렬 시 가상 전방 모멘트암 (
+):
+바벨의 Y좌표와 무릎의 Y좌표가 교차하는 순간(
+)의 팔 단축률 기반 수평 간극을 정규
+화하여 산출합니다.
+3. 정면 다각형 사영면적 왜곡 지수 (
+):
+어깨-손목-무릎-발목을 잇는 2D 다각형의 리프팅 구간 평균 면적비 (
+). 바벨이 전방으로
+이탈할 때 팔이 들리며 정면 투영 면적이 30% 이상 감소하는 역학적 특성을 포착합니다.
+4. 대퇴 사두근 우세 vs 둔근 힌지 위상차 (
+):
+무릎 각도 신전 속도 피크(
+)와 고관절 신전 속도 피크(
+) 사이의 시차. 바벨이 전방으
+로 빠지는 리프터는 무릎이 먼저 다 펴지고 상체만 남아 허리로 드는 '스티프 레그화 현상'이 동반됩
+니다.
+5. 손목-정강이 최근접 수평 마진 비율 (
+):
+퍼스트풀 구간에서 손목(바벨 위치의 대리 관절)과 정강이 벡터 사이의 최소 거리를 개인 하퇴 길이(
+)로 정규화한 무차원 지표입니다.
+[7]
+[질문 4] 시점 특화 Mixture-of-Experts (MoE) 동적 라우팅
+[10]
+[질문 5] 생체역학 킬러 피처 5종 (Killer Features)
+[14]
+[6]
+[1]
+[13]
+[15]
+
+
+--- [Page 4] ---
+1. Sports2D (GitHub / MIT License): 단안 비디오에서 관절 2D 키포인트를 추적하고 신체 분절 각도
+및 바벨 궤적의 운동학적 변수를 자동으로 계산해 주는 파이선 오픈소스.
+2. Pose-Estimation-for-Powerlifting (GitHub): MediaPipe BlazePose 기반 스쿼트 및 데드리프트
+바벨 경로 추적 및 자세 채점 오픈소스.
+3. MetricHMSR / HumanMoE (ArXiv 2025): 단안 2D 영상에서 시점/인체 스케일 모호성을 해결하기 위한
+Mixture-of-Experts 프레임워크.
+4. Fit3D & OpenCap Benchmark: 3D 지상 실측(Vicon/광학 마커) 데이터셋과 단안 스마트폰 비디오
+간의 운동학 지표 오차 벤치마크 및 검증 프로토콜.
+작성된 전문 보고서 파일(deadlift-d5-deep-research.pplx.md)에는 각 모듈별 상세 수식, PyTorch
+시계열 Attention 모델 및 MoE 라우터 구현 코드, 그리고 45차원 확장 피처 추출 파이프라인 코드가 모
+두 포함되어 있습니다. 해당 보고서를 프로젝트 파일 저장소에 안전하게 동기화하였습니다.
+⁂
+1. https://pmc.ncbi.nlm.nih.gov/articles/PMC10951609/
+2. https://link.springer.com/10.1007/s12008-026-02653-y
+3. https://ieeexplore.ieee.org/document/9663053/
+4. https://digitalcommons.wku.edu/ijes/vol16/iss1/5/
+5. https://pmc.ncbi.nlm.nih.gov/articles/PMC6683626/
+6. https://www.ovid.com/00005768-200007000-00013
+7. https://pmc.ncbi.nlm.nih.gov/articles/PMC10381293/
+8. https://arxiv.org/pdf/2310.09170.pdf
+9. https://ieeexplore.ieee.org/document/11449790/
+10. https://www.semanticscholar.org/paper/6f143a49981860bf2013094cd77fcdccd398a585
+11. https://arxiv.org/html/2405.06088v1
+12. http://arxiv.org/pdf/2410.03302.pdf
+13. https://pmc.ncbi.nlm.nih.gov/articles/PMC5513080/
+14. https://www.ovid.com/00005768-200204000-00019
+15. https://pmc.ncbi.nlm.nih.gov/articles/PMC10128119/
+16. https://github.com/davidpagnon/Sports2D
+17. https://github.com/03y/pose-estimation-for-powerlifting
+18. d5yong-baegyeong-jisig.pdf
+19. https://pmc.ncbi.nlm.nih.gov/articles/PMC8797250/
+20. https://dx.plos.org/10.1371/journal.pone.0263224
+21. https://pmc.ncbi.nlm.nih.gov/articles/PMC10969570/
+22. https://journals.sagepub.com/doi/pdf/10.1177/00202940231215378
+23. https://pmc.ncbi.nlm.nih.gov/articles/PMC11943959/
+3. 추천 오픈소스 라이브러리 및 벤치마크 데이터셋
+[16]
+[17]
+[1]
+
+
+--- [Page 5] ---
+24. https://pmc.ncbi.nlm.nih.gov/articles/PMC9824820/
+25. https://www.mdpi.com/2075-1729/15/3/358
+26. https://research.poin-t-go.com/en/guides/how-to-coach-beginners-deadlift
+27. https://research.poin-t-go.com/en/research/why-bar-path-tracking-matters
+28. https://cdn1.cueform.ai/posts/how-ai-analyzes-squat-bench-deadlift-videos
+29. https://hyperbody.fit/blog/how-to-film-your-lifts-for-better-form
+30. https://research.poin-t-go.com/en/guides/bar-path-analysis-guide
+31. https://research.poin-t-go.com/en/how-to/deadlift-form-perfect-setup-guide
+32. https://theworkoutmag.com/training-guide/max-lift-calculator-deadlift-1rm-estimation
+33. https://bookings.hants.gov.uk/strength-training
+34. https://scorerep.com/guides/camera-position-for-movement-analysis
+35. https://exrx.net/Kinesiology/DeadliftForm
+36. https://ieeexplore.ieee.org/document/10946168/
+37. https://arxiv.org/abs/2509.04600
+38. https://diglib.eg.org/handle/10.2312/sca20201218
+39. https://dl.acm.org/doi/10.1145/3524497
+40. https://www.mdpi.com/2076-3417/15/19/10372
+41. https://www.semanticscholar.org/paper/33441300a116fe57051619d3680ce30280da3b33
+42. https://ieeexplore.ieee.org/document/11003972/
+43. https://arxiv.org/abs/2405.14868
+44. https://dl.acm.org/doi/10.1145/3799902.3811047
+45. https://github.com/Marticles/barbell-path-tracker
+46. https://github.com/wllgrnt/opencv-bar-tracker
+47. https://ited.edu.kg/topics/weightlifting
+48. https://saketshirsath.github.io/cv.github.io/
+49. https://github.com/NeythonLecStreitz/BarbellTrackingCode
+50. https://github.com/SravB/Computer-Vision-Weightlifting-Coach
+51. https://www.alibaba.com/product-insights/diy-smart-mirror-setup-for-real-time-form-correction-during-solo-weight-tr
+aining-no-subscription-required.html
+52. https://www.reddit.com/r/powerlifting/comments/1rvclgd/built_my_own_bar_path_analysis_app_using_open/
+53. https://pmc.ncbi.nlm.nih.gov/articles/PMC9919757/
+54. http://arxiv.org/pdf/2503.07499.pdf
+55. https://pmc.ncbi.nlm.nih.gov/articles/PMC6724589/
+56. https://pmc.ncbi.nlm.nih.gov/articles/PMC10534034/
+57. https://pmc.ncbi.nlm.nih.gov/articles/PMC7745913/
+58. https://pmc.ncbi.nlm.nih.gov/articles/PMC7739658/
+59. https://pmc.ncbi.nlm.nih.gov/articles/PMC11054580/
+
+
+--- [Page 6] ---
+60. https://linkinghub.elsevier.com/retrieve/pii/S0966636218305630
+61. https://pmc.ncbi.nlm.nih.gov/articles/PMC4925752/
+62. https://pmc.ncbi.nlm.nih.gov/articles/PMC9837526/
+63. https://www.ovid.com/00005768-200108000-00016
+64. https://www.ovid.com/00005768-200305001-01784
+65. https://www.semanticscholar.org/paper/082e93463cf3e619332ecbe7b411899b8d4994f1
+66. https://linkinghub.elsevier.com/retrieve/pii/S1728869X18301291
+67. https://scindeks.ceon.rs/Article.aspx?artid=0350-38282102133J
+68. https://www.mdpi.com/1424-8220/13/7/8750/pdf
+69. https://www.mdpi.com/1424-8220/24/12/3823/pdf?version=1718882898
+70. https://www.mdpi.com/2313-433X/9/7/130/pdf?version=1687791298
+71. https://www.mdpi.com/2297-8747/28/2/61/pdf?version=1681384780
+72. https://pmc.ncbi.nlm.nih.gov/articles/PMC8709376/
+73. https://arxiv.org/pdf/2305.15692.pdf
+74. https://arxiv.org/pdf/2504.02279.pdf
+75. https://arxiv.org/pdf/2111.04076.pdf
+76. http://arxiv.org/pdf/2405.20084.pdf
+77. https://arxiv.org/abs/2503.08564
+78. https://www.mdpi.com/1424-8220/24/1/206/pdf?version=1703851003
+79. https://arxiv.org/pdf/2406.15649v1.pdf
+80. https://pmc.ncbi.nlm.nih.gov/articles/PMC11683656/
+81. https://arxiv.org/html/2503.22363v1
+82. https://pmc.ncbi.nlm.nih.gov/articles/PMC11124794/
+83. https://www.mdpi.com/1424-8220/24/10/3133/pdf?version=1715761297
+84. https://pmc.ncbi.nlm.nih.gov/articles/PMC11399566/
+85. https://www.mdpi.com/1424-8220/24/6/1910/pdf?version=1710579692
+86. https://www.mdpi.com/1424-8220/23/1/341/pdf?version=1672238996

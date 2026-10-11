@@ -1,0 +1,696 @@
+{
+  "total_samples": 1081,
+  "tn": 504,
+  "tp": 262,
+  "fp": 127,
+  "fn": 81,
+  "caution": 107,
+  "subj_audit": [
+    {
+      "subject": 1,
+      "total_samples": 238,
+      "fp": 36,
+      "fn": 22,
+      "total_errors": 58,
+      "error_rate": 0.24369747899159663
+    },
+    {
+      "subject": 2,
+      "total_samples": 178,
+      "fp": 37,
+      "fn": 25,
+      "total_errors": 62,
+      "error_rate": 0.34831460674157305
+    },
+    {
+      "subject": 3,
+      "total_samples": 182,
+      "fp": 16,
+      "fn": 10,
+      "total_errors": 26,
+      "error_rate": 0.14285714285714285
+    },
+    {
+      "subject": 4,
+      "total_samples": 82,
+      "fp": 8,
+      "fn": 4,
+      "total_errors": 12,
+      "error_rate": 0.14634146341463414
+    },
+    {
+      "subject": 5,
+      "total_samples": 82,
+      "fp": 4,
+      "fn": 0,
+      "total_errors": 4,
+      "error_rate": 0.04878048780487805
+    },
+    {
+      "subject": 6,
+      "total_samples": 82,
+      "fp": 9,
+      "fn": 8,
+      "total_errors": 17,
+      "error_rate": 0.2073170731707317
+    },
+    {
+      "subject": 7,
+      "total_samples": 81,
+      "fp": 2,
+      "fn": 6,
+      "total_errors": 8,
+      "error_rate": 0.09876543209876543
+    },
+    {
+      "subject": 8,
+      "total_samples": 78,
+      "fp": 7,
+      "fn": 4,
+      "total_errors": 11,
+      "error_rate": 0.14102564102564102
+    },
+    {
+      "subject": 9,
+      "total_samples": 78,
+      "fp": 8,
+      "fn": 2,
+      "total_errors": 10,
+      "error_rate": 0.1282051282051282
+    }
+  ],
+  "view_audit": [
+    {
+      "view_code": "view5",
+      "view_name": "시점 A (우측 후방 45°)",
+      "total_samples": 221,
+      "fp": 24,
+      "fn": 19,
+      "total_errors": 43,
+      "error_rate": 0.19457013574660634
+    },
+    {
+      "view_code": "view2",
+      "view_name": "시점 B (우측 전방 45°)",
+      "total_samples": 221,
+      "fp": 19,
+      "fn": 17,
+      "total_errors": 36,
+      "error_rate": 0.16289592760180996
+    },
+    {
+      "view_code": "view3",
+      "view_name": "시점 C (정면 0°)",
+      "total_samples": 216,
+      "fp": 27,
+      "fn": 23,
+      "total_errors": 50,
+      "error_rate": 0.23148148148148148
+    },
+    {
+      "view_code": "view4",
+      "view_name": "시점 D (좌측 전방 45°)",
+      "total_samples": 212,
+      "fp": 18,
+      "fn": 12,
+      "total_errors": 30,
+      "error_rate": 0.14150943396226415
+    },
+    {
+      "view_code": "view1",
+      "view_name": "시점 E (좌측 후방 45°)",
+      "total_samples": 211,
+      "fp": 39,
+      "fn": 10,
+      "total_errors": 49,
+      "error_rate": 0.23222748815165878
+    }
+  ],
+  "key_audit": [
+    {
+      "key": "330",
+      "total_samples": 60,
+      "fp": 11,
+      "fn": 0,
+      "total_errors": 11
+    },
+    {
+      "key": "331",
+      "total_samples": 60,
+      "fp": 13,
+      "fn": 0,
+      "total_errors": 13
+    },
+    {
+      "key": "332",
+      "total_samples": 60,
+      "fp": 13,
+      "fn": 0,
+      "total_errors": 13
+    },
+    {
+      "key": "333",
+      "total_samples": 60,
+      "fp": 12,
+      "fn": 0,
+      "total_errors": 12
+    },
+    {
+      "key": "334",
+      "total_samples": 60,
+      "fp": 0,
+      "fn": 9,
+      "total_errors": 9
+    },
+    {
+      "key": "335",
+      "total_samples": 57,
+      "fp": 13,
+      "fn": 0,
+      "total_errors": 13
+    },
+    {
+      "key": "336",
+      "total_samples": 55,
+      "fp": 6,
+      "fn": 0,
+      "total_errors": 6
+    },
+    {
+      "key": "337",
+      "total_samples": 55,
+      "fp": 9,
+      "fn": 0,
+      "total_errors": 9
+    },
+    {
+      "key": "338",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 25,
+      "total_errors": 25
+    },
+    {
+      "key": "339",
+      "total_samples": 55,
+      "fp": 17,
+      "fn": 0,
+      "total_errors": 17
+    },
+    {
+      "key": "340",
+      "total_samples": 55,
+      "fp": 11,
+      "fn": 0,
+      "total_errors": 11
+    },
+    {
+      "key": "341",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 10,
+      "total_errors": 10
+    },
+    {
+      "key": "342",
+      "total_samples": 55,
+      "fp": 10,
+      "fn": 0,
+      "total_errors": 10
+    },
+    {
+      "key": "343",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 12,
+      "total_errors": 12
+    },
+    {
+      "key": "344",
+      "total_samples": 55,
+      "fp": 0,
+      "fn": 10,
+      "total_errors": 10
+    },
+    {
+      "key": "345",
+      "total_samples": 45,
+      "fp": 0,
+      "fn": 8,
+      "total_errors": 8
+    },
+    {
+      "key": "346",
+      "total_samples": 24,
+      "fp": 0,
+      "fn": 3,
+      "total_errors": 3
+    },
+    {
+      "key": "347",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 1,
+      "total_errors": 1
+    },
+    {
+      "key": "348",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 2,
+      "total_errors": 2
+    },
+    {
+      "key": "349",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0
+    },
+    {
+      "key": "350",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 1,
+      "total_errors": 1
+    },
+    {
+      "key": "351",
+      "total_samples": 15,
+      "fp": 1,
+      "fn": 0,
+      "total_errors": 1
+    },
+    {
+      "key": "352",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0
+    },
+    {
+      "key": "353",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0
+    },
+    {
+      "key": "354",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0
+    },
+    {
+      "key": "355",
+      "total_samples": 10,
+      "fp": 1,
+      "fn": 0,
+      "total_errors": 1
+    },
+    {
+      "key": "356",
+      "total_samples": 10,
+      "fp": 3,
+      "fn": 0,
+      "total_errors": 3
+    },
+    {
+      "key": "357",
+      "total_samples": 15,
+      "fp": 2,
+      "fn": 0,
+      "total_errors": 2
+    },
+    {
+      "key": "358",
+      "total_samples": 10,
+      "fp": 0,
+      "fn": 0,
+      "total_errors": 0
+    },
+    {
+      "key": "359",
+      "total_samples": 15,
+      "fp": 2,
+      "fn": 0,
+      "total_errors": 2
+    },
+    {
+      "key": "360",
+      "total_samples": 15,
+      "fp": 3,
+      "fn": 0,
+      "total_errors": 3
+    }
+  ],
+  "fp_vs_tn_top_diffs": [
+    {
+      "idx": 3,
+      "name": "lunge_farrokhi_flexion_excess",
+      "tn_mean": 0.0,
+      "fp_mean": 0.07396028935909271,
+      "diff": 0.07396028935909271,
+      "norm_diff": 73960.28935909271
+    },
+    {
+      "idx": 1,
+      "name": "lunge_vspa_torso_pitch_peak",
+      "tn_mean": 1.783772349357605,
+      "fp_mean": 9.34464168548584,
+      "diff": 7.560869336128235,
+      "norm_diff": 2.3911900411681124
+    },
+    {
+      "idx": 26,
+      "name": "lunge_relative_extension_ratio",
+      "tn_mean": 0.7235270738601685,
+      "fp_mean": 0.4761611521244049,
+      "diff": -0.24736592173576355,
+      "norm_diff": -1.4952686679927125
+    },
+    {
+      "idx": 6,
+      "name": "lunge_ldc_phase_weighted_pitch",
+      "tn_mean": -5.6582841873168945,
+      "fp_mean": -1.2651089429855347,
+      "diff": 4.39317524433136,
+      "norm_diff": 0.8494858929432408
+    },
+    {
+      "idx": 0,
+      "name": "lunge_vspa_torso_pitch_bottom",
+      "tn_mean": -6.746833324432373,
+      "fp_mean": -1.0430322885513306,
+      "diff": 5.7038010358810425,
+      "norm_diff": 0.7438143150606458
+    },
+    {
+      "idx": 24,
+      "name": "lunge_delta_pitch_from_setup",
+      "tn_mean": -3.9902892112731934,
+      "fp_mean": 0.6538170576095581,
+      "diff": 4.6441062688827515,
+      "norm_diff": 0.6359959633442321
+    },
+    {
+      "idx": 7,
+      "name": "lunge_tibia_torso_parallelism",
+      "tn_mean": 18.600990295410156,
+      "fp_mean": 24.365596771240234,
+      "diff": 5.764606475830078,
+      "norm_diff": 0.5221703213324719
+    },
+    {
+      "idx": 2,
+      "name": "lunge_vspa_torso_pitch_min",
+      "tn_mean": -16.92474937438965,
+      "fp_mean": -11.04683780670166,
+      "diff": 5.877911567687988,
+      "norm_diff": 0.40760398886593396
+    },
+    {
+      "idx": 20,
+      "name": "lunge_lockout_rebound_pitch",
+      "tn_mean": -4.748231887817383,
+      "fp_mean": -1.5212246179580688,
+      "diff": 3.227007269859314,
+      "norm_diff": 0.407501143492533
+    },
+    {
+      "idx": 4,
+      "name": "lunge_farrokhi_hyperext_excess",
+      "tn_mean": 2.509711980819702,
+      "fp_mean": 1.3097599744796753,
+      "diff": -1.1999520063400269,
+      "norm_diff": -0.3622850939948097
+    }
+  ],
+  "fn_vs_tp_top_diffs": [
+    {
+      "idx": 26,
+      "name": "lunge_relative_extension_ratio",
+      "tp_mean": 0.41312986612319946,
+      "fn_mean": 0.6514754891395569,
+      "diff": 0.23834562301635742,
+      "norm_diff": 1.279661747529849
+    },
+    {
+      "idx": 6,
+      "name": "lunge_ldc_phase_weighted_pitch",
+      "tp_mean": 0.447260320186615,
+      "fn_mean": -5.289127349853516,
+      "diff": -5.736387670040131,
+      "norm_diff": -1.2631983171195311
+    },
+    {
+      "idx": 2,
+      "name": "lunge_vspa_torso_pitch_min",
+      "tp_mean": -7.3811354637146,
+      "fn_mean": -15.907133102416992,
+      "diff": -8.525997638702393,
+      "norm_diff": -1.0505987778208277
+    },
+    {
+      "idx": 4,
+      "name": "lunge_farrokhi_hyperext_excess",
+      "tp_mean": 0.5057801008224487,
+      "fn_mean": 2.212860345840454,
+      "diff": 1.7070802450180054,
+      "norm_diff": 1.0284609226032781
+    },
+    {
+      "idx": 0,
+      "name": "lunge_vspa_torso_pitch_bottom",
+      "tp_mean": 0.37992924451828003,
+      "fn_mean": -6.7018961906433105,
+      "diff": -7.081825435161591,
+      "norm_diff": -0.9761188736290582
+    },
+    {
+      "idx": 1,
+      "name": "lunge_vspa_torso_pitch_peak",
+      "tp_mean": 10.427892684936523,
+      "fn_mean": 2.7134506702423096,
+      "diff": -7.714442014694214,
+      "norm_diff": -0.9345098228924377
+    },
+    {
+      "idx": 17,
+      "name": "lunge_frontal_compression_integral",
+      "tp_mean": 0.019680343568325043,
+      "fn_mean": 0.05941358208656311,
+      "diff": 0.03973323851823807,
+      "norm_diff": 0.8274559565152992
+    },
+    {
+      "idx": 7,
+      "name": "lunge_tibia_torso_parallelism",
+      "tp_mean": 26.048429489135742,
+      "fn_mean": 17.205434799194336,
+      "diff": -8.842994689941406,
+      "norm_diff": -0.5919571632413094
+    },
+    {
+      "idx": 20,
+      "name": "lunge_lockout_rebound_pitch",
+      "tp_mean": -0.5707968473434448,
+      "fn_mean": -4.261589527130127,
+      "diff": -3.690792679786682,
+      "norm_diff": -0.5805488188089385
+    },
+    {
+      "idx": 24,
+      "name": "lunge_delta_pitch_from_setup",
+      "tp_mean": 0.2947172224521637,
+      "fn_mean": -3.104647636413574,
+      "diff": -3.399364858865738,
+      "norm_diff": -0.517868217852353
+    }
+  ],
+  "top_fp_samples": [
+    {
+      "filename": "[오류]_D03_피험자1_Key330_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.6512261033058167
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key330_view5.npz",
+      "subj": 1,
+      "view": "view5",
+      "prob": 0.5689200162887573
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key331_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.5950093865394592
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key332_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.7468796968460083
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key333_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.5821424126625061
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key335_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.5343872308731079
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key335_view4.npz",
+      "subj": 1,
+      "view": "view4",
+      "prob": 0.6623367071151733
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key335_view5.npz",
+      "subj": 1,
+      "view": "view5",
+      "prob": 0.6667923331260681
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key337_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.7387204170227051
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key337_view2.npz",
+      "subj": 1,
+      "view": "view2",
+      "prob": 0.9329636096954346
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key337_view4.npz",
+      "subj": 1,
+      "view": "view4",
+      "prob": 0.8764196634292603
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key337_view5.npz",
+      "subj": 1,
+      "view": "view5",
+      "prob": 0.8116374015808105
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key339_view1.npz",
+      "subj": 1,
+      "view": "view1",
+      "prob": 0.9286597371101379
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key339_view2.npz",
+      "subj": 1,
+      "view": "view2",
+      "prob": 0.7732963562011719
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key339_view5.npz",
+      "subj": 1,
+      "view": "view5",
+      "prob": 0.6444504261016846
+    }
+  ],
+  "top_fn_samples": [
+    {
+      "filename": "[오류]_D03_피험자1_Key334_view5.npz",
+      "subj": 1,
+      "view": "view5",
+      "prob": 0.2477811574935913
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key338_view3.npz",
+      "subj": 1,
+      "view": "view3",
+      "prob": 0.29060816764831543
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key345_view3.npz",
+      "subj": 1,
+      "view": "view3",
+      "prob": 0.05879049748182297
+    },
+    {
+      "filename": "[오류]_D03_피험자1_Key348_view5.npz",
+      "subj": 1,
+      "view": "view5",
+      "prob": 0.34514981508255005
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key338_view1.npz",
+      "subj": 2,
+      "view": "view1",
+      "prob": 0.28758522868156433
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key338_view2.npz",
+      "subj": 2,
+      "view": "view2",
+      "prob": 0.2312716543674469
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key338_view3.npz",
+      "subj": 2,
+      "view": "view3",
+      "prob": 0.3139083981513977
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key338_view4.npz",
+      "subj": 2,
+      "view": "view4",
+      "prob": 0.3237484395503998
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key338_view5.npz",
+      "subj": 2,
+      "view": "view5",
+      "prob": 0.1314544379711151
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key341_view2.npz",
+      "subj": 2,
+      "view": "view2",
+      "prob": 0.12076212465763092
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key341_view3.npz",
+      "subj": 2,
+      "view": "view3",
+      "prob": 0.08219648152589798
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key341_view4.npz",
+      "subj": 2,
+      "view": "view4",
+      "prob": 0.11391689628362656
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key343_view1.npz",
+      "subj": 2,
+      "view": "view1",
+      "prob": 0.1854681670665741
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key343_view2.npz",
+      "subj": 2,
+      "view": "view2",
+      "prob": 0.07046149671077728
+    },
+    {
+      "filename": "[오류]_D03_피험자2_Key343_view3.npz",
+      "subj": 2,
+      "view": "view3",
+      "prob": 0.19850915670394897
+    }
+  ]
+}

@@ -85,15 +85,22 @@ class ConvBiGRUBinaryNet(nn.Module):
 class TemporalGRUBinaryClassifier:
     """2단계: PyTorch 1D-CNN + Bi-GRU + Attention + Focal Loss 정상/오류 판별기"""
 
-    def __init__(self, conv_filters: int = 128, hidden_dim: int = 128, num_layers: int = 2, epochs: int = 2, batch_size: int = 256, lr: float = 0.001):
+    def __init__(self, input_dim: int = 92, conv_filters: int = 128, hidden_dim: int = 128, num_layers: int = 2, epochs: int = 2, batch_size: int = 256, lr: float = 0.001):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.model = ConvBiGRUBinaryNet(input_dim=69, conv_filters=conv_filters, hidden_dim=hidden_dim, num_layers=num_layers).to(self.device)
+        self.input_dim = input_dim
+        self.conv_filters = conv_filters
+        self.hidden_dim = hidden_dim
+        self.num_layers = num_layers
+        self.model = ConvBiGRUBinaryNet(input_dim=input_dim, conv_filters=conv_filters, hidden_dim=hidden_dim, num_layers=num_layers).to(self.device)
         self.epochs = epochs
         self.batch_size = batch_size
         self.lr = lr
         self.is_fitted = False
 
     def fit(self, X_train: np.ndarray, y_train: np.ndarray) -> "TemporalGRUBinaryClassifier":
+        if X_train.shape[2] != self.input_dim:
+            self.input_dim = X_train.shape[2]
+            self.model = ConvBiGRUBinaryNet(input_dim=self.input_dim, conv_filters=self.conv_filters, hidden_dim=self.hidden_dim, num_layers=self.num_layers).to(self.device)
         X_t = torch.tensor(X_train, dtype=torch.float32)
         y_t = torch.tensor(y_train, dtype=torch.float32)
         train_loader = DataLoader(TensorDataset(X_t, y_t), batch_size=self.batch_size, shuffle=True)

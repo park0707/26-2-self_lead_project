@@ -1,0 +1,165 @@
+{
+  "model_name": "gm2_v1",
+  "exercise": "09_굿모닝",
+  "defect": "c2 (시선 방향 유지 오류)",
+  "two_state_metrics": {
+    "ensemble": {
+      "roc_auc": 0.8238700374891857,
+      "f1": 0.7249255213505462,
+      "accuracy": 0.7284313725490196,
+      "precision": 0.7270916334661355,
+      "recall": 0.7227722772277227
+    },
+    "lightgbm": {
+      "roc_auc": 0.8214399692396425,
+      "f1": 0.7144298688193743,
+      "accuracy": 0.7225490196078431,
+      "precision": 0.7283950617283951,
+      "recall": 0.700990099009901
+    },
+    "catboost": {
+      "roc_auc": 0.8199634720753627,
+      "f1": 0.7212787212787213,
+      "accuracy": 0.7264705882352941,
+      "precision": 0.7278225806451613,
+      "recall": 0.7148514851485148
+    },
+    "xgboost": {
+      "roc_auc": 0.8181716812457946,
+      "f1": 0.726,
+      "accuracy": 0.7313725490196078,
+      "precision": 0.7333333333333333,
+      "recall": 0.7188118811881188
+    }
+  },
+  "three_state_metrics": {
+    "effective_f1": 0.7733333333333333,
+    "accuracy": 0.760043431053203,
+    "precision": 0.7348927875243665,
+    "recall": 0.816017316017316,
+    "uncertainty_rate": 0.09705882352941177,
+    "coverage": 0.9029411764705882,
+    "view_thresholds": {
+      "view1": {
+        "tau_clean": 0.445,
+        "tau_defect": 0.505
+      },
+      "view2": {
+        "tau_clean": 0.385,
+        "tau_defect": 0.48
+      },
+      "view3": {
+        "tau_clean": 0.32,
+        "tau_defect": 0.45
+      },
+      "view4": {
+        "tau_clean": 0.41000000000000003,
+        "tau_defect": 0.585
+      },
+      "view5": {
+        "tau_clean": 0.39,
+        "tau_defect": 0.45
+      }
+    },
+    "view_audits": {
+      "view1": {
+        "alias": "시점 E (좌측 후방 45°)",
+        "samples": 204,
+        "tau_clean": 0.445,
+        "tau_defect": 0.505,
+        "uncertainty_rate": 0.09313725490196079,
+        "effective_f1": 0.6826923076923077,
+        "accuracy": 0.6432432432432432
+      },
+      "view2": {
+        "alias": "시점 B (우측 전방 45°)",
+        "samples": 204,
+        "tau_clean": 0.385,
+        "tau_defect": 0.48,
+        "uncertainty_rate": 0.09803921568627451,
+        "effective_f1": 0.8235294117647058,
+        "accuracy": 0.8043478260869565
+      },
+      "view3": {
+        "alias": "시점 C (정면 0°)",
+        "samples": 204,
+        "tau_clean": 0.32,
+        "tau_defect": 0.45,
+        "uncertainty_rate": 0.09803921568627451,
+        "effective_f1": 0.8586956521739131,
+        "accuracy": 0.8586956521739131
+      },
+      "view4": {
+        "alias": "시점 D (좌측 전방 45°)",
+        "samples": 204,
+        "tau_clean": 0.41000000000000003,
+        "tau_defect": 0.585,
+        "uncertainty_rate": 0.09803921568627451,
+        "effective_f1": 0.7978142076502732,
+        "accuracy": 0.7989130434782609
+      },
+      "view5": {
+        "alias": "시점 A (우측 후방 45°)",
+        "samples": 204,
+        "tau_clean": 0.39,
+        "tau_defect": 0.45,
+        "uncertainty_rate": 0.09803921568627451,
+        "effective_f1": 0.7142857142857143,
+        "accuracy": 0.6956521739130435
+      }
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "name": "head_inclination_bottom",
+      "importance": 22.405530405857363
+    },
+    {
+      "rank": 2,
+      "name": "torso_inclination_bottom",
+      "importance": 11.282570289835189
+    },
+    {
+      "rank": 3,
+      "name": "trunk_neck_angle_mean",
+      "importance": 8.187146410657363
+    },
+    {
+      "rank": 4,
+      "name": "trunk_neck_angle_min",
+      "importance": 6.948982540183238
+    },
+    {
+      "rank": 5,
+      "name": "ear_shoulder_dist_var",
+      "importance": 6.843962199073762
+    },
+    {
+      "rank": 6,
+      "name": "head_torso_inclination_diff_max",
+      "importance": 6.672108028291227
+    },
+    {
+      "rank": 7,
+      "name": "ear_shoulder_dist_mean",
+      "importance": 6.365504294703665
+    },
+    {
+      "rank": 8,
+      "name": "hip_flexion_angle_min",
+      "importance": 5.29661966250554
+    },
+    {
+      "rank": 9,
+      "name": "trunk_neck_angle_max",
+      "importance": 4.678983059481354
+    },
+    {
+      "rank": 10,
+      "name": "trunk_neck_angle_bottom",
+      "importance": 4.6153473727805245
+    }
+  ],
+  "elapsed_seconds": 81.88814902305603
+}

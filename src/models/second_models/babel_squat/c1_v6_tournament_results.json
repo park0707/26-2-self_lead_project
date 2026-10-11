@@ -1,0 +1,326 @@
+{
+  "level123": {
+    "v4-A_Benchmark_28D": {
+      "CatBoost": {
+        "f1_50": 84.09,
+        "opt_f1": 85.09,
+        "opt_th": 0.41,
+        "prec_50": 85.36,
+        "rec_50": 82.87,
+        "auc": 92.84,
+        "clean_fps": 23,
+        "clean_fpr": 26.74
+      },
+      "LightGBM": {
+        "f1_50": 85.84,
+        "opt_f1": 86.23,
+        "opt_th": 0.43,
+        "prec_50": 86.63,
+        "rec_50": 85.05,
+        "auc": 93.28,
+        "clean_fps": 21,
+        "clean_fpr": 24.42
+      },
+      "Cascade": {
+        "f1_50": 85.26,
+        "opt_f1": 85.61,
+        "opt_th": 0.45,
+        "prec_50": 86.21,
+        "rec_50": 84.33,
+        "auc": 93.27,
+        "clean_fps": 20,
+        "clean_fpr": 23.26
+      }
+    },
+    "v5-A_Full_34D": {
+      "CatBoost": {
+        "f1_50": 84.27,
+        "opt_f1": 85.42,
+        "opt_th": 0.34,
+        "prec_50": 85.59,
+        "rec_50": 82.99,
+        "auc": 92.79,
+        "clean_fps": 23,
+        "clean_fpr": 26.74
+      },
+      "LightGBM": {
+        "f1_50": 85.54,
+        "opt_f1": 86.05,
+        "opt_th": 0.47,
+        "prec_50": 86.66,
+        "rec_50": 84.45,
+        "auc": 93.42,
+        "clean_fps": 19,
+        "clean_fpr": 22.09
+      },
+      "Cascade": {
+        "f1_50": 85.42,
+        "opt_f1": 85.89,
+        "opt_th": 0.48,
+        "prec_50": 86.16,
+        "rec_50": 84.69,
+        "auc": 93.3,
+        "clean_fps": 20,
+        "clean_fpr": 23.26
+      }
+    },
+    "v6-A_Pruned_29D": {
+      "CatBoost": {
+        "f1_50": 84.96,
+        "opt_f1": 85.46,
+        "opt_th": 0.39,
+        "prec_50": 85.86,
+        "rec_50": 84.08,
+        "auc": 92.88,
+        "clean_fps": 22,
+        "clean_fpr": 25.58
+      },
+      "LightGBM": {
+        "f1_50": 85.43,
+        "opt_f1": 86.3,
+        "opt_th": 0.45,
+        "prec_50": 86.83,
+        "rec_50": 84.08,
+        "auc": 93.35,
+        "clean_fps": 20,
+        "clean_fpr": 23.26
+      },
+      "Cascade": {
+        "f1_50": 85.52,
+        "opt_f1": 85.96,
+        "opt_th": 0.47,
+        "prec_50": 86.75,
+        "rec_50": 84.33,
+        "auc": 93.33,
+        "clean_fps": 20,
+        "clean_fpr": 23.26
+      }
+    },
+    "v6-B_Compact_21D": {
+      "CatBoost": {
+        "f1_50": 85.0,
+        "opt_f1": 85.8,
+        "opt_th": 0.41,
+        "prec_50": 85.68,
+        "rec_50": 84.33,
+        "auc": 93.09,
+        "clean_fps": 25,
+        "clean_fpr": 29.07
+      },
+      "LightGBM": {
+        "f1_50": 85.0,
+        "opt_f1": 86.0,
+        "opt_th": 0.42,
+        "prec_50": 85.68,
+        "rec_50": 84.33,
+        "auc": 93.33,
+        "clean_fps": 23,
+        "clean_fpr": 26.74
+      },
+      "Cascade": {
+        "f1_50": 84.93,
+        "opt_f1": 86.36,
+        "opt_th": 0.43,
+        "prec_50": 85.29,
+        "rec_50": 84.57,
+        "auc": 93.41,
+        "clean_fps": 25,
+        "clean_fpr": 29.07
+      }
+    },
+    "v6-A_Cost_29D": {
+      "CatBoost": {
+        "f1_50": 83.71,
+        "opt_f1": 85.37,
+        "opt_th": 0.35,
+        "prec_50": 87.12,
+        "rec_50": 80.56,
+        "auc": 92.84,
+        "clean_fps": 21,
+        "clean_fpr": 24.42
+      },
+      "LightGBM": {
+        "f1_50": 85.03,
+        "opt_f1": 85.88,
+        "opt_th": 0.3,
+        "prec_50": 87.73,
+        "rec_50": 82.5,
+        "auc": 93.27,
+        "clean_fps": 19,
+        "clean_fpr": 22.09
+      },
+      "Cascade": {
+        "f1_50": 84.48,
+        "opt_f1": 85.82,
+        "opt_th": 0.38,
+        "prec_50": 87.5,
+        "rec_50": 81.65,
+        "auc": 93.28,
+        "clean_fps": 20,
+        "clean_fpr": 23.26
+      }
+    }
+  },
+  "full1906": {
+    "v4-A_Benchmark_28D": {
+      "CatBoost": {
+        "f1_50": 78.19,
+        "opt_f1": 79.53,
+        "opt_th": 0.37,
+        "prec_50": 80.39,
+        "rec_50": 76.11,
+        "auc": 87.9,
+        "clean_fps": 35,
+        "clean_fpr": 28.0
+      },
+      "LightGBM": {
+        "f1_50": 77.82,
+        "opt_f1": 79.0,
+        "opt_th": 0.34,
+        "prec_50": 79.73,
+        "rec_50": 76.0,
+        "auc": 87.52,
+        "clean_fps": 33,
+        "clean_fpr": 26.4
+      },
+      "Cascade": {
+        "f1_50": 78.42,
+        "opt_f1": 79.61,
+        "opt_th": 0.37,
+        "prec_50": 80.39,
+        "rec_50": 76.55,
+        "auc": 88.0,
+        "clean_fps": 34,
+        "clean_fpr": 27.2
+      }
+    },
+    "v5-A_Full_34D": {
+      "CatBoost": {
+        "f1_50": 77.63,
+        "opt_f1": 79.67,
+        "opt_th": 0.32,
+        "prec_50": 80.05,
+        "rec_50": 75.35,
+        "auc": 88.21,
+        "clean_fps": 39,
+        "clean_fpr": 31.2
+      },
+      "LightGBM": {
+        "f1_50": 77.63,
+        "opt_f1": 79.66,
+        "opt_th": 0.34,
+        "prec_50": 80.05,
+        "rec_50": 75.35,
+        "auc": 88.13,
+        "clean_fps": 41,
+        "clean_fpr": 32.8
+      },
+      "Cascade": {
+        "f1_50": 78.16,
+        "opt_f1": 79.61,
+        "opt_th": 0.31,
+        "prec_50": 80.69,
+        "rec_50": 75.79,
+        "auc": 88.44,
+        "clean_fps": 37,
+        "clean_fpr": 29.6
+      }
+    },
+    "v6-A_Pruned_29D": {
+      "CatBoost": {
+        "f1_50": 77.65,
+        "opt_f1": 79.94,
+        "opt_th": 0.38,
+        "prec_50": 80.21,
+        "rec_50": 75.24,
+        "auc": 88.16,
+        "clean_fps": 36,
+        "clean_fpr": 28.8
+      },
+      "LightGBM": {
+        "f1_50": 78.29,
+        "opt_f1": 79.64,
+        "opt_th": 0.33,
+        "prec_50": 80.34,
+        "rec_50": 76.33,
+        "auc": 88.15,
+        "clean_fps": 38,
+        "clean_fpr": 30.4
+      },
+      "Cascade": {
+        "f1_50": 78.45,
+        "opt_f1": 80.04,
+        "opt_th": 0.38,
+        "prec_50": 81.43,
+        "rec_50": 75.68,
+        "auc": 88.43,
+        "clean_fps": 34,
+        "clean_fpr": 27.2
+      }
+    },
+    "v6-B_Compact_21D": {
+      "CatBoost": {
+        "f1_50": 78.41,
+        "opt_f1": 79.53,
+        "opt_th": 0.31,
+        "prec_50": 80.85,
+        "rec_50": 76.11,
+        "auc": 87.58,
+        "clean_fps": 41,
+        "clean_fpr": 32.8
+      },
+      "LightGBM": {
+        "f1_50": 78.58,
+        "opt_f1": 79.05,
+        "opt_th": 0.31,
+        "prec_50": 80.14,
+        "rec_50": 77.09,
+        "auc": 87.48,
+        "clean_fps": 40,
+        "clean_fpr": 32.0
+      },
+      "Cascade": {
+        "f1_50": 78.73,
+        "opt_f1": 79.74,
+        "opt_th": 0.44,
+        "prec_50": 80.57,
+        "rec_50": 76.98,
+        "auc": 87.82,
+        "clean_fps": 41,
+        "clean_fpr": 32.8
+      }
+    },
+    "v6-A_Cost_29D": {
+      "CatBoost": {
+        "f1_50": 76.74,
+        "opt_f1": 79.71,
+        "opt_th": 0.31,
+        "prec_50": 84.09,
+        "rec_50": 70.58,
+        "auc": 88.17,
+        "clean_fps": 28,
+        "clean_fpr": 22.4
+      },
+      "LightGBM": {
+        "f1_50": 77.07,
+        "opt_f1": 79.03,
+        "opt_th": 0.26,
+        "prec_50": 82.09,
+        "rec_50": 72.64,
+        "auc": 87.99,
+        "clean_fps": 33,
+        "clean_fpr": 26.4
+      },
+      "Cascade": {
+        "f1_50": 77.43,
+        "opt_f1": 79.65,
+        "opt_th": 0.33,
+        "prec_50": 83.63,
+        "rec_50": 72.1,
+        "auc": 88.33,
+        "clean_fps": 31,
+        "clean_fpr": 24.8
+      }
+    }
+  }
+}

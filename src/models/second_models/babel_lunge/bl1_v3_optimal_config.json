@@ -1,0 +1,153 @@
+{
+  "best_feature_subset": {
+    "subset_name": "v2_38D_All",
+    "feature_dim": 38,
+    "feature_names": [
+      "lead_knee_angle_min",
+      "lead_knee_angle_mean",
+      "lead_knee_90_error_abs",
+      "lead_knee_flexion_rom",
+      "lead_knee_under_90_ratio",
+      "lead_knee_flex_velocity_max",
+      "lead_knee_accel_inflection",
+      "lead_knee_rebound_jitter",
+      "sagittal_knee_angle_bottom",
+      "sagittal_knee_90_error",
+      "lead_tibia_vertical_tilt",
+      "lead_femur_horizontal_tilt",
+      "lead_knee_toe_overhang",
+      "lead_shank_ankle_coupling",
+      "lead_tibia_sagittal_sway",
+      "lead_knee_valgus_varus",
+      "lead_femur_length_ratio",
+      "lead_tibia_length_ratio",
+      "kot_normalized_displacement",
+      "rigid_bone_length_consistency",
+      "lead_rear_knee_ratio",
+      "rear_knee_angle_min",
+      "pelvic_drop_angle",
+      "pelvic_axial_rotation",
+      "trunk_forward_lean_lead",
+      "hip_knee_flexion_coupling",
+      "stride_length_normalized",
+      "step_width_normalized",
+      "tibia_torso_parallelism_error",
+      "rear_knee_ground_clearance",
+      "bottom_phase_dwell_ratio",
+      "descent_ascent_tempo_ratio",
+      "lead_knee_dtw_distance",
+      "view_invariant_flexion_3d",
+      "camera_view_azimuth_est",
+      "lead_knee_visibility_mean",
+      "kinetic_energy_inflection",
+      "jerk_metric_lead_leg"
+    ],
+    "removed_features": []
+  },
+  "best_architecture": {
+    "arch_name": "Arch_2_Balanced (depth=5, L2=3.0, colsample=0.7)",
+    "lgb_params": {
+      "objective": "binary",
+      "metric": "binary_logloss",
+      "boosting_type": "gbdt",
+      "learning_rate": 0.05,
+      "num_leaves": 23,
+      "max_depth": 5,
+      "scale_pos_weight": 2.357142857142857,
+      "subsample": 0.8,
+      "colsample_bytree": 0.7,
+      "random_state": 42,
+      "verbose": -1,
+      "n_jobs": -1,
+      "reg_lambda": 3.0,
+      "reg_alpha": 0.5,
+      "min_child_samples": 20
+    },
+    "xgb_params": {
+      "objective": "binary:logistic",
+      "eval_metric": "logloss",
+      "learning_rate": 0.05,
+      "max_depth": 5,
+      "scale_pos_weight": 2.357142857142857,
+      "subsample": 0.8,
+      "colsample_bytree": 0.7,
+      "random_state": 42,
+      "n_jobs": -1,
+      "reg_lambda": 3.0,
+      "reg_alpha": 0.5,
+      "min_child_weight": 2
+    },
+    "cat_params": {
+      "iterations": 350,
+      "learning_rate": 0.05,
+      "depth": 5,
+      "scale_pos_weight": 2.357142857142857,
+      "random_seed": 42,
+      "verbose": false,
+      "early_stopping_rounds": 35,
+      "l2_leaf_reg": 3.0,
+      "rsm": 0.7
+    }
+  },
+  "performance": {
+    "binary_auc": 0.8880841905416574,
+    "binary_f1": 0.7166921898928025,
+    "ensemble_weights": [
+      0.16867974530022453,
+      0.8313202546997756,
+      0.0
+    ],
+    "best_3state": {
+      "3state_f1": 0.7571189279731994,
+      "3state_acc": 0.8520408163265306,
+      "uncertainty_rate": 0.09343200740055504,
+      "coverage": 0.906567992599445,
+      "tau_clean": 0.43,
+      "tau_defect": 0.5225,
+      "prec": 0.7266881028938906,
+      "recall": 0.7902097902097902
+    }
+  },
+  "all_subset_experiments": {
+    "v2_38D_All": {
+      "n_features": 38,
+      "binary_auc": 0.8875850047872732,
+      "binary_f1": 0.7253086419753086,
+      "3state_f1": 0.7640067911714771,
+      "3state_acc": 0.857727737973388,
+      "uncertainty_rate": 0.09620721554116558
+    },
+    "Sub_A_32D": {
+      "n_features": 32,
+      "binary_auc": 0.8857519292301901,
+      "binary_f1": 0.7057010785824345,
+      "3state_f1": 0.7604690117252931,
+      "3state_acc": 0.8530318602261048,
+      "uncertainty_rate": 0.09990749306197964
+    },
+    "Sub_B_26D": {
+      "n_features": 26,
+      "binary_auc": 0.8866561919491975,
+      "binary_f1": 0.7193798449612403,
+      "3state_f1": 0.757679180887372,
+      "3state_acc": 0.8540596094552929,
+      "uncertainty_rate": 0.09990749306197964
+    },
+    "Sub_C_22D": {
+      "n_features": 22,
+      "binary_auc": 0.8861119976431886,
+      "binary_f1": 0.7122861586314152,
+      "3state_f1": 0.7495908346972177,
+      "3state_acc": 0.8429158110882957,
+      "uncertainty_rate": 0.09898242368177614
+    },
+    "Sub_D_18D": {
+      "n_features": 18,
+      "binary_auc": 0.8869589767510373,
+      "binary_f1": 0.717948717948718,
+      "3state_f1": 0.7539936102236422,
+      "3state_acc": 0.8420512820512821,
+      "uncertainty_rate": 0.09805735430157261
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "baseline": {
+    "f1_50": 77.63,
+    "opt_f1": 79.67,
+    "auc": 88.21
+  },
+  "lofo": {
+    "trunk_flex_max": {
+      "index": 0,
+      "f1_50": 77.87,
+      "opt_f1": 79.61,
+      "auc": 88.05,
+      "delta_f1": 0.24,
+      "delta_opt": -0.06,
+      "harmful": true
+    },
+    "cervical_angle_min": {
+      "index": 1,
+      "f1_50": 78.28,
+      "opt_f1": 79.54,
+      "auc": 88.05,
+      "delta_f1": 0.65,
+      "delta_opt": -0.13,
+      "harmful": true
+    },
+    "lumbar_hyperext_max": {
+      "index": 2,
+      "f1_50": 77.38,
+      "opt_f1": 79.75,
+      "auc": 88.11,
+      "delta_f1": -0.25,
+      "delta_opt": 0.08,
+      "harmful": false
+    },
+    "trunk_flex_speed_max": {
+      "index": 3,
+      "f1_50": 77.24,
+      "opt_f1": 79.19,
+      "auc": 87.68,
+      "delta_f1": -0.39,
+      "delta_opt": -0.48,
+      "harmful": false
+    },
+    "lumbar_stiffness_sd": {
+      "index": 4,
+      "f1_50": 77.63,
+      "opt_f1": 79.67,
+      "auc": 88.21,
+      "delta_f1": 0.0,
+      "delta_opt": 0.0,
+      "harmful": false
+    },
+    "asymmetry_score": {
+      "index": 5,
+      "f1_50": 77.54,
+      "opt_f1": 78.34,
+      "auc": 87.31,
+      "delta_f1": -0.09,
+      "delta_opt": -1.33,
+      "harmful": false
+    },
+    "pelvis_trunk_sync_err": {
+      "index": 6,
+      "f1_50": 77.87,
+      "opt_f1": 79.9,
+      "auc": 88.2,
+      "delta_f1": 0.24,
+      "delta_opt": 0.23,
+      "harmful": true
+    },
+    "phase_speed_ratio": {
+      "index": 7,
+      "f1_50": 77.91,
+      "opt_f1": 79.68,
+      "auc": 88.05,
+      "delta_f1": 0.28,
+      "delta_opt": 0.01,
+      "harmful": true
+    },
+    "bottom_dwell_frames": {
+      "index": 8,
+      "f1_50": 77.55,
+      "opt_f1": 79.27,
+      "auc": 87.98,
+      "delta_f1": -0.08,
+      "delta_opt": -0.4,
+      "harmful": false
+    },
+    "torso_shank_err": {
+      "index": 9,
+      "f1_50": 77.29,
+      "opt_f1": 79.68,
+      "auc": 87.97,
+      "delta_f1": -0.34,
+      "delta_opt": 0.01,
+      "harmful": false
+    },
+    "cervical_min": {
+      "index": 10,
+      "f1_50": 77.1,
+      "opt_f1": 78.51,
+      "auc": 87.39,
+      "delta_f1": -0.53,
+      "delta_opt": -1.16,
+      "harmful": false
+    },
+    "gaze_pitch_min": {
+      "index": 11,
+      "f1_50": 76.28,
+      "opt_f1": 78.19,
+      "auc": 86.82,
+      "delta_f1": -1.35,
+      "delta_opt": -1.48,
+      "harmful": false
+    },
+    "ear_sh_hip_min": {
+      "index": 12,
+      "f1_50": 77.85,
+      "opt_f1": 79.47,
+      "auc": 88.09,
+      "delta_f1": 0.22,
+      "delta_opt": -0.2,
+      "harmful": true
+    },
+    "ear_sh_hip_mean": {
+      "index": 13,
+      "f1_50": 77.77,
+      "opt_f1": 78.97,
+      "auc": 87.7,
+      "delta_f1": 0.14,
+      "delta_opt": -0.7,
+      "harmful": true
+    },
+    "neck_waist_dev": {
+      "index": 14,
+      "f1_50": 77.08,
+      "opt_f1": 79.28,
+      "auc": 87.67,
+      "delta_f1": -0.55,
+      "delta_opt": -0.39,
+      "harmful": false
+    },
+    "lit_cervical_hyperext_flag": {
+      "index": 15,
+      "f1_50": 77.5,
+      "opt_f1": 79.12,
+      "auc": 87.81,
+      "delta_f1": -0.13,
+      "delta_opt": -0.55,
+      "harmful": false
+    },
+    "lit_lumbar_shear_proxy": {
+      "index": 16,
+      "f1_50": 77.9,
+      "opt_f1": 79.32,
+      "auc": 87.94,
+      "delta_f1": 0.27,
+      "delta_opt": -0.35,
+      "harmful": true
+    },
+    "lit_spinal_stiffness": {
+      "index": 17,
+      "f1_50": 78.21,
+      "opt_f1": 79.59,
+      "auc": 87.91,
+      "delta_f1": 0.58,
+      "delta_opt": -0.08,
+      "harmful": true
+    },
+    "c1_v4_signed_thoracolumbar_nadir": {
+      "index": 18,
+      "f1_50": 78.18,
+      "opt_f1": 79.16,
+      "auc": 87.9,
+      "delta_f1": 0.55,
+      "delta_opt": -0.51,
+      "harmful": true
+    },
+    "c1_v4_signed_thoracolumbar_delta": {
+      "index": 19,
+      "f1_50": 77.74,
+      "opt_f1": 79.3,
+      "auc": 87.81,
+      "delta_f1": 0.11,
+      "delta_opt": -0.37,
+      "harmful": true
+    },
+    "c1_v4_signed_lumbopelvic_nadir": {
+      "index": 20,
+      "f1_50": 77.98,
+      "opt_f1": 79.28,
+      "auc": 88.02,
+      "delta_f1": 0.35,
+      "delta_opt": -0.39,
+      "harmful": true
+    },
+    "c1_v4_signed_lumbopelvic_flex_delta": {
+      "index": 21,
+      "f1_50": 78.43,
+      "opt_f1": 79.07,
+      "auc": 88.02,
+      "delta_f1": 0.8,
+      "delta_opt": -0.6,
+      "harmful": true
+    },
+    "c1_v4_pelvifemoral_angle_nadir": {
+      "index": 22,
+      "f1_50": 77.93,
+      "opt_f1": 79.3,
+      "auc": 87.99,
+      "delta_f1": 0.3,
+      "delta_opt": -0.37,
+      "harmful": true
+    },
+    "c1_v4_bottom_curvature_jerk_max": {
+      "index": 23,
+      "f1_50": 78.36,
+      "opt_f1": 79.33,
+      "auc": 87.96,
+      "delta_f1": 0.73,
+      "delta_opt": -0.34,
+      "harmful": true
+    },
+    "c1_v4_thoracolumbar_fluctuation_sd": {
+      "index": 24,
+      "f1_50": 78.2,
+      "opt_f1": 79.25,
+      "auc": 88.1,
+      "delta_f1": 0.57,
+      "delta_opt": -0.42,
+      "harmful": true
+    },
+    "c1_v4_hip_hinge_spine_decoupling": {
+      "index": 25,
+      "f1_50": 78.08,
+      "opt_f1": 79.58,
+      "auc": 88.08,
+      "delta_f1": 0.45,
+      "delta_opt": -0.09,
+      "harmful": true
+    },
+    "c1_v4_spine_lateral_deviation_max": {
+      "index": 26,
+      "f1_50": 77.19,
+      "opt_f1": 78.92,
+      "auc": 87.8,
+      "delta_f1": -0.44,
+      "delta_opt": -0.75,
+      "harmful": false
+    },
+    "c1_v4_lumbar_shear_moment_arm": {
+      "index": 27,
+      "f1_50": 77.91,
+      "opt_f1": 79.27,
+      "auc": 87.74,
+      "delta_f1": 0.28,
+      "delta_opt": -0.4,
+      "harmful": true
+    },
+    "c1_v5_lumbar_curvature_poly_a": {
+      "index": 28,
+      "f1_50": 77.53,
+      "opt_f1": 78.8,
+      "auc": 87.51,
+      "delta_f1": -0.1,
+      "delta_opt": -0.87,
+      "harmful": false
+    },
+    "c1_v5_thoracolumbar_cobb_angle": {
+      "index": 29,
+      "f1_50": 78.04,
+      "opt_f1": 79.38,
+      "auc": 88.18,
+      "delta_f1": 0.41,
+      "delta_opt": -0.29,
+      "harmful": true
+    },
+    "c1_v5_spine_s_curve_harmony": {
+      "index": 30,
+      "f1_50": 77.94,
+      "opt_f1": 79.3,
+      "auc": 88.03,
+      "delta_f1": 0.31,
+      "delta_opt": -0.37,
+      "harmful": true
+    },
+    "c1_v5_cervicothoracic_hinge_pitch": {
+      "index": 31,
+      "f1_50": 78.23,
+      "opt_f1": 79.48,
+      "auc": 88.09,
+      "delta_f1": 0.6,
+      "delta_opt": -0.19,
+      "harmful": true
+    },
+    "c1_v5_nadir_lumbar_tangent_jerk": {
+      "index": 32,
+      "f1_50": 77.92,
+      "opt_f1": 79.74,
+      "auc": 88.16,
+      "delta_f1": 0.29,
+      "delta_opt": 0.07,
+      "harmful": true
+    },
+    "c1_v5_pelvis_l5_retroversion_delta": {
+      "index": 33,
+      "f1_50": 78.11,
+      "opt_f1": 79.31,
+      "auc": 88.0,
+      "delta_f1": 0.48,
+      "delta_opt": -0.36,
+      "harmful": true
+    }
+  }
+}

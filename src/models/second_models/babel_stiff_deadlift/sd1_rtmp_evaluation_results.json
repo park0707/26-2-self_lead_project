@@ -1,0 +1,25 @@
+{
+  "opt_3state": {
+    "sel_f1": 60.24,
+    "sel_prec": 44.37,
+    "sel_rec": 93.77,
+    "sel_acc": 50.68,
+    "coverage": 85.6,
+    "retake": 14.4
+  },
+  "bal_3state": {
+    "sel_f1": 67.12,
+    "sel_prec": 59.51,
+    "sel_rec": 76.96,
+    "sel_acc": 68.83,
+    "coverage": 44.64,
+    "retake": 55.36
+  },
+  "roc_auc": 67.49,
+  "forced_50": {
+    "f1": 40.35,
+    "prec": 65.14,
+    "rec": 29.23,
+    "acc": 67.44
+  }
+}

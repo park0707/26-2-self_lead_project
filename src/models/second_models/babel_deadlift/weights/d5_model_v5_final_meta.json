@@ -1,0 +1,30 @@
+{
+  "project_name": "vidio-health-trainer",
+  "exercise": "바벨 데드리프트 (Barbell Deadlift)",
+  "defect": "d5. 바벨 궤적과 몸 밀착 (Barbell Path Proximity to Body)",
+  "model_version": "v5.0 Final Confirmed",
+  "status": "Production Ready",
+  "input_feature_dim": 40,
+  "decision_policy": "3-State View-Calibrated Uncertainty Gating",
+  "view_optimal_thresholds": {
+    "view5": 0.48,
+    "view2": 0.5,
+    "view3": 0.32,
+    "view4": 0.5,
+    "view1": 0.5
+  },
+  "uncertainty_margin": 0.06,
+  "uncertainty_band": [
+    0.44,
+    0.56
+  ],
+  "performance": {
+    "coverage": 0.9169,
+    "decided_samples": 706,
+    "total_samples": 770,
+    "uncertain_samples": 64,
+    "f1_score": 0.8207,
+    "accuracy": 0.813,
+    "roc_auc": 0.8811
+  }
+}

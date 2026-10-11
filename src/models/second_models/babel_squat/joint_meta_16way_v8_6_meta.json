@@ -1,0 +1,12 @@
+{
+  "version": "v8.6",
+  "architecture": "View-Conditioned Mixture-of-Experts (MoE)",
+  "in_features": 39,
+  "num_experts": 3,
+  "T_meta": 1.2,
+  "eta": 0.1,
+  "tau_clean": 0.38,
+  "q_min": 0.05,
+  "deadband_low": 0.32,
+  "deadband_high": 0.38
+}

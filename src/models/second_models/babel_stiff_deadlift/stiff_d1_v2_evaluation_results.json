@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-10-02 21:38:32",
+  "model_name": "sd3_v2",
+  "version": "v2.0 Pruned 32D",
+  "exercise": "바벨 스티프 데드리프트 (03_바벨_스티프_데드리프트)",
+  "defect": "sd3 (바벨 궤적과 몸 밀착 위반)",
+  "feature_dim": 32,
+  "pruned_features": [
+    "stiff_d1_bar_thigh_dist_max",
+    "stiff_d1_bar_midfoot_max_offset",
+    "stiff_d1_shoulder_wrist_angle_max_deg",
+    "stiff_d1_eccentric_bar_drift_max",
+    "stiff_d1_gated_ke_width_ratio_nadir",
+    "stiff_d1_gated_ke_dist_nadir"
+  ],
+  "metrics_2state": {
+    "f1": 73.88362652232748,
+    "precision": 78.22349570200574,
+    "recall": 70.0,
+    "accuracy": 81.35265700483092,
+    "auc": 88.09183064997018,
+    "tp": 273,
+    "tn": 569,
+    "fp": 76,
+    "fn": 117
+  },
+  "optimal_3state": {
+    "tau_clean": 0.36,
+    "tau_defect": 0.5,
+    "coverage": 90.24154589371982,
+    "abstain_rate": 9.75845410628019,
+    "f1": 78.0,
+    "precision": 78.22349570200574,
+    "recall": 77.77777777777779,
+    "accuracy": 83.5117773019272,
+    "tp": 273,
+    "tn": 507,
+    "fp": 76,
+    "fn": 78,
+    "decided_count": 934,
+    "total_count": 1035
+  },
+  "view_metrics": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "total_samples": 207,
+      "decided_samples": 190,
+      "coverage": 91.78743961352657,
+      "f1": 75.71428571428571,
+      "precision": 77.94117647058823,
+      "recall": 73.61111111111111,
+      "accuracy": 82.10526315789474,
+      "auc": 85.58934605446234,
+      "tp": 53,
+      "tn": 103,
+      "fp": 15,
+      "fn": 19
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "total_samples": 207,
+      "decided_samples": 190,
+      "coverage": 91.78743961352657,
+      "f1": 85.71428571428571,
+      "precision": 85.13513513513513,
+      "recall": 86.3013698630137,
+      "accuracy": 88.94736842105263,
+      "auc": 92.71516597097992,
+      "tp": 63,
+      "tn": 106,
+      "fp": 11,
+      "fn": 10
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "total_samples": 207,
+      "decided_samples": 167,
+      "coverage": 80.67632850241546,
+      "f1": 57.943925233644855,
+      "precision": 65.95744680851064,
+      "recall": 51.66666666666667,
+      "accuracy": 73.05389221556887,
+      "auc": 72.24209898628504,
+      "tp": 31,
+      "tn": 91,
+      "fp": 16,
+      "fn": 29
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "total_samples": 207,
+      "decided_samples": 196,
+      "coverage": 94.68599033816425,
+      "f1": 87.5,
+      "precision": 88.73239436619718,
+      "recall": 86.3013698630137,
+      "accuracy": 90.81632653061224,
+      "auc": 95.40846750149076,
+      "tp": 63,
+      "tn": 115,
+      "fp": 8,
+      "fn": 10
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "total_samples": 207,
+      "decided_samples": 191,
+      "coverage": 92.27053140096618,
+      "f1": 77.77777777777779,
+      "precision": 70.78651685393258,
+      "recall": 86.3013698630137,
+      "accuracy": 81.15183246073299,
+      "auc": 88.02424965215663,
+      "tp": 63,
+      "tn": 92,
+      "fp": 26,
+      "fn": 10
+    }
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "f1": 75.67567567567568,
+      "auc": 91.2962962962963,
+      "subjs": [
+        "피험자4",
+        "피험자8"
+      ]
+    },
+    {
+      "fold": 2,
+      "f1": 71.57894736842105,
+      "auc": 85.85185185185186,
+      "subjs": [
+        "피험자2",
+        "피험자7"
+      ]
+    },
+    {
+      "fold": 3,
+      "f1": 72.51461988304094,
+      "auc": 88.25287356321839,
+      "subjs": [
+        "피험자3",
+        "피험자6"
+      ]
+    },
+    {
+      "fold": 4,
+      "f1": 75.67567567567568,
+      "auc": 89.04533333333333,
+      "subjs": [
+        "피험자1",
+        "피험자9"
+      ]
+    },
+    {
+      "fold": 5,
+      "f1": 75.60975609756098,
+      "auc": 89.95555555555556,
+      "subjs": [
+        "피험자5"
+      ]
+    }
+  ]
+}

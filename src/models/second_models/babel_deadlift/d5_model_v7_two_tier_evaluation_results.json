@@ -1,0 +1,216 @@
+{
+  "model_version": "v7.0 Two-Tier Cascade (37D)",
+  "defect_name": "d5. 바벨 궤적과 몸 밀착 (Barbell Path Proximity to Body)",
+  "architecture": "4-Level Ambiguity Pruned Two-Tier Cascade Tri-Ensemble",
+  "total_raw_samples": 770,
+  "pruned_l4_samples": 94,
+  "valid_l123_samples": 676,
+  "ambiguity_distribution": {
+    "Level_1_Ground_Truth": 459,
+    "Level_2_Mild_Instability": 123,
+    "Level_3_View_Morphology": 94,
+    "Level_4_Mislabeled_Noise": 94
+  },
+  "tier1_level1_metrics": {
+    "accuracy": 0.9956427015250545,
+    "precision": 0.9959839357429718,
+    "recall": 0.9959839357429718,
+    "f1_score": 0.9959839357429718,
+    "roc_auc": 0.9994836488812392,
+    "confusion_matrix": [
+      [
+        209,
+        1
+      ],
+      [
+        1,
+        248
+      ]
+    ],
+    "sample_count": 459
+  },
+  "tier2_level123_metrics": {
+    "accuracy": 0.9171597633136095,
+    "precision": 0.8927536231884058,
+    "recall": 0.9418960244648318,
+    "f1_score": 0.9166666666666666,
+    "roc_auc": 0.9747991202474524,
+    "confusion_matrix": [
+      [
+        312,
+        37
+      ],
+      [
+        19,
+        308
+      ]
+    ],
+    "sample_count": 676
+  },
+  "cascade_level123_metrics": {
+    "accuracy": 0.8816568047337278,
+    "precision": 0.8110831234256927,
+    "recall": 0.9847094801223242,
+    "f1_score": 0.8895027624309392,
+    "roc_auc": 0.9508687994532217,
+    "confusion_matrix": [
+      [
+        274,
+        75
+      ],
+      [
+        5,
+        322
+      ]
+    ],
+    "sample_count": 676
+  },
+  "previous_v6_metrics": {
+    "v6_total_770": {
+      "accuracy": 0.7909,
+      "f1_score": 0.8076,
+      "roc_auc": 0.8797
+    },
+    "v6_on_level1_459": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          0,
+          249
+        ]
+      ],
+      "sample_count": 459
+    },
+    "v6_on_level123_676": {
+      "accuracy": 0.878698224852071,
+      "precision": 0.8054862842892768,
+      "recall": 0.9877675840978594,
+      "f1_score": 0.8873626373626373,
+      "roc_auc": 0.9769371642876545,
+      "confusion_matrix": [
+        [
+          271,
+          78
+        ],
+        [
+          4,
+          323
+        ]
+      ],
+      "sample_count": 676
+    }
+  },
+  "performance_comparison": {
+    "level1_tier1_vs_v6": {
+      "f1_gain": -0.4,
+      "acc_gain": -0.44,
+      "auc_gain": -0.0005
+    },
+    "level123_cascade_vs_v6": {
+      "f1_gain": 0.21,
+      "acc_gain": 0.3,
+      "auc_gain": -0.0261
+    },
+    "cascade_vs_v6_original_770": {
+      "f1_gain": 8.19,
+      "acc_gain": 9.08,
+      "auc_gain": 0.0712
+    }
+  },
+  "view_breakdown_level1": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "sample_count": 87,
+      "f1_score": 0.9900990099009901,
+      "accuracy": 0.9885057471264368,
+      "roc_auc": 0.9989189189189189
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "sample_count": 120,
+      "f1_score": 0.9914529914529915,
+      "accuracy": 0.9916666666666667,
+      "roc_auc": 0.9994442900805779
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "sample_count": 16,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "roc_auc": 0.0
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "sample_count": 139,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "roc_auc": 1.0
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "sample_count": 97,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "roc_auc": 1.0
+    }
+  },
+  "view_breakdown_level123": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "sample_count": 137,
+      "f1_score": 0.8859060402684564,
+      "accuracy": 0.8759124087591241,
+      "roc_auc": 0.9373134328358209
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "sample_count": 136,
+      "f1_score": 0.9770992366412213,
+      "accuracy": 0.9779411764705882,
+      "roc_auc": 0.9963163596966413
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "sample_count": 125,
+      "f1_score": 0.691358024691358,
+      "accuracy": 0.6,
+      "roc_auc": 0.7136222910216719
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "sample_count": 150,
+      "f1_score": 0.993103448275862,
+      "accuracy": 0.9933333333333333,
+      "roc_auc": 0.9996441914250134
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "sample_count": 128,
+      "f1_score": 0.9343065693430657,
+      "accuracy": 0.9296875,
+      "roc_auc": 0.9726495726495726
+    }
+  },
+  "optimal_thresholds_level1": {
+    "view5": 0.22,
+    "view2": 0.56,
+    "view3": 0.2,
+    "view4": 0.61,
+    "view1": 0.59
+  },
+  "optimal_thresholds_level123": {
+    "view5": 0.26,
+    "view2": 0.33,
+    "view3": 0.27,
+    "view4": 0.36,
+    "view1": 0.64
+  }
+}

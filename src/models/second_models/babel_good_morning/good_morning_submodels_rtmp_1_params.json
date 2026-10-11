@@ -1,0 +1,119 @@
+{
+  "c1": {
+    "model_name": "gm1_rtmp_1",
+    "defect_code": "c1",
+    "defect_name": "무릎 구부린 채 고정 위반 (D02)",
+    "global_temperature": 1.209,
+    "view_temperatures": {
+      "view5": 1.3042,
+      "view2": 1.1691,
+      "view3": 1.759,
+      "view4": 0.9049,
+      "view1": 0.974
+    },
+    "global_thresholds": {
+      "tau_norm": 0.4,
+      "tau_def": 0.635
+    },
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.415,
+        "tau_def": 0.72
+      },
+      "view2": {
+        "tau_norm": 0.37,
+        "tau_def": 0.635
+      },
+      "view3": {
+        "tau_norm": 0.435,
+        "tau_def": 0.51
+      },
+      "view4": {
+        "tau_norm": 0.43,
+        "tau_def": 0.7
+      },
+      "view1": {
+        "tau_norm": 0.295,
+        "tau_def": 0.7
+      }
+    }
+  },
+  "c2": {
+    "model_name": "gm2_rtmp_1",
+    "defect_code": "c2",
+    "defect_name": "시선 방향 유지 오류 (D10)",
+    "global_temperature": 1.1929,
+    "view_temperatures": {
+      "view5": 1.126,
+      "view2": 1.1289,
+      "view3": 1.0632,
+      "view4": 1.3649,
+      "view1": 1.3254
+    },
+    "global_thresholds": {
+      "tau_norm": 0.455,
+      "tau_def": 0.535
+    },
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.455,
+        "tau_def": 0.515
+      },
+      "view2": {
+        "tau_norm": 0.455,
+        "tau_def": 0.54
+      },
+      "view3": {
+        "tau_norm": 0.43,
+        "tau_def": 0.51
+      },
+      "view4": {
+        "tau_norm": 0.47,
+        "tau_def": 0.535
+      },
+      "view1": {
+        "tau_norm": 0.455,
+        "tau_def": 0.51
+      }
+    }
+  },
+  "c3": {
+    "model_name": "gm3_rtmp_1",
+    "defect_code": "c3",
+    "defect_name": "척추의 중립 오류 / 등 굽힘 (D14)",
+    "global_temperature": 1.0864,
+    "view_temperatures": {
+      "view5": 1.0041,
+      "view2": 0.7915,
+      "view3": 1.0703,
+      "view4": 1.1875,
+      "view1": 1.289
+    },
+    "global_thresholds": {
+      "tau_norm": 0.28,
+      "tau_def": 0.715
+    },
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.385,
+        "tau_def": 0.715
+      },
+      "view2": {
+        "tau_norm": 0.485,
+        "tau_def": 0.61
+      },
+      "view3": {
+        "tau_norm": 0.33,
+        "tau_def": 0.53
+      },
+      "view4": {
+        "tau_norm": 0.29,
+        "tau_def": 0.685
+      },
+      "view1": {
+        "tau_norm": 0.28,
+        "tau_def": 0.625
+      }
+    }
+  }
+}

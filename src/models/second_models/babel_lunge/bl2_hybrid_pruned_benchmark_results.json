@@ -1,0 +1,105 @@
+{
+  "model_name": "bl2_hybrid_pruned",
+  "description": "MediaPipe + RTMPose + Biomechanics (Top 20 Features Pruned)",
+  "tau_normal": 0.41200000000000003,
+  "tau_defect": 0.47000000000000003,
+  "overall_3state": {
+    "total_samples": 1081,
+    "coverage": 0.9010175763182239,
+    "retake_rate": 0.09898242368177614,
+    "selective_defect_f1": 0.568733153638814,
+    "selective_clean_f1": 0.7346600331674958,
+    "selective_accuracy": 0.6714579055441479,
+    "selective_precision": 0.46271929824561403,
+    "selective_recall": 0.7377622377622378
+  },
+  "view_benchmarks": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9004524886877828,
+        "retake_rate": 0.09954751131221719,
+        "selective_defect_f1": 0.4942528735632184,
+        "selective_clean_f1": 0.6071428571428571,
+        "selective_accuracy": 0.5577889447236181,
+        "selective_precision": 0.3739130434782609,
+        "selective_recall": 0.7288135593220338
+      }
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9004524886877828,
+        "retake_rate": 0.09954751131221719,
+        "selective_defect_f1": 0.6329113924050633,
+        "selective_clean_f1": 0.7583333333333333,
+        "selective_accuracy": 0.7085427135678392,
+        "selective_precision": 0.5263157894736842,
+        "selective_recall": 0.7936507936507936
+      }
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "metrics": {
+        "total_samples": 216,
+        "coverage": 0.9212962962962963,
+        "retake_rate": 0.0787037037037037,
+        "selective_defect_f1": 0.6766917293233082,
+        "selective_clean_f1": 0.8377358490566038,
+        "selective_accuracy": 0.7839195979899497,
+        "selective_precision": 0.5921052631578947,
+        "selective_recall": 0.7894736842105263
+      }
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "metrics": {
+        "total_samples": 212,
+        "coverage": 0.9245283018867925,
+        "retake_rate": 0.07547169811320754,
+        "selective_defect_f1": 0.5797101449275363,
+        "selective_clean_f1": 0.7716535433070866,
+        "selective_accuracy": 0.7040816326530612,
+        "selective_precision": 0.4878048780487805,
+        "selective_recall": 0.7142857142857143
+      }
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "metrics": {
+        "total_samples": 211,
+        "coverage": 0.8578199052132701,
+        "retake_rate": 0.14218009478672985,
+        "selective_defect_f1": 0.4748201438848921,
+        "selective_clean_f1": 0.672645739910314,
+        "selective_accuracy": 0.5966850828729282,
+        "selective_precision": 0.375,
+        "selective_recall": 0.6470588235294118
+      }
+    }
+  },
+  "selected_features": [
+    "RTMP_lead_foot_axis_stability",
+    "RTMP_fppa_eccentric_to_bottom_delta",
+    "RTMP_lead_hip_adduction_bottom",
+    "MP_lead_foot_axis_stability",
+    "RTMP_knee_displacement_foot_heading_angle",
+    "RTMP_dkcd_medial_deviation_bottom",
+    "MP_knee_displacement_foot_heading_angle",
+    "RTMP_lead_knee_ankle_alignment",
+    "RTMP_ntmd_standing",
+    "MP_pelvic_rotation_bottom",
+    "MP_lead_knee_valgus_peak",
+    "MP_ntmd_standing",
+    "MP_trunk_pelvis_yaw_torsion",
+    "RTMP_lead_foot_inward_angle_bottom",
+    "RTMP_npkd_bottom",
+    "RTMP_ntmd_bottom",
+    "MP_lead_knee_velocity_ml",
+    "MP_mkto_velocity",
+    "RTMP_lead_heel_toe_skew",
+    "RTMP_mkto_bottom"
+  ]
+}

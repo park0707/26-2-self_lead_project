@@ -1,0 +1,102 @@
+{
+  "model_version": "sd3_v4",
+  "strategy": "Multi-View Meta Fusion (Strategy 4 Refined)",
+  "constraint": "판단 보류율 <= 10.0% (Coverage >= 90.0%)",
+  "overall_metrics": {
+    "coverage": 90.05,
+    "abstain_rate": 9.95,
+    "f1_3state": 81.0,
+    "acc_3state": 86.16,
+    "prec_3state": 82.09,
+    "rec_3state": 79.94,
+    "roc_auc": 90.29,
+    "f1_2state": 74.79
+  },
+  "tier1_golden_metrics": {
+    "f1_3state": 87.04,
+    "roc_auc": 93.08,
+    "coverage": 90.0,
+    "sample_count": 260
+  },
+  "view_metrics": {
+    "view4": {
+      "alias": "시점 D (좌측 전방 45도)",
+      "f1_3s": 91.78,
+      "acc_3s": 93.85,
+      "auc": 96.92,
+      "coverage": 94.2
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45도)",
+      "f1_3s": 86.11,
+      "acc_3s": 89.9,
+      "auc": 94.25,
+      "coverage": 95.7
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45도)",
+      "f1_3s": 79.74,
+      "acc_3s": 83.85,
+      "auc": 90.05,
+      "coverage": 92.8
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45도)",
+      "f1_3s": 78.52,
+      "acc_3s": 84.49,
+      "auc": 88.52,
+      "coverage": 90.3
+    },
+    "view3": {
+      "alias": "시점 C (정면 0도)",
+      "f1_3s": 63.37,
+      "acc_3s": 76.88,
+      "auc": 74.99,
+      "coverage": 77.3
+    }
+  },
+  "view_thresholds": {
+    "view4": [
+      0.39,
+      0.48
+    ],
+    "view2": [
+      0.39,
+      0.48
+    ],
+    "view1": [
+      0.36,
+      0.49
+    ],
+    "view5": [
+      0.36,
+      0.49
+    ],
+    "view3": [
+      0.38,
+      0.49
+    ]
+  },
+  "view_fusion_weights": {
+    "view3": {
+      "gbdt": 0.55,
+      "tcn": 0.45
+    },
+    "view2": {
+      "gbdt": 0.75,
+      "tcn": 0.25
+    },
+    "view4": {
+      "gbdt": 0.75,
+      "tcn": 0.25
+    },
+    "view1": {
+      "gbdt": 0.65,
+      "tcn": 0.35
+    },
+    "view5": {
+      "gbdt": 0.65,
+      "tcn": 0.35
+    }
+  }
+}

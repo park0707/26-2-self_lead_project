@@ -1,0 +1,106 @@
+[
+  {
+    "set_name": "기존 Track 2: 척추 통합 13D (기준선)",
+    "dim": 13,
+    "catboost": {
+      "f1": 74.97,
+      "precision": 78.87,
+      "recall": 71.44,
+      "bacc": 76.73,
+      "roc_auc": 83.81,
+      "tn": 835,
+      "fp": 183,
+      "fn": 273,
+      "tp": 683
+    },
+    "lightgbm": {
+      "f1": 73.48,
+      "precision": 78.8,
+      "recall": 68.83,
+      "bacc": 75.72,
+      "roc_auc": 83.5,
+      "tn": 841,
+      "fp": 177,
+      "fn": 298,
+      "tp": 658
+    }
+  },
+  {
+    "set_name": "신규 Track 3: 기존 13D + [방안1] 귀-어깨-고관절 3D (총 16D)",
+    "dim": 16,
+    "catboost": {
+      "f1": 75.48,
+      "precision": 78.97,
+      "recall": 72.28,
+      "bacc": 77.1,
+      "roc_auc": 84.46,
+      "tn": 834,
+      "fp": 184,
+      "fn": 265,
+      "tp": 691
+    },
+    "lightgbm": {
+      "f1": 74.46,
+      "precision": 78.76,
+      "recall": 70.61,
+      "bacc": 76.36,
+      "roc_auc": 84.35,
+      "tn": 836,
+      "fp": 182,
+      "fn": 281,
+      "tp": 675
+    }
+  },
+  {
+    "set_name": "신규 Track 4: 상체-정강이 제거 & [방안1] 척추곡률 대체 (체형중립 15D)",
+    "dim": 15,
+    "catboost": {
+      "f1": 74.9,
+      "precision": 78.47,
+      "recall": 71.65,
+      "bacc": 76.59,
+      "roc_auc": 84.3,
+      "tn": 830,
+      "fp": 188,
+      "fn": 271,
+      "tp": 685
+    },
+    "lightgbm": {
+      "f1": 75.41,
+      "precision": 79.72,
+      "recall": 71.55,
+      "bacc": 77.23,
+      "roc_auc": 84.88,
+      "tn": 844,
+      "fp": 174,
+      "fn": 272,
+      "tp": 684
+    }
+  },
+  {
+    "set_name": "신규 Track 5: 순수 9D + [방안1/전체] 척추곡률 6D (순수 기하학 15D)",
+    "dim": 15,
+    "catboost": {
+      "f1": 69.69,
+      "precision": 72.91,
+      "recall": 66.74,
+      "bacc": 71.73,
+      "roc_auc": 78.74,
+      "tn": 781,
+      "fp": 237,
+      "fn": 318,
+      "tp": 638
+    },
+    "lightgbm": {
+      "f1": 69.53,
+      "precision": 72.32,
+      "recall": 66.95,
+      "bacc": 71.44,
+      "roc_auc": 78.25,
+      "tn": 773,
+      "fp": 245,
+      "fn": 316,
+      "tp": 640
+    }
+  }
+]

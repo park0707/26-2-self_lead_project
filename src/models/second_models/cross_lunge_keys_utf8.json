@@ -1,0 +1,146 @@
+[
+  {
+    "key": "177",
+    "desc": "1앞다리 90도, 2무릎발방향일치, 3상체 균형",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": true
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": true
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": true
+      }
+    ]
+  },
+  {
+    "key": "178",
+    "desc": "정자세에서 앞다리 피고 상체 뒤로 젖힘",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": false
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": true
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": false
+      }
+    ]
+  },
+  {
+    "key": "179",
+    "desc": "정자세에서 발방향 과도하게 바깥쪽",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": true
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": false
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": true
+      }
+    ]
+  },
+  {
+    "key": "180",
+    "desc": "정자세에서 상체 뒤로 젖힘",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": true
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": true
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": false
+      }
+    ]
+  },
+  {
+    "key": "181",
+    "desc": "정자세에서 앞다리 피고 발방향 바깥쪽",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": false
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": false
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": true
+      }
+    ]
+  },
+  {
+    "key": "182",
+    "desc": "정자세에서 발방향 바깥쪽 상체 뒤로 젖힘",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": true
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": false
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": false
+      }
+    ]
+  },
+  {
+    "key": "183",
+    "desc": "정자세에서 앞다리 피고 하늘 보고",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": false
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": true
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": false
+      }
+    ]
+  },
+  {
+    "key": "184",
+    "desc": "왼쪽보고 몸통 옆으로 구부리고",
+    "conditions": [
+      {
+        "condition": "앞다리 무릎 각도 90도",
+        "value": true
+      },
+      {
+        "condition": "몸통 앞발 앞무릎 방향 일치여부",
+        "value": false
+      },
+      {
+        "condition": "상체 정면 균형잡기",
+        "value": false
+      }
+    ]
+  }
+]

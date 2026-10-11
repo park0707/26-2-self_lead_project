@@ -1,0 +1,40 @@
+{
+  "model_version": "v7.0 Two-Tier Cascade (37D)",
+  "exercise": "바벨 데드리프트 (Barbell Deadlift)",
+  "defect": "d5. 바벨 궤적과 몸 밀착 (Barbell Path Proximity to Body)",
+  "status": "OFFICIALLY_CONFIRMED_FINAL_PRODUCTION",
+  "total_clean_samples": 676,
+  "pruned_l4_samples": 94,
+  "full_coverage_metrics": {
+    "f1_score": 0.8895,
+    "accuracy": 0.8817,
+    "precision": 0.8111,
+    "recall": 0.9847,
+    "roc_auc": 0.9509,
+    "fast_path_pct": 88.5,
+    "deep_path_pct": 11.5
+  },
+  "optimal_3state_metrics_10pct_abstain": {
+    "coverage": 0.929,
+    "abstain_rate": 0.071,
+    "defect_f1": 0.8996,
+    "clean_f1": 0.8787,
+    "accuracy": 0.8901,
+    "precision": 0.824,
+    "recall": 0.9904
+  },
+  "tier2_standalone_3state_metrics": {
+    "coverage": 0.901,
+    "abstain_rate": 0.099,
+    "defect_f1": 0.9314,
+    "clean_f1": 0.9307,
+    "accuracy": 0.931
+  },
+  "view_thresholds": {
+    "view5": 0.26,
+    "view2": 0.33,
+    "view3": 0.27,
+    "view4": 0.36,
+    "view1": 0.64
+  }
+}

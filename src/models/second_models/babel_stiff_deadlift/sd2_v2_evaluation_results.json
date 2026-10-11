@@ -1,0 +1,147 @@
+{
+  "model_name": "sd2_v2",
+  "num_features_v1": 30,
+  "num_features_v2": 20,
+  "pruned_count": 10,
+  "pruned_features": {
+    "stiff_res_lumbar_curv": {
+      "index": 18,
+      "reason": "분산 0.0000 (상수 피처, 정보량 전무)"
+    },
+    "stiff_pitch_standing": {
+      "index": 11,
+      "reason": "제거 시 F1 +0.11%p 상승(성능 저해) 및 stiff_pitch_rom과 r=-0.986 초고상관"
+    },
+    "stiff_flex_accel_peak": {
+      "index": 10,
+      "reason": "stiff_trunk_flex_speed_max와 r=+0.976 초고상관 중복 피처"
+    },
+    "stiff_signed_thoracolumbar_delta": {
+      "index": 5,
+      "reason": "stiff_lumbar_stiffness_sd와 r=+0.888 고상관 중복"
+    },
+    "stiff_view_normal_z": {
+      "index": 12,
+      "reason": "stiff_thoracic_kyphosis_peak와 r=-0.895 고상관 중복 및 단독 AUC 51.18% 미약"
+    },
+    "stiff_shoulder_roll_max": {
+      "index": 22,
+      "reason": "stiff_hip_roll_max와 r=+0.895 고상관 중복 (핵심 기여 피처인 hip_roll_max 보존)"
+    },
+    "stiff_lockout_hyperextension": {
+      "index": 14,
+      "reason": "제거 시 F1 +0.05%p 상승(성능 저해/노이즈)"
+    },
+    "stiff_lumbopelvic_rhythm_ratio": {
+      "index": 25,
+      "reason": "제거 시 F1 +0.11%p 상승(성능 저해/노이즈)"
+    },
+    "stiff_lateral_asym_integral": {
+      "index": 9,
+      "reason": "Cohen's d=-0.006, AUC 50.12% 순수 무효 노이즈"
+    },
+    "stiff_lateral_drift_direction": {
+      "index": 28,
+      "reason": "Cohen's d=-0.002, AUC 50.33% 순수 무효 노이즈"
+    }
+  },
+  "selected_features": [
+    "stiff_lumbar_poly_a",
+    "stiff_lumbar_stiffness_sd",
+    "stiff_spine_lateral_dev_max",
+    "stiff_trunk_flex_speed_max",
+    "stiff_cervical_min",
+    "stiff_active_rom",
+    "stiff_cobb_mean",
+    "stiff_shoulder_hip_twist_max",
+    "stiff_shear_stress_proxy",
+    "stiff_pitch_rom",
+    "stiff_view_occlusion",
+    "stiff_view_comp_curv",
+    "stiff_ratio_arm_to_torso",
+    "stiff_ratio_femur_to_tibia",
+    "stiff_ratio_leg_to_torso",
+    "stiff_hip_roll_max",
+    "stiff_thoracic_kyphosis_peak",
+    "stiff_knee_fixation_sd",
+    "stiff_torso_pelvis_lateral_offset",
+    "stiff_sagittal_spine_stiffness"
+  ],
+  "v1_baseline": {
+    "f1": 0.8438040345821326,
+    "auc": 0.7139975186104219,
+    "accuracy": 0.7381642512077294,
+    "three_state_f1": 0.872591671845867,
+    "coverage": 0.881159420289855
+  },
+  "v2_results": {
+    "f1": 0.8587319243604005,
+    "auc": 0.7155384615384615,
+    "accuracy": 0.7545893719806763,
+    "precision": 0.7546432062561095,
+    "recall": 0.9961290322580645,
+    "three_state_f1": 0.8735348550277606,
+    "coverage": 0.8821256038647343,
+    "abstain_rate": 0.11787439613526574,
+    "tau_clean": 0.15,
+    "tau_def": 0.5800000000000001,
+    "ensemble_weights": {
+      "tcn": 0.2,
+      "lgb": 0.2,
+      "cat": 0.6000000000000001
+    }
+  },
+  "comparison": {
+    "delta_f1_pct": 1.4927889778267867,
+    "delta_auc_pct": 0.15409429280395237,
+    "delta_acc_pct": 1.6425120772946888,
+    "delta_three_state_f1_pct": 0.09431831818936809
+  },
+  "view_metrics": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 207,
+      "f1": 0.853185595567867,
+      "precision": 0.7475728155339806,
+      "recall": 0.9935483870967742,
+      "accuracy": 0.7439613526570048,
+      "auc": 0.6217121588089329
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 207,
+      "f1": 0.8603351955307262,
+      "precision": 0.7586206896551724,
+      "recall": 0.9935483870967742,
+      "accuracy": 0.7584541062801933,
+      "auc": 0.7516129032258063
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 207,
+      "f1": 0.8587257617728532,
+      "precision": 0.7524271844660194,
+      "recall": 1.0,
+      "accuracy": 0.7536231884057971,
+      "auc": 0.754590570719603
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 207,
+      "f1": 0.8651685393258427,
+      "precision": 0.7661691542288557,
+      "recall": 0.9935483870967742,
+      "accuracy": 0.7681159420289855,
+      "auc": 0.7583126550868486
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 207,
+      "f1": 0.856353591160221,
+      "precision": 0.748792270531401,
+      "recall": 1.0,
+      "accuracy": 0.748792270531401,
+      "auc": 0.6198511166253101
+    }
+  }
+}

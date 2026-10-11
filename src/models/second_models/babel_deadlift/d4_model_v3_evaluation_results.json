@@ -1,0 +1,198 @@
+{
+  "model_version": "d4_v3",
+  "feature_dim": 37,
+  "timestamp": "2026-09-30 10:00:30",
+  "total_samples": 770,
+  "defects": 135,
+  "normals": 635,
+  "base_0_50": {
+    "accuracy": 0.787012987012987,
+    "precision": 0.37168141592920356,
+    "recall": 0.3111111111111111,
+    "f1": 0.3387096774193548,
+    "roc_auc": 0.6925867599883349
+  },
+  "opt_binary": {
+    "threshold": 0.25,
+    "accuracy": 0.6233766233766234,
+    "precision": 0.276657060518732,
+    "recall": 0.7111111111111111,
+    "f1": 0.3983402489626556
+  },
+  "best_3state_max_10pct": {
+    "tau_normal": 0.34,
+    "tau_defect": 0.425,
+    "coverage": 0.9025974025974026,
+    "decline_rate": 0.09740259740259738,
+    "accuracy": 0.7597122302158273,
+    "f1": 0.4014336917562724,
+    "precision": 0.35668789808917195,
+    "recall": 0.45901639344262296,
+    "n_decided": 695,
+    "n_total": 770
+  },
+  "view_metrics": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.4528301886792453,
+      "acc_base": 0.8116883116883117,
+      "auc": 0.7343248760571595,
+      "f1_opt": 0.4175824175824176,
+      "acc_opt": 0.6558441558441559,
+      "3state_f1": 0.5,
+      "3state_acc": 0.7762237762237763,
+      "3state_coverage": 0.9285714285714286
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.35294117647058826,
+      "acc_base": 0.7857142857142857,
+      "auc": 0.7436570428696413,
+      "f1_opt": 0.4339622641509434,
+      "acc_opt": 0.6103896103896104,
+      "3state_f1": 0.45161290322580644,
+      "3state_acc": 0.7536231884057971,
+      "3state_coverage": 0.8961038961038961
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.23076923076923078,
+      "acc_base": 0.7402597402597403,
+      "auc": 0.6453776611256926,
+      "f1_opt": 0.38,
+      "acc_opt": 0.5974025974025974,
+      "3state_f1": 0.3137254901960784,
+      "3state_acc": 0.7407407407407407,
+      "3state_coverage": 0.8766233766233766
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.4074074074074074,
+      "acc_base": 0.7922077922077922,
+      "auc": 0.7445319335083115,
+      "f1_opt": 0.4666666666666667,
+      "acc_opt": 0.6883116883116883,
+      "3state_f1": 0.4727272727272727,
+      "3state_acc": 0.7898550724637681,
+      "3state_coverage": 0.8961038961038961
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "total_samples": 154,
+      "defects": 27,
+      "normals": 127,
+      "f1_base": 0.21052631578947367,
+      "acc_base": 0.8051948051948052,
+      "auc": 0.5917177019539225,
+      "f1_opt": 0.29473684210526313,
+      "acc_opt": 0.564935064935065,
+      "3state_f1": 0.2127659574468085,
+      "3state_acc": 0.7375886524822695,
+      "3state_coverage": 0.9155844155844156
+    }
+  },
+  "top_features": [
+    {
+      "rank": 1,
+      "feature": "d4_vel_ratio_second_half",
+      "importance": 79.5999984741211,
+      "tag": ""
+    },
+    {
+      "rank": 2,
+      "feature": "d4_knee_hip_corr_full",
+      "importance": 74.5999984741211,
+      "tag": ""
+    },
+    {
+      "rank": 3,
+      "feature": "d4_angular_accel_mismatch",
+      "importance": 73.19999694824219,
+      "tag": ""
+    },
+    {
+      "rank": 4,
+      "feature": "d4_trunk_angle_nadir_deg",
+      "importance": 63.599998474121094,
+      "tag": ""
+    },
+    {
+      "rank": 5,
+      "feature": "d4_hip_lock_time_norm",
+      "importance": 56.20000076293945,
+      "tag": ""
+    },
+    {
+      "rank": 6,
+      "feature": "d4_morph_torso_thigh_ratio",
+      "importance": 52.79999923706055,
+      "tag": "★ (신규 CRP/MVC/체형 피처)"
+    },
+    {
+      "rank": 7,
+      "feature": "d4_bilateral_hip_asym_deg",
+      "importance": 50.79999923706055,
+      "tag": ""
+    },
+    {
+      "rank": 8,
+      "feature": "d4_pelvis_y_rise_rate",
+      "importance": 48.0,
+      "tag": ""
+    },
+    {
+      "rank": 9,
+      "feature": "d4_ratio_deriv_max_ascent",
+      "importance": 45.0,
+      "tag": "★ (v2 비율 피처)"
+    },
+    {
+      "rank": 10,
+      "feature": "d4_trunk_angle_std_ascent",
+      "importance": 43.0,
+      "tag": ""
+    },
+    {
+      "rank": 11,
+      "feature": "d4_torso_horizontal_ratio",
+      "importance": 41.79999923706055,
+      "tag": ""
+    },
+    {
+      "rank": 12,
+      "feature": "d4_morph_femur_tibia_ratio",
+      "importance": 41.20000076293945,
+      "tag": "★ (신규 CRP/MVC/체형 피처)"
+    },
+    {
+      "rank": 13,
+      "feature": "d4_knee_rom_deg",
+      "importance": 40.79999923706055,
+      "tag": ""
+    },
+    {
+      "rank": 14,
+      "feature": "d4_norm_progress_diff_max",
+      "importance": 39.79999923706055,
+      "tag": "★ (v2 비율 피처)"
+    },
+    {
+      "rank": 15,
+      "feature": "d4_view_robust_coupling",
+      "importance": 39.599998474121094,
+      "tag": ""
+    }
+  ]
+}

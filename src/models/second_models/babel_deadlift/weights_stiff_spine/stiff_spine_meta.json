@@ -1,0 +1,41 @@
+{
+  "weights": {
+    "tcn": 0.25,
+    "lgb": 0.4,
+    "cat": 0.35
+  },
+  "tau_clean": 0.4,
+  "tau_def": 0.54,
+  "feature_names": [
+    "stiff_lumbar_poly_a",
+    "stiff_lumbar_stiffness_sd",
+    "stiff_spine_lateral_dev_max",
+    "stiff_trunk_flex_speed_max",
+    "stiff_cervical_min",
+    "stiff_signed_thoracolumbar_delta",
+    "stiff_active_rom",
+    "stiff_cobb_mean",
+    "stiff_shoulder_hip_twist_max",
+    "stiff_lateral_asym_integral",
+    "stiff_flex_accel_peak",
+    "stiff_pitch_standing",
+    "stiff_view_normal_z",
+    "stiff_shear_stress_proxy",
+    "stiff_lockout_hyperextension",
+    "stiff_pitch_rom",
+    "stiff_view_occlusion",
+    "stiff_view_comp_curv",
+    "stiff_res_lumbar_curv",
+    "stiff_ratio_arm_to_torso",
+    "stiff_ratio_femur_to_tibia",
+    "stiff_ratio_leg_to_torso",
+    "stiff_shoulder_roll_max",
+    "stiff_hip_roll_max",
+    "stiff_thoracic_kyphosis_peak",
+    "stiff_lumbopelvic_rhythm_ratio",
+    "stiff_knee_fixation_sd",
+    "stiff_torso_pelvis_lateral_offset",
+    "stiff_lateral_drift_direction",
+    "stiff_sagittal_spine_stiffness"
+  ]
+}

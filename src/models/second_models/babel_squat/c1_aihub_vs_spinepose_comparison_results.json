@@ -1,0 +1,267 @@
+{
+  "total_samples": 2605,
+  "model_a_oracle_aihub": {
+    "description": "AI-Hub 3D JSON 라벨 보간 척추 기반 공식 확정 모델 (Oracle Baseline)",
+    "overall": {
+      "f1": 84.47,
+      "prec": 85.54,
+      "rec": 83.43,
+      "acc": 85.22,
+      "auc": 91.58,
+      "cm": [
+        [
+          1173,
+          177
+        ],
+        [
+          208,
+          1047
+        ]
+      ]
+    },
+    "selective_abstention": {
+      "coverage": 87.83,
+      "selective_f1": 88.02,
+      "selective_acc": 88.51
+    }
+  },
+  "model_b_vision_spinepose": {
+    "description": "SpinePose 순수 비전 추론 척추 기반 신규 모델 (Pure Vision Real-World)",
+    "overall": {
+      "f1": 81.12,
+      "prec": 81.78,
+      "rec": 80.48,
+      "acc": 81.96,
+      "auc": 89.21,
+      "cm": [
+        [
+          1125,
+          225
+        ],
+        [
+          245,
+          1010
+        ]
+      ]
+    },
+    "selective_abstention": {
+      "coverage": 86.83,
+      "selective_f1": 85.14,
+      "selective_acc": 85.68
+    }
+  },
+  "delta_overall": {
+    "delta_f1": -3.35,
+    "delta_auc": -2.37,
+    "delta_acc": -3.26,
+    "delta_prec": -3.76,
+    "delta_rec": -2.95
+  },
+  "view_breakdown": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 521,
+      "model_a": {
+        "f1": 84.12,
+        "prec": 87.18,
+        "rec": 81.27,
+        "acc": 85.22,
+        "auc": 90.58,
+        "cm": [
+          [
+            240,
+            30
+          ],
+          [
+            47,
+            204
+          ]
+        ]
+      },
+      "model_b": {
+        "f1": 79.69,
+        "prec": 76.75,
+        "rec": 82.87,
+        "acc": 79.65,
+        "auc": 86.84,
+        "cm": [
+          [
+            207,
+            63
+          ],
+          [
+            43,
+            208
+          ]
+        ]
+      },
+      "delta_f1": -4.43,
+      "delta_auc": -3.74,
+      "delta_acc": -5.57
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 521,
+      "model_a": {
+        "f1": 84.02,
+        "prec": 83.2,
+        "rec": 84.86,
+        "acc": 84.45,
+        "auc": 91.7,
+        "cm": [
+          [
+            227,
+            43
+          ],
+          [
+            38,
+            213
+          ]
+        ]
+      },
+      "model_b": {
+        "f1": 81.45,
+        "prec": 87.61,
+        "rec": 76.1,
+        "acc": 83.3,
+        "auc": 91.45,
+        "cm": [
+          [
+            243,
+            27
+          ],
+          [
+            60,
+            191
+          ]
+        ]
+      },
+      "delta_f1": -2.57,
+      "delta_auc": -0.25,
+      "delta_acc": -1.15
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 521,
+      "model_a": {
+        "f1": 83.51,
+        "prec": 87.72,
+        "rec": 79.68,
+        "acc": 84.84,
+        "auc": 92.11,
+        "cm": [
+          [
+            242,
+            28
+          ],
+          [
+            51,
+            200
+          ]
+        ]
+      },
+      "model_b": {
+        "f1": 81.33,
+        "prec": 84.85,
+        "rec": 78.09,
+        "acc": 82.73,
+        "auc": 90.2,
+        "cm": [
+          [
+            235,
+            35
+          ],
+          [
+            55,
+            196
+          ]
+        ]
+      },
+      "delta_f1": -2.18,
+      "delta_auc": -1.91,
+      "delta_acc": -2.11
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 521,
+      "model_a": {
+        "f1": 83.3,
+        "prec": 82.17,
+        "rec": 84.46,
+        "acc": 83.69,
+        "auc": 91.17,
+        "cm": [
+          [
+            224,
+            46
+          ],
+          [
+            39,
+            212
+          ]
+        ]
+      },
+      "model_b": {
+        "f1": 80.9,
+        "prec": 83.47,
+        "rec": 78.49,
+        "acc": 82.15,
+        "auc": 89.62,
+        "cm": [
+          [
+            231,
+            39
+          ],
+          [
+            54,
+            197
+          ]
+        ]
+      },
+      "delta_f1": -2.4,
+      "delta_auc": -1.55,
+      "delta_acc": -1.54
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 521,
+      "model_a": {
+        "f1": 87.37,
+        "prec": 87.9,
+        "rec": 86.85,
+        "acc": 87.91,
+        "auc": 92.65,
+        "cm": [
+          [
+            240,
+            30
+          ],
+          [
+            33,
+            218
+          ]
+        ]
+      },
+      "model_b": {
+        "f1": 82.26,
+        "prec": 78.14,
+        "rec": 86.85,
+        "acc": 81.96,
+        "auc": 88.89,
+        "cm": [
+          [
+            209,
+            61
+          ],
+          [
+            33,
+            218
+          ]
+        ]
+      },
+      "delta_f1": -5.11,
+      "delta_auc": -3.76,
+      "delta_acc": -5.95
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "exercise": "03_바벨_스티프_데드리프트",
+  "defect": "무릎 구부린 채 고정 위반 (Knee Fixed-Angle Defect)",
+  "dataset_summary": {
+    "total_sequences": 684,
+    "level4_pruned": 16,
+    "level1_to_3_valid": 668,
+    "level1_count": 103
+  },
+  "tier1_metrics": {
+    "clean_specificity": 0.7872340425531915,
+    "macro_f1": 0.24,
+    "roc_auc": 0.5474924012158054,
+    "accuracy": 0.44660194174757284
+  },
+  "tier2_2state_metrics": {
+    "macro_f1": 0.48050741324283924,
+    "clean_f1": 0.6547085201793722,
+    "defect_f1": 0.3063063063063063,
+    "clean_specificity": 0.7121951219512195,
+    "roc_auc": 0.46867082624314615,
+    "accuracy": 0.5389221556886228
+  },
+  "tier2_3state_metrics": {
+    "tau_lower": 0.47946441173553467,
+    "tau_upper": 0.5205355882644653,
+    "abstention_rate": 9.580838323353294,
+    "coverage_rate": 90.41916167664671,
+    "selective_macro_f1": 0.49321128909229595,
+    "selective_clean_f1": 0.6811594202898551,
+    "selective_defect_f1": 0.30526315789473685,
+    "selective_specificity": 0.7663043478260869,
+    "selective_accuracy": 0.5629139072847682
+  },
+  "view_results": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "count": 155,
+      "f1_2state": 0.4790888722927558,
+      "roc_auc": 0.4687719298245614,
+      "abstention_rate": 9.032258064516128,
+      "f1_3state": 0.49409722222222224
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "count": 155,
+      "f1_2state": 0.4790888722927558,
+      "roc_auc": 0.4687719298245614,
+      "abstention_rate": 9.032258064516128,
+      "f1_3state": 0.49409722222222224
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "count": 155,
+      "f1_2state": 0.4790888722927558,
+      "roc_auc": 0.4687719298245614,
+      "abstention_rate": 9.032258064516128,
+      "f1_3state": 0.49409722222222224
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "count": 48,
+      "f1_2state": 0.4957983193277311,
+      "roc_auc": 0.48148148148148145,
+      "abstention_rate": 16.666666666666664,
+      "f1_3state": 0.4666666666666667
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "count": 155,
+      "f1_2state": 0.4790888722927558,
+      "roc_auc": 0.4687719298245614,
+      "abstention_rate": 9.032258064516128,
+      "f1_3state": 0.49409722222222224
+    }
+  },
+  "top_features": {
+    "bottom_knee_angle": 58.2,
+    "shank_svii_max": 56.8,
+    "bottom_knee_delta_mean": 55.6,
+    "hip_hinge_isolation": 53.0,
+    "pelvis_knee_dist_rom": 49.4,
+    "knee_disp_z_rms": 46.2,
+    "knee_rom_max": 44.0
+  }
+}

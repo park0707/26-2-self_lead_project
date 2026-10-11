@@ -1,0 +1,1293 @@
+[
+  {
+    "exercise_index": 0,
+    "exercise_name": "01_바벨_스쿼트",
+    "num_samples": 1974,
+    "num_normals": 129,
+    "num_errors": 1845,
+    "num_defects": 4,
+    "defect_names": [
+      "척추의 중립",
+      "고개 정면",
+      "발과 무릎의 방향 일치",
+      "발바닥 지면 고정"
+    ],
+    "task1_before": {
+      "normal_recall": 46.51,
+      "normal_precision": 36.14,
+      "normal_f1": 40.68,
+      "error_recall_spec": 94.2,
+      "macro_f1": 67.34,
+      "balanced_accuracy": 70.36,
+      "g_mean": 66.19,
+      "clinical_risk_ratio": 5.8,
+      "champion": "TabularSEResNet"
+    },
+    "task1_after_v2": {
+      "tn": 1550,
+      "fp": 295,
+      "fn": 35,
+      "tp": 94,
+      "normal_recall": 72.87,
+      "normal_precision": 24.16,
+      "normal_f1": 36.29,
+      "error_recall_spec": 84.01,
+      "error_precision": 97.79,
+      "error_f1": 90.38,
+      "macro_f1": 63.34,
+      "balanced_accuracy": 78.44,
+      "g_mean": 78.24,
+      "clinical_risk_ratio": 15.99
+    },
+    "task1_after_v25": {
+      "tn": 1150,
+      "fp": 695,
+      "fn": 16,
+      "tp": 113,
+      "normal_recall": 87.6,
+      "normal_precision": 13.99,
+      "normal_f1": 24.12,
+      "error_recall_spec": 62.33,
+      "error_precision": 98.63,
+      "error_f1": 76.39,
+      "macro_f1": 50.25,
+      "balanced_accuracy": 74.96,
+      "g_mean": 73.89,
+      "clinical_risk_ratio": 37.67
+    },
+    "task2_before": {
+      "macro_defect_f1": 70.46,
+      "micro_defect_f1": 70.44,
+      "hamming_loss": 29.22,
+      "subset_accuracy": 25.18,
+      "defect_mean_acc": 70.78,
+      "per_defect": {
+        "척추의 중립": {
+          "precision": 78.47,
+          "recall": 69.77,
+          "f1": 73.86,
+          "accuracy": 76.09
+        },
+        "고개 정면": {
+          "precision": 56.46,
+          "recall": 58.05,
+          "f1": 57.24,
+          "accuracy": 56.33
+        },
+        "발과 무릎의 방향 일치": {
+          "precision": 81.56,
+          "recall": 87.02,
+          "f1": 84.2,
+          "accuracy": 83.69
+        },
+        "발바닥 지면 고정": {
+          "precision": 66.63,
+          "recall": 66.43,
+          "f1": 66.53,
+          "accuracy": 67.02
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 71.48,
+      "micro_defect_f1": 71.78,
+      "hamming_loss": 28.08,
+      "subset_accuracy": 27.91,
+      "defect_mean_acc": 71.92,
+      "per_defect": {
+        "척추의 중립": {
+          "precision": 76.16,
+          "recall": 72.18,
+          "f1": 74.11,
+          "accuracy": 75.58
+        },
+        "고개 정면": {
+          "precision": 57.32,
+          "recall": 54.73,
+          "f1": 56.0,
+          "accuracy": 56.69
+        },
+        "발과 무릎의 방향 일치": {
+          "precision": 79.54,
+          "recall": 91.89,
+          "f1": 85.27,
+          "accuracy": 84.14
+        },
+        "발바닥 지면 고정": {
+          "precision": 71.4,
+          "recall": 69.71,
+          "f1": 70.55,
+          "accuracy": 71.28
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 71.48,
+      "micro_defect_f1": 71.78,
+      "hamming_loss": 28.08,
+      "subset_accuracy": 27.91,
+      "defect_mean_acc": 71.92,
+      "per_defect": {
+        "척추의 중립": {
+          "precision": 76.16,
+          "recall": 72.18,
+          "f1": 74.11,
+          "accuracy": 75.58
+        },
+        "고개 정면": {
+          "precision": 57.32,
+          "recall": 54.73,
+          "f1": 56.0,
+          "accuracy": 56.69
+        },
+        "발과 무릎의 방향 일치": {
+          "precision": 79.54,
+          "recall": 91.89,
+          "f1": 85.27,
+          "accuracy": 84.14
+        },
+        "발바닥 지면 고정": {
+          "precision": 71.4,
+          "recall": 69.71,
+          "f1": 70.55,
+          "accuracy": 71.28
+        }
+      }
+    },
+    "hem_v2": 22.85,
+    "hem_v25": 16.31,
+    "eval_time_sec": 61.97
+  },
+  {
+    "exercise_index": 1,
+    "exercise_name": "02_바벨_데드리프트",
+    "num_samples": 3176,
+    "num_normals": 107,
+    "num_errors": 3069,
+    "num_defects": 5,
+    "defect_names": [
+      "척추의 중립",
+      "발과 무릎의 방향 일치",
+      "바벨 궤적과 몸 밀착",
+      "무릎과 골반이 동시에 펴짐",
+      "발바닥 지면 고정"
+    ],
+    "task1_before": {
+      "normal_recall": 63.55,
+      "normal_precision": 25.86,
+      "normal_f1": 36.86,
+      "error_recall_spec": 92.41,
+      "macro_f1": 65.43,
+      "balanced_accuracy": 77.98,
+      "g_mean": 76.63,
+      "clinical_risk_ratio": 7.59,
+      "champion": "BalancedRandomForest"
+    },
+    "task1_after_v2": {
+      "tn": 2689,
+      "fp": 380,
+      "fn": 43,
+      "tp": 64,
+      "normal_recall": 59.81,
+      "normal_precision": 14.41,
+      "normal_f1": 23.23,
+      "error_recall_spec": 87.62,
+      "error_precision": 98.43,
+      "error_f1": 92.71,
+      "macro_f1": 57.97,
+      "balanced_accuracy": 73.72,
+      "g_mean": 72.39,
+      "clinical_risk_ratio": 12.38
+    },
+    "task1_after_v25": {
+      "tn": 1641,
+      "fp": 1428,
+      "fn": 12,
+      "tp": 95,
+      "normal_recall": 88.79,
+      "normal_precision": 6.24,
+      "normal_f1": 11.66,
+      "error_recall_spec": 53.47,
+      "error_precision": 99.27,
+      "error_f1": 69.5,
+      "macro_f1": 40.58,
+      "balanced_accuracy": 71.13,
+      "g_mean": 68.9,
+      "clinical_risk_ratio": 46.53
+    },
+    "task2_before": {
+      "macro_defect_f1": 58.83,
+      "micro_defect_f1": 58.78,
+      "hamming_loss": 39.25,
+      "subset_accuracy": 9.01,
+      "defect_mean_acc": 60.75,
+      "per_defect": {
+        "척추의 중립": {
+          "precision": 62.97,
+          "recall": 64.11,
+          "f1": 63.54,
+          "accuracy": 64.29
+        },
+        "발과 무릎의 방향 일치": {
+          "precision": 69.59,
+          "recall": 52.28,
+          "f1": 59.71,
+          "accuracy": 66.94
+        },
+        "바벨 궤적과 몸 밀착": {
+          "precision": 55.79,
+          "recall": 57.2,
+          "f1": 56.48,
+          "accuracy": 56.05
+        },
+        "무릎과 골반이 동시에 펴짐": {
+          "precision": 55.77,
+          "recall": 55.98,
+          "f1": 55.88,
+          "accuracy": 56.74
+        },
+        "발바닥 지면 고정": {
+          "precision": 58.45,
+          "recall": 58.64,
+          "f1": 58.54,
+          "accuracy": 59.73
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 60.6,
+      "micro_defect_f1": 60.52,
+      "hamming_loss": 37.73,
+      "subset_accuracy": 9.92,
+      "defect_mean_acc": 62.27,
+      "per_defect": {
+        "척추의 중립": {
+          "precision": 62.21,
+          "recall": 63.34,
+          "f1": 62.77,
+          "accuracy": 63.54
+        },
+        "발과 무릎의 방향 일치": {
+          "precision": 70.98,
+          "recall": 63.78,
+          "f1": 67.19,
+          "accuracy": 70.81
+        },
+        "바벨 궤적과 몸 밀착": {
+          "precision": 58.45,
+          "recall": 58.96,
+          "f1": 58.71,
+          "accuracy": 58.63
+        },
+        "무릎과 골반이 동시에 펴짐": {
+          "precision": 56.08,
+          "recall": 51.93,
+          "f1": 53.93,
+          "accuracy": 56.58
+        },
+        "발바닥 지면 고정": {
+          "precision": 60.74,
+          "recall": 60.06,
+          "f1": 60.4,
+          "accuracy": 61.81
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 60.6,
+      "micro_defect_f1": 60.52,
+      "hamming_loss": 37.73,
+      "subset_accuracy": 9.92,
+      "defect_mean_acc": 62.27,
+      "per_defect": {
+        "척추의 중립": {
+          "precision": 62.21,
+          "recall": 63.34,
+          "f1": 62.77,
+          "accuracy": 63.54
+        },
+        "발과 무릎의 방향 일치": {
+          "precision": 70.98,
+          "recall": 63.78,
+          "f1": 67.19,
+          "accuracy": 70.81
+        },
+        "바벨 궤적과 몸 밀착": {
+          "precision": 58.45,
+          "recall": 58.96,
+          "f1": 58.71,
+          "accuracy": 58.63
+        },
+        "무릎과 골반이 동시에 펴짐": {
+          "precision": 56.08,
+          "recall": 51.93,
+          "f1": 53.93,
+          "accuracy": 56.58
+        },
+        "발바닥 지면 고정": {
+          "precision": 60.74,
+          "recall": 60.06,
+          "f1": 60.4,
+          "accuracy": 61.81
+        }
+      }
+    },
+    "hem_v2": 8.88,
+    "hem_v25": 5.76,
+    "eval_time_sec": 59.81
+  },
+  {
+    "exercise_index": 2,
+    "exercise_name": "03_바벨_스티프_데드리프트",
+    "num_samples": 711,
+    "num_normals": 88,
+    "num_errors": 623,
+    "num_defects": 3,
+    "defect_names": [
+      "바벨 궤적과 몸 밀착",
+      "무릎 구부린채 고정",
+      "척추의 중립"
+    ],
+    "task1_before": {
+      "normal_recall": 77.27,
+      "normal_precision": 66.02,
+      "normal_f1": 71.2,
+      "error_recall_spec": 91.17,
+      "macro_f1": 82.6,
+      "balanced_accuracy": 84.22,
+      "g_mean": 83.93,
+      "clinical_risk_ratio": 8.83,
+      "champion": "PoseTransformer"
+    },
+    "task1_after_v2": {
+      "tn": 320,
+      "fp": 303,
+      "fn": 39,
+      "tp": 49,
+      "normal_recall": 55.68,
+      "normal_precision": 13.92,
+      "normal_f1": 22.27,
+      "error_recall_spec": 51.36,
+      "error_precision": 89.14,
+      "error_f1": 65.17,
+      "macro_f1": 43.72,
+      "balanced_accuracy": 53.52,
+      "g_mean": 53.48,
+      "clinical_risk_ratio": 48.64
+    },
+    "task1_after_v25": {
+      "tn": 204,
+      "fp": 419,
+      "fn": 23,
+      "tp": 65,
+      "normal_recall": 73.86,
+      "normal_precision": 13.43,
+      "normal_f1": 22.73,
+      "error_recall_spec": 32.74,
+      "error_precision": 89.87,
+      "error_f1": 48.0,
+      "macro_f1": 35.36,
+      "balanced_accuracy": 53.3,
+      "g_mean": 49.18,
+      "clinical_risk_ratio": 67.26
+    },
+    "task2_before": {
+      "macro_defect_f1": 39.63,
+      "micro_defect_f1": 61.46,
+      "hamming_loss": 33.76,
+      "subset_accuracy": 34.74,
+      "defect_mean_acc": 66.24,
+      "per_defect": {
+        "바벨 궤적과 몸 밀착": {
+          "precision": 46.67,
+          "recall": 10.49,
+          "f1": 17.13,
+          "accuracy": 61.88
+        },
+        "무릎 구부린채 고정": {
+          "precision": 48.21,
+          "recall": 10.55,
+          "f1": 17.31,
+          "accuracy": 63.71
+        },
+        "척추의 중립": {
+          "precision": 73.62,
+          "recall": 99.05,
+          "f1": 84.46,
+          "accuracy": 73.14
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 54.85,
+      "micro_defect_f1": 65.06,
+      "hamming_loss": 33.29,
+      "subset_accuracy": 33.9,
+      "defect_mean_acc": 66.71,
+      "per_defect": {
+        "바벨 궤적과 몸 밀착": {
+          "precision": 53.12,
+          "recall": 31.84,
+          "f1": 39.81,
+          "accuracy": 63.85
+        },
+        "무릎 구부린채 고정": {
+          "precision": 53.25,
+          "recall": 35.16,
+          "f1": 42.35,
+          "accuracy": 65.54
+        },
+        "척추의 중립": {
+          "precision": 74.09,
+          "recall": 92.75,
+          "f1": 82.37,
+          "accuracy": 70.75
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 54.85,
+      "micro_defect_f1": 65.06,
+      "hamming_loss": 33.29,
+      "subset_accuracy": 33.9,
+      "defect_mean_acc": 66.71,
+      "per_defect": {
+        "바벨 궤적과 몸 밀착": {
+          "precision": 53.12,
+          "recall": 31.84,
+          "f1": 39.81,
+          "accuracy": 63.85
+        },
+        "무릎 구부린채 고정": {
+          "precision": 53.25,
+          "recall": 35.16,
+          "f1": 42.35,
+          "accuracy": 65.54
+        },
+        "척추의 중립": {
+          "precision": 74.09,
+          "recall": 92.75,
+          "f1": 82.37,
+          "accuracy": 70.75
+        }
+      }
+    },
+    "hem_v2": 17.44,
+    "hem_v25": 9.85,
+    "eval_time_sec": 27.72
+  },
+  {
+    "exercise_index": 3,
+    "exercise_name": "04_바벨_런지",
+    "num_samples": 4216,
+    "num_normals": 139,
+    "num_errors": 4077,
+    "num_defects": 5,
+    "defect_names": [
+      "앞다리 무릎 각도 90도",
+      "몸통 발 무릎 방향 일치여부",
+      "뒤다리 무릎 각도 90도",
+      "척추의 중립",
+      "상체의 과조한 숙임/젖힘 여부"
+    ],
+    "task1_before": {
+      "normal_recall": 48.2,
+      "normal_precision": 40.61,
+      "normal_f1": 44.08,
+      "error_recall_spec": 95.88,
+      "macro_f1": 69.04,
+      "balanced_accuracy": 72.04,
+      "g_mean": 67.98,
+      "clinical_risk_ratio": 4.12,
+      "champion": "BiGRU"
+    },
+    "task1_after_v2": {
+      "tn": 3505,
+      "fp": 572,
+      "fn": 35,
+      "tp": 104,
+      "normal_recall": 74.82,
+      "normal_precision": 15.38,
+      "normal_f1": 25.52,
+      "error_recall_spec": 85.97,
+      "error_precision": 99.01,
+      "error_f1": 92.03,
+      "macro_f1": 58.78,
+      "balanced_accuracy": 80.4,
+      "g_mean": 80.2,
+      "clinical_risk_ratio": 14.03
+    },
+    "task1_after_v25": {
+      "tn": 548,
+      "fp": 3529,
+      "fn": 1,
+      "tp": 138,
+      "normal_recall": 99.28,
+      "normal_precision": 3.76,
+      "normal_f1": 7.25,
+      "error_recall_spec": 13.44,
+      "error_precision": 99.82,
+      "error_f1": 23.69,
+      "macro_f1": 15.47,
+      "balanced_accuracy": 56.36,
+      "g_mean": 36.53,
+      "clinical_risk_ratio": 86.56
+    },
+    "task2_before": {
+      "macro_defect_f1": 58.88,
+      "micro_defect_f1": 69.24,
+      "hamming_loss": 19.5,
+      "subset_accuracy": 37.07,
+      "defect_mean_acc": 80.5,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 83.13,
+          "recall": 72.7,
+          "f1": 77.57,
+          "accuracy": 89.59
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 91.03,
+          "recall": 9.03,
+          "f1": 16.44,
+          "accuracy": 82.87
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 87.68,
+          "recall": 52.78,
+          "f1": 65.89,
+          "accuracy": 84.63
+        },
+        "척추의 중립": {
+          "precision": 69.78,
+          "recall": 93.17,
+          "f1": 79.79,
+          "accuracy": 69.19
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 78.78,
+          "recall": 41.9,
+          "f1": 54.7,
+          "accuracy": 76.23
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 68.03,
+      "micro_defect_f1": 73.12,
+      "hamming_loss": 18.33,
+      "subset_accuracy": 39.14,
+      "defect_mean_acc": 81.67,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 75.13,
+          "recall": 84.77,
+          "f1": 79.66,
+          "accuracy": 89.28
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 74.68,
+          "recall": 29.64,
+          "f1": 42.44,
+          "accuracy": 85.01
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 75.48,
+          "recall": 72.43,
+          "f1": 73.92,
+          "accuracy": 85.63
+        },
+        "척추의 중립": {
+          "precision": 71.31,
+          "recall": 89.28,
+          "f1": 79.29,
+          "accuracy": 69.54
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 75.46,
+          "recall": 56.86,
+          "f1": 64.85,
+          "accuracy": 78.89
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 68.03,
+      "micro_defect_f1": 73.12,
+      "hamming_loss": 18.33,
+      "subset_accuracy": 39.14,
+      "defect_mean_acc": 81.67,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 75.13,
+          "recall": 84.77,
+          "f1": 79.66,
+          "accuracy": 89.28
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 74.68,
+          "recall": 29.64,
+          "f1": 42.44,
+          "accuracy": 85.01
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 75.48,
+          "recall": 72.43,
+          "f1": 73.92,
+          "accuracy": 85.63
+        },
+        "척추의 중립": {
+          "precision": 71.31,
+          "recall": 89.28,
+          "f1": 79.29,
+          "accuracy": 69.54
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 75.46,
+          "recall": 56.86,
+          "f1": 64.85,
+          "accuracy": 78.89
+        }
+      }
+    },
+    "hem_v2": 34.56,
+    "hem_v25": 3.39,
+    "eval_time_sec": 132.56
+  },
+  {
+    "exercise_index": 4,
+    "exercise_name": "05_다이나믹_런지",
+    "num_samples": 8104,
+    "num_normals": 582,
+    "num_errors": 7522,
+    "num_defects": 5,
+    "defect_names": [
+      "앞다리 무릎 각도 90도",
+      "몸통 발 무릎 방향 일치여부",
+      "뒤다리 무릎 각도 90도",
+      "척추의 중립",
+      "상체의 과조한 숙임/젖힘 여부"
+    ],
+    "task1_before": {
+      "normal_recall": 67.35,
+      "normal_precision": 58.25,
+      "normal_f1": 62.47,
+      "error_recall_spec": 93.73,
+      "macro_f1": 78.23,
+      "balanced_accuracy": 80.54,
+      "g_mean": 79.45,
+      "clinical_risk_ratio": 6.27,
+      "champion": "BiGRU"
+    },
+    "task1_after_v2": {
+      "tn": 5394,
+      "fp": 2128,
+      "fn": 203,
+      "tp": 379,
+      "normal_recall": 65.12,
+      "normal_precision": 15.12,
+      "normal_f1": 24.54,
+      "error_recall_spec": 71.71,
+      "error_precision": 96.37,
+      "error_f1": 82.23,
+      "macro_f1": 53.39,
+      "balanced_accuracy": 68.41,
+      "g_mean": 68.34,
+      "clinical_risk_ratio": 28.29
+    },
+    "task1_after_v25": {
+      "tn": 724,
+      "fp": 6798,
+      "fn": 15,
+      "tp": 567,
+      "normal_recall": 97.42,
+      "normal_precision": 7.7,
+      "normal_f1": 14.27,
+      "error_recall_spec": 9.63,
+      "error_precision": 97.97,
+      "error_f1": 17.53,
+      "macro_f1": 15.9,
+      "balanced_accuracy": 53.52,
+      "g_mean": 30.62,
+      "clinical_risk_ratio": 90.37
+    },
+    "task2_before": {
+      "macro_defect_f1": 51.44,
+      "micro_defect_f1": 63.14,
+      "hamming_loss": 22.43,
+      "subset_accuracy": 27.75,
+      "defect_mean_acc": 77.57,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 78.46,
+          "recall": 57.75,
+          "f1": 66.53,
+          "accuracy": 85.58
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 85.71,
+          "recall": 0.4,
+          "f1": 0.79,
+          "accuracy": 81.42
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 80.22,
+          "recall": 44.92,
+          "f1": 57.59,
+          "accuracy": 81.43
+        },
+        "척추의 중립": {
+          "precision": 66.26,
+          "recall": 86.42,
+          "f1": 75.01,
+          "accuracy": 65.72
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 72.44,
+          "recall": 47.33,
+          "f1": 57.25,
+          "accuracy": 73.7
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 58.09,
+      "micro_defect_f1": 66.97,
+      "hamming_loss": 21.13,
+      "subset_accuracy": 30.4,
+      "defect_mean_acc": 78.87,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 83.4,
+          "recall": 63.92,
+          "f1": 72.37,
+          "accuracy": 87.88
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 62.61,
+          "recall": 4.77,
+          "f1": 8.86,
+          "accuracy": 81.71
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 68.29,
+          "recall": 73.27,
+          "f1": 70.7,
+          "accuracy": 82.95
+        },
+        "척추의 중립": {
+          "precision": 67.98,
+          "recall": 79.93,
+          "f1": 73.48,
+          "accuracy": 65.65
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 71.64,
+          "recall": 59.57,
+          "f1": 65.05,
+          "accuracy": 76.18
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 58.09,
+      "micro_defect_f1": 66.97,
+      "hamming_loss": 21.13,
+      "subset_accuracy": 30.4,
+      "defect_mean_acc": 78.87,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 83.4,
+          "recall": 63.92,
+          "f1": 72.37,
+          "accuracy": 87.88
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 62.61,
+          "recall": 4.77,
+          "f1": 8.86,
+          "accuracy": 81.71
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 68.29,
+          "recall": 73.27,
+          "f1": 70.7,
+          "accuracy": 82.95
+        },
+        "척추의 중립": {
+          "precision": 67.98,
+          "recall": 79.93,
+          "f1": 73.48,
+          "accuracy": 65.65
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 71.64,
+          "recall": 59.57,
+          "f1": 65.05,
+          "accuracy": 76.18
+        }
+      }
+    },
+    "hem_v2": 23.04,
+    "hem_v25": 4.21,
+    "eval_time_sec": 210.37
+  },
+  {
+    "exercise_index": 5,
+    "exercise_name": "06_사이드_런지",
+    "num_samples": 2970,
+    "num_normals": 94,
+    "num_errors": 2876,
+    "num_defects": 5,
+    "defect_names": [
+      "앞다리 무릎 각도 90도",
+      "몸통 발 무릎 방향 일치여부",
+      "뒤다리 무릎 각도 90도",
+      "척추의 중립",
+      "상체의 과조한 숙임/젖힘 여부"
+    ],
+    "task1_before": {
+      "normal_recall": 52.13,
+      "normal_precision": 39.84,
+      "normal_f1": 45.16,
+      "error_recall_spec": 95.9,
+      "macro_f1": 69.58,
+      "balanced_accuracy": 74.01,
+      "g_mean": 70.71,
+      "clinical_risk_ratio": 4.1,
+      "champion": "BiGRU"
+    },
+    "task1_after_v2": {
+      "tn": 2463,
+      "fp": 413,
+      "fn": 34,
+      "tp": 60,
+      "normal_recall": 63.83,
+      "normal_precision": 12.68,
+      "normal_f1": 21.16,
+      "error_recall_spec": 85.64,
+      "error_precision": 98.64,
+      "error_f1": 91.68,
+      "macro_f1": 56.42,
+      "balanced_accuracy": 74.73,
+      "g_mean": 73.93,
+      "clinical_risk_ratio": 14.36
+    },
+    "task1_after_v25": {
+      "tn": 601,
+      "fp": 2275,
+      "fn": 4,
+      "tp": 90,
+      "normal_recall": 95.74,
+      "normal_precision": 3.81,
+      "normal_f1": 7.32,
+      "error_recall_spec": 20.9,
+      "error_precision": 99.34,
+      "error_f1": 34.53,
+      "macro_f1": 20.93,
+      "balanced_accuracy": 58.32,
+      "g_mean": 44.73,
+      "clinical_risk_ratio": 79.1
+    },
+    "task2_before": {
+      "macro_defect_f1": 32.76,
+      "micro_defect_f1": 54.07,
+      "hamming_loss": 28.77,
+      "subset_accuracy": 20.07,
+      "defect_mean_acc": 71.23,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 64.64,
+          "recall": 41.46,
+          "f1": 50.51,
+          "accuracy": 74.07
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 81.28
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 55.93,
+          "recall": 3.22,
+          "f1": 6.08,
+          "accuracy": 65.69
+        },
+        "척추의 중립": {
+          "precision": 66.33,
+          "recall": 98.2,
+          "f1": 79.18,
+          "accuracy": 66.2
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 62.94,
+          "recall": 18.04,
+          "f1": 28.04,
+          "accuracy": 68.89
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 42.53,
+      "micro_defect_f1": 57.66,
+      "hamming_loss": 28.34,
+      "subset_accuracy": 21.38,
+      "defect_mean_acc": 71.66,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 60.64,
+          "recall": 49.89,
+          "f1": 54.75,
+          "accuracy": 73.67
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 60.0,
+          "recall": 4.86,
+          "f1": 8.99,
+          "accuracy": 81.58
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 50.0,
+          "recall": 18.71,
+          "f1": 27.23,
+          "accuracy": 65.45
+        },
+        "척추의 중립": {
+          "precision": 68.03,
+          "recall": 95.01,
+          "f1": 79.29,
+          "accuracy": 67.51
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 60.0,
+          "recall": 32.77,
+          "f1": 42.38,
+          "accuracy": 70.07
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 42.53,
+      "micro_defect_f1": 57.66,
+      "hamming_loss": 28.34,
+      "subset_accuracy": 21.38,
+      "defect_mean_acc": 71.66,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 60.64,
+          "recall": 49.89,
+          "f1": 54.75,
+          "accuracy": 73.67
+        },
+        "몸통 발 무릎 방향 일치여부": {
+          "precision": 60.0,
+          "recall": 4.86,
+          "f1": 8.99,
+          "accuracy": 81.58
+        },
+        "뒤다리 무릎 각도 90도": {
+          "precision": 50.0,
+          "recall": 18.71,
+          "f1": 27.23,
+          "accuracy": 65.45
+        },
+        "척추의 중립": {
+          "precision": 68.03,
+          "recall": 95.01,
+          "f1": 79.29,
+          "accuracy": 67.51
+        },
+        "상체의 과조한 숙임/젖힘 여부": {
+          "precision": 60.0,
+          "recall": 32.77,
+          "f1": 42.38,
+          "accuracy": 70.07
+        }
+      }
+    },
+    "hem_v2": 18.96,
+    "hem_v25": 5.08,
+    "eval_time_sec": 60.22
+  },
+  {
+    "exercise_index": 6,
+    "exercise_name": "07_크로스_런지",
+    "num_samples": 754,
+    "num_normals": 99,
+    "num_errors": 655,
+    "num_defects": 3,
+    "defect_names": [
+      "앞다리 무릎 각도 90도",
+      "몸통 앞발 앞무릎 방향 일치여부",
+      "상체 정면 균형잡기"
+    ],
+    "task1_before": {
+      "normal_recall": 75.76,
+      "normal_precision": 73.53,
+      "normal_f1": 74.63,
+      "error_recall_spec": 92.21,
+      "macro_f1": 84.31,
+      "balanced_accuracy": 83.99,
+      "g_mean": 83.58,
+      "clinical_risk_ratio": 7.79,
+      "champion": "CatBoost"
+    },
+    "task1_after_v2": {
+      "tn": 556,
+      "fp": 99,
+      "fn": 32,
+      "tp": 67,
+      "normal_recall": 67.68,
+      "normal_precision": 40.36,
+      "normal_f1": 50.57,
+      "error_recall_spec": 84.89,
+      "error_precision": 94.56,
+      "error_f1": 89.46,
+      "macro_f1": 70.01,
+      "balanced_accuracy": 76.28,
+      "g_mean": 75.79,
+      "clinical_risk_ratio": 15.11
+    },
+    "task1_after_v25": {
+      "tn": 534,
+      "fp": 121,
+      "fn": 29,
+      "tp": 70,
+      "normal_recall": 70.71,
+      "normal_precision": 36.65,
+      "normal_f1": 48.28,
+      "error_recall_spec": 81.53,
+      "error_precision": 94.85,
+      "error_f1": 87.68,
+      "macro_f1": 67.98,
+      "balanced_accuracy": 76.12,
+      "g_mean": 75.92,
+      "clinical_risk_ratio": 18.47
+    },
+    "task2_before": {
+      "macro_defect_f1": 72.32,
+      "micro_defect_f1": 72.95,
+      "hamming_loss": 27.76,
+      "subset_accuracy": 41.78,
+      "defect_mean_acc": 72.24,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 80.27,
+          "recall": 67.29,
+          "f1": 73.21,
+          "accuracy": 82.63
+        },
+        "몸통 앞발 앞무릎 방향 일치여부": {
+          "precision": 66.4,
+          "recall": 65.54,
+          "f1": 65.97,
+          "accuracy": 65.65
+        },
+        "상체 정면 균형잡기": {
+          "precision": 68.47,
+          "recall": 90.06,
+          "f1": 77.8,
+          "accuracy": 68.44
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 74.66,
+      "micro_defect_f1": 74.64,
+      "hamming_loss": 25.51,
+      "subset_accuracy": 43.9,
+      "defect_mean_acc": 74.49,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 79.69,
+          "recall": 76.69,
+          "f1": 78.16,
+          "accuracy": 84.88
+        },
+        "몸통 앞발 앞무릎 방향 일치여부": {
+          "precision": 68.07,
+          "recall": 67.36,
+          "f1": 67.72,
+          "accuracy": 67.37
+        },
+        "상체 정면 균형잡기": {
+          "precision": 73.3,
+          "recall": 83.59,
+          "f1": 78.1,
+          "accuracy": 71.22
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 74.66,
+      "micro_defect_f1": 74.64,
+      "hamming_loss": 25.51,
+      "subset_accuracy": 43.9,
+      "defect_mean_acc": 74.49,
+      "per_defect": {
+        "앞다리 무릎 각도 90도": {
+          "precision": 79.69,
+          "recall": 76.69,
+          "f1": 78.16,
+          "accuracy": 84.88
+        },
+        "몸통 앞발 앞무릎 방향 일치여부": {
+          "precision": 68.07,
+          "recall": 67.36,
+          "f1": 67.72,
+          "accuracy": 67.37
+        },
+        "상체 정면 균형잡기": {
+          "precision": 73.3,
+          "recall": 83.59,
+          "f1": 78.1,
+          "accuracy": 71.22
+        }
+      }
+    },
+    "hem_v2": 38.86,
+    "hem_v25": 36.74,
+    "eval_time_sec": 44.12
+  },
+  {
+    "exercise_index": 7,
+    "exercise_name": "08_굿모닝",
+    "num_samples": 657,
+    "num_normals": 82,
+    "num_errors": 575,
+    "num_defects": 3,
+    "defect_names": [
+      "무릎 구부린채 고정",
+      "시선 방향 유지",
+      "척추의 중립"
+    ],
+    "task1_before": {
+      "normal_recall": 79.27,
+      "normal_precision": 67.01,
+      "normal_f1": 72.63,
+      "error_recall_spec": 91.83,
+      "macro_f1": 83.31,
+      "balanced_accuracy": 85.55,
+      "g_mean": 85.32,
+      "clinical_risk_ratio": 8.17,
+      "champion": "XGBoost"
+    },
+    "task1_after_v2": {
+      "tn": 401,
+      "fp": 174,
+      "fn": 36,
+      "tp": 46,
+      "normal_recall": 56.1,
+      "normal_precision": 20.91,
+      "normal_f1": 30.46,
+      "error_recall_spec": 69.74,
+      "error_precision": 91.76,
+      "error_f1": 79.25,
+      "macro_f1": 54.86,
+      "balanced_accuracy": 62.92,
+      "g_mean": 62.55,
+      "clinical_risk_ratio": 30.26
+    },
+    "task1_after_v25": {
+      "tn": 263,
+      "fp": 312,
+      "fn": 10,
+      "tp": 72,
+      "normal_recall": 87.8,
+      "normal_precision": 18.75,
+      "normal_f1": 30.9,
+      "error_recall_spec": 45.74,
+      "error_precision": 96.34,
+      "error_f1": 62.03,
+      "macro_f1": 46.46,
+      "balanced_accuracy": 66.77,
+      "g_mean": 63.37,
+      "clinical_risk_ratio": 54.26
+    },
+    "task2_before": {
+      "macro_defect_f1": 63.93,
+      "micro_defect_f1": 63.87,
+      "hamming_loss": 36.28,
+      "subset_accuracy": 25.42,
+      "defect_mean_acc": 63.72,
+      "per_defect": {
+        "무릎 구부린채 고정": {
+          "precision": 78.42,
+          "recall": 79.38,
+          "f1": 78.9,
+          "accuracy": 79.0
+        },
+        "시선 방향 유지": {
+          "precision": 56.71,
+          "recall": 56.19,
+          "f1": 56.45,
+          "accuracy": 56.32
+        },
+        "척추의 중립": {
+          "precision": 55.95,
+          "recall": 56.97,
+          "f1": 56.46,
+          "accuracy": 55.86
+        }
+      }
+    },
+    "task2_after_v2": {
+      "macro_defect_f1": 64.92,
+      "micro_defect_f1": 64.81,
+      "hamming_loss": 35.82,
+      "subset_accuracy": 26.33,
+      "defect_mean_acc": 64.18,
+      "per_defect": {
+        "무릎 구부린채 고정": {
+          "precision": 77.11,
+          "recall": 78.77,
+          "f1": 77.93,
+          "accuracy": 77.93
+        },
+        "시선 방향 유지": {
+          "precision": 56.14,
+          "recall": 58.01,
+          "f1": 57.06,
+          "accuracy": 56.01
+        },
+        "척추의 중립": {
+          "precision": 58.38,
+          "recall": 61.21,
+          "f1": 59.76,
+          "accuracy": 58.6
+        }
+      }
+    },
+    "task2_after_v25": {
+      "macro_defect_f1": 64.92,
+      "micro_defect_f1": 64.81,
+      "hamming_loss": 35.82,
+      "subset_accuracy": 26.33,
+      "defect_mean_acc": 64.18,
+      "per_defect": {
+        "무릎 구부린채 고정": {
+          "precision": 77.11,
+          "recall": 78.77,
+          "f1": 77.93,
+          "accuracy": 77.93
+        },
+        "시선 방향 유지": {
+          "precision": 56.14,
+          "recall": 58.01,
+          "f1": 57.06,
+          "accuracy": 56.01
+        },
+        "척추의 중립": {
+          "precision": 58.38,
+          "recall": 61.21,
+          "f1": 59.76,
+          "accuracy": 58.6
+        }
+      }
+    },
+    "hem_v2": 21.0,
+    "hem_v25": 15.83,
+    "eval_time_sec": 46.02
+  }
+]

@@ -1,0 +1,247 @@
+{
+  "model_name": "dl4_v1",
+  "exercise": "다이나믹 런지 (05_포워드 + 06_백워드 통합)",
+  "defect": "c4 (척추의 중립 위반)",
+  "n_total": 1518,
+  "n_defect": 476,
+  "n_clean": 1042,
+  "weights": {
+    "w_tcn": 0.4,
+    "w_lgb": 0.2,
+    "w_xgb": 0.2,
+    "w_cat": 0.2
+  },
+  "thresholds": {
+    "tau_clean": 0.43,
+    "tau_def": 0.535,
+    "tau_binary": 0.5
+  },
+  "overall_metrics_2state": {
+    "auc": 0.888094969273698,
+    "f1": 0.7403545359749739,
+    "precision": 0.7349896480331263,
+    "recall": 0.7457983193277311,
+    "accuracy": 0.8359683794466403
+  },
+  "overall_metrics_3state": {
+    "f1": 0.7869615832363213,
+    "precision": 0.7770114942528735,
+    "recall": 0.7971698113207547,
+    "accuracy": 0.8662280701754386,
+    "coverage": 0.9011857707509882,
+    "abstain_rate": 0.09881422924901184,
+    "n_determined": 1368,
+    "n_abstained": 150
+  },
+  "submodel_metrics": {
+    "TCN": {
+      "auc": 0.8575017338989338,
+      "f1": 0.7178378378378378,
+      "acc": 0.8280632411067194
+    },
+    "LightGBM": {
+      "auc": 0.8542718430942435,
+      "f1": 0.7047244094488189,
+      "acc": 0.8023715415019763
+    },
+    "XGBoost": {
+      "auc": 0.8616530105324279,
+      "f1": 0.7137176938369781,
+      "acc": 0.8102766798418972
+    },
+    "CatBoost": {
+      "auc": 0.8543383764254262,
+      "f1": 0.7041984732824428,
+      "acc": 0.7957839262187089
+    }
+  },
+  "view_performance": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "n_samples": 306,
+      "n_defect": 96,
+      "auc": 0.8141369047619047,
+      "f1_2state": 0.6282722513089005,
+      "acc_2state": 0.7679738562091504,
+      "f1_3state": 0.7,
+      "acc_3state": 0.8132295719844358,
+      "coverage": 0.8398692810457516,
+      "abstain_rate": 0.16013071895424835
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "n_samples": 306,
+      "n_defect": 96,
+      "auc": 0.9214285714285715,
+      "f1_2state": 0.7918781725888325,
+      "acc_2state": 0.8660130718954249,
+      "f1_3state": 0.8268156424581006,
+      "acc_3state": 0.8908450704225352,
+      "coverage": 0.9281045751633987,
+      "abstain_rate": 0.07189542483660127
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "n_samples": 304,
+      "n_defect": 95,
+      "auc": 0.9371946612943842,
+      "f1_2state": 0.8210526315789474,
+      "acc_2state": 0.8881578947368421,
+      "f1_3state": 0.8651685393258427,
+      "acc_3state": 0.9163763066202091,
+      "coverage": 0.944078947368421,
+      "abstain_rate": 0.05592105263157898
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "n_samples": 302,
+      "n_defect": 95,
+      "auc": 0.8614289346554793,
+      "f1_2state": 0.711340206185567,
+      "acc_2state": 0.8145695364238411,
+      "f1_3state": 0.7380952380952381,
+      "acc_3state": 0.8376383763837638,
+      "coverage": 0.8973509933774835,
+      "abstain_rate": 0.10264900662251653
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "n_samples": 300,
+      "n_defect": 94,
+      "auc": 0.8655236521379881,
+      "f1_2state": 0.7486631016042781,
+      "acc_2state": 0.8433333333333334,
+      "f1_3state": 0.7931034482758621,
+      "acc_3state": 0.8661710037174721,
+      "coverage": 0.8966666666666666,
+      "abstain_rate": 0.10333333333333339
+    }
+  },
+  "subj_performance": {
+    "피험자1": {
+      "n_samples": 230,
+      "n_defect": 110,
+      "auc": 0.8303030303030303,
+      "f1_2state": 0.7727272727272727,
+      "acc_2state": 0.782608695652174,
+      "f1_3state": 0.8210526315789474,
+      "acc_3state": 0.8247422680412371,
+      "coverage": 0.8434782608695652,
+      "abstain_rate": 0.15652173913043477
+    },
+    "피험자2": {
+      "n_samples": 180,
+      "n_defect": 60,
+      "auc": 0.8425,
+      "f1_2state": 0.6486486486486487,
+      "acc_2state": 0.7833333333333333,
+      "f1_3state": 0.6938775510204082,
+      "acc_3state": 0.810126582278481,
+      "coverage": 0.8777777777777778,
+      "abstain_rate": 0.12222222222222223
+    },
+    "피험자3": {
+      "n_samples": 170,
+      "n_defect": 45,
+      "auc": 0.9212444444444444,
+      "f1_2state": 0.7222222222222222,
+      "acc_2state": 0.8235294117647058,
+      "f1_3state": 0.7551020408163265,
+      "acc_3state": 0.8410596026490066,
+      "coverage": 0.888235294117647,
+      "abstain_rate": 0.11176470588235299
+    },
+    "피험자4": {
+      "n_samples": 170,
+      "n_defect": 55,
+      "auc": 0.9397628458498023,
+      "f1_2state": 0.819047619047619,
+      "acc_2state": 0.888235294117647,
+      "f1_3state": 0.8863636363636364,
+      "acc_3state": 0.9324324324324325,
+      "coverage": 0.8705882352941177,
+      "abstain_rate": 0.12941176470588234
+    },
+    "피험자5": {
+      "n_samples": 169,
+      "n_defect": 49,
+      "auc": 0.9290816326530613,
+      "f1_2state": 0.819047619047619,
+      "acc_2state": 0.8875739644970414,
+      "f1_3state": 0.8269230769230769,
+      "acc_3state": 0.8888888888888888,
+      "coverage": 0.9585798816568047,
+      "abstain_rate": 0.041420118343195256
+    },
+    "피험자6": {
+      "n_samples": 160,
+      "n_defect": 42,
+      "auc": 0.9217110573042776,
+      "f1_2state": 0.8089887640449438,
+      "acc_2state": 0.89375,
+      "f1_3state": 0.8571428571428571,
+      "acc_3state": 0.9194630872483222,
+      "coverage": 0.93125,
+      "abstain_rate": 0.06874999999999998
+    },
+    "피험자7": {
+      "n_samples": 155,
+      "n_defect": 40,
+      "auc": 0.8860869565217392,
+      "f1_2state": 0.7073170731707317,
+      "acc_2state": 0.8451612903225807,
+      "f1_3state": 0.7466666666666667,
+      "acc_3state": 0.8661971830985915,
+      "coverage": 0.9161290322580645,
+      "abstain_rate": 0.08387096774193548
+    },
+    "피험자8": {
+      "n_samples": 155,
+      "n_defect": 40,
+      "auc": 0.922391304347826,
+      "f1_2state": 0.7380952380952381,
+      "acc_2state": 0.8580645161290322,
+      "f1_3state": 0.8157894736842105,
+      "acc_3state": 0.9027777777777778,
+      "coverage": 0.9290322580645162,
+      "abstain_rate": 0.07096774193548383
+    },
+    "피험자9": {
+      "n_samples": 129,
+      "n_defect": 35,
+      "auc": 0.8325227963525836,
+      "f1_2state": 0.4727272727272727,
+      "acc_2state": 0.7751937984496124,
+      "f1_3state": 0.5217391304347826,
+      "acc_3state": 0.8166666666666667,
+      "coverage": 0.9302325581395349,
+      "abstain_rate": 0.06976744186046513
+    }
+  },
+  "feature_names": [
+    "cervical_yaw_max",
+    "cervical_yaw_mean",
+    "cervical_pitch_max",
+    "cervical_pitch_min",
+    "cervical_roll_max",
+    "ear_shoulder_asymmetry",
+    "head_trunk_yaw_diff",
+    "cervical_bottom_pitch",
+    "trunk_roll_max",
+    "shoulder_roll_max",
+    "pelvic_obliquity_roll",
+    "shoulder_pelvis_coupling",
+    "split_base_stability_ratio",
+    "pelvis_lateral_sway",
+    "spine_knee_alignment",
+    "asym_hip_drop_bottom",
+    "kinetic_lateral_drift",
+    "counter_tilt_compensation",
+    "ascent_recovery_sway",
+    "golden_bottom_phase_error",
+    "local_trunk_roll_inv",
+    "local_cervical_yaw_inv",
+    "local_torso_torsion_max",
+    "local_spine_lateral_c_curve"
+  ]
+}

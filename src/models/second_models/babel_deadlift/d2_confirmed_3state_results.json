@@ -1,0 +1,17 @@
+{
+  "model": "vidio-health-trainer - Barbell Deadlift d2 (Knee-Toe Alignment)",
+  "pose_engine": "RTMPose-m (Halpe26)",
+  "status": "CONFIRMED",
+  "window": [
+    0.25,
+    0.6
+  ],
+  "selective_f1": 91.25,
+  "coverage": 92.99,
+  "abstention_rate": 7.01,
+  "selective_accuracy": 96.09,
+  "selective_precision": 86.9,
+  "selective_recall": 96.05,
+  "roc_auc": 0.9836,
+  "weights_path": "D:\\src\\models\\second_models\\babel_deadlift\\weights\\d2_rtmpose_v1_models.pkl"
+}

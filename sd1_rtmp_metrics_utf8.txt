@@ -1,0 +1,9 @@
+﻿[*] Loading dataset and extracting baseline 47D features...
+
+[*] Step 1: Feature Importance & Correlation Analysis (Feature Selection)
+[+] Dropped 22 noisy/redundant features.
+    - Correlated: ['knee_delta_address_bottom', 'excess_flexion_max', 'kadr_mean', 'coronal_knee_wobble', 'sagittal_proj_knee_rom', 'sagittal_proj_knee_bottom', 'near_knee_rom', 'near_knee_bottom_angle', 'shank_pitch_nadir', 'near_knee_hip_coupling', 'knee_hip_horizontal_rom']
+    - Low Importance: ['sagittal_proj_knee_rom', 'pelvis_drop_to_shift_ratio', 'sagittal_proj_knee_bottom', 'v_oh_3', 'v_oh_2', 'v_oh_5', 'v_oh_4', 'v_oh_1', 'view_code', 'knee_rom_deg', 'nadir_knee_drop_window', 'near_knee_bottom_angle', 'near_knee_rom', 'knee_angle_bottom_deg', 'norm_knee_disp_x']
+[+] Selected 25 optimized features.
+
+[*] Step 2: Training sd1_rtmp_3 (Optimized Features) on Raw Labels...

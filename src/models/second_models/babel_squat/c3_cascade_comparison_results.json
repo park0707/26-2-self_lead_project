@@ -1,0 +1,101 @@
+{
+  "code_name": "c3",
+  "defect_name": "발과 무릎의 방향 일치",
+  "total_samples": 1906,
+  "baseline_10d_f1": 73.22,
+  "expanded_16d_f1": 86.66,
+  "ambiguity_distribution": {
+    "1": 222,
+    "2": 1346,
+    "3": 209,
+    "4": 129
+  },
+  "valid_samples_count": 1777,
+  "tier1_level1_eval": {
+    "f1": 100.0,
+    "precision": 100.0,
+    "recall": 100.0,
+    "bacc": 100.0,
+    "roc_auc": 100.0,
+    "opt_f1": 100.0,
+    "opt_th": 0.5,
+    "tn": 121,
+    "fp": 0,
+    "fn": 0,
+    "tp": 101
+  },
+  "tier2_single_models": {
+    "LightGBM": {
+      "f1": 88.77,
+      "precision": 89.29,
+      "recall": 88.27,
+      "bacc": 88.96,
+      "roc_auc": 95.18,
+      "opt_f1": 89.1,
+      "opt_th": 0.56,
+      "tn": 806,
+      "fp": 93,
+      "fn": 103,
+      "tp": 775
+    },
+    "CatBoost": {
+      "f1": 89.13,
+      "precision": 90.01,
+      "recall": 88.27,
+      "bacc": 89.35,
+      "roc_auc": 95.45,
+      "opt_f1": 89.24,
+      "opt_th": 0.53,
+      "tn": 813,
+      "fp": 86,
+      "fn": 103,
+      "tp": 775
+    },
+    "RandomForest": {
+      "f1": 87.97,
+      "precision": 88.48,
+      "recall": 87.47,
+      "bacc": 88.17,
+      "roc_auc": 94.84,
+      "opt_f1": 88.1,
+      "opt_th": 0.51,
+      "tn": 799,
+      "fp": 100,
+      "fn": 110,
+      "tp": 768
+    }
+  },
+  "tier2_cascade_model": {
+    "f1": 90.79,
+    "precision": 91.74,
+    "recall": 89.86,
+    "bacc": 90.98,
+    "roc_auc": 96.52,
+    "opt_f1": 90.79,
+    "opt_th": 0.5,
+    "tn": 828,
+    "fp": 71,
+    "fn": 89,
+    "tp": 789,
+    "fast_path_pct": 12.49,
+    "deep_path_pct": 87.51
+  },
+  "elite_features": [
+    "c3_knee_ankle_ratio_at_nadir",
+    "c3_knee_ankle_ratio_mean",
+    "c3_knee_ankle_ratio_drop",
+    "c3_knee_inward_vel_max",
+    "c3_knee_width_jerk",
+    "c3_net_valgus_at_nadir",
+    "c3_net_valgus_max",
+    "c3_valgus_increase_from_standing",
+    "c3_bilateral_valgus_asymmetry",
+    "c3_knee_collapse_accel_at_nadir",
+    "c3_knee_flex_valgus_phase_lag",
+    "c3_shank_verticality_at_nadir",
+    "c3_shank_verticality_wobble",
+    "c3_knee_asymmetry_mean",
+    "c3_knee_angle_flex_min",
+    "c3_ascent_valgus_recollapse_ratio"
+  ]
+}

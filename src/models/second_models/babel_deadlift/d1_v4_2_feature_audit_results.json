@@ -1,0 +1,989 @@
+{
+  "baseline_40d": {
+    "f1": 0.6713780918727915,
+    "auc": 0.8174222222222223,
+    "recall": 0.7037037037037037,
+    "precision": 0.6418918918918919,
+    "accuracy": 0.7584415584415585
+  },
+  "zero_var_indices": [
+    7,
+    19,
+    20,
+    21
+  ],
+  "high_corr_pairs": [
+    [
+      "d1_lumbar_curvature_poly_a",
+      "d1_res_lumbar_poly_decoupled",
+      0,
+      36,
+      0.9391953765930058
+    ],
+    [
+      "d1_lumbar_stiffness_sd",
+      "d1_signed_thoracolumbar_delta",
+      1,
+      5,
+      0.9539122778966398
+    ],
+    [
+      "d1_trunk_flex_speed_max",
+      "d1_lumbar_flex_acceleration_peak",
+      3,
+      15,
+      0.988555612046713
+    ],
+    [
+      "d1_trunk_flex_speed_max",
+      "d1_torso_pitch_standing",
+      3,
+      16,
+      0.907053980648285
+    ],
+    [
+      "d1_trunk_flex_speed_max",
+      "d1_torso_pitch_rom",
+      3,
+      28,
+      0.9101330317060582
+    ],
+    [
+      "d1_cervical_min",
+      "d1_cobb_mean_active",
+      4,
+      9,
+      0.9784338297720043
+    ],
+    [
+      "d1_cervical_min",
+      "d1_cobb_max_flexion",
+      4,
+      10,
+      0.988400267632052
+    ],
+    [
+      "d1_cervical_min",
+      "d1_knee_pass_lumbar_flexion",
+      4,
+      25,
+      0.9596281194955576
+    ],
+    [
+      "d1_cobb_mean_active",
+      "d1_cobb_max_flexion",
+      9,
+      10,
+      0.9911490846536758
+    ],
+    [
+      "d1_cobb_mean_active",
+      "d1_knee_pass_lumbar_flexion",
+      9,
+      25,
+      0.9767846453888878
+    ],
+    [
+      "d1_cobb_max_flexion",
+      "d1_knee_pass_lumbar_flexion",
+      10,
+      25,
+      0.975815592510225
+    ],
+    [
+      "d1_lumbar_flex_acceleration_peak",
+      "d1_torso_pitch_standing",
+      15,
+      16,
+      0.9005608179388207
+    ],
+    [
+      "d1_lumbar_flex_acceleration_peak",
+      "d1_torso_pitch_rom",
+      15,
+      28,
+      0.9035905027861594
+    ],
+    [
+      "d1_torso_pitch_standing",
+      "d1_torso_pitch_rom",
+      16,
+      28,
+      0.9980287271136492
+    ],
+    [
+      "d1_torso_pitch_deepest",
+      "d1_res_torso_pitch_deepest",
+      17,
+      34,
+      0.9007930805937931
+    ],
+    [
+      "d1_setup_lumbar_poly_a",
+      "d1_res_setup_lumbar_poly_a",
+      23,
+      35,
+      0.9855855142053069
+    ],
+    [
+      "d1_res_setup_lumbar_poly_a",
+      "d1_res_lumbar_poly_decoupled",
+      35,
+      36,
+      0.8527720887826764
+    ]
+  ],
+  "univariate_metrics": [
+    {
+      "idx": 0,
+      "name": "d1_lumbar_curvature_poly_a",
+      "std": 0.08501160889863968,
+      "auc": 0.5827851851851852,
+      "mi": 0.11983361859505082
+    },
+    {
+      "idx": 1,
+      "name": "d1_lumbar_stiffness_sd",
+      "std": 0.032284464687108994,
+      "auc": 0.8062814814814815,
+      "mi": 0.17264196122101838
+    },
+    {
+      "idx": 2,
+      "name": "d1_spine_lateral_deviation_max",
+      "std": 1.4301445484161377,
+      "auc": 0.7093333333333334,
+      "mi": 0.1186422923754018
+    },
+    {
+      "idx": 3,
+      "name": "d1_trunk_flex_speed_max",
+      "std": 440.84332275390625,
+      "auc": 0.7394962962962962,
+      "mi": 0.0749985618617739
+    },
+    {
+      "idx": 4,
+      "name": "d1_cervical_min",
+      "std": 36.25040054321289,
+      "auc": 0.6391703703703704,
+      "mi": 0.1560681873683647
+    },
+    {
+      "idx": 5,
+      "name": "d1_signed_thoracolumbar_delta",
+      "std": 0.1429293006658554,
+      "auc": 0.8090666666666667,
+      "mi": 0.170138002133716
+    },
+    {
+      "idx": 6,
+      "name": "d1_active_rom",
+      "std": 0.19837917387485504,
+      "auc": 0.7434962962962963,
+      "mi": 0.08822013961502173
+    },
+    {
+      "idx": 7,
+      "name": "d1_phase_speed_ratio",
+      "std": 0.0,
+      "auc": 0.5,
+      "mi": 0.0
+    },
+    {
+      "idx": 8,
+      "name": "d1_hip_to_knee_dist_ratio",
+      "std": 0.02757081761956215,
+      "auc": 0.5341925925925926,
+      "mi": 0.0
+    },
+    {
+      "idx": 9,
+      "name": "d1_cobb_mean_active",
+      "std": 63.76000213623047,
+      "auc": 0.6702222222222222,
+      "mi": 0.12016552383369805
+    },
+    {
+      "idx": 10,
+      "name": "d1_cobb_max_flexion",
+      "std": 71.11845397949219,
+      "auc": 0.6907555555555556,
+      "mi": 0.12126345951146589
+    },
+    {
+      "idx": 11,
+      "name": "d1_cobb_range_active",
+      "std": 28.01266098022461,
+      "auc": 0.721037037037037,
+      "mi": 0.1281606135839446
+    },
+    {
+      "idx": 12,
+      "name": "d1_shoulder_hip_twist_max",
+      "std": 29.041948318481445,
+      "auc": 0.648,
+      "mi": 0.035941043954640595
+    },
+    {
+      "idx": 13,
+      "name": "d1_lateral_asymmetry_integral",
+      "std": 4.768741607666016,
+      "auc": 0.5474962962962963,
+      "mi": 0.0278352113314988
+    },
+    {
+      "idx": 14,
+      "name": "d1_pelvis_tilt_range",
+      "std": 0.0027476451359689236,
+      "auc": 0.7545185185185184,
+      "mi": 0.05831948615896443
+    },
+    {
+      "idx": 15,
+      "name": "d1_lumbar_flex_acceleration_peak",
+      "std": 4637.650390625,
+      "auc": 0.7397925925925926,
+      "mi": 0.07904983033751156
+    },
+    {
+      "idx": 16,
+      "name": "d1_torso_pitch_standing",
+      "std": 35.37189483642578,
+      "auc": 0.7783111111111112,
+      "mi": 0.17240925547854502
+    },
+    {
+      "idx": 17,
+      "name": "d1_torso_pitch_deepest",
+      "std": 2.225679397583008,
+      "auc": 0.5356148148148148,
+      "mi": 0.0007477693460833379
+    },
+    {
+      "idx": 18,
+      "name": "d1_view_score_normal_z",
+      "std": 0.6256740093231201,
+      "auc": 0.5447407407407407,
+      "mi": 0.10020122666721964
+    },
+    {
+      "idx": 19,
+      "name": "d1_keypoint_confidence_mean",
+      "std": 0.0,
+      "auc": 0.5,
+      "mi": 0.0
+    },
+    {
+      "idx": 20,
+      "name": "d1_lumbar_energy_ratio",
+      "std": 0.0,
+      "auc": 0.5,
+      "mi": 0.0
+    },
+    {
+      "idx": 21,
+      "name": "d1_standing_symmetry_score",
+      "std": 0.0,
+      "auc": 0.5,
+      "mi": 0.001691586494939168
+    },
+    {
+      "idx": 22,
+      "name": "d1_lumbar_shear_stress_proxy",
+      "std": 0.10232226550579071,
+      "auc": 0.6419555555555556,
+      "mi": 0.027716803688131675
+    },
+    {
+      "idx": 23,
+      "name": "d1_setup_lumbar_poly_a",
+      "std": 0.09661059826612473,
+      "auc": 0.5752296296296296,
+      "mi": 0.0841986317616108
+    },
+    {
+      "idx": 24,
+      "name": "d1_floor_break_cobb_delta",
+      "std": 17.223352432250977,
+      "auc": 0.5124740740740741,
+      "mi": 0.0732291935582734
+    },
+    {
+      "idx": 25,
+      "name": "d1_knee_pass_lumbar_flexion",
+      "std": 66.90364837646484,
+      "auc": 0.6599111111111111,
+      "mi": 0.08167733092992102
+    },
+    {
+      "idx": 26,
+      "name": "d1_lockout_hyperextension",
+      "std": 0.06116596609354019,
+      "auc": 0.5960888888888889,
+      "mi": 0.0
+    },
+    {
+      "idx": 27,
+      "name": "d1_spine_femur_sync_ratio",
+      "std": 924811.375,
+      "auc": 0.5226074074074074,
+      "mi": 0.0
+    },
+    {
+      "idx": 28,
+      "name": "d1_torso_pitch_rom",
+      "std": 35.141815185546875,
+      "auc": 0.7785777777777778,
+      "mi": 0.16029357911903408
+    },
+    {
+      "idx": 29,
+      "name": "d1_rom_competence_score",
+      "std": 0.3865930438041687,
+      "auc": 0.7628888888888888,
+      "mi": 0.14777082425074717
+    },
+    {
+      "idx": 30,
+      "name": "d1_rom_scaled_lumbar_poly_a",
+      "std": 0.060999467968940735,
+      "auc": 0.7543703703703704,
+      "mi": 0.0941507231168126
+    },
+    {
+      "idx": 31,
+      "name": "d1_knee_valgus_ratio",
+      "std": 0.5071073174476624,
+      "auc": 0.5153185185185185,
+      "mi": 0.0
+    },
+    {
+      "idx": 32,
+      "name": "d1_view_occlusion_factor",
+      "std": 0.14180974662303925,
+      "auc": 0.6158814814814815,
+      "mi": 0.0015659329617818685
+    },
+    {
+      "idx": 33,
+      "name": "d1_view_compensated_poly_a",
+      "std": 0.02123592607676983,
+      "auc": 0.6637333333333334,
+      "mi": 0.15679560906617174
+    },
+    {
+      "idx": 34,
+      "name": "d1_res_torso_pitch_deepest",
+      "std": 2.3376028537750244,
+      "auc": 0.5209777777777778,
+      "mi": 0.012869601629532879
+    },
+    {
+      "idx": 35,
+      "name": "d1_res_setup_lumbar_poly_a",
+      "std": 0.09887979924678802,
+      "auc": 0.5761185185185186,
+      "mi": 0.08860237640203472
+    },
+    {
+      "idx": 36,
+      "name": "d1_res_lumbar_poly_decoupled",
+      "std": 0.08395896106958389,
+      "auc": 0.5672888888888888,
+      "mi": 0.05083725141669926
+    },
+    {
+      "idx": 37,
+      "name": "d1_ratio_arm_to_torso",
+      "std": 0.18158727884292603,
+      "auc": 0.5525333333333332,
+      "mi": 0.028863198461794637
+    },
+    {
+      "idx": 38,
+      "name": "d1_ratio_femur_to_tibia",
+      "std": 0.08762357383966446,
+      "auc": 0.5020444444444445,
+      "mi": 0.0
+    },
+    {
+      "idx": 39,
+      "name": "d1_ratio_leg_to_torso",
+      "std": 0.2811371088027954,
+      "auc": 0.5557333333333333,
+      "mi": 0.0
+    }
+  ],
+  "drop_results": [
+    {
+      "idx": 0,
+      "name": "d1_lumbar_curvature_poly_a",
+      "f1_after_drop": 0.6738351254480287,
+      "f1_diff_pctp": 0.24570335752371886,
+      "auc_after_drop": 0.8184888888888888,
+      "auc_diff": 0.0010666666666665492,
+      "is_harmful": true
+    },
+    {
+      "idx": 1,
+      "name": "d1_lumbar_stiffness_sd",
+      "f1_after_drop": 0.6666666666666666,
+      "f1_diff_pctp": -0.4711425206124886,
+      "auc_after_drop": 0.8212444444444444,
+      "auc_diff": 0.0038222222222221713,
+      "is_harmful": false
+    },
+    {
+      "idx": 2,
+      "name": "d1_spine_lateral_deviation_max",
+      "f1_after_drop": 0.6784452296819788,
+      "f1_diff_pctp": 0.7067137809187329,
+      "auc_after_drop": 0.8192592592592592,
+      "auc_diff": 0.0018370370370369704,
+      "is_harmful": true
+    },
+    {
+      "idx": 3,
+      "name": "d1_trunk_flex_speed_max",
+      "f1_after_drop": 0.6736842105263158,
+      "f1_diff_pctp": 0.23061186535242584,
+      "auc_after_drop": 0.8184296296296296,
+      "auc_diff": 0.0010074074074073458,
+      "is_harmful": true
+    },
+    {
+      "idx": 4,
+      "name": "d1_cervical_min",
+      "f1_after_drop": 0.6785714285714286,
+      "f1_diff_pctp": 0.7193336698637087,
+      "auc_after_drop": 0.8209481481481481,
+      "auc_diff": 0.0035259259259258213,
+      "is_harmful": true
+    },
+    {
+      "idx": 5,
+      "name": "d1_signed_thoracolumbar_delta",
+      "f1_after_drop": 0.6714285714285714,
+      "f1_diff_pctp": 0.005047955577985874,
+      "auc_after_drop": 0.818162962962963,
+      "auc_diff": 0.0007407407407407085,
+      "is_harmful": false
+    },
+    {
+      "idx": 6,
+      "name": "d1_active_rom",
+      "f1_after_drop": 0.6737588652482269,
+      "f1_diff_pctp": 0.23807733754354077,
+      "auc_after_drop": 0.8227851851851852,
+      "auc_diff": 0.005362962962962903,
+      "is_harmful": true
+    },
+    {
+      "idx": 7,
+      "name": "d1_phase_speed_ratio",
+      "f1_after_drop": 0.6713780918727915,
+      "f1_diff_pctp": 0.0,
+      "auc_after_drop": 0.8174222222222223,
+      "auc_diff": 0.0,
+      "is_harmful": false
+    },
+    {
+      "idx": 8,
+      "name": "d1_hip_to_knee_dist_ratio",
+      "f1_after_drop": 0.676056338028169,
+      "f1_diff_pctp": 0.46782461553774857,
+      "auc_after_drop": 0.821037037037037,
+      "auc_diff": 0.0036148148148147374,
+      "is_harmful": true
+    },
+    {
+      "idx": 9,
+      "name": "d1_cobb_mean_active",
+      "f1_after_drop": 0.6784452296819788,
+      "f1_diff_pctp": 0.7067137809187329,
+      "auc_after_drop": 0.8213925925925927,
+      "auc_diff": 0.003970370370370402,
+      "is_harmful": true
+    },
+    {
+      "idx": 10,
+      "name": "d1_cobb_max_flexion",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8200000000000001,
+      "auc_diff": 0.00257777777777779,
+      "is_harmful": true
+    },
+    {
+      "idx": 11,
+      "name": "d1_cobb_range_active",
+      "f1_after_drop": 0.6855123674911661,
+      "f1_diff_pctp": 1.4134275618374548,
+      "auc_after_drop": 0.8161185185185186,
+      "auc_diff": -0.0013037037037036958,
+      "is_harmful": true
+    },
+    {
+      "idx": 12,
+      "name": "d1_shoulder_hip_twist_max",
+      "f1_after_drop": 0.6736842105263158,
+      "f1_diff_pctp": 0.23061186535242584,
+      "auc_after_drop": 0.8150222222222222,
+      "auc_diff": -0.0024000000000000687,
+      "is_harmful": true
+    },
+    {
+      "idx": 13,
+      "name": "d1_lateral_asymmetry_integral",
+      "f1_after_drop": 0.6759581881533101,
+      "f1_diff_pctp": 0.45800962805185863,
+      "auc_after_drop": 0.8202666666666667,
+      "auc_diff": 0.0028444444444444272,
+      "is_harmful": true
+    },
+    {
+      "idx": 14,
+      "name": "d1_pelvis_tilt_range",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.824,
+      "auc_diff": 0.0065777777777776825,
+      "is_harmful": true
+    },
+    {
+      "idx": 15,
+      "name": "d1_lumbar_flex_acceleration_peak",
+      "f1_after_drop": 0.6739130434782609,
+      "f1_diff_pctp": 0.2534951605469349,
+      "auc_after_drop": 0.8125037037037037,
+      "auc_diff": -0.004918518518518544,
+      "is_harmful": true
+    },
+    {
+      "idx": 16,
+      "name": "d1_torso_pitch_standing",
+      "f1_after_drop": 0.6595744680851063,
+      "f1_diff_pctp": -1.180362378768518,
+      "auc_after_drop": 0.8152296296296295,
+      "auc_diff": -0.002192592592592746,
+      "is_harmful": false
+    },
+    {
+      "idx": 17,
+      "name": "d1_torso_pitch_deepest",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8195851851851852,
+      "auc_diff": 0.002162962962962922,
+      "is_harmful": true
+    },
+    {
+      "idx": 18,
+      "name": "d1_view_score_normal_z",
+      "f1_after_drop": 0.676056338028169,
+      "f1_diff_pctp": 0.46782461553774857,
+      "auc_after_drop": 0.8136592592592593,
+      "auc_diff": -0.003762962962962968,
+      "is_harmful": true
+    },
+    {
+      "idx": 19,
+      "name": "d1_keypoint_confidence_mean",
+      "f1_after_drop": 0.6713780918727915,
+      "f1_diff_pctp": 0.0,
+      "auc_after_drop": 0.8174222222222223,
+      "auc_diff": 0.0,
+      "is_harmful": false
+    },
+    {
+      "idx": 20,
+      "name": "d1_lumbar_energy_ratio",
+      "f1_after_drop": 0.6713780918727915,
+      "f1_diff_pctp": 0.0,
+      "auc_after_drop": 0.8174222222222223,
+      "auc_diff": 0.0,
+      "is_harmful": false
+    },
+    {
+      "idx": 21,
+      "name": "d1_standing_symmetry_score",
+      "f1_after_drop": 0.6713780918727915,
+      "f1_diff_pctp": 0.0,
+      "auc_after_drop": 0.8174222222222223,
+      "auc_diff": 0.0,
+      "is_harmful": false
+    },
+    {
+      "idx": 22,
+      "name": "d1_lumbar_shear_stress_proxy",
+      "f1_after_drop": 0.6690140845070423,
+      "f1_diff_pctp": -0.23640073657492655,
+      "auc_after_drop": 0.8193185185185186,
+      "auc_diff": 0.0018962962962962848,
+      "is_harmful": false
+    },
+    {
+      "idx": 23,
+      "name": "d1_setup_lumbar_poly_a",
+      "f1_after_drop": 0.6857142857142857,
+      "f1_diff_pctp": 1.4336193841494205,
+      "auc_after_drop": 0.8195851851851852,
+      "auc_diff": 0.002162962962962922,
+      "is_harmful": true
+    },
+    {
+      "idx": 24,
+      "name": "d1_floor_break_cobb_delta",
+      "f1_after_drop": 0.6855123674911661,
+      "f1_diff_pctp": 1.4134275618374548,
+      "auc_after_drop": 0.8232592592592594,
+      "auc_diff": 0.005837037037037085,
+      "is_harmful": true
+    },
+    {
+      "idx": 25,
+      "name": "d1_knee_pass_lumbar_flexion",
+      "f1_after_drop": 0.6832740213523132,
+      "f1_diff_pctp": 1.1895929479521672,
+      "auc_after_drop": 0.8193777777777778,
+      "auc_diff": 0.001955555555555488,
+      "is_harmful": true
+    },
+    {
+      "idx": 26,
+      "name": "d1_lockout_hyperextension",
+      "f1_after_drop": 0.6714285714285714,
+      "f1_diff_pctp": 0.005047955577985874,
+      "auc_after_drop": 0.8192296296296296,
+      "auc_diff": 0.0018074074074073687,
+      "is_harmful": false
+    },
+    {
+      "idx": 27,
+      "name": "d1_spine_femur_sync_ratio",
+      "f1_after_drop": 0.6619217081850534,
+      "f1_diff_pctp": -0.9456383687738157,
+      "auc_after_drop": 0.8164148148148149,
+      "auc_diff": -0.0010074074074073458,
+      "is_harmful": false
+    },
+    {
+      "idx": 28,
+      "name": "d1_torso_pitch_rom",
+      "f1_after_drop": 0.6714285714285714,
+      "f1_diff_pctp": 0.005047955577985874,
+      "auc_after_drop": 0.8209777777777778,
+      "auc_diff": 0.003555555555555534,
+      "is_harmful": false
+    },
+    {
+      "idx": 29,
+      "name": "d1_rom_competence_score",
+      "f1_after_drop": 0.6879432624113475,
+      "f1_diff_pctp": 1.6565170538555996,
+      "auc_after_drop": 0.8216888888888889,
+      "auc_diff": 0.004266666666666641,
+      "is_harmful": true
+    },
+    {
+      "idx": 30,
+      "name": "d1_rom_scaled_lumbar_poly_a",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8229925925925926,
+      "auc_diff": 0.005570370370370337,
+      "is_harmful": true
+    },
+    {
+      "idx": 31,
+      "name": "d1_knee_valgus_ratio",
+      "f1_after_drop": 0.6713780918727915,
+      "f1_diff_pctp": 0.0,
+      "auc_after_drop": 0.8205925925925927,
+      "auc_diff": 0.003170370370370379,
+      "is_harmful": false
+    },
+    {
+      "idx": 32,
+      "name": "d1_view_occlusion_factor",
+      "f1_after_drop": 0.6713780918727915,
+      "f1_diff_pctp": 0.0,
+      "auc_after_drop": 0.8139851851851851,
+      "auc_diff": -0.0034370370370371273,
+      "is_harmful": false
+    },
+    {
+      "idx": 33,
+      "name": "d1_view_compensated_poly_a",
+      "f1_after_drop": 0.6498194945848376,
+      "f1_diff_pctp": -2.155859728795395,
+      "auc_after_drop": 0.8195851851851852,
+      "auc_diff": 0.002162962962962922,
+      "is_harmful": false
+    },
+    {
+      "idx": 34,
+      "name": "d1_res_torso_pitch_deepest",
+      "f1_after_drop": 0.6807017543859649,
+      "f1_diff_pctp": 0.9323662513173403,
+      "auc_after_drop": 0.8198814814814814,
+      "auc_diff": 0.002459259259259161,
+      "is_harmful": true
+    },
+    {
+      "idx": 35,
+      "name": "d1_res_setup_lumbar_poly_a",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8196444444444444,
+      "auc_diff": 0.0022222222222221255,
+      "is_harmful": true
+    },
+    {
+      "idx": 36,
+      "name": "d1_res_lumbar_poly_decoupled",
+      "f1_after_drop": 0.671280276816609,
+      "f1_diff_pctp": -0.00978150561825597,
+      "auc_after_drop": 0.8191703703703703,
+      "auc_diff": 0.0017481481481480543,
+      "is_harmful": false
+    },
+    {
+      "idx": 37,
+      "name": "d1_ratio_arm_to_torso",
+      "f1_after_drop": 0.6690140845070423,
+      "f1_diff_pctp": -0.23640073657492655,
+      "auc_after_drop": 0.8233777777777778,
+      "auc_diff": 0.005955555555555492,
+      "is_harmful": false
+    },
+    {
+      "idx": 38,
+      "name": "d1_ratio_femur_to_tibia",
+      "f1_after_drop": 0.676056338028169,
+      "f1_diff_pctp": 0.46782461553774857,
+      "auc_after_drop": 0.8197925925925925,
+      "auc_diff": 0.002370370370370245,
+      "is_harmful": true
+    },
+    {
+      "idx": 39,
+      "name": "d1_ratio_leg_to_torso",
+      "f1_after_drop": 0.6690391459074733,
+      "f1_diff_pctp": -0.2338945965318251,
+      "auc_after_drop": 0.8240888888888889,
+      "auc_diff": 0.006666666666666599,
+      "is_harmful": false
+    }
+  ],
+  "harmful_features": [
+    {
+      "idx": 29,
+      "name": "d1_rom_competence_score",
+      "f1_after_drop": 0.6879432624113475,
+      "f1_diff_pctp": 1.6565170538555996,
+      "auc_after_drop": 0.8216888888888889,
+      "auc_diff": 0.004266666666666641,
+      "is_harmful": true
+    },
+    {
+      "idx": 23,
+      "name": "d1_setup_lumbar_poly_a",
+      "f1_after_drop": 0.6857142857142857,
+      "f1_diff_pctp": 1.4336193841494205,
+      "auc_after_drop": 0.8195851851851852,
+      "auc_diff": 0.002162962962962922,
+      "is_harmful": true
+    },
+    {
+      "idx": 11,
+      "name": "d1_cobb_range_active",
+      "f1_after_drop": 0.6855123674911661,
+      "f1_diff_pctp": 1.4134275618374548,
+      "auc_after_drop": 0.8161185185185186,
+      "auc_diff": -0.0013037037037036958,
+      "is_harmful": true
+    },
+    {
+      "idx": 24,
+      "name": "d1_floor_break_cobb_delta",
+      "f1_after_drop": 0.6855123674911661,
+      "f1_diff_pctp": 1.4134275618374548,
+      "auc_after_drop": 0.8232592592592594,
+      "auc_diff": 0.005837037037037085,
+      "is_harmful": true
+    },
+    {
+      "idx": 25,
+      "name": "d1_knee_pass_lumbar_flexion",
+      "f1_after_drop": 0.6832740213523132,
+      "f1_diff_pctp": 1.1895929479521672,
+      "auc_after_drop": 0.8193777777777778,
+      "auc_diff": 0.001955555555555488,
+      "is_harmful": true
+    },
+    {
+      "idx": 10,
+      "name": "d1_cobb_max_flexion",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8200000000000001,
+      "auc_diff": 0.00257777777777779,
+      "is_harmful": true
+    },
+    {
+      "idx": 14,
+      "name": "d1_pelvis_tilt_range",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.824,
+      "auc_diff": 0.0065777777777776825,
+      "is_harmful": true
+    },
+    {
+      "idx": 17,
+      "name": "d1_torso_pitch_deepest",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8195851851851852,
+      "auc_diff": 0.002162962962962922,
+      "is_harmful": true
+    },
+    {
+      "idx": 30,
+      "name": "d1_rom_scaled_lumbar_poly_a",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8229925925925926,
+      "auc_diff": 0.005570370370370337,
+      "is_harmful": true
+    },
+    {
+      "idx": 35,
+      "name": "d1_res_setup_lumbar_poly_a",
+      "f1_after_drop": 0.6808510638297872,
+      "f1_diff_pctp": 0.9472971956995702,
+      "auc_after_drop": 0.8196444444444444,
+      "auc_diff": 0.0022222222222221255,
+      "is_harmful": true
+    },
+    {
+      "idx": 34,
+      "name": "d1_res_torso_pitch_deepest",
+      "f1_after_drop": 0.6807017543859649,
+      "f1_diff_pctp": 0.9323662513173403,
+      "auc_after_drop": 0.8198814814814814,
+      "auc_diff": 0.002459259259259161,
+      "is_harmful": true
+    },
+    {
+      "idx": 4,
+      "name": "d1_cervical_min",
+      "f1_after_drop": 0.6785714285714286,
+      "f1_diff_pctp": 0.7193336698637087,
+      "auc_after_drop": 0.8209481481481481,
+      "auc_diff": 0.0035259259259258213,
+      "is_harmful": true
+    },
+    {
+      "idx": 2,
+      "name": "d1_spine_lateral_deviation_max",
+      "f1_after_drop": 0.6784452296819788,
+      "f1_diff_pctp": 0.7067137809187329,
+      "auc_after_drop": 0.8192592592592592,
+      "auc_diff": 0.0018370370370369704,
+      "is_harmful": true
+    },
+    {
+      "idx": 9,
+      "name": "d1_cobb_mean_active",
+      "f1_after_drop": 0.6784452296819788,
+      "f1_diff_pctp": 0.7067137809187329,
+      "auc_after_drop": 0.8213925925925927,
+      "auc_diff": 0.003970370370370402,
+      "is_harmful": true
+    },
+    {
+      "idx": 8,
+      "name": "d1_hip_to_knee_dist_ratio",
+      "f1_after_drop": 0.676056338028169,
+      "f1_diff_pctp": 0.46782461553774857,
+      "auc_after_drop": 0.821037037037037,
+      "auc_diff": 0.0036148148148147374,
+      "is_harmful": true
+    },
+    {
+      "idx": 18,
+      "name": "d1_view_score_normal_z",
+      "f1_after_drop": 0.676056338028169,
+      "f1_diff_pctp": 0.46782461553774857,
+      "auc_after_drop": 0.8136592592592593,
+      "auc_diff": -0.003762962962962968,
+      "is_harmful": true
+    },
+    {
+      "idx": 38,
+      "name": "d1_ratio_femur_to_tibia",
+      "f1_after_drop": 0.676056338028169,
+      "f1_diff_pctp": 0.46782461553774857,
+      "auc_after_drop": 0.8197925925925925,
+      "auc_diff": 0.002370370370370245,
+      "is_harmful": true
+    },
+    {
+      "idx": 13,
+      "name": "d1_lateral_asymmetry_integral",
+      "f1_after_drop": 0.6759581881533101,
+      "f1_diff_pctp": 0.45800962805185863,
+      "auc_after_drop": 0.8202666666666667,
+      "auc_diff": 0.0028444444444444272,
+      "is_harmful": true
+    },
+    {
+      "idx": 15,
+      "name": "d1_lumbar_flex_acceleration_peak",
+      "f1_after_drop": 0.6739130434782609,
+      "f1_diff_pctp": 0.2534951605469349,
+      "auc_after_drop": 0.8125037037037037,
+      "auc_diff": -0.004918518518518544,
+      "is_harmful": true
+    },
+    {
+      "idx": 0,
+      "name": "d1_lumbar_curvature_poly_a",
+      "f1_after_drop": 0.6738351254480287,
+      "f1_diff_pctp": 0.24570335752371886,
+      "auc_after_drop": 0.8184888888888888,
+      "auc_diff": 0.0010666666666665492,
+      "is_harmful": true
+    },
+    {
+      "idx": 6,
+      "name": "d1_active_rom",
+      "f1_after_drop": 0.6737588652482269,
+      "f1_diff_pctp": 0.23807733754354077,
+      "auc_after_drop": 0.8227851851851852,
+      "auc_diff": 0.005362962962962903,
+      "is_harmful": true
+    },
+    {
+      "idx": 3,
+      "name": "d1_trunk_flex_speed_max",
+      "f1_after_drop": 0.6736842105263158,
+      "f1_diff_pctp": 0.23061186535242584,
+      "auc_after_drop": 0.8184296296296296,
+      "auc_diff": 0.0010074074074073458,
+      "is_harmful": true
+    },
+    {
+      "idx": 12,
+      "name": "d1_shoulder_hip_twist_max",
+      "f1_after_drop": 0.6736842105263158,
+      "f1_diff_pctp": 0.23061186535242584,
+      "auc_after_drop": 0.8150222222222222,
+      "auc_diff": -0.0024000000000000687,
+      "is_harmful": true
+    }
+  ]
+}

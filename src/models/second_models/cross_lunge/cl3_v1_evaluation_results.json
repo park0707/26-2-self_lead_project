@@ -1,0 +1,90 @@
+{
+  "exercise": "크로스 런지 (Cross Lunge - 08)",
+  "defect": "c3 (상체 정면 균형잡기 / Torso Frontal Balance & Postural Defect)",
+  "model_name": "cl3_v1",
+  "baseline_2state": {
+    "auc": 0.8830884740259739,
+    "accuracy": 0.7960975609756098,
+    "defect_f1": 0.8326661329063251
+  },
+  "overall_3state": {
+    "coverage": 0.904390243902439,
+    "uncertainty_rate": 0.09560975609756098,
+    "effective_f1": 0.8733333333333333,
+    "clean_f1": 0.7675840978593272,
+    "macro_f1": 0.8204587155963303,
+    "accuracy": 0.8360302049622438,
+    "precision": 0.8576104746317512,
+    "recall": 0.8896434634974533,
+    "decided_samples": 927,
+    "retake_samples": 98,
+    "total_samples": 1025
+  },
+  "view_audits": {
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "samples": 205,
+      "tau_clean": 0.38,
+      "tau_defect": 0.515,
+      "uncertainty_rate": 0.0975609756097561,
+      "effective_f1": 0.8494208494208494,
+      "clean_f1": 0.6486486486486487,
+      "accuracy": 0.7891891891891892,
+      "precision": 0.7913669064748201,
+      "recall": 0.9166666666666666
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "samples": 205,
+      "tau_clean": 0.32999999999999996,
+      "tau_defect": 0.48,
+      "uncertainty_rate": 0.09268292682926829,
+      "effective_f1": 0.8793103448275862,
+      "clean_f1": 0.8,
+      "accuracy": 0.8494623655913979,
+      "precision": 0.8947368421052632,
+      "recall": 0.864406779661017
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "samples": 205,
+      "tau_clean": 0.36,
+      "tau_defect": 0.48,
+      "uncertainty_rate": 0.0975609756097561,
+      "effective_f1": 0.8546255506607929,
+      "clean_f1": 0.7692307692307693,
+      "accuracy": 0.8216216216216217,
+      "precision": 0.8738738738738738,
+      "recall": 0.8362068965517241
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "samples": 205,
+      "tau_clean": 0.39999999999999997,
+      "tau_defect": 0.53,
+      "uncertainty_rate": 0.0975609756097561,
+      "effective_f1": 0.9082969432314411,
+      "clean_f1": 0.851063829787234,
+      "accuracy": 0.8864864864864865,
+      "precision": 0.9285714285714286,
+      "recall": 0.8888888888888888
+    },
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "samples": 205,
+      "tau_clean": 0.33499999999999996,
+      "tau_defect": 0.495,
+      "uncertainty_rate": 0.09268292682926829,
+      "effective_f1": 0.8774703557312253,
+      "clean_f1": 0.7394957983193278,
+      "accuracy": 0.8333333333333334,
+      "precision": 0.8222222222222222,
+      "recall": 0.940677966101695
+    }
+  },
+  "ensemble_weights": [
+    0.47003636492120765,
+    0.48389690740320895,
+    0.04606672767558341
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "total_samples": 1906,
+  "naive_selective_baseline": {
+    "abstain_count": 102,
+    "coverage": 94.64847848898216,
+    "clean_f1": 70.46632124352331,
+    "clean_precision": 75.55555555555556,
+    "clean_recall": 66.01941747572816,
+    "defect_f1": 98.33089311859443
+  },
+  "override_threshold_simulations": {
+    "0.95": {
+      "tau_override": 0.95,
+      "rescued_count": 12,
+      "rescue_precision": 100.0,
+      "final_abstain_count": 90,
+      "final_coverage": 95.27806925498426,
+      "clean_f1": 75.72815533980582,
+      "clean_precision": 75.72815533980582,
+      "clean_recall": 75.72815533980582,
+      "defect_f1": 98.54057209573847
+    },
+    "0.9": {
+      "tau_override": 0.9,
+      "rescued_count": 16,
+      "rescue_precision": 100.0,
+      "final_abstain_count": 86,
+      "final_coverage": 95.48793284365162,
+      "clean_f1": 75.72815533980582,
+      "clean_precision": 75.72815533980582,
+      "clean_recall": 75.72815533980582,
+      "defect_f1": 98.54397204426326
+    },
+    "0.85": {
+      "tau_override": 0.85,
+      "rescued_count": 27,
+      "rescue_precision": 92.5925925925926,
+      "final_abstain_count": 75,
+      "final_coverage": 96.06505771248688,
+      "clean_f1": 75.0,
+      "clean_precision": 75.72815533980582,
+      "clean_recall": 74.28571428571429,
+      "defect_f1": 98.4944991314418
+    },
+    "0.8": {
+      "tau_override": 0.8,
+      "rescued_count": 31,
+      "rescue_precision": 87.09677419354838,
+      "final_abstain_count": 71,
+      "final_coverage": 96.27492130115425,
+      "clean_f1": 74.28571428571429,
+      "clean_precision": 75.72815533980582,
+      "clean_recall": 72.89719626168224,
+      "defect_f1": 98.4393063583815
+    }
+  },
+  "best_configuration": {
+    "tau_defect": 0.15,
+    "tau_clean": 0.45,
+    "tau_override": 0.9,
+    "final_abstain_count": 86,
+    "final_coverage": 95.48793284365162,
+    "clean_f1": 75.72815533980582,
+    "clean_precision": 75.72815533980582,
+    "clean_recall": 75.72815533980582,
+    "defect_f1": 98.54397204426326,
+    "rescued_count": 16,
+    "rescue_precision": 100.0
+  },
+  "cause_attribution_summary": {
+    "c1_spine": {
+      "name": "c1. 척추의 중립",
+      "count": 50,
+      "ratio": 58.139534883720934,
+      "guide": "척추 각도가 모호합니다 (촬영 가이드: 카메라를 대각선 45도 방향, 1m 높이에 두고 다시 수행해 주세요)"
+    },
+    "c2_gaze": {
+      "name": "c2. 고개 정면",
+      "count": 21,
+      "ratio": 24.418604651162788,
+      "guide": "시선 방향이 흐릿합니다 (촬영 가이드: 정면을 안정적으로 응시하고 다시 수행해 주세요)"
+    },
+    "c3_knee": {
+      "name": "c3. 발과 무릎 외반",
+      "count": 8,
+      "ratio": 9.30232558139535,
+      "guide": "무릎-발목 정렬이 가려졌습니다 (촬영 가이드: 하체가 잘 보이도록 카메라 거리를 2m 확보해 주세요)"
+    },
+    "c4_foot": {
+      "name": "c4. 발바닥 지면 고정",
+      "count": 7,
+      "ratio": 8.13953488372093,
+      "guide": "발바닥 지면 고정이 불명확합니다 (촬영 가이드: 발끝까지 밝게 보이도록 조명을 확인해 주세요)"
+    }
+  },
+  "rescued_samples": [
+    {
+      "idx": 540,
+      "p_clean": 0.15319685637950897,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9500790238380432,
+      "is_true_defect": true
+    },
+    {
+      "idx": 806,
+      "p_clean": 0.1692577600479126,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9811145067214966,
+      "is_true_defect": true
+    },
+    {
+      "idx": 816,
+      "p_clean": 0.19769804179668427,
+      "peak_defect": "c4. 발바닥 지면 고정",
+      "peak_prob": 0.9531612396240234,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1074,
+      "p_clean": 0.2186404913663864,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9803644418716431,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1282,
+      "p_clean": 0.25619518756866455,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9239457845687866,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1283,
+      "p_clean": 0.31993454694747925,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9399303197860718,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1285,
+      "p_clean": 0.18821434676647186,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9709175825119019,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1286,
+      "p_clean": 0.15408144891262054,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9712167978286743,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1335,
+      "p_clean": 0.2907070517539978,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9784226417541504,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1337,
+      "p_clean": 0.4448542594909668,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9312080144882202,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1338,
+      "p_clean": 0.1564824879169464,
+      "peak_defect": "c2. 고개 정면",
+      "peak_prob": 0.9762659668922424,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1339,
+      "p_clean": 0.20571833848953247,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9815581440925598,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1341,
+      "p_clean": 0.2549958825111389,
+      "peak_defect": "c2. 고개 정면",
+      "peak_prob": 0.9598948955535889,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1342,
+      "p_clean": 0.2539249062538147,
+      "peak_defect": "c2. 고개 정면",
+      "peak_prob": 0.9602281451225281,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1448,
+      "p_clean": 0.2743123471736908,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9362868070602417,
+      "is_true_defect": true
+    },
+    {
+      "idx": 1564,
+      "p_clean": 0.1538635939359665,
+      "peak_defect": "c1. 척추의 중립",
+      "peak_prob": 0.9769692420959473,
+      "is_true_defect": true
+    }
+  ]
+}

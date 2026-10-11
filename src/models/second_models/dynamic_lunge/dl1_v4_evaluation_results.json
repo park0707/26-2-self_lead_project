@@ -1,0 +1,267 @@
+{
+  "model_name": "dl1_v4",
+  "exercise": "다이나믹 런지 (Dynamic Lunge - 05 Forward + 06 Backward)",
+  "defect": "c1 (앞다리 무릎 각도 90도)",
+  "feature_dim": 30,
+  "feature_names": [
+    "lead_knee_angle_min",
+    "lead_knee_angle_mean",
+    "lead_knee_90_error_abs",
+    "lead_knee_under_90_ratio",
+    "lead_knee_flex_velocity_max",
+    "sagittal_knee_90_error",
+    "lead_tibia_vertical_tilt",
+    "lead_femur_horizontal_tilt",
+    "lead_knee_toe_overhang",
+    "lead_shank_ankle_coupling",
+    "lead_tibia_sagittal_sway",
+    "lead_femur_length_ratio",
+    "lead_tibia_length_ratio",
+    "rigid_bone_length_consistency",
+    "rear_knee_ground_clearance",
+    "lead_femur_vertical_drop_ratio",
+    "front_view_femur_drop_gated",
+    "lead_leg_coplanarity",
+    "lead_knee_rom_ratio",
+    "lead_rear_knee_ratio",
+    "rear_knee_angle_min",
+    "pelvic_drop_angle",
+    "stride_length_normalized",
+    "step_width_normalized",
+    "lead_knee_accel_inflection",
+    "bottom_phase_dwell_ratio",
+    "lead_knee_dtw_distance",
+    "lead_knee_visibility_mean",
+    "kinetic_energy_inflection",
+    "jerk_metric_lead_leg"
+  ],
+  "num_samples": 1629,
+  "num_normal": 1201,
+  "num_defect": 428,
+  "binary_baseline": {
+    "f1_score": 0.6666666666666666,
+    "accuracy": 0.8195211786372008,
+    "precision": 0.6475770925110133,
+    "recall": 0.6869158878504673,
+    "roc_auc": 0.8798528484829621
+  },
+  "selective_3state": {
+    "view_thresholds": {
+      "view1": {
+        "tau_clean": 0.445,
+        "tau_defect": 0.64
+      },
+      "view2": {
+        "tau_clean": 0.315,
+        "tau_defect": 0.585
+      },
+      "view3": {
+        "tau_clean": 0.29000000000000004,
+        "tau_defect": 0.48
+      },
+      "view4": {
+        "tau_clean": 0.30000000000000004,
+        "tau_defect": 0.45
+      },
+      "view5": {
+        "tau_clean": 0.345,
+        "tau_defect": 0.48
+      }
+    },
+    "3state_f1": 0.7313432835820896,
+    "3state_acc": 0.8532608695652174,
+    "3state_prec": 0.6743119266055045,
+    "3state_recall": 0.7989130434782609,
+    "uncertainty_rate": 0.09637814610190301,
+    "coverage": 0.903621853898097,
+    "decided_samples": 1472,
+    "uncertain_samples": 157
+  },
+  "view_audit": {
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "samples": 320,
+      "3state_f1": 0.7236842105263158,
+      "accuracy": 0.8541666666666666,
+      "precision": 0.7236842105263158,
+      "recall": 0.7236842105263158,
+      "roc_auc": 0.8887194347008286,
+      "uncertainty_rate": 0.1,
+      "coverage": 0.9,
+      "tau_clean": 0.445,
+      "tau_defect": 0.64
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "samples": 328,
+      "3state_f1": 0.8079470198675497,
+      "accuracy": 0.902027027027027,
+      "precision": 0.7530864197530864,
+      "recall": 0.8714285714285714,
+      "roc_auc": 0.922256390543917,
+      "uncertainty_rate": 0.0975609756097561,
+      "coverage": 0.9024390243902439,
+      "tau_clean": 0.315,
+      "tau_defect": 0.585
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "samples": 324,
+      "3state_f1": 0.6790123456790124,
+      "accuracy": 0.8231292517006803,
+      "precision": 0.632183908045977,
+      "recall": 0.7333333333333333,
+      "roc_auc": 0.8520797440315039,
+      "uncertainty_rate": 0.09259259259259259,
+      "coverage": 0.9074074074074074,
+      "tau_clean": 0.29000000000000004,
+      "tau_defect": 0.48
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "samples": 322,
+      "3state_f1": 0.7,
+      "accuracy": 0.8344827586206897,
+      "precision": 0.6153846153846154,
+      "recall": 0.8115942028985508,
+      "roc_auc": 0.8570428171268507,
+      "uncertainty_rate": 0.09937888198757763,
+      "coverage": 0.9006211180124224,
+      "tau_clean": 0.30000000000000004,
+      "tau_defect": 0.45
+    },
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "samples": 335,
+      "3state_f1": 0.7486033519553073,
+      "accuracy": 0.8519736842105263,
+      "precision": 0.6633663366336634,
+      "recall": 0.8589743589743589,
+      "roc_auc": 0.8844897959183674,
+      "uncertainty_rate": 0.09253731343283582,
+      "coverage": 0.9074626865671642,
+      "tau_clean": 0.345,
+      "tau_defect": 0.48
+    }
+  },
+  "subdomain_audit": {
+    "05_forward": {
+      "samples": 1036,
+      "3state_f1": 0.6825053995680346,
+      "accuracy": 0.8431163287086446,
+      "precision": 0.6294820717131474,
+      "recall": 0.7452830188679245,
+      "roc_auc": 0.8648830980526412,
+      "uncertainty_rate": 0.09555984555984556,
+      "coverage": 0.9044401544401545
+    },
+    "06_backward": {
+      "samples": 593,
+      "3state_f1": 0.7976539589442815,
+      "accuracy": 0.8710280373831776,
+      "precision": 0.7351351351351352,
+      "recall": 0.8717948717948718,
+      "roc_auc": 0.9035058842893589,
+      "uncertainty_rate": 0.09780775716694773,
+      "coverage": 0.9021922428330522
+    }
+  },
+  "subject_audit": {
+    "피험자1": {
+      "samples": 325,
+      "3state_f1": 0.35135135135135137,
+      "accuracy": 0.8208955223880597,
+      "precision": 0.7647058823529411,
+      "recall": 0.22807017543859648,
+      "roc_auc": 0.7311764705882353,
+      "uncertainty_rate": 0.1753846153846154,
+      "coverage": 0.8246153846153846
+    },
+    "피험자2": {
+      "samples": 196,
+      "3state_f1": 0.7377049180327869,
+      "accuracy": 0.815028901734104,
+      "precision": 0.6428571428571429,
+      "recall": 0.8653846153846154,
+      "roc_auc": 0.8849437090189286,
+      "uncertainty_rate": 0.11734693877551021,
+      "coverage": 0.8826530612244898
+    },
+    "피험자3": {
+      "samples": 170,
+      "3state_f1": 0.7142857142857143,
+      "accuracy": 0.7948717948717948,
+      "precision": 0.5882352941176471,
+      "recall": 0.9090909090909091,
+      "roc_auc": 0.8952888888888889,
+      "uncertainty_rate": 0.08235294117647059,
+      "coverage": 0.9176470588235294
+    },
+    "피험자4": {
+      "samples": 170,
+      "3state_f1": 0.6724137931034483,
+      "accuracy": 0.7532467532467533,
+      "precision": 0.527027027027027,
+      "recall": 0.9285714285714286,
+      "roc_auc": 0.8558222222222223,
+      "uncertainty_rate": 0.09411764705882353,
+      "coverage": 0.9058823529411765
+    },
+    "피험자5": {
+      "samples": 169,
+      "3state_f1": 0.868421052631579,
+      "accuracy": 0.9371069182389937,
+      "precision": 0.8048780487804879,
+      "recall": 0.9428571428571428,
+      "roc_auc": 0.9439922480620155,
+      "uncertainty_rate": 0.05917159763313609,
+      "coverage": 0.9408284023668639
+    },
+    "피험자6": {
+      "samples": 160,
+      "3state_f1": 0.8823529411764706,
+      "accuracy": 0.9470198675496688,
+      "precision": 0.8571428571428571,
+      "recall": 0.9090909090909091,
+      "roc_auc": 0.9435416666666665,
+      "uncertainty_rate": 0.05625,
+      "coverage": 0.94375
+    },
+    "피험자7": {
+      "samples": 155,
+      "3state_f1": 0.8,
+      "accuracy": 0.8904109589041096,
+      "precision": 0.7272727272727273,
+      "recall": 0.8888888888888888,
+      "roc_auc": 0.9160869565217391,
+      "uncertainty_rate": 0.05806451612903226,
+      "coverage": 0.9419354838709677
+    },
+    "피험자8": {
+      "samples": 155,
+      "3state_f1": 0.8571428571428571,
+      "accuracy": 0.9225352112676056,
+      "precision": 0.7857142857142857,
+      "recall": 0.9428571428571428,
+      "roc_auc": 0.9367391304347825,
+      "uncertainty_rate": 0.08387096774193549,
+      "coverage": 0.9161290322580645
+    },
+    "피험자9": {
+      "samples": 129,
+      "3state_f1": 0.7341772151898734,
+      "accuracy": 0.8292682926829268,
+      "precision": 0.6444444444444445,
+      "recall": 0.8529411764705882,
+      "roc_auc": 0.8591331269349846,
+      "uncertainty_rate": 0.046511627906976744,
+      "coverage": 0.9534883720930233
+    }
+  },
+  "ensemble_weights": {
+    "lightgbm": 0.04842132497131763,
+    "catboost": 0.5727356530029882,
+    "xgboost": 0.3788430220256942
+  },
+  "elapsed_time_sec": 14.758630990982056
+}

@@ -5,7 +5,7 @@ from typing import Dict, List, Any, Optional, Tuple
 import numpy as np
 
 RAW_LABELS_BASE = 'd:/Data/01_raw_data/labels_json'
-DUAL_SPLITS_DIR = 'd:/Data/피처_데이터/Dual_Splits'
+DUAL_SPLITS_DIR = 'd:/Data/피처_데이터/Condition4_NovelFlow_3D' if os.path.exists('d:/Data/피처_데이터/Condition4_NovelFlow_3D/Dual_Train.npz') else ('d:/Data/피처_데이터/Condition3_MediaPipe_3D' if os.path.exists('d:/Data/피처_데이터/Condition3_MediaPipe_3D/Dual_Train.npz') else 'd:/Data/피처_데이터/Dual_Splits')
 
 class Stage3DatasetLoader:
     """3단계: 세부 결함(Conditions) 다중 라벨 진단용 데이터 로더"""
@@ -74,10 +74,10 @@ class Stage3DatasetLoader:
                     pass
 
     @classmethod
-    def load_exercise_split(cls, exercise_folder: str = '01_바벨_스쿼트', split_filename: str = 'Dual_Train.npz') -> Dict[str, Any]:
+    def load_exercise_split(cls, exercise_folder: str = '01_바벨_스쿼트', split_filename: str = 'Dual_Train.npz', splits_dir: str = DUAL_SPLITS_DIR) -> Dict[str, Any]:
         """특정 운동 폴더에 대한 다중 라벨 결함 데이터 로드"""
         cls._build_conditions_cache()
-        npz_path = os.path.join(DUAL_SPLITS_DIR, split_filename)
+        npz_path = os.path.join(splits_dir, split_filename)
         d = np.load(npz_path, allow_pickle=True)
 
         X_a = d['X_Format_A']
@@ -88,18 +88,28 @@ class Stage3DatasetLoader:
         Y_list = []
         cond_names_ref = None
 
+        FOLDER_MATCHES = {
+            '05_다이나믹_런지': ['05_스텝_포워드_다이나믹_런지', '06_스텝_백워드_다이나믹_런지', '05_다이나믹_런지'],
+            '06_사이드_런지': ['07_사이드_런지', '06_사이드_런지'],
+            '07_크로스_런지': ['08_크로스_런지', '07_크로스_런지'],
+            '08_굿모닝': ['09_굿모닝', '08_굿모닝']
+        }
+        match_folders = FOLDER_MATCHES.get(exercise_folder, [exercise_folder])
+
         for idx, sid in enumerate(sequence_ids):
             base_sid = '_'.join(str(sid).split('_')[:-1])
             info = cls._seq_info_map.get(base_sid)
-            if info and info['folder'] == exercise_folder:
+            if info and (info['folder'] in match_folders or info.get('exercise') == exercise_folder):
                 indices.append(idx)
                 Y_list.append(info['cond_vals'])
                 if cond_names_ref is None and info['cond_names']:
                     cond_names_ref = info['cond_names']
 
         indices = np.array(indices, dtype=np.int64)
-        X_a_sub = X_a[indices] if len(indices) > 0 else np.zeros((0, 97))
-        X_b_sub = X_b[indices] if len(indices) > 0 else np.zeros((0, 64, 69))
+        dim_a = X_a.shape[1] if len(X_a) > 0 else 97
+        dim_b = X_b.shape[2] if len(X_b) > 0 else 69
+        X_a_sub = X_a[indices] if len(indices) > 0 else np.zeros((0, dim_a))
+        X_b_sub = X_b[indices] if len(indices) > 0 else np.zeros((0, 64, dim_b))
         Y_sub = np.array(Y_list, dtype=np.int64) if len(Y_list) > 0 else np.zeros((0, len(cond_names_ref or [])))
 
         return {
@@ -113,11 +123,11 @@ class Stage3DatasetLoader:
         }
 
     @classmethod
-    def load_all_splits_for_exercise(cls, exercise_folder: str = '01_바벨_스쿼트') -> Dict[str, Dict[str, Any]]:
+    def load_all_splits_for_exercise(cls, exercise_folder: str = '01_바벨_스쿼트', splits_dir: str = DUAL_SPLITS_DIR) -> Dict[str, Dict[str, Any]]:
         return {
-            'train': cls.load_exercise_split(exercise_folder, 'Dual_Train.npz'),
-            'valid': cls.load_exercise_split(exercise_folder, 'Dual_Valid.npz'),
-            'test_strict': cls.load_exercise_split(exercise_folder, 'Dual_Test_Strict.npz'),
-            'test_unseen_subj': cls.load_exercise_split(exercise_folder, 'Dual_Test_Unseen_Subj.npz'),
-            'test_unseen_view': cls.load_exercise_split(exercise_folder, 'Dual_Test_Unseen_View.npz')
+            'train': cls.load_exercise_split(exercise_folder, 'Dual_Train.npz', splits_dir=splits_dir),
+            'valid': cls.load_exercise_split(exercise_folder, 'Dual_Valid.npz', splits_dir=splits_dir),
+            'test_strict': cls.load_exercise_split(exercise_folder, 'Dual_Test_Strict.npz', splits_dir=splits_dir),
+            'test_unseen_subj': cls.load_exercise_split(exercise_folder, 'Dual_Test_Unseen_Subj.npz', splits_dir=splits_dir),
+            'test_unseen_view': cls.load_exercise_split(exercise_folder, 'Dual_Test_Unseen_View.npz', splits_dir=splits_dir)
         }

@@ -1,0 +1,66 @@
+{
+  "model_name": "c1_v11_final",
+  "experiment_code": "E0_E1_Tri_Ensemble",
+  "description": "v11_a (10%) + v11_a_diet (40%) + v11_b TCN (50%) 3-Way Tri-Ensemble",
+  "overall_metrics": {
+    "f1": 84.47,
+    "prec": 85.54,
+    "rec": 83.43,
+    "acc": 85.22,
+    "auc": 91.58
+  },
+  "baseline_v10_metrics": {
+    "f1": 79.73,
+    "auc": 88.33,
+    "prec": 80.0,
+    "rec": 79.46,
+    "acc": 80.38
+  },
+  "view_metrics": {
+    "view1": {
+      "view_name": "view1 (후방 180°)",
+      "count": 521,
+      "v10_f1": 76.12,
+      "final_f1": 84.12,
+      "delta_f1": 8.0,
+      "final_auc": 90.58,
+      "final_acc": 85.22
+    },
+    "view2": {
+      "view_name": "view2 (우측 45°)",
+      "count": 521,
+      "v10_f1": 83.21,
+      "final_f1": 84.02,
+      "delta_f1": 0.81,
+      "final_auc": 91.7,
+      "final_acc": 84.45
+    },
+    "view3": {
+      "view_name": "view3 (정면 0°)",
+      "count": 521,
+      "v10_f1": 74.3,
+      "final_f1": 83.51,
+      "delta_f1": 9.21,
+      "final_auc": 92.11,
+      "final_acc": 84.84
+    },
+    "view4": {
+      "view_name": "view4 (좌측 45°)",
+      "count": 521,
+      "v10_f1": 81.85,
+      "final_f1": 83.3,
+      "delta_f1": 1.45,
+      "final_auc": 91.17,
+      "final_acc": 83.69
+    },
+    "view5": {
+      "view_name": "view5 (우측 후방 45°)",
+      "count": 521,
+      "v10_f1": 83.18,
+      "final_f1": 87.37,
+      "delta_f1": 4.19,
+      "final_auc": 92.65,
+      "final_acc": 87.91
+    }
+  }
+}

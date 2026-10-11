@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "project_name": "vidio-health-trainer",
+    "exercise": "04_바벨_런지",
+    "target_defect": "c1 (앞다리 무릎 각도 90도)",
+    "model_name": "bl1_v1",
+    "total_samples": 637,
+    "subjects": [
+      "피험자1",
+      "피험자2",
+      "피험자3",
+      "피험자4",
+      "피험자5",
+      "피험자6",
+      "피험자7",
+      "피험자8",
+      "피험자9"
+    ],
+    "elapsed_sec": 254.1125364303589
+  },
+  "baseline_binary": {
+    "binary_f1": 0.6589595375722543,
+    "binary_acc": 0.814756671899529,
+    "binary_prec": 0.7755102040816326,
+    "binary_recall": 0.5728643216080402,
+    "roc_auc": 0.8795576053784907
+  },
+  "best_3state": {
+    "3state_f1": 0.7125,
+    "3state_acc": 0.8397212543554007,
+    "3state_prec": 0.7702702702702703,
+    "3state_recall": 0.6627906976744186,
+    "uncertainty_rate": 0.0989010989010989,
+    "coverage": 0.9010989010989011,
+    "tau_clean": 0.43999999999999995,
+    "tau_defect": 0.49
+  },
+  "view_audit": {
+    "view5": {
+      "view_name": "시점 A (우측 후방 45°)",
+      "samples": 131,
+      "3state_f1": 0.7246376811594203,
+      "accuracy": 0.8442622950819673,
+      "precision": 0.8333333333333334,
+      "recall": 0.6410256410256411,
+      "roc_auc": 0.86892177589852,
+      "uncertainty_rate": 0.06870229007633588,
+      "coverage": 0.9312977099236641
+    },
+    "view2": {
+      "view_name": "시점 B (우측 전방 45°)",
+      "samples": 131,
+      "3state_f1": 0.8181818181818182,
+      "accuracy": 0.8974358974358975,
+      "precision": 0.9,
+      "recall": 0.75,
+      "roc_auc": 0.9355179704016913,
+      "uncertainty_rate": 0.10687022900763359,
+      "coverage": 0.8931297709923665
+    },
+    "view3": {
+      "view_name": "시점 C (정면 0°)",
+      "samples": 131,
+      "3state_f1": 0.6764705882352942,
+      "accuracy": 0.8181818181818182,
+      "precision": 0.7666666666666667,
+      "recall": 0.6052631578947368,
+      "roc_auc": 0.8805496828752644,
+      "uncertainty_rate": 0.07633587786259542,
+      "coverage": 0.9236641221374046
+    },
+    "view4": {
+      "view_name": "시점 D (좌측 전방 45°)",
+      "samples": 123,
+      "3state_f1": 0.6545454545454545,
+      "accuracy": 0.8303571428571429,
+      "precision": 0.782608695652174,
+      "recall": 0.5625,
+      "roc_auc": 0.8654214559386973,
+      "uncertainty_rate": 0.08943089430894309,
+      "coverage": 0.9105691056910569
+    },
+    "view1": {
+      "view_name": "시점 E (좌측 후방 45°)",
+      "samples": 121,
+      "3state_f1": 0.6774193548387096,
+      "accuracy": 0.803921568627451,
+      "precision": 0.6,
+      "recall": 0.7777777777777778,
+      "roc_auc": 0.8509127789046653,
+      "uncertainty_rate": 0.15702479338842976,
+      "coverage": 0.8429752066115702
+    }
+  }
+}

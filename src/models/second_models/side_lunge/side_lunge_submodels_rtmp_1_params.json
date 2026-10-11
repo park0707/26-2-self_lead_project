@@ -1,0 +1,132 @@
+{
+  "c1": {
+    "model_name": "sl1_rtmp_1",
+    "temperature": 1.3641,
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.356,
+        "tau_def": 0.524
+      },
+      "view2": {
+        "tau_norm": 0.356,
+        "tau_def": 0.552
+      },
+      "view3": {
+        "tau_norm": 0.37,
+        "tau_def": 0.524
+      },
+      "view4": {
+        "tau_norm": 0.329,
+        "tau_def": 0.51
+      },
+      "view1": {
+        "tau_norm": 0.37,
+        "tau_def": 0.524
+      }
+    }
+  },
+  "c2": {
+    "model_name": "sl2_rtmp_1",
+    "temperature": 1.0474,
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.342,
+        "tau_def": 0.51
+      },
+      "view2": {
+        "tau_norm": 0.37,
+        "tau_def": 0.51
+      },
+      "view3": {
+        "tau_norm": 0.342,
+        "tau_def": 0.51
+      },
+      "view4": {
+        "tau_norm": 0.315,
+        "tau_def": 0.51
+      },
+      "view1": {
+        "tau_norm": 0.342,
+        "tau_def": 0.51
+      }
+    }
+  },
+  "c3": {
+    "model_name": "sl3_rtmp_1",
+    "temperature": 1.1851,
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.356,
+        "tau_def": 0.623
+      },
+      "view2": {
+        "tau_norm": 0.246,
+        "tau_def": 0.524
+      },
+      "view3": {
+        "tau_norm": 0.205,
+        "tau_def": 0.51
+      },
+      "view4": {
+        "tau_norm": 0.232,
+        "tau_def": 0.524
+      },
+      "view1": {
+        "tau_norm": 0.301,
+        "tau_def": 0.51
+      }
+    }
+  },
+  "c4": {
+    "model_name": "sl4_rtmp_1",
+    "temperature": 1.0514,
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.439,
+        "tau_def": 0.51
+      },
+      "view2": {
+        "tau_norm": 0.411,
+        "tau_def": 0.51
+      },
+      "view3": {
+        "tau_norm": 0.411,
+        "tau_def": 0.51
+      },
+      "view4": {
+        "tau_norm": 0.411,
+        "tau_def": 0.538
+      },
+      "view1": {
+        "tau_norm": 0.425,
+        "tau_def": 0.51
+      }
+    }
+  },
+  "c5": {
+    "model_name": "sl5_hybrid_1",
+    "temperature": 0.7953,
+    "view_thresholds": {
+      "view5": {
+        "tau_norm": 0.315,
+        "tau_def": 0.48
+      },
+      "view2": {
+        "tau_norm": 0.315,
+        "tau_def": 0.48
+      },
+      "view3": {
+        "tau_norm": 0.334,
+        "tau_def": 0.48
+      },
+      "view4": {
+        "tau_norm": 0.315,
+        "tau_def": 0.48
+      },
+      "view1": {
+        "tau_norm": 0.354,
+        "tau_def": 0.48
+      }
+    }
+  }
+}

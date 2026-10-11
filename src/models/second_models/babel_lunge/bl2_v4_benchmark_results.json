@@ -1,0 +1,195 @@
+{
+  "model_name": "bl2_v4",
+  "description": "v4 SOTA Kinematic Decoupling & Occlusion-Robust Production Model",
+  "timestamp": "2026-10-03 17:20:28",
+  "max_retake_rate": 0.1,
+  "min_coverage": 0.9,
+  "tau_normal": 0.512,
+  "tau_defect": 0.543,
+  "overall_3state": {
+    "total_samples": 1081,
+    "coverage": 0.910268270120259,
+    "retake_rate": 0.08973172987974098,
+    "retake_count": 97,
+    "decided_count": 984,
+    "selective_defect_f1": 0.40728476821192056,
+    "selective_clean_f1": 0.7375366568914956,
+    "selective_accuracy": 0.6361788617886179,
+    "selective_precision": 0.3773006134969325,
+    "selective_recall": 0.44244604316546765,
+    "confusion_matrix": [
+      [
+        503,
+        203
+      ],
+      [
+        155,
+        123
+      ]
+    ],
+    "full_coverage_defect_f1": 0.4083769633507853,
+    "full_coverage_clean_f1": 0.6766809728183119,
+    "full_coverage_accuracy": 0.5818686401480111,
+    "full_coverage_precision": 0.3406113537117904,
+    "full_coverage_recall": 0.5098039215686274,
+    "roc_auc": 0.6095888678051866
+  },
+  "view_benchmarks": {
+    "view5": {
+      "alias": "시점 A (우측 후방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9095022624434389,
+        "retake_rate": 0.09049773755656108,
+        "retake_count": 20,
+        "decided_count": 201,
+        "selective_defect_f1": 0.38235294117647056,
+        "selective_clean_f1": 0.6842105263157895,
+        "selective_accuracy": 0.582089552238806,
+        "selective_precision": 0.35135135135135137,
+        "selective_recall": 0.41935483870967744,
+        "confusion_matrix": [
+          [
+            91,
+            48
+          ],
+          [
+            36,
+            26
+          ]
+        ],
+        "full_coverage_defect_f1": 0.36363636363636365,
+        "full_coverage_clean_f1": 0.6209386281588448,
+        "full_coverage_accuracy": 0.5248868778280543,
+        "full_coverage_precision": 0.3,
+        "full_coverage_recall": 0.46153846153846156,
+        "roc_auc": 0.5693293885601578
+      }
+    },
+    "view2": {
+      "alias": "시점 B (우측 전방 45°)",
+      "metrics": {
+        "total_samples": 221,
+        "coverage": 0.9230769230769231,
+        "retake_rate": 0.07692307692307693,
+        "retake_count": 17,
+        "decided_count": 204,
+        "selective_defect_f1": 0.4892086330935252,
+        "selective_clean_f1": 0.7360594795539034,
+        "selective_accuracy": 0.6519607843137255,
+        "selective_precision": 0.4358974358974359,
+        "selective_recall": 0.5573770491803278,
+        "confusion_matrix": [
+          [
+            99,
+            44
+          ],
+          [
+            27,
+            34
+          ]
+        ],
+        "full_coverage_defect_f1": 0.4578313253012048,
+        "full_coverage_clean_f1": 0.6739130434782609,
+        "full_coverage_accuracy": 0.5927601809954751,
+        "full_coverage_precision": 0.37623762376237624,
+        "full_coverage_recall": 0.5846153846153846,
+        "roc_auc": 0.6542406311637081
+      }
+    },
+    "view3": {
+      "alias": "시점 C (정면 0°)",
+      "metrics": {
+        "total_samples": 216,
+        "coverage": 0.9120370370370371,
+        "retake_rate": 0.08796296296296297,
+        "retake_count": 19,
+        "decided_count": 197,
+        "selective_defect_f1": 0.43859649122807015,
+        "selective_clean_f1": 0.7714285714285715,
+        "selective_accuracy": 0.6751269035532995,
+        "selective_precision": 0.3968253968253968,
+        "selective_recall": 0.49019607843137253,
+        "confusion_matrix": [
+          [
+            108,
+            38
+          ],
+          [
+            26,
+            25
+          ]
+        ],
+        "full_coverage_defect_f1": 0.46357615894039733,
+        "full_coverage_clean_f1": 0.7117437722419929,
+        "full_coverage_accuracy": 0.625,
+        "full_coverage_precision": 0.38461538461538464,
+        "full_coverage_recall": 0.5833333333333334,
+        "roc_auc": 0.6428418803418804
+      }
+    },
+    "view4": {
+      "alias": "시점 D (좌측 전방 45°)",
+      "metrics": {
+        "total_samples": 212,
+        "coverage": 0.8820754716981132,
+        "retake_rate": 0.1179245283018868,
+        "retake_count": 25,
+        "decided_count": 187,
+        "selective_defect_f1": 0.30927835051546393,
+        "selective_clean_f1": 0.7581227436823105,
+        "selective_accuracy": 0.6417112299465241,
+        "selective_precision": 0.3333333333333333,
+        "selective_recall": 0.28846153846153844,
+        "confusion_matrix": [
+          [
+            105,
+            30
+          ],
+          [
+            37,
+            15
+          ]
+        ],
+        "full_coverage_defect_f1": 0.34285714285714286,
+        "full_coverage_clean_f1": 0.676056338028169,
+        "full_coverage_accuracy": 0.5660377358490566,
+        "full_coverage_precision": 0.2926829268292683,
+        "full_coverage_recall": 0.41379310344827586,
+        "roc_auc": 0.5454545454545455
+      }
+    },
+    "view1": {
+      "alias": "시점 E (좌측 후방 45°)",
+      "metrics": {
+        "total_samples": 211,
+        "coverage": 0.9241706161137441,
+        "retake_rate": 0.07582938388625593,
+        "retake_count": 16,
+        "decided_count": 195,
+        "selective_defect_f1": 0.3898305084745763,
+        "selective_clean_f1": 0.7352941176470589,
+        "selective_accuracy": 0.6307692307692307,
+        "selective_precision": 0.3484848484848485,
+        "selective_recall": 0.4423076923076923,
+        "confusion_matrix": [
+          [
+            100,
+            43
+          ],
+          [
+            29,
+            23
+          ]
+        ],
+        "full_coverage_defect_f1": 0.4084507042253521,
+        "full_coverage_clean_f1": 0.7,
+        "full_coverage_accuracy": 0.6018957345971564,
+        "full_coverage_precision": 0.34523809523809523,
+        "full_coverage_recall": 0.5,
+        "roc_auc": 0.6300428217263917
+      }
+    }
+  },
+  "total_elapsed_sec": 7.55
+}

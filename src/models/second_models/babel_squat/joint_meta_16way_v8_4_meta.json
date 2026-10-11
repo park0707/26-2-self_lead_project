@@ -1,0 +1,14 @@
+{
+  "T_meta": 1.0,
+  "eta": 0.1,
+  "tau_clean": 0.38,
+  "q_min": 0.05,
+  "deadband_low": 0.28,
+  "deadband_high": 0.42,
+  "clean_f1": 0.0,
+  "emr": 0.0,
+  "pre": 0.0,
+  "rec": 0.0,
+  "coverage": 0.0,
+  "retakes": 0
+}

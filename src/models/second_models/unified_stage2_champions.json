@@ -1,0 +1,664 @@
+{
+  "01_바벨_스쿼트": {
+    "exercise_index": 0,
+    "exercise_name": "01_바벨_스쿼트",
+    "num_defects": 4,
+    "defect_champions": {
+      "c1_척추의 중립": {
+        "defect_index": 0,
+        "defect_name": "척추의 중립",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 5,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "colsample_bytree": 0.8
+        },
+        "balanced_acc": 77.02,
+        "f1_score": 75.69,
+        "roc_auc": 83.35,
+        "latency_ms": 0.5444
+      },
+      "c2_고개 정면": {
+        "defect_index": 1,
+        "defect_name": "고개 정면",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 7,
+          "learning_rate": 0.03,
+          "num_leaves": 63,
+          "colsample_bytree": 0.7
+        },
+        "balanced_acc": 58.46,
+        "f1_score": 58.63,
+        "roc_auc": 60.52,
+        "latency_ms": 0.9917
+      },
+      "c3_발과 무릎의 방향 일치": {
+        "defect_index": 2,
+        "defect_name": "발과 무릎의 방향 일치",
+        "champion_model": "TabularMLP",
+        "best_params": {
+          "hidden_dims": [
+            128,
+            64
+          ],
+          "dropout": 0.2,
+          "lr": 0.002,
+          "weight_decay": 0.0001,
+          "epochs": 15,
+          "batch_size": 64
+        },
+        "balanced_acc": 85.93,
+        "f1_score": 85.75,
+        "roc_auc": 93.76,
+        "latency_ms": 4.0002
+      },
+      "c4_발바닥 지면 고정": {
+        "defect_index": 3,
+        "defect_name": "발바닥 지면 고정",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 7,
+          "learning_rate": 0.03,
+          "num_leaves": 63,
+          "colsample_bytree": 0.7
+        },
+        "balanced_acc": 72.83,
+        "f1_score": 71.98,
+        "roc_auc": 79.0,
+        "latency_ms": 1.3628
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 5.67,
+      "optimal_threshold": 0.15,
+      "balanced_acc": 78.79,
+      "recall_normal": 75.19,
+      "specificity_error": 82.38
+    }
+  },
+  "02_바벨_데드리프트": {
+    "exercise_index": 1,
+    "exercise_name": "02_바벨_데드리프트",
+    "num_defects": 5,
+    "defect_champions": {
+      "c1_척추의 중립": {
+        "defect_index": 0,
+        "defect_name": "척추의 중립",
+        "champion_model": "RandomForest",
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 10,
+          "min_samples_split": 5,
+          "max_features": "sqrt"
+        },
+        "balanced_acc": 65.53,
+        "f1_score": 64.64,
+        "roc_auc": 69.63,
+        "latency_ms": 0.4946
+      },
+      "c2_발과 무릎의 방향 일치": {
+        "defect_index": 1,
+        "defect_name": "발과 무릎의 방향 일치",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 7,
+          "learning_rate": 0.03,
+          "num_leaves": 63,
+          "colsample_bytree": 0.7
+        },
+        "balanced_acc": 71.19,
+        "f1_score": 67.91,
+        "roc_auc": 78.63,
+        "latency_ms": 1.1586
+      },
+      "c3_바벨 궤적과 몸 밀착": {
+        "defect_index": 2,
+        "defect_name": "바벨 궤적과 몸 밀착",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "num_leaves": 15,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 58.79,
+        "f1_score": 58.61,
+        "roc_auc": 61.9,
+        "latency_ms": 0.2178
+      },
+      "c4_무릎과 골반이 동시에 펴짐": {
+        "defect_index": 3,
+        "defect_name": "무릎과 골반이 동시에 펴짐",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "num_leaves": 15,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 57.52,
+        "f1_score": 56.02,
+        "roc_auc": 60.51,
+        "latency_ms": 0.1879
+      },
+      "c5_발바닥 지면 고정": {
+        "defect_index": 4,
+        "defect_name": "발바닥 지면 고정",
+        "champion_model": "CatBoost",
+        "best_params": {
+          "iterations": 120,
+          "depth": 6,
+          "learning_rate": 0.05,
+          "l2_leaf_reg": 3.0
+        },
+        "balanced_acc": 63.47,
+        "f1_score": 61.83,
+        "roc_auc": 67.73,
+        "latency_ms": 3.3081
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 8.03,
+      "optimal_threshold": 0.15,
+      "balanced_acc": 74.52,
+      "recall_normal": 61.68,
+      "specificity_error": 87.36
+    }
+  },
+  "03_바벨_스티프_데드리프트": {
+    "exercise_index": 2,
+    "exercise_name": "03_바벨_스티프_데드리프트",
+    "num_defects": 3,
+    "defect_champions": {
+      "c1_바벨 궤적과 몸 밀착": {
+        "defect_index": 0,
+        "defect_name": "바벨 궤적과 몸 밀착",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "subsample": 0.8,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 56.54,
+        "f1_score": 37.49,
+        "roc_auc": 63.27,
+        "latency_ms": 1.7808
+      },
+      "c2_무릎 구부린채 고정": {
+        "defect_index": 1,
+        "defect_name": "무릎 구부린채 고정",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "num_leaves": 15,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 58.4,
+        "f1_score": 39.12,
+        "roc_auc": 62.81,
+        "latency_ms": 0.4521
+      },
+      "c3_척추의 중립": {
+        "defect_index": 2,
+        "defect_name": "척추의 중립",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "subsample": 0.8,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 51.82,
+        "f1_score": 83.06,
+        "roc_auc": 62.26,
+        "latency_ms": 1.8104
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 3.99,
+      "optimal_threshold": 0.15,
+      "balanced_acc": 56.83,
+      "recall_normal": 57.95,
+      "specificity_error": 55.7
+    }
+  },
+  "04_바벨_런지": {
+    "exercise_index": 3,
+    "exercise_name": "04_바벨_런지",
+    "num_defects": 5,
+    "defect_champions": {
+      "c1_앞다리 무릎 각도 90도": {
+        "defect_index": 0,
+        "defect_name": "앞다리 무릎 각도 90도",
+        "champion_model": "TabularMLP",
+        "best_params": {
+          "hidden_dims": [
+            128,
+            64
+          ],
+          "dropout": 0.2,
+          "lr": 0.002,
+          "weight_decay": 0.0001,
+          "epochs": 15,
+          "batch_size": 64
+        },
+        "balanced_acc": 88.72,
+        "f1_score": 82.89,
+        "roc_auc": 95.57,
+        "latency_ms": 3.5984
+      },
+      "c2_몸통 발 무릎 방향 일치여부": {
+        "defect_index": 1,
+        "defect_name": "몸통 발 무릎 방향 일치여부",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 5,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "colsample_bytree": 0.8
+        },
+        "balanced_acc": 63.58,
+        "f1_score": 41.75,
+        "roc_auc": 80.08,
+        "latency_ms": 0.2786
+      },
+      "c3_뒤다리 무릎 각도 90도": {
+        "defect_index": 2,
+        "defect_name": "뒤다리 무릎 각도 90도",
+        "champion_model": "TabularMLP",
+        "best_params": {
+          "hidden_dims": [
+            128,
+            64
+          ],
+          "dropout": 0.2,
+          "lr": 0.002,
+          "weight_decay": 0.0001,
+          "epochs": 15,
+          "batch_size": 64
+        },
+        "balanced_acc": 82.15,
+        "f1_score": 74.69,
+        "roc_auc": 91.41,
+        "latency_ms": 2.8377
+      },
+      "c4_척추의 중립": {
+        "defect_index": 3,
+        "defect_name": "척추의 중립",
+        "champion_model": "CatBoost",
+        "best_params": {
+          "iterations": 120,
+          "depth": 6,
+          "learning_rate": 0.05,
+          "l2_leaf_reg": 3.0
+        },
+        "balanced_acc": 61.24,
+        "f1_score": 79.25,
+        "roc_auc": 72.58,
+        "latency_ms": 2.0941
+      },
+      "c5_상체의 과조한 숙임/젖힘 여부": {
+        "defect_index": 4,
+        "defect_name": "상체의 과조한 숙임/젖힘 여부",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 6,
+          "learning_rate": 0.03,
+          "subsample": 0.9,
+          "colsample_bytree": 0.7,
+          "reg_alpha": 0.5
+        },
+        "balanced_acc": 73.97,
+        "f1_score": 65.49,
+        "roc_auc": 84.1,
+        "latency_ms": 1.8882
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 8.12,
+      "optimal_threshold": 0.1,
+      "balanced_acc": 79.6,
+      "recall_normal": 73.38,
+      "specificity_error": 85.82
+    }
+  },
+  "05_다이나믹_런지": {
+    "exercise_index": 4,
+    "exercise_name": "05_다이나믹_런지",
+    "num_defects": 5,
+    "defect_champions": {
+      "c1_앞다리 무릎 각도 90도": {
+        "defect_index": 0,
+        "defect_name": "앞다리 무릎 각도 90도",
+        "champion_model": "TabularMLP",
+        "best_params": {
+          "hidden_dims": [
+            256,
+            128,
+            64
+          ],
+          "dropout": 0.3,
+          "lr": 0.001,
+          "weight_decay": 0.001,
+          "epochs": 15,
+          "batch_size": 64
+        },
+        "balanced_acc": 84.58,
+        "f1_score": 76.34,
+        "roc_auc": 93.61,
+        "latency_ms": 4.735
+      },
+      "c2_몸통 발 무릎 방향 일치여부": {
+        "defect_index": 1,
+        "defect_name": "몸통 발 무릎 방향 일치여부",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 5,
+          "learning_rate": 0.05,
+          "subsample": 0.8,
+          "colsample_bytree": 0.8
+        },
+        "balanced_acc": 52.18,
+        "f1_score": 9.26,
+        "roc_auc": 71.47,
+        "latency_ms": 0.9084
+      },
+      "c3_뒤다리 무릎 각도 90도": {
+        "defect_index": 2,
+        "defect_name": "뒤다리 무릎 각도 90도",
+        "champion_model": "TabularMLP",
+        "best_params": {
+          "hidden_dims": [
+            128,
+            64
+          ],
+          "dropout": 0.2,
+          "lr": 0.002,
+          "weight_decay": 0.0001,
+          "epochs": 15,
+          "batch_size": 64
+        },
+        "balanced_acc": 78.27,
+        "f1_score": 68.31,
+        "roc_auc": 88.32,
+        "latency_ms": 7.6248
+      },
+      "c4_척추의 중립": {
+        "defect_index": 3,
+        "defect_name": "척추의 중립",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 5,
+          "learning_rate": 0.05,
+          "subsample": 0.8,
+          "colsample_bytree": 0.8
+        },
+        "balanced_acc": 63.17,
+        "f1_score": 73.44,
+        "roc_auc": 71.45,
+        "latency_ms": 1.1086
+      },
+      "c5_상체의 과조한 숙임/젖힘 여부": {
+        "defect_index": 4,
+        "defect_name": "상체의 과조한 숙임/젖힘 여부",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 6,
+          "learning_rate": 0.03,
+          "subsample": 0.9,
+          "colsample_bytree": 0.7,
+          "reg_alpha": 0.5
+        },
+        "balanced_acc": 72.99,
+        "f1_score": 65.16,
+        "roc_auc": 82.48,
+        "latency_ms": 2.3466
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 5.39,
+      "optimal_threshold": 0.25,
+      "balanced_acc": 69.27,
+      "recall_normal": 68.21,
+      "specificity_error": 70.33
+    }
+  },
+  "06_사이드_런지": {
+    "exercise_index": 5,
+    "exercise_name": "06_사이드_런지",
+    "num_defects": 5,
+    "defect_champions": {
+      "c1_앞다리 무릎 각도 90도": {
+        "defect_index": 0,
+        "defect_name": "앞다리 무릎 각도 90도",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 7,
+          "learning_rate": 0.03,
+          "num_leaves": 63,
+          "colsample_bytree": 0.7
+        },
+        "balanced_acc": 67.4,
+        "f1_score": 54.18,
+        "roc_auc": 77.7,
+        "latency_ms": 2.9705
+      },
+      "c2_몸통 발 무릎 방향 일치여부": {
+        "defect_index": 1,
+        "defect_name": "몸통 발 무릎 방향 일치여부",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "num_leaves": 15,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 51.17,
+        "f1_score": 6.3,
+        "roc_auc": 62.78,
+        "latency_ms": 0.5901
+      },
+      "c3_뒤다리 무릎 각도 90도": {
+        "defect_index": 2,
+        "defect_name": "뒤다리 무릎 각도 90도",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "subsample": 0.8,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 54.33,
+        "f1_score": 26.77,
+        "roc_auc": 58.51,
+        "latency_ms": 1.1206
+      },
+      "c4_척추의 중립": {
+        "defect_index": 3,
+        "defect_name": "척추의 중립",
+        "champion_model": "CatBoost",
+        "best_params": {
+          "iterations": 150,
+          "depth": 6,
+          "learning_rate": 0.04,
+          "l2_leaf_reg": 4.0
+        },
+        "balanced_acc": 55.34,
+        "f1_score": 79.25,
+        "roc_auc": 63.06,
+        "latency_ms": 4.3568
+      },
+      "c5_상체의 과조한 숙임/젖힘 여부": {
+        "defect_index": 4,
+        "defect_name": "상체의 과조한 숙임/젖힘 여부",
+        "champion_model": "LightGBM",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 7,
+          "learning_rate": 0.03,
+          "num_leaves": 63,
+          "colsample_bytree": 0.7
+        },
+        "balanced_acc": 60.76,
+        "f1_score": 40.54,
+        "roc_auc": 72.7,
+        "latency_ms": 1.4213
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 8.3,
+      "optimal_threshold": 0.1,
+      "balanced_acc": 72.92,
+      "recall_normal": 61.7,
+      "specificity_error": 84.14
+    }
+  },
+  "07_크로스_런지": {
+    "exercise_index": 6,
+    "exercise_name": "07_크로스_런지",
+    "num_defects": 3,
+    "defect_champions": {
+      "c1_앞다리 무릎 각도 90도": {
+        "defect_index": 0,
+        "defect_name": "앞다리 무릎 각도 90도",
+        "champion_model": "CatBoost",
+        "best_params": {
+          "iterations": 120,
+          "depth": 6,
+          "learning_rate": 0.05,
+          "l2_leaf_reg": 3.0
+        },
+        "balanced_acc": 83.76,
+        "f1_score": 79.01,
+        "roc_auc": 92.17,
+        "latency_ms": 14.0725
+      },
+      "c2_몸통 앞발 앞무릎 방향 일치여부": {
+        "defect_index": 1,
+        "defect_name": "몸통 앞발 앞무릎 방향 일치여부",
+        "champion_model": "ExtraTrees",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 14,
+          "min_samples_split": 4,
+          "max_features": 0.5
+        },
+        "balanced_acc": 67.39,
+        "f1_score": 67.42,
+        "roc_auc": 73.82,
+        "latency_ms": 2.7202
+      },
+      "c3_상체 정면 균형잡기": {
+        "defect_index": 2,
+        "defect_name": "상체 정면 균형잡기",
+        "champion_model": "XGBoost",
+        "best_params": {
+          "n_estimators": 80,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "subsample": 0.8,
+          "colsample_bytree": 0.9
+        },
+        "balanced_acc": 67.36,
+        "f1_score": 77.92,
+        "roc_auc": 76.37,
+        "latency_ms": 2.8748
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 3.86,
+      "optimal_threshold": 0.25,
+      "balanced_acc": 76.99,
+      "recall_normal": 69.7,
+      "specificity_error": 84.27
+    }
+  },
+  "08_굿모닝": {
+    "exercise_index": 7,
+    "exercise_name": "08_굿모닝",
+    "num_defects": 3,
+    "defect_champions": {
+      "c1_무릎 구부린채 고정": {
+        "defect_index": 0,
+        "defect_name": "무릎 구부린채 고정",
+        "champion_model": "CatBoost",
+        "best_params": {
+          "iterations": 120,
+          "depth": 6,
+          "learning_rate": 0.05,
+          "l2_leaf_reg": 3.0
+        },
+        "balanced_acc": 78.31,
+        "f1_score": 77.7,
+        "roc_auc": 88.06,
+        "latency_ms": 16.0862
+      },
+      "c2_시선 방향 유지": {
+        "defect_index": 1,
+        "defect_name": "시선 방향 유지",
+        "champion_model": "ExtraTrees",
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 8,
+          "min_samples_split": 6,
+          "max_features": "log2"
+        },
+        "balanced_acc": 57.51,
+        "f1_score": 58.0,
+        "roc_auc": 59.45,
+        "latency_ms": 1.9896
+      },
+      "c3_척추의 중립": {
+        "defect_index": 2,
+        "defect_name": "척추의 중립",
+        "champion_model": "ExtraTrees",
+        "best_params": {
+          "n_estimators": 150,
+          "max_depth": 14,
+          "min_samples_split": 4,
+          "max_features": 0.5
+        },
+        "balanced_acc": 56.43,
+        "f1_score": 57.18,
+        "roc_auc": 57.31,
+        "latency_ms": 3.0222
+      }
+    },
+    "gatekeeper": {
+      "model_name": "CatBoost",
+      "scale_pos_weight": 3.97,
+      "optimal_threshold": 0.2,
+      "balanced_acc": 67.97,
+      "recall_normal": 64.63,
+      "specificity_error": 71.3
+    }
+  }
+}

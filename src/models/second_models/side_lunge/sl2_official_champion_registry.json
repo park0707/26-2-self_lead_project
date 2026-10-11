@@ -1,0 +1,38 @@
+{
+  "model_name": "sl2_v2",
+  "project_name": "vidio-health-trainer",
+  "exercise": "사이드 런지 (07_사이드_런지)",
+  "defect_condition": "c2 (몸통 발 무릎 방향 일치 여부 오류)",
+  "status": "OFFICIAL_CHAMPION",
+  "selected_strategy": "Strategy A (Defect F1 Maximized)",
+  "dataset_scope": "AI-Hub 원천 데이터 826개 폴더 전체 (4,130개 시퀀스 전수)",
+  "labeling_strategy": "설명(Description) 기반 일관 정제 Ground Truth",
+  "feature_engineering": {
+    "module": "side_lunge_c2_features.py",
+    "feature_dim": 18,
+    "description": "bl2 v6 정통 계승 18D (상체 노이즈 완전 배제, 하지 기계축 16D + 수평 무릎변위-발끝 사잇각 + 기립 대비 동적 Q각 변화량)"
+  },
+  "ensemble_architecture": {
+    "models": ["LightGBM", "CatBoost", "XGBoost"],
+    "weights": {
+      "lgb": 0.0884,
+      "cat": 0.2391,
+      "xgb": 0.6725
+    }
+  },
+  "decision_gate_3state": {
+    "tau_normal": 0.3475,
+    "tau_defect": 0.4300,
+    "retake_rate": 0.0981,
+    "coverage": 0.9019,
+    "selective_defect_f1": 0.4648,
+    "selective_clean_f1": 0.8610,
+    "macro_f1": 0.6629,
+    "selective_accuracy": 0.7793,
+    "selective_precision": 0.4255,
+    "selective_recall": 0.5122,
+    "roc_auc": 0.7335
+  },
+  "weights_file": "D:/src/models/second_models/side_lunge/sl2_v2_bundle.pkl",
+  "test_script": "D:/src/models/second_models/side_lunge/test_sl2_v2_pipeline.py"
+}
