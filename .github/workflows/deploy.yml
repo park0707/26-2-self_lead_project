@@ -1,0 +1,30 @@
+name: Sync to Hugging Face Spaces
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE_NAME: ${{ secrets.HF_SPACE_NAME }} # 예: "username/vidio-health-trainer"
+        run: |
+          if [ -z "$HF_TOKEN" ] || [ -z "$HF_SPACE_NAME" ]; then
+            echo "::error::HF_TOKEN 또는 HF_SPACE_NAME 시크릿이 설정되지 않았습니다. GitHub Settings > Secrets and variables > Actions 에서 등록해 주세요."
+            exit 1
+          fi
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git remote add space https://user:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_NAME
+          git push --force space main

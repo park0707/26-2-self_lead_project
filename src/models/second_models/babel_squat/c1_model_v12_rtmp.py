@@ -126,7 +126,10 @@ class BabelSquatC1ModelV12RTMP:
         spine_9_64f: Optional[np.ndarray] = None
     ) -> np.ndarray:
         try:
-            from c1_model_v11_a import extract_c1_v11_a_features_from_seq
+            try:
+                from src.models.second_models.babel_squat.c1_model_v11_a import extract_c1_v11_a_features_from_seq
+            except ImportError:
+                from c1_model_v11_a import extract_c1_v11_a_features_from_seq
             return extract_c1_v11_a_features_from_seq(kps_64f, spine_9_64f)
         except Exception:
             return np.zeros(38, dtype=np.float32)

@@ -1,0 +1,29 @@
+# Git & version control
+.git
+.gitignore
+
+# Virtual Environments
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Heavy Video & Raw Dataset Directories
+data/
+data_sample/
+test_videos/
+catboost_info/
+wandb/
+
+# Temporary / Scratch files
+tmp/
+temp/
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+tests/scratch/
+.system_generated/

@@ -129,8 +129,11 @@ class BabelSquatC2ModelV9RTMP:
         view_name: str = 'view3'
     ) -> np.ndarray:
         try:
-            from c2_model_v7 import extract_c2_v7_19d_features_from_seq
-            return extract_c2_v7_19d_features_from_seq(kps_64f, view_name)
+            try:
+                from src.models.second_models.babel_squat.c2_model_v7 import extract_c2_v7_19d_features_from_seq
+            except ImportError:
+                from c2_model_v7 import extract_c2_v7_19d_features_from_seq
+            return extract_c2_v7_19d_features_from_seq(kps_64f)
         except Exception:
             return np.zeros(19, dtype=np.float32)
 

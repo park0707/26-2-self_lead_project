@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vidio-health-trainer | AI 실시간 운동 자세 분석 플랫폼</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo-container">
+      <div class="logo-badge">AI KINETIC</div>
+      <h1 class="logo-title">vidio-health-trainer</h1>
+    </div>
+    <div class="header-status">
+      <div class="status-pill">
+        <span id="serverStatusDot" class="status-dot"></span>
+        <span id="serverStatusText">연결 확인 중...</span>
+      </div>
+      <a href="/docs" target="_blank" class="docs-link">Swagger API 문서 ↗</a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Upload & Control Section -->
+    <section class="control-card">
+      <h2 class="card-title">
+        <span>01</span> 운동 영상 업로드 및 분석 설정
+      </h2>
+      <div class="control-grid">
+        <!-- Dropzone Area -->
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="videoFileInput" accept=".mp4,.mov,.avi,.webm,.mkv" style="display: none;" />
+          <div class="dropzone-icon">📹</div>
+          <div class="dropzone-text">운동 분석 영상을 이곳에 드래그하거나 클릭하여 선택하세요</div>
+          <div class="dropzone-subtext">지원 포맷: MP4, MOV, AVI, WEBM (단일 횟수 또는 연속 횟수 영상)</div>
+          <div id="selectedFileBadge" class="selected-file-badge"></div>
+        </div>
+
+        <!-- Options Panel -->
+        <div class="options-panel">
+          <div class="form-group">
+            <label class="form-label" for="exerciseSelect">1단계 운동 종목 선택 (옵션)</label>
+            <select id="exerciseSelect" class="form-select">
+              <option value="">[1단계 AI 자동 판별]</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="viewSelect">공식 5대 카메라 촬영 시점</label>
+            <select id="viewSelect" class="form-select">
+              <option value="시점 C: 정면">시점 C (정면 0°) - 기본</option>
+              <option value="시점 A: 우측 후방 (45도)">시점 A (우측 후방 45°)</option>
+              <option value="시점 B: 우측 전방 (45도)">시점 B (우측 전방 45°)</option>
+              <option value="시점 D: 좌측 전방 (45도)">시점 D (좌측 전방 45°)</option>
+              <option value="시점 E: 좌측 후방 (45도)">시점 E (좌측 후방 45°)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="strideSelect">추출 속도 모드 (서브샘플링 2.3배속)</label>
+            <select id="strideSelect" class="form-select">
+              <option value="2" selected>⚡ 2배속 초고속 모드 (Stride 2 = 15 FPS, 권장)</option>
+              <option value="1">🎯 1배속 정밀 모드 (Stride 1 = 30 FPS 전수)</option>
+            </select>
+          </div>
+
+          <button id="startAnalyzeBtn" class="btn-primary" disabled>
+            <span>⚡</span> AI 정밀 자세 분석 시작
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Notification Card -->
+    <section id="progressCard" class="progress-card">
+      <div class="progress-header">
+        <span>실시간 비디오 분석 진행 중...</span>
+        <span id="progressPercentText">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="progressBarFill" class="progress-bar-fill"></div>
+      </div>
+      <div id="progressStatusText" class="progress-status-text">준비 중...</div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultsSection" class="results-section">
+      <h2 class="card-title">
+        <span>02</span> 생체역학 AI 분석 종합 대시보드
+      </h2>
+
+      <!-- Metrics Row -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-label">판별된 운동 종목</span>
+          <span id="metricExercise" class="metric-value">-</span>
+          <span id="metricConfidence" class="metric-sub">확신도: -</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">총 수행 반복 (Reps)</span>
+          <span id="metricTotalReps" class="metric-value">-</span>
+          <span id="metricActivePeriod" class="metric-sub">1회 반복 단위 자동 분할</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">클린 자세 성공률</span>
+          <span id="metricCleanReps" class="metric-value">-</span>
+          <span class="metric-sub">결함 미발생 완벽한 반복</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">전체 분석 소요 시간</span>
+          <span id="metricDuration" class="metric-value">-</span>
+          <span class="metric-sub">순수 비전 + AI 추론 완료</span>
+        </div>
+      </div>
+
+      <!-- Detail Row (Skeleton Viewer + Defect Cards) -->
+      <div class="detail-grid">
+        <!-- Left: Interactive 64-Frame Video Overlay & Skeleton Player -->
+        <div class="viewer-card">
+          <div class="viewer-header">
+            <h3 class="card-title"><span>🎬</span> 64-Frame 영상 오버레이 & 스켈레톤 리플레이</h3>
+            <span id="activeRepBadge" class="rep-indicator-badge">반복 구간 대기 중</span>
+          </div>
+
+          <!-- Mode Selector Toolbar -->
+          <div class="mode-selector-toolbar">
+            <div class="mode-btn-group">
+              <button type="button" class="mode-btn active" data-mode="rtmp" title="RTMPose Halpe26: 발 3각 지지면 & 척추선 정밀 추적">
+                <span>⚡</span> RTMPose (26관절)
+              </button>
+              <button type="button" class="mode-btn" data-mode="mediapipe" title="MediaPipe 33: 전신 관절 추적">
+                <span>✨</span> MediaPipe (33관절)
+              </button>
+              <button type="button" class="mode-btn" data-mode="both" title="MediaPipe와 RTMPose를 동시에 중첩하여 비교">
+                <span>🔀</span> 듀얼 비교
+              </button>
+              <button type="button" class="mode-btn" data-mode="spinepose" title="SpinePose: 9대 척추 분절선 정밀 추적">
+                <span>🧬</span> SpinePose (척추9)
+              </button>
+              <button type="button" class="mode-btn" data-mode="skeleton" title="영상 없이 순수 뼈대만 보기">
+                <span>🦴</span> 단순 뼈대
+              </button>
+            </div>
+            
+            <div class="dimmer-box" title="배경 비디오의 투명도를 조절하여 스켈레톤 가시성을 높입니다">
+              <label for="videoOpacitySlider" class="dimmer-label">영상 투명도</label>
+              <input type="range" id="videoOpacitySlider" min="0.1" max="1.0" step="0.05" value="0.85" class="dimmer-slider" />
+              <span id="videoOpacityVal" class="dimmer-val">85%</span>
+            </div>
+          </div>
+
+          <div class="canvas-container" id="canvasContainer">
+            <video id="replayVideo" playsinline muted preload="auto" class="replay-video"></video>
+            <canvas id="skeletonCanvas"></canvas>
+            <div id="videoPlaceholder" class="video-placeholder">
+              <div class="placeholder-icon">📹</div>
+              <div class="placeholder-text">영상을 업로드하면 1회 반복 클립 위에 스켈레톤이 실시간 오버레이됩니다</div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <button id="playPauseBtn" class="btn-icon" disabled>▶ 재생</button>
+            <input type="range" id="timelineSlider" class="timeline-slider" min="0" max="63" value="0" disabled />
+            <span id="frameIndicator" class="frame-indicator">0 / 64F</span>
+            
+            <div class="speed-control">
+              <label for="speedSelect" class="speed-label">속도</label>
+              <select id="speedSelect" class="speed-select">
+                <option value="0.25">0.25x</option>
+                <option value="0.5" selected>0.5x</option>
+                <option value="1.0">1.0x</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Color Legend for Dual/RTMP/MediaPipe modes -->
+          <div id="skeletonLegend" class="skeleton-legend">
+            <span class="legend-item rtmp-legend"><span class="legend-dot rtmp-dot"></span> RTMPose 26 (초록 몸체 / 골드 발 지지면)</span>
+            <span class="legend-item mp-legend"><span class="legend-dot mp-dot"></span> MediaPipe 33 (스카이블루 / 인디고 전신)</span>
+          </div>
+        </div>
+
+        <!-- Right: Repetition Defect Cards -->
+        <div class="defects-card">
+          <h3 class="card-title"><span>📊</span> 횟수별 33종 세부 결함 진단 카드</h3>
+          
+          <!-- Repetition Tabs -->
+          <div id="repTabsContainer" class="rep-tabs">
+            <!-- Dynamic Rep Tabs will be injected here -->
+          </div>
+
+          <!-- Defect List -->
+          <div id="defectList" class="defect-list">
+            <!-- Dynamic Defect Items will be injected here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>vidio-health-trainer &copy; 2026. All rights reserved. | 8대 운동 33종 결함 실시간 비디오 분석 서비스</p>
+  </footer>
+
+  <script src="/static/app.js?v=20261012_speedup"></script>
+</body>
+</html>

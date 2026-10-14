@@ -127,8 +127,17 @@ class BabelSquatC3ModelV7RTMP:
         view_name: str = 'view3'
     ) -> np.ndarray:
         try:
-            from c3_model_v6 import extract_c3_v6_features_from_seq
-            return extract_c3_v6_features_from_seq(kps_64f, view_name)
+            if kps_64f.shape[1] == 26:
+                try:
+                    from src.web.core.topology_adapter import SkeletalTopologyAdapter
+                    kps_64f = SkeletalTopologyAdapter.rtmpose_26_to_mediapipe_33(kps_64f)
+                except Exception:
+                    pass
+            try:
+                from src.models.second_models.babel_squat.c3_model_v6 import extract_c3_v6_features_from_seq
+            except ImportError:
+                from c3_model_v6 import extract_c3_v6_features_from_seq
+            return extract_c3_v6_features_from_seq(kps_64f)
         except Exception:
             return np.zeros(22, dtype=np.float32)
 

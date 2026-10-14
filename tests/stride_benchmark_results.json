@@ -1,0 +1,130 @@
+[
+  {
+    "stride": 1,
+    "fps_effective": "30.0 FPS",
+    "samples": 585,
+    "elapsed_sec": 39.75,
+    "speedup": 1.0,
+    "active_start": 137,
+    "active_end": 584,
+    "reps_count": 5,
+    "mae_cm": 0.23,
+    "cos_sim": 99.99,
+    "exercise": "01_바벨_스쿼트",
+    "conf": 50.0,
+    "defects": {
+      "c1": [
+        0.7086,
+        "결함"
+      ],
+      "c2": [
+        0.2734,
+        "정상"
+      ],
+      "c3": [
+        0.9526,
+        "결함"
+      ],
+      "c4": [
+        0.0778,
+        "정상"
+      ]
+    }
+  },
+  {
+    "stride": 2,
+    "fps_effective": "15.0 FPS",
+    "samples": 293,
+    "elapsed_sec": 17.02,
+    "speedup": 2.34,
+    "active_start": 134,
+    "active_end": 584,
+    "reps_count": 5,
+    "mae_cm": 0.92,
+    "cos_sim": 99.85,
+    "exercise": "01_바벨_스쿼트",
+    "conf": 49.6,
+    "defects": {
+      "c1": [
+        0.6144,
+        "결함"
+      ],
+      "c2": [
+        0.2828,
+        "정상"
+      ],
+      "c3": [
+        0.9526,
+        "결함"
+      ],
+      "c4": [
+        0.0778,
+        "정상"
+      ]
+    }
+  },
+  {
+    "stride": 3,
+    "fps_effective": "10.0 FPS",
+    "samples": 195,
+    "elapsed_sec": 12.22,
+    "speedup": 3.25,
+    "active_start": 132,
+    "active_end": 582,
+    "reps_count": 5,
+    "mae_cm": 1.34,
+    "cos_sim": 99.72,
+    "exercise": "01_바벨_스쿼트",
+    "conf": 48.1,
+    "defects": {
+      "c1": [
+        0.6915,
+        "결함"
+      ],
+      "c2": [
+        0.2641,
+        "정상"
+      ],
+      "c3": [
+        0.9526,
+        "결함"
+      ],
+      "c4": [
+        0.0778,
+        "정상"
+      ]
+    }
+  },
+  {
+    "stride": 4,
+    "fps_effective": "7.5 FPS",
+    "samples": 147,
+    "elapsed_sec": 10.23,
+    "speedup": 3.89,
+    "active_start": 132,
+    "active_end": 584,
+    "reps_count": 5,
+    "mae_cm": 1.5,
+    "cos_sim": 99.68,
+    "exercise": "01_바벨_스쿼트",
+    "conf": 49.8,
+    "defects": {
+      "c1": [
+        0.6606,
+        "결함"
+      ],
+      "c2": [
+        0.2565,
+        "정상"
+      ],
+      "c3": [
+        0.9526,
+        "결함"
+      ],
+      "c4": [
+        0.0778,
+        "정상"
+      ]
+    }
+  }
+]
