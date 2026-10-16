@@ -11,6 +11,6 @@ services:
     autoDeploy: true
     envVars:
       - key: PYTHON_VERSION
-        value: 3.10.13
+        value: 3.10.14
       - key: PYTHONUNBUFFERED
         value: "1"
