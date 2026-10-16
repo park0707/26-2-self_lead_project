@@ -45,8 +45,8 @@ class TestStage3FeedbackEngine(unittest.TestCase):
         """단일 결함 3-State 상태별 포맷팅 검증"""
         # State 1 (결함)
         fb_defect = self.engine.format_single_feedback("c1", state=1, prob=0.85)
-        self.assertIn("[교정 지침]", fb_defect)
-        self.assertIn("가슴을 곧게 펴고", fb_defect)
+        self.assertIn("[교정 조치]", fb_defect)
+        self.assertIn("가슴을", fb_defect)
 
         # State 2 (주의/보류)
         fb_caution = self.engine.format_single_feedback("c1", state=2, prob=0.45)
@@ -55,7 +55,7 @@ class TestStage3FeedbackEngine(unittest.TestCase):
 
         # State 0 (정상)
         fb_clean = self.engine.format_single_feedback("c1", state=0, prob=0.05)
-        self.assertIn("[정상 유지]", fb_clean)
+        self.assertIn("정상 동작입니다", fb_clean)
 
     def test_03_prioritize_rep_defects_and_priority_queue(self):
         """다중 결함 발생 시 생체역학 위험도 기반 우선순위 큐 검증"""

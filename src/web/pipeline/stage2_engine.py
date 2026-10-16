@@ -9,10 +9,12 @@ Purpose: 웹 서빙 전용 2단계 운동별 세부 결함(33종) 실시간 단�
          - 각 결함 모델 출력 규격: {defect_code, defect_name, probability, state, state_label, feedback: '피드백 자리'}
 """
 
+from __future__ import annotations
+
 import os
 import sys
 import time
-from typing import Dict, List, Optional, Any, Union
+from typing import Dict, List, Optional, Any, Union, Tuple
 import numpy as np
 
 # 프로젝트 루트 경로 등록

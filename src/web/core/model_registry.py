@@ -742,9 +742,10 @@ class DefectModelRegistry:
             if item:
                 dp.target_joint = item.target_joint
                 dp.action_cue = item.action_cue
+                dp.corrective_action = item.corrective_action
                 dp.biomechanical_reason = item.biomechanical_reason
                 dp.optimal_view = item.optimal_view
-                # 기존 하드코딩된 플레이스홀더('피드백 자리')를 실질적 생체역학 코칭 문구로 자동 치환
+                # 기존 하드코딩된 플레이스홀더('피드백 자리')를 실질적 조치 문구로 자동 치환
                 if not dp.feedback or dp.feedback == "피드백 자리":
                     dp.feedback = fb_engine.format_single_feedback(
                         dp.defect_code, dp.state, dp.probability, view_code

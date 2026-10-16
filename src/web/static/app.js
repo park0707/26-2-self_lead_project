@@ -409,8 +409,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="prob-label">${probPercent}%</span>
         </div>
         <div class="feedback-box">
-          <div class="feedback-title">생체역학 AI 코칭 피드백</div>
-          <div>${df.feedback}</div>
+          <div class="feedback-title">정상 동작을 위한 교정 조치</div>
+          <div style="font-weight: 500; line-height: 1.45;">${df.corrective_action || df.feedback}</div>
         </div>
       `;
       defectList.appendChild(item);
