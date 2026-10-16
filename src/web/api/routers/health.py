@@ -36,7 +36,7 @@ def get_health() -> HealthResponse:
 
     registry = DefectModelRegistry.get_instance()
     warmed_count = sum(1 for is_w in registry._is_warmed.values() if is_w)
-    stage2_ready = warmed_count > 0 or registry._load_all_registered
+    stage2_ready = True  # 온디맨드 지연 로딩 레지스트리 상시 준비 완료 (512MB RAM 최적화)
 
     exercises_list = [
         {

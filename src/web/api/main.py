@@ -21,13 +21,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 
-# 프로젝트 루트 경로 등록
+# 프로젝트 루트 및 모듈 경로 등록
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../.."))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-if 'd:/' not in sys.path and 'd:\\\\' not in sys.path:
-    sys.path.insert(0, 'd:/')
+SRC_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../.."))
+FEATURES_DIR = os.path.join(SRC_ROOT, "features")
+
+for p in [PROJECT_ROOT, SRC_ROOT, FEATURES_DIR]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
 from src.web.api.routers import health, analyze
 from src.web.api import websocket
@@ -46,35 +48,36 @@ logger = logging.getLogger("web_api_main")
 async def lifespan(app: FastAPI):
     """
     서버 수명 주기(Lifespan) 관리:
-    서버 시작 시 1단계 및 2단계 33종 전 모델을 메모리에 사전 상주시킵니다.
+    클라우드 프리 티어(512MB RAM) 최적화:
+    - 1단계 종목 분류 엔진 싱글톤 로드 (~5.5MB)
+    - 2단계 33종 결함 모델 및 비전 디텍터는 사용 시점 온디맨드 지연 로딩(Lazy Loading)으로 OOM 방지
     """
+    import gc
+    import torch
+    try:
+        torch.set_num_threads(1)
+    except Exception:
+        pass
+
     logger.info("=" * 70)
-    logger.info("★ [vidio-health-trainer] 웹 서비스 백엔드 기동 시작")
+    logger.info("★ [vidio-health-trainer] 웹 서비스 백엔드 기동 시작 (Cloud Memory-Optimized Mode)")
     logger.info("=" * 70)
 
     t0 = time.time()
 
     # 1. 1단계 종목 분류 엔진 싱글톤 로드
-    logger.info("[1/3] 1단계 운동 분류 엔진 사전 워밍 중...")
+    logger.info("[1/2] 1단계 운동 분류 엔진 로드 중...")
     stage1 = Stage1InferenceEngine.get_instance()
     logger.info(f"      ✔ 1단계 모델 로드 완료 (버전: {stage1.bundle.get('version', 'v6.0')}, 지원 운동: {len(stage1.exercise_names_ko)}종)")
 
+    # 2. 2단계 엔진 싱글톤 등록 (사전 워밍 생략, On-Demand Lazy Loading 유지)
+    logger.info("[2/2] 2단계 33종 결함 엔진 및 비전 파이프라인 지연 로딩 모드 활성화 (512MB RAM 보호)")
+    _ = Stage2InferenceEngine.get_instance(prewarm=False)
 
-    # 2. 2단계 33종 결함 모델 전수 사전 워밍
-    logger.info("[2/3] 2단계 8대 운동 33종 세부 결함 모델 사전 워밍 중...")
-    stage2 = Stage2InferenceEngine.get_instance()
-    warm_elapsed = stage2.warm_up()
-    logger.info(f"      ✔ 2단계 33종 결함 모델 사전 워밍 완료 ({warm_elapsed:.2f}초 소요)")
-
-    # 3. 비전 파이프라인 (MediaPipe) 디텍터 워밍
-    logger.info("[3/3] MediaPipe PoseLandmarker 디텍터 초기화 중...")
-    pipeline = VideoAnalysisPipeline.get_instance()
-    _ = pipeline._get_detector()
-    logger.info("      ✔ 비전 디텍터 초기화 완료")
-
+    gc.collect()
     total_startup_sec = round(time.time() - t0, 2)
     logger.info("=" * 70)
-    logger.info(f"★ [vidio-health-trainer] 모든 AI 모델 사전 워밍 완료 ({total_startup_sec}초) - 요청 수신 준비 완료!")
+    logger.info(f"★ [vidio-health-trainer] 백엔드 기동 완료 ({total_startup_sec}초) - 포트 바인딩 및 요청 수신 준비 완료!")
     logger.info("=" * 70)
 
     yield

@@ -16,13 +16,14 @@ import logging
 from typing import Dict, List, Optional, Any, Tuple
 import numpy as np
 
-# 프로젝트 루트 경로 등록
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../.."))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-if 'd:/' not in sys.path and 'd:\\' not in sys.path:
-    sys.path.insert(0, 'd:/')
+SRC_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../.."))
+FEATURES_DIR = os.path.join(SRC_ROOT, "features")
+
+for p in [PROJECT_ROOT, SRC_ROOT, FEATURES_DIR]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
 from src.web.core.config import EXERCISE_CATALOG, VIEW_ALIAS_MAP, WEIGHTS_DIR
 from src.web.core.schemas import DefectPrediction
