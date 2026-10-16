@@ -159,22 +159,32 @@ class SkeletalTopologyAdapter:
     def resample_to_64_frames(seq: np.ndarray) -> np.ndarray:
         """
         임의 길이 시퀀스 (T, J, C) 또는 (T, D)를 64프레임으로 3차 스플라인(Cubic Spline) 보간
-        (AGENTS.md 제2조 표준 규정 준수)
+        (AGENTS.md 제2조 표준 규정 준수 및 T<=1 엣지 케이스 완벽 방어)
         """
         seq = np.asarray(seq, dtype=np.float32)
         T = len(seq)
         if T == 64:
             return seq
+        if T <= 0:
+            target_shape = (64,) + seq.shape[1:]
+            return np.zeros(target_shape, dtype=np.float32)
+        if T == 1:
+            target_shape = (64,) + seq.shape[1:]
+            return np.repeat(seq, 64, axis=0).astype(np.float32)
 
         orig_shape = seq.shape
         flat_seq = seq.reshape(T, -1)  # (T, J*C)
-        D = flat_seq.shape[1]
 
         t_orig = np.linspace(0.0, 1.0, T)
         t_target = np.linspace(0.0, 1.0, 64)
 
-        cs = CubicSpline(t_orig, flat_seq, axis=0)
-        resampled_flat = cs(t_target).astype(np.float32)
+        if T < 4:
+            from scipy.interpolate import interp1d
+            f = interp1d(t_orig, flat_seq, kind='linear', axis=0, fill_value='extrapolate')
+            resampled_flat = f(t_target).astype(np.float32)
+        else:
+            cs = CubicSpline(t_orig, flat_seq, axis=0)
+            resampled_flat = cs(t_target).astype(np.float32)
 
         target_shape = (64,) + orig_shape[1:]
         return resampled_flat.reshape(target_shape)

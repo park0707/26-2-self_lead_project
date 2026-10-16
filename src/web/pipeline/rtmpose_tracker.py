@@ -27,7 +27,7 @@ if PROJECT_ROOT not in sys.path:
 if 'd:/' not in sys.path and 'd:\\' not in sys.path:
     sys.path.insert(0, 'd:/')
 
-from rtmlib import BodyWithFeet
+from rtmlib import RTMPose
 
 logger = logging.getLogger("rtmpose_tracker")
 
@@ -38,7 +38,7 @@ class RTMPoseTracker:
     _instance = None
 
     def __init__(self):
-        self._detector: Optional[BodyWithFeet] = None
+        self._detector: Optional[RTMPose] = None
         self._is_initialized = False
 
     @classmethod
@@ -48,18 +48,42 @@ class RTMPoseTracker:
             cls._instance = cls()
         return cls._instance
 
-    def _get_detector(self) -> BodyWithFeet:
-        """RTMPose BodyWithFeet 디텍터 초기화 및 ONNX 세션 최적화 패치 (Lazy Init)"""
+    def _get_detector(self) -> RTMPose:
+        """RTMPose Halpe26 전용 모델 초기화 (YOLOX 완전 배제, On-Demand CPU 최적화)"""
         if self._detector is None:
-            logger.info("RTMPose BodyWithFeet 모델 로드 및 ONNX 런타임 최적화 중...")
+            logger.info("RTMPose Halpe26 전용 모델 로드 및 ONNX 런타임 최적화 중...")
             t0 = time.time()
-            detector = BodyWithFeet(to_openpose=False, mode='balanced', backend='onnxruntime', device='cpu')
+
+            # 1. 번들된 로컬 가중치 또는 캐시 우선 탐색
+            candidate_paths = [
+                os.path.join(PROJECT_ROOT, "src/web/weights/rtmpose_halpe26.onnx"),
+                os.path.join(PROJECT_ROOT, "src/web/weights/rtmpose-m_simcc-body7_pt-body7-halpe26_700e-256x192-4d3e73dd_20230605.onnx"),
+                os.path.expanduser("~/.cache/rtmlib/hub/checkpoints/rtmpose-m_simcc-body7_pt-body7-halpe26_700e-256x192-4d3e73dd_20230605.onnx"),
+                os.path.expanduser("~/.cache/rtmlib/hub/checkpoints/rtmpose-s_simcc-body7_pt-body7-halpe26_700e-256x192-7f134165_20230605.onnx")
+            ]
+            model_target = None
+            for cp in candidate_paths:
+                if os.path.exists(cp):
+                    model_target = cp
+                    logger.info(f"로컬 RTMPose 모델 가중치 발견: {cp}")
+                    break
+
+            if model_target is None:
+                # 클라우드/원격 기본 다운로드 URL (Halpe26)
+                model_target = 'https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/onnx_sdk/rtmpose-m_simcc-body7_pt-body7-halpe26_700e-256x192-4d3e73dd_20230605.zip'
+
+            detector = RTMPose(
+                onnx_model=model_target,
+                model_input_size=(192, 256),
+                to_openpose=False,
+                backend='onnxruntime',
+                device='cpu'
+            )
 
             # ONNX Runtime CPU 세션 최적화 패치
-            pose_tool = detector.pose_model
-            if pose_tool.backend == 'onnxruntime':
-                total_cores = os.cpu_count() or 8
-                phys_cores = max(2, total_cores // 2)
+            if detector.backend == 'onnxruntime':
+                total_cores = os.cpu_count() or 4
+                phys_cores = max(1, total_cores // 2)
 
                 opts = ort.SessionOptions()
                 opts.intra_op_num_threads = phys_cores
@@ -70,12 +94,12 @@ class RTMPoseTracker:
                 opts.enable_mem_pattern = True
 
                 optimized_session = ort.InferenceSession(
-                    pose_tool.onnx_model,
+                    detector.onnx_model,
                     sess_options=opts,
                     providers=['CPUExecutionProvider']
                 )
-                pose_tool.session = optimized_session
-                logger.info(f"RTMPose ONNX Runtime 세션 최적화 완료 (물리 코어 {phys_cores}개 할당, GraphOpt=ALL)")
+                detector.session = optimized_session
+                logger.info(f"RTMPose ONNX Runtime 세션 최적화 완료 (코어 {phys_cores}개 할당, GraphOpt=ALL)")
 
             self._detector = detector
             self._is_initialized = True
@@ -173,7 +197,7 @@ class RTMPoseTracker:
                     smooth_box_scaled = ema_alpha * smooth_box_scaled + (1.0 - ema_alpha) * raw_bbox_scaled
 
                 bbox_input = np.array([smooth_box_scaled], dtype=np.float32)
-                kpts_list, scores_list = detector.pose_model(proc_frame, bboxes=bbox_input)
+                kpts_list, scores_list = detector(proc_frame, bboxes=bbox_input)
 
                 if len(kpts_list) > 0:
                     kpts = kpts_list[0]
@@ -201,7 +225,8 @@ class RTMPoseTracker:
                         )
 
             if len(extracted_rtmp) == 0:
-                raise ValueError("활성 운동 구간에서 RTMPose 관절을 추출하지 못했습니다.")
+                logger.warning("활성 운동 구간에서 RTMPose 관절을 추출하지 못하여 MediaPipe 33->26 폴백을 유도합니다.")
+                return np.zeros((target_samples_count, 26, 3), dtype=np.float32)
             return np.array(extracted_rtmp, dtype=np.float32)
 
         # 2. 폴백: 캐시된 프레임이 없을 경우 디스크 비디오 파일 직접 디코딩
@@ -228,6 +253,10 @@ class RTMPoseTracker:
         small_h = int(orig_h * scale)
 
         cap.set(cv2.CAP_PROP_POS_FRAMES, video_start_f)
+        actual_pos = int(cap.get(cv2.CAP_PROP_POS_FRAMES))
+        if actual_pos < video_start_f:
+            for _ in range(video_start_f - actual_pos):
+                cap.read()
 
         extracted_rtmp: List[np.ndarray] = []
         cur_video_f = video_start_f
@@ -268,7 +297,7 @@ class RTMPoseTracker:
 
                     # 3. RTMPose 단독 추론 실행
                     bbox_input = np.array([smooth_box_scaled], dtype=np.float32)
-                    kpts_list, scores_list = detector.pose_model(proc_frame, bboxes=bbox_input)
+                    kpts_list, scores_list = detector(proc_frame, bboxes=bbox_input)
 
                     if len(kpts_list) > 0:
                         kpts = kpts_list[0]       # (26, 2) 작은 해상도 픽셀
@@ -301,12 +330,20 @@ class RTMPoseTracker:
                                 f"RTMPose Halpe26 고속 관절 추출 중... ({processed_count}/{target_samples_count} 프레임)"
                             )
 
+                    # 메모리 절약: 프레임 배열 즉시 해제
+                    if proc_frame is not frame:
+                        del proc_frame
+                    del frame
+
                 cur_video_f += 1
 
         finally:
             cap.release()
+            import gc
+            gc.collect()
 
         if len(extracted_rtmp) == 0:
-            raise ValueError("활성 운동 구간에서 RTMPose 관절을 추출하지 못했습니다.")
+            logger.warning("활성 운동 구간에서 RTMPose 관절을 추출하지 못하여 MediaPipe 33->26 폴백을 유도합니다.")
+            return np.zeros((target_samples_count, 26, 3), dtype=np.float32)
 
         return np.array(extracted_rtmp, dtype=np.float32)

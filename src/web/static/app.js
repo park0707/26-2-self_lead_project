@@ -245,11 +245,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (!response.ok) {
-        const errData = await response.json();
-        throw new Error(errData.detail || "분석 요청 실패");
+        let errMessage = `서버 통신 오류 (HTTP ${response.status})`;
+        try {
+          const contentType = response.headers.get("content-type") || "";
+          if (contentType.includes("application/json")) {
+            const errData = await response.json();
+            errMessage = errData.detail || errMessage;
+          } else {
+            const errText = await response.text();
+            if (errText) {
+              errMessage = `${errMessage}: ${errText.slice(0, 150)}`;
+            }
+          }
+        } catch (eBody) {
+          console.warn("에러 메시지 파싱 생략:", eBody);
+        }
+        throw new Error(errMessage);
       }
 
-      analysisData = await response.json();
+      try {
+        analysisData = await response.json();
+      } catch (eJson) {
+        throw new Error("분석 결과 JSON 파싱에 실패했습니다: " + eJson.message);
+      }
       updateProgress(100, "분석 완료!");
       setTimeout(() => {
         progressCard.style.display = "none";

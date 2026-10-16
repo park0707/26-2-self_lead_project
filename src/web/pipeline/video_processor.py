@@ -225,17 +225,37 @@ class VideoAnalysisPipeline:
         sample_stride = max(1, int(sample_stride))
         effective_fps = orig_fps / float(sample_stride)
 
-        # VIDEO 추적 모드 디텍터 초기화 (시계열 연속성 활용으로 4배 이상 고속화)
-        base_options = python.BaseOptions(model_asset_path=self.model_task_path)
-        options = vision.PoseLandmarkerOptions(
-            base_options=base_options,
-            output_segmentation_masks=False,
-            running_mode=vision.RunningMode.VIDEO,
-            min_pose_detection_confidence=0.5,
-            min_pose_presence_confidence=0.5,
-            min_tracking_confidence=0.5
+        # 리눅스 그래픽스 라이브러리 및 CPU 위임자 명시적 바인딩
+        self._ensure_linux_graphics_libs()
+        base_options = python.BaseOptions(
+            model_asset_path=self.model_task_path,
+            delegate=python.BaseOptions.Delegate.CPU
         )
-        video_detector = vision.PoseLandmarker.create_from_options(options)
+
+        use_video_mode = True
+        video_detector = None
+        try:
+            options = vision.PoseLandmarkerOptions(
+                base_options=base_options,
+                output_segmentation_masks=False,
+                running_mode=vision.RunningMode.VIDEO,
+                min_pose_detection_confidence=0.5,
+                min_pose_presence_confidence=0.5,
+                min_tracking_confidence=0.5
+            )
+            video_detector = vision.PoseLandmarker.create_from_options(options)
+        except Exception as e_vid_init:
+            logger.warning(f"MediaPipe VIDEO 모드 생성 실패, IMAGE 모드로 안전 전환: {e_vid_init}")
+            use_video_mode = False
+            options = vision.PoseLandmarkerOptions(
+                base_options=base_options,
+                output_segmentation_masks=False,
+                running_mode=vision.RunningMode.IMAGE,
+                min_pose_detection_confidence=0.5,
+                min_pose_presence_confidence=0.5,
+                min_tracking_confidence=0.5
+            )
+            video_detector = vision.PoseLandmarker.create_from_options(options)
 
         direct_map = {
             11: Joint15.LEFT_SHOULDER, 12: Joint15.RIGHT_SHOULDER,
@@ -251,10 +271,10 @@ class VideoAnalysisPipeline:
         all_kps_33_2d_norm = []
         all_kps_15_2d = []
         all_vis_33 = []
-        sampled_frames = []
 
         frame_idx = 0
         extracted_count = 0
+        last_timestamp_ms = -1
 
         try:
             while True:
@@ -274,9 +294,19 @@ class VideoAnalysisPipeline:
 
                     img_rgb = cv2.cvtColor(proc_frame, cv2.COLOR_BGR2RGB)
                     mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=img_rgb)
-                    timestamp_ms = int((frame_idx / orig_fps) * 1000)
 
-                    result = video_detector.detect_for_video(mp_image, timestamp_ms)
+                    if use_video_mode:
+                        calc_ts = int((frame_idx / orig_fps) * 1000)
+                        if calc_ts <= last_timestamp_ms:
+                            calc_ts = last_timestamp_ms + 1
+                        last_timestamp_ms = calc_ts
+                        try:
+                            result = video_detector.detect_for_video(mp_image, calc_ts)
+                        except Exception as e_det:
+                            logger.warning(f"detect_for_video 실패, detect()로 안전 폴백: {e_det}")
+                            result = video_detector.detect(mp_image)
+                    else:
+                        result = video_detector.detect(mp_image)
 
                     pts_33_2d = np.zeros((33, 2), dtype=np.float32)
                     pts_33_2d_norm = np.zeros((33, 2), dtype=np.float32)
@@ -319,8 +349,14 @@ class VideoAnalysisPipeline:
                     all_kps_33_2d_norm.append(pts_33_2d_norm)
                     all_kps_15_2d.append(pts_15_2d)
                     all_vis_33.append(vis_33)
-                    sampled_frames.append(proc_frame)
                     extracted_count += 1
+
+                    # 메모리 절약: 프레임 배열 즉시 해제 (512MB RAM 보장)
+                    del img_rgb
+                    del mp_image
+                    if proc_frame is not frame:
+                        del proc_frame
+                    del frame
 
                     # 웹소켓 진행률 통지 쓰로틀링 (15프레임 주기 또는 마지막 프레임)
                     if progress_callback and total_frames > 0:
@@ -331,7 +367,13 @@ class VideoAnalysisPipeline:
                 frame_idx += 1
         finally:
             cap.release()
-            video_detector.close()
+            if video_detector:
+                try:
+                    video_detector.close()
+                except Exception:
+                    pass
+            import gc
+            gc.collect()
 
         if extracted_count == 0:
             raise ValueError("비디오에서 유효한 프레임을 읽을 수 없습니다.")
@@ -349,7 +391,7 @@ class VideoAnalysisPipeline:
             "fps": effective_fps,
             "sample_stride": sample_stride,
             "duration_sec": total_frames / orig_fps,
-            "sampled_frames": sampled_frames,
+            "sampled_frames": None,
         }
 
     def analyze_video(
@@ -488,18 +530,24 @@ class VideoAnalysisPipeline:
         # MediaPipe 2D 관절을 기반으로 YOLOX 디텍터를 0ms로 스킵하고, 기디코딩 프레임 버퍼로 디스크 I/O 0ms 달성
         _notify("extracting_rtmpose", 55.0, "RTMPose Halpe26 고속 유도형 관절(발 3각 지지면 & 척추선)을 추출 중입니다...")
         cached_frames = video_meta.get("sampled_frames")
-        rtmp_active_26 = self.rtmp_tracker.extract_active_period_rtmpose(
-            video_path=video_path,
-            active_start_frame=active_start,
-            active_end_frame=active_end,
-            mp_kps_33_2d=video_meta["kps_33_2d"],
-            fps=orig_fps,
-            sample_stride=stride,
-            cached_frames=cached_frames,
-            orig_w=video_meta.get("orig_w"),
-            orig_h=video_meta.get("orig_h"),
-            progress_callback=lambda st, pct, msg: _notify(st, pct, msg)
-        )
+        rtmp_active_26 = None
+        try:
+            rtmp_active_26 = self.rtmp_tracker.extract_active_period_rtmpose(
+                video_path=video_path,
+                active_start_frame=active_start,
+                active_end_frame=active_end,
+                mp_kps_33_2d=video_meta["kps_33_2d"],
+                fps=orig_fps,
+                sample_stride=stride,
+                cached_frames=cached_frames,
+                orig_w=video_meta.get("orig_w"),
+                orig_h=video_meta.get("orig_h"),
+                progress_callback=lambda st, pct, msg: _notify(st, pct, msg)
+            )
+        except Exception as e_rtm:
+            logger.warning(f"RTMPose 추출 오류 또는 폴백 전환: {e_rtm}")
+            rtmp_active_26 = None
+
         # 5. 2단계 운동별 횟수 단위 세부 결함 진단 (75% ~ 95%)
         _notify(
             "diagnosing_defects", 75.0,
@@ -515,10 +563,12 @@ class VideoAnalysisPipeline:
             rep_seq_64f = SkeletalTopologyAdapter.resample_to_64f_spline(rep_seq)
 
             # RTMPose 해당 반복 구간 슬라이싱 및 64프레임 스플라인 보간
-            rel_start = max(0, start_f - active_start)
-            rel_end = min(len(rtmp_active_26) - 1, end_f - active_start)
-            rep_rtm_seq = rtmp_active_26[rel_start:max(rel_start + 4, rel_end + 1)]
-            rep_rtm_64f = SkeletalTopologyAdapter.resample_to_64_frames(rep_rtm_seq)
+            rep_rtm_64f = None
+            if rtmp_active_26 is not None and len(rtmp_active_26) > 0:
+                rel_start = max(0, start_f - active_start)
+                rel_end = min(len(rtmp_active_26) - 1, end_f - active_start)
+                rep_rtm_seq = rtmp_active_26[rel_start:max(rel_start + 4, rel_end + 1)]
+                rep_rtm_64f = SkeletalTopologyAdapter.resample_to_64_frames(rep_rtm_seq)
 
             # MediaPipe 2D 정규화 해당 반복 구간 슬라이싱 및 64프레임 스플라인 보간
             rep_mp_norm_raw = kps_33_2d_norm[start_f:max(start_f + 4, end_f + 1)]
@@ -571,7 +621,11 @@ class VideoAnalysisPipeline:
                 overlay_mp_coords = np.round(np.clip(rep_mp_norm_64f[:, :, :2], 0.0, 1.0), 4).tolist()
 
                 # 영상 오버레이용 RTMPose 26 (64, 26, 3) [x, y, conf]
-                overlay_rtmp_coords = np.round(np.clip(rep_rtm_64f, 0.0, 1.0), 4).tolist()
+                if rep_rtm_64f is not None:
+                    overlay_rtmp_coords = np.round(np.clip(rep_rtm_64f, 0.0, 1.0), 4).tolist()
+                else:
+                    kps_rtm26 = SkeletalTopologyAdapter.mediapipe_33_to_rtmpose_26(rep_seq_64f)
+                    overlay_rtmp_coords = np.round(np.clip(kps_rtm26, 0.0, 1.0), 4).tolist()
 
                 # 영상 오버레이용 SpinePose 9 (64, 9, 3) [x, y, conf]
                 if rep_spine_2d_norm_64f is not None:
@@ -607,8 +661,10 @@ class VideoAnalysisPipeline:
             pct = 75.0 + (rep_idx / num_reps) * 20.0
             _notify("diagnosing_defects", pct, f"반복 {rep_idx}/{num_reps}회차 결함 진단 완료")
 
-        # 메모리 반환: 분석 완료 즉시 대용량 프레임 캐시 해제
+        # 메모리 반환: 분석 완료 즉시 대용량 프레임 캐시 해제 및 GC 강제 회수
         video_meta.pop("sampled_frames", None)
+        import gc
+        gc.collect()
 
         total_time = round(time.time() - t_start, 2)
         _notify("completed", 100.0, "전체 비디오 운동 자세 분석이 성공적으로 완료되었습니다!")

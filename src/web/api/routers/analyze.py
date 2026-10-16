@@ -75,11 +75,14 @@ async def analyze_video_endpoint(
         loop = asyncio.get_event_loop()
 
         def _sync_progress_callback(stage: str, pct: float, msg: str, data: Optional[Dict[str, Any]] = None):
-            if channel_id:
-                asyncio.run_coroutine_threadsafe(
-                    ws_manager.send_progress(channel_id, stage, pct, msg, data),
-                    loop
-                )
+            if channel_id and loop and not loop.is_closed():
+                try:
+                    asyncio.run_coroutine_threadsafe(
+                        ws_manager.send_progress(channel_id, stage, pct, msg, data),
+                        loop
+                    )
+                except Exception as e_ws:
+                    logger.debug(f"웹소켓 진행률 통지 스킵: {e_ws}")
 
         # 4. 비디오 분석 파이프라인 실행 (FastAPI 이벤트 루프 블로킹 방지를 위해 워커 스레드로 비동기 위임)
         pipeline = VideoAnalysisPipeline.get_instance()
