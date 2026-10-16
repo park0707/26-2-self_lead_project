@@ -23,6 +23,44 @@ experiments/
 *.npz
 
 # =========================================================================
+# 2-1. 웹 서비스 프로덕션 필수 모델 가중치 화이트리스트 (Render 배포용)
+# =========================================================================
+!src/web/weights/*.pkl
+!src/web/weights/*.joblib
+!src/models/second_models/babel_squat/c1_model_v11_a_weights.pkl
+!src/models/second_models/babel_squat/c2_model_v7_weights.pkl
+!src/models/second_models/babel_squat/weights_squat_submodels_rtmp.pkl
+!src/models/second_models/babel_deadlift/d3_model_v5_3_opt_weights.pkl
+!src/models/second_models/babel_deadlift/weights/d2_rtmpose_v1_models.pkl
+!src/models/second_models/babel_deadlift/weights/d5_model_final.pkl
+!src/models/second_models/babel_deadlift/weights_d1_rtmpose/d1_rtmpose_clean_gbdt_models.pkl
+!src/models/second_models/babel_deadlift/weights_d1_rtmpose/d1_rtmpose_clean_tcn.pth
+!src/models/second_models/babel_deadlift/weights_d4_rtmpose/d4_rtmpose_v6_bundle.pkl
+!src/models/second_models/babel_stiff_deadlift/sd2_model_v3_rtmp_weights.pkl
+!src/models/second_models/babel_stiff_deadlift/sd3_model_v4_rtmp_weights.pkl
+!src/models/second_models/babel_stiff_deadlift/weights/sd1_rtmp_1_bundle.pkl
+!src/models/second_models/babel_lunge/bl1_v3_1_bundle.pkl
+!src/models/second_models/babel_lunge/bl2_final_bundle.pkl
+!src/models/second_models/babel_lunge/bl4_v4b_weights.pkl
+!src/models/second_models/babel_lunge/weights/bl5_final_bundle.pkl
+!src/models/second_models/dynamic_lunge/dl1_rtmp_1_bundle.pkl
+!src/models/second_models/dynamic_lunge/dl2_rtmp_1_bundle.pkl
+!src/models/second_models/dynamic_lunge/dl4_rtmp_1_bundle.pkl
+!src/models/second_models/dynamic_lunge/weights/dl3_rtmp_1_bundle.pkl
+!src/models/second_models/dynamic_lunge/weights/dl5_final_bundle.pkl
+!src/models/second_models/side_lunge/sl1_rtmp_1_bundle.pkl
+!src/models/second_models/side_lunge/sl2_rtmp_1_bundle.pkl
+!src/models/second_models/side_lunge/sl3_rtmp_1_bundle.pkl
+!src/models/second_models/side_lunge/sl4_rtmp_1_bundle.pkl
+!src/models/second_models/side_lunge/sl5_rtmp_1_bundle.pkl
+!src/models/second_models/cross_lunge/cl1_rtmp_1_bundle.pkl
+!src/models/second_models/cross_lunge/cl2_rtmp_1_bundle.pkl
+!src/models/second_models/cross_lunge/cl3_rtmp_1_bundle.pkl
+!src/models/second_models/babel_good_morning/weights/gm1_rtmp_1_bundle.pkl
+!src/models/second_models/babel_good_morning/weights/gm2_rtmp_1_bundle.pkl
+!src/models/second_models/babel_good_morning/weights/gm3_rtmp_1_bundle.pkl
+
+# =========================================================================
 # 3. Python 컴파일 및 캐시 파일
 # =========================================================================
 __pycache__/

@@ -24,7 +24,7 @@ if PROJECT_ROOT not in sys.path:
 if 'd:/' not in sys.path and 'd:\\' not in sys.path:
     sys.path.insert(0, 'd:/')
 
-from src.web.core.config import EXERCISE_CATALOG, VIEW_ALIAS_MAP
+from src.web.core.config import EXERCISE_CATALOG, VIEW_ALIAS_MAP, WEIGHTS_DIR
 from src.web.core.schemas import DefectPrediction
 from src.web.core.topology_adapter import SkeletalTopologyAdapter
 
@@ -133,7 +133,9 @@ class DefectModelRegistry:
             from src.models.second_models.babel_lunge.bl4_v4b import BL4V4bClassifier
             from src.models.second_models.babel_lunge.bl5_final import BL5Classifier
 
-            bl3_path = r"D:\Data\피처_데이터\tuning_results\bl3_v4_champion_bundle.joblib"
+            bl3_path = os.path.join(WEIGHTS_DIR, "bl3_v4_champion_bundle.joblib")
+            if not os.path.exists(bl3_path):
+                bl3_path = r"D:\Data\피처_데이터\tuning_results\bl3_v4_champion_bundle.joblib"
             bl3_bundle = joblib.load(bl3_path) if os.path.exists(bl3_path) else None
 
             self._models['lunge_bl1'] = BL1Classifier()
