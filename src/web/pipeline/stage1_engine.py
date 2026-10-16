@@ -60,9 +60,29 @@ class Stage1InferenceEngine:
                 f"먼저 `python -m src.web.pipeline.train_and_export_stage1` 을 실행하여 가중치를 생성해 주세요."
             )
 
+        class _NumpyCompatibleUnpickler(pickle.Unpickler):
+            def find_class(self, module, name):
+                if module.startswith("numpy._core"):
+                    alt_mod = module.replace("numpy._core", "numpy.core")
+                    try:
+                        return super().find_class(module, name)
+                    except (ModuleNotFoundError, AttributeError):
+                        return super().find_class(alt_mod, name)
+                elif module.startswith("numpy.core"):
+                    alt_mod = module.replace("numpy.core", "numpy._core")
+                    try:
+                        return super().find_class(module, name)
+                    except (ModuleNotFoundError, AttributeError):
+                        return super().find_class(alt_mod, name)
+                return super().find_class(module, name)
+
         t0 = time.time()
         with open(self.bundle_path, 'rb') as f:
-            self.bundle = pickle.load(f)
+            try:
+                self.bundle = pickle.load(f)
+            except (ModuleNotFoundError, AttributeError):
+                f.seek(0)
+                self.bundle = _NumpyCompatibleUnpickler(f).load()
 
         # 1. Bi-GRU 신경망 로드 (체크포인트 텐서로부터 차원 동적 추론)
         sd = self.bundle['gru_model_state_dict']

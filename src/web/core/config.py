@@ -6,6 +6,23 @@ Purpose: 웹 서비스 전역 설정, 공식 5대 시점 매핑, 8대 운동 메
 """
 
 import os
+import sys
+
+# NumPy 2.x <-> 1.x Pickle 호환성 Shim (클라우드 서빙 환경 무결성 보장)
+try:
+    import numpy as np
+    if not hasattr(np, '_core') and hasattr(np, 'core'):
+        sys.modules['numpy._core'] = np.core
+        sys.modules['numpy._core.numeric'] = getattr(np.core, 'numeric', np.core)
+        sys.modules['numpy._core.multiarray'] = getattr(np.core, 'multiarray', np.core)
+        sys.modules['numpy._core.umath'] = getattr(np.core, 'umath', np.core)
+    elif hasattr(np, '_core') and not hasattr(np, 'core'):
+        sys.modules['numpy.core'] = np._core
+        sys.modules['numpy.core.numeric'] = getattr(np._core, 'numeric', np._core)
+        sys.modules['numpy.core.multiarray'] = getattr(np._core, 'multiarray', np._core)
+        sys.modules['numpy.core.umath'] = getattr(np._core, 'umath', np._core)
+except Exception:
+    pass
 
 # 웹 서비스 루트 디렉터리
 WEB_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
