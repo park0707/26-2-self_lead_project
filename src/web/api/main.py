@@ -31,6 +31,25 @@ for p in [PROJECT_ROOT, SRC_ROOT, FEATURES_DIR]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
+# 리눅스 헤드리스 환경 MediaPipe/OpenCV 그래픽 라이브러리(libGLESv2 등) 사전 로드
+_libs_candidates = [
+    os.path.join(PROJECT_ROOT, "libs/usr/lib/x86_64-linux-gnu"),
+    os.path.join(PROJECT_ROOT, "libs/usr/lib")
+]
+for _ldir in _libs_candidates:
+    if os.path.exists(_ldir):
+        _cur_ld = os.environ.get("LD_LIBRARY_PATH", "")
+        if _ldir not in _cur_ld:
+            os.environ["LD_LIBRARY_PATH"] = f"{_ldir}:{_cur_ld}"
+        try:
+            import ctypes
+            for _lib_name in ["libGLdispatch.so.0", "libglvnd.so.0", "libGLESv2.so.2", "libEGL.so.1", "libGL.so.1"]:
+                _lp = os.path.join(_ldir, _lib_name)
+                if os.path.exists(_lp):
+                    ctypes.CDLL(_lp, mode=getattr(ctypes, "RTLD_GLOBAL", 0))
+        except Exception:
+            pass
+
 from src.web.api.routers import health, analyze
 from src.web.api import websocket
 from src.web.pipeline.stage1_engine import Stage1InferenceEngine

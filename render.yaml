@@ -4,9 +4,21 @@
 services:
   - type: web
     name: vidio-health-trainer
-    runtime: docker
+    runtime: python
     plan: free
     autoDeploy: true
+    buildCommand: |
+      mkdir -p libs && cd libs && \
+      curl -sLO http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libgles2_1.4.0-1_amd64.deb && \
+      curl -sLO http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libglvnd0_1.4.0-1_amd64.deb && \
+      curl -sLO http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libgl1_1.4.0-1_amd64.deb && \
+      curl -sLO http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libegl1_1.4.0-1_amd64.deb && \
+      for f in *.deb; do dpkg -x "$f" . ; done && \
+      cd .. && \
+      pip install -r requirements.txt
+    startCommand: sh -c "export LD_LIBRARY_PATH=$PWD/libs/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH && uvicorn src.web.api.main:app --host 0.0.0.0 --port $PORT"
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.14
       - key: PYTHONUNBUFFERED
         value: "1"
