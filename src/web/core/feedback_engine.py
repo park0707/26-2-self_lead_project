@@ -33,6 +33,11 @@ class DefectFeedbackDefinition:
     optimal_view: str  # 가장 관측하기 유리한 공식 카메라 시점 (시점 A~E)
     recommended_drill: str  # 해당 결함 교정을 위한 보강 운동/드릴
 
+    @property
+    def corrective_action(self) -> str:
+        """해당 결함을 고치고 정상 동작으로 가기 위해 취해야 할 핵심 교정 조치"""
+        return self.action_cue
+
 
 # =============================================================================
 # 1. 8대 운동 33종 전수 코칭 딕셔너리 (FEEDBACK_CATALOG)
@@ -661,14 +666,14 @@ class FeedbackEngine:
             return "올바른 자세를 유지하며 천천히 수행하세요."
 
         if state == 1:
-            # 결함: 행동 큐 중심
-            return f"[교정 지침] {item.action_cue}"
+            # 결함 발생 시: 해당 결함을 고치고 정상 동작으로 가기 위한 필수 조치만 명확히 반환
+            return f"[교정 조치] {item.corrective_action}"
         elif state == 2:
-            # 주의/보류: 미세 이탈 안내 및 시점 권장
-            return f"[주의] {item.caution_cue} (권장: {item.optimal_view})"
+            # 주의/보류: 가이드 안내
+            return f"[주의] {item.caution_cue}"
         else:
-            # 정상: 유지 큐
-            return f"[정상 유지] {item.normal_cue}"
+            # 정상: 정상 동작 확인
+            return "정상 동작입니다."
 
     # -------------------------------------------------------------------------
     # 3.2 단일 횟수(1-Rep) 다중 결함 우선순위 해결 및 큐잉

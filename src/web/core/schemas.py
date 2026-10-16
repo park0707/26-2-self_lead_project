@@ -28,6 +28,7 @@ class DefectPrediction(BaseModel):
     state: int = Field(default=0, description="3-State (0: 정상, 1: 결함, 2: 주의/보류)")
     state_label: str = Field(default="정상", description="3-State 한글 레이블")
     feedback: str = Field(default="피드백 자리", description="생체역학적 코칭 피드백")
+    corrective_action: Optional[str] = Field(default=None, description="정상 동작으로 가기 위한 구체적 교정 조치")
     # 3단계 생체역학 세부 필드 (선택적)
     target_joint: Optional[str] = Field(default=None, description="부하 집중 대상 관절/부위")
     action_cue: Optional[str] = Field(default=None, description="즉각적 1문장 핵심 행동 지침")
