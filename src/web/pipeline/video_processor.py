@@ -82,7 +82,10 @@ class VideoAnalysisPipeline:
     def _get_detector(self) -> vision.PoseLandmarker:
         """MediaPipe PoseLandmarker 디텍터 반환 (Lazy Initialization)"""
         if self._detector is None:
-            base_options = python.BaseOptions(model_asset_path=self.model_task_path)
+            base_options = python.BaseOptions(
+                model_asset_path=self.model_task_path,
+                delegate=python.BaseOptions.Delegate.CPU
+            )
             options = vision.PoseLandmarkerOptions(
                 base_options=base_options,
                 output_segmentation_masks=False,
