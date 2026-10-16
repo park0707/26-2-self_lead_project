@@ -16,7 +16,7 @@ services:
       for f in *.deb; do dpkg -x "$f" . ; done && \
       cd .. && \
       pip install -r requirements.txt
-    startCommand: sh -c "export LD_LIBRARY_PATH=$PWD/libs/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH && uvicorn src.web.api.main:app --host 0.0.0.0 --port $PORT"
+    startCommand: sh -c "export LD_LIBRARY_PATH=$PWD/src/web/libs:$PWD/libs/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH && uvicorn src.web.api.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.14

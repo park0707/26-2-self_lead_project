@@ -33,6 +33,8 @@ for p in [PROJECT_ROOT, SRC_ROOT, FEATURES_DIR]:
 
 # 리눅스 헤드리스 환경 MediaPipe/OpenCV 그래픽 라이브러리(libGLESv2 등) 사전 로드
 _libs_candidates = [
+    os.path.join(CURRENT_DIR, "../libs"),
+    os.path.join(PROJECT_ROOT, "src/web/libs"),
     os.path.join(PROJECT_ROOT, "libs/usr/lib/x86_64-linux-gnu"),
     os.path.join(PROJECT_ROOT, "libs/usr/lib")
 ]

@@ -79,9 +79,46 @@ class VideoAnalysisPipeline:
             cls._instance = cls()
         return cls._instance
 
+    @staticmethod
+    def _ensure_linux_graphics_libs():
+        """리눅스 서버(Render 등)에서 libGLESv2, libGLdispatch, libGL, libEGL을 사전 로드하여 No such file 에러 원천 방지"""
+        if not sys.platform.startswith("linux"):
+            return
+        
+        candidates = [
+            os.path.join(CURRENT_DIR, "../libs"),
+            os.path.join(PROJECT_ROOT, "src/web/libs"),
+            os.path.join(PROJECT_ROOT, "libs/usr/lib/x86_64-linux-gnu"),
+            os.path.join(PROJECT_ROOT, "libs/usr/lib")
+        ]
+        
+        import ctypes
+        for cdir in candidates:
+            norm_dir = os.path.abspath(cdir)
+            if os.path.exists(norm_dir):
+                cur_ld = os.environ.get("LD_LIBRARY_PATH", "")
+                if norm_dir not in cur_ld:
+                    os.environ["LD_LIBRARY_PATH"] = f"{norm_dir}:{cur_ld}"
+                
+                ordered_libs = [
+                    "libglvnd.so.0", "libglvnd.so.0.0.0",
+                    "libGLdispatch.so.0", "libGLdispatch.so.0.0.0",
+                    "libGLESv2.so.2", "libGLESv2.so.2.1.0",
+                    "libEGL.so.1", "libEGL.so.1.1.0",
+                    "libGL.so.1", "libGL.so.1.7.0"
+                ]
+                for lib_name in ordered_libs:
+                    lib_file = os.path.join(norm_dir, lib_name)
+                    if os.path.exists(lib_file):
+                        try:
+                            ctypes.CDLL(lib_file, mode=getattr(ctypes, "RTLD_GLOBAL", 0))
+                        except Exception as e:
+                            logger.debug(f"[_ensure_linux_graphics_libs] {lib_name} 로드 시도: {e}")
+
     def _get_detector(self) -> vision.PoseLandmarker:
         """MediaPipe PoseLandmarker 디텍터 반환 (Lazy Initialization)"""
         if self._detector is None:
+            self._ensure_linux_graphics_libs()
             base_options = python.BaseOptions(
                 model_asset_path=self.model_task_path,
                 delegate=python.BaseOptions.Delegate.CPU
