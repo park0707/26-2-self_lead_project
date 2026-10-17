@@ -1,0 +1,1144 @@
+{
+  "c1": {
+    "code": "c1",
+    "name": "척추의 중립 위반 (Spine Neutrality)",
+    "raw_dim": 38,
+    "diet_dim": 14,
+    "selected_indices": [
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      23,
+      34,
+      37
+    ],
+    "thresholds": {
+      "tau_opt": 0.36,
+      "tau_defect": 0.48,
+      "tau_normal": 0.31
+    },
+    "metrics": {
+      "f1": 77.77,
+      "accuracy": 76.24,
+      "auc": 85.89,
+      "samples": 2605,
+      "positives": 1255
+    }
+  },
+  "c2": {
+    "code": "c2",
+    "name": "고개 정면 및 시선 (Head/Gaze Orientation)",
+    "raw_dim": 19,
+    "diet_dim": 10,
+    "selected_indices": [
+      0,
+      1,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12
+    ],
+    "thresholds": {
+      "tau_opt": 0.4,
+      "tau_defect": 0.48,
+      "tau_normal": 0.35
+    },
+    "metrics": {
+      "f1": 75.99,
+      "accuracy": 70.48,
+      "auc": 79.9,
+      "samples": 2605,
+      "positives": 1370
+    }
+  },
+  "c3": {
+    "code": "c3",
+    "name": "무릎-발 방향 일치 (Knee-Toe Alignment)",
+    "raw_dim": 22,
+    "diet_dim": 10,
+    "selected_indices": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      11,
+      18,
+      19
+    ],
+    "thresholds": {
+      "tau_opt": 0.42,
+      "tau_defect": 0.48,
+      "tau_normal": 0.37
+    },
+    "metrics": {
+      "f1": 92.89,
+      "accuracy": 93.01,
+      "auc": 98.01,
+      "samples": 2605,
+      "positives": 1280
+    }
+  },
+  "c4": {
+    "code": "c4",
+    "name": "발바닥 지면 고정 (Foot Grounding)",
+    "raw_dim": 25,
+    "diet_dim": 12,
+    "selected_indices": [
+      0,
+      1,
+      3,
+      5,
+      7,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "thresholds": {
+      "tau_opt": 0.48,
+      "tau_defect": 0.53,
+      "tau_normal": 0.43
+    },
+    "metrics": {
+      "f1": 84.99,
+      "accuracy": 85.07,
+      "auc": 92.45,
+      "samples": 2605,
+      "positives": 1300
+    }
+  },
+  "d1": {
+    "code": "d1",
+    "name": "척추의 중립 위반 (Spine Neutrality)",
+    "raw_dim": 25,
+    "diet_dim": 12,
+    "selected_indices": [
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      11,
+      14,
+      17,
+      19,
+      22,
+      24
+    ],
+    "thresholds": {
+      "tau_opt": 0.54,
+      "tau_defect": 0.59,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 67.08,
+      "accuracy": 79.48,
+      "auc": 86.62,
+      "samples": 770,
+      "positives": 210
+    }
+  },
+  "d2": {
+    "code": "d2",
+    "name": "무릎-발목 정렬 모임/외반 (Knee Medial Collapse)",
+    "raw_dim": 10,
+    "diet_dim": 8,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "thresholds": {
+      "tau_opt": 0.56,
+      "tau_defect": 0.61,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 89.67,
+      "accuracy": 93.9,
+      "auc": 98.13,
+      "samples": 770,
+      "positives": 220
+    }
+  },
+  "d3": {
+    "code": "d3",
+    "name": "발바닥 접지 및 힙 슈트업 (Foot Ground Fixation)",
+    "raw_dim": 17,
+    "diet_dim": 10,
+    "selected_indices": [
+      0,
+      2,
+      4,
+      5,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15
+    ],
+    "thresholds": {
+      "tau_opt": 0.52,
+      "tau_defect": 0.57,
+      "tau_normal": 0.47
+    },
+    "metrics": {
+      "f1": 67.05,
+      "accuracy": 77.53,
+      "auc": 83.76,
+      "samples": 770,
+      "positives": 250
+    }
+  },
+  "d4": {
+    "code": "d4",
+    "name": "무릎-골반 동시 신전 불일치 (Knee-Hip Desynchronization)",
+    "raw_dim": 15,
+    "diet_dim": 10,
+    "selected_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      12,
+      13
+    ],
+    "thresholds": {
+      "tau_opt": 0.58,
+      "tau_defect": 0.63,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 65.99,
+      "accuracy": 86.88,
+      "auc": 89.07,
+      "samples": 770,
+      "positives": 135
+    }
+  },
+  "d5": {
+    "code": "d5",
+    "name": "바벨 궤적 신체 밀착 실패 (Barbell Path Proximity)",
+    "raw_dim": 32,
+    "diet_dim": 16,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      14,
+      16,
+      17,
+      21,
+      23,
+      24,
+      25,
+      28
+    ],
+    "thresholds": {
+      "tau_opt": 0.42,
+      "tau_defect": 0.48,
+      "tau_normal": 0.37
+    },
+    "metrics": {
+      "f1": 85.68,
+      "accuracy": 85.19,
+      "auc": 92.67,
+      "samples": 770,
+      "positives": 385
+    }
+  },
+  "sd1": {
+    "code": "sd1",
+    "name": "무릎 구부린 채 고정 위반 (Knee Fixation Violation)",
+    "raw_dim": 30,
+    "diet_dim": 14,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      13,
+      14,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23
+    ],
+    "thresholds": {
+      "tau_opt": 0.48,
+      "tau_defect": 0.53,
+      "tau_normal": 0.43
+    },
+    "metrics": {
+      "f1": 63.03,
+      "accuracy": 67.25,
+      "auc": 75.69,
+      "samples": 1035,
+      "positives": 390
+    }
+  },
+  "sd2": {
+    "code": "sd2",
+    "name": "척추의 중립 위반 (Spine Neutrality)",
+    "raw_dim": 30,
+    "diet_dim": 14,
+    "selected_indices": [
+      2,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "thresholds": {
+      "tau_opt": 0.32,
+      "tau_defect": 0.48,
+      "tau_normal": 0.3
+    },
+    "metrics": {
+      "f1": 88.16,
+      "accuracy": 81.16,
+      "auc": 86.31,
+      "samples": 1035,
+      "positives": 775
+    }
+  },
+  "sd3": {
+    "code": "sd3",
+    "name": "바벨 궤적 신체 밀착 실패 (Barbell Path Proximity)",
+    "raw_dim": 36,
+    "diet_dim": 16,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      11,
+      13,
+      17,
+      18,
+      28,
+      31,
+      35
+    ],
+    "thresholds": {
+      "tau_opt": 0.52,
+      "tau_defect": 0.57,
+      "tau_normal": 0.47
+    },
+    "metrics": {
+      "f1": 77.51,
+      "accuracy": 82.9,
+      "auc": 89.23,
+      "samples": 1035,
+      "positives": 390
+    }
+  },
+  "bl1": {
+    "code": "bl1",
+    "name": "앞다리 무릎 각도 90도 (Lead Knee 90°)",
+    "raw_dim": 30,
+    "diet_dim": 14,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      13,
+      16,
+      21,
+      25,
+      26,
+      27,
+      29
+    ],
+    "thresholds": {
+      "tau_opt": 0.52,
+      "tau_defect": 0.57,
+      "tau_normal": 0.47
+    },
+    "metrics": {
+      "f1": 76.97,
+      "accuracy": 85.11,
+      "auc": 91.47,
+      "samples": 1081,
+      "positives": 322
+    }
+  },
+  "bl2": {
+    "code": "bl2",
+    "name": "몸통 발 무릎 방향 일치 (Torso-Foot-Knee Alignment)",
+    "raw_dim": 46,
+    "diet_dim": 16,
+    "selected_indices": [
+      4,
+      7,
+      8,
+      13,
+      17,
+      19,
+      20,
+      21,
+      23,
+      30,
+      33,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "thresholds": {
+      "tau_opt": 0.5,
+      "tau_defect": 0.55,
+      "tau_normal": 0.45
+    },
+    "metrics": {
+      "f1": 57.84,
+      "accuracy": 71.42,
+      "auc": 78.9,
+      "samples": 1081,
+      "positives": 306
+    }
+  },
+  "bl3": {
+    "code": "bl3",
+    "name": "뒤다리 무릎 각도 90도 (Rear Knee 90°)",
+    "raw_dim": 14,
+    "diet_dim": 10,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      12
+    ],
+    "thresholds": {
+      "tau_opt": 0.48,
+      "tau_defect": 0.53,
+      "tau_normal": 0.43
+    },
+    "metrics": {
+      "f1": 80.24,
+      "accuracy": 87.83,
+      "auc": 94.54,
+      "samples": 1085,
+      "positives": 306
+    }
+  },
+  "bl4": {
+    "code": "bl4",
+    "name": "척추의 중립 위반 (Spine Neutrality)",
+    "raw_dim": 30,
+    "diet_dim": 14,
+    "selected_indices": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      11,
+      16,
+      18,
+      20,
+      21,
+      24,
+      25,
+      26,
+      29
+    ],
+    "thresholds": {
+      "tau_opt": 0.46,
+      "tau_defect": 0.51,
+      "tau_normal": 0.41
+    },
+    "metrics": {
+      "f1": 77.28,
+      "accuracy": 80.05,
+      "auc": 87.52,
+      "samples": 787,
+      "positives": 331
+    }
+  },
+  "bl5": {
+    "code": "bl5",
+    "name": "상체 과도 숙임/젖힘 (Torso Pitch/Lean)",
+    "raw_dim": 79,
+    "diet_dim": 24,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      11,
+      14,
+      17,
+      18,
+      19,
+      20,
+      24,
+      26,
+      27,
+      30,
+      46,
+      54,
+      58,
+      59,
+      71,
+      72,
+      74,
+      75
+    ],
+    "thresholds": {
+      "tau_opt": 0.54,
+      "tau_defect": 0.59,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 76.86,
+      "accuracy": 83.07,
+      "auc": 89.99,
+      "samples": 1081,
+      "positives": 389
+    }
+  },
+  "dl1": {
+    "code": "dl1",
+    "name": "앞다리 무릎 각도 90도 (Lead Knee 90°)",
+    "raw_dim": 30,
+    "diet_dim": 14,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      10,
+      13,
+      18,
+      20,
+      24,
+      26,
+      29
+    ],
+    "thresholds": {
+      "tau_opt": 0.52,
+      "tau_defect": 0.57,
+      "tau_normal": 0.47
+    },
+    "metrics": {
+      "f1": 68.47,
+      "accuracy": 80.93,
+      "auc": 87.55,
+      "samples": 1468,
+      "positives": 384
+    }
+  },
+  "dl2": {
+    "code": "dl2",
+    "name": "몸통 발 무릎 방향 일치 (Torso-Foot-Knee Alignment)",
+    "raw_dim": 46,
+    "diet_dim": 12,
+    "selected_indices": [
+      4,
+      8,
+      10,
+      17,
+      19,
+      20,
+      21,
+      23,
+      26,
+      30,
+      33,
+      44
+    ],
+    "thresholds": {
+      "tau_opt": 0.48,
+      "tau_defect": 0.53,
+      "tau_normal": 0.43
+    },
+    "metrics": {
+      "f1": 63.7,
+      "accuracy": 70.03,
+      "auc": 76.92,
+      "samples": 1468,
+      "positives": 523
+    }
+  },
+  "dl3": {
+    "code": "dl3",
+    "name": "뒤다리 무릎 각도 90도 (Rear Knee 90°)",
+    "raw_dim": 27,
+    "diet_dim": 12,
+    "selected_indices": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      17,
+      18
+    ],
+    "thresholds": {
+      "tau_opt": 0.58,
+      "tau_defect": 0.63,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 68.26,
+      "accuracy": 79.66,
+      "auc": 86.94,
+      "samples": 9795,
+      "positives": 2750
+    }
+  },
+  "dl4": {
+    "code": "dl4",
+    "name": "척추의 중립 위반 (Spine Neutrality)",
+    "raw_dim": 24,
+    "diet_dim": 12,
+    "selected_indices": [
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      11,
+      15,
+      18,
+      20,
+      21,
+      22
+    ],
+    "thresholds": {
+      "tau_opt": 0.5,
+      "tau_defect": 0.55,
+      "tau_normal": 0.45
+    },
+    "metrics": {
+      "f1": 70.42,
+      "accuracy": 78.52,
+      "auc": 86.65,
+      "samples": 1518,
+      "positives": 476
+    }
+  },
+  "dl5": {
+    "code": "dl5",
+    "name": "상체 과도 숙임/젖힘 (Torso Pitch/Lean)",
+    "raw_dim": 79,
+    "diet_dim": 24,
+    "selected_indices": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7,
+      11,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      63,
+      74,
+      75,
+      76
+    ],
+    "thresholds": {
+      "tau_opt": 0.42,
+      "tau_defect": 0.48,
+      "tau_normal": 0.37
+    },
+    "metrics": {
+      "f1": 78.42,
+      "accuracy": 81.4,
+      "auc": 89.33,
+      "samples": 1468,
+      "positives": 581
+    }
+  },
+  "sl1": {
+    "code": "sl1",
+    "name": "측면 굴곡 무릎 발끝 초과 (Lead Knee Over Toe)",
+    "raw_dim": 55,
+    "diet_dim": 20,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      4,
+      13,
+      15,
+      16,
+      18,
+      26,
+      29,
+      30,
+      33,
+      35,
+      37,
+      39,
+      40,
+      43,
+      49,
+      51,
+      52
+    ],
+    "thresholds": {
+      "tau_opt": 0.6,
+      "tau_defect": 0.65,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 66.87,
+      "accuracy": 81.94,
+      "auc": 87.06,
+      "samples": 4130,
+      "positives": 1030
+    }
+  },
+  "sl2": {
+    "code": "sl2",
+    "name": "신전 다리 무릎 굽힘 (Trail Leg Knee Extension)",
+    "raw_dim": 51,
+    "diet_dim": 20,
+    "selected_indices": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      12,
+      13,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      30,
+      31,
+      37,
+      45,
+      50
+    ],
+    "thresholds": {
+      "tau_opt": 0.56,
+      "tau_defect": 0.61,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 45.34,
+      "accuracy": 77.58,
+      "auc": 75.48,
+      "samples": 4130,
+      "positives": 770
+    }
+  },
+  "sl3": {
+    "code": "sl3",
+    "name": "골반 측면 회전 및 비대칭 (Pelvis Asymmetry)",
+    "raw_dim": 28,
+    "diet_dim": 14,
+    "selected_indices": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      14,
+      16,
+      21,
+      22,
+      23,
+      24
+    ],
+    "thresholds": {
+      "tau_opt": 0.66,
+      "tau_defect": 0.68,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 47.21,
+      "accuracy": 81.91,
+      "auc": 84.71,
+      "samples": 4130,
+      "positives": 510
+    }
+  },
+  "sl4": {
+    "code": "sl4",
+    "name": "상체 과도 측면 붕괴 (Torso Lateral Collapse)",
+    "raw_dim": 24,
+    "diet_dim": 12,
+    "selected_indices": [
+      4,
+      5,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      18,
+      19,
+      20,
+      23
+    ],
+    "thresholds": {
+      "tau_opt": 0.3,
+      "tau_defect": 0.48,
+      "tau_normal": 0.3
+    },
+    "metrics": {
+      "f1": 81.7,
+      "accuracy": 72.93,
+      "auc": 78.83,
+      "samples": 4130,
+      "positives": 2715
+    }
+  },
+  "sl5": {
+    "code": "sl5",
+    "name": "접지발 안쪽 들림 (Foot Inversion/Eversion)",
+    "raw_dim": 42,
+    "diet_dim": 18,
+    "selected_indices": [
+      2,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      20,
+      21,
+      22,
+      25,
+      29,
+      34,
+      37,
+      38,
+      40,
+      41
+    ],
+    "thresholds": {
+      "tau_opt": 0.48,
+      "tau_defect": 0.53,
+      "tau_normal": 0.43
+    },
+    "metrics": {
+      "f1": 61.6,
+      "accuracy": 68.93,
+      "auc": 77.29,
+      "samples": 4130,
+      "positives": 1420
+    }
+  },
+  "cl1": {
+    "code": "cl1",
+    "name": "앞다리 무릎 각도 90도 (Lead Knee 90°)",
+    "raw_dim": 74,
+    "diet_dim": 24,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      4,
+      10,
+      13,
+      18,
+      20,
+      24,
+      26,
+      29,
+      30,
+      35,
+      37,
+      39,
+      43,
+      49,
+      51,
+      54,
+      56,
+      58,
+      59,
+      61,
+      63
+    ],
+    "thresholds": {
+      "tau_opt": 0.58,
+      "tau_defect": 0.63,
+      "tau_normal": 0.48
+    },
+    "metrics": {
+      "f1": 90.77,
+      "accuracy": 92.98,
+      "auc": 98.0,
+      "samples": 1025,
+      "positives": 385
+    }
+  },
+  "cl2": {
+    "code": "cl2",
+    "name": "앞다리 무릎 안쪽 무너짐 (Lead Knee Valgus Collapse)",
+    "raw_dim": 82,
+    "diet_dim": 24,
+    "selected_indices": [
+      0,
+      1,
+      9,
+      11,
+      14,
+      16,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      28,
+      43,
+      49,
+      53,
+      55,
+      56,
+      57,
+      63,
+      65,
+      70,
+      72,
+      76
+    ],
+    "thresholds": {
+      "tau_opt": 0.46,
+      "tau_defect": 0.51,
+      "tau_normal": 0.41
+    },
+    "metrics": {
+      "f1": 74.48,
+      "accuracy": 72.59,
+      "auc": 81.42,
+      "samples": 1025,
+      "positives": 515
+    }
+  },
+  "cl3": {
+    "code": "cl3",
+    "name": "교차 다리 궤적 이탈 (Cross Alignment Deficit)",
+    "raw_dim": 46,
+    "diet_dim": 18,
+    "selected_indices": [
+      5,
+      7,
+      8,
+      11,
+      16,
+      21,
+      22,
+      24,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      36,
+      38,
+      40
+    ],
+    "thresholds": {
+      "tau_opt": 0.42,
+      "tau_defect": 0.48,
+      "tau_normal": 0.37
+    },
+    "metrics": {
+      "f1": 87.04,
+      "accuracy": 83.61,
+      "auc": 90.07,
+      "samples": 1025,
+      "positives": 640
+    }
+  },
+  "gm1": {
+    "code": "gm1",
+    "name": "무릎 구부린 채 고정 위반 (Knee Fixed Angle Violation)",
+    "raw_dim": 13,
+    "diet_dim": 8,
+    "selected_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10
+    ],
+    "thresholds": {
+      "tau_opt": 0.5,
+      "tau_defect": 0.55,
+      "tau_normal": 0.45
+    },
+    "metrics": {
+      "f1": 88.87,
+      "accuracy": 88.73,
+      "auc": 94.79,
+      "samples": 1020,
+      "positives": 510
+    }
+  },
+  "gm2": {
+    "code": "gm2",
+    "name": "척추의 중립 위반 (Spine Neutrality)",
+    "raw_dim": 15,
+    "diet_dim": 10,
+    "selected_indices": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "thresholds": {
+      "tau_opt": 0.38,
+      "tau_defect": 0.48,
+      "tau_normal": 0.33
+    },
+    "metrics": {
+      "f1": 75.0,
+      "accuracy": 72.55,
+      "auc": 82.73,
+      "samples": 1020,
+      "positives": 505
+    }
+  },
+  "gm3": {
+    "code": "gm3",
+    "name": "고관절 힌지 깊이 미흡 (Hip Hinge Depth Deficit)",
+    "raw_dim": 45,
+    "diet_dim": 16,
+    "selected_indices": [
+      2,
+      3,
+      7,
+      8,
+      9,
+      14,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      31,
+      35,
+      37,
+      41
+    ],
+    "thresholds": {
+      "tau_opt": 0.38,
+      "tau_defect": 0.48,
+      "tau_normal": 0.33
+    },
+    "metrics": {
+      "f1": 93.47,
+      "accuracy": 93.33,
+      "auc": 97.98,
+      "samples": 1020,
+      "positives": 515
+    }
+  }
+}

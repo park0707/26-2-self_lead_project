@@ -121,8 +121,10 @@ class SkeletalTopologyAdapter:
 
         # 발끝 정밀 보정 (Halpe 20: Big Toe + Halpe 22: Small Toe 중점 -> MP 31: Left Foot Index)
         if J >= 24:
-            out[:, 31, :C] = (kps[:, 20, :C] + kps[:, 22, :C]) / 2.0
-            out[:, 32, :C] = (kps[:, 21, :C] + kps[:, 23, :C]) / 2.0
+            valid_small_l = np.linalg.norm(kps[:, 22, :2], axis=-1) > 1e-4
+            valid_small_r = np.linalg.norm(kps[:, 23, :2], axis=-1) > 1e-4
+            out[:, 31, :C] = np.where(valid_small_l[:, None], (kps[:, 20, :C] + kps[:, 22, :C]) / 2.0, kps[:, 20, :C])
+            out[:, 32, :C] = np.where(valid_small_r[:, None], (kps[:, 21, :C] + kps[:, 23, :C]) / 2.0, kps[:, 21, :C])
 
         # 파생 관절 추정
         # 코(0) -> 입(9, 10) 추정
@@ -130,8 +132,11 @@ class SkeletalTopologyAdapter:
         out[:, 10, :C] = out[:, 0, :C] * 0.7 + (out[:, 11, :C] + out[:, 12, :C]) * 0.15
 
         # 2D 좌표 기반인 경우 Z 채널을 0.0으로 보장하여 confidence 값이 가상 깊이로 오인되는 현상 방지
+        # 단, Z 채널에 이미 유의미한 깊이 분산이 있는 3D 좌표인 경우 보존
         if C >= 3:
-            out[:, :, 2] = 0.0
+            z_std = float(np.std(kps[:, :, 2]))
+            if z_std < 1e-4 or (np.all(kps[:, :, 2] >= 0.0) and np.all(kps[:, :, 2] <= 1.0) and z_std < 0.15):
+                out[:, :, 2] = 0.0
 
         return out
 
@@ -145,6 +150,11 @@ class SkeletalTopologyAdapter:
         for m_idx, h_idx in cls.MP33_TO_HALPE26_MAP.items():
             if m_idx < J:
                 out[:, h_idx, :C] = kps[:, m_idx, :C]
+
+        # 발끝 정밀 보정 (MP 31: Left Foot Index -> Halpe 22 Small Toe 보강)
+        if J > 32:
+            out[:, 22, :C] = kps[:, 31, :C]
+            out[:, 23, :C] = kps[:, 32, :C]
 
         # Halpe-26 Joint Topology 정합 (src.core.skeleton2d.JointHalpe26 표준 준수)
         # 17: Head (머리/얼굴 중심: 귀 중점 또는 코)

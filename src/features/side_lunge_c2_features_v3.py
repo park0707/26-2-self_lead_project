@@ -7,7 +7,8 @@ Module: side_lunge_c2_features_v3.py
 """
 
 from src.models.second_models.side_lunge.side_lunge_c2_features_v3 import (
-    FEATURE_NAMES_29D,
+    FEATURE_NAMES_30D,
+    safe_savgol_filter_kps,
     build_pacs_basis,
     vector_angle_3d,
     extract_side_lunge_c2_features_29d,
