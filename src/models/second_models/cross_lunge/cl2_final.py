@@ -20,11 +20,10 @@ from typing import Dict, Any, Union, Optional
 
 import numpy as np
 
-PROJECT_ROOT = "d:/"
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
-
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 BUNDLE_PATH = os.path.join(CURRENT_DIR, "cl2_final_bundle.pkl")
 
 from src.models.second_models.cross_lunge.cl2_hybrid_2 import (

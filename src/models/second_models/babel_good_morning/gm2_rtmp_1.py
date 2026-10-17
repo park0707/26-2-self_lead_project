@@ -30,7 +30,7 @@ os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = r"D:/"
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 if CURRENT_DIR not in sys.path:
@@ -134,13 +134,14 @@ class BabelGoodMorningGM2RTMP1:
             out[:, m] = kps_26[:, h]
         return out
 
-    def extract_features(self, kps_64f: np.ndarray) -> np.ndarray:
+    @classmethod
+    def extract_features(cls, kps_64f: np.ndarray) -> np.ndarray:
         """
         kps_64f: (64, 26, 3) Halpe26 또는 (64, 33, 3) MediaPipe 좌표
         반환: 15D 시선 및 경추-체간 생체역학 피처
         """
         if kps_64f.shape[1] == 26:
-            mp33 = self.halpe26_to_mp33(kps_64f)
+            mp33 = cls.halpe26_to_mp33(kps_64f)
         else:
             mp33 = kps_64f
 

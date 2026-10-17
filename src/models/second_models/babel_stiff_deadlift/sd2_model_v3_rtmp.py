@@ -27,7 +27,7 @@ from scipy.ndimage import gaussian_filter1d
 
 # CURRENT_DIR 및 프로젝트 경로
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = "d:/"
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if CURRENT_DIR not in sys.path:
     sys.path.insert(0, CURRENT_DIR)
 if PROJECT_ROOT not in sys.path:
@@ -412,7 +412,8 @@ class SD2RTMPClassifier:
             m.eval()
             self.tcn_models.append(m)
 
-    def extract_features(self, kps_seq: np.ndarray) -> Dict[str, np.ndarray]:
+    @classmethod
+    def extract_features(cls, kps_seq: np.ndarray) -> Dict[str, np.ndarray]:
         f30 = extract_sd2_rtmp_features(kps_seq)
         t24 = extract_sd2_rtmp_temporal_24d(kps_seq)
         return {'features_30d': f30, 'temporal_24d': t24}

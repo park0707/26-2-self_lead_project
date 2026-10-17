@@ -19,9 +19,6 @@ from src.features.lunge_dl3_rtmp_features import extract_lunge_dl3_rtmp_features
 from src.models.second_models.dynamic_lunge.dl4_rtmp_1 import DL4RTMP1Classifier
 from src.models.second_models.dynamic_lunge.dl5_final import DL5Classifier
 
-_dl4_inst = DL4RTMP1Classifier()
-_dl5_inst = DL5Classifier()
-
 
 def _get_rtm26_or_fallback(skeletons: PreprocessedSkeletons) -> np.ndarray:
     if skeletons.rtm26_64f is not None and skeletons.rtm26_64f.shape[1] == 26:
@@ -46,9 +43,9 @@ def extract_dynamic_lunge_dl3(skeletons: PreprocessedSkeletons) -> np.ndarray:
 
 def extract_dynamic_lunge_dl4(skeletons: PreprocessedSkeletons) -> np.ndarray:
     rtm = _get_rtm26_or_fallback(skeletons)
-    return _dl4_inst.extract_features(rtm)
+    return DL4RTMP1Classifier.extract_features(rtm)
 
 
 def extract_dynamic_lunge_dl5(skeletons: PreprocessedSkeletons) -> np.ndarray:
     rtm = _get_rtm26_or_fallback(skeletons)
-    return _dl5_inst.extract_features(skeletons.mp33_64f, rtm)
+    return DL5Classifier.extract_features(skeletons.mp33_64f, rtm)

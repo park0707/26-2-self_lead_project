@@ -23,8 +23,10 @@ Architecture:
 
 import os
 import sys
-if "D:/" not in sys.path:
-    sys.path.insert(0, "D:/")
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 import pickle
 from typing import Dict, Any, Optional
 import numpy as np
@@ -35,7 +37,7 @@ from src.models.second_models.babel_lunge.bl5_hybrid_1 import (
     VIEW_THRESHOLDS
 )
 
-BUNDLE_PATH = r"D:\src\models\second_models\babel_lunge\weights\bl5_final_bundle.pkl"
+BUNDLE_PATH = os.path.join(CURRENT_DIR, "weights", "bl5_final_bundle.pkl")
 
 
 class BL5Classifier:
@@ -77,12 +79,13 @@ class BL5Classifier:
             view=view
         )
 
+    @classmethod
     def extract_features(
-        self,
+        cls,
         mp_kps_33_3d: np.ndarray,
         rtmp_kps_26_2d: np.ndarray
     ) -> np.ndarray:
-        return self.engine.extract_features(mp_kps_33_3d, rtmp_kps_26_2d)
+        return BabelLungeCondition5ModelHybrid.extract_features(mp_kps_33_3d, rtmp_kps_26_2d)
 
 
 # 최종 공식 인스턴스 인터페이스 제공

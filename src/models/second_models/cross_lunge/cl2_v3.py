@@ -40,17 +40,16 @@ try:
 except Exception:
     pass
 
-PROJECT_ROOT = "d:/"
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
-
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 if CURRENT_DIR not in sys.path:
     sys.path.insert(0, CURRENT_DIR)
 
-DATA_DIR = r"D:\Data\전처리_데이터\MediaPipe_Full33_64F\08_크로스_런지"
-V2_CACHE_PKL = r"D:\Data\피처_데이터\cl2_v2_59d_cache.pkl"
-V3_CACHE_PKL = r"D:\Data\피처_데이터\cl2_v3_48d_cache.pkl"
+DATA_DIR = os.path.join(PROJECT_ROOT, "Data", "전처리_데이터", "MediaPipe_Full33_64F", "08_크로스_런지")
+V2_CACHE_PKL = os.path.join(PROJECT_ROOT, "Data", "피처_데이터", "cl2_v2_59d_cache.pkl")
+V3_CACHE_PKL = os.path.join(PROJECT_ROOT, "Data", "피처_데이터", "cl2_v3_48d_cache.pkl")
 
 RESULTS_V1_JSON = os.path.join(CURRENT_DIR, "cross_lunge_c2_v7_evaluation_results.json")
 RESULTS_V2_JSON = os.path.join(CURRENT_DIR, "cl2_v2_evaluation_results.json")

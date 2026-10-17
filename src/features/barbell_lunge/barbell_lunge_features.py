@@ -19,8 +19,6 @@ from src.features.lunge_bl3_features_v4 import extract_lunge_bl3_14d_features_v4
 from src.features.lunge_c4_features_v4 import extract_lunge_c4_features_v4
 from src.models.second_models.babel_lunge.bl5_final import BL5Classifier
 
-_bl5_inst = BL5Classifier()
-
 
 def _get_rtm26_or_fallback(skeletons: PreprocessedSkeletons) -> np.ndarray:
     if skeletons.rtm26_64f is not None and skeletons.rtm26_64f.shape[1] == 26:
@@ -48,4 +46,4 @@ def extract_barbell_lunge_bl4(skeletons: PreprocessedSkeletons) -> np.ndarray:
 
 def extract_barbell_lunge_bl5(skeletons: PreprocessedSkeletons) -> np.ndarray:
     rtm = _get_rtm26_or_fallback(skeletons)
-    return _bl5_inst.extract_features(skeletons.mp33_64f, rtm)
+    return BL5Classifier.extract_features(skeletons.mp33_64f, rtm)

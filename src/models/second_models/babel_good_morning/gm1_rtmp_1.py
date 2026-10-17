@@ -30,7 +30,7 @@ os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = r"D:/"
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 if CURRENT_DIR not in sys.path:
@@ -131,7 +131,8 @@ class BabelGoodMorningGM1RTMP1:
             out[:, m] = kps_26[:, h]
         return out
 
-    def extract_features(self, kps_64f: np.ndarray) -> np.ndarray:
+    @classmethod
+    def extract_features(cls, kps_64f: np.ndarray) -> np.ndarray:
         """
         kps_64f: (64, 26, 3) Halpe26 또는 (64, 15, 3) 관절 좌표
         반환: 13D 기구학적 무릎 불변 생체역학 피처
@@ -149,7 +150,7 @@ class BabelGoodMorningGM1RTMP1:
 
         norm_res = GeometricNormalizer3D.process_sequence_3d(kps_15)
         if norm_res is None or norm_res.get('keypoints_3d_norm') is None:
-            return np.zeros(self.FEATURE_DIM, dtype=np.float32)
+            return np.zeros(cls.FEATURE_DIM, dtype=np.float32)
 
         kps_norm_3d = norm_res['keypoints_3d_norm']
         fmt_b = KinematicsExtractor3D.build_format_b_timeseries_3d(kps_norm_3d)

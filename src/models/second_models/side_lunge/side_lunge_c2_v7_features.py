@@ -24,9 +24,12 @@ from scipy.signal import savgol_filter
 
 import sys
 import os
-PROJECT_ROOT = "d:/"
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
 
 from src.features.side_lunge_spatial_leg_separator import detect_side_lunge_lead_leg_spatial
 from side_lunge_c2_features_v3 import (

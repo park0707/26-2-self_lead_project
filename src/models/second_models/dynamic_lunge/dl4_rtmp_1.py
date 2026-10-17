@@ -6,8 +6,8 @@ Defect: c4 (척추의 중립 위반 / Spine Neutrality Defect)
 Model: dl4_rtmp_1 (RTMPose 전용 최적화 모델)
 Baseline: bl4_rtmp_1 계승 (24D 생체역학 정예 피처, 앙상블 블렌딩, 온도 스케일링, 3-State 적응형 신뢰 분류)
 
-규정 준수 사항 (RULE[d:\AGENTS.md]):
-  1. 공식 프로젝트명: vidio-health-trainer (NovelFlow 명칭 절대 금지)
+규정 준수 사항 (AGENTS.md):
+  1. 공식 프로젝트명: vidio-health-trainer
   2. 피험자 9명 전원(1~9번) StratifiedGroupKFold 완전 격리 교차검증 (Zero Leakage)
   3. 100% 순수 비전 RTMPose 관절 기반 피처 투입 (AI-Hub JSON 피처 배제)
   4. 공식 5대 시점 규격 준수:
@@ -33,14 +33,12 @@ try:
 except Exception:
     pass
 
-PROJECT_ROOT = "D:/"
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-if CURRENT_DIR not in sys.path:
-    sys.path.insert(0, CURRENT_DIR)
-sys.path.append(r"D:\src\features")
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
+FEATURES_DIR = os.path.join(PROJECT_ROOT, "src", "features")
+for _p in [PROJECT_ROOT, CURRENT_DIR, FEATURES_DIR]:
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 from lunge_c4_features_v3 import (
     extract_lunge_c4_features_v3,
@@ -127,7 +125,8 @@ class DL4RTMP1Classifier:
         self.feature_names = bundle.get('feature_names', LUNGE_C4_FEATURE_NAMES_V3)
         self.is_loaded = True
 
-    def extract_features(self, kps_input: np.ndarray) -> np.ndarray:
+    @classmethod
+    def extract_features(cls, kps_input: np.ndarray) -> np.ndarray:
         """
         RTMPose 26 관절 (64, 26, 2/3), MediaPipe 33 관절 (64, 33, 3) 또는 24D 피처 벡터에서 피처 반환
         """
@@ -220,7 +219,7 @@ class DL4RTMP1Classifier:
 
 
 # ---------------------------------------------------------------------------
-# 공식 표준 최상위 인터페이스 함수 (RULE[d:\AGENTS.md] 모듈화 준수)
+# 공식 표준 최상위 인터페이스 함수 (AGENTS.md 모듈화 준수)
 # ---------------------------------------------------------------------------
 _DEFAULT_DL4_CLASSIFIER: Optional[DL4RTMP1Classifier] = None
 

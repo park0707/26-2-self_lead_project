@@ -28,8 +28,6 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
-if 'd:/' not in sys.path and 'd:\\\\' not in sys.path:
-    sys.path.insert(0, 'd:/')
 
 from src.core.skeleton2d import Joint15
 from src.preprocessing.rep_segmenter import RepetitionSegmenter
@@ -55,12 +53,11 @@ class VideoAnalysisPipeline:
     def __init__(self, model_task_path: Optional[str] = None):
         if model_task_path is None:
             candidate = os.path.join(PROJECT_ROOT, "configs", "pose_landmarker_heavy.task")
+            root_candidate = os.path.join(PROJECT_ROOT, "pose_landmarker_heavy.task")
             if os.path.exists(candidate):
                 self.model_task_path = candidate
-            elif os.path.exists("d:/configs/pose_landmarker_heavy.task"):
-                self.model_task_path = "d:/configs/pose_landmarker_heavy.task"
-            elif os.path.exists("d:/pose_landmarker_heavy.task"):
-                self.model_task_path = "d:/pose_landmarker_heavy.task"
+            elif os.path.exists(root_candidate):
+                self.model_task_path = root_candidate
             else:
                 self.model_task_path = candidate
         else:

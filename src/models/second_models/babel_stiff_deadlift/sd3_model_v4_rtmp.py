@@ -27,7 +27,7 @@ import torch.nn.functional as F
 from scipy.ndimage import gaussian_filter1d
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = "d:/"
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
 if CURRENT_DIR not in sys.path:
     sys.path.insert(0, CURRENT_DIR)
 if PROJECT_ROOT not in sys.path:
@@ -373,7 +373,8 @@ class SD3RTMPClassifier:
             m.eval()
             self.tcn_models.append(m)
 
-    def extract_features(self, kps_seq: np.ndarray, view_name: str = 'view2') -> Dict[str, np.ndarray]:
+    @classmethod
+    def extract_features(cls, kps_seq: np.ndarray, view_name: str = 'view2') -> Dict[str, np.ndarray]:
         f36 = extract_sd3_rtmp_features(kps_seq, view_name=view_name)
         t36 = extract_sd3_rtmp_temporal_36d(kps_seq)
         return {'features_36d': f36, 'temporal_36d': t36}

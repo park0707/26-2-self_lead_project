@@ -24,8 +24,10 @@ Architecture:
 
 import os
 import sys
-if "D:/" not in sys.path:
-    sys.path.insert(0, "D:/")
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 import pickle
 from typing import Dict, Any, Optional
 import numpy as np
@@ -37,7 +39,6 @@ from src.models.second_models.dynamic_lunge.dl5_rtmp_1 import (
     VIEW_THRESHOLDS_10
 )
 
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 BUNDLE_PATH = os.path.join(CURRENT_DIR, "weights", "dl5_final_bundle.pkl")
 FALLBACK_BUNDLE_PATH = os.path.join(CURRENT_DIR, "weights", "dl5_rtmp_1_bundle.pkl")
 
@@ -89,12 +90,13 @@ class DL5Classifier:
     ) -> float:
         return self.engine.predict_proba(mp_kps_33_3d, rtmp_kps_26_2d, view=view)
 
+    @classmethod
     def extract_features(
-        self,
+        cls,
         mp_kps_33_3d: np.ndarray,
         rtmp_kps_26_2d: np.ndarray
     ) -> np.ndarray:
-        return self.engine.extract_features(mp_kps_33_3d, rtmp_kps_26_2d)
+        return DL5RTMP1Classifier.extract_features(mp_kps_33_3d, rtmp_kps_26_2d)
 
 
 # 최종 공식 인스턴스 인터페이스 제공

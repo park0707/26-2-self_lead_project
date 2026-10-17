@@ -14,7 +14,8 @@ import logging
 from typing import Dict, Callable, Optional, Union, List
 import numpy as np
 
-PROJECT_ROOT = "D:/"
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../.."))
 SRC_ROOT = os.path.join(PROJECT_ROOT, "src")
 for p in [
     PROJECT_ROOT, SRC_ROOT,

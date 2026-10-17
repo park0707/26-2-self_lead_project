@@ -11,11 +11,8 @@ Purpose: [Tier 3] 바벨 스티프 데드리프트 3대 세부 결함(sd1~sd3) �
 import numpy as np
 from src.web.core.contracts import PreprocessedSkeletons
 from src.models.second_models.babel_stiff_deadlift.sd1_rtmp_1_features import extract_sd1_rtmp_1_features
-from src.models.second_models.babel_stiff_deadlift.sd2_model_v3_rtmp import SD2RTMPClassifier
-from src.models.second_models.babel_stiff_deadlift.sd3_model_v4_rtmp import SD3RTMPClassifier
-
-_sd2_inst = SD2RTMPClassifier()
-_sd3_inst = SD3RTMPClassifier()
+from src.models.second_models.babel_stiff_deadlift.sd2_model_v3_rtmp import extract_sd2_rtmp_features
+from src.models.second_models.babel_stiff_deadlift.sd3_model_v4_rtmp import extract_sd3_rtmp_features
 
 
 def _get_rtm26_or_mp_tensor(skeletons: PreprocessedSkeletons) -> np.ndarray:
@@ -34,10 +31,10 @@ def extract_stiff_deadlift_sd1(skeletons: PreprocessedSkeletons) -> np.ndarray:
 def extract_stiff_deadlift_sd2(skeletons: PreprocessedSkeletons) -> np.ndarray:
     """sd2: 무릎 굴곡/과신전"""
     rtm = _get_rtm26_or_mp_tensor(skeletons)
-    return _sd2_inst.extract_features(rtm)['features_30d']
+    return extract_sd2_rtmp_features(rtm)
 
 
 def extract_stiff_deadlift_sd3(skeletons: PreprocessedSkeletons) -> np.ndarray:
     """sd3: 골반 힌지/바벨 이탈"""
     rtm = _get_rtm26_or_mp_tensor(skeletons)
-    return _sd3_inst.extract_features(rtm)['features_36d']
+    return extract_sd3_rtmp_features(rtm)

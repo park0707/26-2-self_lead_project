@@ -31,10 +31,13 @@ import numpy as np
 import joblib
 from catboost import CatBoostClassifier
 
-sys.path.insert(0, 'd:/')
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../.."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 from src.features.lunge_bl3_features_v4 import extract_lunge_bl3_14d_features_v4, FEATURE_NAMES_14D
 
-MODEL_DIR = r"D:\Data\피처_데이터\tuning_results"
+MODEL_DIR = os.path.join(PROJECT_ROOT, "Data", "피처_데이터", "tuning_results")
 MODEL_BUNDLE_PATH = os.path.join(MODEL_DIR, "bl3_v4_champion_bundle.joblib")
 
 class BL3V4Classifier:
@@ -90,7 +93,8 @@ class BL3V4Classifier:
         self.cb_model.fit(X, y)
         return self
         
-    def extract_features(self, kps: np.ndarray) -> np.ndarray:
+    @classmethod
+    def extract_features(cls, kps: np.ndarray) -> np.ndarray:
         """단일 64프레임 관절 시퀀스 (64, 15, 2)로부터 14D 정예 고급 생체역학 피처 추출"""
         return extract_lunge_bl3_14d_features_v4(kps)
         

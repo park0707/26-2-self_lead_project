@@ -28,8 +28,6 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../.."))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
-if 'd:/' not in sys.path and 'd:\\' not in sys.path:
-    sys.path.insert(0, 'd:/')
 
 from src.features.kinematics_v6 import KinematicsEngineV6
 from src.features.kinematics_3d import KinematicsExtractor3D

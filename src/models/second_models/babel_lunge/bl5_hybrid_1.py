@@ -16,8 +16,10 @@ Performance:
 
 import os
 import sys
-if "D:/" not in sys.path:
-    sys.path.insert(0, "D:/")
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../../.."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 import pickle
 from typing import Dict, List, Optional, Tuple, Any
 import numpy as np
@@ -28,7 +30,6 @@ from src.features.lunge_c5_features_hybrid import (
     LUNGE_C5_HYBRID_79D_NAMES
 )
 
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_BUNDLE_PATH = os.path.join(CURRENT_DIR, "weights", "bl5_hybrid_1_bundle.pkl")
 
 # AGENTS.md 공식 5대 시점 명칭 매핑

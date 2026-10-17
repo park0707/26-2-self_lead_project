@@ -15,10 +15,6 @@ from src.models.second_models.babel_good_morning.gm1_rtmp_1 import BabelGoodMorn
 from src.models.second_models.babel_good_morning.gm2_rtmp_1 import BabelGoodMorningGM2RTMP1
 from src.models.second_models.babel_good_morning.gm3_rtmp_1 import BabelGoodMorningGM3RTMP1
 
-_gm1_inst = BabelGoodMorningGM1RTMP1()
-_gm2_inst = BabelGoodMorningGM2RTMP1()
-_gm3_inst = BabelGoodMorningGM3RTMP1()
-
 
 def _get_rtm26_or_fallback(skeletons: PreprocessedSkeletons) -> np.ndarray:
     if skeletons.rtm26_64f is not None and skeletons.rtm26_64f.shape[1] == 26:
@@ -29,14 +25,14 @@ def _get_rtm26_or_fallback(skeletons: PreprocessedSkeletons) -> np.ndarray:
 
 def extract_good_morning_gm1(skeletons: PreprocessedSkeletons) -> np.ndarray:
     rtm = _get_rtm26_or_fallback(skeletons)
-    return _gm1_inst.extract_features(rtm)
+    return BabelGoodMorningGM1RTMP1.extract_features(rtm)
 
 
 def extract_good_morning_gm2(skeletons: PreprocessedSkeletons) -> np.ndarray:
     rtm = _get_rtm26_or_fallback(skeletons)
-    return _gm2_inst.extract_features(rtm)
+    return BabelGoodMorningGM2RTMP1.extract_features(rtm)
 
 
 def extract_good_morning_gm3(skeletons: PreprocessedSkeletons) -> np.ndarray:
     rtm = _get_rtm26_or_fallback(skeletons)
-    return _gm3_inst.extract_features(rtm)
+    return BabelGoodMorningGM3RTMP1.extract_features(rtm)
