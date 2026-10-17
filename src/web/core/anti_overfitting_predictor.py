@@ -53,14 +53,17 @@ class AntiOverfittingDefectPredictor:
         self.cb_model = cb_model
         self.lgb_model = lgb_model
         self.selected_indices = np.array(selected_indices, dtype=np.int32)
+        self.thresholds = thresholds
         self.tau_opt = float(thresholds.get('tau_opt', 0.50))
         self.tau_defect = float(thresholds.get('tau_defect', 0.55))
         self.tau_normal = float(thresholds.get('tau_normal', 0.40))
+        self.by_view = thresholds.get('by_view', {})
         self.raw_extractor = raw_extractor
 
-    def predict_from_features(self, raw_feat: np.ndarray) -> Tuple[float, int, str]:
+    def predict_from_features(self, raw_feat: np.ndarray, view_code: Optional[str] = None) -> Tuple[float, int, str]:
         """
         [Tier 4 순수 추론 API] 이미 추출된 (D,) 1차원 피처 벡터로부터 결함 확률 및 3-State 판정
+        - 시점별 적응형 캘리브레이션(view_code) 지원
         """
         try:
             feat_arr = np.nan_to_num(np.array(raw_feat, dtype=np.float32).flatten(), nan=0.0, posinf=0.0, neginf=0.0)
@@ -73,10 +76,18 @@ class AntiOverfittingDefectPredictor:
             p_lgb = float(self.lgb_model.predict_proba(diet_feat)[0, 1])
             prob = float(0.50 * p_cb + 0.50 * p_lgb)
 
+            # 시점별 맞춤 임계치 우선 적용 (없을 시 전역 최적 임계치 사용)
+            t_def = self.tau_defect
+            t_norm = self.tau_normal
+            if view_code and self.by_view and view_code in self.by_view:
+                v_cfg = self.by_view[view_code]
+                t_def = float(v_cfg.get('tau_defect', t_def))
+                t_norm = float(v_cfg.get('tau_normal', t_norm))
+
             # 3-State 신뢰도 게이팅 판정
-            if prob >= self.tau_defect:
+            if prob >= t_def:
                 state, state_label = 1, "결함"
-            elif prob <= self.tau_normal:
+            elif prob <= t_norm:
                 state, state_label = 0, "정상"
             else:
                 state, state_label = 2, "주의/보류"
@@ -103,7 +114,7 @@ class AntiOverfittingDefectPredictor:
         try:
             # 1. 피처 벡터가 직접 제공된 경우 즉시 추론
             if feature_vector is not None:
-                return self.predict_from_features(feature_vector)
+                return self.predict_from_features(feature_vector, view_code=view_code)
 
             # 2. 골격 컨테이너 확보
             if skeletons is None:
@@ -122,8 +133,8 @@ class AntiOverfittingDefectPredictor:
             else:
                 raw_feat = FeatureRegistry.get_features(self.code, skeletons)
 
-            # 4. 순수 추론 실행
-            return self.predict_from_features(raw_feat)
+            # 4. 순수 추론 실행 (시점 코드 주입)
+            return self.predict_from_features(raw_feat, view_code=view_code)
 
         except Exception as e:
             logger.error(f"[{self.code.upper()}] 추론 실패: {e}")

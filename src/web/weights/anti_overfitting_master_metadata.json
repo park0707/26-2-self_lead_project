@@ -21,9 +21,36 @@
       37
     ],
     "thresholds": {
-      "tau_opt": 0.36,
-      "tau_defect": 0.48,
-      "tau_normal": 0.31
+      "tau_opt": 0.71,
+      "tau_defect": 0.74,
+      "tau_normal": 0.68,
+      "by_view": {
+        "view5": {
+          "tau_opt": 0.63,
+          "tau_defect": 0.68,
+          "tau_normal": 0.58
+        },
+        "view2": {
+          "tau_opt": 0.53,
+          "tau_defect": 0.58,
+          "tau_normal": 0.48
+        },
+        "view3": {
+          "tau_opt": 0.82,
+          "tau_defect": 0.86,
+          "tau_normal": 0.78
+        },
+        "view4": {
+          "tau_opt": 0.68,
+          "tau_defect": 0.73,
+          "tau_normal": 0.63
+        },
+        "view1": {
+          "tau_opt": 0.65,
+          "tau_defect": 0.7,
+          "tau_normal": 0.6
+        }
+      }
     },
     "metrics": {
       "f1": 77.77,
@@ -51,9 +78,36 @@
       12
     ],
     "thresholds": {
-      "tau_opt": 0.4,
-      "tau_defect": 0.48,
-      "tau_normal": 0.35
+      "tau_opt": 0.55,
+      "tau_defect": 0.58,
+      "tau_normal": 0.52,
+      "by_view": {
+        "view5": {
+          "tau_opt": 0.55,
+          "tau_defect": 0.58,
+          "tau_normal": 0.52
+        },
+        "view2": {
+          "tau_opt": 0.5,
+          "tau_defect": 0.54,
+          "tau_normal": 0.46
+        },
+        "view3": {
+          "tau_opt": 0.55,
+          "tau_defect": 0.58,
+          "tau_normal": 0.52
+        },
+        "view4": {
+          "tau_opt": 0.5,
+          "tau_defect": 0.54,
+          "tau_normal": 0.46
+        },
+        "view1": {
+          "tau_opt": 0.55,
+          "tau_defect": 0.58,
+          "tau_normal": 0.52
+        }
+      }
     },
     "metrics": {
       "f1": 75.99,
@@ -81,9 +135,36 @@
       19
     ],
     "thresholds": {
-      "tau_opt": 0.42,
-      "tau_defect": 0.48,
-      "tau_normal": 0.37
+      "tau_opt": 0.4,
+      "tau_defect": 0.43,
+      "tau_normal": 0.37,
+      "by_view": {
+        "view5": {
+          "tau_opt": 0.4,
+          "tau_defect": 0.43,
+          "tau_normal": 0.37
+        },
+        "view2": {
+          "tau_opt": 0.4,
+          "tau_defect": 0.43,
+          "tau_normal": 0.37
+        },
+        "view3": {
+          "tau_opt": 0.4,
+          "tau_defect": 0.43,
+          "tau_normal": 0.37
+        },
+        "view4": {
+          "tau_opt": 0.45,
+          "tau_defect": 0.48,
+          "tau_normal": 0.42
+        },
+        "view1": {
+          "tau_opt": 0.4,
+          "tau_defect": 0.43,
+          "tau_normal": 0.37
+        }
+      }
     },
     "metrics": {
       "f1": 92.89,
@@ -113,9 +194,36 @@
       19
     ],
     "thresholds": {
-      "tau_opt": 0.48,
-      "tau_defect": 0.53,
-      "tau_normal": 0.43
+      "tau_opt": 0.35,
+      "tau_defect": 0.38,
+      "tau_normal": 0.32,
+      "by_view": {
+        "view5": {
+          "tau_opt": 0.35,
+          "tau_defect": 0.38,
+          "tau_normal": 0.32
+        },
+        "view2": {
+          "tau_opt": 0.35,
+          "tau_defect": 0.38,
+          "tau_normal": 0.32
+        },
+        "view3": {
+          "tau_opt": 0.35,
+          "tau_defect": 0.38,
+          "tau_normal": 0.32
+        },
+        "view4": {
+          "tau_opt": 0.35,
+          "tau_defect": 0.38,
+          "tau_normal": 0.32
+        },
+        "view1": {
+          "tau_opt": 0.35,
+          "tau_defect": 0.38,
+          "tau_normal": 0.32
+        }
+      }
     },
     "metrics": {
       "f1": 84.99,

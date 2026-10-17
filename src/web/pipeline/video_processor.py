@@ -525,6 +525,25 @@ class VideoAnalysisPipeline:
             target_exercise_id = ensemble_stage1_pred.exercise_id
             exercise_result = ensemble_stage1_pred
 
+        # 1단계 종목 분류 모호성 안내 팁 산출 (보류/경계선 케이스 피드백)
+        from src.web.core.feedback_engine import FeedbackEngine
+        fb_engine = FeedbackEngine.get_instance()
+        probs = ensemble_stage1_pred.probabilities
+        sorted_probs = sorted(probs.items(), key=lambda x: x[1], reverse=True)
+        top1_name, top1_prob = sorted_probs[0]
+        top2_name, top2_prob = sorted_probs[1] if len(sorted_probs) > 1 else ("", 0.0)
+        top2_id = None
+        for eid, meta in EXERCISE_CATALOG.items():
+            if meta['name'] == top2_name:
+                top2_id = eid
+                break
+        exercise_result.clarity_tip = fb_engine.get_exercise_clarity_tip(
+            top1_exercise_id=target_exercise_id,
+            top2_exercise_id=top2_id,
+            confidence=exercise_result.confidence,
+            prob_gap=top1_prob - top2_prob
+        )
+
 
         # 4. RTMPose Halpe26 실제 관절 고속 유도형 추출 (시간축 활성 구간 한정 추출: 55% ~ 75%)
         # MediaPipe 2D 관절을 기반으로 YOLOX 디텍터를 0ms로 스킵하고, 기디코딩 프레임 버퍼로 디스크 I/O 0ms 달성
@@ -564,11 +583,20 @@ class VideoAnalysisPipeline:
 
             # RTMPose 해당 반복 구간 슬라이싱 및 64프레임 스플라인 보간
             rep_rtm_64f = None
+            rep_rtm_conf_64f = None
             if rtmp_active_26 is not None and len(rtmp_active_26) > 0:
                 rel_start = max(0, start_f - active_start)
                 rel_end = min(len(rtmp_active_26) - 1, end_f - active_start)
                 rep_rtm_seq = rtmp_active_26[rel_start:max(rel_start + 4, rel_end + 1)]
                 rep_rtm_64f = SkeletalTopologyAdapter.resample_to_64_frames(rep_rtm_seq)
+                if rep_rtm_seq.shape[-1] >= 3:
+                    rep_rtm_conf_64f = SkeletalTopologyAdapter.resample_to_64_frames(rep_rtm_seq[:, :, 2])
+
+            # MediaPipe 가시성(vis_33) 해당 반복 구간 슬라이싱 및 64프레임 보간
+            rep_vis_64f = None
+            if "vis_33" in video_meta and len(video_meta["vis_33"]) > 0:
+                rep_vis_raw = video_meta["vis_33"][start_f:max(start_f + 4, end_f + 1)]
+                rep_vis_64f = SkeletalTopologyAdapter.resample_to_64_frames(rep_vis_raw)
 
             # MediaPipe 2D 정규화 해당 반복 구간 슬라이싱 및 64프레임 스플라인 보간
             rep_mp_norm_raw = kps_33_2d_norm[start_f:max(start_f + 4, end_f + 1)]
@@ -597,14 +625,16 @@ class VideoAnalysisPipeline:
                     scale=scale_val
                 )
 
-            # 2단계 서브 결함 모델 직접 호출 (MediaPipe 33 + RTMPose 26 + SpinePose 9 융합 실측 좌표 전달)
+            # 2단계 서브 결함 모델 직접 호출 (KQS 품질 게이팅 및 멀티비전 신뢰도 전달)
             diag = self.stage2_engine.evaluate_single_repetition(
                 exercise_id=target_exercise_id,
                 kps_sequence=rep_seq_64f,
                 camera_view=camera_view,
                 source_type="mediapipe_33",
                 rtmp_seq=rep_rtm_64f,
-                spine_seq=rep_spine_3d_64f
+                spine_seq=rep_spine_3d_64f,
+                mp_vis_seq=rep_vis_64f,
+                rtm_conf_seq=rep_rtm_conf_64f
             )
 
             # 뼈대 프리뷰 좌표 (선택 시 15관절 2D 정규화 또는 3D)
@@ -636,6 +666,7 @@ class VideoAnalysisPipeline:
             duration = max(0.1, end_sec - start_sec)
 
             rep_coaching = diag.get("coaching", {})
+            kqs_res = diag.get("kqs_info", {})
 
             rep_detail = RepetitionDetail(
                 rep_index=rep_idx,
@@ -651,6 +682,12 @@ class VideoAnalysisPipeline:
                 secondary_feedbacks=rep_coaching.get("secondary_cues", []),
                 causal_chain_title=rep_coaching.get("causal_chain_detected"),
                 view_coaching_tip=rep_coaching.get("view_tip"),
+                caution_cue=rep_coaching.get("caution_cue"),
+                environment_tip=rep_coaching.get("environment_tip") or kqs_res.get("environment_tip"),
+                kqs_score=kqs_res.get("kqs_score"),
+                is_retake_required=kqs_res.get("is_retake", False),
+                occluded_joints=kqs_res.get("occluded_joints", []),
+                retake_cue=kqs_res.get("retake_cue"),
                 keypoints_preview=preview_coords,
                 overlay_mp=overlay_mp_coords,
                 overlay_rtmp=overlay_rtmp_coords,
@@ -742,6 +779,25 @@ class VideoAnalysisPipeline:
                 probabilities=stage1_pred.probabilities,
                 inference_time_ms=stage1_pred.inference_time_ms
             )
+
+        # 1단계 종목 분류 모호성 안내 팁 산출
+        from src.web.core.feedback_engine import FeedbackEngine
+        fb_engine = FeedbackEngine.get_instance()
+        probs = stage1_pred.probabilities
+        sorted_probs = sorted(probs.items(), key=lambda x: x[1], reverse=True)
+        top1_name, top1_prob = sorted_probs[0]
+        top2_name, top2_prob = sorted_probs[1] if len(sorted_probs) > 1 else ("", 0.0)
+        top2_id = None
+        for eid, m in EXERCISE_CATALOG.items():
+            if m['name'] == top2_name:
+                top2_id = eid
+                break
+        exercise_result.clarity_tip = fb_engine.get_exercise_clarity_tip(
+            top1_exercise_id=target_exercise_id,
+            top2_exercise_id=top2_id,
+            confidence=exercise_result.confidence,
+            prob_gap=top1_prob - top2_prob
+        )
 
 
         # 3. 2단계 세부 결함 진단

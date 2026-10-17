@@ -18,6 +18,7 @@ class ExercisePrediction(BaseModel):
     macro_group: str = Field(..., description="소속 6대 상위 기능 그룹")
     probabilities: Dict[str, float] = Field(..., description="8대 운동별 사후 확률")
     inference_time_ms: float = Field(..., description="추론 지연시간 (ms)")
+    clarity_tip: Optional[str] = Field(default=None, description="종목 분류 모호 시 동작 명확화 팁")
 
 
 class DefectPrediction(BaseModel):
@@ -52,6 +53,14 @@ class RepetitionDetail(BaseModel):
     secondary_feedbacks: List[str] = Field(default_factory=list, description="보조 행동 지침 목록 (최대 1개)")
     causal_chain_title: Optional[str] = Field(default=None, description="복합 연쇄 결함 인과 진단명")
     view_coaching_tip: Optional[str] = Field(default=None, description="카메라 시점 최적화 안내 팁")
+    # 보류(Caution/Pending) 케이스 전용 피드백 필드
+    caution_cue: Optional[str] = Field(default=None, description="State 2 미세 주의/소프트 예방 코칭 큐")
+    environment_tip: Optional[str] = Field(default=None, description="KQS 경계선(0.60~0.72) 촬영 환경 개선 안내 팁")
+    # 키포인트 품질 평가(KQS) 및 재촬영 게이팅 필드
+    kqs_score: Optional[float] = Field(default=None, description="키포인트 품질 지수 (0.0~1.0)")
+    is_retake_required: bool = Field(default=False, description="가림/품질 미달로 인한 재촬영 필요 여부")
+    occluded_joints: List[str] = Field(default_factory=list, description="가림/결손이 발생한 주요 관절 목록")
+    retake_cue: Optional[str] = Field(default=None, description="타깃형 재촬영 권고 행동 지침 큐")
     # 프론트엔드 스켈레톤 렌더링용 기존 3D 키포인트 (하위 호환)
     keypoints_preview: Optional[List[List[List[float]]]] = Field(
         default=None, description="프론트엔드 뼈대 시각화용 64프레임 정규화 좌표"

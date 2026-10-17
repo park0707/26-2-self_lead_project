@@ -155,7 +155,7 @@ class DefectModelRegistry:
                 continue
 
             try:
-                prob, state, state_lbl = pred.predict(skeletons=skeletons)
+                prob, state, state_lbl = pred.predict(skeletons=skeletons, view_code=view_code)
             except Exception as e:
                 logger.error(f"[evaluate_exercise_defects] {code} 추론 예외 발생: {e}")
                 prob, state, state_lbl = 0.0, 0, "정상"

@@ -152,13 +152,16 @@ class Stage2InferenceEngine:
         keypoints_seq: np.ndarray,
         camera_view: str = "시점 C",
         rtmp_seq: Optional[np.ndarray] = None,
-        spine_seq: Optional[np.ndarray] = None
+        spine_seq: Optional[np.ndarray] = None,
+        mp_vis_seq: Optional[np.ndarray] = None,
+        rtm_conf_seq: Optional[np.ndarray] = None
     ) -> Dict[str, Any]:
         """
         단일 반복(Single Repetition 64프레임)에 대한 2단계 세부 결함 전수 진단 수행
         - 마스터 클래스 없이 개별 세부 결함 모델 직접 호출
         - spine_seq: SpinePose 9대 척추 분절 (64, 9, 3) 3D 좌표 (선택적 주입)
-        - 출력: 각 결함별 확률, 3-State 상태 코드, '피드백 자리' 기본 문구
+        - mp_vis_seq, rtm_conf_seq: 관절 가시성 및 신뢰도 배열 (KQS 품질 게이팅 평가용)
+        - KQS 품질 미달(is_retake=True) 시 2단계 모델 추론을 바이패스하고 재촬영 큐 즉시 직결
         """
         t0 = time.time()
 
@@ -169,29 +172,56 @@ class Stage2InferenceEngine:
         # 2. 관절 좌표계 듀얼 정합 (MediaPipe 33J + RTMPose 26J)
         mp33, rtm26 = self._harmonize_keypoints(keypoints_seq, rtmp_seq=rtmp_seq)
 
-        # 3. 마스터 클래스 없이 세부 결함 모델 직접 호출
-        defect_preds: List[DefectPrediction] = self.registry.evaluate_exercise_defects(
+        # 3. 키포인트 품질 평가(KQS) 사전 게이팅
+        from src.web.core.feedback_engine import FeedbackEngine
+        fb_engine = FeedbackEngine.get_instance()
+        kqs_info = fb_engine.evaluate_keypoint_quality(
             exercise_id=exercise_id,
-            mp33_seq=mp33,
-            rtm26_seq=rtm26,
-            view_code=view_code,
-            spine_seq=spine_seq
+            mp_vis_seq=mp_vis_seq,
+            rtm_conf_seq=rtm_conf_seq,
+            threshold=0.60
         )
+
+        is_retake = kqs_info.get('is_retake', False)
+        ex_meta = EXERCISE_CATALOG[exercise_id]
+
+        # 4. 결함 모델 평가 또는 품질 미달 시 바이패스
+        if is_retake:
+            # 관절 가림 및 신뢰도 미달 시: 오진단 방지를 위해 2단계 머신러닝 추론을 안전하게 바이패스
+            defect_preds: List[DefectPrediction] = []
+            for code in ex_meta.get('defect_codes', []):
+                fb_def = fb_engine.get_feedback_def(code)
+                name = fb_def.defect_name if fb_def else code
+                defect_preds.append(DefectPrediction(
+                    defect_code=code,
+                    defect_name=name,
+                    probability=0.0,
+                    state=2,  # 주의/보류 상태
+                    state_label="보류",
+                    feedback="키포인트 가시성 저하로 판정보류",
+                    target_joint=fb_def.target_joint if fb_def else None
+                ))
+            is_clean = False
+        else:
+            # 정상 품질 시: 마스터 클래스 없이 세부 결함 모델 직접 호출
+            defect_preds: List[DefectPrediction] = self.registry.evaluate_exercise_defects(
+                exercise_id=exercise_id,
+                mp33_seq=mp33,
+                rtm26_seq=rtm26,
+                view_code=view_code,
+                spine_seq=spine_seq
+            )
+            # 전체 반복 무결성(Clean 여부) 판정: 모든 결함이 state == 0
+            is_clean = all(d.state == 0 for d in defect_preds)
 
         elapsed_ms = (time.time() - t0) * 1000.0
 
-        # 4. 전체 반복 무결성(Clean 여부) 판정: 모든 결함이 state == 0
-        is_clean = all(d.state == 0 for d in defect_preds)
-
-        ex_meta = EXERCISE_CATALOG[exercise_id]
-
-        # 5. 3단계 다중 결함 우선순위 큐 및 인과 연쇄 코칭 피드백 생성
-        from src.web.core.feedback_engine import FeedbackEngine
-        fb_engine = FeedbackEngine.get_instance()
+        # 5. 3단계 다중 결함 우선순위 큐 및 재촬영 게이팅 코칭 피드백 생성
         rep_coaching = fb_engine.prioritize_rep_defects(
             exercise_id=exercise_id,
             defect_predictions=[d.model_dump() for d in defect_preds],
-            view_code=view_code
+            view_code=view_code,
+            kqs_info=kqs_info
         )
 
         return {
@@ -204,6 +234,7 @@ class Stage2InferenceEngine:
             'defects_count': len(defect_preds),
             'defects': [d.model_dump() for d in defect_preds],
             'coaching': rep_coaching,
+            'kqs_info': kqs_info,
             'inference_time_ms': round(elapsed_ms, 2)
         }
 
@@ -214,12 +245,24 @@ class Stage2InferenceEngine:
         camera_view: str = "시점 C: 정면",
         rtmp_seq: Optional[np.ndarray] = None,
         spine_seq: Optional[np.ndarray] = None,
+        mp_vis_seq: Optional[np.ndarray] = None,
+        rtm_conf_seq: Optional[np.ndarray] = None,
         **kwargs
     ) -> Dict[str, Any]:
         """evaluate_single_repetition 유연 래퍼 (키워드 인자 호환 지원)"""
         ex = kwargs.get("exercise_id", exercise)
         kps = kwargs.get("kps_sequence", keypoints_seq)
         sp = kwargs.get("spine_seq", spine_seq)
-        return self.diagnose(exercise=ex, keypoints_seq=kps, camera_view=camera_view, rtmp_seq=rtmp_seq, spine_seq=sp)
+        vis = kwargs.get("mp_vis_seq", mp_vis_seq)
+        conf = kwargs.get("rtm_conf_seq", rtm_conf_seq)
+        return self.diagnose(
+            exercise=ex,
+            keypoints_seq=kps,
+            camera_view=camera_view,
+            rtmp_seq=rtmp_seq,
+            spine_seq=sp,
+            mp_vis_seq=vis,
+            rtm_conf_seq=conf
+        )
 
 

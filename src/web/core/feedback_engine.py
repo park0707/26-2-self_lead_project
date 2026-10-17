@@ -615,6 +615,71 @@ CAUSAL_CHAIN_RULES: List[CausalChainRule] = [
 
 
 # =============================================================================
+# 2-1. 키포인트 품질(KQS) 결손 및 재촬영 코칭 딕셔너리 (RETAKE_PROMPT_CATALOG)
+# =============================================================================
+
+RETAKE_PROMPT_CATALOG: Dict[str, Dict[str, str]] = {
+    "OCC_FEET": {
+        "title": "하지 족관절/접지면 화각 이탈",
+        "action_cue": "발목과 발바닥이 화면 하단 밖으로 벗어났습니다. 카메라 각도를 살짝 내리거나 스마트폰을 1m 뒤로 물려 발끝 지면 접지면이 모두 보이도록 재촬영해 주세요.",
+        "reason": "발목과 발바닥이 프레임에 잡히지 않아 지면 접지력 및 하지 정렬 상태를 판별할 수 없습니다."
+    },
+    "OCC_KNEE": {
+        "title": "슬관절(무릎) 가림 현상",
+        # 사용자 요구사항 반영: 바벨 원판 언급 없이 무릎 가림 자체에 집중하여 행동 지시
+        "action_cue": "무릎 관절이 화면 또는 물체에 가려져 정밀 분석이 어렵습니다. 무릎이 온전히 보이도록 카메라 각도와 위치를 조절하여 재촬영해 주세요.",
+        "reason": "무릎 관절 랜드마크의 가시성이 낮아 무릎 굴곡 각도와 외반/내반 회전을 신뢰성 있게 진단할 수 없습니다."
+    },
+    "OCC_SPINE": {
+        "title": "요추/골반/체간선 가림 현상",
+        "action_cue": "골반 및 척추선 인식이 불완전합니다. 상체 윤곽이 드러나는 복장을 착용하거나 조명이 피사체를 정면으로 비추는 환경에서 재촬영해 주세요.",
+        "reason": "체간 축 및 요추 관절의 가시성이 기준치에 미달하여 척추 중립 위반 여부를 안전하게 평가하기 어렵습니다."
+    },
+    "OCC_BLUR": {
+        "title": "동적 모션 블러/신뢰도 급락",
+        "action_cue": "카메라 흔들림이나 모션 블러로 관절 추적 신뢰도가 낮습니다. 스마트폰을 거치대에 고정하고 템포를 통제하며 재촬영해 주세요.",
+        "reason": "프레임 간 관절 좌표의 급격한 노이즈와 신뢰도 저하로 인해 키네마틱 피처 추출 무결성이 훼손되었습니다."
+    },
+    "OCC_GENERAL": {
+        "title": "신체 주요 관절 가림 및 신뢰도 미달",
+        "action_cue": "신체 주요 관절의 가림 현상으로 분석 신뢰도가 낮습니다. 전신이 프레임 안에 잘 들어오도록 카메라 위치를 조정하여 재촬영해 주세요.",
+        "reason": "핵심 생체역학 관절들의 종합 품질 점수(KQS)가 기준치에 미달하여 판정을 보류합니다."
+    }
+}
+
+
+# =============================================================================
+# 2-2. 1단계 운동 종목 분류 모호성 명확화 팁 카탈로그 (EXERCISE_CLARITY_CATALOG)
+# =============================================================================
+
+EXERCISE_CLARITY_CATALOG: Dict[Tuple[int, int], str] = {
+    # 스쿼트(0) vs 데드리프트(1)
+    (0, 1): "바벨 스쿼트와 데드리프트의 중간 형태로 인식되었습니다. 무릎을 더 적극적으로 굽혀 스쿼트 깊이를 확보하거나, 엉덩이를 뒤로 밀어 힙 힌지를 완성해 주세요.",
+    (1, 0): "바벨 데드리프트와 스쿼트의 중간 형태로 인식되었습니다. 상체를 조금 더 숙이고 엉덩이를 뒤로 보내 힌지에 집중하거나, 무릎을 굽혀 수직 하강해 주세요.",
+
+    # 데드리프트(1) vs 스티프데드(2)
+    (1, 2): "일반 데드리프트와 스티프 데드리프트의 경계선에 있습니다. 일반 데드리프트는 바벨이 무릎을 지날 때 무릎을 굽혀 착지하고, 스티프는 무릎을 15도 살짝 구부린 채 고정하세요.",
+    (2, 1): "스티프 데드리프트 중 무릎이 다소 많이 굽혀져 일반 데드리프트와 혼동되었습니다. 무릎을 15도 구부린 채 단단히 락(Lock)을 걸고 고관절만 접으세요.",
+
+    # 스쿼트(0) vs 굿모닝(7)
+    (0, 7): "스쿼트와 굿모닝의 중간 형태로 상체가 과도하게 숙여졌습니다. 가슴을 들고 무릎을 굽혀 수직으로 앉거나, 굿모닝 의도라면 무릎을 15도로 고정하세요.",
+    (7, 0): "굿모닝 동작 중 무릎이 스쿼트처럼 과도하게 굽혀졌습니다. 무릎을 살짝만 구부린 채 고정하고 상체 힌지 가동성에 집중해 주세요.",
+
+    # 데드리프트(1) vs 굿모닝(7)
+    (1, 7): "바벨 위치 및 상체 기울기에서 데드리프트와 굿모닝이 혼동되었습니다. 바벨을 손으로 쥐고 정강이에 밀착시키거나 바벨을 승모근에 얹어 굿모닝 자세를 명확히 하세요.",
+    (7, 1): "굿모닝 동작 중 힙 궤적이 데드리프트와 혼동되었습니다. 가슴을 펴고 견갑골을 모아 척추 중립을 유지하며 엉덩이만 뒤로 멀리 보내세요.",
+
+    # 바벨런지(3) vs 다이나믹런지(4)
+    (3, 4): "제자리 런지와 스텝 런지가 혼동되었습니다. 제자리에서 수직 상하로만 앉거나, 한 걸음 확실히 내딛는 스텝 템포를 명확히 해주세요.",
+    (4, 3): "다이나믹 런지 착지 후 정지 시간이 길어 바벨 런지로 인식되었습니다. 착지 후 감속과 복귀 동작을 부드럽게 연결해 주세요.",
+
+    # 바벨런지(3) vs 사이드런지(5) / 크로스런지(6)
+    (3, 5): "런지 발 디딤 방향이 대각선으로 분산되었습니다. 발끝을 정면 똑바로 내딛어 전방 런지 궤적을 유지해 주세요.",
+    (3, 6): "뒷다리가 대각선으로 교차되어 크로스 런지와 혼동되었습니다. 양 발을 골반 너비 평행선 상에서 일직선으로 내딛으세요."
+}
+
+
+# =============================================================================
 # 3. 3단계 피드백 엔진 코어 클래스 (FeedbackEngine)
 # =============================================================================
 
@@ -625,6 +690,8 @@ class FeedbackEngine:
     - 우선순위 큐 기반 1~2개 핵심 큐 선별
     - 복합 결함 연쇄 추론
     - 5대 카메라 시점 적응형 안내
+    - 멀티비전 키포인트 품질 평가(KQS) 및 재촬영 게이팅
+    - 보류(Caution/Pending) 케이스 전용 예방 큐 및 환경 팁 제공
     - 세트 종합 맞춤 처방전 생성
     """
 
@@ -633,6 +700,8 @@ class FeedbackEngine:
     def __init__(self):
         self.catalog = FEEDBACK_CATALOG
         self.causal_rules = CAUSAL_CHAIN_RULES
+        self.retake_catalog = RETAKE_PROMPT_CATALOG
+        self.clarity_catalog = EXERCISE_CLARITY_CATALOG
 
     @classmethod
     def get_instance(cls) -> "FeedbackEngine":
@@ -644,6 +713,210 @@ class FeedbackEngine:
     def get_feedback_def(self, defect_code: str) -> Optional[DefectFeedbackDefinition]:
         """결함 코드 기반 피드백 정의 반환"""
         return self.catalog.get(defect_code.lower())
+
+    # -------------------------------------------------------------------------
+    # 3.0 멀티비전 키포인트 품질 지수(KQS) 산출 및 재촬영 평가
+    # -------------------------------------------------------------------------
+    def evaluate_keypoint_quality(
+        self,
+        exercise_id: int,
+        mp_vis_seq: Optional[Any] = None,
+        rtm_conf_seq: Optional[Any] = None,
+        threshold: float = 0.60
+    ) -> Dict[str, Any]:
+        """
+        단일 반복(64프레임)에 대한 멀티비전(MediaPipe + RTMPose) 키포인트 품질 지수(KQS) 평가
+        - 운동 종목별 핵심 관절 가중치 적용
+        - 시간축 연속 결손 페널티(Consecutive Streak Penalty) 반영
+        - 임계치 미달 시 타깃형 재촬영 피드백 생성
+        """
+        import numpy as np
+
+        # 입력 유효성 검사 및 기본 통과 처리
+        if mp_vis_seq is None and rtm_conf_seq is None:
+            return {
+                'kqs_score': 1.0,
+                'is_retake': False,
+                'occluded_joints': [],
+                'retake_code': None,
+                'retake_cue': None,
+                'retake_title': None,
+                'retake_reason': None
+            }
+
+        T = 64
+        mp_vis = None
+        if mp_vis_seq is not None:
+            arr_mp = np.asarray(mp_vis_seq, dtype=np.float32)
+            if arr_mp.ndim == 1:
+                mp_vis = np.tile(arr_mp[:, None], (1, 33))
+            elif arr_mp.ndim == 2:
+                if arr_mp.shape[0] != T:
+                    from src.web.core.topology_adapter import SkeletalTopologyAdapter
+                    mp_vis = SkeletalTopologyAdapter.resample_to_64_frames(arr_mp)
+                else:
+                    mp_vis = arr_mp
+
+        rtm_conf = None
+        if rtm_conf_seq is not None:
+            arr_rtm = np.asarray(rtm_conf_seq, dtype=np.float32)
+            if arr_rtm.ndim == 1:
+                rtm_conf = np.tile(arr_rtm[:, None], (1, 26))
+            elif arr_rtm.ndim == 2:
+                if arr_rtm.shape[0] != T:
+                    from src.web.core.topology_adapter import SkeletalTopologyAdapter
+                    rtm_conf = SkeletalTopologyAdapter.resample_to_64_frames(arr_rtm)
+                else:
+                    rtm_conf = arr_rtm
+
+        # 관절 그룹별 인덱스
+        # MediaPipe 33 인덱스
+        mp_groups = {
+            'knees': [25, 26],
+            'feet': [27, 28, 29, 30, 31, 32],
+            'hips_spine': [23, 24, 11, 12],
+            'shoulders': [11, 12]
+        }
+        # RTMPose 26 인덱스
+        rtm_groups = {
+            'knees': [13, 14],
+            'feet': [15, 16, 17, 18, 19, 20],
+            'hips_spine': [11, 12, 5, 6],
+            'shoulders': [5, 6]
+        }
+
+        # 운동 종목별 핵심 가중치
+        if exercise_id in (0, 1, 2, 7):  # 스쿼트, 데드리프트, 스티프데드, 굿모닝
+            weights = {'knees': 0.35, 'feet': 0.30, 'hips_spine': 0.25, 'shoulders': 0.10}
+        else:  # 런지군 (3, 4, 5, 6)
+            weights = {'knees': 0.35, 'feet': 0.25, 'hips_spine': 0.25, 'shoulders': 0.15}
+
+        # 프레임별 그룹 신뢰도 계산 (T=64)
+        group_conf_series: Dict[str, np.ndarray] = {}
+        for g_name in weights.keys():
+            scores = []
+            if mp_vis is not None and mp_vis.shape[1] >= 33:
+                idx_mp = mp_groups[g_name]
+                scores.append(np.mean(mp_vis[:, idx_mp], axis=1))
+            if rtm_conf is not None and rtm_conf.shape[1] >= 26:
+                idx_rtm = rtm_groups[g_name]
+                scores.append(np.mean(rtm_conf[:, idx_rtm], axis=1))
+
+            if len(scores) == 2:
+                group_conf_series[g_name] = 0.5 * scores[0] + 0.5 * scores[1]
+            elif len(scores) == 1:
+                group_conf_series[g_name] = scores[0]
+            else:
+                group_conf_series[g_name] = np.ones((T,), dtype=np.float32)
+
+        # 프레임별 핵심 가중 종합 신뢰도 Q_t (64,)
+        Q_t = np.zeros((T,), dtype=np.float32)
+        for g_name, w in weights.items():
+            Q_t += w * group_conf_series[g_name]
+
+        # 시간축 연속 결손 페널티 (Streak Penalty)
+        is_drop = (Q_t < 0.40).astype(np.int32)
+        max_streak = 0
+        current_streak = 0
+        for val in is_drop:
+            if val == 1:
+                current_streak += 1
+                if current_streak > max_streak:
+                    max_streak = current_streak
+            else:
+                current_streak = 0
+
+        streak_penalty = min(0.50, (max_streak / 64.0) * 2.0)
+
+        # 최종 KQS 점수
+        mean_q = float(np.mean(Q_t))
+        kqs_score = round(float(np.clip(mean_q * (1.0 - streak_penalty), 0.0, 1.0)), 4)
+
+        # 결손/가림 관절 및 재촬영 코드 판별
+        occluded_parts = []
+        knee_avg = float(np.mean(group_conf_series['knees']))
+        feet_avg = float(np.mean(group_conf_series['feet']))
+        hips_avg = float(np.mean(group_conf_series['hips_spine']))
+
+        if knee_avg < 0.35:
+            occluded_parts.append("슬관절(무릎)")
+        if feet_avg < 0.35:
+            occluded_parts.append("하지 족관절(발목/발바닥)")
+        if hips_avg < 0.40:
+            occluded_parts.append("골반 및 척추선")
+
+        is_retake = (kqs_score < threshold) or (len(occluded_parts) > 0 and kqs_score < 0.70)
+        retake_code = None
+        retake_cue = None
+        retake_title = None
+        retake_reason = None
+        environment_tip = None
+
+        if is_retake:
+            if "슬관절(무릎)" in occluded_parts:
+                retake_code = "OCC_KNEE"
+            elif "하지 족관절(발목/발바닥)" in occluded_parts:
+                retake_code = "OCC_FEET"
+            elif "골반 및 척추선" in occluded_parts:
+                retake_code = "OCC_SPINE"
+            elif max_streak >= 16:
+                retake_code = "OCC_BLUR"
+            else:
+                retake_code = "OCC_GENERAL"
+
+            prompt_info = self.retake_catalog.get(retake_code, self.retake_catalog["OCC_GENERAL"])
+            retake_cue = prompt_info["action_cue"]
+            retake_title = prompt_info["title"]
+            retake_reason = prompt_info["reason"]
+        elif 0.60 <= kqs_score < 0.72:
+            # 경계선 품질 구간(0.60~0.72): 재촬영은 아니지만 분석 정밀도 향상을 위한 촬영 환경 개선 팁 안내
+            if feet_avg < 0.55:
+                environment_tip = "[촬영 환경 팁] 화면 하단 여백이 좁아 발목 접지 분석 신뢰도가 다소 낮습니다. 스마트폰을 50cm 뒤로 물려 촬영하시면 훨씬 정확한 발목 안정성 분석이 가능합니다."
+            elif knee_avg < 0.55:
+                environment_tip = "[촬영 환경 팁] 무릎 관절 가시성이 다소 불안정합니다. 무릎이 화면에 온전히 보이도록 카메라 각도를 살짝 조절해 주세요."
+            elif hips_avg < 0.55:
+                environment_tip = "[촬영 환경 팁] 조명이 다소 어둡거나 역광이 있어 척추선 인식이 흐립니다. 피사체를 향한 밝은 조명 아래서 촬영하시면 분석 정밀도가 향상됩니다."
+            elif max_streak >= 8:
+                environment_tip = "[촬영 환경 팁] 카메라 흔들림이나 모션 블러가 감지되었습니다. 스마트폰을 거치대에 고정하고 템포를 통제하며 수행해 보세요."
+            else:
+                environment_tip = "[촬영 환경 팁] 조명이나 촬영 거리를 조금 더 확보하시면 더욱 정밀한 관절 각도 진단이 가능합니다."
+
+        return {
+            'kqs_score': kqs_score,
+            'is_retake': is_retake,
+            'occluded_joints': occluded_parts,
+            'retake_code': retake_code,
+            'retake_cue': retake_cue,
+            'retake_title': retake_title,
+            'retake_reason': retake_reason,
+            'environment_tip': environment_tip
+        }
+
+    def get_exercise_clarity_tip(
+        self,
+        top1_exercise_id: int,
+        top2_exercise_id: Optional[int] = None,
+        confidence: float = 1.0,
+        prob_gap: float = 1.0
+    ) -> Optional[str]:
+        """
+        1단계 운동 종목 분류 모호성 안내 팁
+        - Top-1 분류 확신도가 낮거나(< 0.70) 1, 2순위 확률 격차가 적을(< 0.25) 때
+          두 운동 간의 궤적 차이를 사용자가 명확히 하도록 안내 팁 도출
+        """
+        if confidence >= 0.75 and prob_gap >= 0.30:
+            return None
+
+        if top2_exercise_id is not None:
+            pair = (top1_exercise_id, top2_exercise_id)
+            if pair in self.clarity_catalog:
+                return f"[동작 명확화 팁] {self.clarity_catalog[pair]}"
+
+        # 일반적 모호성 안내
+        if confidence < 0.60:
+            return "[동작 명확화 팁] 운동 궤적이 다소 모호하여 분류 확신도가 낮습니다. 템포를 통제하며 해당 운동 고유의 가동범위를 명확히 표현해 주세요."
+
+        return None
 
     # -------------------------------------------------------------------------
     # 3.1 단일 결함 텍스트 포맷팅 (3-State 차등 가이드)
@@ -682,12 +955,33 @@ class FeedbackEngine:
         self,
         exercise_id: int,
         defect_predictions: List[Dict[str, Any]],
-        view_code: str = "view3"
+        view_code: str = "view3",
+        kqs_info: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
         단일 반복(1-Rep)에서 검출된 결함들을 생체역학 위험도 기준으로 정렬하고
         사용자 인지 한계에 맞춰 최상위 1~2개 행동 큐 및 연쇄 인과관계를 합성
+        - kqs_info 전달 시: 키포인트 품질 미달/가림 감지 시 즉시 '판정 보류 및 재촬영 안내'로 분기
         """
+        # 0. 키포인트 품질 미달(KQS < threshold) 및 관절 가림 게이팅 최우선 검사
+        if kqs_info and kqs_info.get('is_retake', False):
+            retake_cue = kqs_info.get('retake_cue') or "신체 주요 부위 가림으로 분석이 어렵습니다. 재촬영해 주세요."
+            retake_title = kqs_info.get('retake_title') or "키포인트 품질 미달"
+            retake_reason = kqs_info.get('retake_reason') or "주요 생체역학 관절의 신뢰도가 기준치에 미달합니다."
+            return {
+                'overall_status': '판정 보류 (재촬영 권고)',
+                'is_clean': False,
+                'primary_action_cue': f"[재촬영 안내] {retake_cue}",
+                'primary_detail': f"{retake_title}: {retake_reason}",
+                'secondary_cues': [],
+                'causal_chain_detected': None,
+                'view_tip': None,
+                'is_retake_required': True,
+                'kqs_score': kqs_info.get('kqs_score', 0.0),
+                'occluded_joints': kqs_info.get('occluded_joints', []),
+                'retake_cue': retake_cue
+            }
+
         detected_defects = []
         cautions = []
         clean_count = 0
@@ -726,6 +1020,8 @@ class FeedbackEngine:
             else:
                 clean_count += 1
 
+        env_tip = kqs_info.get('environment_tip') if kqs_info else None
+
         # 1. 완전 정상 반복인 경우
         if not detected_defects and not cautions:
             return {
@@ -735,7 +1031,13 @@ class FeedbackEngine:
                 'primary_detail': "신체 중심선(COM)이 지면 지지면 내에 안정적으로 유지되고 있으며 관절 부하 분산이 훌륭합니다.",
                 'secondary_cues': [],
                 'causal_chain_detected': None,
-                'view_tip': None
+                'view_tip': None,
+                'is_retake_required': False,
+                'kqs_score': kqs_info.get('kqs_score', 1.0) if kqs_info else 1.0,
+                'occluded_joints': [],
+                'retake_cue': None,
+                'caution_cue': None,
+                'environment_tip': env_tip
             }
 
         # 2. 연쇄 결함 인과관계 검출 (Causal Chaining)
@@ -747,10 +1049,12 @@ class FeedbackEngine:
 
         # 3. 위험 점수 내림차순 정렬 (Priority Queue)
         detected_defects.sort(key=lambda x: x['score'], reverse=True)
+        cautions.sort(key=lambda x: x['score'], reverse=True)
 
         primary_action_cue = ""
         primary_detail = ""
         secondary_cues: List[str] = []
+        caution_cue_text: Optional[str] = None
 
         if matched_chain:
             # 복합 연쇄 결함이 검출된 경우: 합성된 큐를 최우선 적용
@@ -761,26 +1065,38 @@ class FeedbackEngine:
                 if d['code'] not in matched_chain.trigger_codes:
                     secondary_cues.append(f"[{d['item'].target_joint}] {d['item'].action_cue}")
                     break
+            if not secondary_cues and cautions:
+                secondary_cues.append(f"[주의] {cautions[0]['item'].target_joint}: {cautions[0]['item'].caution_cue}")
+                caution_cue_text = cautions[0]['item'].caution_cue
         elif detected_defects:
             # 단독 결함 기반 최상위 1개 선정
             top_1 = detected_defects[0]
             primary_action_cue = f"[{top_1['item'].target_joint}] {top_1['item'].action_cue}"
             primary_detail = f"{top_1['name']}: {top_1['item'].biomechanical_reason}"
 
-            # 2순위 결함이 있으면 보조 큐로 1개만 추가
+            # 2순위 결함이 있으면 보조 큐로 1개만 추가, 없으면 상위 State 2 주의 항목 연계
             if len(detected_defects) > 1:
                 top_2 = detected_defects[1]
                 secondary_cues.append(f"[{top_2['item'].target_joint}] {top_2['item'].action_cue}")
+            elif cautions:
+                c_sub = cautions[0]
+                caution_cue_text = c_sub['item'].caution_cue
+                secondary_cues.append(f"[주의] {c_sub['item'].target_joint}: {c_sub['item'].caution_cue}")
         elif cautions:
-            # 결함은 없고 주의/보류만 있는 경우
+            # 결함은 없고 State 2 주의/보류만 있는 경우 (경계선 소프트 예방 코칭)
             c_top = cautions[0]
-            primary_action_cue = f"[자세 주의] {c_top['item'].caution_cue}"
-            primary_detail = f"미세한 자세 불안정이 감지되었습니다. 다음 반복에서는 {c_top['item'].target_joint} 부위의 긴장을 유지하세요."
+            caution_cue_text = c_top['item'].caution_cue
+            primary_action_cue = f"[자세 주의] {caution_cue_text}"
+            primary_detail = f"{c_top['name']}: {c_top['item'].biomechanical_reason}"
+            if len(cautions) > 1:
+                c_2 = cautions[1]
+                secondary_cues.append(f"[주의] {c_2['item'].target_joint}: {c_2['item'].caution_cue}")
 
         # 4. 시점 권장 팁 (현재 시점과 최적 시점 비교)
         view_tip = None
-        if detected_defects:
-            best_v = detected_defects[0]['item'].optimal_view
+        target_item = detected_defects[0]['item'] if detected_defects else (cautions[0]['item'] if cautions else None)
+        if target_item:
+            best_v = target_item.optimal_view
             # 시점 C인데 시점 B 권장이거나 반대인 경우 안내
             if "시점 C" in best_v and view_code != "view3":
                 view_tip = f"정밀한 좌우 대칭 및 관절 정렬 진단을 위해 '시점 C (정면)'에서 재촬영을 권장합니다."
@@ -794,7 +1110,13 @@ class FeedbackEngine:
             'primary_detail': primary_detail,
             'secondary_cues': secondary_cues,
             'causal_chain_detected': matched_chain.root_cause_title if matched_chain else None,
-            'view_tip': view_tip
+            'view_tip': view_tip,
+            'is_retake_required': False,
+            'kqs_score': kqs_info.get('kqs_score', 1.0) if kqs_info else 1.0,
+            'occluded_joints': kqs_info.get('occluded_joints', []) if kqs_info else [],
+            'retake_cue': None,
+            'caution_cue': caution_cue_text,
+            'environment_tip': env_tip
         }
 
     # -------------------------------------------------------------------------
